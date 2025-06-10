@@ -47,7 +47,26 @@ namespace LAZYSHELL.ScriptsEditor
         };
         private readonly int[] characterBehaviors = new int[] // character behaviors
         {
-            0x350468,0x350502
+            0x350462, // ally joins battle
+            0x350468, // take damage
+            0x350484, // Ally idles
+            0x350488, // Mario initiates attack
+            0x35048F, // peach initiates attack
+            0x350496, // bowser initiates attack
+            0x35049D, // geno initiates attack
+            0x3504A4, // mallow initiates attack
+            0x3504AB, // Mario initiates spell
+            0x3504B2, // peach initiates spell
+            0x3504B9, // bowser initiates spell
+            0x3504C0, // geno initiates spell
+            0x3504C7, // mallow initiates spell
+            0x3504CE, // mario item use, tbl starts at 0x350402
+            0x3504D5, // peach item use, tbl starts at 0x350412
+            0x3504DC, // bowser item use, tbl starts at 0x350422
+            0x3504E3, // geno item use, tbl starts at 0x350432
+            0x3504EA, // mallow item use, tbl starts at 0x350442
+            0x3504F1, // Ally victory pose
+            0x350502, // run away
         };
         //private readonly int[] behaviorOffsets_12 = new string(
         //"Enter Battle",
