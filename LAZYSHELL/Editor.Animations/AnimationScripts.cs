@@ -281,26 +281,26 @@ namespace LAZYSHELL
                     wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
                     animationName.Items.Clear();
                     this.animationName.Items.AddRange(new object[] {
-                        "Ally takes damage",
-                        "Ally tries to run",
                         "Ally joins battle",
+                        "Ally takes damage",
                         "Ally idles",
-                        "Ally victory pose",
                         "Mario initiates attack",
-                        "Mario uses item",
-                        "Mario initiates spell",
                         "Toadstool initiates attack",
-                        "Toadstool uses item",
-                        "Toadstool initiates spell",
                         "Bowser initiates attack",
-                        "Bowser uses item",
-                        "Bowser initiates spell",
                         "Geno initiates attack",
-                        "Geno uses item",
-                        "Geno initiates spell",
                         "Mallow initiates attack",
-                        "Mallow uses item",
+                        "Mario initiates spell",
+                        "Toadstool initiates spell",
+                        "Bowser initiates spell",
+                        "Geno initiates spell",
                         "Mallow initiates spell",
+                        "Mario uses item",
+                        "Toadstool uses item",
+                        "Bowser uses item",
+                        "Geno uses item",
+                        "Mallow uses item",
+                        "Ally victory pose",
+                        "Ally tries to run",
                     });
                     animationName.DrawMode = DrawMode.Normal;
                     animationName.BackColor = SystemColors.Window;
