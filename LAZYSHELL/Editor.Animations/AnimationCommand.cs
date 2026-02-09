@@ -258,13 +258,25 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                         script.AMEM = 0;
                     if (offset == 0x3AA5EE)
                         script.AMEM = 12; // it's the only one that has enough pointers
-                    Disassemble((offset & 0xFF0000) + Bits.GetShort(commandData, 1));
+                    search = (offset & 0xFF0000) + Bits.GetShort(commandData, 1);
+                    if (parent == null && !ContainsOffset(script, search))
+                        Disassemble(search);
+                    else if (parent != null && !parent.ContainsOffset(parent, search))
+                        Disassemble(search);
                     break;
                 case 0x47:
-                    Disassemble((offset & 0xFF0000) + Bits.GetShort(commandData, 2));
+                    search = (offset & 0xFF0000) + Bits.GetShort(commandData, 2);
+                    if (parent == null && !ContainsOffset(script, search))
+                        Disassemble(search);
+                    else if (parent != null && !parent.ContainsOffset(parent, search))
+                        Disassemble(search);
                     break;
                 case 0x5D:
-                    Disassemble((offset & 0xFF0000) + Bits.GetShort(commandData, 3));
+                    search = (offset & 0xFF0000) + Bits.GetShort(commandData, 3);
+                    if (parent == null && !ContainsOffset(script, search))
+                        Disassemble(search);
+                    else if (parent != null && !parent.ContainsOffset(parent, search))
+                        Disassemble(search);
                     break;
                 case 0x20:
                 case 0x21: script.amemAll[Param1 & 0x0F] = Param2; break;
@@ -295,6 +307,12 @@ namespace LAZYSHELL.ScriptsEditor.Commands
         // disassembler
         private void Disassemble(int offset)
         {
+            // Safety: limit recursion depth to prevent stack overflow
+            int depth = 0;
+            AnimationCommand p = this;
+            while (p != null) { depth++; p = p.parent; }
+            if (depth > 32) return;
+            //
             int length = 0;
             AnimationCommand temp;
             switch (Opcode)
@@ -403,15 +421,17 @@ namespace LAZYSHELL.ScriptsEditor.Commands
         }
         public bool ContainsOffset(AnimationCommand parent, int offset)
         {
-            bool found = false;
+            // Check the parent node itself (catches cycles back to an ancestor)
+            if (parent.InternalOffset == offset)
+                return true;
             foreach (AnimationCommand child in parent.Commands)
             {
                 if (child.InternalOffset == offset)
                     return true;
             }
             if (parent.Parent != null)
-                found = ContainsOffset(parent.Parent, offset);
-            return found;
+                return ContainsOffset(parent.Parent, offset);
+            return false;
         }
         public bool ContainsOffset(AnimationScript script, int offset)
         {
