@@ -34,8 +34,9 @@ namespace LAZYSHELL
         {
             int offset = index * 5 + 0x1DB000;
             //
-            sprite = (byte)(rom[offset] & 0x3F);
-            b0 = (byte)(rom[offset++] >> 6);
+            byte spriteByte = rom[offset++];
+            sprite = spriteByte;
+            b0 = (byte)(spriteByte >> 6);
             b1a = (byte)(rom[offset] & 0x07);
             b1b = (byte)((rom[offset] >> 3) & 0x03);
             b1c = (byte)(rom[offset++] >> 5);
@@ -51,8 +52,9 @@ namespace LAZYSHELL
         {
             int offset = index * 5 + 0x1DB000;
             //
-            rom[offset] = sprite;
-            rom[offset++] |= (byte)(b0 << 6);
+            // Sprite uses all 8 bits, b0 is derived from high 2 bits
+            b0 = (byte)(sprite >> 6);
+            rom[offset++] = sprite;
             rom[offset] = b1a;
             rom[offset] |= (byte)(b1b << 3);
             rom[offset++] |= (byte)(b1c << 5);

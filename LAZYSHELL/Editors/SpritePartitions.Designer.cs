@@ -401,7 +401,7 @@ namespace LAZYSHELL
             // 
             this.partitionNum.Location = new System.Drawing.Point(76, 7);
             this.partitionNum.Maximum = new decimal(new int[] {
-            119,
+            255,
             0,
             0,
             0});

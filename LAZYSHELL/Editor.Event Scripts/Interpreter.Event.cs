@@ -238,9 +238,9 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "Memory $7000 = tapped button",			// 0xCB
             "",			// 0xCC
             "",			// 0xCD
-            "",			// 0xCE
+            "Character {0} learns {1}",			// 0xCE
             "",			// 0xCF
-			
+
             "Jump to event #{0}",			// 0xD0
             "Run event #{0} as subroutine",			// 0xD1
             "Jump to address ${0}",			// 0xD2
@@ -606,7 +606,7 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "black", "blue", "red", "pink", "green", "aqua", "yellow", "white" };
         private static string[] ButtonNames = new string[] { "left", "right", "down", "up", "X", "A", "Y", "B" };
         private static string[] BitNames = new string[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" };
-        private static string[] LayerNames = new string[] { "L1", "L2", "L3", "L4", "Sprites", "BG", "½ intensity", "Minus sub" };
+        private static string[] LayerNames = new string[] { "L1", "L2", "L3", "L4", "Sprites", "BG", "ï¿½ intensity", "Minus sub" };
         private static string[] TutorialNames = new string[] { "How to equip", "How to use items", "How to switch allies", "How to play beetle mania" };
         private static string[] EventNames = new string[] { "Mario falls to pipehouse", "Mario returns to MK", "Mario takes Nimbus bus" };
         #endregion
@@ -913,6 +913,10 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                 case 0xC9:
                     vars[0] = ObjectNames[esc.Param1 & 0x3F];
                     break;
+                case 0xCE:
+                    vars[0] = CharacterNames[(esc.Param1 >> 5) & 0x1F];
+                    vars[1] = Lists.SpellNames[esc.Param1 & 0x1F];
+                    break;
                 case 0xD8:
                 case 0xD9:
                 case 0xDA:
@@ -1022,6 +1026,9 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             string command = EventCommands[esc.Opcode];
             if (command == "")
                 command = "{{" + BitConverter.ToString(esc.CommandData) + "}}";
+            // Special formatting for Learn Spell command - remove "Character" prefix in preview
+            if (esc.Opcode == 0xCE)
+                command = "{0} learns {1}";
             return string.Format(command, vars);
         }
         private string FD_Opcodes(EventCommand esc)

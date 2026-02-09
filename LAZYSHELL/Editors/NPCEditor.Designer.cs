@@ -319,7 +319,7 @@ namespace LAZYSHELL
             0});
             this.npcNum.Location = new System.Drawing.Point(49, 2);
             this.npcNum.Maximum = new decimal(new int[] {
-            511,
+            1462,
             0,
             0,
             0});

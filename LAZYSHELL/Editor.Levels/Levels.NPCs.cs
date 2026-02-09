@@ -38,29 +38,205 @@ namespace LAZYSHELL
             this.npcObjectTree.ExpandAll();
             if (npcObjectTree.Nodes.Count > 0)
                 npcObjectTree.SelectedNode = npcObjectTree.Nodes[0];
-            if (npcs.Count != 0 && this.npcObjectTree.SelectedNode != null)
+
+            try
             {
-                npcs.CurrentNPC = this.npcObjectTree.SelectedNode.Index;
-                this.npcEngageType.SelectedIndex = npcs.EngageType;
-                if (npcs.Count != 0 && this.npcObjectTree.SelectedNode.Parent != null) // if there are multiple instances
+
+                if (npcs.Count != 0 && this.npcObjectTree.SelectedNode != null)
                 {
-                    this.npcMapHeader.Enabled = true;
-                    this.npcRemoveObject.Enabled = true;
-                    this.npcInsertInstance.Enabled = true;
-                    this.npcInsertObject.Enabled = false;
-                    this.npcCopy.Enabled = true;
-                    this.npcDuplicate.Enabled = true;
-                    this.npcMoveDown.Enabled = true;
-                    this.npcMoveUp.Enabled = true;
+                    Console.WriteLine(npcs.EngageType);
+                    Console.WriteLine(npcs.PropertyA);
+                    Console.WriteLine(npcs.PropertyB);
+                    Console.WriteLine(npcs.PropertyC);
+                    Console.WriteLine(npcs.EventORpack);
+                    Console.WriteLine("");
+
+                    npcs.CurrentNPC = this.npcObjectTree.SelectedNode.Index;
+                    this.npcEngageType.SelectedIndex = npcs.EngageType;
+                    if (npcs.Count != 0 && this.npcObjectTree.SelectedNode.Parent != null) // if there are multiple instances
+                    {
+                        this.npcMapHeader.Enabled = true;
+                        this.npcRemoveObject.Enabled = true;
+                        this.npcInsertInstance.Enabled = true;
+                        this.npcInsertObject.Enabled = false;
+                        this.npcCopy.Enabled = true;
+                        this.npcDuplicate.Enabled = true;
+                        this.npcMoveDown.Enabled = true;
+                        this.npcMoveUp.Enabled = true;
+                        this.npcEngageType.Enabled = false;
+                        this.npcX.Enabled = true;
+                        this.npcY.Enabled = true;
+                        this.npcZ.Enabled = true;
+                        this.npcFace.Enabled = true;
+                        this.npcPropertyA.Enabled = true;
+                        this.npcPropertyB.Enabled = true;
+                        this.npcVisible.Enabled = true;
+                        this.npcZ_half.Enabled = true;
+                        this.npcAttributes.Enabled = false;
+                        this.npcAfterBattle.Enabled = false;
+                        this.npcEngageTrigger.Enabled = false;
+                        this.npcMovement.Enabled = false;
+                        this.npcID.Enabled = false;
+                        this.npcEventORPack.Enabled = false;
+                        this.npcSpeedPlus.Enabled = false;
+                        this.npcX.Value = npcs.CloneX;
+                        this.npcY.Value = npcs.CloneY;
+                        this.npcZ.Value = npcs.CloneZ;
+                        this.npcFace.SelectedIndex = npcs.CloneF;
+                        this.npcVisible.Checked = npcs.CloneXb7;
+                        this.npcZ_half.Checked = npcs.CloneYb7;
+                        if (this.npcEngageType.SelectedIndex == 0)
+                        {
+                            this.label104.Text = "NPC #+";
+                            this.label31.Text = "Event #+";
+                            this.npcGotoA.Text = "Event #";
+                            this.label116.Text = "Action #+";
+                            this.npcPropertyA.Maximum = 7;
+                            this.npcPropertyB.Maximum = 7;
+                            this.npcPropertyC.Enabled = true;
+                            this.npcEventORPack.Maximum = 4095;
+                        }
+                        else if (this.npcEngageType.SelectedIndex == 1)
+                        {
+                            this.label104.Text = "$70A7 = ";
+                            this.label31.Text = "{N/A}";
+                            this.npcGotoA.Text = "Event #";
+                            this.label116.Text = "{N/A}";
+                            this.npcPropertyA.Maximum = 255;
+                            this.npcPropertyB.Enabled = false;
+                            this.npcPropertyC.Enabled = false;
+                            this.npcEventORPack.Maximum = 4095;
+                        }
+                        else if (this.npcEngageType.SelectedIndex == 2)
+                        {
+                            this.label104.Text = "Action #+";
+                            this.label31.Text = "Pack #+";
+                            this.npcGotoA.Text = "Pack #";
+                            this.label116.Text = "{N/A}";
+                            this.npcPropertyA.Maximum = 15;
+                            this.npcPropertyB.Maximum = 15;
+                            this.npcPropertyC.Enabled = false;
+                            this.npcEventORPack.Maximum = 255;
+                        }
+                        this.npcPropertyA.Value = npcs.ClonePropertyA;
+                        this.npcPropertyB.Value = npcs.ClonePropertyB;
+                        this.npcPropertyC.Value = npcs.ClonePropertyC;
+                        this.npcGotoA.Enabled = false;
+                        this.npcGotoB.Enabled = false;
+                    }
+                    else // there is only one root npc
+                    {
+                        this.npcMapHeader.Enabled = true;
+                        this.npcRemoveObject.Enabled = true;
+                        this.npcInsertObject.Enabled = true;
+                        this.npcInsertInstance.Enabled = true;
+                        this.npcCopy.Enabled = true;
+                        this.npcDuplicate.Enabled = true;
+                        this.npcMoveDown.Enabled = true;
+                        this.npcMoveUp.Enabled = true;
+                        this.npcEngageType.Enabled = true;
+                        this.npcX.Enabled = true;
+                        this.npcY.Enabled = true;
+                        this.npcZ.Enabled = true;
+                        this.npcFace.Enabled = true;
+                        this.npcPropertyA.Enabled = true;
+                        this.npcPropertyB.Enabled = true;
+                        this.npcVisible.Enabled = true;
+                        this.npcZ_half.Enabled = true;
+                        this.npcAttributes.Enabled = true;
+                        this.npcAfterBattle.Enabled = npcs.EngageType == 2;
+                        this.npcEngageTrigger.Enabled = true;
+                        this.npcMovement.Enabled = true;
+                        this.npcID.Enabled = true;
+                        this.npcEventORPack.Enabled = true;
+                        this.npcSpeedPlus.Enabled = true;
+                        this.npcX.Value = npcs.X;
+                        this.npcY.Value = npcs.Y;
+                        this.npcZ.Value = npcs.Z;
+                        this.npcFace.SelectedIndex = npcs.F;
+                        this.npcVisible.Checked = npcs.Xb7;
+                        this.npcZ_half.Checked = npcs.Yb7;
+                        this.npcAttributes.SetItemChecked(0, npcs.B2b3);
+                        this.npcAttributes.SetItemChecked(1, npcs.B2b4);
+                        this.npcAttributes.SetItemChecked(2, npcs.B2b5);
+                        this.npcAttributes.SetItemChecked(3, npcs.B2b6);
+                        this.npcAttributes.SetItemChecked(4, npcs.B2b7);
+                        this.npcAttributes.SetItemChecked(5, npcs.B3b0);
+                        this.npcAttributes.SetItemChecked(6, npcs.B3b1);
+                        this.npcAttributes.SetItemChecked(7, npcs.B3b2);
+                        this.npcAttributes.SetItemChecked(8, npcs.B3b3);
+                        this.npcAttributes.SetItemChecked(9, npcs.B3b4);
+                        this.npcAttributes.SetItemChecked(10, npcs.B3b5);
+                        this.npcAttributes.SetItemChecked(11, npcs.B3b6);
+                        this.npcAttributes.SetItemChecked(12, npcs.B3b7);
+                        this.npcAttributes.SetItemChecked(13, npcs.B4b0);
+                        this.npcAttributes.SetItemChecked(14, npcs.B4b1);
+                        this.npcAfterBattle.SelectedIndex = npcs.AfterBattle;
+                        this.npcEngageTrigger.SelectedIndex = npcs.EngageTrigger;
+                        this.npcMovement.Value = npcs.Movement;
+                        this.npcID.Value = npcs.NPCID;
+                        this.npcSpeedPlus.Value = npcs.SpeedPlus;
+                        if (this.npcEngageType.SelectedIndex == 0)
+                        {
+                            this.label104.Text = "NPC #+";
+                            this.label31.Text = "Event #+";
+                            this.npcGotoA.Text = "Event #";
+                            this.label116.Text = "Action #+";
+                            this.npcPropertyA.Maximum = 7;
+                            this.npcPropertyB.Maximum = 7;
+                            this.npcPropertyC.Enabled = true;
+                            this.npcEventORPack.Maximum = 4095;
+                        }
+                        else if (this.npcEngageType.SelectedIndex == 1)
+                        {
+                            this.label104.Text = "$70A7 = ";
+                            this.label31.Text = "{N/A}";
+                            this.npcGotoA.Text = "Event #";
+                            this.label116.Text = "{N/A}";
+                            this.npcPropertyA.Maximum = 255;
+                            this.npcPropertyB.Enabled = false;
+                            this.npcPropertyC.Enabled = false;
+                            this.npcEventORPack.Maximum = 4095;
+                        }
+                        else if (this.npcEngageType.SelectedIndex == 2)
+                        {
+                            this.label104.Text = "Action #+";
+                            this.label31.Text = "Pack #+";
+                            this.npcGotoA.Text = "Pack #";
+                            this.label116.Text = "{N/A}";
+                            this.npcPropertyA.Maximum = 15;
+                            this.npcPropertyB.Maximum = 15;
+                            this.npcPropertyC.Enabled = false;
+                            this.npcEventORPack.Maximum = 255;
+                        }
+                        this.npcPropertyA.Value = npcs.PropertyA;
+                        this.npcPropertyB.Value = npcs.PropertyB;
+                        this.npcPropertyC.Value = npcs.PropertyC;
+                        this.npcEventORPack.Value = npcs.EventORpack;
+                        this.npcGotoA.Enabled = true;
+                        this.npcGotoB.Enabled = true;
+                    }
+                }
+                else // there are no npcs
+                {
+                    this.npcMapHeader.Enabled = false;
+                    this.npcRemoveObject.Enabled = false;
+                    this.npcInsertInstance.Enabled = false;
+                    this.npcInsertObject.Enabled = true;
+                    this.npcCopy.Enabled = false;
+                    this.npcDuplicate.Enabled = false;
+                    this.npcMoveDown.Enabled = false;
+                    this.npcMoveUp.Enabled = false;
                     this.npcEngageType.Enabled = false;
-                    this.npcX.Enabled = true;
-                    this.npcY.Enabled = true;
-                    this.npcZ.Enabled = true;
-                    this.npcFace.Enabled = true;
-                    this.npcPropertyA.Enabled = true;
-                    this.npcPropertyB.Enabled = true;
-                    this.npcVisible.Enabled = true;
-                    this.npcZ_half.Enabled = true;
+                    this.npcX.Enabled = false;
+                    this.npcY.Enabled = false;
+                    this.npcZ.Enabled = false;
+                    this.npcFace.Enabled = false;
+                    this.npcPropertyA.Enabled = false;
+                    this.npcPropertyB.Enabled = false;
+                    this.npcPropertyC.Enabled = false;
+                    this.npcVisible.Enabled = false;
+                    this.npcZ_half.Enabled = false;
                     this.npcAttributes.Enabled = false;
                     this.npcAfterBattle.Enabled = false;
                     this.npcEngageTrigger.Enabled = false;
@@ -68,198 +244,37 @@ namespace LAZYSHELL
                     this.npcID.Enabled = false;
                     this.npcEventORPack.Enabled = false;
                     this.npcSpeedPlus.Enabled = false;
-                    this.npcX.Value = npcs.CloneX;
-                    this.npcY.Value = npcs.CloneY;
-                    this.npcZ.Value = npcs.CloneZ;
-                    this.npcFace.SelectedIndex = npcs.CloneF;
-                    this.npcVisible.Checked = npcs.CloneXb7;
-                    this.npcZ_half.Checked = npcs.CloneYb7;
-                    if (this.npcEngageType.SelectedIndex == 0)
-                    {
-                        this.label104.Text = "NPC #+";
-                        this.label31.Text = "Event #+";
-                        this.npcGotoA.Text = "Event #";
-                        this.label116.Text = "Action #+";
-                        this.npcPropertyA.Maximum = 7;
-                        this.npcPropertyB.Maximum = 7;
-                        this.npcPropertyC.Enabled = true;
-                        this.npcEventORPack.Maximum = 4095;
-                    }
-                    else if (this.npcEngageType.SelectedIndex == 1)
-                    {
-                        this.label104.Text = "$70A7 = ";
-                        this.label31.Text = "{N/A}";
-                        this.npcGotoA.Text = "Event #";
-                        this.label116.Text = "{N/A}";
-                        this.npcPropertyA.Maximum = 255;
-                        this.npcPropertyB.Enabled = false;
-                        this.npcPropertyC.Enabled = false;
-                        this.npcEventORPack.Maximum = 4095;
-                    }
-                    else if (this.npcEngageType.SelectedIndex == 2)
-                    {
-                        this.label104.Text = "Action #+";
-                        this.label31.Text = "Pack #+";
-                        this.npcGotoA.Text = "Pack #";
-                        this.label116.Text = "{N/A}";
-                        this.npcPropertyA.Maximum = 15;
-                        this.npcPropertyB.Maximum = 15;
-                        this.npcPropertyC.Enabled = false;
-                        this.npcEventORPack.Maximum = 255;
-                    }
-                    this.npcPropertyA.Value = npcs.ClonePropertyA;
-                    this.npcPropertyB.Value = npcs.ClonePropertyB;
-                    this.npcPropertyC.Value = npcs.ClonePropertyC;
+                    this.npcX.Value = 0;
+                    this.npcY.Value = 0;
+                    this.npcZ.Value = 0;
+                    this.npcFace.SelectedIndex = 0;
+                    this.npcVisible.Checked = false;
+                    this.npcZ_half.Checked = false;
+                    for (int i = 0; i < npcAttributes.Items.Count; i++)
+                        npcAttributes.SetItemChecked(i, false);
+                    npcAfterBattle.SelectedIndex = 0;
+                    this.npcEngageTrigger.SelectedIndex = 0;
+                    this.npcMovement.Value = 0;
+                    this.npcID.Value = 0;
+                    this.npcSpeedPlus.Value = 0;
+                    this.label104.Text = "";
+                    this.label31.Text = "";
+                    this.npcGotoA.Text = "";
+                    this.label116.Text = "";
+                    this.npcPropertyA.Value = 0;
+                    this.npcPropertyB.Value = 0;
+                    this.npcPropertyC.Value = 0;
+                    this.npcEventORPack.Value = 0;
                     this.npcGotoA.Enabled = false;
                     this.npcGotoB.Enabled = false;
                 }
-                else // there is only one root npc
-                {
-                    this.npcMapHeader.Enabled = true;
-                    this.npcRemoveObject.Enabled = true;
-                    this.npcInsertObject.Enabled = true;
-                    this.npcInsertInstance.Enabled = true;
-                    this.npcCopy.Enabled = true;
-                    this.npcDuplicate.Enabled = true;
-                    this.npcMoveDown.Enabled = true;
-                    this.npcMoveUp.Enabled = true;
-                    this.npcEngageType.Enabled = true;
-                    this.npcX.Enabled = true;
-                    this.npcY.Enabled = true;
-                    this.npcZ.Enabled = true;
-                    this.npcFace.Enabled = true;
-                    this.npcPropertyA.Enabled = true;
-                    this.npcPropertyB.Enabled = true;
-                    this.npcVisible.Enabled = true;
-                    this.npcZ_half.Enabled = true;
-                    this.npcAttributes.Enabled = true;
-                    this.npcAfterBattle.Enabled = npcs.EngageType == 2;
-                    this.npcEngageTrigger.Enabled = true;
-                    this.npcMovement.Enabled = true;
-                    this.npcID.Enabled = true;
-                    this.npcEventORPack.Enabled = true;
-                    this.npcSpeedPlus.Enabled = true;
-                    this.npcX.Value = npcs.X;
-                    this.npcY.Value = npcs.Y;
-                    this.npcZ.Value = npcs.Z;
-                    this.npcFace.SelectedIndex = npcs.F;
-                    this.npcVisible.Checked = npcs.Xb7;
-                    this.npcZ_half.Checked = npcs.Yb7;
-                    this.npcAttributes.SetItemChecked(0, npcs.B2b3);
-                    this.npcAttributes.SetItemChecked(1, npcs.B2b4);
-                    this.npcAttributes.SetItemChecked(2, npcs.B2b5);
-                    this.npcAttributes.SetItemChecked(3, npcs.B2b6);
-                    this.npcAttributes.SetItemChecked(4, npcs.B2b7);
-                    this.npcAttributes.SetItemChecked(5, npcs.B3b0);
-                    this.npcAttributes.SetItemChecked(6, npcs.B3b1);
-                    this.npcAttributes.SetItemChecked(7, npcs.B3b2);
-                    this.npcAttributes.SetItemChecked(8, npcs.B3b3);
-                    this.npcAttributes.SetItemChecked(9, npcs.B3b4);
-                    this.npcAttributes.SetItemChecked(10, npcs.B3b5);
-                    this.npcAttributes.SetItemChecked(11, npcs.B3b6);
-                    this.npcAttributes.SetItemChecked(12, npcs.B3b7);
-                    this.npcAttributes.SetItemChecked(13, npcs.B4b0);
-                    this.npcAttributes.SetItemChecked(14, npcs.B4b1);
-                    this.npcAfterBattle.SelectedIndex = npcs.AfterBattle;
-                    this.npcEngageTrigger.SelectedIndex = npcs.EngageTrigger;
-                    this.npcMovement.Value = npcs.Movement;
-                    this.npcID.Value = npcs.NPCID;
-                    this.npcSpeedPlus.Value = npcs.SpeedPlus;
-                    if (this.npcEngageType.SelectedIndex == 0)
-                    {
-                        this.label104.Text = "NPC #+";
-                        this.label31.Text = "Event #+";
-                        this.npcGotoA.Text = "Event #";
-                        this.label116.Text = "Action #+";
-                        this.npcPropertyA.Maximum = 7;
-                        this.npcPropertyB.Maximum = 7;
-                        this.npcPropertyC.Enabled = true;
-                        this.npcEventORPack.Maximum = 4095;
-                    }
-                    else if (this.npcEngageType.SelectedIndex == 1)
-                    {
-                        this.label104.Text = "$70A7 = ";
-                        this.label31.Text = "{N/A}";
-                        this.npcGotoA.Text = "Event #";
-                        this.label116.Text = "{N/A}";
-                        this.npcPropertyA.Maximum = 255;
-                        this.npcPropertyB.Enabled = false;
-                        this.npcPropertyC.Enabled = false;
-                        this.npcEventORPack.Maximum = 4095;
-                    }
-                    else if (this.npcEngageType.SelectedIndex == 2)
-                    {
-                        this.label104.Text = "Action #+";
-                        this.label31.Text = "Pack #+";
-                        this.npcGotoA.Text = "Pack #";
-                        this.label116.Text = "{N/A}";
-                        this.npcPropertyA.Maximum = 15;
-                        this.npcPropertyB.Maximum = 15;
-                        this.npcPropertyC.Enabled = false;
-                        this.npcEventORPack.Maximum = 255;
-                    }
-                    this.npcPropertyA.Value = npcs.PropertyA;
-                    this.npcPropertyB.Value = npcs.PropertyB;
-                    this.npcPropertyC.Value = npcs.PropertyC;
-                    this.npcEventORPack.Value = npcs.EventORpack;
-                    this.npcGotoA.Enabled = true;
-                    this.npcGotoB.Enabled = true;
-                }
-            }
-            else // there are no npcs
+                npcsBytesLeft.Text = CalculateFreeNPCSpace() + " bytes left";
+                npcsBytesLeft.BackColor = CalculateFreeNPCSpace() >= 0 ? SystemColors.Control : Color.Red;
+                this.Updating = false;
+            } catch (Exception)
             {
-                this.npcMapHeader.Enabled = false;
-                this.npcRemoveObject.Enabled = false;
-                this.npcInsertInstance.Enabled = false;
-                this.npcInsertObject.Enabled = true;
-                this.npcCopy.Enabled = false;
-                this.npcDuplicate.Enabled = false;
-                this.npcMoveDown.Enabled = false;
-                this.npcMoveUp.Enabled = false;
-                this.npcEngageType.Enabled = false;
-                this.npcX.Enabled = false;
-                this.npcY.Enabled = false;
-                this.npcZ.Enabled = false;
-                this.npcFace.Enabled = false;
-                this.npcPropertyA.Enabled = false;
-                this.npcPropertyB.Enabled = false;
-                this.npcPropertyC.Enabled = false;
-                this.npcVisible.Enabled = false;
-                this.npcZ_half.Enabled = false;
-                this.npcAttributes.Enabled = false;
-                this.npcAfterBattle.Enabled = false;
-                this.npcEngageTrigger.Enabled = false;
-                this.npcMovement.Enabled = false;
-                this.npcID.Enabled = false;
-                this.npcEventORPack.Enabled = false;
-                this.npcSpeedPlus.Enabled = false;
-                this.npcX.Value = 0;
-                this.npcY.Value = 0;
-                this.npcZ.Value = 0;
-                this.npcFace.SelectedIndex = 0;
-                this.npcVisible.Checked = false;
-                this.npcZ_half.Checked = false;
-                for (int i = 0; i < npcAttributes.Items.Count; i++)
-                    npcAttributes.SetItemChecked(i, false);
-                npcAfterBattle.SelectedIndex = 0;
-                this.npcEngageTrigger.SelectedIndex = 0;
-                this.npcMovement.Value = 0;
-                this.npcID.Value = 0;
-                this.npcSpeedPlus.Value = 0;
-                this.label104.Text = "";
-                this.label31.Text = "";
-                this.npcGotoA.Text = "";
-                this.label116.Text = "";
-                this.npcPropertyA.Value = 0;
-                this.npcPropertyB.Value = 0;
-                this.npcPropertyC.Value = 0;
-                this.npcEventORPack.Value = 0;
-                this.npcGotoA.Enabled = false;
-                this.npcGotoB.Enabled = false;
+
             }
-            npcsBytesLeft.Text = CalculateFreeNPCSpace() + " bytes left";
-            npcsBytesLeft.BackColor = CalculateFreeNPCSpace() >= 0 ? SystemColors.Control : Color.Red;
-            this.Updating = false;
         }
         private void RefreshNPCProperties()
         {

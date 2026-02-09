@@ -219,7 +219,7 @@ namespace LAZYSHELL
                 Buffer.BlockCopy(romSrc, 0x148000, romDst, 0x148000, 0x8000);
                 Buffer.BlockCopy(romSrc, 0x1DB000, romDst, 0x1DB000, 0x190);  // npc packets
                 Buffer.BlockCopy(romSrc, 0x1DB800, romDst, 0x1DB800, 0xE00);  // npc properties
-                Buffer.BlockCopy(romSrc, 0x1DDE00, romDst, 0x1DDE00, 0x200);  // partitions
+                Buffer.BlockCopy(romSrc, 0x1DEBE0, romDst, 0x1DEBE0, 0x200);  // partitions
             }
             if (elements.Nodes["Levels"].Nodes["Exits"].Checked)   // exits
             {

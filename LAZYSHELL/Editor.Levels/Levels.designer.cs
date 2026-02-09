@@ -598,7 +598,7 @@ namespace LAZYSHELL
             // 
             this.npcMapHeader.Location = new System.Drawing.Point(201, 27);
             this.npcMapHeader.Maximum = new decimal(new int[] {
-            119,
+            255,
             0,
             0,
             0});
@@ -984,10 +984,10 @@ namespace LAZYSHELL
             this.npcVisible.CheckedChanged += new System.EventHandler(this.npcsShowNPC_CheckedChanged);
             // 
             // npcID
-            // 
+            //
             this.npcID.Location = new System.Drawing.Point(73, 67);
             this.npcID.Maximum = new decimal(new int[] {
-            511,
+            1462,
             0,
             0,
             0});

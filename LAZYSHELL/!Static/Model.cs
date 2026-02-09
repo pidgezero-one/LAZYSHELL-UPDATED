@@ -33,6 +33,20 @@ namespace LAZYSHELL
         public static Program Program { get { return program; } set { program = value; } }
         private static byte[] rom;
         public static byte[] ROM { get { return rom; } set { rom = value; } }
+
+        // Detect if this is a randomizer ROM with expanded data structures
+        // Vanilla SMRPG is exactly 4MB (0x400000 bytes)
+        // Randomizer ROMs are larger due to expanded tables
+        public static bool IsRandomizerROM
+        {
+            get
+            {
+                if (rom == null || rom.Length == 0)
+                    return false;
+                return rom.Length > 0x400000;
+            }
+        }
+
         private static ProjectDB project;
         public static ProjectDB Project
         {
@@ -846,7 +860,7 @@ namespace LAZYSHELL
             {
                 if (npcProperties == null)
                 {
-                    npcProperties = new NPCProperties[512];
+                    npcProperties = new NPCProperties[1462];
                     for (int i = 0; i < npcProperties.Length; i++)
                         npcProperties[i] = new NPCProperties(i);
                 }
@@ -860,7 +874,7 @@ namespace LAZYSHELL
             {
                 if (npcSpritePartitions == null)
                 {
-                    npcSpritePartitions = new Partitions[120];
+                    npcSpritePartitions = new Partitions[256];
                     for (int i = 0; i < npcSpritePartitions.Length; i++)
                         npcSpritePartitions[i] = new Partitions(i);
                 }
@@ -1538,7 +1552,12 @@ namespace LAZYSHELL
             {
                 if (behaviorAnimMonsters == null)
                 {
-                    behaviorAnimMonsters = new AnimationScript[54];
+                    // Count is determined by unique behavior offsets found in ROM
+                    // Create a temporary AnimationScript to trigger offset building
+                    var temp = new AnimationScript(0, 0);
+                    int count = temp.BehaviorOffsetCount;
+
+                    behaviorAnimMonsters = new AnimationScript[count];
                     for (int i = 0; i < behaviorAnimMonsters.Length; i++)
                         behaviorAnimMonsters[i] = new AnimationScript(i, 0);
                 }
@@ -1552,7 +1571,12 @@ namespace LAZYSHELL
             {
                 if (behaviorAnimAllies == null)
                 {
-                    behaviorAnimAllies = new AnimationScript[2];
+                    // Count is determined by unique character behavior offsets found in ROM
+                    // Create a temporary AnimationScript to trigger offset building
+                    var temp = new AnimationScript(0, 13);
+                    int count = temp.CharacterBehaviorCount;
+
+                    behaviorAnimAllies = new AnimationScript[count];
                     for (int i = 0; i < behaviorAnimAllies.Length; i++)
                         behaviorAnimAllies[i] = new AnimationScript(i, 13);
                 }
@@ -1580,7 +1604,7 @@ namespace LAZYSHELL
             {
                 if (weaponAnimations == null)
                 {
-                    weaponAnimations = new AnimationScript[36];
+                    weaponAnimations = new AnimationScript[39];
                     for (int i = 0; i < weaponAnimations.Length; i++)
                         weaponAnimations[i] = new AnimationScript(i, 6);
                 }
@@ -1594,7 +1618,7 @@ namespace LAZYSHELL
             {
                 if (weaponSoundScripts == null)
                 {
-                    weaponSoundScripts = new AnimationScript[36];
+                    weaponSoundScripts = new AnimationScript[39];
                     for (int i = 0; i < weaponSoundScripts.Length; i++)
                         weaponSoundScripts[i] = new AnimationScript(i, 7);
                 }
@@ -1608,7 +1632,7 @@ namespace LAZYSHELL
             {
                 if (weaponTimedHitScripts == null)
                 {
-                    weaponTimedHitScripts = new AnimationScript[36];
+                    weaponTimedHitScripts = new AnimationScript[39];
                     for (int i = 0; i < weaponTimedHitScripts.Length; i++)
                         weaponTimedHitScripts[i] = new AnimationScript(i, 8);
                 }
@@ -1699,7 +1723,7 @@ namespace LAZYSHELL
             {
                 if (animations == null)
                 {
-                    animations = new Animation[444];
+                    animations = new Animation[1024];
                     for (int i = 0; i < animations.Length; i++)
                         animations[i] = new Animation(i);
                 }
@@ -1726,7 +1750,8 @@ namespace LAZYSHELL
             get
             {
                 if (spriteGraphics == null)
-                    spriteGraphics = Bits.GetBytes(rom, 0x280000, 0xB4000);
+                    // Expanded to 0xF87C0 to cover sprite tiles from 0x374660-0x3787C0
+                    spriteGraphics = Bits.GetBytes(rom, 0x280000, 0xF87C0);
                 return spriteGraphics;
             }
             set { spriteGraphics = value; }
@@ -1739,7 +1764,7 @@ namespace LAZYSHELL
             {
                 if (npcPackets == null)
                 {
-                    npcPackets = new NPCPacket[80];
+                    npcPackets = new NPCPacket[256];
                     for (int i = 0; i < npcPackets.Length; i++)
                         npcPackets[i] = new NPCPacket(i);
                 }
@@ -2900,6 +2925,14 @@ namespace LAZYSHELL
             dummy = WorldMapBackgroundGraphics;
             dummy = WorldMapBackgroundPalette;
             dummy = WorldMapBackgroundTileset;
+        }
+        public static void ClearSpellNames()
+        {
+            spellNames = null;
+        }
+        public static void ClearItemNames()
+        {
+            itemNames = null;
         }
         public static void ClearModel()
         {

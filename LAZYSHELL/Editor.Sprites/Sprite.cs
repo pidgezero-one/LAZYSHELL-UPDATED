@@ -75,8 +75,36 @@ namespace LAZYSHELL
                 palette = Palette;
             // get offsets
             int animationNum = Bits.GetShort(rom, this.index * 4 + 0x250002);
-            int animationOffset = Bits.GetInt24(rom, 0x252000 + (animationNum * 3)) - 0xC00000;
+
+            // Validate animation pointer table offset
+            int pointerTableOffset = 0x252000 + (animationNum * 3);
+            if (pointerTableOffset + 2 >= rom.Length)
+            {
+                // Return empty pixel array if animation pointer is invalid
+                size = new Size(1, 1);
+                return new int[1];
+            }
+
+            int animationOffset = Bits.GetInt24(rom, pointerTableOffset) - 0xC00000;
+
+            // Validate animation offset
+            if (animationOffset < 0 || animationOffset >= rom.Length)
+            {
+                // Return empty pixel array if animation offset is invalid
+                size = new Size(1, 1);
+                return new int[1];
+            }
+
             int animationLength = Bits.GetShort(rom, animationOffset);
+
+            // Validate animation length
+            if (animationOffset + animationLength > rom.Length || animationLength <= 0 || animationLength > 0x10000)
+            {
+                // Return empty pixel array if animation length is invalid
+                size = new Size(1, 1);
+                return new int[1];
+            }
+
             // get mold data
             byte[] sm = Bits.GetBytes(rom, animationOffset, animationLength);
             int offset = Bits.GetShort(sm, 2);

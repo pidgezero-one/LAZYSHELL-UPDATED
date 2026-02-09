@@ -112,6 +112,8 @@ namespace LAZYSHELL
         #region Functions
         private void Initialize()
         {
+            Console.WriteLine(index);
+            Console.WriteLine("");
             InitializeLayerProperties();
             InitializeMapProperties();
             InitializeNPCProperties();

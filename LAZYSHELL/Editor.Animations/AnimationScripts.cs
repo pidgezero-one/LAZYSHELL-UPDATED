@@ -166,6 +166,8 @@ namespace LAZYSHELL
                 case 1:
                     wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
                     animationName.Items.Clear();
+                    // Force refresh spell names from ROM by clearing cache
+                    Model.ClearSpellNames();
                     for (int i = 0; i < animationScripts.Length; i++)
                         this.animationName.Items.Add(Model.SpellNames.GetUnsortedName(i + 0x40));
                     animationName.DrawMode = DrawMode.OwnerDrawFixed;
@@ -220,6 +222,8 @@ namespace LAZYSHELL
                 case 6:
                     wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
                     animationName.Items.Clear();
+                    // Force refresh item names from ROM by clearing cache
+                    Model.ClearItemNames();
                     for (int i = 0; i < animationScripts.Length; i++)
                         this.animationName.Items.Add(Model.ItemNames.GetUnsortedName(i));
                     animationName.DrawMode = DrawMode.OwnerDrawFixed;
@@ -228,6 +232,8 @@ namespace LAZYSHELL
                 case 7:
                     wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
                     animationName.Items.Clear();
+                    // Force refresh item names from ROM by clearing cache
+                    Model.ClearItemNames();
                     for (int i = 0; i < animationScripts.Length; i++)
                         this.animationName.Items.Add(Model.ItemNames.GetUnsortedName(i));
                     animationName.DrawMode = DrawMode.OwnerDrawFixed;
@@ -236,6 +242,8 @@ namespace LAZYSHELL
                 case 8:
                     wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
                     animationName.Items.Clear();
+                    // Force refresh item names from ROM by clearing cache
+                    Model.ClearItemNames();
                     for (int i = 0; i < animationScripts.Length; i++)
                         this.animationName.Items.Add(Model.ItemNames.GetUnsortedName(i));
                     animationName.DrawMode = DrawMode.OwnerDrawFixed;
@@ -281,7 +289,25 @@ namespace LAZYSHELL
                     wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
                     animationName.Items.Clear();
                     this.animationName.Items.AddRange(new object[] {
+                        "Ally joins battle",
                         "Ally takes damage",
+                        "Ally idles",
+                        "Mario initiates attack",
+                        "Toadstool initiates attack",
+                        "Bowser initiates attack",
+                        "Geno initiates attack",
+                        "Mallow initiates attack",
+                        "Mario initiates spell",
+                        "Toadstool initiates spell",
+                        "Bowser initiates spell",
+                        "Geno initiates spell",
+                        "Mallow initiates spell",
+                        "Mario uses item",
+                        "Toadstool uses item",
+                        "Bowser uses item",
+                        "Geno uses item",
+                        "Mallow uses item",
+                        "Ally victory pose",
                         "Ally tries to run",
                     });
                     animationName.DrawMode = DrawMode.Normal;

@@ -34,34 +34,90 @@ namespace LAZYSHELL
         // assemblers
         private void Disassemble()
         {
-            animationOffset = Bits.GetInt24(rom, 0x252000 + (index * 3)) - 0xC00000;
-            int animationLength = Bits.GetShort(rom, animationOffset);
-            buffer = Bits.GetBytes(rom, animationOffset, animationLength);
-            //
-            int offset = 2;
-            ushort sequencePacketPointer = Bits.GetShort(buffer, offset); offset += 2;
-            ushort moldPacketPointer = Bits.GetShort(buffer, offset); offset += 2;
-            byte sequenceCount = buffer[offset++];
-            byte moldCount = buffer[offset++];
-            vramAllocation = (ushort)(buffer[offset] << 8); offset += 2;
-            unknown = Bits.GetShort(buffer, offset);
-            //
-            offset = sequencePacketPointer;
-            for (int i = 0; i < sequenceCount; i++)
+            try
             {
-                Sequence tSequence = new Sequence();
-                tSequence.Disassemble(buffer, offset);
-                sequences.Add(tSequence);
-                offset += 2;
+                // Check if animation pointer table entry is within ROM bounds
+                int pointerTableOffset = 0x252000 + (index * 3);
+                if (pointerTableOffset + 2 >= rom.Length)
+                {
+                    // Beyond ROM bounds, create empty animation
+                    CreateEmptyAnimation();
+                    return;
+                }
+
+                animationOffset = Bits.GetInt24(rom, pointerTableOffset) - 0xC00000;
+
+                // Validate animation offset is within valid range
+                if (animationOffset < 0 || animationOffset >= rom.Length)
+                {
+                    // Invalid offset, create empty animation
+                    CreateEmptyAnimation();
+                    return;
+                }
+
+                int animationLength = Bits.GetShort(rom, animationOffset);
+
+                // Validate animation length doesn't exceed ROM bounds
+                if (animationOffset + animationLength > rom.Length || animationLength <= 0 || animationLength > 0x10000)
+                {
+                    // Invalid length, create empty animation
+                    CreateEmptyAnimation();
+                    return;
+                }
+
+                buffer = Bits.GetBytes(rom, animationOffset, animationLength);
+                //
+                int offset = 2;
+                ushort sequencePacketPointer = Bits.GetShort(buffer, offset); offset += 2;
+                ushort moldPacketPointer = Bits.GetShort(buffer, offset); offset += 2;
+                byte sequenceCount = buffer[offset++];
+                byte moldCount = buffer[offset++];
+                vramAllocation = (ushort)(buffer[offset] << 8); offset += 2;
+                unknown = Bits.GetShort(buffer, offset);
+                //
+                offset = sequencePacketPointer;
+                for (int i = 0; i < sequenceCount; i++)
+                {
+                    Sequence tSequence = new Sequence();
+                    tSequence.Disassemble(buffer, offset);
+                    sequences.Add(tSequence);
+                    offset += 2;
+                }
+                offset = moldPacketPointer;
+                for (int i = 0; i < moldCount; i++)
+                {
+                    Mold tMold = new Mold();
+                    tMold.Disassemble(buffer, offset, uniqueTiles, index, animationOffset);
+                    molds.Add(tMold);
+                    offset += 2;
+                }
             }
-            offset = moldPacketPointer;
-            for (int i = 0; i < moldCount; i++)
+            catch
             {
-                Mold tMold = new Mold();
-                tMold.Disassemble(buffer, offset, uniqueTiles, index, animationOffset);
-                molds.Add(tMold);
-                offset += 2;
+                // Any error during disassembly, create empty animation
+                CreateEmptyAnimation();
             }
+        }
+
+        private void CreateEmptyAnimation()
+        {
+            // Create minimal valid animation data
+            animationOffset = 0;
+            buffer = new byte[12];
+            buffer[0] = 12; // length
+            buffer[1] = 0;
+            buffer[2] = 12; // sequence pointer
+            buffer[3] = 0;
+            buffer[4] = 12; // mold pointer
+            buffer[5] = 0;
+            buffer[6] = 0; // sequence count
+            buffer[7] = 0; // mold count
+            buffer[8] = 8; // vram allocation
+            buffer[9] = 0;
+            buffer[10] = 0; // unknown
+            buffer[11] = 0;
+            vramAllocation = 2048;
+            // sequences and molds lists are already initialized empty
         }
         public void Assemble()
         {

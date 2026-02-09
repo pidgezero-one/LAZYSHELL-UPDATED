@@ -131,7 +131,7 @@ namespace LAZYSHELL
             0});
             this.packetNum.Location = new System.Drawing.Point(184, 2);
             this.packetNum.Maximum = new decimal(new int[] {
-            79,
+            255,
             0,
             0,
             0});
@@ -204,15 +204,15 @@ namespace LAZYSHELL
             0,
             0});
             this.spriteNum.Minimum = new decimal(new int[] {
-            192,
+            0,
             0,
             0,
             0});
             this.spriteNum.Name = "spriteNum";
             this.spriteNum.Size = new System.Drawing.Size(50, 21);
-            this.spriteNum.Text = "192";
+            this.spriteNum.Text = "0";
             this.spriteNum.Value = new decimal(new int[] {
-            192,
+            0,
             0,
             0,
             0});

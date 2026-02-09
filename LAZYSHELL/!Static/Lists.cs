@@ -418,6 +418,36 @@ namespace LAZYSHELL
                 return characterNames;
             }
         }
+        public static string[] SpellNames = new string[]
+        {
+            "Jump",
+            "Fire Orb",
+            "Super Jump",
+            "Super Flame",
+            "Ultra Jump",
+            "Ultra Flame",
+            "Therapy",
+            "Group Hug",
+            "Sleepy Time",
+            "Come Back",
+            "Mute",
+            "Psych Bomb",
+            "Terrorize",
+            "Poison Gas",
+            "Crusher",
+            "Bowser Crush",
+            "Geno Beam",
+            "Geno Boost",
+            "Geno Whirl",
+            "Geno Blast",
+            "Geno Flash",
+            "Thunderbolt",
+            "HP Rain",
+            "Psychopath",
+            "Shocker",
+            "Snowy",
+            "Star Rain"
+        };
         public static string[] ButtonNames = new string[]
         {
             "left", "right", "down", "up", "X", "A", "Y", "B"
@@ -1680,7 +1710,6 @@ namespace LAZYSHELL
                         case 1:
                         case 37:
                             monsterBehaviors[i] = "Idle/On Hit"; break;
-
                         default: monsterBehaviors[i] = ""; break;
                     }
                 }
@@ -1954,88 +1983,88 @@ namespace LAZYSHELL
         #region Sprites
         public static string[] SpriteNames = new string[]
         {
-            "Mario (walking, down-left)",
-            "Mario (jump, front)",
-            "Mario (walking, up-right)",
-            "Mario (surprise, left)",
-            "Mario (attack, up-right)",
-            "Mario (hammer attack, up-right)",
-            "Mario (crouch, up-right)",
-            "Toadstool (walking, down-left)",
-            "Toadstool (walking, up-right)",
-            "Toadstool (surprise)",
-            "Toadstool (slap attack)",
-            "Toadstool (frying pan attack)",
-            "Toadstool (fallen/crying)",
-            "Bowser (walking, down-left)",
-            "Bowser (walking, up-right)",
-            "Bowser (surprise)",
-            "Bowser (claw attack)",
-            "Bowser (swing ball-chain)",
-            "Bowser (cast spell)",
-            "Mallow (walking, down-left)",
-            "Mallow (walking, up-right)",
-            "Mallow (surprise)",
-            "Mallow (punch)",
-            "Mallow (swing stick)",
-            "Mallow (still, up-right)",
-            "Geno (walking, down-left)",
-            "Geno (walking, up-right)",
-            "Geno (surprise)",
-            "Geno (elbow shot)",
-            "Geno (finger shot)",
-            "Geno (morph into cannon)",
-            "Hammer",
-            "Froggie Stick",
-            "Cymbals",
-            "Chomp",
-            "Frying Pan",
-            "Parasol",
-            "War Fan",
+            "Mario Walking Down Left",
+            "Mario Jump Front",
+            "Mario Walking Up Right",
+            "Mario Surprise Left",
+            "Mario Attack Up Right",
+            "Mario Hammer Attack Up Right",
+            "Mario Crouch Up Right",
+            "Toadstool Nonprotagonist 1",
+            "Toadstool Nonprotagonist 2",
+            "Toadstool Nonprotagonist 3",
+            "Toadstool Nonprotagonist 4",
+            "Toadstool Nonprotagonist 5",
+            "Toadstool Nonprotagonist 6",
+            "Bowser Nonprotagonist 1",
+            "Bowser Nonprotagonist 2",
+            "Bowser Nonprotagonist 3",
+            "Bowser Nonprotagonist 4",
+            "Bowser Nonprotagonist 5",
+            "Bowser Nonprotagonist 6",
+            "Mallow Nonprotagonist 1",
+            "Mallow Nonprotagonist 2",
+            "Mallow Nonprotagonist 3",
+            "Mallow Nonprotagonist 4",
+            "Mallow Nonprotagonist 5",
+            "Mallow Nonprotagonist 6",
+            "Geno Nonprotagonist 1",
+            "Geno Nonprotagonist 2",
+            "Geno Nonprotagonist 3",
+            "Geno Nonprotagonist 4",
+            "Geno Nonprotagonist 5",
+            "Geno Nonprotagonist 6",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
             "Red Mushroom",
             "Red Scarecrow",
-            "Mario's battle portrait",
-            "Toadstool's battle portrait",
-            "Bowser's battle portrait",
-            "Mallow's battle portrait",
-            "Geno's battle portrait",
-            "Yellow Yoshi",
-            "Pink Yoshi",
-            "Boshi",
+            "Mario S Battle Portrait",
+            "Toadstool S Battle Portrait",
+            "Bowser S Battle Portrait",
+            "Mallow S Battle Portrait",
+            "Geno S Battle Portrait",
+            "Glove",
+            "Shiny Stone",
+            "Yellow Juice",
             "Croco",
             "Green Yoshi",
             "Booster",
-            "Green Yoshi (walk)",
-            "Green Yoshi (laying egg)",
+            "Green Yoshi Walk",
+            "Green Yoshi Laying Egg",
             "King Nimbus",
             "Queen Nimbus",
             "Jonathan Jones",
-            "Valentina",
+            "Splash Water Droplets",
             "Magikoopa",
             "Frogfucius",
             "Tadpole",
             "Thwomp",
             "Big Thwomp",
-            "Microbomb",
+            "Belome Scarecrow",
             "Valentina Statue",
             "Toad",
-            "Wallet Guy (also casino assistants)",
+            "Wallet Guy Also Casino Assistants",
             "Raini",
             "Old Man",
             "Old Woman",
-            "Green/Brown Toad",
+            "Green Brown Toad",
             "Chancellor",
             "Pa Mole",
             "Ma Mole",
-            "Girl Mole (pink bow)",
-            "Girl Mole (yellow bow)",
-            "Nimbusite (blue)",
-            "Nimbusite (red)",
-            "Nimbusite (brown/green)",
-            "Nimbusite (yellow/green)",
+            "Girl Mole Pink Bow",
+            "Girl Mole Yellow Bow",
+            "Nimbusite Blue",
+            "Nimbusite Red",
+            "Nimbusite Brown Green",
+            "Nimbusite Yellow Green",
             "Nimbus Guard",
             "Toadofsky",
-            "Mario Doll (Booster's Castle)",
+            "Mallow Doll",
             "Blue Star Piece",
             "Purple Star Piece",
             "Red Star Piece",
@@ -2050,165 +2079,165 @@ namespace LAZYSHELL
             "Blue Stepping Block",
             "Treasure Chest",
             "Empty Treasure Chest",
-            "Mario Doll (surprised)",
-            "Snifit's Parachute",
+            "Mario Doll Surprised",
+            "Toadstool S Parachute",
             "Rolling Barrel",
-            "Trampoline (Warp)",
-            "Trampoline (Jump)",
-            "Teeter-totter",
+            "Trampoline Warp",
+            "Trampoline Jump",
+            "Teeter Totter",
             "Save Point",
             "Corkpedite",
             "J Puzzle Block",
             "Yellow Stepping Block",
-            "Whirlpool (water)",
+            "Whirlpool Water",
             "Hinopio",
-            "Factory Hex-Nut",
+            "Factory Hex Nut",
             "Green Switch",
-            "Treasure Chest (bad palette)",
-            "Nimbusland Bus Driver",
+            "Mimic Face Standalone",
+            "Mario S Exor Impression",
             "Mushroom Boy",
-            "Marrymore Man (green)",
-            "Marrymore Woman (yellow)",
-            "Marrymore Woman (green)",
-            "Marrymore Kid (purple)",
-            "Marrymore Kid (blue/green)",
-            "Marrymore Bright Card buyer (brown/grey)",
-            "Rose Town Gardener (green/grey)",
-            "Old Woman (green/grey)",
-            "Old Woman (purple/grey)",
+            "Marrymore Man Green",
+            "Marrymore Woman Yellow",
+            "Marrymore Woman Green",
+            "Marrymore Kid Purple",
+            "Marrymore Kid Blue Green",
+            "Marrymore Bright Card Buyer Brown Grey",
+            "Rose Town Gardener Green Grey",
+            "Old Woman Green Grey",
+            "Old Woman Purple Grey",
             "Fat Yoshi Baby",
             "Yoshi Baby Egg",
             "Gameboy Kid",
             "Frogfucius Student",
-            "Chomp (behind)",
-            "Wiggler (head)",
+            "Chomp Behind",
+            "Wiggler Head",
             "Block Shadow",
             "Red Magikoopa",
-            "Wiggler (body segment)",
-            "Dodo (as parson)",
+            "Wiggler Body Segment",
+            "Small Frog Coin",
             "Moleville Mine Cart",
-            "Knife Guy Juggler (still, red balls)",
+            "Knife Guy Juggler Still Red Balls",
             "Knife Guy Juggler",
-            "Mine Cart (Seq7 Overworld Sprite)",
-            "Mario in Mine Cart",
-            "Fireball (surface from lava)",
+            "Mine Cart Bad Palette",
+            "Mario In Mine Cart",
+            "Fireball Surface From Lava",
             "Piranha Plant",
             "Goomba",
             "Bullet Bill",
             "Golden Bullet Bill",
-            "Factory Clerk (green)",
-            "Land's End Cannon",
-            "Apple (Yo'ster Isle intro sequence)",
-            "Bob-omb",
+            "Factory Clerk Green",
+            "Land S End Cannon",
+            "Red Dot",
+            "Bob Omb",
             "Commander Troopa",
             "Golden Belome",
             "Birdy Statue",
-            "Shyguy in Bowser's Helicopter",
+            "Shyguy In Bowser S Helicopter",
             "Machine Made Bowyer",
-            "Machine Made Yaridovich (out of battle)",
+            "Machine Made Yaridovich Out Of Battle",
             "Machine Made Axem Red",
-            "Gunyolk (top section)",
-            "Gunyolk (outer section)",
+            "Gunyolk Top Section",
+            "Gunyolk Outer Section",
             "Factory Crane",
-            "Blue-Green Star Piece (spinning)",
-            "Smithy's Hammer",
-            "Smithy's Chest",
+            "Blue Green Star Piece Spinning",
+            "Smithy S Hammer",
+            "Smithy S Chest",
             "Poison Toxic Gas",
-            "Shelly (bottom section)",
-            "Dyna and Mite",
-            "Seaside Town Fake (green)",
-            "Seaside Town Fake Elder (green)",
-            "Seaside Town Elder (yellow/green)",
-            "Monstermama (golden/brown/red)",
+            "Shelly Bottom Section",
+            "Dyna And Mite",
+            "Seaside Town Fake Green",
+            "Seaside Town Fake Elder Green",
+            "Seaside Town Elder Yellow Green",
+            "Monstermama Golden Brown Red",
             "Nimbus Guard",
-            "Factory Manager (blue)",
-            "Factory Director (red)",
-            "Boomer (red)",
-            "Dr.Topper (green)",
-            "Sparkles from Star Piece",
+            "Factory Manager Blue",
+            "Factory Director Red",
+            "Boomer Red",
+            "Dr Topper Green",
+            "Sparkles From Star Piece",
             "Geno Doll",
-            "Smelter (back section)",
-            "Mario on Nimbus Busman (Bowser's Keep cutscene)",
-            "Golden Chomp (back)",
-            "Chomp (front)",
-            "Grate Guy (from casino)",
-            "Marrymore Inn Keeper (blue, striped hat)",
+            "Smelter Back Section",
+            "Aero Upright",
+            "Golden Chomp Back",
+            "Chomp Front",
+            "Grate Guy From Casino",
+            "Marrymore Inn Keeper Blue Striped Hat",
             "Rose Town Treasure Holder",
-            "Rose Town Woman (blue/pink, braids)",
-            "Marrymore Woman (yellow)",
-            "Rose Town Old Man (blue/grey)",
-            "Old Woman (grey/red)",
-            "Kid (red, striped hat)",
-            "Gaz (purple)",
-            "(nothing)",
-            "(nothing)",
+            "Rose Town Woman Blue Pink Braids",
+            "Marrymore Woman Yellow",
+            "Rose Town Old Man Blue Grey",
+            "Old Woman Grey Red",
+            "Kid Red Striped Hat",
+            "Gaz Purple",
+            "Nothing",
+            "Nothing",
             "Cannon Ball",
-            "Croco (still)",
-            "Bowser w/Toadstool in Helicopter",
-            "Miniature Toad",
+            "Croco Still",
+            "Croco Overworld",
+            "Jinx Overworld 1",
             "Coin",
             "Small Coin",
             "Frog Coin",
             "Flower",
-            "Big Flower",
-            "Sparkle (sideways)",
-            "Sparkle (downwards)",
-            "Sparkle (circular winding)",
+            "Ring",
+            "Sparkle Sideways",
+            "Sparkle Downwards",
+            "Frying Pan Packet",
             "Explosion",
-            "Mokura's Cloud (blue)",
-            "Small Frog Coin",
-            "Level Up text from Invincible Star",
-            "Grey Explosion (when encountering Fireballs)",
-            "Miniature Axem Red",
-            "Terrapin (still)",
-            "Jinx (walk)",
-            "Axem Red",
-            "Axem Black",
-            "Axem Pink",
-            "Axem Yellow",
-            "Axem Green",
-            "Axem Red teleport",
-            "Stumpet (head)",
-            "Stumpet (roots, right)",
-            "Czar Dragon (body)",
-            "Growing Vine Beanstalk",
-            "Brick Beanstalk Block",
-            "Whirlpool (desert)",
-            "Yellow Letter",
-            "Yaridovich (out of battle)",
-            "Toadstool Marrymore Accessories",
-            "Tentacle (extending)",
-            "Snifit (black, back)",
+            "Mokura S Cloud Blue",
+            "Shoes",
+            "Level Up Text From Invincible Star",
+            "Grey Explosion When Encountering Fireballs",
+            "Microbomb Packet",
+            "Card",
+            "Brooch",
+            "Hammer Packet",
+            "Stick Packet",
+            "Chomp Packet",
+            "Fan Packet",
+            "Red Mushroom Item",
+            "Axem Red Teleport",
+            "Red Ball",
+            "Blue Ball",
+            "Crown",
+            "Green Ball",
+            "Yellow Ball",
+            "Red Item Collection",
+            "Green Item Collection",
+            "Yellow Item Collection",
+            "Banana Peel",
+            "Blue Item Collection",
+            "Gray Ball",
             "Level Up Bonus Selection Box",
-            "Booster's Tower Entrance Door",
-            "Light Green Pipe (top edge)",
+            "Tiny Star",
+            "Light Green Pipe Top Edge",
             "Level Up Bonus Text",
             "Level Up Bonus Flower",
             "Level Up Bonus Pow Power",
             "Level Up Bonus Star Magic",
-            "Level Up Bonus HP",
-            "Falling Stepping Bridge Block",
-            "Old Classic Mario",
-            "Booster's Choo-Choo Train",
-            "Magikoopa (blue, walking)",
-            "Terrapin (walking)",
-            "Splash Water Droplets",
-            "Small Sea Fish",
-            "Splash Water Geyser",
-            "Bowyer",
+            "Level Up Bonus Hp",
+            "Green Bomb",
+            "Yellow Bomb",
+            "Blue Bomb",
+            "Green Juice",
+            "Egg",
+            "Red Juice",
+            "Blue R Drink",
+            "Yellow D Drink",
+            "Green P Drink",
             "White Gas Cloud",
             "Machine Made Drill Bit",
-            "Mushroom House Decor Mailbox",
-            "Link Sleeping in Rose Town Inn",
-            "Samus Sleeping in Mushroom Kingdom",
-            "Grey Stepping Stone",
-            "Hinopio's Model Airplane (blue/grey)",
-            "Grey Stone Block",
-            "Small Black Fence",
-            "Wooden Bridge Bowser's Keep (right section)",
-            "Grey Stone Bridge Bowser's Keep (right section)",
-            "Toadstool Hand Captive from Rope",
-            "Plywood Brown Door Bowser's Keep",
+            "Green Frog Drink",
+            "Yellow Music Drink",
+            "Blue Music Drink",
+            "Red Music Drink",
+            "Red Star Drink",
+            "Red Shell",
+            "Green Shell",
+            "Parasol Packet",
+            "Feather",
+            "Berry",
+            "Yoshi Cookie",
             "Beetle",
             "Terrapin",
             "Spikey",
@@ -2226,7 +2255,7 @@ namespace LAZYSHELL
             "Birdy",
             "Pinwheel",
             "Rat Funk",
-            "K-9",
+            "K",
             "Magmite",
             "The Big Boo",
             "Dry Bones",
@@ -2235,7 +2264,7 @@ namespace LAZYSHELL
             "Chomp",
             "Pandorite",
             "Shy Ranger",
-            "Bob-Omb",
+            "Bob Omb",
             "Spookum",
             "Hammer Bro",
             "Buzzer",
@@ -2249,7 +2278,7 @@ namespace LAZYSHELL
             "Enigma",
             "Blaster",
             "Guerrilla",
-            "Baba Yaga",
+            "Birdy",
             "Hobgoblin",
             "Reacher",
             "Shogun",
@@ -2266,7 +2295,7 @@ namespace LAZYSHELL
             "Remo Con",
             "Snapdragon",
             "Stumpet",
-            "Dodo (2nd time)",
+            "Dodo Nd Time",
             "Jester",
             "Artichoker",
             "Arachne",
@@ -2283,23 +2312,23 @@ namespace LAZYSHELL
             "Gu Goomba",
             "Chewy",
             "Fireball",
-            "Mr.Kipper",
+            "Mr Kipper",
             "Factory Chief",
             "Bandana Blue",
             "Manager",
             "Bluebird",
-            "__nothing",
+            "Geno Clone S",
             "Alley Rat",
             "Chow",
             "Magmus",
-            "Li{xx}L Boo",
+            "Li Xx L Boo",
             "Vomer",
             "Glum Reaper",
             "Pyrosphere",
             "Chomp Chomp",
             "Hidon",
             "Sling Shy",
-            "Rob-Omb",
+            "Rob Omb",
             "Shy Guy",
             "Ninja",
             "Stinger",
@@ -2307,7 +2336,7 @@ namespace LAZYSHELL
             "Geckit",
             "Jabit",
             "Star Cruster",
-            "Merlin",
+            "Team Gauge",
             "Muckle",
             "Forkies",
             "Gorgon",
@@ -2315,48 +2344,48 @@ namespace LAZYSHELL
             "Chained Kong",
             "Fautso",
             "Straw Head",
-            "Juju",
+            "Bluebird",
             "Armored Ant",
             "Orbison",
-            "Tub-O-Troopa",
+            "Tub O Troopa",
             "Doppel",
             "Pulsar",
-            "__purple Bahamutt",
+            "Bobomb",
             "Octovader",
             "Ribbite",
             "Director",
-            "__Gunyolk (yellow)",
-            "__Boomer (blue)",
+            "Snifit",
+            "Pounder",
             "Puppox",
             "Fink Flower",
-            "Lumbler",
+            "Crook",
             "Springer",
-            "Harlequin",
+            "Apprentice",
             "Kriffid",
             "Spinthra",
-            "Radish",
-            "Crippo",
-            "Mastablasta",
-            "Pile Driver",
+            "Bandana Red",
+            "Bowser Clone S",
+            "Bloober",
+            "Booster Dummy",
             "Apprentice",
-            "__nothing",
-            "__nothing",
-            "__nothing",
-            "__Geno redemption",
-            "__little bird",
+            "Toadstool Clone S",
+            "Piranha Plant",
+            "Mario Clone S",
+            "Poundette",
+            "Mad Mallet",
             "Box Boy",
             "Shelly",
-            "Super Spike",
+            "Punchinello 2",
             "Dodo",
             "Oerlikon",
             "Chester",
             "Body",
-            "__Pile Driver (body)",
+            "Bobomb S 1",
             "Torte",
             "Shy Away",
             "Jinx Clone",
-            "Machine Made (Shyster)",
-            "Machine Made (Drill Bit)",
+            "Machine Made Shyster",
+            "Machine Made Drill Bit",
             "Formless",
             "Mokura",
             "Fire Crystal",
@@ -2364,75 +2393,75 @@ namespace LAZYSHELL
             "Earth Crystal",
             "Wind Crystal",
             "Mario Clone",
-            "Toadstool 2",
+            "Toadstool",
             "Bowser Clone",
             "Geno Clone",
             "Mallow Clone",
             "Shyster",
-            "Kinklink",
-            "__Toadstool (captive)",
-            "Hangin{xx} Shy",
+            "Bobomb S 2",
+            "Bobomb S 3",
+            "Hangin Xx Shy",
             "Smelter",
-            "Machine Made (Mack)",
-            "Machine Made (Bowyer)",
-            "Machine Made (Yaridovich)",
-            "Machine Made (Axem Pink)",
-            "Machine Made (Axem Black)",
-            "Machine Made (Axem Red)",
-            "Machine Made (Axem Yellow)",
-            "Machine Made (Axem Green)",
-            "Goomba (Intro)",
-            "Hammer Bro (Intro)",
-            "Birdo (Intro)",
-            "Bb-Bomb",
-            "Magidragon",
+            "Machine Made Mack",
+            "Machine Made Bowyer",
+            "Machine Made Yaridovich",
+            "Machine Made Axem Pink",
+            "Machine Made Axem Black",
+            "Machine Made Axem Red",
+            "Machine Made Axem Yellow",
+            "Machine Made Axem Green",
+            "Bahamutt",
+            "Mallow Clone S",
+            "Bobomb S 4",
+            "Culex 3d",
+            "Johnny 2",
             "Starslap",
             "Mukumuku",
             "Zeostar",
             "Jagger",
-            "Chompweed",
-            "Smithy (Tank Head)",
-            "Smithy (Box Head)",
-            "__Corkpedite",
+            "Jinx 4",
+            "Smithy Tank Head",
+            "Smithy Box Head",
+            "Fire Crystal 3d",
             "Microbomb",
-            "__Thwomp",
-            "Grit",
+            "Water Crystal 3d",
+            "Pyrosphere",
             "Neosquid",
-            "Yaridovich (mirage)",
+            "Yaridovich Mirage",
             "Helio",
             "Right Eye",
             "Left Eye",
             "Knife Guy",
             "Grate Guy",
             "Bundt",
-            "Jinx (1st time)",
-            "Jinx (2nd time)",
+            "Jinx 2",
+            "Jinx 3",
             "Count Down",
-            "Ding-A-Ling",
-            "Belome (1st time)",
-            "Belome (2nd time)",
-            "__Belome",
+            "Ding A Ling",
+            "Belome 1st Time",
+            "Belome 2nd Time",
+            "Belome 3rd Time",
             "Smilax",
-            "Thrax        ",
+            "Earth Crystal 3d",
             "Megasmilax",
-            "Birdo",
+            "Birdetta",
             "Eggbert",
             "Axem Yellow",
             "Punchinello",
-            "Tentacles (right)",
+            "Tentacles Right",
             "Axem Red",
             "Axem Green",
             "King Bomb",
             "Mezzo Bomb",
-            "__Bundt object",
+            "Fancy Bundt",
             "Raspberry",
             "King Calamari",
-            "Tentacles (left)",
-            "Jinx (3rd time)",
+            "Tentacles Left",
+            "Jinx 1",
             "Zombone",
             "Czar Dragon",
-            "Cloaker (1st time)",
-            "Domino (2nd time)",
+            "Cloaker St Time",
+            "Domino Nd Time",
             "Mad Adder",
             "Mack",
             "Bodyguard",
@@ -2441,32 +2470,32 @@ namespace LAZYSHELL
             "Axem Pink",
             "Axem Black",
             "Bowyer",
-            "Aero",
-            "__Exor (mouth)",
+            "Fancyraspberry",
+            "Exhausted Torte",
             "Exor",
-            "Smithy (1st Form)",
+            "Smithy 1st Form",
             "Shyper",
-            "Smithy (Body)",
-            "Smithy (Head)",
-            "Smithy (Magic Head)",
-            "Smithy (Chest Head)",
-            "Croco (1st time)",
-            "Croco (2nd time)",
-            "__Croco",
+            "Smithy Body",
+            "Smithy Head",
+            "Smithy Magic Head",
+            "Smithy Chest Head",
+            "Croco 1",
+            "Croco 2",
+            "Wind Crystal 3d",
             "Earth Link",
-            "Bowser",
+            "Aero",
             "Axem Rangers",
             "Booster",
             "Booster",
             "Snifit",
             "Johnny",
-            "Johnny",
+            "Strong Snifit",
             "Valentina",
-            "Cloaker (2nd time)",
-            "Domino (2nd time)",
+            "Cloaker 2",
+            "Domino 2",
             "Candle",
             "Culex",
-            "ABXY action button selection in battle",
+            "Abxy Action Button Selection In Battle",
             "Rainbow Explosion",
             "Blue Explosion",
             "Green Explosion",
@@ -2474,593 +2503,613 @@ namespace LAZYSHELL
             "Bomb Explosion",
             "Small White Cloud",
             "Drain Explosion",
-            "flower bonus alphabet + symbols",
-            "Battle stars (on hit)",
-            "Come Back rainbow star",
-            "yellow cure stars",
-            "....",
-            "Bowyer's arrow",
-            "Geno's Star Form (Ending Credits)",
-            "Geno's Bullets and Star Gun",
-            "very small black dot",
-            "HP Rain cloud",
-            "stat-boost arrows",
-            "black rolling coal rock",
-            "blue spark",
-            "yellow spark",
-            "green spark",
-            "red spark",
-            "rainbow rain",
-            "mushroom spores",
-            "Lazy shell, Heavy Troopa, nok-nok shell",
+            "Flower Bonus Alphabet Symbols",
+            "Light Blue Stars",
+            "Come Back Rainbow Star",
+            "Yellow Cure Stars",
+            "Empty",
+            "Bowyer S Arrow",
+            "Yellow Mist Steam",
+            "Yellow Mist Steam Forms Into Small Star",
+            "Very Small Black Dot",
+            "Hp Rain Cloud",
+            "Stat Boost Arrows",
+            "Black Rolling Coal Rock",
+            "Blue Spark",
+            "Yellow Spark",
+            "Green Spark",
+            "Red Spark",
+            "Rainbow Rain",
+            "Mushroom Spores",
+            "Lazy Shell Heavy Troopa Nok Nok Shell",
             "Orange Lazy Shell",
-            "Green Lazy Shell (Tub-O-Troopa)",
-            "Snowy eyes",
-            "blinking yellow light circle",
-            "purple petal",
-            "small pink petal",
-            "thrown hammer",
-            "Bombs Away electric ball",
-            "Fire Orb fireball",
-            "Willy Wisp purple electric ball",
-            "spore (pink/green)",
-            "bolt (hardware-wise)",
-            "Mute balloon",
-            "'Thank You' red dialogue bubble",
-            "'Thank You' purple dialogue bubble",
-            "'Thank You' blue dialogue bubble",
-            "'Thank You' green dialogue bubble",
-            "'Thank You' yellow dialogue bubble",
-            "'Psychopath' question mark cloud",
-            "thrown shuriken",
-            "green cure stars",
-            "red cure stars",
-            "blue cure stars",
-            "yellow reusable item sprite with letter I",
-            "ABXY buttons from Bowyer's Button Lock",
-            "Bowser's spike shot",
-            "Geno Flash squinting eyes",
-            "green item collection",
-            "red item collection",
-            "blue item collection",
-            "yellow item collection",
-            "green spore",
-            "'Fear' exclamation point",
-            "....",
+            "Green Lazy Shell Tub O Troopa",
+            "Snowy Eyes",
+            "Blinking Yellow Light Circle",
+            "Purple Petal",
+            "Small Pink Petal",
+            "Thrown Hammer",
+            "Bombs Away Electric Ball",
+            "Fire Orb Fireball",
+            "Willy Wisp Purple Electric Ball",
+            "Spore Pink Green",
+            "Bolt Hardware Wise",
+            "Mute Balloon",
+            "Thank You Red Dialogue Bubble",
+            "Thank You Purple Dialogue Bubble",
+            "Thank You Blue Dialogue Bubble",
+            "Thank You Green Dialogue Bubble",
+            "Thank You Yellow Dialogue Bubble",
+            "Psychopath Question Mark Cloud",
+            "Thrown Shuriken",
+            "Green Cure Stars",
+            "Red Cure Stars",
+            "Blue Cure Stars",
+            "Yellow Reusable Item Sprite With Letter I",
+            "Abxy Buttons From Bowyer S Button Lock",
+            "Bowser S Spike Shot",
+            "Geno Flash Squinting Eyes",
+            "Green Syrup",
+            "Red Syrup",
+            "Blue Syrup",
+            "Yellow Syrup",
+            "Green Spore",
+            "Fear Exclamation Point",
+            "Count Down Gridplane",
             "Mokura",
             "Drain",
-            "sparkles",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "yellow lightning ball",
-            "Fire Orb hit explosion",
-            "egg",
-            "Lightning Orb blue lightning ball",
-            "small yellow spike",
-            "large yellow spike",
-            "white gas cloud",
-            "Blast orange gas cloud",
-            "Star Egg little brown bird",
-            "Poison Gas green gas cloud",
-            "white stars",
-            "purple gas cloud",
-            "yellow star",
-            "Diamond Saw snowflake",
-            "blue gas cloud",
-            "bone throw",
-            "spritz bomb",
-            "Wind Crystal and Fire Crystal",
-            "green shine web",
-            "Mecha-Koopa (Bowser Crush) eyes",
-            "Water Crystal and Earth Crystal",
-            "plasm water droplet (blue-green)",
+            "Sparkles",
+            "Super Flame Fireball",
+            "Ultra Flame Fireball",
+            "Super Flame Explosion",
+            "Ultra Flame Explosion",
+            "Small Mario Hurly Gloves",
+            "Mario Jump Attacks",
+            "Mario Crouch",
+            "Pandorite Small",
+            "Hidon Small",
+            "Chester Small",
+            "Box Boy Small",
+            "Hammer Bro Small",
+            "Mack Small",
+            "Belome Small",
+            "Belome Small",
+            "Bowyer Small",
+            "Punchinello Small",
+            "Dodo Small",
+            "Birdetta Small",
+            "Czar Dragon Small",
+            "Boomer Small",
+            "Exor Small",
+            "Domino Small",
+            "Smithy Small",
+            "Mario Doll Unaffected By Main Character Palette",
+            "Hammer Standalone",
+            "Gold Goomba",
+            "Fire Crystal",
+            "Earth Crystal",
+            "Big Flower",
+            "Dodo As Parson",
+            "Jinx Overworld 2",
+            "Jinx Overworld 3",
+            "Terrapin Ending Credits",
+            "Stumpet Head",
+            "Stumpet Roots Right",
+            "Czar Dragon Body",
+            "Growing Vine Beanstalk",
+            "Brick Beanstalk Block",
+            "Whirlpool Desert",
+            "Yellow Letter",
+            "Yaridovich Out Of Battle",
+            "Tentacle Extending",
+            "Snifit Black Back",
+            "Falling Stepping Bridge Block",
+            "Old Classic Mario",
+            "Booster S Choo Choo Train",
+            "Valentina",
+            "Small Sea Fish",
+            "Splash Water Geyser",
+            "Bowyer",
+            "Mushroom House Decor Mailbox",
+            "Link Sleeping In Rose Town Inn",
+            "Samus Sleeping In Mushroom Kingdom",
+            "Grey Stepping Stone",
+            "Hinopio S Model Airplane Blue Grey",
+            "Grey Stone Block",
+            "Culex Small",
+            "Attack Sprite Overflow",
+            "Sparkle Circular Winding",
+            "Small Flower Standalone",
+            "Recovery Mushroom Standalone",
+            "Key Standalone",
+            "Item Bag Standalone",
+            "Music Note Standalone",
+            "Amanita Mushroom Standalone",
+            "Dingaling Gridplane",
+            "Eggbert Gridplane",
+            "Fire Crystal Gridplane",
+            "Water Crystal Gridplane",
+            "Earth Crystal Gridplane",
+            "Wind Crystal Gridplane",
+            "Geno Arm Shot",
+            "Mack Medium",
+            "Knife Guy Gridplane",
+            "Tiny Bloober Standalone",
+            "Mimic Statue",
+            "Croco Statue",
+            "Booster Statue",
+            "Johnny Statue",
+            "Magikoopa Statue",
+            "Clerk Manager Director Statue",
+            "Fake Elder Statue",
+            "Grate Guy Statue",
+            "Jinx Statue",
+            "Mokura Statue",
+            "Jagger Statue",
+            "Piranha Plant Statue",
+            "Bloober Statue",
+            "Factory Chief Statue",
+            "Axem Red Statue",
+            "Bundt Statue",
+            "Count Down Statue",
+            "Hammer Bro Statue",
+            "Mack Statue",
+            "Small Belome Statue",
+            "Belome Large Overworld",
+            "Bowyer Statue",
+            "Punchinello Statue",
+            "Dodo Statue",
+            "Birdetta Statue",
+            "Czar Dragon Statue",
+            "Boomer Statue",
+            "Exor Statue",
+            "Domino Statue",
+            "Smithy Statue",
+            "Culex Statue",
+            "Mallow Statue Untinted",
+            "Sprite Id Reserved For Egg Hatch",
+            "Chompweed",
+            "Mack Sub",
+            "Belome Sub",
+            "Bowyer Sub",
+            "Knife Guy Sub",
+            "Grate Guy Sub",
+            "Johnny Sub",
+            "Yaridovich Sub",
+            "Belome Sub",
+            "Culex Sub",
+            "Dodo Sub",
+            "Dodo Sub",
+            "Valentina Sub",
+            "Czar Dragon Sub",
+            "Bahamutt Sub",
+            "King Bomb Sub",
+            "Boomer Sub",
+            "Clerk Sub",
+            "Manager Sub",
+            "Director Sub",
+            "Gunyolk Sub",
+            "Beetle Gridplane",
+            "Banana Gridplane",
+            "Crown Gridplane",
+            "Brooch Gridplane",
+            "Shoes Gridplane",
+            "Ring Gridplane",
+            "Stella Beam",
+            "Sagestick",
+            "Wonder Chomp",
+            "Thrax",
+            "Drill Bit",
+            "Aero",
+            "Scarecrow",
+            "Booster Tower Door",
+            "Thwomp",
+            "Bundt Object Maybe",
+            "Johnny Pasteover",
+            "Merlin",
+            "Boomer Blue",
+            "Geno Redemption",
+            "Culex 3d Small",
+            "Jinx Overworld 4",
+            "Bundt Object Maybe 2",
+            "Boshi",
+            "Hammer",
+            "Froggie Stick",
+            "Cymbals",
+            "Chomp",
+            "Yellow Yoshi",
+            "Pink Yoshi",
+            "Belome 3 Small",
+            "Punchinello 2 Small",
+            "Booster 2 Small",
+            "Johnny 2 Small",
+            "Bundt 2 Small",
+            "Jinx 4 Small",
+            "Culex 2 Small",
+            "Fire Crystal 3d",
+            "Earth Crystal 3d",
+            "Wind Crystal 3d",
+            "Water Crystal 3d",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Yellow Lightning Ball",
+            "Fire Orb Hit Explosion",
+            "Egg",
+            "Lightning Orb Blue Lightning Ball",
+            "Small Yellow Spike",
+            "Large Yellow Spike",
+            "White Gas Cloud",
+            "Blast Orange Gas Cloud",
+            "Star Egg Little Brown Bird",
+            "Poison Gas Green Gas Cloud",
+            "White Stars",
+            "Purple Gas Cloud",
+            "Yellow Star",
+            "Diamond Saw Snowflake",
+            "Blue Gas Cloud",
+            "Bone Throw",
+            "Spritz Bomb",
+            "Wind Crystal",
+            "Green Shine Web",
+            "Mecha Koopa Bowser Crush Eyes",
+            "Water Crystal",
+            "Plasm Water Droplet Blue Green",
             "Ice Rock",
-            "black rock",
-            "big pink heart",
-            "dark red/yellow fireball",
-            "light green stars",
-            "light orange stars",
-            "Sleepy Time sheep/ram",
-            "Geno Beam/Blast/Flash red power-up star",
-            "....",
-            "blue/green bubbles/circles",
-            "sleep ZZZ's",
-            "backwards yellow spike",
-            "Water Blast water spouts",
-            "Gunk Ball / Ink Blast",
-            "water spout (red)",
-            "Royal Flush card",
-            "yellow shaking bell",
-            "....",
-            "blue music note",
-            "white pixel dot",
-            "....",
-            "blue water surfacing/diving droplets",
-            "green water surfacing/diving droplets",
-            "yellow water surfacing/diving droplets",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "Magikoopa's triangle/circle/X cast magic",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "flower bonus",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "marching Luigi",
-            "marching Toads",
-            "conducting Toadofsky",
-            "waving Mallow",
-            "waving King & Queen Nimbus",
-            "Nimbus Busman, Lakitu & Frogfucius",
+            "Black Rock",
+            "Big Pink Heart",
+            "Dark Red Yellow Fireball",
+            "Light Green Stars",
+            "Light Orange Stars",
+            "Sleepy Time Sheep Ram",
+            "Geno Beam Blast Flash Red Power Up Star",
+            "Empty",
+            "Blue Green Bubbles Circles",
+            "Sleep Zzz S",
+            "Backwards Yellow Spike",
+            "Water Blast Water Spouts",
+            "Gunk Ball Ink Blast",
+            "Water Spout Red",
+            "Royal Flush Card",
+            "Yellow Shaking Bell",
+            "Empty",
+            "Blue Music Note",
+            "White Pixel Dot",
+            "Empty",
+            "Blue Water Surfacing Diving Droplets",
+            "Green Water Surfacing Diving Droplets",
+            "Yellow Water Surfacing Diving Droplets",
+            "Green Mushroom Item",
+            "Yellow Mushroom Item",
+            "Green Candy",
+            "Blue Candy",
+            "Red Bomb",
+            "Magikoopa S Triangle Circle X Cast Magic",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Flower Bonus",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Frying Pan",
+            "Parasol",
+            "War Fan",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Marching Luigi",
+            "Marching Toads",
+            "Conducting Toadofsky",
+            "Waving Mallow",
+            "Waving King Queen Nimbus",
+            "Nimbus Busman Lakitu Frogfucius",
             "Tadpole",
-            "trumpeting Piranhas",
-            "Mole miners & star",
-            "Dyna & Mite",
-            "Hammer Bros & Chomps",
-            "Crook & Croco",
-            "Bowser in helicopter chasing",
-            "Dodo carrying Valentina",
-            "red balloon",
-            "Booster riding train",
-            "Snifits chasing beetle",
-            "bouncing Shysters",
-            "Mack, Yaridovich, Bowyer",
+            "Trumpeting Piranhas",
+            "Mole Miners Star",
+            "Dyna Mite",
+            "Hammer Bros Chomps",
+            "Crook Croco",
+            "Bowser In Helicopter Chasing",
+            "Dodo Carrying Valentina",
+            "Red Balloon",
+            "Booster Riding Train",
+            "Snifits Chasing Beetle",
+            "Bouncing Shysters",
+            "Mack Yaridovich Bowyer",
             "Smithy",
-            "Johnny & mates",
-            "blue/red/green Toads",
-            "riding Yoshi",
-            "waving Mario & Toadstool",
-            "sparkle",
-            "poof",
-            "purple firework",
-            "smaller red firework",
-            "Geno in Star Form (Ending Credits)",
-            "The End background (Ending Credits)",
-            "Geno's Star's glow effect (Ending Credits)",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "....",
-            "...."
+            "Johnny Mates",
+            "Blue Red Green Toads",
+            "Riding Yoshi",
+            "Waving Mario Toadstool",
+            "Sparkle",
+            "Poof",
+            "Purple Firework",
+            "Smaller Red Firework",
+            "Normal Yellow Pronged Star",
+            "Brown Object Dissipating",
+            "Tiny Glowing Pixel",
+            "Smithy Lower",
+            "Goombette Lower",
+            "Johnny 2 Overworld",
+            "Toadstool Walking Down Left",
+            "Toadstool Jump Front",
+            "Toadstool Walking Up Right",
+            "Toadstool Surprise",
+            "Toadstool Slap Attack",
+            "Toadstool Frying Pan Attack",
+            "Toadstool Fallen Crying",
+            "Bowser Walking Down Left",
+            "Bowser Jump Front",
+            "Bowser Walking Up Right",
+            "Bowser Surprise",
+            "Bowser Claw Attack",
+            "Bowser Swing Ball Chain",
+            "Bowser Cast Spell",
+            "Mallow Walking Down Left",
+            "Mallow Jump Front",
+            "Mallow Walking Up Right",
+            "Mallow Surprise",
+            "Mallow Punch",
+            "Mallow Swing Stick",
+            "Mallow Still Up Right",
+            "Geno Walking Down Left",
+            "Geno Jump Front",
+            "Geno Walking Up Right",
+            "Geno Surprise",
+            "Geno Elbow Shot",
+            "Geno Finger Shot",
+            "Geno Morph Into Cannon",
+            "Mario Nonprotagonist 1",
+            "Mario Nonprotagonist 2",
+            "Mario Nonprotagonist 3",
+            "Mario Nonprotagonist 4",
+            "Mario Nonprotagonist 5",
+            "Mario Nonprotagonist 6",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty",
+            "Empty"
         };
         public static string[] NPCPackets = new string[]
         {
-            "flower",
-            "mushroom",
-            "key",
-            "super star",
-            "monster face",
-            "item bag",
-            "___sparkles",
-            "___sparkles",
-            "___bomb explosion",
-            "___blue cloud",
-            "___small frog coin",
-            "___level-up text",
-            "___grey explosion",
-            "___Axem Red (mini)",
-            "___NULL",
-            "___NULL",
-            "big coin",
-            "small coin (not moving)",
-            "small coin",
-            "frog coin",
-            "water splash drops",
-            "bullet bill ignition",
-            "sparkles (move N)",
-            "sparkles (move W)",
-            "bomb explosion (+SFX)",
-            "blue cloud (+SFX)",
-            "Magikoopa (+SFX)",
-            "Terrapin",
-            "mushroom (thrown SW)",
-            "sparkle line (looped)",
-            "water splash drops (+SFX)",
-            "level-up text",
-            "blue cloud",
-            "bomb explosion",
-            "grey explosion (+SFX)",
-            "flower (jumps)",
-            "mushroom (jumps)",
-            "item bag (jumps)",
-            "mushroom (jumps)",
-            "sparkle",
-            "Axem Red",
-            "Axem Black",
-            "Axem Pink",
-            "Axem Yellow",
-            "Axem Green",
-            "Axem Red teleport (+SFX)",
-            "Axem Red (mini)",
-            "blue fire trail (follows object)",
-            "star piece (mini)",
-            "hammer sparks (+SFX)",
-            "water blast (+SFX)",
-            "Drill Bit",
-            "bomb explosion (faster)",
-            "Frog Coin (random walking)",
-            "___level-up bonus POW",
-            "___level-up bonus S",
-            "___level-up bonus HP",
-            "___donut lift",
-            "___8-bit Mario",
-            "___Booster's train",
-            "___Magikoopa",
-            "___Terrapin",
-            "___water splash drops",
-            "___river fish",
-            "big coin (rolls E)",
-            "big coin (falls SE)",
-            "big coin (rolls S)",
-            "big coin (rolls SW)",
-            "big coin (rolls W)",
-            "big coin (falls W)",
-            "big coin (falls S)",
-            "big coin (falls NE)",
-            "big coin (falls NE)",
-            "___grey brick",
-            "___bridge rails",
-            "___wooden bridge",
-            "___stone bridge",
-            "___hanging Toadstool",
-            "___plywood door",
-            "___beetle"
+            "FLASHING_POOF_FLOWER",                         // 0
+            "FLASHING_POOF_MUSHROOM",                       // 1
+            "FLOWER_PACK_CHEST_ITEM",                       // 2
+            "BRIEF_STAR",                                   // 3
+            "MIMIC_POOF_ON_DEFEAT",                         // 4
+            "BRIEF_POOF_BAG",                               // 5
+            "FEATHER_CHEST",                                // 6
+            "STAR_PIECE_CHEST",                             // 7
+            "RED_CHEST_ITEM",                               // 8
+            "GREEN_CHEST_ITEM",                             // 9
+            "BLUE_CHEST_ITEM",                              // 10
+            "YELLOW_CHEST_ITEM",                            // 11
+            "FLOWER_STATIC",                                // 12
+            "MUSHROOM_STATIC",                              // 13
+            "FLOWER_COLLECTION",                            // 14
+            "SMALL_FROG_COIN_STILL",                        // 15
+            "BIG_COIN_BEING_COLLECTED",                     // 16
+            "SMALL_MINIGAME_COIN",                          // 17
+            "SMALL_COIN_BEING_COLLECTED",                   // 18
+            "FROG_COIN_BEING_COLLECTED",                    // 19
+            "BAG_STATIC",                                   // 20
+            "FLASHING_SMALL_EXPLOSION",                     // 21
+            "RECURSIVE_SPARKLES",                           // 22
+            "LOOPING_SINGLE_SPARKLE",                       // 23
+            "REGULAR_SOUND_EXPLOSION",                      // 24
+            "RING_CHEST",                                   // 25
+            "SUNKEN_SHIP_TRAMPOLINE_PUZZLE",                // 26
+            "SUNKEN_SHIP_TROOPA_PUZZLE",                    // 27
+            "MUSHROOM_THROWN_SOUTHWEST",                    // 28
+            "SUNKEN_SHIP_3D_MAZE",                          // 29
+            "WATER_SPLASH_DROPS_SFX",                       // 30
+            "LEVELUP_TEXT",                                 // 31
+            "BLUE_CLOUD",                                   // 32
+            "BOMB_EXPLOSION",                               // 33
+            "GREY_EXPLOSION_SFX",                           // 34
+            "SUNKEN_SHIP_CANNONBALL_PUZZLE",                // 35
+            "BARREL_PUZZLE_PRIZE",                          // 36
+            "SHIP_STAIRCASE",                               // 37
+            "BOOSTER_HILL_PRIZE_0",                         // 38
+            "BOOSTER_HILL_PRIZE_1",                         // 39
+            "BROOCH_CHEST",                                 // 40
+            "BOOSTER_HILL_PRIZE_2",                         // 41
+            "BOOSTER_HILL_PRIZE_3",                         // 42
+            "SHOES_CHEST",                                  // 43
+            "BOOSTER_HILL_PRIZE_4",                         // 44
+            "TELEPORTATION_SHINE",                          // 45
+            "BOOSTER_HILL_PRIZE_5",                         // 46
+            "BLUE_FIRE_TRAIL",                              // 47
+            "BANANA_CHEST",                                 // 48
+            "HAMMER_SPARKS_SFX",                            // 49
+            "WATER_BLAST_SFX",                              // 50
+            "DRILL_BIT",                                    // 51
+            "BOMB_EXPLOSION_FASTER",                        // 52
+            "CROWN_CHEST",                                  // 53
+            "LEVELUP_BONUS_POW",                            // 54
+            "LEVELUP_BONUS_S",                              // 55
+            "LEVELUP_BONUS_HP",                             // 56
+            "BOOSTER_HILL_PRIZE_6",                         // 57
+            "BOOSTER_HILL_PRIZE_7",                         // 58
+            "BOOSTER_HILL_PRIZE_8",                         // 59
+            "BOOSTER_HILL_PRIZE_9",                         // 60
+            "BOOSTER_HILL_PRIZE_10",                        // 61
+            "BOOSTER_HILL_PRIZE_11",                        // 62
+            "BOOSTER_HILL_PRIZE_12",                        // 63
+            "FROG_COIN_CHEST_STILL",                        // 64
+            "BOOSTER_HILL_PRIZE_13",                        // 65
+            "BOOSTER_HILL_PRIZE_14",                        // 66
+            "BOMB_CHEST",                                   // 67
+            "BOOSTER_HILL_PRIZE_15",                        // 68
+            "BOOSTER_HILL_PRIZE_STANDING_0",                // 69
+            "EGG_CHEST",                                    // 70
+            "BOOSTER_HILL_PRIZE_STANDING_1",                // 71
+            "BOOSTER_HILL_PRIZE_STANDING_2",                // 72
+            "COOKIE_CHEST",                                 // 73
+            "BOOSTER_HILL_PRIZE_STANDING_3",                // 74
+            "BOOSTER_HILL_PRIZE_STANDING_4",                // 75
+            "BERRY_CHEST",                                  // 76
+            "BOOSTER_HILL_PRIZE_STANDING_5",                // 77
+            "BOOSTER_HILL_PRIZE_STANDING_6",                // 78
+            "CARD_CHEST",                                   // 79
+            "BOOSTER_HILL_PRIZE_STANDING_7",                // 80
+            "BOOSTER_HILL_PRIZE_STANDING_8",                // 81
+            "BOOSTER_HILL_PRIZE_STANDING_9",                // 82
+            "BOOSTER_HILL_PRIZE_STANDING_10",               // 83
+            "BOOSTER_HILL_PRIZE_STANDING_11",               // 84
+            "BOOSTER_HILL_PRIZE_STANDING_12",               // 85
+            "BOOSTER_HILL_PRIZE_STANDING_13",               // 86
+            "BOOSTER_HILL_PRIZE_STANDING_14",               // 87
+            "BOOSTER_HILL_PRIZE_STANDING_15",               // 88
+            "BEETLE_CHEST",                                 // 89
+            "SMALL_COIN_STILL",                             // 90
+            "CHEST_COIN_STILL",                             // 91
+            "GLOVE_CHEST",                                  // 92
+            "CRYSTAL_CHEST",                                // 93
+            "FIRE_SPELL_CHEST",                             // 94
+            "BLUE_SPELL_CHEST",                             // 95
+            "GREEN_SPELL_CHEST",                            // 96
+            "YELLOW_SPELL_CHEST",                           // 97
+            "GRAY_SPELL_CHEST",                             // 98
+        
         };
         #endregion
         #region Effects
@@ -4609,76 +4658,4102 @@ namespace LAZYSHELL
                 {
                     switch (i)
                     {
-                        case 16: eventLabels[i] = "Engage in battle (remove permanently after defeat)"; break;
-                        case 17: eventLabels[i] = "Engage in battle (remove temporarily after defeat)"; break;
-                        case 18: eventLabels[i] = "Engage in battle (do not remove after defeat)"; break;
-                        case 19: eventLabels[i] = "Engage in battle (remove permanently after defeat, if ran away, walk through while blinking)"; break;
-                        case 20: eventLabels[i] = "Engage in battle (remove temporarily after defeat, if ran away, walk through while blinking)"; break;
-                        case 24: eventLabels[i] = "Post-battle, check if lost/won, etc."; break;
-                        case 32: eventLabels[i] = "Hit a treasure with a mushroom/star/flower"; break;
-                        case 33: eventLabels[i] = "Hit a treasure with an item (item bag sprite)"; break;
-                        case 34: eventLabels[i] = "Hit a treasure with coins"; break;
-                        case 65: eventLabels[i] = "Jump on trampoline"; break;
-                        case 269: eventLabels[i] = "Come up from tree trunk"; break;
-                        case 1556: eventLabels[i] = "Jump on wiggler"; break;
-                        case 2496: eventLabels[i] = "Game Start: Mario enters Bowser's Keep"; break;
-                // Intro Demo Events
-                        case 128: eventLabels[i] = "Intro Demo Start - Call Mario, Run Event 2396"; break;
-                        case 2396: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 2357: eventLabels[i] = "Intro Demo - Mushroom Way, Mario Intro"; break;
-                        case 129: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 48: eventLabels[i] = "Intro Demo - Battle, Pack 196 Beanstalk BG(2), jump via #129 to #992"; break;
-                        case 992: eventLabels[i] = "Intro Demo - Kingdom Castle, talk with Chancellor"; break;
-                        case 130: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 1733: eventLabels[i] = "Intro Demo - Bandits Way Intro(Power Star / Level Up)"; break;
-                        case 1728: eventLabels[i] = "Intro Demo - Waypoint Event, If Mem $704E:3 then skip 131 and go to #1738"; break;
-                        case 131: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 149: eventLabels[i] = "Intro Demo - Battle, Pack 201 Grasslands BG(9), jump via #149 to #1725"; break;
-                        case 1725: eventLabels[i] = "Intro Demo - Midas River intro, start #1724 sync, spin mario until level exit"; break;
-                        case 1724: eventLabels[i] = "Intro Demo - Wait until $7043:1, then fade out and execute three UNKCMDs before ending side script w/ return"; break;
-                        case 132: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 1746: eventLabels[i] = "Intro Demo - Midas River barrel jumping intro"; break;
-                        case 2288: eventLabels[i] = "Intro Demo - Mallow Intro"; break;
-                        case 135: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 2289: eventLabels[i] = "Intro Demo - Tadpole Pond scene"; break;
-                        case 134: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 1723: eventLabels[i] = "Intro Demo - Open Wiggler intro level, 6,32,3 southeast run event no message return"; break;
-                        case 1718: eventLabels[i] = "Intro Demo - Level Event, control Mario jumping"; break;
-                        case 136: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 150: eventLabels[i] = "Intro Demo - Battle Pack 198 Kero Sewers BG(Dec 21 Hex 15)"; break;
-                        case 2397: eventLabels[i] = "Intro Demo - Load Geno Intro Level"; break;
-                        case 2366: eventLabels[i] = "Intro Demo - Script Geno Intro Level"; break;
-                        case 137: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 993: eventLabels[i] = "Intro Demo - Pipe Vault Intro"; break;
-                        case 138: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 151: eventLabels[i] = "Intro Demo - Battle Pack 199 Ship BG(4), goto #994 via #138"; break;
-                        case 994: eventLabels[i] = "Intro Demo - Yo'ster Isle intro"; break;
-                        case 139: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 995: eventLabels[i] = "Intro Demo - Docaty Railroad Intro"; break;
-                        case 1738: eventLabels[i] = "Intro Demo - Load/Do Bowser intro scene"; break;
-                        case 1730: eventLabels[i] = "Intro Demo - Waypoint Event, if $704E:3 Then skip #140 and go to #1740"; break;
-                        case 140: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 152: eventLabels[i] = "Intro Demo - Battle, Pack 203 Mines BG(5), Then jump via #140 to #2398"; break;
-                        case 2398: eventLabels[i] = "Intro Demo - Open Booster Tower with Parachuters at 5,53,0 facing northeast no event no message"; break;
-                        case 2365: eventLabels[i] = "Intro Demo - Action Script Above Level"; break;
-                        case 142: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 153: eventLabels[i] = "Intro Demo - Battle Pack 202 Birdo BG(Dec 23 / Hex 17), jump -> #1740"; break;
-                        case 1740: eventLabels[i] = "Intro Demo - Booster Hill Scene"; break;
-                        case 1731: eventLabels[i] = "Intro Demo - Waypoint Event, If $074E:3 skip #143 and go to #1746"; break;
-                        case 143: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 154: eventLabels[i] = "Intro Demo - Battle Pack 202 Seaside Town Beach BG (Hex 25 / Dec 37), Goto Event #3839 Via #143"; break;
-                        case 3839: eventLabels[i] = "Intro Demo - Sea Shore intro area"; break;
-                        case 145: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 155: eventLabels[i] = "Intro Demo - Battle Pack 197 Mountains BG (Dec 10 / Hex A), Goto #997 via #145"; break;
-                        case 997: eventLabels[i] = "Intro Demo - Intro level Nimbus Land w/ birdbrains"; break;
-                        case 146: eventLabels[i] = "Intro Demo - Waypoint Event"; break;
-                        case 156: eventLabels[i] = "Intro Demo - Battle Czar Dragon (204) His BG (8), Goto #2290 Via #146"; break;
-                        case 2290: eventLabels[i] = "Intro Demo - Booster Tower, Peach's Intro"; break;
-                        case 141: eventLabels[i] = "Intro Demo - Waypoint Event, Goto #2291"; break;
-                        case 2291: eventLabels[i] = "Intro Demo - Open Vista Hill level"; break;
-                        case 147: eventLabels[i] = "Intro Demo - Waypoint Event, Goto #996"; break;
-                        case 996: eventLabels[i] = "Intro Demo - Pipe Vault Area 01 (not faded in), \"In...\" text, Return."; break;
-                        default: eventLabels[i] = "";  break;
+                        case 0: eventLabels[i] = "Empty"; break;
+                        case 1: eventLabels[i] = "Empty"; break;
+                        case 2: eventLabels[i] = "Empty"; break;
+                        case 3: eventLabels[i] = "Empty"; break;
+                        case 4: eventLabels[i] = "Launch Prologue"; break;
+                        case 5: eventLabels[i] = "Set 70A7 To Random Tier 1 Consumable"; break;
+                        case 6: eventLabels[i] = "Set 70A7 To Random Tier 2 Consumable"; break;
+                        case 7: eventLabels[i] = "Set 70A7 To Random Tier 3 Consumable"; break;
+                        case 8: eventLabels[i] = "Set 70A7 To Random Tier 4 Consumable"; break;
+                        case 9: eventLabels[i] = "Set 70A7 To Random Tier 1 Equip"; break;
+                        case 10: eventLabels[i] = "Set 70A7 To Random Tier 2 Equip"; break;
+                        case 11: eventLabels[i] = "Set 70A7 To Random Tier 3 Equip"; break;
+                        case 12: eventLabels[i] = "Set 70A7 To Random Tier 4 Equip"; break;
+                        case 13: eventLabels[i] = "Base Rom Only Fix Map And Party"; break;
+                        case 14: eventLabels[i] = "Standard Room Loader"; break;
+                        case 15: eventLabels[i] = "Standard Room Loader"; break;
+                        case 16: eventLabels[i] = "Fight Remove Permanently"; break;
+                        case 17: eventLabels[i] = "Fight Remove Temporarily"; break;
+                        case 18: eventLabels[i] = "Fight Do Not Remove"; break;
+                        case 19: eventLabels[i] = "Fight Remove Permanently Blink On Run"; break;
+                        case 20: eventLabels[i] = "Fight Remove Temporarily Blink On Run"; break;
+                        case 21: eventLabels[i] = "Forest Maze Mushroom Grant"; break;
+                        case 22: eventLabels[i] = "Better Tip Granter"; break;
+                        case 23: eventLabels[i] = "Mushroom Selection"; break;
+                        case 24: eventLabels[i] = "Battle Result Check"; break;
+                        case 25: eventLabels[i] = "Battle Result Check Blinking"; break;
+                        case 26: eventLabels[i] = "Grant Tier 1 Consumable Or Equip"; break;
+                        case 27: eventLabels[i] = "Grant Tier 2 Consumable Or Equip"; break;
+                        case 28: eventLabels[i] = "Grant Tier 3 Consumable Or Equip"; break;
+                        case 29: eventLabels[i] = "Grant Tier 4 Consumable Or Equip"; break;
+                        case 30: eventLabels[i] = "Empty"; break;
+                        case 31: eventLabels[i] = "Empty"; break;
+                        case 32: eventLabels[i] = "Non Coin Chest Container"; break;
+                        case 33: eventLabels[i] = "Open Chest"; break;
+                        case 34: eventLabels[i] = "Coin Chest Container"; break;
+                        case 35: eventLabels[i] = "Mimic Or Slot Chest Container"; break;
+                        case 36: eventLabels[i] = "Grant Any Consumable"; break;
+                        case 37: eventLabels[i] = "Grant Any Equip"; break;
+                        case 38: eventLabels[i] = "Grant Any Consumable Or Equip"; break;
+                        case 39: eventLabels[i] = "Grant Any Consumable Or Equip Tier 3 Cap"; break;
+                        case 40: eventLabels[i] = "Grant Any Equip Tier 3 Cap"; break;
+                        case 41: eventLabels[i] = "Grant Any Consumable Tier 3 Cap"; break;
+                        case 42: eventLabels[i] = "Grant Any Consumable Tier 2 Cap"; break;
+                        case 43: eventLabels[i] = "Grant Any Equip Tier 2 Cap"; break;
+                        case 44: eventLabels[i] = "Grant Any Consumable Or Equip Tier 2 Cap"; break;
+                        case 45: eventLabels[i] = "Grant Any Consumable Exclude Worst"; break;
+                        case 46: eventLabels[i] = "Grant Any Equip Exclude Worst"; break;
+                        case 47: eventLabels[i] = "Grant Any Consumable Or Equip Exclude Worst"; break;
+                        case 48: eventLabels[i] = "Grant Any Consumable Exclude Worst Tier 3 Cap"; break;
+                        case 49: eventLabels[i] = "Grant Any Equip Exclude Worst Tier 3 Cap"; break;
+                        case 50: eventLabels[i] = "Grant Any Equip Or Consumable Exclude Worst Tier 3 Cap"; break;
+                        case 51: eventLabels[i] = "Empty"; break;
+                        case 52: eventLabels[i] = "Empty"; break;
+                        case 53: eventLabels[i] = "Empty"; break;
+                        case 54: eventLabels[i] = "Empty"; break;
+                        case 55: eventLabels[i] = "Empty"; break;
+                        case 56: eventLabels[i] = "Empty"; break;
+                        case 57: eventLabels[i] = "Empty"; break;
+                        case 58: eventLabels[i] = "Empty"; break;
+                        case 59: eventLabels[i] = "Empty"; break;
+                        case 60: eventLabels[i] = "Empty"; break;
+                        case 61: eventLabels[i] = "Empty"; break;
+                        case 62: eventLabels[i] = "Empty"; break;
+                        case 63: eventLabels[i] = "Empty"; break;
+                        case 64: eventLabels[i] = "Empty"; break;
+                        case 65: eventLabels[i] = "Trampoline Subroutine"; break;
+                        case 66: eventLabels[i] = "Pipe Down Subroutine"; break;
+                        case 67: eventLabels[i] = "Empty"; break;
+                        case 68: eventLabels[i] = "Empty"; break;
+                        case 69: eventLabels[i] = "Empty"; break;
+                        case 70: eventLabels[i] = "Empty"; break;
+                        case 71: eventLabels[i] = "Empty"; break;
+                        case 72: eventLabels[i] = "Empty"; break;
+                        case 73: eventLabels[i] = "Empty"; break;
+                        case 74: eventLabels[i] = "Empty"; break;
+                        case 75: eventLabels[i] = "Empty"; break;
+                        case 76: eventLabels[i] = "Empty"; break;
+                        case 77: eventLabels[i] = "Empty"; break;
+                        case 78: eventLabels[i] = "Unknown"; break;
+                        case 79: eventLabels[i] = "Unknown"; break;
+                        case 80: eventLabels[i] = "Save Block Subroutine"; break;
+                        case 81: eventLabels[i] = "Mario Lands Subroutine"; break;
+                        case 82: eventLabels[i] = "Three Musty Fears Greaper Dialog"; break;
+                        case 83: eventLabels[i] = "Three Musty Fears Boo Dialog"; break;
+                        case 84: eventLabels[i] = "Three Musty Fears Bones Dialog"; break;
+                        case 85: eventLabels[i] = "Invisible Item Check 1"; break;
+                        case 86: eventLabels[i] = "Invisible Item Check 2"; break;
+                        case 87: eventLabels[i] = "Invisible Item Check 3"; break;
+                        case 88: eventLabels[i] = "Invisible Item Check 1 Container"; break;
+                        case 89: eventLabels[i] = "Invisible Item Check 2 Container"; break;
+                        case 90: eventLabels[i] = "Invisible Item Check 3 Container"; break;
+                        case 91: eventLabels[i] = "Invisible Item Summoner"; break;
+                        case 92: eventLabels[i] = "Pipe Vault Closed Note"; break;
+                        case 93: eventLabels[i] = "Background Event For Slot Machine"; break;
+                        case 94: eventLabels[i] = "Out Of Order Note"; break;
+                        case 95: eventLabels[i] = "Revert All Clone Chests Mimic 1"; break;
+                        case 96: eventLabels[i] = "Revert All Clone Chests Mimic 2"; break;
+                        case 97: eventLabels[i] = "Empty"; break;
+                        case 98: eventLabels[i] = "Empty"; break;
+                        case 99: eventLabels[i] = "Empty"; break;
+                        case 100: eventLabels[i] = "Empty"; break;
+                        case 101: eventLabels[i] = "Empty"; break;
+                        case 102: eventLabels[i] = "Empty"; break;
+                        case 103: eventLabels[i] = "Empty"; break;
+                        case 104: eventLabels[i] = "Empty"; break;
+                        case 105: eventLabels[i] = "Empty"; break;
+                        case 106: eventLabels[i] = "Empty"; break;
+                        case 107: eventLabels[i] = "Empty"; break;
+                        case 108: eventLabels[i] = "Empty"; break;
+                        case 109: eventLabels[i] = "Empty"; break;
+                        case 110: eventLabels[i] = "Empty"; break;
+                        case 111: eventLabels[i] = "Empty"; break;
+                        case 112: eventLabels[i] = "Empty"; break;
+                        case 113: eventLabels[i] = "Empty"; break;
+                        case 114: eventLabels[i] = "Empty"; break;
+                        case 115: eventLabels[i] = "Empty"; break;
+                        case 116: eventLabels[i] = "Empty"; break;
+                        case 117: eventLabels[i] = "Empty"; break;
+                        case 118: eventLabels[i] = "Empty"; break;
+                        case 119: eventLabels[i] = "Empty"; break;
+                        case 120: eventLabels[i] = "Empty"; break;
+                        case 121: eventLabels[i] = "Empty"; break;
+                        case 122: eventLabels[i] = "Empty"; break;
+                        case 123: eventLabels[i] = "Empty"; break;
+                        case 124: eventLabels[i] = "Empty"; break;
+                        case 125: eventLabels[i] = "Empty"; break;
+                        case 126: eventLabels[i] = "Empty"; break;
+                        case 127: eventLabels[i] = "Empty"; break;
+                        case 128: eventLabels[i] = "Abort Attract Mode"; break;
+                        case 129: eventLabels[i] = "Empty"; break;
+                        case 130: eventLabels[i] = "Empty"; break;
+                        case 131: eventLabels[i] = "Empty"; break;
+                        case 132: eventLabels[i] = "Empty"; break;
+                        case 133: eventLabels[i] = "Empty"; break;
+                        case 134: eventLabels[i] = "Empty"; break;
+                        case 135: eventLabels[i] = "Empty"; break;
+                        case 136: eventLabels[i] = "Empty"; break;
+                        case 137: eventLabels[i] = "Empty"; break;
+                        case 138: eventLabels[i] = "Empty"; break;
+                        case 139: eventLabels[i] = "Empty"; break;
+                        case 140: eventLabels[i] = "Empty"; break;
+                        case 141: eventLabels[i] = "Empty"; break;
+                        case 142: eventLabels[i] = "Empty"; break;
+                        case 143: eventLabels[i] = "Empty"; break;
+                        case 144: eventLabels[i] = "Empty"; break;
+                        case 145: eventLabels[i] = "Empty"; break;
+                        case 146: eventLabels[i] = "Empty"; break;
+                        case 147: eventLabels[i] = "Empty"; break;
+                        case 148: eventLabels[i] = "Empty"; break;
+                        case 149: eventLabels[i] = "Empty"; break;
+                        case 150: eventLabels[i] = "Empty"; break;
+                        case 151: eventLabels[i] = "Empty"; break;
+                        case 152: eventLabels[i] = "Empty"; break;
+                        case 153: eventLabels[i] = "Empty"; break;
+                        case 154: eventLabels[i] = "Npc Quest 7 Container"; break;
+                        case 155: eventLabels[i] = "Packet Decider Container"; break;
+                        case 156: eventLabels[i] = "Packet Decider"; break;
+                        case 157: eventLabels[i] = "Npc Quest Grant 1 Frog Coin"; break;
+                        case 158: eventLabels[i] = "Npc Quest Grant Multi Frog Coin"; break;
+                        case 159: eventLabels[i] = "Npc Quest Grant Coins"; break;
+                        case 160: eventLabels[i] = "Npc Quest Grant Item"; break;
+                        case 161: eventLabels[i] = "Npc Quest Grant Beetlemania"; break;
+                        case 162: eventLabels[i] = "Chest Grant Beetlemania"; break;
+                        case 163: eventLabels[i] = "Chest Grant Star Piece"; break;
+                        case 164: eventLabels[i] = "Npc Quest Grant Star Piece"; break;
+                        case 165: eventLabels[i] = "Freestanding Grant Item Bag"; break;
+                        case 166: eventLabels[i] = "Freestanding Grant Star Piece"; break;
+                        case 167: eventLabels[i] = "Boss Grant Star Piece"; break;
+                        case 168: eventLabels[i] = "Boss Grant Star Piece Container"; break;
+                        case 169: eventLabels[i] = "Mimic 1 Grant Star Piece Container"; break;
+                        case 170: eventLabels[i] = "Mimic 2 Grant Star Piece Container"; break;
+                        case 171: eventLabels[i] = "Mimic 3 Grant Star Piece Container"; break;
+                        case 172: eventLabels[i] = "Chest 1 Container"; break;
+                        case 173: eventLabels[i] = "Chest 2 Container"; break;
+                        case 174: eventLabels[i] = "Chest 3 Container"; break;
+                        case 175: eventLabels[i] = "Chest 4 Container"; break;
+                        case 176: eventLabels[i] = "Chest 5 Container"; break;
+                        case 177: eventLabels[i] = "Chest 6 Container"; break;
+                        case 178: eventLabels[i] = "Npc Quest 1 Container"; break;
+                        case 179: eventLabels[i] = "Npc Quest 2 Container"; break;
+                        case 180: eventLabels[i] = "Npc Quest 3 Container"; break;
+                        case 181: eventLabels[i] = "Npc Quest 4 Container"; break;
+                        case 182: eventLabels[i] = "Npc Quest 5 Container"; break;
+                        case 183: eventLabels[i] = "Npc Quest 6 Container"; break;
+                        case 184: eventLabels[i] = "Npc Quest Grant Single Fireworks"; break;
+                        case 185: eventLabels[i] = "Npc Quest Grant Progressive Fireworks"; break;
+                        case 186: eventLabels[i] = "Party Join Logic"; break;
+                        case 187: eventLabels[i] = "Mario Joins"; break;
+                        case 188: eventLabels[i] = "Mallow Joins"; break;
+                        case 189: eventLabels[i] = "Geno Joins"; break;
+                        case 190: eventLabels[i] = "Bowser Joins"; break;
+                        case 191: eventLabels[i] = "Toadstool Joins"; break;
+                        case 192: eventLabels[i] = "Gating And Party Join Logic"; break;
+                        case 193: eventLabels[i] = "Mario Joins Container"; break;
+                        case 194: eventLabels[i] = "Mallow Joins Container"; break;
+                        case 195: eventLabels[i] = "Geno Joins Container"; break;
+                        case 196: eventLabels[i] = "Bowser Joins Container"; break;
+                        case 197: eventLabels[i] = "Toadstool Joins Container"; break;
+                        case 198: eventLabels[i] = "Unlock Tower If Gated By Moleville"; break;
+                        case 199: eventLabels[i] = "Unlock Bandits If Gated By Mushroom Way"; break;
+                        case 200: eventLabels[i] = "Unlock Forest If Gated By Marrymore Character"; break;
+                        case 201: eventLabels[i] = "Unlock Forest If Gated By Moleville Character"; break;
+                        case 202: eventLabels[i] = "Unlock Forest If Gated By Mushroom Way Character"; break;
+                        case 203: eventLabels[i] = "Unlock Forest If Gated By Cricket Pie"; break;
+                        case 204: eventLabels[i] = "Unlock Marrymore If Gated By Booster Hill"; break;
+                        case 205: eventLabels[i] = "Unlock Marrymore If Gated By Tower Boss"; break;
+                        case 206: eventLabels[i] = "Unlock Sea If Gated By Star Pieces"; break;
+                        case 207: eventLabels[i] = "Unlock Keep If Gated By Star Pieces"; break;
+                        case 208: eventLabels[i] = "Unlock Keep If Gated By Volcano Boss"; break;
+                        case 209: eventLabels[i] = "Unlock Switch Menu If Enough Members"; break;
+                        case 210: eventLabels[i] = "Unlock Seaside Boss If Gated By Ship Boss"; break;
+                        case 211: eventLabels[i] = "Unlock Pipe Vault If Gated By Forest Maze"; break;
+                        case 212: eventLabels[i] = "Npc Quest 7 Container"; break;
+                        case 213: eventLabels[i] = "Booster Hill Prize Container Event"; break;
+                        case 214: eventLabels[i] = "Hill Get Flower"; break;
+                        case 215: eventLabels[i] = "Hill Item"; break;
+                        case 216: eventLabels[i] = "Get Flower From Npc"; break;
+                        case 217: eventLabels[i] = "Hill Fireworks"; break;
+                        case 218: eventLabels[i] = "Hill Beetlemania"; break;
+                        case 219: eventLabels[i] = "Hill Grant Logic"; break;
+                        case 220: eventLabels[i] = "Empty"; break;
+                        case 221: eventLabels[i] = "Empty"; break;
+                        case 222: eventLabels[i] = "Empty"; break;
+                        case 223: eventLabels[i] = "Empty"; break;
+                        case 224: eventLabels[i] = "Empty"; break;
+                        case 225: eventLabels[i] = "Check Voucher Unlock"; break;
+                        case 226: eventLabels[i] = "Npc Quest 7 Grant"; break;
+                        case 227: eventLabels[i] = "Freestanding 15 Grant"; break;
+                        case 228: eventLabels[i] = "Freestanding 14 Grant"; break;
+                        case 229: eventLabels[i] = "Freestanding 13 Grant"; break;
+                        case 230: eventLabels[i] = "Freestanding 12 Grant"; break;
+                        case 231: eventLabels[i] = "Freestanding 11 Grant"; break;
+                        case 232: eventLabels[i] = "Freestanding 10 Grant"; break;
+                        case 233: eventLabels[i] = "Freestanding 9 Grant"; break;
+                        case 234: eventLabels[i] = "Freestanding 8 Grant"; break;
+                        case 235: eventLabels[i] = "Freestanding 7 Grant"; break;
+                        case 236: eventLabels[i] = "Freestanding 6 Grant"; break;
+                        case 237: eventLabels[i] = "Freestanding 5 Grant"; break;
+                        case 238: eventLabels[i] = "Freestanding 4 Grant"; break;
+                        case 239: eventLabels[i] = "Freestanding 3 Grant"; break;
+                        case 240: eventLabels[i] = "Freestanding 2 Grant"; break;
+                        case 241: eventLabels[i] = "Freestanding 1 Grant"; break;
+                        case 242: eventLabels[i] = "Chest 6 Grant"; break;
+                        case 243: eventLabels[i] = "Chest 5 Grant"; break;
+                        case 244: eventLabels[i] = "Chest 4 Grant"; break;
+                        case 245: eventLabels[i] = "Chest 3 Grant"; break;
+                        case 246: eventLabels[i] = "Chest 2 Grant"; break;
+                        case 247: eventLabels[i] = "Chest 1 Grant"; break;
+                        case 248: eventLabels[i] = "Npc Quest 6 Grant"; break;
+                        case 249: eventLabels[i] = "Npc Quest 5 Grant"; break;
+                        case 250: eventLabels[i] = "Npc Quest 4 Grant"; break;
+                        case 251: eventLabels[i] = "Npc Quest 3 Grant"; break;
+                        case 252: eventLabels[i] = "Npc Quest 2 Grant"; break;
+                        case 253: eventLabels[i] = "Npc Quest 1 Grant"; break;
+                        case 254: eventLabels[i] = "Exp Star Hit Subroutine"; break;
+                        case 255: eventLabels[i] = "Exp Star Hit"; break;
+                        case 256: eventLabels[i] = "Return"; break;
+                        case 257: eventLabels[i] = "Fade In Async"; break;
+                        case 258: eventLabels[i] = "Empty"; break;
+                        case 259: eventLabels[i] = "Unknown"; break;
+                        case 260: eventLabels[i] = "Unknown"; break;
+                        case 261: eventLabels[i] = "Fade Music Room Loader"; break;
+                        case 262: eventLabels[i] = "Fade Music Room Loader"; break;
+                        case 263: eventLabels[i] = "Bounce On Bed"; break;
+                        case 264: eventLabels[i] = "Return"; break;
+                        case 265: eventLabels[i] = "Occupied Mk Inn Loader"; break;
+                        case 266: eventLabels[i] = "Unknown"; break;
+                        case 267: eventLabels[i] = "Unknown"; break;
+                        case 268: eventLabels[i] = "Unknown"; break;
+                        case 269: eventLabels[i] = "Pipe Up Subroutine"; break;
+                        case 270: eventLabels[i] = "Trampoline Or Pipe Subroutine"; break;
+                        case 271: eventLabels[i] = "Unknown"; break;
+                        case 272: eventLabels[i] = "Pause Active Until A Pressed"; break;
+                        case 273: eventLabels[i] = "Sleep In Inns"; break;
+                        case 274: eventLabels[i] = "Check If Have Enough Coins"; break;
+                        case 275: eventLabels[i] = "Unknown"; break;
+                        case 276: eventLabels[i] = "Refocus Camera On Self"; break;
+                        case 277: eventLabels[i] = "Unknown"; break;
+                        case 278: eventLabels[i] = "Unknown"; break;
+                        case 279: eventLabels[i] = "Unknown"; break;
+                        case 280: eventLabels[i] = "Sleep In Nimbus Inn"; break;
+                        case 281: eventLabels[i] = "Clear Exp Star Bits"; break;
+                        case 282: eventLabels[i] = "Unknown Pipe Vault"; break;
+                        case 283: eventLabels[i] = "Get Frog Coin No Dialog Possibly Unused"; break;
+                        case 284: eventLabels[i] = "Open Mushroom Kingdom Shop"; break;
+                        case 285: eventLabels[i] = "Unknown"; break;
+                        case 286: eventLabels[i] = "Await B Press"; break;
+                        case 287: eventLabels[i] = "Reset Game"; break;
+                        case 288: eventLabels[i] = "Unknown Rose Town"; break;
+                        case 289: eventLabels[i] = "Inns Container"; break;
+                        case 290: eventLabels[i] = "Mushroom Kingdom Shop Logic"; break;
+                        case 291: eventLabels[i] = "Mushroom Kingdom Outer Castle Guards"; break;
+                        case 292: eventLabels[i] = "Mushroom Kingdom West Blue Toad"; break;
+                        case 293: eventLabels[i] = "Unused"; break;
+                        case 294: eventLabels[i] = "Mushroom Kingdom Inn Npc"; break;
+                        case 295: eventLabels[i] = "Go To Mushroom Kingdom Outside"; break;
+                        case 296: eventLabels[i] = "Mushroom Kingdom Grandma"; break;
+                        case 297: eventLabels[i] = "Mushroom Kingdom Running Kid"; break;
+                        case 298: eventLabels[i] = "Mushroom Kingdom Pink Toad"; break;
+                        case 299: eventLabels[i] = "Empty"; break;
+                        case 300: eventLabels[i] = "Generic No Help Message"; break;
+                        case 301: eventLabels[i] = "Mushroom Kingdom Mom"; break;
+                        case 302: eventLabels[i] = "Mushroom Kingdom Dad"; break;
+                        case 303: eventLabels[i] = "Mushroom Kingdom Jumping Kid"; break;
+                        case 304: eventLabels[i] = "Unknown"; break;
+                        case 305: eventLabels[i] = "Unknown"; break;
+                        case 306: eventLabels[i] = "Mushroom Kingdom Brother"; break;
+                        case 307: eventLabels[i] = "Unknown"; break;
+                        case 308: eventLabels[i] = "Empty"; break;
+                        case 309: eventLabels[i] = "Empty"; break;
+                        case 310: eventLabels[i] = "Mushroom Kingdom Grandpa"; break;
+                        case 311: eventLabels[i] = "Mushroom Kingdom East Guard"; break;
+                        case 312: eventLabels[i] = "Mushroom Kingdom Occupied Running Kid"; break;
+                        case 313: eventLabels[i] = "Mushroom Kingdom Occupied Grandma"; break;
+                        case 314: eventLabels[i] = "Empty"; break;
+                        case 315: eventLabels[i] = "Empty"; break;
+                        case 316: eventLabels[i] = "Mushroom Kingdom Occupied Dad"; break;
+                        case 317: eventLabels[i] = "Mushroom Kingdom Occupied Mom"; break;
+                        case 318: eventLabels[i] = "Mushroom Kingdom Occupied Castle Toad"; break;
+                        case 319: eventLabels[i] = "Toadstool Antechamber Loader"; break;
+                        case 320: eventLabels[i] = "Mushroom Kingdom Main Hall Loader"; break;
+                        case 321: eventLabels[i] = "Bellhop While Guiding"; break;
+                        case 322: eventLabels[i] = "Mushroom Kingdom Throne Room Loader"; break;
+                        case 323: eventLabels[i] = "Unknown"; break;
+                        case 324: eventLabels[i] = "Kingdom Main Hall Flip Veranda"; break;
+                        case 325: eventLabels[i] = "Detect Main Hall Door Opened"; break;
+                        case 326: eventLabels[i] = "Mushroom Kingdom Castle Generic Toad"; break;
+                        case 327: eventLabels[i] = "Mushroom Kingdom Castle Throne Room Toad"; break;
+                        case 328: eventLabels[i] = "Detect Main Hall Door Opened"; break;
+                        case 329: eventLabels[i] = "Kingdom Main Hall Flip Upper"; break;
+                        case 330: eventLabels[i] = "Chancellor"; break;
+                        case 331: eventLabels[i] = "Empty"; break;
+                        case 332: eventLabels[i] = "Empty"; break;
+                        case 333: eventLabels[i] = "Empty"; break;
+                        case 334: eventLabels[i] = "Empty"; break;
+                        case 335: eventLabels[i] = "Unknown"; break;
+                        case 336: eventLabels[i] = "Unknown"; break;
+                        case 337: eventLabels[i] = "Mushroom Kingdom Shop Bookshelf"; break;
+                        case 338: eventLabels[i] = "Mushroom Kingdom Shopkeeper"; break;
+                        case 339: eventLabels[i] = "Mushroom Kingdom Occupied Raz Raini House Loader"; break;
+                        case 340: eventLabels[i] = "Mushroom Kingdom Occupied Raz Raini House Shake"; break;
+                        case 341: eventLabels[i] = "Empty"; break;
+                        case 342: eventLabels[i] = "Empty"; break;
+                        case 343: eventLabels[i] = "Empty"; break;
+                        case 344: eventLabels[i] = "Mushroom Kingdom Raz Raini House Loader"; break;
+                        case 345: eventLabels[i] = "Mushroom Kingdom Toadstools Room Guard"; break;
+                        case 346: eventLabels[i] = "Toadstools Room Item"; break;
+                        case 347: eventLabels[i] = "Toadstools Room Loader"; break;
+                        case 348: eventLabels[i] = "Mushroom Kingdom Main Hall Toad"; break;
+                        case 349: eventLabels[i] = "Mushroom Kingdom Antechamber Exit"; break;
+                        case 350: eventLabels[i] = "Kingdom Hallway Shyguy"; break;
+                        case 351: eventLabels[i] = "Gameboy Kid"; break;
+                        case 352: eventLabels[i] = "Mushroom Kingdom Occupied Shopkeeper"; break;
+                        case 353: eventLabels[i] = "Boss Battle"; break;
+                        case 354: eventLabels[i] = "Boss Battle Container"; break;
+                        case 355: eventLabels[i] = "Boss Hunt Bit Setter"; break;
+                        case 356: eventLabels[i] = "Boss Hunt Bit Setter Container"; break;
+                        case 357: eventLabels[i] = "Exp Star Music Experiment"; break;
+                        case 358: eventLabels[i] = "Mushroom Kingdom Npc Behind House"; break;
+                        case 359: eventLabels[i] = "Chest Clones"; break;
+                        case 360: eventLabels[i] = "Empty"; break;
+                        case 361: eventLabels[i] = "Empty"; break;
+                        case 362: eventLabels[i] = "Empty"; break;
+                        case 363: eventLabels[i] = "Empty"; break;
+                        case 364: eventLabels[i] = "Empty"; break;
+                        case 365: eventLabels[i] = "Empty"; break;
+                        case 366: eventLabels[i] = "Mushroom Kingdom Occupied Throne Room Forced Off Minion"; break;
+                        case 367: eventLabels[i] = "Mushroom Kingdom Occupied Throne Room Forced Off Minion"; break;
+                        case 368: eventLabels[i] = "Mushroom Kingdom Occupied Throne Room Loader"; break;
+                        case 369: eventLabels[i] = "Mushroom Kingdom Occupied Throne Room Exit"; break;
+                        case 370: eventLabels[i] = "Empty"; break;
+                        case 371: eventLabels[i] = "Mushroom Kingdom Occupied Main Hall Loader"; break;
+                        case 372: eventLabels[i] = "Mushroom Kingdom Boss Fight Cutscene"; break;
+                        case 373: eventLabels[i] = "Mushroom Kingdom Boss Fight"; break;
+                        case 374: eventLabels[i] = "Empty"; break;
+                        case 375: eventLabels[i] = "Talk To Chancellor After Mushroom Kingdom Boss"; break;
+                        case 376: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Loader"; break;
+                        case 377: eventLabels[i] = "Mushroom Kingdom Occupied Main Hall Repeating Shysters Position"; break;
+                        case 378: eventLabels[i] = "Mushroom Kingdom Occupied Main Hall Shyster Chasing Toad"; break;
+                        case 379: eventLabels[i] = "Mushroom Kingdom Occupied Guest Room Grant"; break;
+                        case 380: eventLabels[i] = "Mushroom Kingdom Occupied Vault Guard Toad"; break;
+                        case 381: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Antechamber Fight"; break;
+                        case 382: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Loader"; break;
+                        case 383: eventLabels[i] = "Toad Wishes You Well"; break;
+                        case 384: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Antechamber Loader"; break;
+                        case 385: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Antechamber Toad"; break;
+                        case 386: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Toad 1"; break;
+                        case 387: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Toad 2"; break;
+                        case 388: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Toad 3"; break;
+                        case 389: eventLabels[i] = "Mushroom Kingdom Occupied Left Stairway Shyster"; break;
+                        case 390: eventLabels[i] = "Mushroom Kingdom Occupied Left Stairway Toad"; break;
+                        case 391: eventLabels[i] = "Mushroom Kingdom Occupied Left Stairway Loader"; break;
+                        case 392: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Repeating Shysters Position"; break;
+                        case 393: eventLabels[i] = "Mushroom Kingdom During Mack Jumping Kids House 1F Loader"; break;
+                        case 394: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Pink Toad"; break;
+                        case 395: eventLabels[i] = "Wallet Toad 2"; break;
+                        case 396: eventLabels[i] = "Mushroom Kingdom Occupied Rescued Eastern Guard"; break;
+                        case 397: eventLabels[i] = "Heal In Toadstools Room"; break;
+                        case 398: eventLabels[i] = "Empty"; break;
+                        case 399: eventLabels[i] = "Empty"; break;
+                        case 400: eventLabels[i] = "Guest Room Guard"; break;
+                        case 401: eventLabels[i] = "Guest Room Antechamber Loader"; break;
+                        case 402: eventLabels[i] = "Shyster Harassing Eastern Guard"; break;
+                        case 403: eventLabels[i] = "Shyster Harassing Wallet Guy"; break;
+                        case 404: eventLabels[i] = "Mushroom Kingdom Occupied Shop Loader"; break;
+                        case 405: eventLabels[i] = "Table Shyster"; break;
+                        case 406: eventLabels[i] = "Younger Brother"; break;
+                        case 407: eventLabels[i] = "Countertop Shyster"; break;
+                        case 408: eventLabels[i] = "Mushroom Kingdom Occupied Older Brother"; break;
+                        case 409: eventLabels[i] = "Mushroom Kingdom Occupied Jumping Kids House 2F Loader"; break;
+                        case 410: eventLabels[i] = "Bed Shyster"; break;
+                        case 411: eventLabels[i] = "Mushroom Kingdom Occupied Main Hall Repeating Shysters"; break;
+                        case 412: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Repeating Shysters"; break;
+                        case 413: eventLabels[i] = "Clear Temp 7044 0"; break;
+                        case 414: eventLabels[i] = "Set Temp 7044 0"; break;
+                        case 415: eventLabels[i] = "Pipe Vault Room 1 Exit"; break;
+                        case 416: eventLabels[i] = "Pipe Vault Thwomp Room Entrance"; break;
+                        case 417: eventLabels[i] = "Pipe Vault Thwomp Room Exit Pipe"; break;
+                        case 418: eventLabels[i] = "Pipe Vault Pipes Room Entrance Pipe"; break;
+                        case 419: eventLabels[i] = "Empty"; break;
+                        case 420: eventLabels[i] = "Pipe Vault Crouch Room Exit Trampoline"; break;
+                        case 421: eventLabels[i] = "Pipe Vault Pipes Room Exit Pipe"; break;
+                        case 422: eventLabels[i] = "Pipe Vault Platforming Room Entrance Pipe"; break;
+                        case 423: eventLabels[i] = "Pipe Vault Platforming Room Exit Pipe"; break;
+                        case 424: eventLabels[i] = "Pipe Vault Red Room Entrance Pipe"; break;
+                        case 425: eventLabels[i] = "Pipe Vault Red Room Exit Pipe"; break;
+                        case 426: eventLabels[i] = "Pipe Vault Chompweed Room Entrance Pipe"; break;
+                        case 427: eventLabels[i] = "Pipe Vault Chompweed Room Exit Pipe"; break;
+                        case 428: eventLabels[i] = "Pipe Vault Thwomp Room Loader"; break;
+                        case 429: eventLabels[i] = "Pipe Vault Thwomp Room Loader Background"; break;
+                        case 430: eventLabels[i] = "Pipe Vault Mario Hit By Thwomp"; break;
+                        case 431: eventLabels[i] = "Pipe Vault Goomba Thumpin Entrance Pipe"; break;
+                        case 432: eventLabels[i] = "Pipe Vault Goomba Thumpin Exit Trampoline"; break;
+                        case 433: eventLabels[i] = "Pipe Vault Chompweed"; break;
+                        case 434: eventLabels[i] = "Pipe Vault Red Room Loader"; break;
+                        case 435: eventLabels[i] = "Pipe Vault Room 1 Loader"; break;
+                        case 436: eventLabels[i] = "Pipe Vault Fireball 1"; break;
+                        case 437: eventLabels[i] = "Pipe Vault Fireball 2"; break;
+                        case 438: eventLabels[i] = "Pipe Vault Fireball 3"; break;
+                        case 439: eventLabels[i] = "Pipe Vault Fireball 4"; break;
+                        case 440: eventLabels[i] = "Pipe Vault Fireball Background"; break;
+                        case 441: eventLabels[i] = "Pipe Vault Chompweed Room Chompweeds"; break;
+                        case 442: eventLabels[i] = "Empty"; break;
+                        case 443: eventLabels[i] = "Pipe Vault Chompweed Room Loader"; break;
+                        case 444: eventLabels[i] = "Goomba Thumpin Administrator"; break;
+                        case 445: eventLabels[i] = "Goomba Thumpin Begins"; break;
+                        case 446: eventLabels[i] = "Goomba Thumpin Scorekeeping"; break;
+                        case 447: eventLabels[i] = "Goomba Thumpin Spawns"; break;
+                        case 448: eventLabels[i] = "Goomba Thumpin Goomba 1"; break;
+                        case 449: eventLabels[i] = "Goomba Thumpin Goomba 2"; break;
+                        case 450: eventLabels[i] = "Goomba Thumpin Goomba 3"; break;
+                        case 451: eventLabels[i] = "Goomba Thumpin Goomba 4"; break;
+                        case 452: eventLabels[i] = "Empty"; break;
+                        case 453: eventLabels[i] = "Empty"; break;
+                        case 454: eventLabels[i] = "Goomba Thumpin Room Loader"; break;
+                        case 455: eventLabels[i] = "Resummon Pipe Vault Enemies"; break;
+                        case 456: eventLabels[i] = "Yoshi Talks To Other Yoshi"; break;
+                        case 457: eventLabels[i] = "Mushroom Derby Unknown"; break;
+                        case 458: eventLabels[i] = "Mushroom Derby Begins"; break;
+                        case 459: eventLabels[i] = "Upper Right Yoshi"; break;
+                        case 460: eventLabels[i] = "Cookie Storage Yoshi"; break;
+                        case 461: eventLabels[i] = "Yoshi On Track"; break;
+                        case 462: eventLabels[i] = "Yoshi Mom"; break;
+                        case 463: eventLabels[i] = "Free Cookie Yoshi"; break;
+                        case 464: eventLabels[i] = "Empty"; break;
+                        case 465: eventLabels[i] = "Mushroom Derby Business Logic"; break;
+                        case 466: eventLabels[i] = "Mushroom Derby Business Logic Extension"; break;
+                        case 467: eventLabels[i] = "Pipe Vault Platforming Room Loader"; break;
+                        case 468: eventLabels[i] = "Mushroom Derby Use Yoshi Cookie"; break;
+                        case 469: eventLabels[i] = "Yoster Isle Background"; break;
+                        case 470: eventLabels[i] = "Green Yoshi"; break;
+                        case 471: eventLabels[i] = "Boshi"; break;
+                        case 472: eventLabels[i] = "Empty"; break;
+                        case 473: eventLabels[i] = "Empty"; break;
+                        case 474: eventLabels[i] = "Empty"; break;
+                        case 475: eventLabels[i] = "Mushroom Derby Unknown"; break;
+                        case 476: eventLabels[i] = "Initiate Mushroom Derby From Talking To Boshi"; break;
+                        case 477: eventLabels[i] = "Dismount Yoshi 1"; break;
+                        case 478: eventLabels[i] = "Dismount Yoshi 2"; break;
+                        case 479: eventLabels[i] = "Dismount Yoshi 3"; break;
+                        case 480: eventLabels[i] = "Dismount Yoshi 4"; break;
+                        case 481: eventLabels[i] = "Empty"; break;
+                        case 482: eventLabels[i] = "Yoster Isle Unknown"; break;
+                        case 483: eventLabels[i] = "Empty"; break;
+                        case 484: eventLabels[i] = "Empty"; break;
+                        case 485: eventLabels[i] = "Pipe Vault Crouch Room Entrance Pipe"; break;
+                        case 486: eventLabels[i] = "Empty"; break;
+                        case 487: eventLabels[i] = "Pipe Vault Chompweed Room Exit Pipe Reverse"; break;
+                        case 488: eventLabels[i] = "Red Room Piranha 1"; break;
+                        case 489: eventLabels[i] = "Red Room Piranha 2"; break;
+                        case 490: eventLabels[i] = "Red Room Piranha 3"; break;
+                        case 491: eventLabels[i] = "Red Room Piranha 4"; break;
+                        case 492: eventLabels[i] = "Pipe Vault Piranha Timer 1"; break;
+                        case 493: eventLabels[i] = "Pipe Vault Piranha Bit"; break;
+                        case 494: eventLabels[i] = "Pipe Vault Piranha Timer 2"; break;
+                        case 495: eventLabels[i] = "Pipe Vault Piranha Timer 3"; break;
+                        case 496: eventLabels[i] = "Pipe Vault Piranha Timer 4"; break;
+                        case 497: eventLabels[i] = "Pipe Vault Piranha Timer 5"; break;
+                        case 498: eventLabels[i] = "Pipe Vault First Goomba"; break;
+                        case 499: eventLabels[i] = "Pipe Vault Entrance Trampoline"; break;
+                        case 500: eventLabels[i] = "Pipe Vault Hidden Platform"; break;
+                        case 501: eventLabels[i] = "Empty"; break;
+                        case 502: eventLabels[i] = "Pipe Vault Crouch Item Init"; break;
+                        case 503: eventLabels[i] = "Pipe Vault Crouch Item Confirm"; break;
+                        case 504: eventLabels[i] = "Pipe Vault Small Coin"; break;
+                        case 505: eventLabels[i] = "Pipe Vault Mario Thwomp Tumble"; break;
+                        case 506: eventLabels[i] = "Pipe Vault Summon First Goomba"; break;
+                        case 507: eventLabels[i] = "Pipe Vault Piranha Bit"; break;
+                        case 508: eventLabels[i] = "Unknown"; break;
+                        case 509: eventLabels[i] = "Pipe Vault Crouch Item Reset"; break;
+                        case 510: eventLabels[i] = "Pipe Vault Crouch Room Clear Bits"; break;
+                        case 511: eventLabels[i] = "Empty"; break;
+                        case 512: eventLabels[i] = "Rose Town Occupied Inn Loader"; break;
+                        case 513: eventLabels[i] = "Empty"; break;
+                        case 514: eventLabels[i] = "Gaz Item Grant"; break;
+                        case 515: eventLabels[i] = "Empty"; break;
+                        case 516: eventLabels[i] = "Occupied Rose Town Gaz"; break;
+                        case 517: eventLabels[i] = "Rose Town Occupied Exit"; break;
+                        case 518: eventLabels[i] = "Rose Town Occupied Stairway"; break;
+                        case 519: eventLabels[i] = "Empty"; break;
+                        case 520: eventLabels[i] = "Rose Town Occupied Exterior Pink Toad"; break;
+                        case 521: eventLabels[i] = "Rose Town Occupied Exterior Blue Toad Left"; break;
+                        case 522: eventLabels[i] = "Empty"; break;
+                        case 523: eventLabels[i] = "Empty"; break;
+                        case 524: eventLabels[i] = "Rose Town Occupied Exterior Grandpa"; break;
+                        case 525: eventLabels[i] = "Rose Town Item Shop"; break;
+                        case 526: eventLabels[i] = "Rose Town Equip Shop"; break;
+                        case 527: eventLabels[i] = "Rose Town Shop Red Toad"; break;
+                        case 528: eventLabels[i] = "Rose Town Shop Yellow Toad"; break;
+                        case 529: eventLabels[i] = "Rose Town Occupied Exterior Loader"; break;
+                        case 530: eventLabels[i] = "Rose Town Occupied Background 1"; break;
+                        case 531: eventLabels[i] = "Rose Town Occupied Inn 2F Loader"; break;
+                        case 532: eventLabels[i] = "Empty"; break;
+                        case 533: eventLabels[i] = "Empty"; break;
+                        case 534: eventLabels[i] = "Rose Town Dad"; break;
+                        case 535: eventLabels[i] = "Rose Town Son"; break;
+                        case 536: eventLabels[i] = "Empty"; break;
+                        case 537: eventLabels[i] = "Rose Town Treasure House 2F Loader"; break;
+                        case 538: eventLabels[i] = "Rose Town Pink Toad In House"; break;
+                        case 539: eventLabels[i] = "Rose Town Shop Unknown"; break;
+                        case 540: eventLabels[i] = "Unused Hint Dialog"; break;
+                        case 541: eventLabels[i] = "Debug Dialog"; break;
+                        case 542: eventLabels[i] = "Rose Town Occupied Grandma"; break;
+                        case 543: eventLabels[i] = "Rose Town Occupied Kid 1"; break;
+                        case 544: eventLabels[i] = "Rose Town Occupied Kid 2"; break;
+                        case 545: eventLabels[i] = "Rose Town Occupied Kid 3"; break;
+                        case 546: eventLabels[i] = "Rose Town Occupied Blue Toad Right"; break;
+                        case 547: eventLabels[i] = "Rose Town Occupied Arrow Control 1"; break;
+                        case 548: eventLabels[i] = "Rose Town Occupied Arrow Animate"; break;
+                        case 549: eventLabels[i] = "Rose Town Occupied Arrow Control 2"; break;
+                        case 550: eventLabels[i] = "Rose Town Occupied Arrow Control 3"; break;
+                        case 551: eventLabels[i] = "Rose Town Occupied Mods"; break;
+                        case 552: eventLabels[i] = "Rose Town Occupied Intro Toad Movement"; break;
+                        case 553: eventLabels[i] = "Rose Town Occupied Arrow Control 4"; break;
+                        case 554: eventLabels[i] = "Rose Town Occupied Exterior Yellow Toad"; break;
+                        case 555: eventLabels[i] = "Rose Town Inn Toad Item Grant"; break;
+                        case 556: eventLabels[i] = "Rose Town Liberated Loader"; break;
+                        case 557: eventLabels[i] = "Rose Town Liberated Loader Background"; break;
+                        case 558: eventLabels[i] = "Rose Town Shop Exit"; break;
+                        case 559: eventLabels[i] = "Rose Town Couples House Exit"; break;
+                        case 560: eventLabels[i] = "Old Key Item Manager"; break;
+                        case 561: eventLabels[i] = "Place Link In Rose Town"; break;
+                        case 562: eventLabels[i] = "Rose Town Liberated Kids Indoors"; break;
+                        case 563: eventLabels[i] = "Summons Husband In Rose Town Couples House"; break;
+                        case 564: eventLabels[i] = "Rose Town Liberated Kid Outdoors"; break;
+                        case 565: eventLabels[i] = "Rose Town Liberated 3Rd Kid Outdoors"; break;
+                        case 566: eventLabels[i] = "Rose Town Liberated Grandpa"; break;
+                        case 567: eventLabels[i] = "Rose Town Liberated Grandma"; break;
+                        case 568: eventLabels[i] = "Rose Rown Liberated Water Pump House Loader"; break;
+                        case 569: eventLabels[i] = "Rose Town Liberated Pink Toad"; break;
+                        case 570: eventLabels[i] = "Rose Town Liberated Right Blue Toad"; break;
+                        case 571: eventLabels[i] = "Rose Town Liberated Yellow Toad"; break;
+                        case 572: eventLabels[i] = "Rose Town Liberated Husband"; break;
+                        case 573: eventLabels[i] = "Rose Town Liberated Wife"; break;
+                        case 574: eventLabels[i] = "Empty"; break;
+                        case 575: eventLabels[i] = "Rose Town Liberated Couples House Loader"; break;
+                        case 576: eventLabels[i] = "Rose Town Treasure House Chest 1"; break;
+                        case 577: eventLabels[i] = "Rose Town Treasure House Chest 2"; break;
+                        case 578: eventLabels[i] = "Rose Town Liberated Upper Hidden Npc"; break;
+                        case 579: eventLabels[i] = "Rose Town Liberated Left Blue Toad"; break;
+                        case 580: eventLabels[i] = "Rose Town Occupied Treasure House 1F Loader"; break;
+                        case 581: eventLabels[i] = "Rose Town Liberated Lower Hidden Npc"; break;
+                        case 582: eventLabels[i] = "Rose Town Occupied Treasure House Bedroom Chest"; break;
+                        case 583: eventLabels[i] = "Rose Town Liberated Treasure House Bedroom Chest"; break;
+                        case 584: eventLabels[i] = "Goomba Thumpin Gold Goomba 1"; break;
+                        case 585: eventLabels[i] = "Goomba Thumpin Gold Goomba 2"; break;
+                        case 586: eventLabels[i] = "Goomba Thumpin Gold Goomba 3"; break;
+                        case 587: eventLabels[i] = "Goomba Thumpin Gold Goomba 4"; break;
+                        case 588: eventLabels[i] = "Goomba Thumpin Spiny 1"; break;
+                        case 589: eventLabels[i] = "Goomba Thumpin Spiny 2"; break;
+                        case 590: eventLabels[i] = "Goomba Thumpin Spiny 3"; break;
+                        case 591: eventLabels[i] = "Goomba Thumpin Spiny 4"; break;
+                        case 592: eventLabels[i] = "Mines Boss Room Loader Before Defeat"; break;
+                        case 593: eventLabels[i] = "Mines Boss Room Loader After Defeat"; break;
+                        case 594: eventLabels[i] = "Mines Boss Shoves You"; break;
+                        case 595: eventLabels[i] = "Mines Boss Room Exit"; break;
+                        case 596: eventLabels[i] = "Mines Boss Room Background Explosions"; break;
+                        case 597: eventLabels[i] = "Mines Boss Room Explosion Recoil"; break;
+                        case 598: eventLabels[i] = "Mines Initiate Final Boss Fight"; break;
+                        case 599: eventLabels[i] = "Mines Boss Room Entrance Reverse"; break;
+                        case 600: eventLabels[i] = "Marrymore Occupied Chapel Loader"; break;
+                        case 601: eventLabels[i] = "Marrymore Back Door Enter Chapel"; break;
+                        case 602: eventLabels[i] = "Marrymore Inn Manager"; break;
+                        case 603: eventLabels[i] = "Marrymore Bellhop Lobby While Guest"; break;
+                        case 604: eventLabels[i] = "Marrymore Inn Bright Card Enthusiast"; break;
+                        case 605: eventLabels[i] = "Marrymore Inn Lobby Guest 1"; break;
+                        case 606: eventLabels[i] = "Marrymore Inn Lobby Guest 2"; break;
+                        case 607: eventLabels[i] = "Locked Door"; break;
+                        case 608: eventLabels[i] = "Marrymore Inn 3F Hallway Loader"; break;
+                        case 609: eventLabels[i] = "Marrymore Inn 3F Hallway Bellhop"; break;
+                        case 610: eventLabels[i] = "Marrymore Occupied Exterior Loader"; break;
+                        case 611: eventLabels[i] = "Marrymore Inn Lobby Loader"; break;
+                        case 612: eventLabels[i] = "Marrymore Inn 2F Hallway Loader"; break;
+                        case 613: eventLabels[i] = "Marrymore Suite Loader"; break;
+                        case 614: eventLabels[i] = "Marrymore Suite Tip Bellhop"; break;
+                        case 615: eventLabels[i] = "Marrymore Lamp"; break;
+                        case 616: eventLabels[i] = "Marrymore Inn Lobby Exit"; break;
+                        case 617: eventLabels[i] = "Mario As Bellhop Main Event"; break;
+                        case 618: eventLabels[i] = "Mario As Bellhop Tries To Go Upstairs Without Guest"; break;
+                        case 619: eventLabels[i] = "Real Bellhop Blocks Exit 1"; break;
+                        case 620: eventLabels[i] = "Real Bellhop Blocks Exit 2"; break;
+                        case 621: eventLabels[i] = "Marrymore Inn Elderly Guest"; break;
+                        case 622: eventLabels[i] = "Marrymore Inn Elderly Guest Tip Subroutine 1"; break;
+                        case 623: eventLabels[i] = "Marrymore Inn Employed Guest Leaves"; break;
+                        case 624: eventLabels[i] = "Marrymore Inn Lobby Stairs"; break;
+                        case 625: eventLabels[i] = "Marrymore Inn Something"; break;
+                        case 626: eventLabels[i] = "Marrymore Inn Elderly Guest Tip Subroutine Flowerbox"; break;
+                        case 627: eventLabels[i] = "Marrymore Sanctuary Exit To Antechamber"; break;
+                        case 628: eventLabels[i] = "Marrymore Kitchen Loader"; break;
+                        case 629: eventLabels[i] = "Empty"; break;
+                        case 630: eventLabels[i] = "Marrymore Kitchen Chef 1"; break;
+                        case 631: eventLabels[i] = "Marrymore Kitchen Chef 2"; break;
+                        case 632: eventLabels[i] = "Marrymore Exterior Chapel Locked Front Door"; break;
+                        case 633: eventLabels[i] = "Marrymore Chapel Lobby Exit To Exterior"; break;
+                        case 634: eventLabels[i] = "Empty"; break;
+                        case 635: eventLabels[i] = "Marrymore Inn Elderly Guest Tip Sunroutine 3"; break;
+                        case 636: eventLabels[i] = "Empty"; break;
+                        case 637: eventLabels[i] = "Empty"; break;
+                        case 638: eventLabels[i] = "Empty"; break;
+                        case 639: eventLabels[i] = "Empty"; break;
+                        case 640: eventLabels[i] = "Empty"; break;
+                        case 641: eventLabels[i] = "Marrymore Antechamber Loader Extension"; break;
+                        case 642: eventLabels[i] = "Marrymore Antechamber Entrance Reverse"; break;
+                        case 643: eventLabels[i] = "Empty"; break;
+                        case 644: eventLabels[i] = "Empty"; break;
+                        case 645: eventLabels[i] = "Empty"; break;
+                        case 646: eventLabels[i] = "Marrymore Shop Event Container"; break;
+                        case 647: eventLabels[i] = "Marrymore Sanctuary Candle 1"; break;
+                        case 648: eventLabels[i] = "Marrymore Sanctuary Candle 2"; break;
+                        case 649: eventLabels[i] = "Marrymore Sanctuary Candle 3"; break;
+                        case 650: eventLabels[i] = "Marrymore Sanctuary Candle 4"; break;
+                        case 651: eventLabels[i] = "Marrymore Sanctuary Candle 5"; break;
+                        case 652: eventLabels[i] = "Marrymore Sanctuary Candle 6"; break;
+                        case 653: eventLabels[i] = "Marrymore Sanctuary Candle 7"; break;
+                        case 654: eventLabels[i] = "Marrymore Sanctuary Candle 8"; break;
+                        case 655: eventLabels[i] = "Marrymore Gear Grant Crown"; break;
+                        case 656: eventLabels[i] = "Empty"; break;
+                        case 657: eventLabels[i] = "Empty"; break;
+                        case 658: eventLabels[i] = "Empty"; break;
+                        case 659: eventLabels[i] = "Empty"; break;
+                        case 660: eventLabels[i] = "Empty"; break;
+                        case 661: eventLabels[i] = "Bowsers Keep Button Room Forfeit"; break;
+                        case 662: eventLabels[i] = "Empty"; break;
+                        case 663: eventLabels[i] = "Initiate Marrymore Boss Fight If All Gear Collected"; break;
+                        case 664: eventLabels[i] = "Empty"; break;
+                        case 665: eventLabels[i] = "Empty"; break;
+                        case 666: eventLabels[i] = "Empty"; break;
+                        case 667: eventLabels[i] = "Empty"; break;
+                        case 668: eventLabels[i] = "Summon Marrymore Boss To Room"; break;
+                        case 669: eventLabels[i] = "Enter Unoccupied Marrymore Sanctuary"; break;
+                        case 670: eventLabels[i] = "Marrymore Unoccupied Exterior Loader"; break;
+                        case 671: eventLabels[i] = "Marrymore Back Area Exit To Exterior"; break;
+                        case 672: eventLabels[i] = "Marrymore Occupied Exterior Chapel Front Entrance"; break;
+                        case 673: eventLabels[i] = "Marrymore Chapel Lobby Exit To Antechamber"; break;
+                        case 674: eventLabels[i] = "Marrymore Unoccupied Exterior Open Front Chapel Entrance"; break;
+                        case 675: eventLabels[i] = "Empty"; break;
+                        case 676: eventLabels[i] = "Empty"; break;
+                        case 677: eventLabels[i] = "Marrymore Unoccupied Sanctuary Loader"; break;
+                        case 678: eventLabels[i] = "Marrymore Jump On Organ Pipe"; break;
+                        case 679: eventLabels[i] = "Marrymore Liberated Exterior Pathway Red Toad"; break;
+                        case 680: eventLabels[i] = "Marrymore Liberated Exterior Pathway Yellow Toad"; break;
+                        case 681: eventLabels[i] = "Marrymore Liberated Exterior Kid"; break;
+                        case 682: eventLabels[i] = "Marrymore Liberated Exterior Mom"; break;
+                        case 683: eventLabels[i] = "Marrymore Liberated Exterior Green Toad"; break;
+                        case 684: eventLabels[i] = "Marrymore Liberated Exterior Husband"; break;
+                        case 685: eventLabels[i] = "Marrymore Liberated Exterior Wife"; break;
+                        case 686: eventLabels[i] = "Marrymore Liberated Exterior Red Toad"; break;
+                        case 687: eventLabels[i] = "Empty"; break;
+                        case 688: eventLabels[i] = "Marrymore Raz"; break;
+                        case 689: eventLabels[i] = "Marrymore Raini"; break;
+                        case 690: eventLabels[i] = "Marrymore Red Toad 1"; break;
+                        case 691: eventLabels[i] = "Marrymore Yellow Toad 1"; break;
+                        case 692: eventLabels[i] = "Empty"; break;
+                        case 693: eventLabels[i] = "Marrymore Grey Toad"; break;
+                        case 694: eventLabels[i] = "Marrymore Red Toad 2"; break;
+                        case 695: eventLabels[i] = "Marrymore Green Kid"; break;
+                        case 696: eventLabels[i] = "Marrymore Yellow Toad 2"; break;
+                        case 697: eventLabels[i] = "Marrymore Entrance Toad"; break;
+                        case 698: eventLabels[i] = "Marrymore Photographer"; break;
+                        case 699: eventLabels[i] = "Empty"; break;
+                        case 700: eventLabels[i] = "Empty"; break;
+                        case 701: eventLabels[i] = "Pastor Mario"; break;
+                        case 702: eventLabels[i] = "Marrymore Take Photo"; break;
+                        case 703: eventLabels[i] = "Empty"; break;
+                        case 704: eventLabels[i] = "Empty"; break;
+                        case 705: eventLabels[i] = "Marrymore Liberated Chapel Green Toad"; break;
+                        case 706: eventLabels[i] = "Marrymore Liberated Chapel Pink Kid"; break;
+                        case 707: eventLabels[i] = "Marrymore Raz Raini"; break;
+                        case 708: eventLabels[i] = "Marrymore Tip Decision Subroutine"; break;
+                        case 709: eventLabels[i] = "Empty"; break;
+                        case 710: eventLabels[i] = "Empty"; break;
+                        case 711: eventLabels[i] = "Empty"; break;
+                        case 712: eventLabels[i] = "Empty"; break;
+                        case 713: eventLabels[i] = "Empty"; break;
+                        case 714: eventLabels[i] = "Empty"; break;
+                        case 715: eventLabels[i] = "Empty"; break;
+                        case 716: eventLabels[i] = "Enter Jumping Kids House"; break;
+                        case 717: eventLabels[i] = "Empty"; break;
+                        case 718: eventLabels[i] = "Empty"; break;
+                        case 719: eventLabels[i] = "Empty"; break;
+                        case 720: eventLabels[i] = "Old Star Piece Script"; break;
+                        case 721: eventLabels[i] = "Peachs Grandma"; break;
+                        case 722: eventLabels[i] = "Empty"; break;
+                        case 723: eventLabels[i] = "Mushroom Kingdom Unoccupied Exterior Loader"; break;
+                        case 724: eventLabels[i] = "Nimbus Croco House Loader"; break;
+                        case 725: eventLabels[i] = "Empty"; break;
+                        case 726: eventLabels[i] = "Empty"; break;
+                        case 727: eventLabels[i] = "Empty"; break;
+                        case 728: eventLabels[i] = "Empty"; break;
+                        case 729: eventLabels[i] = "Several Marrymore Room Loaders"; break;
+                        case 730: eventLabels[i] = "Empty"; break;
+                        case 731: eventLabels[i] = "Empty"; break;
+                        case 732: eventLabels[i] = "Empty"; break;
+                        case 733: eventLabels[i] = "Empty"; break;
+                        case 734: eventLabels[i] = "Mway Chest"; break;
+                        case 735: eventLabels[i] = "Forest Underground Chest"; break;
+                        case 736: eventLabels[i] = "Rose Town Inn Sleep Subroutine"; break;
+                        case 737: eventLabels[i] = "Garros House Loader"; break;
+                        case 738: eventLabels[i] = "Nimbus Land Final Boss Fight Town Square Loader"; break;
+                        case 739: eventLabels[i] = "Nimbus Land Inn Hint Guy"; break;
+                        case 740: eventLabels[i] = "Nimbus Land Occupied Castle Front Entrance"; break;
+                        case 741: eventLabels[i] = "Empty"; break;
+                        case 742: eventLabels[i] = "Nimbus Land Liberated Castle Main Hallway Woman"; break;
+                        case 743: eventLabels[i] = "Nimbus Land Liberated Castle Main Hallway Man"; break;
+                        case 744: eventLabels[i] = "Nimbus Land Liberated Castle Inner Cellar Reward"; break;
+                        case 745: eventLabels[i] = "Mushroom Kingdom Inn Sleeping Guy"; break;
+                        case 746: eventLabels[i] = "Mushroom Kingdom Inn 2F Downward Stairs"; break;
+                        case 747: eventLabels[i] = "Mushroom Kingdom Inn 2F Loader"; break;
+                        case 748: eventLabels[i] = "Empty"; break;
+                        case 749: eventLabels[i] = "Vine Field"; break;
+                        case 750: eventLabels[i] = "Vine Field"; break;
+                        case 751: eventLabels[i] = "Vine Field"; break;
+                        case 752: eventLabels[i] = "Vine Field"; break;
+                        case 753: eventLabels[i] = "Rose Town Innkeeper Over Counter"; break;
+                        case 754: eventLabels[i] = "Mushroom Kingdom Shop Basement Stairway"; break;
+                        case 755: eventLabels[i] = "Mushroom Way Area 03 Shuffled Npc Animation Loader"; break;
+                        case 756: eventLabels[i] = "Bandits Way Area 02 Shuffled Npc Animation Loader"; break;
+                        case 757: eventLabels[i] = "Bandits Way Area 01 Shuffled Npc Animation Loader"; break;
+                        case 758: eventLabels[i] = "Bandits Way Area 03 Shuffled Npc Animation Loader"; break;
+                        case 759: eventLabels[i] = "Bandits Way Area 04 Shuffled Npc Animation Loader"; break;
+                        case 760: eventLabels[i] = "Bandits Way Area 05 Shuffled Npc Animation Loader"; break;
+                        case 761: eventLabels[i] = "Mushroom Kingdom Occupied Throne Room Shuffled Npc Animation Loader"; break;
+                        case 762: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Shuffled Npc Animation Loader"; break;
+                        case 763: eventLabels[i] = "Mushroom Kingdom Occupied Throne Antechamber Shuffled Npc Animation Loader"; break;
+                        case 764: eventLabels[i] = "Mushroom Kingdom Occupied Throne Antechamber Loader"; break;
+                        case 765: eventLabels[i] = "Mushroom Kingdom Occupied Main Hall Shuffled Npc Animation Loader"; break;
+                        case 766: eventLabels[i] = "Mushroom Kingdom Occupied Stairway Shuffled Npc Animation Loader"; break;
+                        case 767: eventLabels[i] = "Mushroom Kingdom Occupied East Hall Loader"; break;
+                        case 768: eventLabels[i] = "Mushroom Kingdom Occupied East Hall Shuffled Npc Animation Loader"; break;
+                        case 769: eventLabels[i] = "Mushroom Kingdom Occupied Peachs Antechamber Shuffled Npc Animation Loader"; break;
+                        case 770: eventLabels[i] = "Mushroom Kingdom Occupied Jumping Kids House 1F Shuffled Npc Animation Loader"; break;
+                        case 771: eventLabels[i] = "Mushroom Kingdom Occupied Jumping Kids House 2F Shuffled Npc Animation Loader"; break;
+                        case 772: eventLabels[i] = "Kero Sewers Belome Room Shuffled Npc Animation Loader"; break;
+                        case 773: eventLabels[i] = "Kero Sewers Belome Room Loader Container"; break;
+                        case 774: eventLabels[i] = "Forest Maze Boss Room Loader"; break;
+                        case 775: eventLabels[i] = "Forest Maze Boss Room Shuffled Npc Animation Loader"; break;
+                        case 776: eventLabels[i] = "Mines Trampoline Room Loader"; break;
+                        case 777: eventLabels[i] = "Mines Trampoline Room Shuffled Npc Animation Loader"; break;
+                        case 778: eventLabels[i] = "Mines Left Of Trampoline Room Loader"; break;
+                        case 779: eventLabels[i] = "Mines Left Of Trampoline Room Shuffled Npc Animation Loader"; break;
+                        case 780: eventLabels[i] = "Mines Tiny Room 2 Left Of Trampoline Room Loader"; break;
+                        case 781: eventLabels[i] = "Mines Tiny Room 2 Left Of Trampoline Room Shuffled Npc Animation Loader"; break;
+                        case 782: eventLabels[i] = "Mines Room That Splits To Pa Mole Path Loader"; break;
+                        case 783: eventLabels[i] = "Mines Room That Splits To Pa Mole Path Shuffled Npc Animation Loader"; break;
+                        case 784: eventLabels[i] = "Mines Small North Room In Miniboss Path Loader"; break;
+                        case 785: eventLabels[i] = "Mines Small North Room In Miniboss Path Shuffled Npc Animation Loader"; break;
+                        case 786: eventLabels[i] = "Mines Long Room In Miniboss Path Loader"; break;
+                        case 787: eventLabels[i] = "Mines Long Room In Miniboss Path Shuffled Npc Animation Loader"; break;
+                        case 788: eventLabels[i] = "Mines Boss Room Shuffled Npc Animation Loader"; break;
+                        case 789: eventLabels[i] = "Tower Curtain Game Room Shuffled Npc Animation Loader"; break;
+                        case 790: eventLabels[i] = "Marrymore Occupied Sanctuary Shuffled Npc Animation Loader"; break;
+                        case 791: eventLabels[i] = "Tower Ancestor Game Room Shuffled Npc Animation Loader"; break;
+                        case 792: eventLabels[i] = "Tower First Bobomb Staircase Shuffled Npc Animation Loader"; break;
+                        case 793: eventLabels[i] = "Tower First Bobomb Staircase Loader"; break;
+                        case 794: eventLabels[i] = "Tower Balcony Shuffled Npc Animation Loader"; break;
+                        case 795: eventLabels[i] = "Ending Credits Chapel Shuffled Npc Animation Loader"; break;
+                        case 796: eventLabels[i] = "Marrymore Kitchen Shuffled Npc Animation Loader"; break;
+                        case 797: eventLabels[i] = "Tower Lobby Shuffled Npc Animation Loader"; break;
+                        case 798: eventLabels[i] = "Tower First Rail Room Shuffled Npc Animation Loader"; break;
+                        case 799: eventLabels[i] = "Tower Jumping Spookum Room Shuffled Npc Animation Loader"; break;
+                        case 800: eventLabels[i] = "Ship Password Room Shuffled Npc Animation Loader"; break;
+                        case 801: eventLabels[i] = "Ship Boss Room Shuffled Npc Animation Loader"; break;
+                        case 802: eventLabels[i] = "Seaside Occupied Beach Shuffled Npc Animation Loader"; break;
+                        case 803: eventLabels[i] = "Ship 1St Preboss Battle Room Shuffled Npc Animation Loader"; break;
+                        case 804: eventLabels[i] = "Ship 2Nd Preboss Battle Room Shuffled Npc Animation Loader"; break;
+                        case 805: eventLabels[i] = "Seaside Occupied Elder House 1F Shuffled Npc Animation Loader"; break;
+                        case 806: eventLabels[i] = "Seaside Occupied Exterior Shuffled Npc Animation Loader"; break;
+                        case 807: eventLabels[i] = "Seaside Occupied Inn 1F Shuffled Npc Animation Loader"; break;
+                        case 808: eventLabels[i] = "Seaside Occupied Inn 2F Shuffled Npc Animation Loader"; break;
+                        case 809: eventLabels[i] = "Seaside Occupied Bomb Shop Shuffled Npc Animation Loader"; break;
+                        case 810: eventLabels[i] = "Seaside Occupied Wpn Arm Shop Shuffled Npc Animation Loader"; break;
+                        case 811: eventLabels[i] = "Seaside Occupied Health Store Shuffled Npc Animation Loader"; break;
+                        case 812: eventLabels[i] = "Seaside Occupied Mushroom Boy Shop Shuffled Npc Animation Loader"; break;
+                        case 813: eventLabels[i] = "Seaside Occupied Accessory Shop Shuffled Npc Animation Loader"; break;
+                        case 814: eventLabels[i] = "Temple Boss Room Shuffled Npc Animation Loader"; break;
+                        case 815: eventLabels[i] = "Dojo Shuffled Npc Animation Loader"; break;
+                        case 816: eventLabels[i] = "Monstro Superboss Shuffled Npc Animation Loader"; break;
+                        case 817: eventLabels[i] = "Bean Valley Boss Room Shuffled Npc Animation Loader"; break;
+                        case 818: eventLabels[i] = "Nimbus Castle Statue Polisher Boss Room Shuffled Npc Animation Loader"; break;
+                        case 819: eventLabels[i] = "Nimbus Castle Statue Polishing Room Shuffled Npc Animation Loader"; break;
+                        case 820: eventLabels[i] = "Nimbus Castle Final Hallway Shuffled Npc Animation Loader"; break;
+                        case 821: eventLabels[i] = "Garros House Shuffled Npc Animation Loader"; break;
+                        case 822: eventLabels[i] = "Nimbus Land Occupied Exterior Final Boss Room Shuffled Npc Animation Loader"; break;
+                        case 823: eventLabels[i] = "Nimbus Castle Main Hallway Shuffled Npc Animation Loader"; break;
+                        case 824: eventLabels[i] = "Nimbus Castle Occupied 4Way Path Shuffled Npc Animation Loader"; break;
+                        case 825: eventLabels[i] = "Nimbus Castle Throne Room Antechamber Shuffled Npc Animation Loader"; break;
+                        case 826: eventLabels[i] = "Nimbus Castle Occupied Throne Room Shuffled Npc Animation Loader"; break;
+                        case 827: eventLabels[i] = "Nimbus Castle Single Bird Statue Room Shuffled Npc Animation Loader"; break;
+                        case 828: eventLabels[i] = "Nimbus Castle Single Bird Statue Room Loader"; break;
+                        case 829: eventLabels[i] = "Nimbus Castle Early West Shaman Path Shuffled Npc Animation Loader"; break;
+                        case 830: eventLabels[i] = "Nimbus Castle Early East Shaman Path Shuffled Npc Animation Loader"; break;
+                        case 831: eventLabels[i] = "Nimbus Castle Liberated Throne Room Shuffled Npc Animation Loader"; break;
+                        case 832: eventLabels[i] = "Nimbus Land Hot Springs Shuffled Npc Animation Loader"; break;
+                        case 833: eventLabels[i] = "Nimbus Castle Liberated Inner Cellar Hallway Loader"; break;
+                        case 834: eventLabels[i] = "Nimbus Castle Liberated Inner Cellar Hallway Shuffled Npc Animation Loader"; break;
+                        case 835: eventLabels[i] = "Nimbus Castle Liberated 5 Door Room Shuffled Npc Animation Loader"; break;
+                        case 836: eventLabels[i] = "Nimbus Castle Liberated 4Way Path Shuffled Npc Animation Loader"; break;
+                        case 837: eventLabels[i] = "Nimbus Castle Liberated 4Way Path Loader"; break;
+                        case 838: eventLabels[i] = "Nimbus Castle First Post Throne Hallway Shuffled Npc Animation Loader"; break;
+                        case 839: eventLabels[i] = "Nimbus Castle Second Post Throne Hallway Shuffled Npc Animation Loader"; break;
+                        case 840: eventLabels[i] = "Volcano First Boss Room Shuffled Npc Animation Loader"; break;
+                        case 841: eventLabels[i] = "Volcano Final Pre Exit Room Loader"; break;
+                        case 842: eventLabels[i] = "Volcano Final Pre Exit Room Shuffled Npc Animation Loader"; break;
+                        case 843: eventLabels[i] = "Volcano Post Boss Room With Enemy Warps Shuffled Npc Animation Loader"; break;
+                        case 844: eventLabels[i] = "Volcano Exit Room Shuffled Npc Animation Loader"; break;
+                        case 845: eventLabels[i] = "Volcano Brief Henchman Room Shuffled Npc Animation Loader"; break;
+                        case 846: eventLabels[i] = "Keep Battle Door 1C Shuffled Npc Animation Loader"; break;
+                        case 847: eventLabels[i] = "Keep First Boss Room Shuffled Npc Animation Loader"; break;
+                        case 848: eventLabels[i] = "Keep Battle Door 2B Shuffled Npc Animation Loader"; break;
+                        case 849: eventLabels[i] = "Keep Battle Door 2C Shuffled Npc Animation Loader"; break;
+                        case 850: eventLabels[i] = "Keep Battle Door 1A Shuffled Npc Animation Loader"; break;
+                        case 851: eventLabels[i] = "Keep Battle Door 1B Shuffled Npc Animation Loader"; break;
+                        case 852: eventLabels[i] = "Keep Battle Door 2A Shuffled Npc Animation Loader"; break;
+                        case 853: eventLabels[i] = "Keep Final Boss Room Shuffled Npc Animation Loader"; break;
+                        case 854: eventLabels[i] = "Abyss 1St Boss Room Shuffled Npc Animation Loader"; break;
+                        case 855: eventLabels[i] = "Inner Factory 1St Room Shuffled Npc Animation Loader"; break;
+                        case 856: eventLabels[i] = "Inner Factory 2Nd Room Shuffled Npc Animation Loader"; break;
+                        case 857: eventLabels[i] = "Inner Factory 3Rd Room Shuffled Npc Animation Loader"; break;
+                        case 858: eventLabels[i] = "Inner Factory 4Th Room Shuffled Npc Animation Loader"; break;
+                        case 859: eventLabels[i] = "Inner Factory 1St Room Post Fight Shuffled Npc Animation Loader"; break;
+                        case 860: eventLabels[i] = "Mines Boss Shove Subroutine"; break;
+                        case 861: eventLabels[i] = "Dojo 1St Boss Challenge Subroutine"; break;
+                        case 862: eventLabels[i] = "Dojo 2Nd Boss Challenge Subroutine"; break;
+                        case 863: eventLabels[i] = "Dojo 2Nd Boss Challenge Deescalate"; break;
+                        case 864: eventLabels[i] = "Dojo 3Rd Boss Challenge Subroutine"; break;
+                        case 865: eventLabels[i] = "Dojo 3Rd Boss Challenge Deescalate"; break;
+                        case 866: eventLabels[i] = "Dojo 4Th Boss Challenge Subroutine"; break;
+                        case 867: eventLabels[i] = "Dojo 5Th Boss Challenge Subroutine"; break;
+                        case 868: eventLabels[i] = "Dojo 5Th Boss Challenge Deescalate"; break;
+                        case 869: eventLabels[i] = "Test Script 3"; break;
+                        case 870: eventLabels[i] = "Test Script 4"; break;
+                        case 871: eventLabels[i] = "Test Script 5"; break;
+                        case 872: eventLabels[i] = "Test Script 6"; break;
+                        case 873: eventLabels[i] = "Test Script 7"; break;
+                        case 874: eventLabels[i] = "Test Script 8"; break;
+                        case 875: eventLabels[i] = "Test Script 9"; break;
+                        case 876: eventLabels[i] = "Test Script 10"; break;
+                        case 877: eventLabels[i] = "Test Script 11"; break;
+                        case 878: eventLabels[i] = "Tower Exterior Shuffled Npc Animation Loader"; break;
+                        case 879: eventLabels[i] = "Ship Trampoline Loader Override"; break;
+                        case 880: eventLabels[i] = "Booster Pass Secret Room Shuffled Npc Animation Loader"; break;
+                        case 881: eventLabels[i] = "Booster Pass Seesaw Chest Room Shuffled Npc Animation Loader"; break;
+                        case 882: eventLabels[i] = "Chest Flower Item Collection"; break;
+                        case 883: eventLabels[i] = "Chest Item Bag Packet"; break;
+                        case 884: eventLabels[i] = "Chest Feather Packet"; break;
+                        case 885: eventLabels[i] = "Chest Star Piece Packet"; break;
+                        case 886: eventLabels[i] = "Chest Ring Packet"; break;
+                        case 887: eventLabels[i] = "Chest Brooch Packet"; break;
+                        case 888: eventLabels[i] = "Chest Shoes Packet"; break;
+                        case 889: eventLabels[i] = "Chest Banana Peel Packet"; break;
+                        case 890: eventLabels[i] = "Chest Crown Packet"; break;
+                        case 891: eventLabels[i] = "Chest Bomb Packet"; break;
+                        case 892: eventLabels[i] = "Chest Egg Packet"; break;
+                        case 893: eventLabels[i] = "Chest Cookie Packet"; break;
+                        case 894: eventLabels[i] = "Chest Berry Packet"; break;
+                        case 895: eventLabels[i] = "Chest Card Packet"; break;
+                        case 896: eventLabels[i] = "Chest Green Item Collection"; break;
+                        case 897: eventLabels[i] = "Chest Red Item Collection"; break;
+                        case 898: eventLabels[i] = "Chest Blue Item Collection"; break;
+                        case 899: eventLabels[i] = "Chest Yellow Item Collection"; break;
+                        case 900: eventLabels[i] = "Chest Spell 1"; break;
+                        case 901: eventLabels[i] = "Chest Spell 2"; break;
+                        case 902: eventLabels[i] = "Chest Spell 3"; break;
+                        case 903: eventLabels[i] = "Chest Spell 4"; break;
+                        case 904: eventLabels[i] = "Chest Spell 5"; break;
+                        case 905: eventLabels[i] = "Chest Spell 6"; break;
+                        case 906: eventLabels[i] = "Chest Spell 7"; break;
+                        case 907: eventLabels[i] = "Chest Spell 8"; break;
+                        case 908: eventLabels[i] = "Chest Spell 9"; break;
+                        case 909: eventLabels[i] = "Chest Spell 10"; break;
+                        case 910: eventLabels[i] = "Chest Spell 11"; break;
+                        case 911: eventLabels[i] = "Chest Spell 12"; break;
+                        case 912: eventLabels[i] = "Chest Spell 13"; break;
+                        case 913: eventLabels[i] = "Chest Spell 14"; break;
+                        case 914: eventLabels[i] = "Chest Spell 15"; break;
+                        case 915: eventLabels[i] = "Chest Spell 16"; break;
+                        case 916: eventLabels[i] = "Chest Spell 17"; break;
+                        case 917: eventLabels[i] = "Chest Beetle Packet"; break;
+                        case 918: eventLabels[i] = "Chest Spell 18"; break;
+                        case 919: eventLabels[i] = "Chest Spell 19"; break;
+                        case 920: eventLabels[i] = "Chest Spell 20"; break;
+                        case 921: eventLabels[i] = "Chest Spell 21"; break;
+                        case 922: eventLabels[i] = "Chest Spell 22"; break;
+                        case 923: eventLabels[i] = "Chest Spell 23"; break;
+                        case 924: eventLabels[i] = "Chest Spell 24"; break;
+                        case 925: eventLabels[i] = "Chest Spell 25"; break;
+                        case 926: eventLabels[i] = "Chest Spell 26"; break;
+                        case 927: eventLabels[i] = "Chest Spell 27"; break;
+                        case 928: eventLabels[i] = "Unused"; break;
+                        case 929: eventLabels[i] = "Unused"; break;
+                        case 930: eventLabels[i] = "Yoshi Cookie Storage Business Logic"; break;
+                        case 931: eventLabels[i] = "Initatie Yoshi Race For Gambling"; break;
+                        case 932: eventLabels[i] = "Fat Yoshi"; break;
+                        case 933: eventLabels[i] = "Fat Yoshi Present Generator"; break;
+                        case 934: eventLabels[i] = "Progressive Firework Chest Packet"; break;
+                        case 935: eventLabels[i] = "Marrymore Inn Regular Room Loader"; break;
+                        case 936: eventLabels[i] = "Peck Subroutine Left Statue"; break;
+                        case 937: eventLabels[i] = "Peck Subroutine Middle Statue"; break;
+                        case 938: eventLabels[i] = "Peck Subroutine Right Statue"; break;
+                        case 939: eventLabels[i] = "Statue Subroutine 1"; break;
+                        case 940: eventLabels[i] = "Statue Subroutine 2"; break;
+                        case 941: eventLabels[i] = "Keep First Boss Set Script"; break;
+                        case 942: eventLabels[i] = "Keep First Boss Summon Chest"; break;
+                        case 943: eventLabels[i] = "Keep Second Boss Animation Subroutine"; break;
+                        case 944: eventLabels[i] = "Final Boss Animation Subroutine 1"; break;
+                        case 945: eventLabels[i] = "Final Boss Animation Subroutine 2"; break;
+                        case 946: eventLabels[i] = "Final Boss Animation Subroutine 3"; break;
+                        case 947: eventLabels[i] = "Frogfucius Hint Main Checks"; break;
+                        case 948: eventLabels[i] = "Frogfucius Hint Expansion"; break;
+                        case 949: eventLabels[i] = "Frogfucius Hint Treasure Chests"; break;
+                        case 950: eventLabels[i] = "Chest Glove Packet"; break;
+                        case 951: eventLabels[i] = "Crystal Chest Packet"; break;
+                        case 952: eventLabels[i] = "Npc Spell 1"; break;
+                        case 953: eventLabels[i] = "Npc Spell 2"; break;
+                        case 954: eventLabels[i] = "Npc Spell 3"; break;
+                        case 955: eventLabels[i] = "Npc Spell 4"; break;
+                        case 956: eventLabels[i] = "Npc Spell 5"; break;
+                        case 957: eventLabels[i] = "Npc Spell 6"; break;
+                        case 958: eventLabels[i] = "Npc Spell 7"; break;
+                        case 959: eventLabels[i] = "Npc Spell 8"; break;
+                        case 960: eventLabels[i] = "Npc Spell 9"; break;
+                        case 961: eventLabels[i] = "Npc Spell 10"; break;
+                        case 962: eventLabels[i] = "Npc Spell 11"; break;
+                        case 963: eventLabels[i] = "Npc Spell 12"; break;
+                        case 964: eventLabels[i] = "Npc Spell 13"; break;
+                        case 965: eventLabels[i] = "Npc Spell 14"; break;
+                        case 966: eventLabels[i] = "Npc Spell 16"; break;
+                        case 967: eventLabels[i] = "Npc Spell 17"; break;
+                        case 968: eventLabels[i] = "Npc Spell 18"; break;
+                        case 969: eventLabels[i] = "Npc Spell 19"; break;
+                        case 970: eventLabels[i] = "Npc Spell 20"; break;
+                        case 971: eventLabels[i] = "Npc Spell 21"; break;
+                        case 972: eventLabels[i] = "Npc Spell 22"; break;
+                        case 973: eventLabels[i] = "Npc Spell 23"; break;
+                        case 974: eventLabels[i] = "Npc Spell 24"; break;
+                        case 975: eventLabels[i] = "Npc Spell 25"; break;
+                        case 976: eventLabels[i] = "Npc Spell 26"; break;
+                        case 977: eventLabels[i] = "Npc Spell 27"; break;
+                        case 978: eventLabels[i] = "Freestanding Spell 1"; break;
+                        case 979: eventLabels[i] = "Frogfucius Hint Optional Marrymore"; break;
+                        case 980: eventLabels[i] = "Frogfucius Hint Marrymore Suite"; break;
+                        case 981: eventLabels[i] = "Frogfucius Hint Optional 1"; break;
+                        case 982: eventLabels[i] = "Frogfucius Hint Optional 2"; break;
+                        case 983: eventLabels[i] = "Frogfucius Hint Optional 3"; break;
+                        case 984: eventLabels[i] = "Frogfucius Hint Optional 4"; break;
+                        case 985: eventLabels[i] = "Frogfucius Hint Optional 5"; break;
+                        case 986: eventLabels[i] = "Frogfucius Hint Optional 6"; break;
+                        case 987: eventLabels[i] = "Frogfucius Hint Optional 7"; break;
+                        case 988: eventLabels[i] = "Frogfucius Hint Optional 8"; break;
+                        case 989: eventLabels[i] = "Frogfucius Hint Optional 9"; break;
+                        case 990: eventLabels[i] = "Frogfucius Hint Optional 10"; break;
+                        case 991: eventLabels[i] = "Frogfucius Hint Dialogues"; break;
+                        case 992: eventLabels[i] = "Freestanding Spell 2"; break;
+                        case 993: eventLabels[i] = "Freestanding Spell 3"; break;
+                        case 994: eventLabels[i] = "Freestanding Spell 4"; break;
+                        case 995: eventLabels[i] = "Freestanding Spell 5"; break;
+                        case 996: eventLabels[i] = "Freestanding Spell 6"; break;
+                        case 997: eventLabels[i] = "Freestanding Spell 7"; break;
+                        case 998: eventLabels[i] = "Set Star Hill As Checked"; break;
+                        case 999: eventLabels[i] = "Freestanding Spell 8"; break;
+                        case 1000: eventLabels[i] = "Freestanding Spell 9"; break;
+                        case 1001: eventLabels[i] = "Freestanding Spell 10"; break;
+                        case 1002: eventLabels[i] = "Freestanding Spell 11"; break;
+                        case 1003: eventLabels[i] = "Freestanding Spell 12"; break;
+                        case 1004: eventLabels[i] = "Freestanding Spell 13"; break;
+                        case 1005: eventLabels[i] = "Freestanding Spell 14"; break;
+                        case 1006: eventLabels[i] = "Freestanding Spell 16"; break;
+                        case 1007: eventLabels[i] = "Freestanding Spell 17"; break;
+                        case 1008: eventLabels[i] = "Post Mines Boss Subroutine"; break;
+                        case 1009: eventLabels[i] = "Unknown"; break;
+                        case 1010: eventLabels[i] = "Shyster Subroutine"; break;
+                        case 1011: eventLabels[i] = "Post Mines Boss Check If Won"; break;
+                        case 1012: eventLabels[i] = "Freestanding Spell 18"; break;
+                        case 1013: eventLabels[i] = "Freestanding Spell 19"; break;
+                        case 1014: eventLabels[i] = "Freestanding Spell 20"; break;
+                        case 1015: eventLabels[i] = "Freestanding Spell 21"; break;
+                        case 1016: eventLabels[i] = "Freestanding Spell 22"; break;
+                        case 1017: eventLabels[i] = "Freestanding Spell 23"; break;
+                        case 1018: eventLabels[i] = "Freestanding Spell 24"; break;
+                        case 1019: eventLabels[i] = "Freestanding Spell 25"; break;
+                        case 1020: eventLabels[i] = "Freestanding Spell 26"; break;
+                        case 1021: eventLabels[i] = "Freestanding Spell 27"; break;
+                        case 1022: eventLabels[i] = "Hill River Spell 1"; break;
+                        case 1023: eventLabels[i] = "Hill River Spell 2"; break;
+                        case 1024: eventLabels[i] = "Hill River Spell 3"; break;
+                        case 1025: eventLabels[i] = "Hill River Spell 4"; break;
+                        case 1026: eventLabels[i] = "Hill River Spell 5"; break;
+                        case 1027: eventLabels[i] = "Hill River Spell 6"; break;
+                        case 1028: eventLabels[i] = "Hill River Spell 7"; break;
+                        case 1029: eventLabels[i] = "Hill River Spell 8"; break;
+                        case 1030: eventLabels[i] = "Hill River Spell 9"; break;
+                        case 1031: eventLabels[i] = "Hill River Spell 10"; break;
+                        case 1032: eventLabels[i] = "Hill River Spell 11"; break;
+                        case 1033: eventLabels[i] = "Hill River Spell 12"; break;
+                        case 1034: eventLabels[i] = "Hill River Spell 13"; break;
+                        case 1035: eventLabels[i] = "Hill River Spell 14"; break;
+                        case 1036: eventLabels[i] = "Hill River Spell 16"; break;
+                        case 1037: eventLabels[i] = "Hill River Spell 17"; break;
+                        case 1038: eventLabels[i] = "Hill River Spell 18"; break;
+                        case 1039: eventLabels[i] = "Hill River Spell 19"; break;
+                        case 1040: eventLabels[i] = "Hill River Spell 20"; break;
+                        case 1041: eventLabels[i] = "Hill River Spell 21"; break;
+                        case 1042: eventLabels[i] = "Hill River Spell 22"; break;
+                        case 1043: eventLabels[i] = "Hill River Spell 23"; break;
+                        case 1044: eventLabels[i] = "Hill River Spell 24"; break;
+                        case 1045: eventLabels[i] = "Hill River Spell 25"; break;
+                        case 1046: eventLabels[i] = "Hill River Spell 26"; break;
+                        case 1047: eventLabels[i] = "Hill River Spell 27"; break;
+                        case 1048: eventLabels[i] = "Npc Spell 15"; break;
+                        case 1049: eventLabels[i] = "Freestanding Spell 15"; break;
+                        case 1050: eventLabels[i] = "Hill River Spell 15"; break;
+                        case 1051: eventLabels[i] = "Empty"; break;
+                        case 1052: eventLabels[i] = "Empty"; break;
+                        case 1053: eventLabels[i] = "Empty"; break;
+                        case 1054: eventLabels[i] = "Empty"; break;
+                        case 1055: eventLabels[i] = "Empty"; break;
+                        case 1056: eventLabels[i] = "Empty"; break;
+                        case 1057: eventLabels[i] = "Empty"; break;
+                        case 1058: eventLabels[i] = "Empty"; break;
+                        case 1059: eventLabels[i] = "Empty"; break;
+                        case 1060: eventLabels[i] = "Empty"; break;
+                        case 1061: eventLabels[i] = "Empty"; break;
+                        case 1062: eventLabels[i] = "Empty"; break;
+                        case 1063: eventLabels[i] = "Empty"; break;
+                        case 1064: eventLabels[i] = "Empty"; break;
+                        case 1065: eventLabels[i] = "Empty"; break;
+                        case 1066: eventLabels[i] = "Empty"; break;
+                        case 1067: eventLabels[i] = "Empty"; break;
+                        case 1068: eventLabels[i] = "Empty"; break;
+                        case 1069: eventLabels[i] = "Empty"; break;
+                        case 1070: eventLabels[i] = "Empty"; break;
+                        case 1071: eventLabels[i] = "Begin Melody Bay Tadpoles"; break;
+                        case 1072: eventLabels[i] = "Melody Bay Loader"; break;
+                        case 1073: eventLabels[i] = "Melody Bay Jump On Tadpoles"; break;
+                        case 1074: eventLabels[i] = "Melody Bay Song Judged"; break;
+                        case 1075: eventLabels[i] = "Toadofsky"; break;
+                        case 1076: eventLabels[i] = "Empty"; break;
+                        case 1077: eventLabels[i] = "Empty"; break;
+                        case 1078: eventLabels[i] = "Melody Bay Final Song"; break;
+                        case 1079: eventLabels[i] = "Melody Bay Song 1 Validator"; break;
+                        case 1080: eventLabels[i] = "Melody Bay Song 2 Validator"; break;
+                        case 1081: eventLabels[i] = "Melody Bay Song 3 Validator"; break;
+                        case 1082: eventLabels[i] = "Melody Bay Song 1 Input"; break;
+                        case 1083: eventLabels[i] = "Melody Bay Song 2 Input"; break;
+                        case 1084: eventLabels[i] = "Melody Bay Song 3 Input"; break;
+                        case 1085: eventLabels[i] = "Melody Bay Jump Animation"; break;
+                        case 1086: eventLabels[i] = "Melody Bay Swim Animation"; break;
+                        case 1087: eventLabels[i] = "Melody Bay Exit Water Animation"; break;
+                        case 1088: eventLabels[i] = "Melody Bay Third Song Hint"; break;
+                        case 1089: eventLabels[i] = "Empty"; break;
+                        case 1090: eventLabels[i] = "Empty"; break;
+                        case 1091: eventLabels[i] = "Empty"; break;
+                        case 1092: eventLabels[i] = "Empty"; break;
+                        case 1093: eventLabels[i] = "Empty"; break;
+                        case 1094: eventLabels[i] = "Empty"; break;
+                        case 1095: eventLabels[i] = "Empty"; break;
+                        case 1096: eventLabels[i] = "Empty"; break;
+                        case 1097: eventLabels[i] = "Empty"; break;
+                        case 1098: eventLabels[i] = "Empty"; break;
+                        case 1099: eventLabels[i] = "Empty"; break;
+                        case 1100: eventLabels[i] = "Empty"; break;
+                        case 1101: eventLabels[i] = "Empty"; break;
+                        case 1102: eventLabels[i] = "Empty"; break;
+                        case 1103: eventLabels[i] = "Empty"; break;
+                        case 1104: eventLabels[i] = "Tadpole Pond Loader"; break;
+                        case 1105: eventLabels[i] = "Tadpole Bridge Summon"; break;
+                        case 1106: eventLabels[i] = "Tadpole Bridge Summon"; break;
+                        case 1107: eventLabels[i] = "Tadpole Bridge Jumping"; break;
+                        case 1108: eventLabels[i] = "Frogfucius Scroll"; break;
+                        case 1109: eventLabels[i] = "Empty"; break;
+                        case 1110: eventLabels[i] = "Empty"; break;
+                        case 1111: eventLabels[i] = "Frogfucius"; break;
+                        case 1112: eventLabels[i] = "Frog Coin Emporium"; break;
+                        case 1113: eventLabels[i] = "Song Hint Tadpole"; break;
+                        case 1114: eventLabels[i] = "Summon Tadpole Shops"; break;
+                        case 1115: eventLabels[i] = "Summon Hint Tadpole"; break;
+                        case 1116: eventLabels[i] = "Juice Bar"; break;
+                        case 1117: eventLabels[i] = "Empty"; break;
+                        case 1118: eventLabels[i] = "Empty"; break;
+                        case 1119: eventLabels[i] = "Seaside Occupied Exterior Loader"; break;
+                        case 1120: eventLabels[i] = "Empty"; break;
+                        case 1121: eventLabels[i] = "Seaside Occupied Inn 1F Loader"; break;
+                        case 1122: eventLabels[i] = "Seaside Occupied Inn 2F Loader"; break;
+                        case 1123: eventLabels[i] = "Seaside Occupied Elders House Loader"; break;
+                        case 1124: eventLabels[i] = "Frog Shop Room Loader"; break;
+                        case 1125: eventLabels[i] = "Seaside Occupied Bomb Shop Loader"; break;
+                        case 1126: eventLabels[i] = "Seaside Occupied Armor Shop Loader"; break;
+                        case 1127: eventLabels[i] = "Seaside Occupied Health Store Loader"; break;
+                        case 1128: eventLabels[i] = "Seaside Occupied Mushroom Boy Shop Loader"; break;
+                        case 1129: eventLabels[i] = "Seaside Occupied Accessory Shop Loader"; break;
+                        case 1130: eventLabels[i] = "Empty"; break;
+                        case 1131: eventLabels[i] = "Empty"; break;
+                        case 1132: eventLabels[i] = "Seaside Occupied Innkeeper"; break;
+                        case 1133: eventLabels[i] = "Seaside Occupied Accessory Shop Occupant"; break;
+                        case 1134: eventLabels[i] = "Fake Elder"; break;
+                        case 1135: eventLabels[i] = "Seaside Occupied Mushroom Boy Shop Occupant 1"; break;
+                        case 1136: eventLabels[i] = "Seaside Occupied Mushroom Boy Shop Occupant 2"; break;
+                        case 1137: eventLabels[i] = "Seaside Occupied Health Store Occupant"; break;
+                        case 1138: eventLabels[i] = "Seaside Occupied Wpn Arm Shop Occupant 1"; break;
+                        case 1139: eventLabels[i] = "Seaside Occupied Wpn Arm Shop Occupant 2"; break;
+                        case 1140: eventLabels[i] = "Seaside Occupied Bomb Shop"; break;
+                        case 1141: eventLabels[i] = "Seaside Occupied Bomb Shop Customer"; break;
+                        case 1142: eventLabels[i] = "Seaside Shed Guard 1"; break;
+                        case 1143: eventLabels[i] = "Seaside Shed Guard 2"; break;
+                        case 1144: eventLabels[i] = "Shed Window"; break;
+                        case 1145: eventLabels[i] = "Seaside Occupied Beach Loader"; break;
+                        case 1146: eventLabels[i] = "Seaside Initiate Boss Fight"; break;
+                        case 1147: eventLabels[i] = "Seaside Initiate Boss Fight Animation"; break;
+                        case 1148: eventLabels[i] = "Frog Shop"; break;
+                        case 1149: eventLabels[i] = "Empty"; break;
+                        case 1150: eventLabels[i] = "Empty"; break;
+                        case 1151: eventLabels[i] = "Empty"; break;
+                        case 1152: eventLabels[i] = "Empty"; break;
+                        case 1153: eventLabels[i] = "Seaside Liberated Inn 1F Loader"; break;
+                        case 1154: eventLabels[i] = "Empty"; break;
+                        case 1155: eventLabels[i] = "Seaside Liberated Elders House Loader"; break;
+                        case 1156: eventLabels[i] = "Empty"; break;
+                        case 1157: eventLabels[i] = "Empty"; break;
+                        case 1158: eventLabels[i] = "Seaside Liberated Wpn Arm Shop Loader"; break;
+                        case 1159: eventLabels[i] = "Seaside Liberated Health Store Loader"; break;
+                        case 1160: eventLabels[i] = "Seaside Liberated Mushroom Boy Loader"; break;
+                        case 1161: eventLabels[i] = "Seaside Liberated Accessory Shop Loader"; break;
+                        case 1162: eventLabels[i] = "Seaside Liberated Shed Loader"; break;
+                        case 1163: eventLabels[i] = "Seaside Liberated Beach"; break;
+                        case 1164: eventLabels[i] = "Empty"; break;
+                        case 1165: eventLabels[i] = "Seaside Liberated Beach Letter"; break;
+                        case 1166: eventLabels[i] = "Shed Key Door"; break;
+                        case 1167: eventLabels[i] = "Seaside Elder"; break;
+                        case 1168: eventLabels[i] = "Seaside Liberated Innkeeper"; break;
+                        case 1169: eventLabels[i] = "Open Lands End If Gated By Elder"; break;
+                        case 1170: eventLabels[i] = "Seaside Health Food Shop"; break;
+                        case 1171: eventLabels[i] = "Seaside Accessory Shop"; break;
+                        case 1172: eventLabels[i] = "Mushroom Boy"; break;
+                        case 1173: eventLabels[i] = "Seaside Weapon Shop"; break;
+                        case 1174: eventLabels[i] = "Seaside Armor Shop"; break;
+                        case 1175: eventLabels[i] = "Empty"; break;
+                        case 1176: eventLabels[i] = "Empty"; break;
+                        case 1177: eventLabels[i] = "Empty"; break;
+                        case 1178: eventLabels[i] = "Seaside Grant Shed Item"; break;
+                        case 1179: eventLabels[i] = "Juice Bar No Card"; break;
+                        case 1180: eventLabels[i] = "Juice Bar Alto Card"; break;
+                        case 1181: eventLabels[i] = "Juice Bar Tenor Card"; break;
+                        case 1182: eventLabels[i] = "Juice Bar Soprano Card"; break;
+                        case 1183: eventLabels[i] = "Volcano Item Shop"; break;
+                        case 1184: eventLabels[i] = "Volcano Armor Shop"; break;
+                        case 1185: eventLabels[i] = "Toad Shop"; break;
+                        case 1186: eventLabels[i] = "Henchman Battle Pack Selector"; break;
+                        case 1187: eventLabels[i] = "Henchman Battle Pack Selector"; break;
+                        case 1188: eventLabels[i] = "Henchman Battle Pack Selector"; break;
+                        case 1189: eventLabels[i] = "Henchman Battle Pack Selector"; break;
+                        case 1190: eventLabels[i] = "Henchman Battle Pack Selector"; break;
+                        case 1191: eventLabels[i] = "Ending Credits Cliff Shuffled Npc Animation Loader"; break;
+                        case 1192: eventLabels[i] = "Ending Credits Keep Shuffled Npc Animation Loader"; break;
+                        case 1193: eventLabels[i] = "Ending Credits Yoster Shuffled Npc Animation Loader"; break;
+                        case 1194: eventLabels[i] = "Mushroom Way Boss Unlocks"; break;
+                        case 1195: eventLabels[i] = "Bandits Way Boss Unlocks"; break;
+                        case 1196: eventLabels[i] = "Mushroom Kingdom Boss Unlocks"; break;
+                        case 1197: eventLabels[i] = "Kero Sewer Boss Unlocks"; break;
+                        case 1198: eventLabels[i] = "Forest Maze Boss Unlocks"; break;
+                        case 1199: eventLabels[i] = "Outer Mnes Boss Unlocks"; break;
+                        case 1200: eventLabels[i] = "Inner Mines Boss Unlocks"; break;
+                        case 1201: eventLabels[i] = "Tower Curtain Boss Unlocks"; break;
+                        case 1202: eventLabels[i] = "Postgame Tower Curtain Boss Unlocks"; break;
+                        case 1203: eventLabels[i] = "Tower Balcony Boss Unlocks"; break;
+                        case 1204: eventLabels[i] = "Chapel Boss Unlocks"; break;
+                        case 1205: eventLabels[i] = "Postgame Chapel Boss Unlocks"; break;
+                        case 1206: eventLabels[i] = "Seaside Boss Unlocks"; break;
+                        case 1207: eventLabels[i] = "Ship Mid Boss Unlocks"; break;
+                        case 1208: eventLabels[i] = "Ship End Boss Unlocks"; break;
+                        case 1209: eventLabels[i] = "Postgame Ship End Boss Unlocks"; break;
+                        case 1210: eventLabels[i] = "Cloud Boss Unlocks"; break;
+                        case 1211: eventLabels[i] = "Temple Boss Unlocks"; break;
+                        case 1212: eventLabels[i] = "Postgame Temple Boss Unlocks"; break;
+                        case 1213: eventLabels[i] = "Dojo 1 Boss Unlocks"; break;
+                        case 1214: eventLabels[i] = "Dojo 2 Boss Unlocks"; break;
+                        case 1215: eventLabels[i] = "Dojo 3 Boss Unlocks"; break;
+                        case 1216: eventLabels[i] = "Dojo 4 Boss Unlocks"; break;
+                        case 1217: eventLabels[i] = "Dojo 5 Boss Unlocks"; break;
+                        case 1218: eventLabels[i] = "Monstro Sealed Boss Unlocks"; break;
+                        case 1219: eventLabels[i] = "Postgame Monstro Sealed Boss Unlocks"; break;
+                        case 1220: eventLabels[i] = "Starting Character 1"; break;
+                        case 1221: eventLabels[i] = "Starting Character 2"; break;
+                        case 1222: eventLabels[i] = "Starting Character 3"; break;
+                        case 1223: eventLabels[i] = "Starting Character 4"; break;
+                        case 1224: eventLabels[i] = "Starting Character 5"; break;
+                        case 1225: eventLabels[i] = "Mushroom Way Character"; break;
+                        case 1226: eventLabels[i] = "Forest Maze Character"; break;
+                        case 1227: eventLabels[i] = "Moleville Character"; break;
+                        case 1228: eventLabels[i] = "Marrymore Character"; break;
+                        case 1229: eventLabels[i] = "Bean Valley Boss Unlocks"; break;
+                        case 1230: eventLabels[i] = "Statue Boss Unlocks"; break;
+                        case 1231: eventLabels[i] = "Egg Boss Unlocks"; break;
+                        case 1232: eventLabels[i] = "Nimbus Boss Unlocks"; break;
+                        case 1233: eventLabels[i] = "Volcano Mid Boss Unlocks"; break;
+                        case 1234: eventLabels[i] = "Volcano Boss Unlocks"; break;
+                        case 1235: eventLabels[i] = "Obstacle Course Boss Unlocks"; break;
+                        case 1236: eventLabels[i] = "Keep 1 Boss Unlocks"; break;
+                        case 1237: eventLabels[i] = "Keep Chandelier Boss Unlocks"; break;
+                        case 1238: eventLabels[i] = "Keep Exit Boss Unlocks"; break;
+                        case 1239: eventLabels[i] = "Outer Factory 1 Boss Unlocks"; break;
+                        case 1240: eventLabels[i] = "Outer Factory 2 Boss Unlocks"; break;
+                        case 1241: eventLabels[i] = "Inner Factory 1 Boss Unlocks"; break;
+                        case 1242: eventLabels[i] = "Inner Factory 2 Boss Unlocks"; break;
+                        case 1243: eventLabels[i] = "Inner Factory 3 Boss Unlocks"; break;
+                        case 1244: eventLabels[i] = "Inner Factory 4 Boss Unlocks"; break;
+                        case 1245: eventLabels[i] = "Inner Factory 5 Boss Unlocks"; break;
+                        case 1246: eventLabels[i] = "Invisible Grant 1"; break;
+                        case 1247: eventLabels[i] = "Invisible Grant 2"; break;
+                        case 1248: eventLabels[i] = "Invisible Grant 3"; break;
+                        case 1249: eventLabels[i] = "Mimic 1 Boss Unlocks"; break;
+                        case 1250: eventLabels[i] = "Mimic 2 Boss Unlocks"; break;
+                        case 1251: eventLabels[i] = "Mimic 3 Boss Unlocks"; break;
+                        case 1252: eventLabels[i] = "Flag Specific Housekeeping Game Start"; break;
+                        case 1253: eventLabels[i] = "Postgame Mines Boss Unlocks"; break;
+                        case 1254: eventLabels[i] = "Unlock Sewer By Rfc"; break;
+                        case 1255: eventLabels[i] = "Unlock Forest By Pie"; break;
+                        case 1256: eventLabels[i] = "Unlock Moleville If Gated By Boshi"; break;
+                        case 1257: eventLabels[i] = "Empty"; break;
+                        case 1258: eventLabels[i] = "Empty"; break;
+                        case 1259: eventLabels[i] = "Empty"; break;
+                        case 1260: eventLabels[i] = "Empty"; break;
+                        case 1261: eventLabels[i] = "Empty"; break;
+                        case 1262: eventLabels[i] = "Empty"; break;
+                        case 1263: eventLabels[i] = "Empty"; break;
+                        case 1264: eventLabels[i] = "Empty"; break;
+                        case 1265: eventLabels[i] = "Empty"; break;
+                        case 1266: eventLabels[i] = "Empty"; break;
+                        case 1267: eventLabels[i] = "Empty"; break;
+                        case 1268: eventLabels[i] = "Empty"; break;
+                        case 1269: eventLabels[i] = "Empty"; break;
+                        case 1270: eventLabels[i] = "Empty"; break;
+                        case 1271: eventLabels[i] = "Empty"; break;
+                        case 1272: eventLabels[i] = "Empty"; break;
+                        case 1273: eventLabels[i] = "Empty"; break;
+                        case 1274: eventLabels[i] = "Ship Boss Room Rightmost Henchman"; break;
+                        case 1275: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Henchman"; break;
+                        case 1276: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Henchman"; break;
+                        case 1277: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Henchman"; break;
+                        case 1278: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Henchman"; break;
+                        case 1279: eventLabels[i] = "Empty"; break;
+                        case 1280: eventLabels[i] = "Empty"; break;
+                        case 1281: eventLabels[i] = "Empty"; break;
+                        case 1282: eventLabels[i] = "Tower Balcony Loader After Marrymore"; break;
+                        case 1283: eventLabels[i] = "Tower Balcony Loader Before Marrymore"; break;
+                        case 1284: eventLabels[i] = "Empty"; break;
+                        case 1285: eventLabels[i] = "Empty"; break;
+                        case 1286: eventLabels[i] = "Empty"; break;
+                        case 1287: eventLabels[i] = "Empty"; break;
+                        case 1288: eventLabels[i] = "Empty"; break;
+                        case 1289: eventLabels[i] = "Empty"; break;
+                        case 1290: eventLabels[i] = "Empty"; break;
+                        case 1291: eventLabels[i] = "Empty"; break;
+                        case 1292: eventLabels[i] = "Empty"; break;
+                        case 1293: eventLabels[i] = "Collect Freestanding Small Coin"; break;
+                        case 1294: eventLabels[i] = "Collect Freestanding Small Frog Coin"; break;
+                        case 1295: eventLabels[i] = "Tower Checkerboard Room Loader"; break;
+                        case 1296: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1297: eventLabels[i] = "Empty"; break;
+                        case 1298: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1299: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1300: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1301: eventLabels[i] = "Empty"; break;
+                        case 1302: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1303: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1304: eventLabels[i] = "Empty"; break;
+                        case 1305: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1306: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1307: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1308: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1309: eventLabels[i] = "Empty"; break;
+                        case 1310: eventLabels[i] = "Tower Checkerboard Collect Key Item"; break;
+                        case 1311: eventLabels[i] = "Tower Checkerboard Locked Door"; break;
+                        case 1312: eventLabels[i] = "Tower Lobby Loader"; break;
+                        case 1313: eventLabels[i] = "Empty"; break;
+                        case 1314: eventLabels[i] = "Tower Boss 1 Hides Behind Doorway In Lobby 1"; break;
+                        case 1315: eventLabels[i] = "Tower Boss 1 Hides Behind Doorway In Lobby 2"; break;
+                        case 1316: eventLabels[i] = "Lobby Portrait 1"; break;
+                        case 1317: eventLabels[i] = "Lobby Portrait 2"; break;
+                        case 1318: eventLabels[i] = "Lobby Portrait 3"; break;
+                        case 1319: eventLabels[i] = "Lobby Portrait 4"; break;
+                        case 1320: eventLabels[i] = "Lobby Portrait 5"; break;
+                        case 1321: eventLabels[i] = "Lobby Portrait 6"; break;
+                        case 1322: eventLabels[i] = "Nimbus 5 Door Chest Liberated"; break;
+                        case 1323: eventLabels[i] = "Tower Lobby Henchman"; break;
+                        case 1324: eventLabels[i] = "Empty"; break;
+                        case 1325: eventLabels[i] = "Empty"; break;
+                        case 1326: eventLabels[i] = "Empty"; break;
+                        case 1327: eventLabels[i] = "Empty"; break;
+                        case 1328: eventLabels[i] = "Tower Exterior Loader"; break;
+                        case 1329: eventLabels[i] = "Hill Unlocks"; break;
+                        case 1330: eventLabels[i] = "Tower Exterior Door"; break;
+                        case 1331: eventLabels[i] = "Tower Break Down Door"; break;
+                        case 1332: eventLabels[i] = "Portrait Game 1"; break;
+                        case 1333: eventLabels[i] = "Portrait Game 2"; break;
+                        case 1334: eventLabels[i] = "Portrait Game 3"; break;
+                        case 1335: eventLabels[i] = "Portrait Game 4"; break;
+                        case 1336: eventLabels[i] = "Portrait Game 5"; break;
+                        case 1337: eventLabels[i] = "Portrait Game 6"; break;
+                        case 1338: eventLabels[i] = "Portrait Game Incorrect"; break;
+                        case 1339: eventLabels[i] = "Portrait Game Room Loader"; break;
+                        case 1340: eventLabels[i] = "Portrait Game Room Locked Door"; break;
+                        case 1341: eventLabels[i] = "Elder Key Prize Room Loader"; break;
+                        case 1342: eventLabels[i] = "Elder Key Prize Granter"; break;
+                        case 1343: eventLabels[i] = "Portrait Game Instructions"; break;
+                        case 1344: eventLabels[i] = "Tower Henchman 2 Room Loader"; break;
+                        case 1345: eventLabels[i] = "Empty"; break;
+                        case 1346: eventLabels[i] = "Tower Henchman 2"; break;
+                        case 1347: eventLabels[i] = "Tower Henchman 2 Room Hidden Item"; break;
+                        case 1348: eventLabels[i] = "Empty"; break;
+                        case 1349: eventLabels[i] = "Empty"; break;
+                        case 1350: eventLabels[i] = "Empty"; break;
+                        case 1351: eventLabels[i] = "Empty"; break;
+                        case 1352: eventLabels[i] = "Empty"; break;
+                        case 1353: eventLabels[i] = "Tower Checkerboard Room Locked Door"; break;
+                        case 1354: eventLabels[i] = "Empty"; break;
+                        case 1355: eventLabels[i] = "Empty"; break;
+                        case 1356: eventLabels[i] = "Empty"; break;
+                        case 1357: eventLabels[i] = "Empty"; break;
+                        case 1358: eventLabels[i] = "Curtain Game Begins Npcs Walk Into Room"; break;
+                        case 1359: eventLabels[i] = "Curtain Game Room Loader"; break;
+                        case 1360: eventLabels[i] = "Curtain 1"; break;
+                        case 1361: eventLabels[i] = "Curtain 2"; break;
+                        case 1362: eventLabels[i] = "Curtain 3"; break;
+                        case 1363: eventLabels[i] = "Curtain 4"; break;
+                        case 1364: eventLabels[i] = "Curtain Room Exit To Balcony"; break;
+                        case 1365: eventLabels[i] = "Curtain Game Business Logic 1"; break;
+                        case 1366: eventLabels[i] = "Curtain Game Business Logic 2"; break;
+                        case 1367: eventLabels[i] = "Curtain Game Success 1"; break;
+                        case 1368: eventLabels[i] = "Curtain Game Success 2"; break;
+                        case 1369: eventLabels[i] = "Curtain Game Success Failure Fight Boss"; break;
+                        case 1370: eventLabels[i] = "Curtain Game Success Failure General"; break;
+                        case 1371: eventLabels[i] = "Unlock Marrymore If Gated By Tower Balcony Fight"; break;
+                        case 1372: eventLabels[i] = "Toad Voucher Grant"; break;
+                        case 1373: eventLabels[i] = "Empty"; break;
+                        case 1374: eventLabels[i] = "Empty"; break;
+                        case 1375: eventLabels[i] = "Empty"; break;
+                        case 1376: eventLabels[i] = "Empty"; break;
+                        case 1377: eventLabels[i] = "Empty"; break;
+                        case 1378: eventLabels[i] = "Empty"; break;
+                        case 1379: eventLabels[i] = "Empty"; break;
+                        case 1380: eventLabels[i] = "Empty"; break;
+                        case 1381: eventLabels[i] = "Empty"; break;
+                        case 1382: eventLabels[i] = "Empty"; break;
+                        case 1383: eventLabels[i] = "Empty"; break;
+                        case 1384: eventLabels[i] = "Empty"; break;
+                        case 1385: eventLabels[i] = "Vista Hill Loader"; break;
+                        case 1386: eventLabels[i] = "Vista Hill Loader Continued"; break;
+                        case 1387: eventLabels[i] = "Empty"; break;
+                        case 1388: eventLabels[i] = "Empty"; break;
+                        case 1389: eventLabels[i] = "Empty"; break;
+                        case 1390: eventLabels[i] = "Empty"; break;
+                        case 1391: eventLabels[i] = "Empty"; break;
+                        case 1392: eventLabels[i] = "Marios House Interior Loader"; break;
+                        case 1393: eventLabels[i] = "Empty"; break;
+                        case 1394: eventLabels[i] = "Four Digit Coin Value Handler"; break;
+                        case 1395: eventLabels[i] = "Marios House Lamp"; break;
+                        case 1396: eventLabels[i] = "Empty"; break;
+                        case 1397: eventLabels[i] = "Empty"; break;
+                        case 1398: eventLabels[i] = "Empty"; break;
+                        case 1399: eventLabels[i] = "Empty"; break;
+                        case 1400: eventLabels[i] = "Empty"; break;
+                        case 1401: eventLabels[i] = "Empty"; break;
+                        case 1402: eventLabels[i] = "Empty"; break;
+                        case 1403: eventLabels[i] = "Empty"; break;
+                        case 1404: eventLabels[i] = "Empty"; break;
+                        case 1405: eventLabels[i] = "Empty"; break;
+                        case 1406: eventLabels[i] = "Marios Pad Open Door"; break;
+                        case 1407: eventLabels[i] = "Marios Pad Close Door"; break;
+                        case 1408: eventLabels[i] = "Marios Pad Exterior Loader"; break;
+                        case 1409: eventLabels[i] = "Empty"; break;
+                        case 1410: eventLabels[i] = "Empty"; break;
+                        case 1411: eventLabels[i] = "Empty"; break;
+                        case 1412: eventLabels[i] = "Empty"; break;
+                        case 1413: eventLabels[i] = "Empty"; break;
+                        case 1414: eventLabels[i] = "Empty"; break;
+                        case 1415: eventLabels[i] = "Empty"; break;
+                        case 1416: eventLabels[i] = "Empty"; break;
+                        case 1417: eventLabels[i] = "Empty"; break;
+                        case 1418: eventLabels[i] = "Empty"; break;
+                        case 1419: eventLabels[i] = "Mushroom Way 1 Exit To World Map"; break;
+                        case 1420: eventLabels[i] = "Empty"; break;
+                        case 1421: eventLabels[i] = "Empty"; break;
+                        case 1422: eventLabels[i] = "Rescue Toad Mushroom Way 2"; break;
+                        case 1423: eventLabels[i] = "Mushroom Way 2 Loader"; break;
+                        case 1424: eventLabels[i] = "Mushroom Way 2 Lone Troopa"; break;
+                        case 1425: eventLabels[i] = "Summon Left Goomba In Mushroom Way 2"; break;
+                        case 1426: eventLabels[i] = "Summon Right Goomba In Mushroom Way 2"; break;
+                        case 1427: eventLabels[i] = "Mushroom Way 1 Loader"; break;
+                        case 1428: eventLabels[i] = "Rescue Toad Mushroom Way 1"; break;
+                        case 1429: eventLabels[i] = "Summon Jumping Goomba Mushroom Way 2"; break;
+                        case 1430: eventLabels[i] = "Mushroom Way 2 Spinning Flower"; break;
+                        case 1431: eventLabels[i] = "Summon Middle Goomba In Mushroom Way 2"; break;
+                        case 1432: eventLabels[i] = "Rescue Toad Extended"; break;
+                        case 1433: eventLabels[i] = "Clone Reserved"; break;
+                        case 1434: eventLabels[i] = "Clone Reserved"; break;
+                        case 1435: eventLabels[i] = "Clone Reserved"; break;
+                        case 1436: eventLabels[i] = "Clone Reserved"; break;
+                        case 1437: eventLabels[i] = "Clone Reserved"; break;
+                        case 1438: eventLabels[i] = "Clone Reserved"; break;
+                        case 1439: eventLabels[i] = "Clone Reserved"; break;
+                        case 1440: eventLabels[i] = "Clone Reserved"; break;
+                        case 1441: eventLabels[i] = "Clone Reserved"; break;
+                        case 1442: eventLabels[i] = "Clone Reserved"; break;
+                        case 1443: eventLabels[i] = "Clone Reserved"; break;
+                        case 1444: eventLabels[i] = "Clone Reserved"; break;
+                        case 1445: eventLabels[i] = "Clone Reserved"; break;
+                        case 1446: eventLabels[i] = "Clone Reserved"; break;
+                        case 1447: eventLabels[i] = "Clone Reserved"; break;
+                        case 1448: eventLabels[i] = "Clone Reserved"; break;
+                        case 1449: eventLabels[i] = "Clone Reserved"; break;
+                        case 1450: eventLabels[i] = "Clone Reserved"; break;
+                        case 1451: eventLabels[i] = "Clone Reserved"; break;
+                        case 1452: eventLabels[i] = "Clone Reserved"; break;
+                        case 1453: eventLabels[i] = "Clone Reserved"; break;
+                        case 1454: eventLabels[i] = "Clone Reserved"; break;
+                        case 1455: eventLabels[i] = "Clone Reserved"; break;
+                        case 1456: eventLabels[i] = "Clone Reserved"; break;
+                        case 1457: eventLabels[i] = "Clone Reserved"; break;
+                        case 1458: eventLabels[i] = "Clone Reserved"; break;
+                        case 1459: eventLabels[i] = "Clone Reserved"; break;
+                        case 1460: eventLabels[i] = "Clone Reserved"; break;
+                        case 1461: eventLabels[i] = "Clone Reserved"; break;
+                        case 1462: eventLabels[i] = "Clone Reserved"; break;
+                        case 1463: eventLabels[i] = "Clone Reserved"; break;
+                        case 1464: eventLabels[i] = "Clone Reserved"; break;
+                        case 1465: eventLabels[i] = "Clone Reserved"; break;
+                        case 1466: eventLabels[i] = "Clone Reserved"; break;
+                        case 1467: eventLabels[i] = "Clone Reserved"; break;
+                        case 1468: eventLabels[i] = "Clone Reserved"; break;
+                        case 1469: eventLabels[i] = "Clone Reserved"; break;
+                        case 1470: eventLabels[i] = "Clone Reserved"; break;
+                        case 1471: eventLabels[i] = "Clone Reserved"; break;
+                        case 1472: eventLabels[i] = "Clone Reserved"; break;
+                        case 1473: eventLabels[i] = "Clone Reserved"; break;
+                        case 1474: eventLabels[i] = "Clone Reserved"; break;
+                        case 1475: eventLabels[i] = "Clone Reserved"; break;
+                        case 1476: eventLabels[i] = "Clone Reserved"; break;
+                        case 1477: eventLabels[i] = "Clone Reserved"; break;
+                        case 1478: eventLabels[i] = "Clone Reserved"; break;
+                        case 1479: eventLabels[i] = "Clone Reserved"; break;
+                        case 1480: eventLabels[i] = "Clone Reserved"; break;
+                        case 1481: eventLabels[i] = "Clone Reserved"; break;
+                        case 1482: eventLabels[i] = "Clone Reserved"; break;
+                        case 1483: eventLabels[i] = "Clone Reserved"; break;
+                        case 1484: eventLabels[i] = "Clone Reserved"; break;
+                        case 1485: eventLabels[i] = "Clone Reserved"; break;
+                        case 1486: eventLabels[i] = "Clone Reserved"; break;
+                        case 1487: eventLabels[i] = "Clone Reserved"; break;
+                        case 1488: eventLabels[i] = "Clone Reserved"; break;
+                        case 1489: eventLabels[i] = "Clone Reserved"; break;
+                        case 1490: eventLabels[i] = "Clone Reserved"; break;
+                        case 1491: eventLabels[i] = "Clone Reserved"; break;
+                        case 1492: eventLabels[i] = "Clone Reserved"; break;
+                        case 1493: eventLabels[i] = "Clone Reserved"; break;
+                        case 1494: eventLabels[i] = "Clone Reserved"; break;
+                        case 1495: eventLabels[i] = "Clone Reserved"; break;
+                        case 1496: eventLabels[i] = "Clone Reserved"; break;
+                        case 1497: eventLabels[i] = "Clone Reserved"; break;
+                        case 1498: eventLabels[i] = "Clone Reserved"; break;
+                        case 1499: eventLabels[i] = "Clone Reserved"; break;
+                        case 1500: eventLabels[i] = "Clone Reserved"; break;
+                        case 1501: eventLabels[i] = "Clone Reserved"; break;
+                        case 1502: eventLabels[i] = "Clone Reserved"; break;
+                        case 1503: eventLabels[i] = "Clone Reserved"; break;
+                        case 1504: eventLabels[i] = "Clone Reserved"; break;
+                        case 1505: eventLabels[i] = "Clone Reserved"; break;
+                        case 1506: eventLabels[i] = "Clone Reserved"; break;
+                        case 1507: eventLabels[i] = "Clone Reserved"; break;
+                        case 1508: eventLabels[i] = "Clone Reserved"; break;
+                        case 1509: eventLabels[i] = "Clone Reserved"; break;
+                        case 1510: eventLabels[i] = "Clone Reserved"; break;
+                        case 1511: eventLabels[i] = "Clone Reserved"; break;
+                        case 1512: eventLabels[i] = "Clone Reserved"; break;
+                        case 1513: eventLabels[i] = "Clone Reserved"; break;
+                        case 1514: eventLabels[i] = "Clone Reserved"; break;
+                        case 1515: eventLabels[i] = "Clone Reserved"; break;
+                        case 1516: eventLabels[i] = "Clone Reserved"; break;
+                        case 1517: eventLabels[i] = "Clone Reserved"; break;
+                        case 1518: eventLabels[i] = "Clone Reserved"; break;
+                        case 1519: eventLabels[i] = "Clone Reserved"; break;
+                        case 1520: eventLabels[i] = "Clone Reserved"; break;
+                        case 1521: eventLabels[i] = "Clone Reserved"; break;
+                        case 1522: eventLabels[i] = "Clone Reserved"; break;
+                        case 1523: eventLabels[i] = "Clone Reserved"; break;
+                        case 1524: eventLabels[i] = "Clone Reserved"; break;
+                        case 1525: eventLabels[i] = "Clone Reserved"; break;
+                        case 1526: eventLabels[i] = "Clone Reserved"; break;
+                        case 1527: eventLabels[i] = "Clone Reserved"; break;
+                        case 1528: eventLabels[i] = "Clone Reserved"; break;
+                        case 1529: eventLabels[i] = "Clone Reserved"; break;
+                        case 1530: eventLabels[i] = "Clone Reserved"; break;
+                        case 1531: eventLabels[i] = "Clone Reserved"; break;
+                        case 1532: eventLabels[i] = "Clone Reserved"; break;
+                        case 1533: eventLabels[i] = "Clone Reserved"; break;
+                        case 1534: eventLabels[i] = "Clone Reserved"; break;
+                        case 1535: eventLabels[i] = "Clone Reserved"; break;
+                        case 1536: eventLabels[i] = "Empty"; break;
+                        case 1537: eventLabels[i] = "Spinning Flower Core Logic"; break;
+                        case 1538: eventLabels[i] = "Bandits Way Star Chest Camera And Dogs"; break;
+                        case 1539: eventLabels[i] = "Empty"; break;
+                        case 1540: eventLabels[i] = "Unknown"; break;
+                        case 1541: eventLabels[i] = "Unknown"; break;
+                        case 1542: eventLabels[i] = "Forest Maze Pipe"; break;
+                        case 1543: eventLabels[i] = "Chest Camera Shift"; break;
+                        case 1544: eventLabels[i] = "Sand Whirlpool"; break;
+                        case 1545: eventLabels[i] = "Sand Whirlpool"; break;
+                        case 1546: eventLabels[i] = "Lands End First Two Chests"; break;
+                        case 1547: eventLabels[i] = "Lands End Third Chest"; break;
+                        case 1548: eventLabels[i] = "Empty"; break;
+                        case 1549: eventLabels[i] = "Sky Bridge Donut Lift"; break;
+                        case 1550: eventLabels[i] = "Clear Bucket Warp Bit"; break;
+                        case 1551: eventLabels[i] = "Bank 1F Return Event"; break;
+                        case 1552: eventLabels[i] = "Forest Tree Trunk Area Loader"; break;
+                        case 1553: eventLabels[i] = "Forest Tree Trunk Area Loader Contd"; break;
+                        case 1554: eventLabels[i] = "Forest First Wiggler Room Loader"; break;
+                        case 1555: eventLabels[i] = "Forest First Wiggler Room Loader Contd"; break;
+                        case 1556: eventLabels[i] = "Wiggler Jump"; break;
+                        case 1557: eventLabels[i] = "Forest Maze Past Trunk Area Room Loader"; break;
+                        case 1558: eventLabels[i] = "Lands End Spinny Flower 1"; break;
+                        case 1559: eventLabels[i] = "Lands End Spinny Flower 2"; break;
+                        case 1560: eventLabels[i] = "Lands End Spinny Flower 3"; break;
+                        case 1561: eventLabels[i] = "Lands End Geckit Cannon Room Loader"; break;
+                        case 1562: eventLabels[i] = "Lands End Cannon"; break;
+                        case 1563: eventLabels[i] = "Lands End Mario Oob"; break;
+                        case 1564: eventLabels[i] = "Lands End Cannon Contd"; break;
+                        case 1565: eventLabels[i] = "Empty"; break;
+                        case 1566: eventLabels[i] = "Lands End Dog Pit"; break;
+                        case 1567: eventLabels[i] = "Lands End 2 Loader"; break;
+                        case 1568: eventLabels[i] = "Midas River Begin Barrel Section"; break;
+                        case 1569: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1570: eventLabels[i] = "Midas River Fish"; break;
+                        case 1571: eventLabels[i] = "Midas River Barrel Section Business Logic"; break;
+                        case 1572: eventLabels[i] = "Midas River Coin"; break;
+                        case 1573: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1574: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1575: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1576: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1577: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1578: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1579: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1580: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1581: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1582: eventLabels[i] = "Lands End Trampoline To Sewer"; break;
+                        case 1583: eventLabels[i] = "Lands End Underground Trampoline To Desert"; break;
+                        case 1584: eventLabels[i] = "Temple Final Room Loader"; break;
+                        case 1585: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1586: eventLabels[i] = "Midas River Barrel Fish Movement"; break;
+                        case 1587: eventLabels[i] = "Bandits Way 4 Right Chest"; break;
+                        case 1588: eventLabels[i] = "Lands End Grotto Chest"; break;
+                        case 1589: eventLabels[i] = "Lands End Grotto Trampoline To Surface"; break;
+                        case 1590: eventLabels[i] = "Sewer Pipe To Lands End Subroutine"; break;
+                        case 1591: eventLabels[i] = "Lands End Grotto Barrel Kick"; break;
+                        case 1592: eventLabels[i] = "Belome Statue"; break;
+                        case 1593: eventLabels[i] = "Empty"; break;
+                        case 1594: eventLabels[i] = "Empty"; break;
+                        case 1595: eventLabels[i] = "Empty"; break;
+                        case 1596: eventLabels[i] = "Empty"; break;
+                        case 1597: eventLabels[i] = "Empty"; break;
+                        case 1598: eventLabels[i] = "Empty"; break;
+                        case 1599: eventLabels[i] = "Empty"; break;
+                        case 1600: eventLabels[i] = "Empty"; break;
+                        case 1601: eventLabels[i] = "Lands End 1St Room Exit To World Map"; break;
+                        case 1602: eventLabels[i] = "Exp Star Subroutine Cancel Npc Event Do Not Remove From Level"; break;
+                        case 1603: eventLabels[i] = "Exp Star Subroutine Cancel Tile Event"; break;
+                        case 1604: eventLabels[i] = "Exp Star Subroutine Cancel Npc Event Remove From Level"; break;
+                        case 1605: eventLabels[i] = "Tower Exterior Cancel Exp Star"; break;
+                        case 1606: eventLabels[i] = "Empty"; break;
+                        case 1607: eventLabels[i] = "Empty"; break;
+                        case 1608: eventLabels[i] = "Empty"; break;
+                        case 1609: eventLabels[i] = "Empty"; break;
+                        case 1610: eventLabels[i] = "Empty"; break;
+                        case 1611: eventLabels[i] = "Empty"; break;
+                        case 1612: eventLabels[i] = "Summon Geckits In Cannon Room"; break;
+                        case 1613: eventLabels[i] = "Empty"; break;
+                        case 1614: eventLabels[i] = "Moleville Swap Shop Loader"; break;
+                        case 1615: eventLabels[i] = "Moleville Swap Shop Tutorial"; break;
+                        case 1616: eventLabels[i] = "Moleville Inn Loader"; break;
+                        case 1617: eventLabels[i] = "Moleville Occupied Pa Mole In House"; break;
+                        case 1618: eventLabels[i] = "Empty"; break;
+                        case 1619: eventLabels[i] = "Occupied Moleville Exterior Npc Trigger Cutscene"; break;
+                        case 1620: eventLabels[i] = "Occupied Moleville Exterior Npc At Mtn Base"; break;
+                        case 1621: eventLabels[i] = "Occupied Moleville Exterior Npc At Mtn Top"; break;
+                        case 1622: eventLabels[i] = "Bucket Warp"; break;
+                        case 1623: eventLabels[i] = "Belome Fortune Brick"; break;
+                        case 1624: eventLabels[i] = "Moleville Shop"; break;
+                        case 1625: eventLabels[i] = "Moleville Tower Unlock Condition Hint"; break;
+                        case 1626: eventLabels[i] = "Moleville Carbo Cookie Trader"; break;
+                        case 1627: eventLabels[i] = "Dyna House Loader"; break;
+                        case 1628: eventLabels[i] = "Moleville Inn Girl"; break;
+                        case 1629: eventLabels[i] = "Ma Mole"; break;
+                        case 1630: eventLabels[i] = "Moleville Liberated Pa Mole In House"; break;
+                        case 1631: eventLabels[i] = "Dyna In House"; break;
+                        case 1632: eventLabels[i] = "Moleville Minecart Freeplay Ending Landing"; break;
+                        case 1633: eventLabels[i] = "Moleville Inn"; break;
+                        case 1634: eventLabels[i] = "Fireworks House Left Girl"; break;
+                        case 1635: eventLabels[i] = "Fireworks House Right Girl"; break;
+                        case 1636: eventLabels[i] = "Moleville Swap Shop Logic"; break;
+                        case 1637: eventLabels[i] = "Moleville Swap Shop Girl"; break;
+                        case 1638: eventLabels[i] = "Moleville Liberated Npc At Mtn Base 1"; break;
+                        case 1639: eventLabels[i] = "Moleville Liberated Npc At Mtn Base 2"; break;
+                        case 1640: eventLabels[i] = "Initiate Minecart Freeplay"; break;
+                        case 1641: eventLabels[i] = "Tells You Minecart Pb"; break;
+                        case 1642: eventLabels[i] = "Booster Pass Secret Hint Guy"; break;
+                        case 1643: eventLabels[i] = "Purtend Store"; break;
+                        case 1644: eventLabels[i] = "Moleville Occupied Exterior Loader"; break;
+                        case 1645: eventLabels[i] = "Bucket Girl"; break;
+                        case 1646: eventLabels[i] = "Moleville Song Hint Girl"; break;
+                        case 1647: eventLabels[i] = "Moleville Minecart Freeplay Entrance"; break;
+                        case 1648: eventLabels[i] = "Minecart Ending"; break;
+                        case 1649: eventLabels[i] = "Moleville Liberated Exterior Loader"; break;
+                        case 1650: eventLabels[i] = "Moleville Liberated Exterior Loader Contd"; break;
+                        case 1651: eventLabels[i] = "Mario Crash Thru Moleville Roof"; break;
+                        case 1652: eventLabels[i] = "Empty"; break;
+                        case 1653: eventLabels[i] = "Exit Barrel Count Timer"; break;
+                        case 1654: eventLabels[i] = "Empty"; break;
+                        case 1655: eventLabels[i] = "Empty"; break;
+                        case 1656: eventLabels[i] = "Empty"; break;
+                        case 1657: eventLabels[i] = "Empty"; break;
+                        case 1658: eventLabels[i] = "Empty"; break;
+                        case 1659: eventLabels[i] = "Empty"; break;
+                        case 1660: eventLabels[i] = "Empty"; break;
+                        case 1661: eventLabels[i] = "Empty"; break;
+                        case 1662: eventLabels[i] = "Empty"; break;
+                        case 1663: eventLabels[i] = "Empty"; break;
+                        case 1664: eventLabels[i] = "Empty"; break;
+                        case 1665: eventLabels[i] = "Empty"; break;
+                        case 1666: eventLabels[i] = "Empty"; break;
+                        case 1667: eventLabels[i] = "Empty"; break;
+                        case 1668: eventLabels[i] = "Empty"; break;
+                        case 1669: eventLabels[i] = "Nimbus Final Hallway Miniboss Collision"; break;
+                        case 1670: eventLabels[i] = "Lands End 2 Summon Invisible Platform"; break;
+                        case 1671: eventLabels[i] = "Lands End 1 Invisible Platform"; break;
+                        case 1672: eventLabels[i] = "Lands End 2 Summon Invisible Platform"; break;
+                        case 1673: eventLabels[i] = "Lands End 2 Invisible Platform Upper"; break;
+                        case 1674: eventLabels[i] = "Lands End Enter Grotto"; break;
+                        case 1675: eventLabels[i] = "Mario Bumped Off Cannon"; break;
+                        case 1676: eventLabels[i] = "Lands End Grotto Room 1 Loader"; break;
+                        case 1677: eventLabels[i] = "Temple Pipe To Monstro"; break;
+                        case 1678: eventLabels[i] = "Open Lands End Grotto"; break;
+                        case 1679: eventLabels[i] = "Lands End Trampoline In Lower Underground Gecko Room"; break;
+                        case 1680: eventLabels[i] = "Temple Pipe To Fortune Result Room"; break;
+                        case 1681: eventLabels[i] = "Temple Trampoline In Fortune Result Room"; break;
+                        case 1682: eventLabels[i] = "Trampoline Shaman"; break;
+                        case 1683: eventLabels[i] = "Temple Exit Warp Trampoline"; break;
+                        case 1684: eventLabels[i] = "Temple Elevator Lower Exit"; break;
+                        case 1685: eventLabels[i] = "Temple Fortune Head 1"; break;
+                        case 1686: eventLabels[i] = "Temple Fortune Head 2"; break;
+                        case 1687: eventLabels[i] = "Temple Fortune Head 3"; break;
+                        case 1688: eventLabels[i] = "Temple Fortune Heads Room Loader"; break;
+                        case 1689: eventLabels[i] = "Temple Pipe To Boss Fight"; break;
+                        case 1690: eventLabels[i] = "Temple Boss Room Trampoline"; break;
+                        case 1691: eventLabels[i] = "Empty"; break;
+                        case 1692: eventLabels[i] = "Temple Fortune Scroll"; break;
+                        case 1693: eventLabels[i] = "Temple Final Fortune Head"; break;
+                        case 1694: eventLabels[i] = "Temple Elevator"; break;
+                        case 1695: eventLabels[i] = "Bandits Way Goomba"; break;
+                        case 1696: eventLabels[i] = "Bandits Way Chest Platforms 1"; break;
+                        case 1697: eventLabels[i] = "Bandits Way Chest Platforms 2"; break;
+                        case 1698: eventLabels[i] = "Bandits Way 4 Loader"; break;
+                        case 1699: eventLabels[i] = "Bandits Way 4 Loader Background"; break;
+                        case 1700: eventLabels[i] = "Bandits Way 2 Left Platform"; break;
+                        case 1701: eventLabels[i] = "Bandits Way 2 Right Platform"; break;
+                        case 1702: eventLabels[i] = "Bandits Way 2 Loader"; break;
+                        case 1703: eventLabels[i] = "Bandits Way 2 Spinny Flower 1"; break;
+                        case 1704: eventLabels[i] = "Bandits Way 2 Spinny Flower 2"; break;
+                        case 1705: eventLabels[i] = "Bandits Way 2 Dogs Background"; break;
+                        case 1706: eventLabels[i] = "Bandits Way Left Chest Star Check"; break;
+                        case 1707: eventLabels[i] = "Bandits Way 5 Loader Background"; break;
+                        case 1708: eventLabels[i] = "Bandits Way 5 Loader"; break;
+                        case 1709: eventLabels[i] = "Bandits Way 5 Loader Background 2"; break;
+                        case 1710: eventLabels[i] = "Bandits Way 5 Loader Background Boss Fight"; break;
+                        case 1711: eventLabels[i] = "Bandits Way Trampoline"; break;
+                        case 1712: eventLabels[i] = "Bandits Way 2 Dog"; break;
+                        case 1713: eventLabels[i] = "Bandits Way 3 Loader"; break;
+                        case 1714: eventLabels[i] = "Bandits Way 1 Loader"; break;
+                        case 1715: eventLabels[i] = "Bandits Way 4 Platform Subroutine"; break;
+                        case 1716: eventLabels[i] = "Bandits Way 5 Chase Catch Boss"; break;
+                        case 1717: eventLabels[i] = "Bandits Way 4 Manage Dog Collision"; break;
+                        case 1718: eventLabels[i] = "Empty"; break;
+                        case 1719: eventLabels[i] = "Empty"; break;
+                        case 1720: eventLabels[i] = "Empty"; break;
+                        case 1721: eventLabels[i] = "Empty"; break;
+                        case 1722: eventLabels[i] = "Sky Bridge Room Loader"; break;
+                        case 1723: eventLabels[i] = "Empty"; break;
+                        case 1724: eventLabels[i] = "Empty"; break;
+                        case 1725: eventLabels[i] = "Empty"; break;
+                        case 1726: eventLabels[i] = "Empty"; break;
+                        case 1727: eventLabels[i] = "Empty"; break;
+                        case 1728: eventLabels[i] = "Empty"; break;
+                        case 1729: eventLabels[i] = "Empty"; break;
+                        case 1730: eventLabels[i] = "Empty"; break;
+                        case 1731: eventLabels[i] = "Empty"; break;
+                        case 1732: eventLabels[i] = "Sky Bridge Background"; break;
+                        case 1733: eventLabels[i] = "Empty"; break;
+                        case 1734: eventLabels[i] = "Empty"; break;
+                        case 1735: eventLabels[i] = "Empty"; break;
+                        case 1736: eventLabels[i] = "Empty"; break;
+                        case 1737: eventLabels[i] = "Sky Bridge Donut Lift"; break;
+                        case 1738: eventLabels[i] = "Empty"; break;
+                        case 1739: eventLabels[i] = "Refocus Camera"; break;
+                        case 1740: eventLabels[i] = "Empty"; break;
+                        case 1741: eventLabels[i] = "Empty"; break;
+                        case 1742: eventLabels[i] = "Empty"; break;
+                        case 1743: eventLabels[i] = "Empty"; break;
+                        case 1744: eventLabels[i] = "Empty"; break;
+                        case 1745: eventLabels[i] = "Whirlpool Shogun"; break;
+                        case 1746: eventLabels[i] = "Empty"; break;
+                        case 1747: eventLabels[i] = "Empty"; break;
+                        case 1748: eventLabels[i] = "Mines Postgame Fight"; break;
+                        case 1749: eventLabels[i] = "Ship Postgame Boss"; break;
+                        case 1750: eventLabels[i] = "Temple Boss Postgame"; break;
+                        case 1751: eventLabels[i] = "Lands End Desert 1 Left Whirlpool"; break;
+                        case 1752: eventLabels[i] = "Lands End Desert 1 Right Whirlpool"; break;
+                        case 1753: eventLabels[i] = "Lands End Final Whirlpool 1"; break;
+                        case 1754: eventLabels[i] = "Lands End Final Whirlpool 2"; break;
+                        case 1755: eventLabels[i] = "Lands End Shy Away Whirlpool 1"; break;
+                        case 1756: eventLabels[i] = "Lands End Shy Away Whirlpool 2"; break;
+                        case 1757: eventLabels[i] = "Lands End Shy Away Whirlpool 3"; break;
+                        case 1758: eventLabels[i] = "Lands End Penultimate Whirlpool 1"; break;
+                        case 1759: eventLabels[i] = "Lands End Penultimate Whirlpool 2"; break;
+                        case 1760: eventLabels[i] = "Lands End Stage 2 Whirlpool 1"; break;
+                        case 1761: eventLabels[i] = "Lands End Stage 2 Whirlpool 2"; break;
+                        case 1762: eventLabels[i] = "Lands End Stage 2 Whirlpool 3"; break;
+                        case 1763: eventLabels[i] = "Lands End Bee Whirlpool 1"; break;
+                        case 1764: eventLabels[i] = "Lands End Bee Whirlpool 2"; break;
+                        case 1765: eventLabels[i] = "Lands End Bee Whirlpool 3"; break;
+                        case 1766: eventLabels[i] = "Temple Elevator Room Loader"; break;
+                        case 1767: eventLabels[i] = "Temple Fortune Results Room Gate Opens"; break;
+                        case 1768: eventLabels[i] = "Temple Boss"; break;
+                        case 1769: eventLabels[i] = "Temple Summon Green Button"; break;
+                        case 1770: eventLabels[i] = "Temple Fortune Results Room Loader"; break;
+                        case 1771: eventLabels[i] = "Temple Boss Room Loader"; break;
+                        case 1772: eventLabels[i] = "Lands End Bullet Bill"; break;
+                        case 1773: eventLabels[i] = "Lands End Bullet Bill Background"; break;
+                        case 1774: eventLabels[i] = "Empty"; break;
+                        case 1775: eventLabels[i] = "Sky Troopa Platform"; break;
+                        case 1777: eventLabels[i] = "Lands End Cliff Loader"; break;
+                        case 1778: eventLabels[i] = "Temple Generic Pipe Room Loader"; break;
+                        case 1779: eventLabels[i] = "Lands End Underground 1 Loader"; break;
+                        case 1780: eventLabels[i] = "Lands End Flower Loader"; break;
+                        case 1781: eventLabels[i] = "Empty"; break;
+                        case 1782: eventLabels[i] = "Lands End Desert 1 Loader"; break;
+                        case 1783: eventLabels[i] = "Lands End Final Whirlpool Room Loader"; break;
+                        case 1784: eventLabels[i] = "Lands End Desert 1 Left Whirlpool Subroutine"; break;
+                        case 1785: eventLabels[i] = "Lands End Final Whirlpool 1 Subroutine"; break;
+                        case 1786: eventLabels[i] = "Lands End Shy Away Whirlpool 1 Subroutine"; break;
+                        case 1787: eventLabels[i] = "Lands End Desert 1 Right Whirlpool Subroutine"; break;
+                        case 1788: eventLabels[i] = "Lands End Underground Dog Wall Room Loader Background"; break;
+                        case 1789: eventLabels[i] = "Whirlpool Shogun Subroutine"; break;
+                        case 1790: eventLabels[i] = "Lands End Underground Upper Pit Room Loader Background"; break;
+                        case 1791: eventLabels[i] = "Lands End Underground Dog Wall Room Loader"; break;
+                        case 1792: eventLabels[i] = "Lands End Underground Upper Pit Room Loader"; break;
+                        case 1793: eventLabels[i] = "Lands End Purchasable Chest 1 Subroutine"; break;
+                        case 1794: eventLabels[i] = "Lands End Buy Chest"; break;
+                        case 1795: eventLabels[i] = "Lands End Underground Lower Level Loader"; break;
+                        case 1796: eventLabels[i] = "Lands End Desert 1 Trampoline"; break;
+                        case 1797: eventLabels[i] = "Lands End Sky Bridge Room Exit To Desert"; break;
+                        case 1798: eventLabels[i] = "Lands End Cliff Mouse Hint"; break;
+                        case 1799: eventLabels[i] = "Temple Final Fortune Scroll"; break;
+                        case 1800: eventLabels[i] = "Temple Mouse Monstro Town Access Hint"; break;
+                        case 1801: eventLabels[i] = "Freestanding Flower"; break;
+                        case 1802: eventLabels[i] = "Empty"; break;
+                        case 1803: eventLabels[i] = "Empty"; break;
+                        case 1804: eventLabels[i] = "Empty"; break;
+                        case 1805: eventLabels[i] = "Temple 3 Fortune Shaman"; break;
+                        case 1806: eventLabels[i] = "Temple Fortune Results Dog Fight"; break;
+                        case 1807: eventLabels[i] = "Temple Fortune Results Shy Away Fight"; break;
+                        case 1808: eventLabels[i] = "Belome Fortune Prize Chest 1 Subroutine"; break;
+                        case 1809: eventLabels[i] = "Lands End Cliff Exit To World Map"; break;
+                        case 1810: eventLabels[i] = "Temple Vault Loader"; break;
+                        case 1811: eventLabels[i] = "Temple Four Chest Room Loader"; break;
+                        case 1812: eventLabels[i] = "Empty"; break;
+                        case 1813: eventLabels[i] = "Save Box In Rooms With Exp Stars"; break;
+                        case 1814: eventLabels[i] = "Start Troopa Cliff Timer"; break;
+                        case 1815: eventLabels[i] = "Troopa Cliff Timer"; break;
+                        case 1816: eventLabels[i] = "Troopa Cliff Finish"; break;
+                        case 1817: eventLabels[i] = "Troopa Cliff Fall"; break;
+                        case 1818: eventLabels[i] = "Lands End Desert Mouse"; break;
+                        case 1819: eventLabels[i] = "Shy Away Early Lands End"; break;
+                        case 1820: eventLabels[i] = "Empty"; break;
+                        case 1821: eventLabels[i] = "Empty"; break;
+                        case 1822: eventLabels[i] = "Empty"; break;
+                        case 1823: eventLabels[i] = "Lands End Grotto First Room Upper Chest"; break;
+                        case 1824: eventLabels[i] = "Keep Set Platform Properties"; break;
+                        case 1825: eventLabels[i] = "Keep Rotating Room Loader"; break;
+                        case 1826: eventLabels[i] = "Keep Invisible Floor Room Loader"; break;
+                        case 1827: eventLabels[i] = "Keep Linear Platform Room Loader"; break;
+                        case 1828: eventLabels[i] = "Keep Mario Falls In Lava"; break;
+                        case 1829: eventLabels[i] = "Keep Display Remaining Tries"; break;
+                        case 1830: eventLabels[i] = "Keep Handle Room Reload After Lava Fall"; break;
+                        case 1831: eventLabels[i] = "Keep Invisible Floor Room Background 1"; break;
+                        case 1832: eventLabels[i] = "Keep Invisible Floor Room Background 2"; break;
+                        case 1833: eventLabels[i] = "Keep Linear Platform Room Background"; break;
+                        case 1834: eventLabels[i] = "Keep Cannonball"; break;
+                        case 1835: eventLabels[i] = "Keep Cannonball Room Loader"; break;
+                        case 1836: eventLabels[i] = "Keep Donkey Room Loader"; break;
+                        case 1837: eventLabels[i] = "Unknown"; break;
+                        case 1838: eventLabels[i] = "Empty"; break;
+                        case 1839: eventLabels[i] = "Unknown"; break;
+                        case 1840: eventLabels[i] = "Platform Subroutine"; break;
+                        case 1841: eventLabels[i] = "Keep Invisible Floor Chest 1"; break;
+                        case 1842: eventLabels[i] = "Keep Invisible Floor Coin 1"; break;
+                        case 1843: eventLabels[i] = "Keep Invisible Floor Show Floor"; break;
+                        case 1844: eventLabels[i] = "Summon Cloud Boss"; break;
+                        case 1845: eventLabels[i] = "Cloud Boss"; break;
+                        case 1846: eventLabels[i] = "Safe Donut Lift Jump"; break;
+                        case 1847: eventLabels[i] = "Cannonball Room Bomb 1"; break;
+                        case 1848: eventLabels[i] = "Cannonball Room Bomb 2"; break;
+                        case 1849: eventLabels[i] = "Cannonball Room Bomb 1 Contd"; break;
+                        case 1850: eventLabels[i] = "Cannonball Room Bomb 2 Contd"; break;
+                        case 1851: eventLabels[i] = "Lands End Grotto Directional Bit"; break;
+                        case 1852: eventLabels[i] = "Sky Bridge Admin Shaman"; break;
+                        case 1853: eventLabels[i] = "Sky Bridge Ride Shaman"; break;
+                        case 1854: eventLabels[i] = "Keep Donkey Room Background"; break;
+                        case 1855: eventLabels[i] = "Keep Donkey Room Barrel"; break;
+                        case 1856: eventLabels[i] = "Moleville Shop Loader"; break;
+                        case 1857: eventLabels[i] = "Moleville Shop Exit To Exterior"; break;
+                        case 1858: eventLabels[i] = "Moleville Inn Exit To Exterior"; break;
+                        case 1859: eventLabels[i] = "Fireworks House Exit To Exterior"; break;
+                        case 1860: eventLabels[i] = "Moleville Swap Shop Exit To Exterior"; break;
+                        case 1861: eventLabels[i] = "Keep Donkey Room Donkey"; break;
+                        case 1862: eventLabels[i] = "Croco Shop 1"; break;
+                        case 1863: eventLabels[i] = "Croco Shop 2"; break;
+                        case 1864: eventLabels[i] = "Bowser Door Ultimate Failure Animation"; break;
+                        case 1865: eventLabels[i] = "Empty"; break;
+                        case 1866: eventLabels[i] = "Keep Invisible Floor Chest 2"; break;
+                        case 1867: eventLabels[i] = "Empty"; break;
+                        case 1868: eventLabels[i] = "Lands End Flower Room Exit To Sky Bridge"; break;
+                        case 1869: eventLabels[i] = "Sky Bridge Loader"; break;
+                        case 1870: eventLabels[i] = "Keep Invisible Floor Chest 3"; break;
+                        case 1871: eventLabels[i] = "Fireworks House Loader"; break;
+                        case 1872: eventLabels[i] = "Fireworks House Buy Item"; break;
+                        case 1873: eventLabels[i] = "Midas River Sign After Bucket Warp"; break;
+                        case 1874: eventLabels[i] = "Temple Elevator Room Shaman"; break;
+                        case 1875: eventLabels[i] = "Keep Rotating Room Platform 1"; break;
+                        case 1876: eventLabels[i] = "Keep Rotating Room Platform 2"; break;
+                        case 1877: eventLabels[i] = "Keep Rotating Room Loader Contd"; break;
+                        case 1878: eventLabels[i] = "Keep Cannonball Room Exit To Previous"; break;
+                        case 1879: eventLabels[i] = "Keep Linear Platform Room Exit To Previous"; break;
+                        case 1880: eventLabels[i] = "Keep Invisible Floor Chest 4"; break;
+                        case 1881: eventLabels[i] = "Keep Invisible Floor Coin 2"; break;
+                        case 1882: eventLabels[i] = "Keep Invisible Floor Coin 3"; break;
+                        case 1883: eventLabels[i] = "Whirlpool Shogun 1"; break;
+                        case 1884: eventLabels[i] = "Whirlpool Shogun 2"; break;
+                        case 1885: eventLabels[i] = "Whirlpool Shogun 3"; break;
+                        case 1886: eventLabels[i] = "Whirlpool Shogun 4"; break;
+                        case 1887: eventLabels[i] = "Whirlpool Shogun 5"; break;
+                        case 1888: eventLabels[i] = "Abyss Axem Pit Room Loader"; break;
+                        case 1889: eventLabels[i] = "Abyss Side Treasure Rooms Loader"; break;
+                        case 1890: eventLabels[i] = "Determine Side Treasure Room To Load"; break;
+                        case 1891: eventLabels[i] = "Abyss Big Conveyor Room Loader"; break;
+                        case 1892: eventLabels[i] = "Abyss Boss 1 Defeated Temp Room Loader"; break;
+                        case 1893: eventLabels[i] = "Abyss Boss 2 Room Loader"; break;
+                        case 1894: eventLabels[i] = "Abyss Boss 2"; break;
+                        case 1895: eventLabels[i] = "Abyss After Boss 1 Trampoline Backward"; break;
+                        case 1896: eventLabels[i] = "Abyss Axem Pit Trampoline"; break;
+                        case 1897: eventLabels[i] = "Abyss Upper Machine Yarid Room Loader"; break;
+                        case 1898: eventLabels[i] = "Abyss Boss 2 Room Trampoline"; break;
+                        case 1899: eventLabels[i] = "Abyss Axem Pit Room Fall"; break;
+                        case 1900: eventLabels[i] = "Abyss Big Conveyor Room Fall"; break;
+                        case 1901: eventLabels[i] = "Abyss Axem Pit Platforms"; break;
+                        case 1902: eventLabels[i] = "Abyss Exit To Side Treasure Rooms"; break;
+                        case 1903: eventLabels[i] = "Abyss Side Treasure Rooms Exit"; break;
+                        case 1904: eventLabels[i] = "Abyss Machine Yarid Upper"; break;
+                        case 1905: eventLabels[i] = "Abyss Exit To Boss 2 Room"; break;
+                        case 1906: eventLabels[i] = "Turn Off Mario Shadow"; break;
+                        case 1907: eventLabels[i] = "Abyss Machine Yarid Lower"; break;
+                        case 1908: eventLabels[i] = "Abyss Machine Axem Red"; break;
+                        case 1909: eventLabels[i] = "Abyss Conveyor Belt Jabit Or Bowyer"; break;
+                        case 1910: eventLabels[i] = "Abyss Conveyor Belt Shyper"; break;
+                        case 1911: eventLabels[i] = "Abyss Machine Mack"; break;
+                        case 1912: eventLabels[i] = "Abyss Machine Arrow Hit"; break;
+                        case 1913: eventLabels[i] = "Abyss Machine Arrow Animate"; break;
+                        case 1914: eventLabels[i] = "Abyss Machine Arrow Reset"; break;
+                        case 1915: eventLabels[i] = "Abyss Big Conveyor Checkpoint"; break;
+                        case 1916: eventLabels[i] = "Abyss Big Conveyor Checkpoint"; break;
+                        case 1917: eventLabels[i] = "Abyss Big Conveyor Checkpoint"; break;
+                        case 1918: eventLabels[i] = "Abyss Big Conveyor Checkpoint"; break;
+                        case 1919: eventLabels[i] = "Abyss Big Conveyor Platform"; break;
+                        case 1920: eventLabels[i] = "Abyss Big Conveyor Checkpoint"; break;
+                        case 1921: eventLabels[i] = "Abyss Machine Bowyer"; break;
+                        case 1922: eventLabels[i] = "Abyss Set Machine Bowyer Spawn Point"; break;
+                        case 1923: eventLabels[i] = "Abyss Set Machine Bowyer Spawn Point"; break;
+                        case 1924: eventLabels[i] = "World Map Inner Factory"; break;
+                        case 1925: eventLabels[i] = "Postgame Tower Fight"; break;
+                        case 1926: eventLabels[i] = "Tower Balcony Loader"; break;
+                        case 1927: eventLabels[i] = "Tower Balcony Jump Off"; break;
+                        case 1928: eventLabels[i] = "Balcony Is Locked"; break;
+                        case 1929: eventLabels[i] = "Keep Invisible Floor Coin 4"; break;
+                        case 1930: eventLabels[i] = "Mackskip Maybe"; break;
+                        case 1931: eventLabels[i] = "Treasure Chest Failure Mimic Fight"; break;
+                        case 1932: eventLabels[i] = "Belome Fortune Prize Chest 2"; break;
+                        case 1933: eventLabels[i] = "Belome Fortune Prize Chest 3"; break;
+                        case 1934: eventLabels[i] = "Belome Fortune Prize Chest 4"; break;
+                        case 1935: eventLabels[i] = "Keep Rotating Room Exit To Previous"; break;
+                        case 1936: eventLabels[i] = "Keep Rotating Room Chest 1"; break;
+                        case 1937: eventLabels[i] = "Keep Rotating Room Chest 2"; break;
+                        case 1938: eventLabels[i] = "Keep Rotating Room Chest 3"; break;
+                        case 1939: eventLabels[i] = "Keep Rotating Room Chest 4"; break;
+                        case 1940: eventLabels[i] = "Keep Rotating Room Chest 5"; break;
+                        case 1941: eventLabels[i] = "Keep Rotating Room Chest 6"; break;
+                        case 1942: eventLabels[i] = "Keep Vertical Platform Room Exit To Previous"; break;
+                        case 1943: eventLabels[i] = "Keep Invisible Floor Room Exit"; break;
+                        case 1944: eventLabels[i] = "Keep Chewy Battle Room Exit"; break;
+                        case 1945: eventLabels[i] = "Keep Cannonball Room Exit"; break;
+                        case 1946: eventLabels[i] = "Keep Donkey Room Exit To Previous"; break;
+                        case 1947: eventLabels[i] = "Keep Linear Platform Room Exit"; break;
+                        case 1948: eventLabels[i] = "Keep Terra Corra Battle Room Exit"; break;
+                        case 1949: eventLabels[i] = "Keep Alley Rat Battle Room Exit"; break;
+                        case 1950: eventLabels[i] = "Keep Goomba Battle Room Exit"; break;
+                        case 1951: eventLabels[i] = "Keep Barrel Count Room Exit Container"; break;
+                        case 1952: eventLabels[i] = "Keep Enter Marathon Puzzle Room"; break;
+                        case 1953: eventLabels[i] = "Keep Quiz Room Exit Container"; break;
+                        case 1954: eventLabels[i] = "Keep Enter Barrel Count Room"; break;
+                        case 1955: eventLabels[i] = "Keep Coin Game Room Exit Container"; break;
+                        case 1956: eventLabels[i] = "Keep Enter Button Game Room"; break;
+                        case 1957: eventLabels[i] = "Keep Door 5 Container"; break;
+                        case 1958: eventLabels[i] = "Keep Enter Vertical Platform Room"; break;
+                        case 1959: eventLabels[i] = "Keep Door 4 Container"; break;
+                        case 1960: eventLabels[i] = "Keep Enter Invisible Floor Room"; break;
+                        case 1961: eventLabels[i] = "Keep Door 6 Container"; break;
+                        case 1962: eventLabels[i] = "Keep Enter Terra Cotta Battle Room"; break;
+                        case 1963: eventLabels[i] = "Keep Door 3 Container"; break;
+                        case 1964: eventLabels[i] = "Keep Enter Goomba Battle Room"; break;
+                        case 1965: eventLabels[i] = "Keep Door 1 Container"; break;
+                        case 1966: eventLabels[i] = "Keep Enter Quiz Room"; break;
+                        case 1967: eventLabels[i] = "Keep Door 2 Container"; break;
+                        case 1968: eventLabels[i] = "Keep Enter Coin Game Room"; break;
+                        case 1969: eventLabels[i] = "Check If Star Pieces For Factory Boss Collected"; break;
+                        case 1970: eventLabels[i] = "Boshi Odds Calculator"; break;
+                        case 1971: eventLabels[i] = "Mushroom Boy Grants Rock Candy"; break;
+                        case 1972: eventLabels[i] = "Mushroom Boy Odds"; break;
+                        case 1973: eventLabels[i] = "Clone Reserved"; break;
+                        case 1974: eventLabels[i] = "Clone Reserved"; break;
+                        case 1975: eventLabels[i] = "Clone Reserved"; break;
+                        case 1976: eventLabels[i] = "Clone Reserved"; break;
+                        case 1977: eventLabels[i] = "Clone Reserved"; break;
+                        case 1978: eventLabels[i] = "Clone Reserved"; break;
+                        case 1979: eventLabels[i] = "Clone Reserved"; break;
+                        case 1980: eventLabels[i] = "Clone Reserved"; break;
+                        case 1981: eventLabels[i] = "Clone Reserved"; break;
+                        case 1982: eventLabels[i] = "Clone Reserved"; break;
+                        case 1983: eventLabels[i] = "Clone Reserved"; break;
+                        case 1984: eventLabels[i] = "Clone Reserved"; break;
+                        case 1985: eventLabels[i] = "Clone Reserved"; break;
+                        case 1986: eventLabels[i] = "Clone Reserved"; break;
+                        case 1987: eventLabels[i] = "Clone Reserved"; break;
+                        case 1988: eventLabels[i] = "Clone Reserved"; break;
+                        case 1989: eventLabels[i] = "Clone Reserved"; break;
+                        case 1990: eventLabels[i] = "Clone Reserved"; break;
+                        case 1991: eventLabels[i] = "Clone Reserved"; break;
+                        case 1992: eventLabels[i] = "Clone Reserved"; break;
+                        case 1993: eventLabels[i] = "Clone Reserved"; break;
+                        case 1994: eventLabels[i] = "Clone Reserved"; break;
+                        case 1995: eventLabels[i] = "Clone Reserved"; break;
+                        case 1996: eventLabels[i] = "Clone Reserved"; break;
+                        case 1997: eventLabels[i] = "Clone Reserved"; break;
+                        case 1998: eventLabels[i] = "Clone Reserved"; break;
+                        case 1999: eventLabels[i] = "Clone Reserved"; break;
+                        case 2000: eventLabels[i] = "Clone Reserved"; break;
+                        case 2001: eventLabels[i] = "Clone Reserved"; break;
+                        case 2002: eventLabels[i] = "Clone Reserved"; break;
+                        case 2003: eventLabels[i] = "Clone Reserved"; break;
+                        case 2004: eventLabels[i] = "Clone Reserved"; break;
+                        case 2005: eventLabels[i] = "Clone Reserved"; break;
+                        case 2006: eventLabels[i] = "Clone Reserved"; break;
+                        case 2007: eventLabels[i] = "Clone Reserved"; break;
+                        case 2008: eventLabels[i] = "Clone Reserved"; break;
+                        case 2009: eventLabels[i] = "Clone Reserved"; break;
+                        case 2010: eventLabels[i] = "Clone Reserved"; break;
+                        case 2011: eventLabels[i] = "Clone Reserved"; break;
+                        case 2012: eventLabels[i] = "Clone Reserved"; break;
+                        case 2013: eventLabels[i] = "Clone Reserved"; break;
+                        case 2014: eventLabels[i] = "Clone Reserved"; break;
+                        case 2015: eventLabels[i] = "Clone Reserved"; break;
+                        case 2016: eventLabels[i] = "Clone Reserved"; break;
+                        case 2017: eventLabels[i] = "Clone Reserved"; break;
+                        case 2018: eventLabels[i] = "Clone Reserved"; break;
+                        case 2019: eventLabels[i] = "Clone Reserved"; break;
+                        case 2020: eventLabels[i] = "Clone Reserved"; break;
+                        case 2021: eventLabels[i] = "Clone Reserved"; break;
+                        case 2022: eventLabels[i] = "Clone Reserved"; break;
+                        case 2023: eventLabels[i] = "Clone Reserved"; break;
+                        case 2024: eventLabels[i] = "Clone Reserved"; break;
+                        case 2025: eventLabels[i] = "Clone Reserved"; break;
+                        case 2026: eventLabels[i] = "Clone Reserved"; break;
+                        case 2027: eventLabels[i] = "Clone Reserved"; break;
+                        case 2028: eventLabels[i] = "Clone Reserved"; break;
+                        case 2029: eventLabels[i] = "Clone Reserved"; break;
+                        case 2030: eventLabels[i] = "Clone Reserved"; break;
+                        case 2031: eventLabels[i] = "Clone Reserved"; break;
+                        case 2032: eventLabels[i] = "Clone Reserved"; break;
+                        case 2033: eventLabels[i] = "Clone Reserved"; break;
+                        case 2034: eventLabels[i] = "Clone Reserved"; break;
+                        case 2035: eventLabels[i] = "Clone Reserved"; break;
+                        case 2036: eventLabels[i] = "Clone Reserved"; break;
+                        case 2037: eventLabels[i] = "Clone Reserved"; break;
+                        case 2038: eventLabels[i] = "Clone Reserved"; break;
+                        case 2039: eventLabels[i] = "Clone Reserved"; break;
+                        case 2040: eventLabels[i] = "Clone Reserved"; break;
+                        case 2041: eventLabels[i] = "Clone Reserved"; break;
+                        case 2042: eventLabels[i] = "Clone Reserved"; break;
+                        case 2043: eventLabels[i] = "Clone Reserved"; break;
+                        case 2044: eventLabels[i] = "Clone Reserved"; break;
+                        case 2045: eventLabels[i] = "Clone Reserved"; break;
+                        case 2046: eventLabels[i] = "Clone Reserved"; break;
+                        case 2047: eventLabels[i] = "Clone Reserved"; break;
+                        case 2048: eventLabels[i] = "Monstro Town Exterior Loader"; break;
+                        case 2049: eventLabels[i] = "Monstro Super Jump House Loader"; break;
+                        case 2050: eventLabels[i] = "Monstro Thwomp"; break;
+                        case 2051: eventLabels[i] = "Monstro Shop Loader"; break;
+                        case 2052: eventLabels[i] = "Chapel Postgame Boss"; break;
+                        case 2053: eventLabels[i] = "Monstro Goombette Shop"; break;
+                        case 2054: eventLabels[i] = "Monstro Main Shop"; break;
+                        case 2055: eventLabels[i] = "Monstro Trampoline"; break;
+                        case 2056: eventLabels[i] = "Monstro Ledge Item"; break;
+                        case 2057: eventLabels[i] = "Monstromama House 1F Loader"; break;
+                        case 2058: eventLabels[i] = "Monstro Fan Setting"; break;
+                        case 2059: eventLabels[i] = "Monstromama"; break;
+                        case 2060: eventLabels[i] = "Monstromama House 2F Loader"; break;
+                        case 2061: eventLabels[i] = "Monstro Town Star"; break;
+                        case 2062: eventLabels[i] = "Monstro Mimic"; break;
+                        case 2063: eventLabels[i] = "Super Jump Prize Grant"; break;
+                        case 2064: eventLabels[i] = "Dojo Loader"; break;
+                        case 2065: eventLabels[i] = "Dojo Loader First Time Animation"; break;
+                        case 2066: eventLabels[i] = "Dojo Boss 1"; break;
+                        case 2067: eventLabels[i] = "Dojo Fight 1 Finished"; break;
+                        case 2068: eventLabels[i] = "Dojo Boss 2"; break;
+                        case 2069: eventLabels[i] = "Monstro Mouse"; break;
+                        case 2070: eventLabels[i] = "Monstromama House Exit To Exterior"; break;
+                        case 2071: eventLabels[i] = "Empty"; break;
+                        case 2072: eventLabels[i] = "Empty"; break;
+                        case 2073: eventLabels[i] = "Empty"; break;
+                        case 2074: eventLabels[i] = "Enter Monstro Sealed Room"; break;
+                        case 2075: eventLabels[i] = "Monstro Sealed Door"; break;
+                        case 2076: eventLabels[i] = "Dojo Boss 3"; break;
+                        case 2077: eventLabels[i] = "Dojo Boss 4"; break;
+                        case 2078: eventLabels[i] = "Monstro Save Box"; break;
+                        case 2079: eventLabels[i] = "Monstro Town Exterior Loader From Save Box"; break;
+                        case 2080: eventLabels[i] = "Musty Fears Room Loader"; break;
+                        case 2081: eventLabels[i] = "Musty Fears Lamp"; break;
+                        case 2082: eventLabels[i] = "Nimbus Missable Chest 1"; break;
+                        case 2083: eventLabels[i] = "Musty Fears Away Note"; break;
+                        case 2084: eventLabels[i] = "Marios Room Invisible Item"; break;
+                        case 2085: eventLabels[i] = "Empty"; break;
+                        case 2086: eventLabels[i] = "Monstro Piranha"; break;
+                        case 2087: eventLabels[i] = "Empty"; break;
+                        case 2088: eventLabels[i] = "Empty"; break;
+                        case 2089: eventLabels[i] = "Sky Troopas Ad"; break;
+                        case 2090: eventLabels[i] = "Monstro Entrance Loader"; break;
+                        case 2091: eventLabels[i] = "Empty"; break;
+                        case 2092: eventLabels[i] = "Monstro Town Back Exit"; break;
+                        case 2093: eventLabels[i] = "Empty"; break;
+                        case 2094: eventLabels[i] = "Empty"; break;
+                        case 2095: eventLabels[i] = "Empty"; break;
+                        case 2096: eventLabels[i] = "Hino Mart Loader"; break;
+                        case 2097: eventLabels[i] = "Move Hinopio To Item Shop"; break;
+                        case 2098: eventLabels[i] = "Move Hinopio To Inn"; break;
+                        case 2099: eventLabels[i] = "Move Hinopio To Armor Shop"; break;
+                        case 2100: eventLabels[i] = "Hinopio"; break;
+                        case 2101: eventLabels[i] = "Empty"; break;
+                        case 2102: eventLabels[i] = "Empty"; break;
+                        case 2103: eventLabels[i] = "Empty"; break;
+                        case 2104: eventLabels[i] = "Empty"; break;
+                        case 2105: eventLabels[i] = "Empty"; break;
+                        case 2106: eventLabels[i] = "Empty"; break;
+                        case 2107: eventLabels[i] = "Empty"; break;
+                        case 2108: eventLabels[i] = "Nimbus Castle Statue Polisher Boss Fight Room Loader"; break;
+                        case 2109: eventLabels[i] = "Empty"; break;
+                        case 2110: eventLabels[i] = "Empty"; break;
+                        case 2111: eventLabels[i] = "Empty"; break;
+                        case 2112: eventLabels[i] = "Nimbus Castle Statue Game Room Loader"; break;
+                        case 2113: eventLabels[i] = "Empty"; break;
+                        case 2114: eventLabels[i] = "Empty"; break;
+                        case 2115: eventLabels[i] = "Statue 1 Shake"; break;
+                        case 2116: eventLabels[i] = "Statue 2 Shake"; break;
+                        case 2117: eventLabels[i] = "Statue 4 Shake"; break;
+                        case 2118: eventLabels[i] = "Initiate Statue Polisher Manual Boss Fight"; break;
+                        case 2119: eventLabels[i] = "Empty"; break;
+                        case 2120: eventLabels[i] = "Empty"; break;
+                        case 2121: eventLabels[i] = "Empty"; break;
+                        case 2122: eventLabels[i] = "Star Hill Star Piece"; break;
+                        case 2123: eventLabels[i] = "Empty"; break;
+                        case 2124: eventLabels[i] = "Choose Marrymore Sanctuary State"; break;
+                        case 2125: eventLabels[i] = "Empty"; break;
+                        case 2126: eventLabels[i] = "Empty"; break;
+                        case 2127: eventLabels[i] = "Empty"; break;
+                        case 2128: eventLabels[i] = "Empty"; break;
+                        case 2129: eventLabels[i] = "Empty"; break;
+                        case 2130: eventLabels[i] = "Empty"; break;
+                        case 2131: eventLabels[i] = "Empty"; break;
+                        case 2132: eventLabels[i] = "Empty"; break;
+                        case 2133: eventLabels[i] = "Nimbus Castle Statue Polisher Boss Fight Room Exit To 4Way Path"; break;
+                        case 2134: eventLabels[i] = "Empty"; break;
+                        case 2135: eventLabels[i] = "Empty"; break;
+                        case 2136: eventLabels[i] = "Empty"; break;
+                        case 2137: eventLabels[i] = "Empty"; break;
+                        case 2138: eventLabels[i] = "Empty"; break;
+                        case 2139: eventLabels[i] = "Empty"; break;
+                        case 2140: eventLabels[i] = "Empty"; break;
+                        case 2141: eventLabels[i] = "Empty"; break;
+                        case 2142: eventLabels[i] = "Empty"; break;
+                        case 2143: eventLabels[i] = "Empty"; break;
+                        case 2144: eventLabels[i] = "Keep 2Nd Room Loader"; break;
+                        case 2145: eventLabels[i] = "Keep Donut Bridge Room Loader"; break;
+                        case 2146: eventLabels[i] = "Keep Donut Lift"; break;
+                        case 2147: eventLabels[i] = "Keep Original Throne Room Loader"; break;
+                        case 2148: eventLabels[i] = "Keep Move Goombas In Original Throne Room"; break;
+                        case 2149: eventLabels[i] = "Keep Resummon Enemies On Exit"; break;
+                        case 2150: eventLabels[i] = "Empty"; break;
+                        case 2151: eventLabels[i] = "Empty"; break;
+                        case 2152: eventLabels[i] = "Empty"; break;
+                        case 2153: eventLabels[i] = "Empty"; break;
+                        case 2154: eventLabels[i] = "Empty"; break;
+                        case 2155: eventLabels[i] = "Empty"; break;
+                        case 2156: eventLabels[i] = "Empty"; break;
+                        case 2157: eventLabels[i] = "Empty"; break;
+                        case 2158: eventLabels[i] = "Empty"; break;
+                        case 2159: eventLabels[i] = "Empty"; break;
+                        case 2160: eventLabels[i] = "Keep Terra Cotta Battle Room Loader"; break;
+                        case 2161: eventLabels[i] = "Keep Terra Cotta Battle Room Summon 1St Battle"; break;
+                        case 2162: eventLabels[i] = "Keep Terra Cotta Battle Room Summon 2Nd Battle"; break;
+                        case 2163: eventLabels[i] = "Keep Terra Cotta Battle Room Summon 3Rd Battle"; break;
+                        case 2164: eventLabels[i] = "Keep Terra Cotta Battle Room Summon 4Th Battle"; break;
+                        case 2165: eventLabels[i] = "Keep Alley Rat Battle Room Loader"; break;
+                        case 2166: eventLabels[i] = "Keep Alley Rat Battle Room Summon 1St Battle"; break;
+                        case 2167: eventLabels[i] = "Keep Alley Rat Battle Room Summon 2Nd Battle"; break;
+                        case 2168: eventLabels[i] = "Keep Alley Rat Battle Room Summon 3Rd Battle"; break;
+                        case 2169: eventLabels[i] = "Keep Alley Rat Battle Room Summon 4Th Battle"; break;
+                        case 2170: eventLabels[i] = "Keep Bobomb Battle Room Loader"; break;
+                        case 2171: eventLabels[i] = "Keep Bobomb Battle Room Summon 1St Battle"; break;
+                        case 2172: eventLabels[i] = "Keep Bobomb Battle Room Summon 2Nd Battle"; break;
+                        case 2173: eventLabels[i] = "Keep Bobomb Battle Room Summon 3Rd Battle"; break;
+                        case 2174: eventLabels[i] = "Keep Bobomb Battle Room Summon 4Th Battle"; break;
+                        case 2175: eventLabels[i] = "Keep Goomba Battle Room Loader"; break;
+                        case 2176: eventLabels[i] = "Keep Goomba Battle Room Summon 1St Battle"; break;
+                        case 2177: eventLabels[i] = "Keep Goomba Battle Room Summon 2Nd Battle"; break;
+                        case 2178: eventLabels[i] = "Keep Goomba Battle Room Summon 3Rd Battle"; break;
+                        case 2179: eventLabels[i] = "Keep Goomba Battle Room Summon 4Th Battle"; break;
+                        case 2180: eventLabels[i] = "Keep Chewy Battle Room Loader"; break;
+                        case 2181: eventLabels[i] = "Keep Chewy Battle Room Summon 1St Battle"; break;
+                        case 2182: eventLabels[i] = "Keep Chewy Battle Room Summon 2Nd Battle"; break;
+                        case 2183: eventLabels[i] = "Keep Chewy Battle Room Summon 3Rd Battle"; break;
+                        case 2184: eventLabels[i] = "Keep Chewy Battle Room Summon 4Th Battle"; break;
+                        case 2185: eventLabels[i] = "Keep Sparky Battle Room Loader"; break;
+                        case 2186: eventLabels[i] = "Keep Sparky Battle Room Summon 1St Battle"; break;
+                        case 2187: eventLabels[i] = "Keep Sparky Battle Room Summon 2Nd Battle"; break;
+                        case 2188: eventLabels[i] = "Keep Sparky Battle Room Summon 3Rd Battle"; break;
+                        case 2189: eventLabels[i] = "Keep Sparky Battle Room Summon 4Th Battle"; break;
+                        case 2190: eventLabels[i] = "Battle Door Mimic Boss Animation"; break;
+                        case 2191: eventLabels[i] = "Empty"; break;
+                        case 2192: eventLabels[i] = "Empty"; break;
+                        case 2193: eventLabels[i] = "Empty"; break;
+                        case 2194: eventLabels[i] = "Empty"; break;
+                        case 2195: eventLabels[i] = "Empty"; break;
+                        case 2196: eventLabels[i] = "Empty"; break;
+                        case 2197: eventLabels[i] = "Empty"; break;
+                        case 2198: eventLabels[i] = "Empty"; break;
+                        case 2199: eventLabels[i] = "Empty"; break;
+                        case 2200: eventLabels[i] = "Empty"; break;
+                        case 2201: eventLabels[i] = "Empty"; break;
+                        case 2202: eventLabels[i] = "Empty"; break;
+                        case 2203: eventLabels[i] = "Empty"; break;
+                        case 2204: eventLabels[i] = "Empty"; break;
+                        case 2205: eventLabels[i] = "Empty"; break;
+                        case 2206: eventLabels[i] = "Empty"; break;
+                        case 2207: eventLabels[i] = "Empty"; break;
+                        case 2208: eventLabels[i] = "Keep 1St Boss Room Loader"; break;
+                        case 2209: eventLabels[i] = "Keep 1St Boss Fight"; break;
+                        case 2210: eventLabels[i] = "Keep 1St Boss Heals You"; break;
+                        case 2211: eventLabels[i] = "Empty"; break;
+                        case 2212: eventLabels[i] = "Empty"; break;
+                        case 2213: eventLabels[i] = "Empty"; break;
+                        case 2214: eventLabels[i] = "Empty"; break;
+                        case 2215: eventLabels[i] = "Empty"; break;
+                        case 2216: eventLabels[i] = "Empty"; break;
+                        case 2217: eventLabels[i] = "Empty"; break;
+                        case 2218: eventLabels[i] = "Empty"; break;
+                        case 2219: eventLabels[i] = "Empty"; break;
+                        case 2220: eventLabels[i] = "Empty"; break;
+                        case 2221: eventLabels[i] = "Empty"; break;
+                        case 2222: eventLabels[i] = "Empty"; break;
+                        case 2223: eventLabels[i] = "Empty"; break;
+                        case 2224: eventLabels[i] = "Keep Final Boss Room Loader"; break;
+                        case 2225: eventLabels[i] = "Keep 2Nd Boss"; break;
+                        case 2226: eventLabels[i] = "Keep 3Rd Boss"; break;
+                        case 2227: eventLabels[i] = "Empty"; break;
+                        case 2228: eventLabels[i] = "Keep Dark Room Loader"; break;
+                        case 2229: eventLabels[i] = "Keep Dark Room Summon Goomba 1"; break;
+                        case 2230: eventLabels[i] = "Keep Dark Room Summon Goomba 2"; break;
+                        case 2231: eventLabels[i] = "Keep Dark Room Summon Goomba 3"; break;
+                        case 2232: eventLabels[i] = "Empty"; break;
+                        case 2233: eventLabels[i] = "Keep 1St Room Loader"; break;
+                        case 2234: eventLabels[i] = "Empty"; break;
+                        case 2235: eventLabels[i] = "Empty"; break;
+                        case 2236: eventLabels[i] = "Empty"; break;
+                        case 2237: eventLabels[i] = "Empty"; break;
+                        case 2238: eventLabels[i] = "Empty"; break;
+                        case 2239: eventLabels[i] = "Empty"; break;
+                        case 2240: eventLabels[i] = "Sets Seaside Inn State"; break;
+                        case 2241: eventLabels[i] = "Sets Seaside Elders House State"; break;
+                        case 2242: eventLabels[i] = "Sets Seaside Wpn Arm Shop State 1"; break;
+                        case 2243: eventLabels[i] = "Sets Seaside Wpn Arm Shop State 2"; break;
+                        case 2244: eventLabels[i] = "Sets Seaside Health Store State"; break;
+                        case 2245: eventLabels[i] = "Sets Mushroom Boy Shop State"; break;
+                        case 2246: eventLabels[i] = "Sets Seaside Accessory Shop State"; break;
+                        case 2247: eventLabels[i] = "Dojo Boss 5"; break;
+                        case 2248: eventLabels[i] = "Empty"; break;
+                        case 2249: eventLabels[i] = "Empty"; break;
+                        case 2250: eventLabels[i] = "Empty"; break;
+                        case 2251: eventLabels[i] = "Empty"; break;
+                        case 2252: eventLabels[i] = "Empty"; break;
+                        case 2253: eventLabels[i] = "Empty"; break;
+                        case 2254: eventLabels[i] = "Empty"; break;
+                        case 2255: eventLabels[i] = "Empty"; break;
+                        case 2256: eventLabels[i] = "Empty"; break;
+                        case 2257: eventLabels[i] = "Empty"; break;
+                        case 2258: eventLabels[i] = "Empty"; break;
+                        case 2259: eventLabels[i] = "Empty"; break;
+                        case 2260: eventLabels[i] = "Empty"; break;
+                        case 2261: eventLabels[i] = "Empty"; break;
+                        case 2262: eventLabels[i] = "Empty"; break;
+                        case 2263: eventLabels[i] = "Empty"; break;
+                        case 2264: eventLabels[i] = "Empty"; break;
+                        case 2265: eventLabels[i] = "Empty"; break;
+                        case 2266: eventLabels[i] = "Empty"; break;
+                        case 2267: eventLabels[i] = "Empty"; break;
+                        case 2268: eventLabels[i] = "Empty"; break;
+                        case 2269: eventLabels[i] = "Empty"; break;
+                        case 2270: eventLabels[i] = "Empty"; break;
+                        case 2271: eventLabels[i] = "Empty"; break;
+                        case 2272: eventLabels[i] = "Moleville Treasure Shop"; break;
+                        case 2273: eventLabels[i] = "Empty"; break;
+                        case 2274: eventLabels[i] = "Empty"; break;
+                        case 2275: eventLabels[i] = "Empty"; break;
+                        case 2276: eventLabels[i] = "Empty"; break;
+                        case 2277: eventLabels[i] = "Empty"; break;
+                        case 2278: eventLabels[i] = "Balcony Loader After Nimbus Castle"; break;
+                        case 2279: eventLabels[i] = "Empty"; break;
+                        case 2280: eventLabels[i] = "Empty"; break;
+                        case 2281: eventLabels[i] = "Empty"; break;
+                        case 2282: eventLabels[i] = "Empty"; break;
+                        case 2283: eventLabels[i] = "Empty"; break;
+                        case 2284: eventLabels[i] = "Empty"; break;
+                        case 2285: eventLabels[i] = "Empty"; break;
+                        case 2286: eventLabels[i] = "Empty"; break;
+                        case 2287: eventLabels[i] = "Empty"; break;
+                        case 2288: eventLabels[i] = "Empty"; break;
+                        case 2289: eventLabels[i] = "Empty"; break;
+                        case 2290: eventLabels[i] = "Empty"; break;
+                        case 2291: eventLabels[i] = "Empty"; break;
+                        case 2292: eventLabels[i] = "Ending Credits Toadofsky"; break;
+                        case 2293: eventLabels[i] = "Empty"; break;
+                        case 2294: eventLabels[i] = "Ending Credits Wedding Loader"; break;
+                        case 2295: eventLabels[i] = "Ending Credits Wedding Logic"; break;
+                        case 2296: eventLabels[i] = "Empty"; break;
+                        case 2297: eventLabels[i] = "Empty"; break;
+                        case 2298: eventLabels[i] = "Empty"; break;
+                        case 2299: eventLabels[i] = "Empty"; break;
+                        case 2300: eventLabels[i] = "Empty"; break;
+                        case 2301: eventLabels[i] = "Empty"; break;
+                        case 2302: eventLabels[i] = "Empty"; break;
+                        case 2303: eventLabels[i] = "Empty"; break;
+                        case 2304: eventLabels[i] = "Bank 1F Return Event 2"; break;
+                        case 2305: eventLabels[i] = "Slot Chest Template"; break;
+                        case 2306: eventLabels[i] = "Empty"; break;
+                        case 2307: eventLabels[i] = "Tower Button"; break;
+                        case 2308: eventLabels[i] = "Booster Pass 1St Room Loader"; break;
+                        case 2309: eventLabels[i] = "Booster Pass Lakitu Tosses Spiny"; break;
+                        case 2310: eventLabels[i] = "Empty"; break;
+                        case 2311: eventLabels[i] = "Booster Pass Artichoker Encounter 1"; break;
+                        case 2312: eventLabels[i] = "Booster Pass Spiny Coin Button"; break;
+                        case 2313: eventLabels[i] = "Booster Pass Artichoker Encounter 2"; break;
+                        case 2314: eventLabels[i] = "Empty"; break;
+                        case 2315: eventLabels[i] = "Tower Parachute Room Loader"; break;
+                        case 2316: eventLabels[i] = "Gardener Exterior Loader"; break;
+                        case 2317: eventLabels[i] = "Gardener Cloud Loader"; break;
+                        case 2318: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2319: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2320: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2321: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2322: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2323: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2324: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2325: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2326: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2327: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2328: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2329: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2330: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2331: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2332: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2333: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2334: eventLabels[i] = "Empty"; break;
+                        case 2335: eventLabels[i] = "Tower First Staircase Loader"; break;
+                        case 2336: eventLabels[i] = "Tower First Staircase Spookum Direction 1"; break;
+                        case 2337: eventLabels[i] = "Tower First Staircase Spookum Direction 2"; break;
+                        case 2338: eventLabels[i] = "Tower Button Room Loader"; break;
+                        case 2339: eventLabels[i] = "Tower First Staircase Controls Npc Behind Curtain"; break;
+                        case 2340: eventLabels[i] = "Tower Seesaw Chest Room Loader"; break;
+                        case 2341: eventLabels[i] = "Tower Seesaw Chest"; break;
+                        case 2342: eventLabels[i] = "Tower Seesaw Chest Contd"; break;
+                        case 2343: eventLabels[i] = "Tower Seesaw Room Set Origin"; break;
+                        case 2344: eventLabels[i] = "Tower Thwomp Seesaw Room Loader"; break;
+                        case 2345: eventLabels[i] = "Tower Thwomp Seesaw"; break;
+                        case 2346: eventLabels[i] = "Tower Thwomp Seesaw Contd"; break;
+                        case 2347: eventLabels[i] = "Tower Top Floor Dummy Chest"; break;
+                        case 2348: eventLabels[i] = "Tower Bullet Bill Room Loader"; break;
+                        case 2349: eventLabels[i] = "Tower Spookum Jumps Out"; break;
+                        case 2350: eventLabels[i] = "Climb Gardener Beanstalk"; break;
+                        case 2351: eventLabels[i] = "Tower Start Bullet Bills Animation"; break;
+                        case 2352: eventLabels[i] = "Tower Start Bullet Bills"; break;
+                        case 2353: eventLabels[i] = "Tower Henchman 3"; break;
+                        case 2354: eventLabels[i] = "Empty"; break;
+                        case 2355: eventLabels[i] = "Empty"; break;
+                        case 2356: eventLabels[i] = "Empty"; break;
+                        case 2357: eventLabels[i] = "Empty"; break;
+                        case 2358: eventLabels[i] = "Tower Thwomp Seesaw Room Loader Contd"; break;
+                        case 2359: eventLabels[i] = "Abyss 1St Save Room Loader"; break;
+                        case 2360: eventLabels[i] = "Abyss 1St Trampoline Catcher Loader"; break;
+                        case 2361: eventLabels[i] = "Abyss Ameboid Button Room Loader"; break;
+                        case 2362: eventLabels[i] = "Abyss Four Bolt Room Loader"; break;
+                        case 2363: eventLabels[i] = "Abyss 1St Boss Room Loader"; break;
+                        case 2364: eventLabels[i] = "Tower Top Floor Chest Room Loader"; break;
+                        case 2365: eventLabels[i] = "Empty"; break;
+                        case 2366: eventLabels[i] = "Empty"; break;
+                        case 2367: eventLabels[i] = "Empty"; break;
+                        case 2368: eventLabels[i] = "Empty"; break;
+                        case 2369: eventLabels[i] = "Abyss Bolt"; break;
+                        case 2370: eventLabels[i] = "Abyss Bolt"; break;
+                        case 2371: eventLabels[i] = "Abyss Bolt"; break;
+                        case 2372: eventLabels[i] = "Abyss Bolt"; break;
+                        case 2373: eventLabels[i] = "Empty"; break;
+                        case 2374: eventLabels[i] = "Empty"; break;
+                        case 2375: eventLabels[i] = "Empty"; break;
+                        case 2376: eventLabels[i] = "Empty"; break;
+                        case 2377: eventLabels[i] = "Empty"; break;
+                        case 2378: eventLabels[i] = "Tower Parachute Room Hidden Item"; break;
+                        case 2379: eventLabels[i] = "Abyss 1St Save Room Background"; break;
+                        case 2380: eventLabels[i] = "Abyss Bolt Near Side"; break;
+                        case 2381: eventLabels[i] = "Abyss Bolt Far Side"; break;
+                        case 2382: eventLabels[i] = "Abyss Bolt Near Side"; break;
+                        case 2383: eventLabels[i] = "Abyss Bolt Far Side"; break;
+                        case 2384: eventLabels[i] = "Gardeners House Loader"; break;
+                        case 2385: eventLabels[i] = "Abyss Four Bolt Room Background"; break;
+                        case 2386: eventLabels[i] = "Abyss Four Bolt Room Bolt"; break;
+                        case 2387: eventLabels[i] = "Bean Valley Boss Prize Pickup"; break;
+                        case 2388: eventLabels[i] = "Abyss Ameboid Button"; break;
+                        case 2389: eventLabels[i] = "Empty"; break;
+                        case 2390: eventLabels[i] = "Abyss 1St Save Point"; break;
+                        case 2391: eventLabels[i] = "Beanstalk From Inside Gardeners House"; break;
+                        case 2392: eventLabels[i] = "Gardener"; break;
+                        case 2393: eventLabels[i] = "Abyss Exit Trampoline"; break;
+                        case 2394: eventLabels[i] = "Empty"; break;
+                        case 2395: eventLabels[i] = "Empty"; break;
+                        case 2396: eventLabels[i] = "Empty"; break;
+                        case 2397: eventLabels[i] = "Empty"; break;
+                        case 2398: eventLabels[i] = "Empty"; break;
+                        case 2399: eventLabels[i] = "Abyss Room 1 Loader"; break;
+                        case 2400: eventLabels[i] = "Empty"; break;
+                        case 2401: eventLabels[i] = "Begin 8Bit"; break;
+                        case 2402: eventLabels[i] = "8Bit Background"; break;
+                        case 2403: eventLabels[i] = "8Bit End East"; break;
+                        case 2404: eventLabels[i] = "8Bit End West"; break;
+                        case 2405: eventLabels[i] = "Star Hill Final Area Loader"; break;
+                        case 2406: eventLabels[i] = "Empty"; break;
+                        case 2407: eventLabels[i] = "Star Hill Final Exit"; break;
+                        case 2408: eventLabels[i] = "Abyss Bolt Near Side"; break;
+                        case 2409: eventLabels[i] = "Abyss Room Before 1St Boss Loader"; break;
+                        case 2410: eventLabels[i] = "Forest Tree Generic Underground Trampoline"; break;
+                        case 2411: eventLabels[i] = "Forest Underground 2 Exit Trampoline"; break;
+                        case 2412: eventLabels[i] = "Forest Secret Trampoline"; break;
+                        case 2413: eventLabels[i] = "Forest Underground 2 Entrance Trampoline"; break;
+                        case 2414: eventLabels[i] = "Forest Underground 1 Exit Trampoline"; break;
+                        case 2415: eventLabels[i] = "Forest Underground 1 Entrance Trampoline"; break;
+                        case 2416: eventLabels[i] = "Forest Trampoline Business Logic"; break;
+                        case 2417: eventLabels[i] = "Tower Chomp Stairway Loader"; break;
+                        case 2418: eventLabels[i] = "Forest Underground 1 Loader"; break;
+                        case 2419: eventLabels[i] = "Empty"; break;
+                        case 2420: eventLabels[i] = "Empty"; break;
+                        case 2421: eventLabels[i] = "Empty"; break;
+                        case 2422: eventLabels[i] = "Abyss Room Before 1St Boss Lower Trampoline"; break;
+                        case 2423: eventLabels[i] = "Abyss Trampoline To 1St Boss"; break;
+                        case 2424: eventLabels[i] = "Forest Arrow Hits You"; break;
+                        case 2425: eventLabels[i] = "Forest Maze Secret Loader"; break;
+                        case 2426: eventLabels[i] = "Forest Mushroom Pickup"; break;
+                        case 2427: eventLabels[i] = "Forest Underground 2 Loader"; break;
+                        case 2428: eventLabels[i] = "Empty"; break;
+                        case 2429: eventLabels[i] = "Forest Unknown Summoner"; break;
+                        case 2430: eventLabels[i] = "Forest Premaze Save Room Loader"; break;
+                        case 2431: eventLabels[i] = "Forest Maze Area Loader"; break;
+                        case 2432: eventLabels[i] = "Forest Maze Transition"; break;
+                        case 2433: eventLabels[i] = "Forest Maze Transition"; break;
+                        case 2434: eventLabels[i] = "Forest Maze Transition"; break;
+                        case 2435: eventLabels[i] = "Forest Maze Transition"; break;
+                        case 2436: eventLabels[i] = "Forest Boss Room Exit To Maze"; break;
+                        case 2437: eventLabels[i] = "Forest Boss Room Exit To World Map"; break;
+                        case 2438: eventLabels[i] = "Forest Secret Trunk"; break;
+                        case 2439: eventLabels[i] = "Forest Secret Area Exit"; break;
+                        case 2440: eventLabels[i] = "Forest Final Wiggler Pipe"; break;
+                        case 2441: eventLabels[i] = "Forest 1St Trunk"; break;
+                        case 2442: eventLabels[i] = "Forest Initiate Maze"; break;
+                        case 2443: eventLabels[i] = "Forest Room Before Trunks Area Trunk"; break;
+                        case 2444: eventLabels[i] = "Forest Premaze Save Room Trunk"; break;
+                        case 2445: eventLabels[i] = "Tower Small Save Room Loader"; break;
+                        case 2446: eventLabels[i] = "Forest Boss Henchmen Bounce"; break;
+                        case 2447: eventLabels[i] = "Forest Summon Fast Amanita"; break;
+                        case 2448: eventLabels[i] = "Forest Boss Fight"; break;
+                        case 2449: eventLabels[i] = "Forest Trunk Room Rightmost Trunk"; break;
+                        case 2450: eventLabels[i] = "Forest Trunk Room Lowest Trunk"; break;
+                        case 2451: eventLabels[i] = "Forest Trunk Room Middle Right Trunk"; break;
+                        case 2452: eventLabels[i] = "Forest Trunk Room Middle Left Trunk"; break;
+                        case 2453: eventLabels[i] = "Forest Trunk Room Upper Left Trunk"; break;
+                        case 2454: eventLabels[i] = "Forest Trunk Room Upper Right Trunk"; break;
+                        case 2455: eventLabels[i] = "Forest Trunk Room Wiggler Trunk"; break;
+                        case 2456: eventLabels[i] = "Awaken Sleeping Wiggler"; break;
+                        case 2457: eventLabels[i] = "Star Hill 1St Room Summon South Sackit"; break;
+                        case 2458: eventLabels[i] = "Star Hill 1St Room Summon North Sackit"; break;
+                        case 2459: eventLabels[i] = "Star Hill 1St Room Summon Northwest Sackit"; break;
+                        case 2460: eventLabels[i] = "Star Hill 1St Room Summon Southeast Sackit"; break;
+                        case 2461: eventLabels[i] = "Star Hill 2Nd Room Summon North Sackit"; break;
+                        case 2462: eventLabels[i] = "Star Hill 2Nd Room Summon East Sackit"; break;
+                        case 2463: eventLabels[i] = "Star Hill 2Nd Room Summon West Sackit"; break;
+                        case 2464: eventLabels[i] = "Star Hill 2Nd Room Summon Central Sackit"; break;
+                        case 2465: eventLabels[i] = "Empty"; break;
+                        case 2466: eventLabels[i] = "Bean Valley 1St Room Loader"; break;
+                        case 2467: eventLabels[i] = "Bean Valley Pipe To Dead End"; break;
+                        case 2468: eventLabels[i] = "Bean Valley Dead End Pipe"; break;
+                        case 2469: eventLabels[i] = "Bean Valley 1St Progression Pipe"; break;
+                        case 2470: eventLabels[i] = "Bean Valley 1St Progression Pipe Reverse"; break;
+                        case 2471: eventLabels[i] = "Bean Valley 2Nd Progression Pipe"; break;
+                        case 2472: eventLabels[i] = "Bean Valley 2Nd Progression Pipe Reverse"; break;
+                        case 2473: eventLabels[i] = "Bean Valley Pipe To 1St Chest"; break;
+                        case 2474: eventLabels[i] = "Bean Valley 1St Chest Pipe"; break;
+                        case 2475: eventLabels[i] = "Star Hill 3Rd Room Summon Sackit"; break;
+                        case 2476: eventLabels[i] = "Bean Valley 5 Pipe Area Loader"; break;
+                        case 2477: eventLabels[i] = "Bean Valley Piranha Plant Animations"; break;
+                        case 2478: eventLabels[i] = "Bean Valley Beanstalk Room Loader"; break;
+                        case 2479: eventLabels[i] = "Bean Valley Bottom Left Piranha"; break;
+                        case 2480: eventLabels[i] = "Bean Valley Bottom Right Piranha"; break;
+                        case 2481: eventLabels[i] = "Bean Valley Rightmost Piranha"; break;
+                        case 2482: eventLabels[i] = "Bean Valley Top Piranha"; break;
+                        case 2483: eventLabels[i] = "Bean Valley Leftmost Piranha"; break;
+                        case 2484: eventLabels[i] = "Bean Valley Top Pipe"; break;
+                        case 2485: eventLabels[i] = "Bean Valley Leftmost Pipe"; break;
+                        case 2486: eventLabels[i] = "Bean Valley Bottom Left Pipe"; break;
+                        case 2487: eventLabels[i] = "Bean Valley Rightmost Pipe"; break;
+                        case 2488: eventLabels[i] = "Bean Valley Bottom Right Pipe"; break;
+                        case 2489: eventLabels[i] = "Bean Valley Leftmost Pipe Basement Loader"; break;
+                        case 2490: eventLabels[i] = "Bean Valley Leftmost Pipe Basement Original Slot Machine"; break;
+                        case 2491: eventLabels[i] = "Bean Valley Bottom Left Pipe Basement Original Slot Machine"; break;
+                        case 2492: eventLabels[i] = "Bean Valley Bottom Right Pipe Basement Original Slot Machine"; break;
+                        case 2493: eventLabels[i] = "Mimic 3"; break;
+                        case 2494: eventLabels[i] = "Empty"; break;
+                        case 2495: eventLabels[i] = "Empty"; break;
+                        case 2496: eventLabels[i] = "Start Game"; break;
+                        case 2497: eventLabels[i] = "Additional Gating Logic Start Playing"; break;
+                        case 2498: eventLabels[i] = "Empty"; break;
+                        case 2499: eventLabels[i] = "Empty"; break;
+                        case 2500: eventLabels[i] = "Empty"; break;
+                        case 2501: eventLabels[i] = "Empty"; break;
+                        case 2502: eventLabels[i] = "Empty"; break;
+                        case 2503: eventLabels[i] = "Star Hill 3Rd Room Top Left Flower"; break;
+                        case 2504: eventLabels[i] = "Star Hill 3Rd Room Bottom Left Flower"; break;
+                        case 2505: eventLabels[i] = "Star Hill 3Rd Room Door Front Flower"; break;
+                        case 2506: eventLabels[i] = "Star Hill 3Rd Room Door Back Flower"; break;
+                        case 2507: eventLabels[i] = "Star Hill 3Rd Room Top Right Flower"; break;
+                        case 2508: eventLabels[i] = "Star Hill 3Rd Room Bottom Right Flower"; break;
+                        case 2509: eventLabels[i] = "Star Hill 3Rd Room Open Door"; break;
+                        case 2510: eventLabels[i] = "Star Hill 1St Room Top Left Flower"; break;
+                        case 2511: eventLabels[i] = "Star Hill 1St Room Bottom Left Flower"; break;
+                        case 2512: eventLabels[i] = "Star Hill 1St Room Bottom Middle Flower"; break;
+                        case 2513: eventLabels[i] = "Star Hill 1St Room Top Right Flower"; break;
+                        case 2514: eventLabels[i] = "Star Hill 1St Room Bottom Right Flower"; break;
+                        case 2515: eventLabels[i] = "Star Hill 1St Room Open Door"; break;
+                        case 2516: eventLabels[i] = "Star Hill 2Nd Room Top Left Flower"; break;
+                        case 2517: eventLabels[i] = "Star Hill 2Nd Room Bottom Left Flower"; break;
+                        case 2518: eventLabels[i] = "Star Hill 2Nd Room Central Left Flower"; break;
+                        case 2519: eventLabels[i] = "Star Hill 2Nd Room Central Right Flower"; break;
+                        case 2520: eventLabels[i] = "Star Hill 2Nd Room Top Right Flower"; break;
+                        case 2521: eventLabels[i] = "Star Hill 2Nd Room Bottom Right Flower"; break;
+                        case 2522: eventLabels[i] = "Star Hill 2Nd Room Open Door"; break;
+                        case 2523: eventLabels[i] = "Star Hill 1St Room Use Door"; break;
+                        case 2524: eventLabels[i] = "Star Hill 2Nd Room Loader"; break;
+                        case 2525: eventLabels[i] = "Star Hill 2Nd Room Use Door"; break;
+                        case 2526: eventLabels[i] = "Star Hill 1St Room Loader"; break;
+                        case 2527: eventLabels[i] = "Star Hill 1St Room Wish In Front Of Door"; break;
+                        case 2528: eventLabels[i] = "Star Hill 1St Room Wish Southeast Of Door"; break;
+                        case 2529: eventLabels[i] = "Star Hill 1St Room Wish Top Left"; break;
+                        case 2530: eventLabels[i] = "Star Hill 1St Room Wish Bottom Right"; break;
+                        case 2531: eventLabels[i] = "Star Hill 2Nd Room Wish Bottom Right"; break;
+                        case 2532: eventLabels[i] = "Star Hill 2Nd Room Wish Bottom Left"; break;
+                        case 2533: eventLabels[i] = "Star Hill 2Nd Room Wish In Front Of Door"; break;
+                        case 2534: eventLabels[i] = "Star Hill 2Nd Room Wish Top Right"; break;
+                        case 2535: eventLabels[i] = "Star Hill 2Nd Room Wish Top Left"; break;
+                        case 2536: eventLabels[i] = "Star Hill 3Rd Room Wish Top Left"; break;
+                        case 2537: eventLabels[i] = "Star Hill 3Rd Room Wish Behind Door Left"; break;
+                        case 2538: eventLabels[i] = "Star Hill 3Rd Room Wish Behind Door Right"; break;
+                        case 2539: eventLabels[i] = "Bean Valley Leftmost Pipe Basement Trampoline"; break;
+                        case 2540: eventLabels[i] = "Bean Valley Top Pipe Basement Trampoline"; break;
+                        case 2541: eventLabels[i] = "Bean Valley Top Pipe Basement Loader"; break;
+                        case 2542: eventLabels[i] = "Bean Valley Bottom Left Pipe Basement Trampoline"; break;
+                        case 2543: eventLabels[i] = "Bean Valley Bottom Left Pipe Basement Loader"; break;
+                        case 2544: eventLabels[i] = "Bean Valley Rightmost Pipe Basement Loader"; break;
+                        case 2545: eventLabels[i] = "Bean Valley Rightmost Pipe Basement Trampoline To Five Pipe Room"; break;
+                        case 2546: eventLabels[i] = "Bean Valley Rightmost Pipe Basement Trampoline To Lone Chest"; break;
+                        case 2547: eventLabels[i] = "Bean Valley Rightmost Pipe"; break;
+                        case 2548: eventLabels[i] = "Bean Valley Bottom Right Pipe"; break;
+                        case 2549: eventLabels[i] = "Bean Valley Bottom Right Pipe Basement Loader"; break;
+                        case 2550: eventLabels[i] = "Bean Valley Rightmost Pipe Basement Geckit Runs At You"; break;
+                        case 2551: eventLabels[i] = "Empty"; break;
+                        case 2552: eventLabels[i] = "Empty"; break;
+                        case 2553: eventLabels[i] = "Empty"; break;
+                        case 2554: eventLabels[i] = "Bean Valley Rightmost Pipe Basement Staircase Item"; break;
+                        case 2555: eventLabels[i] = "Bean Valley Boss Room Loader"; break;
+                        case 2556: eventLabels[i] = "Bean Valley Boss Fight"; break;
+                        case 2557: eventLabels[i] = "Bean Valley Waters Boss"; break;
+                        case 2558: eventLabels[i] = "Bean Valley Boss Room Pipe"; break;
+                        case 2559: eventLabels[i] = "Bean Valley Beanstalk Room Pipe"; break;
+                        case 2560: eventLabels[i] = "Empty"; break;
+                        case 2561: eventLabels[i] = "Empty"; break;
+                        case 2562: eventLabels[i] = "Empty"; break;
+                        case 2563: eventLabels[i] = "Reveal Bean Valley Beanstalk"; break;
+                        case 2564: eventLabels[i] = "Booster Pass Bush Item"; break;
+                        case 2565: eventLabels[i] = "Empty"; break;
+                        case 2566: eventLabels[i] = "Empty"; break;
+                        case 2567: eventLabels[i] = "Empty"; break;
+                        case 2568: eventLabels[i] = "Booster Pass Exit To Secret"; break;
+                        case 2569: eventLabels[i] = "Booster Pass Secret Exit"; break;
+                        case 2570: eventLabels[i] = "Booster Pass Secret Loader"; break;
+                        case 2571: eventLabels[i] = "Booster Pass Secret Background"; break;
+                        case 2572: eventLabels[i] = "Booster Pass Exit From Room 1 To Room 2"; break;
+                        case 2573: eventLabels[i] = "Empty"; break;
+                        case 2574: eventLabels[i] = "Tower First Staircase Chest"; break;
+                        case 2575: eventLabels[i] = "Tower 8Bit Music"; break;
+                        case 2576: eventLabels[i] = "Tower 8Bit Room Loader"; break;
+                        case 2577: eventLabels[i] = "Empty"; break;
+                        case 2578: eventLabels[i] = "Booster Tower Small Save Room Back Exit"; break;
+                        case 2579: eventLabels[i] = "Empty"; break;
+                        case 2580: eventLabels[i] = "Empty"; break;
+                        case 2581: eventLabels[i] = "Empty"; break;
+                        case 2582: eventLabels[i] = "Empty"; break;
+                        case 2583: eventLabels[i] = "Empty"; break;
+                        case 2584: eventLabels[i] = "Empty"; break;
+                        case 2585: eventLabels[i] = "Empty"; break;
+                        case 2586: eventLabels[i] = "Booster Pass Apprentice Fight"; break;
+                        case 2587: eventLabels[i] = "Snifit 4"; break;
+                        case 2588: eventLabels[i] = "Snifit 5"; break;
+                        case 2589: eventLabels[i] = "Snifit 6"; break;
+                        case 2590: eventLabels[i] = "Snifit 7"; break;
+                        case 2591: eventLabels[i] = "Snifit 8"; break;
+                        case 2592: eventLabels[i] = "Abyss Fall Off Before First Boss"; break;
+                        case 2593: eventLabels[i] = "Abyss Pre First Boss Bolt"; break;
+                        case 2594: eventLabels[i] = "Abyss Pre First Boss Bolt"; break;
+                        case 2595: eventLabels[i] = "Abyss Save Room With Chest Loader"; break;
+                        case 2596: eventLabels[i] = "Abyss 1St Boss Fight"; break;
+                        case 2597: eventLabels[i] = "Abyss Pre First Boss Bolt"; break;
+                        case 2598: eventLabels[i] = "Forest Secret Entrance Loader"; break;
+                        case 2599: eventLabels[i] = "Empty"; break;
+                        case 2600: eventLabels[i] = "Empty"; break;
+                        case 2601: eventLabels[i] = "Factory 4Th Room Loader"; break;
+                        case 2602: eventLabels[i] = "Bean Valley Exit To World Map"; break;
+                        case 2603: eventLabels[i] = "Factory 4Th Boss Fight"; break;
+                        case 2604: eventLabels[i] = "Abyss Chest Before 1St Boss"; break;
+                        case 2605: eventLabels[i] = "Factory 1St Room Before Fight Loader"; break;
+                        case 2606: eventLabels[i] = "Factory 1St Boss"; break;
+                        case 2607: eventLabels[i] = "Empty"; break;
+                        case 2608: eventLabels[i] = "Factory 1St Room Exit To 2Nd Room"; break;
+                        case 2609: eventLabels[i] = "Empty"; break;
+                        case 2610: eventLabels[i] = "Empty"; break;
+                        case 2611: eventLabels[i] = "Empty"; break;
+                        case 2612: eventLabels[i] = "Empty"; break;
+                        case 2613: eventLabels[i] = "Empty"; break;
+                        case 2614: eventLabels[i] = "Empty"; break;
+                        case 2615: eventLabels[i] = "Empty"; break;
+                        case 2616: eventLabels[i] = "Factory 4Th Room Green Button"; break;
+                        case 2617: eventLabels[i] = "Factory 2Nd Room Loader"; break;
+                        case 2618: eventLabels[i] = "Factory 2Nd Boss"; break;
+                        case 2619: eventLabels[i] = "Ending Credits Sunset"; break;
+                        case 2620: eventLabels[i] = "Factory 3Rd Room Background Npcs Bonk Conveyor"; break;
+                        case 2621: eventLabels[i] = "Factory 3Rd Room Loader"; break;
+                        case 2622: eventLabels[i] = "Ending Credits Keep"; break;
+                        case 2623: eventLabels[i] = "Empty"; break;
+                        case 2624: eventLabels[i] = "Empty"; break;
+                        case 2625: eventLabels[i] = "Empty"; break;
+                        case 2626: eventLabels[i] = "Empty"; break;
+                        case 2627: eventLabels[i] = "Factory 3Rd Boss Fight"; break;
+                        case 2628: eventLabels[i] = "Ending Credits Sunset Opener"; break;
+                        case 2629: eventLabels[i] = "Ending Credits Keep Opener"; break;
+                        case 2630: eventLabels[i] = "Blackjack Table"; break;
+                        case 2631: eventLabels[i] = "Casino Slot Machine"; break;
+                        case 2632: eventLabels[i] = "Blackjack Guy"; break;
+                        case 2633: eventLabels[i] = "Casino Interior Loader"; break;
+                        case 2634: eventLabels[i] = "Casino Slot Machine"; break;
+                        case 2635: eventLabels[i] = "Casino Doorway Loader"; break;
+                        case 2636: eventLabels[i] = "Casino Guard"; break;
+                        case 2637: eventLabels[i] = "Casino Grate Guy"; break;
+                        case 2638: eventLabels[i] = "Empty"; break;
+                        case 2639: eventLabels[i] = "Empty"; break;
+                        case 2640: eventLabels[i] = "Booster Pass Right Chest"; break;
+                        case 2641: eventLabels[i] = "Factory 1St Room Loader After Fight"; break;
+                        case 2642: eventLabels[i] = "Empty"; break;
+                        case 2643: eventLabels[i] = "Toad Shop"; break;
+                        case 2644: eventLabels[i] = "Empty"; break;
+                        case 2645: eventLabels[i] = "Casino Subroutine"; break;
+                        case 2646: eventLabels[i] = "Casino Grate Guy Await Button"; break;
+                        case 2647: eventLabels[i] = "Empty"; break;
+                        case 2648: eventLabels[i] = "Casino Exterior Loader"; break;
+                        case 2649: eventLabels[i] = "Casino Grate Guy Random Prize Granter"; break;
+                        case 2650: eventLabels[i] = "Casino Grate Guy Check If Sidequest Completed"; break;
+                        case 2651: eventLabels[i] = "Bucket Warp Check Granter"; break;
+                        case 2652: eventLabels[i] = "Seaside Exit To Beach"; break;
+                        case 2653: eventLabels[i] = "Empty"; break;
+                        case 2654: eventLabels[i] = "Empty"; break;
+                        case 2655: eventLabels[i] = "Empty"; break;
+                        case 2656: eventLabels[i] = "Empty"; break;
+                        case 2657: eventLabels[i] = "Empty"; break;
+                        case 2658: eventLabels[i] = "Empty"; break;
+                        case 2659: eventLabels[i] = "Empty"; break;
+                        case 2660: eventLabels[i] = "Empty"; break;
+                        case 2661: eventLabels[i] = "Empty"; break;
+                        case 2662: eventLabels[i] = "Empty"; break;
+                        case 2663: eventLabels[i] = "Empty"; break;
+                        case 2664: eventLabels[i] = "Empty"; break;
+                        case 2665: eventLabels[i] = "Empty"; break;
+                        case 2666: eventLabels[i] = "Empty"; break;
+                        case 2667: eventLabels[i] = "Empty"; break;
+                        case 2668: eventLabels[i] = "Knife Guy Second Grant"; break;
+                        case 2669: eventLabels[i] = "Empty"; break;
+                        case 2670: eventLabels[i] = "Tower Knife Guy Consolation Prize"; break;
+                        case 2671: eventLabels[i] = "Tower Knife Guy Check If Sidequest Completed"; break;
+                        case 2672: eventLabels[i] = "Tower Knife Guy Minigame Business Logic"; break;
+                        case 2673: eventLabels[i] = "Tower Knife Guy Minigame Business Logic Subroutine"; break;
+                        case 2674: eventLabels[i] = "Tower Knife Guy Minigame Business Logic Subroutine"; break;
+                        case 2675: eventLabels[i] = "Clone Reserved"; break;
+                        case 2676: eventLabels[i] = "Clone Reserved"; break;
+                        case 2677: eventLabels[i] = "Clone Reserved"; break;
+                        case 2678: eventLabels[i] = "Clone Reserved"; break;
+                        case 2679: eventLabels[i] = "Clone Reserved"; break;
+                        case 2680: eventLabels[i] = "Clone Reserved"; break;
+                        case 2681: eventLabels[i] = "Clone Reserved"; break;
+                        case 2682: eventLabels[i] = "Clone Reserved"; break;
+                        case 2683: eventLabels[i] = "Clone Reserved"; break;
+                        case 2684: eventLabels[i] = "Clone Reserved"; break;
+                        case 2685: eventLabels[i] = "Clone Reserved"; break;
+                        case 2686: eventLabels[i] = "Clone Reserved"; break;
+                        case 2687: eventLabels[i] = "Clone Reserved"; break;
+                        case 2688: eventLabels[i] = "Clone Reserved"; break;
+                        case 2689: eventLabels[i] = "Clone Reserved"; break;
+                        case 2690: eventLabels[i] = "Clone Reserved"; break;
+                        case 2691: eventLabels[i] = "Clone Reserved"; break;
+                        case 2692: eventLabels[i] = "Clone Reserved"; break;
+                        case 2693: eventLabels[i] = "Clone Reserved"; break;
+                        case 2694: eventLabels[i] = "Clone Reserved"; break;
+                        case 2695: eventLabels[i] = "Clone Reserved"; break;
+                        case 2696: eventLabels[i] = "Clone Reserved"; break;
+                        case 2697: eventLabels[i] = "Clone Reserved"; break;
+                        case 2698: eventLabels[i] = "Clone Reserved"; break;
+                        case 2699: eventLabels[i] = "Clone Reserved"; break;
+                        case 2700: eventLabels[i] = "Clone Reserved"; break;
+                        case 2701: eventLabels[i] = "Clone Reserved"; break;
+                        case 2702: eventLabels[i] = "Clone Reserved"; break;
+                        case 2703: eventLabels[i] = "Clone Reserved"; break;
+                        case 2704: eventLabels[i] = "Clone Reserved"; break;
+                        case 2705: eventLabels[i] = "Clone Reserved"; break;
+                        case 2706: eventLabels[i] = "Clone Reserved"; break;
+                        case 2707: eventLabels[i] = "Clone Reserved"; break;
+                        case 2708: eventLabels[i] = "Clone Reserved"; break;
+                        case 2709: eventLabels[i] = "Clone Reserved"; break;
+                        case 2710: eventLabels[i] = "Clone Reserved"; break;
+                        case 2711: eventLabels[i] = "Clone Reserved"; break;
+                        case 2712: eventLabels[i] = "Clone Reserved"; break;
+                        case 2713: eventLabels[i] = "Clone Reserved"; break;
+                        case 2714: eventLabels[i] = "Clone Reserved"; break;
+                        case 2715: eventLabels[i] = "Clone Reserved"; break;
+                        case 2716: eventLabels[i] = "Clone Reserved"; break;
+                        case 2717: eventLabels[i] = "Clone Reserved"; break;
+                        case 2718: eventLabels[i] = "Clone Reserved"; break;
+                        case 2719: eventLabels[i] = "Clone Reserved"; break;
+                        case 2720: eventLabels[i] = "Clone Reserved"; break;
+                        case 2721: eventLabels[i] = "Clone Reserved"; break;
+                        case 2722: eventLabels[i] = "Clone Reserved"; break;
+                        case 2723: eventLabels[i] = "Clone Reserved"; break;
+                        case 2724: eventLabels[i] = "Clone Reserved"; break;
+                        case 2725: eventLabels[i] = "Clone Reserved"; break;
+                        case 2726: eventLabels[i] = "Clone Reserved"; break;
+                        case 2727: eventLabels[i] = "Clone Reserved"; break;
+                        case 2728: eventLabels[i] = "Clone Reserved"; break;
+                        case 2729: eventLabels[i] = "Clone Reserved"; break;
+                        case 2730: eventLabels[i] = "Clone Reserved"; break;
+                        case 2731: eventLabels[i] = "Clone Reserved"; break;
+                        case 2732: eventLabels[i] = "Clone Reserved"; break;
+                        case 2733: eventLabels[i] = "Clone Reserved"; break;
+                        case 2734: eventLabels[i] = "Clone Reserved"; break;
+                        case 2735: eventLabels[i] = "Clone Reserved"; break;
+                        case 2736: eventLabels[i] = "Clone Reserved"; break;
+                        case 2737: eventLabels[i] = "Clone Reserved"; break;
+                        case 2738: eventLabels[i] = "Clone Reserved"; break;
+                        case 2739: eventLabels[i] = "Clone Reserved"; break;
+                        case 2740: eventLabels[i] = "Clone Reserved"; break;
+                        case 2741: eventLabels[i] = "Clone Reserved"; break;
+                        case 2742: eventLabels[i] = "Clone Reserved"; break;
+                        case 2743: eventLabels[i] = "Clone Reserved"; break;
+                        case 2744: eventLabels[i] = "Clone Reserved"; break;
+                        case 2745: eventLabels[i] = "Clone Reserved"; break;
+                        case 2746: eventLabels[i] = "Clone Reserved"; break;
+                        case 2747: eventLabels[i] = "Clone Reserved"; break;
+                        case 2748: eventLabels[i] = "Clone Reserved"; break;
+                        case 2749: eventLabels[i] = "Clone Reserved"; break;
+                        case 2750: eventLabels[i] = "Clone Reserved"; break;
+                        case 2751: eventLabels[i] = "Clone Reserved"; break;
+                        case 2752: eventLabels[i] = "Clone Reserved"; break;
+                        case 2753: eventLabels[i] = "Clone Reserved"; break;
+                        case 2754: eventLabels[i] = "Clone Reserved"; break;
+                        case 2755: eventLabels[i] = "Clone Reserved"; break;
+                        case 2756: eventLabels[i] = "Clone Reserved"; break;
+                        case 2757: eventLabels[i] = "Clone Reserved"; break;
+                        case 2758: eventLabels[i] = "Clone Reserved"; break;
+                        case 2759: eventLabels[i] = "Clone Reserved"; break;
+                        case 2760: eventLabels[i] = "Clone Reserved"; break;
+                        case 2761: eventLabels[i] = "Clone Reserved"; break;
+                        case 2762: eventLabels[i] = "Clone Reserved"; break;
+                        case 2763: eventLabels[i] = "Clone Reserved"; break;
+                        case 2764: eventLabels[i] = "Clone Reserved"; break;
+                        case 2765: eventLabels[i] = "Clone Reserved"; break;
+                        case 2766: eventLabels[i] = "Clone Reserved"; break;
+                        case 2767: eventLabels[i] = "Clone Reserved"; break;
+                        case 2768: eventLabels[i] = "Clone Reserved"; break;
+                        case 2769: eventLabels[i] = "Clone Reserved"; break;
+                        case 2770: eventLabels[i] = "Clone Reserved"; break;
+                        case 2771: eventLabels[i] = "Clone Reserved"; break;
+                        case 2772: eventLabels[i] = "Clone Reserved"; break;
+                        case 2773: eventLabels[i] = "Clone Reserved"; break;
+                        case 2774: eventLabels[i] = "Clone Reserved"; break;
+                        case 2775: eventLabels[i] = "Clone Reserved"; break;
+                        case 2776: eventLabels[i] = "Clone Reserved"; break;
+                        case 2777: eventLabels[i] = "Clone Reserved"; break;
+                        case 2778: eventLabels[i] = "Clone Reserved"; break;
+                        case 2779: eventLabels[i] = "Clone Reserved"; break;
+                        case 2780: eventLabels[i] = "Clone Reserved"; break;
+                        case 2781: eventLabels[i] = "Clone Reserved"; break;
+                        case 2782: eventLabels[i] = "Clone Reserved"; break;
+                        case 2783: eventLabels[i] = "Clone Reserved"; break;
+                        case 2784: eventLabels[i] = "Clone Reserved"; break;
+                        case 2785: eventLabels[i] = "Clone Reserved"; break;
+                        case 2786: eventLabels[i] = "Clone Reserved"; break;
+                        case 2787: eventLabels[i] = "Clone Reserved"; break;
+                        case 2788: eventLabels[i] = "Clone Reserved"; break;
+                        case 2789: eventLabels[i] = "Clone Reserved"; break;
+                        case 2790: eventLabels[i] = "Clone Reserved"; break;
+                        case 2791: eventLabels[i] = "Clone Reserved"; break;
+                        case 2792: eventLabels[i] = "Clone Reserved"; break;
+                        case 2793: eventLabels[i] = "Star Hill Entrance Loader"; break;
+                        case 2794: eventLabels[i] = "Star Hill Marrymore Exit Sign"; break;
+                        case 2795: eventLabels[i] = "Star Hill Progress Sign"; break;
+                        case 2796: eventLabels[i] = "Star Hill Marrymore Exit Flower"; break;
+                        case 2797: eventLabels[i] = "Star Hill Progress Flower"; break;
+                        case 2798: eventLabels[i] = "Star Hill Exit To World Map"; break;
+                        case 2799: eventLabels[i] = "Star Hill Entrance To 1St Room"; break;
+                        case 2800: eventLabels[i] = "Casino Exit To World Map"; break;
+                        case 2801: eventLabels[i] = "Bean Valley Exit To Casino"; break;
+                        case 2802: eventLabels[i] = "Bean Valley Top Pipe Basement Loader"; break;
+                        case 2803: eventLabels[i] = "Bean Valley North Pipe Directional Bit"; break;
+                        case 2804: eventLabels[i] = "Bean Valley North Pipe Directional Bit"; break;
+                        case 2805: eventLabels[i] = "Tower Apprentice Room Loader"; break;
+                        case 2806: eventLabels[i] = "Forest Maze Room Before Trunk Room Loader"; break;
+                        case 2807: eventLabels[i] = "Mushroom Way 3 Exit To World Map"; break;
+                        case 2808: eventLabels[i] = "Mushroom Way Boss Fight"; break;
+                        case 2809: eventLabels[i] = "Mushroom Way Boss Threatens You"; break;
+                        case 2810: eventLabels[i] = "Empty"; break;
+                        case 2811: eventLabels[i] = "Mushroom Way 3 Lower Quick Spiny"; break;
+                        case 2812: eventLabels[i] = "Mushroom Way 3 Upper Quick Spiny"; break;
+                        case 2813: eventLabels[i] = "Mushroom Way 3 Summon Spinys"; break;
+                        case 2814: eventLabels[i] = "Mushroom Way 3 Loader"; break;
+                        case 2815: eventLabels[i] = "Empty"; break;
+                        case 2816: eventLabels[i] = "Async No Animation Frog Coin"; break;
+                        case 2817: eventLabels[i] = "Async No Animation Flower"; break;
+                        case 2818: eventLabels[i] = "Async No Animation 10 Coin"; break;
+                        case 2819: eventLabels[i] = "Async No Animation 1 Coin"; break;
+                        case 2820: eventLabels[i] = "Async No Animation Item"; break;
+                        case 2821: eventLabels[i] = "Async No Animation Star Piece"; break;
+                        case 2822: eventLabels[i] = "Async No Animation Mushroom"; break;
+                        case 2823: eventLabels[i] = "Clone Reserved"; break;
+                        case 2824: eventLabels[i] = "Clone Reserved"; break;
+                        case 2825: eventLabels[i] = "Clone Reserved"; break;
+                        case 2826: eventLabels[i] = "Clone Reserved"; break;
+                        case 2827: eventLabels[i] = "Clone Reserved"; break;
+                        case 2828: eventLabels[i] = "Clone Reserved"; break;
+                        case 2829: eventLabels[i] = "Clone Reserved"; break;
+                        case 2830: eventLabels[i] = "Clone Reserved"; break;
+                        case 2831: eventLabels[i] = "Clone Reserved"; break;
+                        case 2832: eventLabels[i] = "Clone Reserved"; break;
+                        case 2833: eventLabels[i] = "Clone Reserved"; break;
+                        case 2834: eventLabels[i] = "Clone Reserved"; break;
+                        case 2835: eventLabels[i] = "Clone Reserved"; break;
+                        case 2836: eventLabels[i] = "Clone Reserved"; break;
+                        case 2837: eventLabels[i] = "Clone Reserved"; break;
+                        case 2838: eventLabels[i] = "Clone Reserved"; break;
+                        case 2839: eventLabels[i] = "Clone Reserved"; break;
+                        case 2840: eventLabels[i] = "Clone Reserved"; break;
+                        case 2841: eventLabels[i] = "Clone Reserved"; break;
+                        case 2842: eventLabels[i] = "Clone Reserved"; break;
+                        case 2843: eventLabels[i] = "Clone Reserved"; break;
+                        case 2844: eventLabels[i] = "Clone Reserved"; break;
+                        case 2845: eventLabels[i] = "Clone Reserved"; break;
+                        case 2846: eventLabels[i] = "Clone Reserved"; break;
+                        case 2847: eventLabels[i] = "Clone Reserved"; break;
+                        case 2848: eventLabels[i] = "Clone Reserved"; break;
+                        case 2849: eventLabels[i] = "Clone Reserved"; break;
+                        case 2850: eventLabels[i] = "Clone Reserved"; break;
+                        case 2851: eventLabels[i] = "Clone Reserved"; break;
+                        case 2852: eventLabels[i] = "Clone Reserved"; break;
+                        case 2853: eventLabels[i] = "Clone Reserved"; break;
+                        case 2854: eventLabels[i] = "Clone Reserved"; break;
+                        case 2855: eventLabels[i] = "Clone Reserved"; break;
+                        case 2856: eventLabels[i] = "Clone Reserved"; break;
+                        case 2857: eventLabels[i] = "Clone Reserved"; break;
+                        case 2858: eventLabels[i] = "Clone Reserved"; break;
+                        case 2859: eventLabels[i] = "Clone Reserved"; break;
+                        case 2860: eventLabels[i] = "Clone Reserved"; break;
+                        case 2861: eventLabels[i] = "Clone Reserved"; break;
+                        case 2862: eventLabels[i] = "Clone Reserved"; break;
+                        case 2863: eventLabels[i] = "Clone Reserved"; break;
+                        case 2864: eventLabels[i] = "Clone Reserved"; break;
+                        case 2865: eventLabels[i] = "Clone Reserved"; break;
+                        case 2866: eventLabels[i] = "Clone Reserved"; break;
+                        case 2867: eventLabels[i] = "Clone Reserved"; break;
+                        case 2868: eventLabels[i] = "Clone Reserved"; break;
+                        case 2869: eventLabels[i] = "Clone Reserved"; break;
+                        case 2870: eventLabels[i] = "Clone Reserved"; break;
+                        case 2871: eventLabels[i] = "Clone Reserved"; break;
+                        case 2872: eventLabels[i] = "Clone Reserved"; break;
+                        case 2873: eventLabels[i] = "Clone Reserved"; break;
+                        case 2874: eventLabels[i] = "Clone Reserved"; break;
+                        case 2875: eventLabels[i] = "Clone Reserved"; break;
+                        case 2876: eventLabels[i] = "Clone Reserved"; break;
+                        case 2877: eventLabels[i] = "Clone Reserved"; break;
+                        case 2878: eventLabels[i] = "Clone Reserved"; break;
+                        case 2879: eventLabels[i] = "Clone Reserved"; break;
+                        case 2880: eventLabels[i] = "Clone Reserved"; break;
+                        case 2881: eventLabels[i] = "Clone Reserved"; break;
+                        case 2882: eventLabels[i] = "Clone Reserved"; break;
+                        case 2883: eventLabels[i] = "Clone Reserved"; break;
+                        case 2884: eventLabels[i] = "Clone Reserved"; break;
+                        case 2885: eventLabels[i] = "Clone Reserved"; break;
+                        case 2886: eventLabels[i] = "Clone Reserved"; break;
+                        case 2887: eventLabels[i] = "Clone Reserved"; break;
+                        case 2888: eventLabels[i] = "Clone Reserved"; break;
+                        case 2889: eventLabels[i] = "Clone Reserved"; break;
+                        case 2890: eventLabels[i] = "Clone Reserved"; break;
+                        case 2891: eventLabels[i] = "Clone Reserved"; break;
+                        case 2892: eventLabels[i] = "Clone Reserved"; break;
+                        case 2893: eventLabels[i] = "Clone Reserved"; break;
+                        case 2894: eventLabels[i] = "Clone Reserved"; break;
+                        case 2895: eventLabels[i] = "Clone Reserved"; break;
+                        case 2896: eventLabels[i] = "Clone Reserved"; break;
+                        case 2897: eventLabels[i] = "Clone Reserved"; break;
+                        case 2898: eventLabels[i] = "Clone Reserved"; break;
+                        case 2899: eventLabels[i] = "Clone Reserved"; break;
+                        case 2900: eventLabels[i] = "Clone Reserved"; break;
+                        case 2901: eventLabels[i] = "Clone Reserved"; break;
+                        case 2902: eventLabels[i] = "Clone Reserved"; break;
+                        case 2903: eventLabels[i] = "Clone Reserved"; break;
+                        case 2904: eventLabels[i] = "Clone Reserved"; break;
+                        case 2905: eventLabels[i] = "Clone Reserved"; break;
+                        case 2906: eventLabels[i] = "Clone Reserved"; break;
+                        case 2907: eventLabels[i] = "Clone Reserved"; break;
+                        case 2908: eventLabels[i] = "Clone Reserved"; break;
+                        case 2909: eventLabels[i] = "Clone Reserved"; break;
+                        case 2910: eventLabels[i] = "Clone Reserved"; break;
+                        case 2911: eventLabels[i] = "Clone Reserved"; break;
+                        case 2912: eventLabels[i] = "Clone Reserved"; break;
+                        case 2913: eventLabels[i] = "Clone Reserved"; break;
+                        case 2914: eventLabels[i] = "Clone Reserved"; break;
+                        case 2915: eventLabels[i] = "Clone Reserved"; break;
+                        case 2916: eventLabels[i] = "Clone Reserved"; break;
+                        case 2917: eventLabels[i] = "Clone Reserved"; break;
+                        case 2918: eventLabels[i] = "Clone Reserved"; break;
+                        case 2919: eventLabels[i] = "Clone Reserved"; break;
+                        case 2920: eventLabels[i] = "Clone Reserved"; break;
+                        case 2921: eventLabels[i] = "Clone Reserved"; break;
+                        case 2922: eventLabels[i] = "Clone Reserved"; break;
+                        case 2923: eventLabels[i] = "Clone Reserved"; break;
+                        case 2924: eventLabels[i] = "Clone Reserved"; break;
+                        case 2925: eventLabels[i] = "Clone Reserved"; break;
+                        case 2926: eventLabels[i] = "Clone Reserved"; break;
+                        case 2927: eventLabels[i] = "Clone Reserved"; break;
+                        case 2928: eventLabels[i] = "Clone Reserved"; break;
+                        case 2929: eventLabels[i] = "Clone Reserved"; break;
+                        case 2930: eventLabels[i] = "Clone Reserved"; break;
+                        case 2931: eventLabels[i] = "Clone Reserved"; break;
+                        case 2932: eventLabels[i] = "Clone Reserved"; break;
+                        case 2933: eventLabels[i] = "Clone Reserved"; break;
+                        case 2934: eventLabels[i] = "Clone Reserved"; break;
+                        case 2935: eventLabels[i] = "Clone Reserved"; break;
+                        case 2936: eventLabels[i] = "Clone Reserved"; break;
+                        case 2937: eventLabels[i] = "Clone Reserved"; break;
+                        case 2938: eventLabels[i] = "Clone Reserved"; break;
+                        case 2939: eventLabels[i] = "Clone Reserved"; break;
+                        case 2940: eventLabels[i] = "Clone Reserved"; break;
+                        case 2941: eventLabels[i] = "Clone Reserved"; break;
+                        case 2942: eventLabels[i] = "Clone Reserved"; break;
+                        case 2943: eventLabels[i] = "Clone Reserved"; break;
+                        case 2944: eventLabels[i] = "Clone Reserved"; break;
+                        case 2945: eventLabels[i] = "Clone Reserved"; break;
+                        case 2946: eventLabels[i] = "Clone Reserved"; break;
+                        case 2947: eventLabels[i] = "Clone Reserved"; break;
+                        case 2948: eventLabels[i] = "Clone Reserved"; break;
+                        case 2949: eventLabels[i] = "Clone Reserved"; break;
+                        case 2950: eventLabels[i] = "Clone Reserved"; break;
+                        case 2951: eventLabels[i] = "Clone Reserved"; break;
+                        case 2952: eventLabels[i] = "Clone Reserved"; break;
+                        case 2953: eventLabels[i] = "Clone Reserved"; break;
+                        case 2954: eventLabels[i] = "Clone Reserved"; break;
+                        case 2955: eventLabels[i] = "Clone Reserved"; break;
+                        case 2956: eventLabels[i] = "Clone Reserved"; break;
+                        case 2957: eventLabels[i] = "Clone Reserved"; break;
+                        case 2958: eventLabels[i] = "Clone Reserved"; break;
+                        case 2959: eventLabels[i] = "Clone Reserved"; break;
+                        case 2960: eventLabels[i] = "Clone Reserved"; break;
+                        case 2961: eventLabels[i] = "Clone Reserved"; break;
+                        case 2962: eventLabels[i] = "Clone Reserved"; break;
+                        case 2963: eventLabels[i] = "Clone Reserved"; break;
+                        case 2964: eventLabels[i] = "Clone Reserved"; break;
+                        case 2965: eventLabels[i] = "Clone Reserved"; break;
+                        case 2966: eventLabels[i] = "Clone Reserved"; break;
+                        case 2967: eventLabels[i] = "Clone Reserved"; break;
+                        case 2968: eventLabels[i] = "Clone Reserved"; break;
+                        case 2969: eventLabels[i] = "Clone Reserved"; break;
+                        case 2970: eventLabels[i] = "Clone Reserved"; break;
+                        case 2971: eventLabels[i] = "Clone Reserved"; break;
+                        case 2972: eventLabels[i] = "Clone Reserved"; break;
+                        case 2973: eventLabels[i] = "Clone Reserved"; break;
+                        case 2974: eventLabels[i] = "Clone Reserved"; break;
+                        case 2975: eventLabels[i] = "Clone Reserved"; break;
+                        case 2976: eventLabels[i] = "Clone Reserved"; break;
+                        case 2977: eventLabels[i] = "Clone Reserved"; break;
+                        case 2978: eventLabels[i] = "Clone Reserved"; break;
+                        case 2979: eventLabels[i] = "Clone Reserved"; break;
+                        case 2980: eventLabels[i] = "Clone Reserved"; break;
+                        case 2981: eventLabels[i] = "Clone Reserved"; break;
+                        case 2982: eventLabels[i] = "Clone Reserved"; break;
+                        case 2983: eventLabels[i] = "Clone Reserved"; break;
+                        case 2984: eventLabels[i] = "Clone Reserved"; break;
+                        case 2985: eventLabels[i] = "Clone Reserved"; break;
+                        case 2986: eventLabels[i] = "Clone Reserved"; break;
+                        case 2987: eventLabels[i] = "Clone Reserved"; break;
+                        case 2988: eventLabels[i] = "Clone Reserved"; break;
+                        case 2989: eventLabels[i] = "Clone Reserved"; break;
+                        case 2990: eventLabels[i] = "Clone Reserved"; break;
+                        case 2991: eventLabels[i] = "Clone Reserved"; break;
+                        case 2992: eventLabels[i] = "Clone Reserved"; break;
+                        case 2993: eventLabels[i] = "Clone Reserved"; break;
+                        case 2994: eventLabels[i] = "Clone Reserved"; break;
+                        case 2995: eventLabels[i] = "Clone Reserved"; break;
+                        case 2996: eventLabels[i] = "Clone Reserved"; break;
+                        case 2997: eventLabels[i] = "Clone Reserved"; break;
+                        case 2998: eventLabels[i] = "Clone Reserved"; break;
+                        case 2999: eventLabels[i] = "Clone Reserved"; break;
+                        case 3000: eventLabels[i] = "Clone Reserved"; break;
+                        case 3001: eventLabels[i] = "Clone Reserved"; break;
+                        case 3002: eventLabels[i] = "Clone Reserved"; break;
+                        case 3003: eventLabels[i] = "Clone Reserved"; break;
+                        case 3004: eventLabels[i] = "Clone Reserved"; break;
+                        case 3005: eventLabels[i] = "Clone Reserved"; break;
+                        case 3006: eventLabels[i] = "Clone Reserved"; break;
+                        case 3007: eventLabels[i] = "Clone Reserved"; break;
+                        case 3008: eventLabels[i] = "Clone Reserved"; break;
+                        case 3009: eventLabels[i] = "Clone Reserved"; break;
+                        case 3010: eventLabels[i] = "Clone Reserved"; break;
+                        case 3011: eventLabels[i] = "Clone Reserved"; break;
+                        case 3012: eventLabels[i] = "Clone Reserved"; break;
+                        case 3013: eventLabels[i] = "Clone Reserved"; break;
+                        case 3014: eventLabels[i] = "Clone Reserved"; break;
+                        case 3015: eventLabels[i] = "Clone Reserved"; break;
+                        case 3016: eventLabels[i] = "Clone Reserved"; break;
+                        case 3017: eventLabels[i] = "Clone Reserved"; break;
+                        case 3018: eventLabels[i] = "Clone Reserved"; break;
+                        case 3019: eventLabels[i] = "Clone Reserved"; break;
+                        case 3020: eventLabels[i] = "Clone Reserved"; break;
+                        case 3021: eventLabels[i] = "Clone Reserved"; break;
+                        case 3022: eventLabels[i] = "Clone Reserved"; break;
+                        case 3023: eventLabels[i] = "Clone Reserved"; break;
+                        case 3024: eventLabels[i] = "Clone Reserved"; break;
+                        case 3025: eventLabels[i] = "Clone Reserved"; break;
+                        case 3026: eventLabels[i] = "Clone Reserved"; break;
+                        case 3027: eventLabels[i] = "Clone Reserved"; break;
+                        case 3028: eventLabels[i] = "Clone Reserved"; break;
+                        case 3029: eventLabels[i] = "Clone Reserved"; break;
+                        case 3030: eventLabels[i] = "Clone Reserved"; break;
+                        case 3031: eventLabels[i] = "Clone Reserved"; break;
+                        case 3032: eventLabels[i] = "Clone Reserved"; break;
+                        case 3033: eventLabels[i] = "Clone Reserved"; break;
+                        case 3034: eventLabels[i] = "Clone Reserved"; break;
+                        case 3035: eventLabels[i] = "Clone Reserved"; break;
+                        case 3036: eventLabels[i] = "Clone Reserved"; break;
+                        case 3037: eventLabels[i] = "Clone Reserved"; break;
+                        case 3038: eventLabels[i] = "Clone Reserved"; break;
+                        case 3039: eventLabels[i] = "Clone Reserved"; break;
+                        case 3040: eventLabels[i] = "Clone Reserved"; break;
+                        case 3041: eventLabels[i] = "Clone Reserved"; break;
+                        case 3042: eventLabels[i] = "Clone Reserved"; break;
+                        case 3043: eventLabels[i] = "Clone Reserved"; break;
+                        case 3044: eventLabels[i] = "Clone Reserved"; break;
+                        case 3045: eventLabels[i] = "Clone Reserved"; break;
+                        case 3046: eventLabels[i] = "Clone Reserved"; break;
+                        case 3047: eventLabels[i] = "Clone Reserved"; break;
+                        case 3048: eventLabels[i] = "Clone Reserved"; break;
+                        case 3049: eventLabels[i] = "Clone Reserved"; break;
+                        case 3050: eventLabels[i] = "Clone Reserved"; break;
+                        case 3051: eventLabels[i] = "Clone Reserved"; break;
+                        case 3052: eventLabels[i] = "Clone Reserved"; break;
+                        case 3053: eventLabels[i] = "Clone Reserved"; break;
+                        case 3054: eventLabels[i] = "Clone Reserved"; break;
+                        case 3055: eventLabels[i] = "Clone Reserved"; break;
+                        case 3056: eventLabels[i] = "Clone Reserved"; break;
+                        case 3057: eventLabels[i] = "Clone Reserved"; break;
+                        case 3058: eventLabels[i] = "Clone Reserved"; break;
+                        case 3059: eventLabels[i] = "Clone Reserved"; break;
+                        case 3060: eventLabels[i] = "Clone Reserved"; break;
+                        case 3061: eventLabels[i] = "Clone Reserved"; break;
+                        case 3062: eventLabels[i] = "Clone Reserved"; break;
+                        case 3063: eventLabels[i] = "Clone Reserved"; break;
+                        case 3064: eventLabels[i] = "Clone Reserved"; break;
+                        case 3065: eventLabels[i] = "Clone Reserved"; break;
+                        case 3066: eventLabels[i] = "Clone Reserved"; break;
+                        case 3067: eventLabels[i] = "Clone Reserved"; break;
+                        case 3068: eventLabels[i] = "Clone Reserved"; break;
+                        case 3069: eventLabels[i] = "Clone Reserved"; break;
+                        case 3070: eventLabels[i] = "Clone Reserved"; break;
+                        case 3071: eventLabels[i] = "Clone Reserved"; break;
+                        case 3072: eventLabels[i] = "Flower Star Fc Or Mushroom Chest"; break;
+                        case 3073: eventLabels[i] = "Item Chest"; break;
+                        case 3074: eventLabels[i] = "Coin Chest Multi Hit 1"; break;
+                        case 3075: eventLabels[i] = "Heal Flash"; break;
+                        case 3076: eventLabels[i] = "Exp Star Chest Background"; break;
+                        case 3077: eventLabels[i] = "Ship Puzzle Mushroom"; break;
+                        case 3078: eventLabels[i] = "Mimic Or Slot Chest"; break;
+                        case 3079: eventLabels[i] = "Exp Star Levelup Screen"; break;
+                        case 3080: eventLabels[i] = "Coin Chest Quick Hit"; break;
+                        case 3081: eventLabels[i] = "You Missed"; break;
+                        case 3082: eventLabels[i] = "Frog Coin Chest Multi Hit 1"; break;
+                        case 3083: eventLabels[i] = "Freestanding Shuffled Frog Coin"; break;
+                        case 3084: eventLabels[i] = "Frog Coin Chest Quick Hit"; break;
+                        case 3085: eventLabels[i] = "Freestanding Shuffled Coin"; break;
+                        case 3086: eventLabels[i] = "Juice Bar Card Upgrade"; break;
+                        case 3087: eventLabels[i] = "Progressive Egg Upgrade"; break;
+                        case 3088: eventLabels[i] = "Empty"; break;
+                        case 3089: eventLabels[i] = "Grant Item From Chest"; break;
+                        case 3090: eventLabels[i] = "Open Lands End If Gated By Star Pieces"; break;
+                        case 3091: eventLabels[i] = "Multi Frog Coin Chest Single Hit"; break;
+                        case 3092: eventLabels[i] = "Star Piece Grant"; break;
+                        case 3093: eventLabels[i] = "Open Abyss If Star Piece Threshold Met"; break;
+                        case 3094: eventLabels[i] = "Star Piece Chest Animation"; break;
+                        case 3095: eventLabels[i] = "Empty"; break;
+                        case 3096: eventLabels[i] = "Empty"; break;
+                        case 3097: eventLabels[i] = "Juice Bar Card Npc Grant"; break;
+                        case 3098: eventLabels[i] = "Progressive Egg Npc Grant"; break;
+                        case 3099: eventLabels[i] = "Shuffle Fireworks Chest Grant"; break;
+                        case 3100: eventLabels[i] = "Progressive Fireworks Chest Grant"; break;
+                        case 3101: eventLabels[i] = "Star Piece Hunt End Game"; break;
+                        case 3102: eventLabels[i] = "Exit Jumping Kids House"; break;
+                        case 3103: eventLabels[i] = "Enter Mk Guest Room"; break;
+                        case 3104: eventLabels[i] = "Exit Mk Guest Room"; break;
+                        case 3105: eventLabels[i] = "Enter Mk Staircase"; break;
+                        case 3106: eventLabels[i] = "Exit Mk Staircase"; break;
+                        case 3107: eventLabels[i] = "Empty"; break;
+                        case 3108: eventLabels[i] = "Empty"; break;
+                        case 3109: eventLabels[i] = "Freestanding Beetlemania Grant"; break;
+                        case 3110: eventLabels[i] = "Freestanding Juice Bar Card Grant"; break;
+                        case 3111: eventLabels[i] = "Freestanding Progressive Egg Grant"; break;
+                        case 3112: eventLabels[i] = "Freestanding Shuffle Fireworks Grant"; break;
+                        case 3113: eventLabels[i] = "Freestanding Progressive Fireworks Grant"; break;
+                        case 3114: eventLabels[i] = "Hill Progressive Egg"; break;
+                        case 3115: eventLabels[i] = "Hill Progressive Card"; break;
+                        case 3116: eventLabels[i] = "Change Music In Moleville Mines When Backtracking"; break;
+                        case 3117: eventLabels[i] = "Empty"; break;
+                        case 3118: eventLabels[i] = "Water State"; break;
+                        case 3119: eventLabels[i] = "Goby Battle"; break;
+                        case 3120: eventLabels[i] = "Empty"; break;
+                        case 3121: eventLabels[i] = "Sewer Boss Fight"; break;
+                        case 3122: eventLabels[i] = "Sewer Boss Room Trampoline"; break;
+                        case 3123: eventLabels[i] = "Sewer Drain Water"; break;
+                        case 3124: eventLabels[i] = "Mimic 1 Chest"; break;
+                        case 3125: eventLabels[i] = "Sewer Pipe To Lands End"; break;
+                        case 3126: eventLabels[i] = "Mimic 2 Chest"; break;
+                        case 3127: eventLabels[i] = "Sewer Exit Trampoline"; break;
+                        case 3128: eventLabels[i] = "Empty"; break;
+                        case 3129: eventLabels[i] = "Empty"; break;
+                        case 3130: eventLabels[i] = "Sewer Tutorial Note"; break;
+                        case 3131: eventLabels[i] = "Moleville Toad In Mines"; break;
+                        case 3132: eventLabels[i] = "Moleville Miners Song"; break;
+                        case 3133: eventLabels[i] = "Pa Mole In Mines"; break;
+                        case 3134: eventLabels[i] = "Resummon Enemies In Sewer"; break;
+                        case 3135: eventLabels[i] = "Sewers Generic Loader"; break;
+                        case 3136: eventLabels[i] = "Sewers Overworld Pipe"; break;
+                        case 3137: eventLabels[i] = "Sewers 1St Water Room Pipe To Tutorial Room"; break;
+                        case 3138: eventLabels[i] = "Sewers 1St Water Room Pipe To 3Rd Water Room"; break;
+                        case 3139: eventLabels[i] = "Sewers 4 Rat Room Pipe To 1St Water Room"; break;
+                        case 3140: eventLabels[i] = "1St Water Toom Pipe To Sewers 4 Rat Room"; break;
+                        case 3141: eventLabels[i] = "3Rd Water Room Pipe To 1St Water Room"; break;
+                        case 3142: eventLabels[i] = "Pipe To Boss"; break;
+                        case 3143: eventLabels[i] = "Rose Way Main Room Platforms"; break;
+                        case 3144: eventLabels[i] = "Rose Way Main Room Platforms Background"; break;
+                        case 3145: eventLabels[i] = "Sewers Flippable Chest"; break;
+                        case 3146: eventLabels[i] = "Freestanding Big Coin"; break;
+                        case 3147: eventLabels[i] = "Rose Way Tutorial"; break;
+                        case 3148: eventLabels[i] = "Rose Way Main Room Loader"; break;
+                        case 3149: eventLabels[i] = "Empty"; break;
+                        case 3150: eventLabels[i] = "Rose Way Swing Chest"; break;
+                        case 3151: eventLabels[i] = "Rose Way Tossed Shyguys"; break;
+                        case 3152: eventLabels[i] = "Rose Way Five Chests"; break;
+                        case 3153: eventLabels[i] = "Old Chest Granter"; break;
+                        case 3154: eventLabels[i] = "Resummon Rose Way Npcs"; break;
+                        case 3155: eventLabels[i] = "Empty"; break;
+                        case 3156: eventLabels[i] = "Minecart Room Loader"; break;
+                        case 3157: eventLabels[i] = "Minecart Room Loader Background"; break;
+                        case 3158: eventLabels[i] = "Item Behind Ship Upper Stairs Tile"; break;
+                        case 3159: eventLabels[i] = "Pa Mole After Bambino Bomb"; break;
+                        case 3160: eventLabels[i] = "Mines Long Track Room Lower Backward Exit"; break;
+                        case 3161: eventLabels[i] = "Mines Check If Shyguy Moved"; break;
+                        case 3162: eventLabels[i] = "Mines Area 2 Lower Backward Exit If Mines Cleared"; break;
+                        case 3163: eventLabels[i] = "Sewers Tutorial Room Exit To Exterior"; break;
+                        case 3164: eventLabels[i] = "Sewers Tutorial Room Pipe To First Water Room"; break;
+                        case 3165: eventLabels[i] = "Active Minecart Mario Collision Check"; break;
+                        case 3166: eventLabels[i] = "Active Minecart Mario Collision Check Properties"; break;
+                        case 3167: eventLabels[i] = "Mines Final Save Room Loader"; break;
+                        case 3168: eventLabels[i] = "Sewers 3Rd Water Room Pipe To Water Switch Room"; break;
+                        case 3169: eventLabels[i] = "Sewers Stair Room Pipe To Third Water Room"; break;
+                        case 3170: eventLabels[i] = "Sewers Four Rat Room Pipe To Stair Room"; break;
+                        case 3171: eventLabels[i] = "Sewers Stair Room Pipe To Four Rat Room"; break;
+                        case 3172: eventLabels[i] = "Sewers 3Rd Water Room Pipe To Stair Room"; break;
+                        case 3173: eventLabels[i] = "Sewers Four Rat Room Pipe To Rat Line Room"; break;
+                        case 3174: eventLabels[i] = "Sewers 3Rd Water Room Pipe To Water Switch Room"; break;
+                        case 3175: eventLabels[i] = "Sewers Water Switch Room Pipe To 3Rd Water Room"; break;
+                        case 3176: eventLabels[i] = "Sewers Rat Line Room Pipe To 3Rd Water Room"; break;
+                        case 3177: eventLabels[i] = "Sewers Stair Room Pipe To Four Rat Room"; break;
+                        case 3178: eventLabels[i] = "Sewers 3Rd Water Toom Pipe To Rat Line Room"; break;
+                        case 3179: eventLabels[i] = "Sewers Four Rat Room Pipe To Stair Room"; break;
+                        case 3180: eventLabels[i] = "Sewers Rat Line Room Pipe To Four Rat Room"; break;
+                        case 3181: eventLabels[i] = "Sewers Water Switch Room Pipe To 3Rd Water Room"; break;
+                        case 3182: eventLabels[i] = "Minecart Paid Lobby Room Loader"; break;
+                        case 3183: eventLabels[i] = "Minecart Paid Lobby Trampoline To Exterior"; break;
+                        case 3184: eventLabels[i] = "Mines First Room Loader"; break;
+                        case 3185: eventLabels[i] = "Pa Mole In Deep Mines"; break;
+                        case 3186: eventLabels[i] = "Moles In First Mines Room"; break;
+                        case 3187: eventLabels[i] = "Minecart Tutorial"; break;
+                        case 3188: eventLabels[i] = "Mount Minecart"; break;
+                        case 3189: eventLabels[i] = "Fall To Minecart Room From Lobby"; break;
+                        case 3190: eventLabels[i] = "Activate Post Mines Boss First Minecart Session Continued"; break;
+                        case 3191: eventLabels[i] = "Activate Post Mines Boss First Minecart Session"; break;
+                        case 3192: eventLabels[i] = "Mines Left Henchman"; break;
+                        case 3193: eventLabels[i] = "Mines Right Henchman"; break;
+                        case 3194: eventLabels[i] = "Mines Center Henchman"; break;
+                        case 3195: eventLabels[i] = "Parked Minecart Mario Collision Check"; break;
+                        case 3196: eventLabels[i] = "Parked Minecart Mario Collision Check Properties"; break;
+                        case 3197: eventLabels[i] = "Mines Final Save Room Exit To Boss Room"; break;
+                        case 3198: eventLabels[i] = "Shyguy Cart Pushes Mario Into Smaller Room"; break;
+                        case 3199: eventLabels[i] = "Shyguy Cart Prize Grant"; break;
+                        case 3200: eventLabels[i] = "Mines Trampoline"; break;
+                        case 3201: eventLabels[i] = "Mines 1St Boss Fight"; break;
+                        case 3202: eventLabels[i] = "Minecart Room Exit To Boss Room"; break;
+                        case 3203: eventLabels[i] = "Empty"; break;
+                        case 3204: eventLabels[i] = "Empty"; break;
+                        case 3205: eventLabels[i] = "Empty"; break;
+                        case 3206: eventLabels[i] = "Sea Pipe To Ship"; break;
+                        case 3207: eventLabels[i] = "Ship Exit Trampoline"; break;
+                        case 3208: eventLabels[i] = "Water Whirlpool"; break;
+                        case 3209: eventLabels[i] = "Sleeping Dry Bones"; break;
+                        case 3210: eventLabels[i] = "Ship Trampoline Puzzle Block"; break;
+                        case 3211: eventLabels[i] = "Ship 3D Maze Room Loader"; break;
+                        case 3212: eventLabels[i] = "Ship 3D Maze Forfeit Listener"; break;
+                        case 3213: eventLabels[i] = "Ship Post 1St Boss Trampoline Back Up"; break;
+                        case 3214: eventLabels[i] = "Ship 1St Boss"; break;
+                        case 3215: eventLabels[i] = "Ship Coin Snake Puzzle Header Coin"; break;
+                        case 3216: eventLabels[i] = "Ship Coin Snake Puzzle Tail Coin"; break;
+                        case 3217: eventLabels[i] = "Ship Cannonball Puzzle Cannonball"; break;
+                        case 3218: eventLabels[i] = "Ship Submit Password"; break;
+                        case 3219: eventLabels[i] = "Ship Barrel Puzzle Button"; break;
+                        case 3220: eventLabels[i] = "Ship Barrel Puzzle Barrel Movement"; break;
+                        case 3221: eventLabels[i] = "Ship 3D Maze Hit Button"; break;
+                        case 3222: eventLabels[i] = "Ship Troopa Puzzle Loader"; break;
+                        case 3223: eventLabels[i] = "Ship Troopa Puzzle"; break;
+                        case 3224: eventLabels[i] = "Ship Password Room Loader"; break;
+                        case 3225: eventLabels[i] = "Ship Password Box Dialog"; break;
+                        case 3226: eventLabels[i] = "Ship Generic Loader"; break;
+                        case 3227: eventLabels[i] = "Ship Clone Room Loader"; break;
+                        case 3228: eventLabels[i] = "Ship Clone Control"; break;
+                        case 3229: eventLabels[i] = "Ship Clone Transform"; break;
+                        case 3230: eventLabels[i] = "Cancel Star In Sea"; break;
+                        case 3231: eventLabels[i] = "Ship Cannonball Puzzle Initiator Block"; break;
+                        case 3232: eventLabels[i] = "Ship Password Box 1"; break;
+                        case 3233: eventLabels[i] = "Ship Password Box 2"; break;
+                        case 3234: eventLabels[i] = "Ship Password Box 3"; break;
+                        case 3235: eventLabels[i] = "Ship Password Box 4"; break;
+                        case 3236: eventLabels[i] = "Ship Password Box 5"; break;
+                        case 3237: eventLabels[i] = "Ship Password Box 6"; break;
+                        case 3238: eventLabels[i] = "Freestanding Frog Coin"; break;
+                        case 3239: eventLabels[i] = "Ship Open Door To Room Behind Box Wall"; break;
+                        case 3240: eventLabels[i] = "Ship Troopa Puzzle Hint"; break;
+                        case 3241: eventLabels[i] = "Ship Trampoline Puzzle Hint"; break;
+                        case 3242: eventLabels[i] = "Ship 3D Maze Hint"; break;
+                        case 3243: eventLabels[i] = "Ship Coin Snake Hint"; break;
+                        case 3244: eventLabels[i] = "Ship Cannonball Puzzle Hint"; break;
+                        case 3245: eventLabels[i] = "Ship Barrel Puzzle Hint"; break;
+                        case 3246: eventLabels[i] = "Dry Bones Fight"; break;
+                        case 3247: eventLabels[i] = "Item Behind Ship Upper Stairs Granter"; break;
+                        case 3248: eventLabels[i] = "Ship Entrance Open Right Door"; break;
+                        case 3249: eventLabels[i] = "Ship Entrance Open Left Door"; break;
+                        case 3250: eventLabels[i] = "Ship 1St Greaper Room Open Upper Door"; break;
+                        case 3251: eventLabels[i] = "Ship 2Nd Greaper Room Open Upper Door"; break;
+                        case 3252: eventLabels[i] = "Ship Puzzle Hub Room Open Upper Exit Door"; break;
+                        case 3253: eventLabels[i] = "Ship Puzzle Hub Room Open Troopa Puzzle Door"; break;
+                        case 3254: eventLabels[i] = "Ship Puzzle Hub Room Open Trampoline Puzzle Door"; break;
+                        case 3255: eventLabels[i] = "Ship Puzzle Hub Room Open 3D Maze Door"; break;
+                        case 3256: eventLabels[i] = "Ship Puzzle Hub Room Open Lower Exit Door"; break;
+                        case 3257: eventLabels[i] = "Ship Puzzle Hub Room Open Cannonball Puzzle Door"; break;
+                        case 3258: eventLabels[i] = "Ship Puzzle Hub Room Open Coin Snake Puzzle Door"; break;
+                        case 3259: eventLabels[i] = "Ship Shop Room Open Upper Door"; break;
+                        case 3260: eventLabels[i] = "Ship Shop Room Open Lower Door"; break;
+                        case 3261: eventLabels[i] = "Ship Barrel Puzzle Room Open Exit Door"; break;
+                        case 3262: eventLabels[i] = "Ship Password Room Open Door To Boss"; break;
+                        case 3263: eventLabels[i] = "Ship Lower First Trampoline Room Open Exit Door"; break;
+                        case 3264: eventLabels[i] = "Ship Lower First Drybones Room Open Upper Door"; break;
+                        case 3265: eventLabels[i] = "Ship Lower First Drybones Room Open Lower Door"; break;
+                        case 3266: eventLabels[i] = "Ship Lower Rat Stairway Open Upper Door"; break;
+                        case 3267: eventLabels[i] = "Ship Lower Rat Stairway Open Lower Door"; break;
+                        case 3268: eventLabels[i] = "Ship Outer Clone Room Open Left Door"; break;
+                        case 3269: eventLabels[i] = "Ship Outer Clone Room Open Right Door"; break;
+                        case 3270: eventLabels[i] = "Ship Room With Box Wall Open Right Door"; break;
+                        case 3271: eventLabels[i] = "Ship Final Save Room Open Exit Door"; break;
+                        case 3272: eventLabels[i] = "Ship 1St Water Room Open Upper Door"; break;
+                        case 3273: eventLabels[i] = "Ship 1St Water Room Open Underwater Door"; break;
+                        case 3274: eventLabels[i] = "Ship Upper Whirlpool Room Open Underwater Door"; break;
+                        case 3275: eventLabels[i] = "Ship Zeostar Stairway Open Underwater Door"; break;
+                        case 3276: eventLabels[i] = "Ship Big Water Room Open Upper Door"; break;
+                        case 3277: eventLabels[i] = "Ship Big Water Room Open Hidden Door"; break;
+                        case 3278: eventLabels[i] = "Ship Open Door To Final Boss Room"; break;
+                        case 3279: eventLabels[i] = "Ship Open Door In Final Boss Room"; break;
+                        case 3280: eventLabels[i] = "Ship Lower Henchman Room Loader"; break;
+                        case 3281: eventLabels[i] = "Ship Upper Henchman Room Loader"; break;
+                        case 3282: eventLabels[i] = "Ship Boss Room Loader"; break;
+                        case 3283: eventLabels[i] = "Empty"; break;
+                        case 3284: eventLabels[i] = "Ship Save Rooms Loader"; break;
+                        case 3285: eventLabels[i] = "Sea Single Chest Room Loader"; break;
+                        case 3286: eventLabels[i] = "Ship Interact With Boss After Winning"; break;
+                        case 3287: eventLabels[i] = "Ship Upper Henchman Room Talk To Guard After Winning"; break;
+                        case 3288: eventLabels[i] = "Ship Spawn Prize In Troopa Puzzle Room"; break;
+                        case 3289: eventLabels[i] = "Ship Collect Trampoline Prize"; break;
+                        case 3290: eventLabels[i] = "Ship Collect 3D Maze Prize"; break;
+                        case 3291: eventLabels[i] = "Ship Collect Cannonball Prize"; break;
+                        case 3292: eventLabels[i] = "Lower Ship Generic Loader"; break;
+                        case 3293: eventLabels[i] = "Ship Bullet Collision"; break;
+                        case 3294: eventLabels[i] = "Ship Bullet Collision Background"; break;
+                        case 3295: eventLabels[i] = "Ship Collect Barrel Prize"; break;
+                        case 3296: eventLabels[i] = "Sea Entrance Trampoline"; break;
+                        case 3297: eventLabels[i] = "Sea Shop"; break;
+                        case 3298: eventLabels[i] = "Sea Reverse Whirlpool To Lone Chest"; break;
+                        case 3299: eventLabels[i] = "Outer Sea Whirlpool"; break;
+                        case 3300: eventLabels[i] = "Ship Entrance Note"; break;
+                        case 3301: eventLabels[i] = "Ship Boss Room Inner Left Henchman"; break;
+                        case 3302: eventLabels[i] = "Ship Boss Room Inner Right Henchman"; break;
+                        case 3303: eventLabels[i] = "Ship 1St Save Room Hint Note"; break;
+                        case 3304: eventLabels[i] = "Ship 1St Greaper Room Hint Note"; break;
+                        case 3305: eventLabels[i] = "Ship 2Nd Greaper Room Hint Note"; break;
+                        case 3306: eventLabels[i] = "Ship Lower Henchman Room Loader Continued"; break;
+                        case 3307: eventLabels[i] = "Ship Password Tutorial"; break;
+                        case 3308: eventLabels[i] = "Ship Boss Room Drink"; break;
+                        case 3309: eventLabels[i] = "Ship Spawn Hidden Chest"; break;
+                        case 3310: eventLabels[i] = "Ship Hidden Chest"; break;
+                        case 3311: eventLabels[i] = "Ship Shop"; break;
+                        case 3312: eventLabels[i] = "Sewers 1St Water Room Exit To Rat Line Room"; break;
+                        case 3313: eventLabels[i] = "Sewers Rat Line Room Exit To 1St Water Room"; break;
+                        case 3314: eventLabels[i] = "Sewers Rat Line Room Exit To 3Rd Water Room"; break;
+                        case 3315: eventLabels[i] = "Sewers 3Rd Water Room Exit To Rat Line Room"; break;
+                        case 3316: eventLabels[i] = "Ship Boss Room Leftmost Henchman"; break;
+                        case 3317: eventLabels[i] = "Mines Final Chest"; break;
+                        case 3318: eventLabels[i] = "Set Oerlikon Pack"; break;
+                        case 3319: eventLabels[i] = "Set Vomer Pack"; break;
+                        case 3320: eventLabels[i] = "Empty"; break;
+                        case 3321: eventLabels[i] = "Volcano Enter 1St Room"; break;
+                        case 3322: eventLabels[i] = "Volcano 1St Room Trampoline"; break;
+                        case 3323: eventLabels[i] = "Volcano 1St Room Loader"; break;
+                        case 3324: eventLabels[i] = "Volcano 3 Lift Room Donut Lift"; break;
+                        case 3325: eventLabels[i] = "Stumpet Room Loader"; break;
+                        case 3326: eventLabels[i] = "Stumpet Eruption"; break;
+                        case 3327: eventLabels[i] = "Stumpet Fight"; break;
+                        case 3328: eventLabels[i] = "Volcano Generic Loader 1"; break;
+                        case 3329: eventLabels[i] = "Jumping Fireballs"; break;
+                        case 3330: eventLabels[i] = "Volcano 1St Boss Room Loader"; break;
+                        case 3331: eventLabels[i] = "Volcano 1St Boss Fight"; break;
+                        case 3332: eventLabels[i] = "Volcano 1St Boss Path Room Loader"; break;
+                        case 3333: eventLabels[i] = "Volcano Generic Loader 2"; break;
+                        case 3334: eventLabels[i] = "Volcano Enter Shop Area"; break;
+                        case 3335: eventLabels[i] = "Corkpedite Collision"; break;
+                        case 3336: eventLabels[i] = "Corkpedite Room Loader"; break;
+                        case 3337: eventLabels[i] = "Corkpedite Animation"; break;
+                        case 3338: eventLabels[i] = "Volcano Trampoline To 2Nd Boss"; break;
+                        case 3339: eventLabels[i] = "Volcano 2Nd Boss Path Room Loader"; break;
+                        case 3340: eventLabels[i] = "Volcano 3Rd Boss Path Room Loader"; break;
+                        case 3341: eventLabels[i] = "Volcano Small Boss Path Room Loader"; break;
+                        case 3342: eventLabels[i] = "Volcano 5Th Boss Path Room Loader"; break;
+                        case 3343: eventLabels[i] = "Volcano Final Boss Path Room Loader"; break;
+                        case 3344: eventLabels[i] = "Volcano Final Trampoline Room Loader"; break;
+                        case 3345: eventLabels[i] = "Volcano Chase Seqeunce"; break;
+                        case 3346: eventLabels[i] = "Volcano 1St Boss Screen Tint"; break;
+                        case 3347: eventLabels[i] = "Empty"; break;
+                        case 3348: eventLabels[i] = "Keep Door Reward Chest"; break;
+                        case 3349: eventLabels[i] = "Keep 6 Door Lobby Exit To Prev Room"; break;
+                        case 3350: eventLabels[i] = "Keep All Door Paths Exit To Reward Room"; break;
+                        case 3351: eventLabels[i] = "Empty"; break;
+                        case 3352: eventLabels[i] = "Dr Topper Quiz"; break;
+                        case 3353: eventLabels[i] = "Keep Enter Ball Solitaire Room"; break;
+                        case 3354: eventLabels[i] = "Keep Barrel Count Loader"; break;
+                        case 3355: eventLabels[i] = "Keep Barrel Count Loader Contd"; break;
+                        case 3356: eventLabels[i] = "Keep Respawn In Lobby Upon Failure"; break;
+                        case 3357: eventLabels[i] = "Keep Button Game Loader"; break;
+                        case 3358: eventLabels[i] = "Keep Ball Solitaire Loader"; break;
+                        case 3359: eventLabels[i] = "Keep Initiate Coin Game"; break;
+                        case 3360: eventLabels[i] = "Keep Coin Game Chest"; break;
+                        case 3361: eventLabels[i] = "Keep Exit Completed Doors To Boss Antechamber"; break;
+                        case 3362: eventLabels[i] = "Keep Button Game Press Button"; break;
+                        case 3363: eventLabels[i] = "Keep Ball Solitaire Kick Ball"; break;
+                        case 3364: eventLabels[i] = "Keep Logic Game Loader"; break;
+                        case 3365: eventLabels[i] = "Keep Logic Game Finalize Answer"; break;
+                        case 3366: eventLabels[i] = "Keep Logic Game Boo"; break;
+                        case 3367: eventLabels[i] = "Keep Logic Game Goo"; break;
+                        case 3368: eventLabels[i] = "Keep Logic Game Bones"; break;
+                        case 3369: eventLabels[i] = "Keep Logic Game Kipp"; break;
+                        case 3370: eventLabels[i] = "Volcano Bridge Donut Lift"; break;
+                        case 3371: eventLabels[i] = "Volcano Bridge Donut Lift No Falling"; break;
+                        case 3372: eventLabels[i] = "Keep Get Crushed By Huge Thwomp"; break;
+                        case 3373: eventLabels[i] = "Keep Thwomp Room Loader"; break;
+                        case 3374: eventLabels[i] = "Keep Thwomp Room Background"; break;
+                        case 3375: eventLabels[i] = "Keep Set Door Order"; break;
+                        case 3376: eventLabels[i] = "Keep 6 Door Lobby Loader"; break;
+                        case 3377: eventLabels[i] = "Keep Open Door 1"; break;
+                        case 3378: eventLabels[i] = "Keep Open Door 2"; break;
+                        case 3379: eventLabels[i] = "Keep Open Door 3"; break;
+                        case 3380: eventLabels[i] = "Keep Open Door 4"; break;
+                        case 3381: eventLabels[i] = "Keep Open Door 5"; break;
+                        case 3382: eventLabels[i] = "Keep Open Door 6"; break;
+                        case 3383: eventLabels[i] = "Ship Trampoline Prize Packet Grant"; break;
+                        case 3384: eventLabels[i] = "Ship Troopa Prize Packet Grant"; break;
+                        case 3385: eventLabels[i] = "Ship Upper Stairway Item Packet Grant"; break;
+                        case 3386: eventLabels[i] = "Ship 3D Maze Spawn Prize"; break;
+                        case 3387: eventLabels[i] = "Ship Cannonball Puzzle Spawn Prize"; break;
+                        case 3388: eventLabels[i] = "Ship Boss Room Periscope"; break;
+                        case 3389: eventLabels[i] = "Ship Barrel Puzzle Spawn Prize"; break;
+                        case 3390: eventLabels[i] = "Keep Lava Patform Room Chest Camera"; break;
+                        case 3391: eventLabels[i] = "Volcano 1St Save Room Lower Chest"; break;
+                        case 3392: eventLabels[i] = "Volcano 1St Save Room Upper Chest"; break;
+                        case 3393: eventLabels[i] = "Super Jump Compare For 1St Prize"; break;
+                        case 3394: eventLabels[i] = "Super Jump Compare For 2Nd Prize"; break;
+                        case 3395: eventLabels[i] = "Midas Cave Beetlemania Granter"; break;
+                        case 3396: eventLabels[i] = "Midas Cave Progressive Card Granter"; break;
+                        case 3397: eventLabels[i] = "Midas Cave Progressive Egg Granter"; break;
+                        case 3398: eventLabels[i] = "Midas Cave Single Firework Granter"; break;
+                        case 3399: eventLabels[i] = "Midas Cave Progressive Firework Granter"; break;
+                        case 3400: eventLabels[i] = "Restart Music After Star Piece Sequence"; break;
+                        case 3401: eventLabels[i] = "Coin Chest Multi Hit 2"; break;
+                        case 3402: eventLabels[i] = "Coin Chest Multi Hit 3"; break;
+                        case 3403: eventLabels[i] = "Coin Chest Multi Hit 4"; break;
+                        case 3404: eventLabels[i] = "Coin Chest Multi Hit 5"; break;
+                        case 3405: eventLabels[i] = "Coin Chest Multi Hit 6"; break;
+                        case 3406: eventLabels[i] = "Frog Coin Chest Multi Hit 2"; break;
+                        case 3407: eventLabels[i] = "Frog Coin Chest Multi Hit 3"; break;
+                        case 3408: eventLabels[i] = "Frog Coin Chest Multi Hit 4"; break;
+                        case 3409: eventLabels[i] = "Frog Coin Chest Multi Hit 5"; break;
+                        case 3410: eventLabels[i] = "Frog Coin Chest Multi Hit 6"; break;
+                        case 3411: eventLabels[i] = "Ship Password Correctness Check"; break;
+                        case 3412: eventLabels[i] = "Empty"; break;
+                        case 3413: eventLabels[i] = "Mines Shyguy Collide With Boxes"; break;
+                        case 3414: eventLabels[i] = "Rose Way Main Room 2Nd Freestanding Item"; break;
+                        case 3415: eventLabels[i] = "Tower Stacked Chests On Top Floor"; break;
+                        case 3416: eventLabels[i] = "Empty"; break;
+                        case 3417: eventLabels[i] = "Empty"; break;
+                        case 3418: eventLabels[i] = "Empty"; break;
+                        case 3419: eventLabels[i] = "Empty"; break;
+                        case 3420: eventLabels[i] = "Empty"; break;
+                        case 3421: eventLabels[i] = "Empty"; break;
+                        case 3422: eventLabels[i] = "Empty"; break;
+                        case 3423: eventLabels[i] = "Empty"; break;
+                        case 3424: eventLabels[i] = "Empty"; break;
+                        case 3425: eventLabels[i] = "Empty"; break;
+                        case 3426: eventLabels[i] = "Empty"; break;
+                        case 3427: eventLabels[i] = "Empty"; break;
+                        case 3428: eventLabels[i] = "Empty"; break;
+                        case 3429: eventLabels[i] = "Empty"; break;
+                        case 3430: eventLabels[i] = "Empty"; break;
+                        case 3431: eventLabels[i] = "Empty"; break;
+                        case 3432: eventLabels[i] = "Empty"; break;
+                        case 3433: eventLabels[i] = "Empty"; break;
+                        case 3434: eventLabels[i] = "Empty"; break;
+                        case 3435: eventLabels[i] = "Empty"; break;
+                        case 3436: eventLabels[i] = "Empty"; break;
+                        case 3437: eventLabels[i] = "Empty"; break;
+                        case 3438: eventLabels[i] = "Empty"; break;
+                        case 3439: eventLabels[i] = "Empty"; break;
+                        case 3440: eventLabels[i] = "Empty"; break;
+                        case 3441: eventLabels[i] = "Empty"; break;
+                        case 3442: eventLabels[i] = "Empty"; break;
+                        case 3443: eventLabels[i] = "Empty"; break;
+                        case 3444: eventLabels[i] = "Empty"; break;
+                        case 3445: eventLabels[i] = "Empty"; break;
+                        case 3446: eventLabels[i] = "Empty"; break;
+                        case 3447: eventLabels[i] = "Empty"; break;
+                        case 3448: eventLabels[i] = "Empty"; break;
+                        case 3449: eventLabels[i] = "Empty"; break;
+                        case 3450: eventLabels[i] = "Empty"; break;
+                        case 3451: eventLabels[i] = "Empty"; break;
+                        case 3452: eventLabels[i] = "Empty"; break;
+                        case 3453: eventLabels[i] = "Empty"; break;
+                        case 3454: eventLabels[i] = "Empty"; break;
+                        case 3455: eventLabels[i] = "Empty"; break;
+                        case 3456: eventLabels[i] = "Empty"; break;
+                        case 3457: eventLabels[i] = "Empty"; break;
+                        case 3458: eventLabels[i] = "Empty"; break;
+                        case 3459: eventLabels[i] = "Empty"; break;
+                        case 3460: eventLabels[i] = "Empty"; break;
+                        case 3461: eventLabels[i] = "Empty"; break;
+                        case 3462: eventLabels[i] = "Empty"; break;
+                        case 3463: eventLabels[i] = "Empty"; break;
+                        case 3464: eventLabels[i] = "Empty"; break;
+                        case 3465: eventLabels[i] = "Empty"; break;
+                        case 3466: eventLabels[i] = "Empty"; break;
+                        case 3467: eventLabels[i] = "Empty"; break;
+                        case 3468: eventLabels[i] = "Empty"; break;
+                        case 3469: eventLabels[i] = "Empty"; break;
+                        case 3470: eventLabels[i] = "Empty"; break;
+                        case 3471: eventLabels[i] = "Empty"; break;
+                        case 3472: eventLabels[i] = "Empty"; break;
+                        case 3473: eventLabels[i] = "Empty"; break;
+                        case 3474: eventLabels[i] = "Empty"; break;
+                        case 3475: eventLabels[i] = "Empty"; break;
+                        case 3476: eventLabels[i] = "Empty"; break;
+                        case 3477: eventLabels[i] = "Kingdom Hallway Chest"; break;
+                        case 3478: eventLabels[i] = "Midas River Trampoline"; break;
+                        case 3479: eventLabels[i] = "Midas River Score Submission"; break;
+                        case 3480: eventLabels[i] = "Midas River Waterfall Loader"; break;
+                        case 3481: eventLabels[i] = "Midas River Tunnel Warp Check"; break;
+                        case 3482: eventLabels[i] = "Midas River Top Tunnel Loader"; break;
+                        case 3483: eventLabels[i] = "Midas River Mid Left Or Mid Right Loader"; break;
+                        case 3484: eventLabels[i] = "Midas River Bottom Left Loader"; break;
+                        case 3485: eventLabels[i] = "Midas River Bottom Right Loader"; break;
+                        case 3486: eventLabels[i] = "Midas River Base Area Loader"; break;
+                        case 3487: eventLabels[i] = "Midas River Frog Coin"; break;
+                        case 3488: eventLabels[i] = "Midas River Coin"; break;
+                        case 3489: eventLabels[i] = "Midas River Waterfall Listen For Button Inputs"; break;
+                        case 3490: eventLabels[i] = "Midas Small Mario Coord Calc"; break;
+                        case 3491: eventLabels[i] = "Midas River Top Tunnel Animation And Exit"; break;
+                        case 3492: eventLabels[i] = "Midas River Mid Left Tunnel Animation And Exit"; break;
+                        case 3493: eventLabels[i] = "Midas River Mid Right Tunnel Animation And Exit"; break;
+                        case 3494: eventLabels[i] = "Midas River Bottom Left Tunnel Animation And Exit"; break;
+                        case 3495: eventLabels[i] = "Midas River Bottom Right Tunnel Animation And Exit"; break;
+                        case 3496: eventLabels[i] = "Midas River Mid Right Tunnel Animation And Exit Background"; break;
+                        case 3497: eventLabels[i] = "Midas River Bottom Left Tunnel Item Granter"; break;
+                        case 3498: eventLabels[i] = "Midas River Bottom Right Tunnel Background"; break;
+                        case 3499: eventLabels[i] = "Booster Hill 1St Pass Loader"; break;
+                        case 3500: eventLabels[i] = "Booster Hill 1St Pass Snifit Jumps"; break;
+                        case 3501: eventLabels[i] = "Booster Hill Barrel Interaction"; break;
+                        case 3502: eventLabels[i] = "Booster Hill End"; break;
+                        case 3503: eventLabels[i] = "Booster Hill Barrel Summoner"; break;
+                        case 3504: eventLabels[i] = "Booster Hill Henchman Interaction"; break;
+                        case 3505: eventLabels[i] = "Booster Hill Unknown"; break;
+                        case 3506: eventLabels[i] = "Booster Hill Get Flower"; break;
+                        case 3507: eventLabels[i] = "Booster Hill 2Nd Pass Loader"; break;
+                        case 3508: eventLabels[i] = "Booster Hill Return"; break;
+                        case 3509: eventLabels[i] = "Empty"; break;
+                        case 3510: eventLabels[i] = "Booster Hill Exit To World Map"; break;
+                        case 3511: eventLabels[i] = "Booster Hill 2Nd Pass Background"; break;
+                        case 3512: eventLabels[i] = "Booster Hill Flower Pickup"; break;
+                        case 3513: eventLabels[i] = "Midas River Bottom Right Tunnel Item Granter"; break;
+                        case 3514: eventLabels[i] = "Nimbus Castle Egg Room Exit To Previous Room"; break;
+                        case 3515: eventLabels[i] = "Nimbus Castle Egg Room Exit To Next Room"; break;
+                        case 3516: eventLabels[i] = "Chest Differentiator Npc 3 Or Other"; break;
+                        case 3517: eventLabels[i] = "Chest Differentiator Npc 1 2 3 Or Other"; break;
+                        case 3518: eventLabels[i] = "Chest Differentiator Npc 2 3 4 5 6 Or Other"; break;
+                        case 3519: eventLabels[i] = "Chest Differentiator Npc 4 Or Other"; break;
+                        case 3520: eventLabels[i] = "Chest Differentiator Npc 12 13 Or Other Camera A"; break;
+                        case 3521: eventLabels[i] = "Chest Differentiator Npc 12 13 Or Other Camera B"; break;
+                        case 3522: eventLabels[i] = "Chest Differentiator Npc 9 Or Other Camera A"; break;
+                        case 3523: eventLabels[i] = "Empty"; break;
+                        case 3524: eventLabels[i] = "Empty"; break;
+                        case 3525: eventLabels[i] = "Empty"; break;
+                        case 3526: eventLabels[i] = "Empty"; break;
+                        case 3527: eventLabels[i] = "Empty"; break;
+                        case 3528: eventLabels[i] = "Empty"; break;
+                        case 3529: eventLabels[i] = "Empty"; break;
+                        case 3530: eventLabels[i] = "Empty"; break;
+                        case 3531: eventLabels[i] = "Empty"; break;
+                        case 3532: eventLabels[i] = "Empty"; break;
+                        case 3533: eventLabels[i] = "Empty"; break;
+                        case 3534: eventLabels[i] = "Empty"; break;
+                        case 3535: eventLabels[i] = "Empty"; break;
+                        case 3536: eventLabels[i] = "Empty"; break;
+                        case 3537: eventLabels[i] = "Empty"; break;
+                        case 3538: eventLabels[i] = "Empty"; break;
+                        case 3539: eventLabels[i] = "Empty"; break;
+                        case 3540: eventLabels[i] = "Empty"; break;
+                        case 3541: eventLabels[i] = "Empty"; break;
+                        case 3542: eventLabels[i] = "Empty"; break;
+                        case 3543: eventLabels[i] = "Empty"; break;
+                        case 3544: eventLabels[i] = "Empty"; break;
+                        case 3545: eventLabels[i] = "Empty"; break;
+                        case 3546: eventLabels[i] = "Empty"; break;
+                        case 3547: eventLabels[i] = "Empty"; break;
+                        case 3548: eventLabels[i] = "Empty"; break;
+                        case 3549: eventLabels[i] = "Empty"; break;
+                        case 3550: eventLabels[i] = "Empty"; break;
+                        case 3551: eventLabels[i] = "Empty"; break;
+                        case 3552: eventLabels[i] = "Empty"; break;
+                        case 3553: eventLabels[i] = "Empty"; break;
+                        case 3554: eventLabels[i] = "Empty"; break;
+                        case 3555: eventLabels[i] = "Empty"; break;
+                        case 3556: eventLabels[i] = "Empty"; break;
+                        case 3557: eventLabels[i] = "Empty"; break;
+                        case 3558: eventLabels[i] = "Empty"; break;
+                        case 3559: eventLabels[i] = "Empty"; break;
+                        case 3560: eventLabels[i] = "Empty"; break;
+                        case 3561: eventLabels[i] = "Empty"; break;
+                        case 3562: eventLabels[i] = "Empty"; break;
+                        case 3563: eventLabels[i] = "Empty"; break;
+                        case 3564: eventLabels[i] = "Empty"; break;
+                        case 3565: eventLabels[i] = "Empty"; break;
+                        case 3566: eventLabels[i] = "Empty"; break;
+                        case 3567: eventLabels[i] = "Empty"; break;
+                        case 3568: eventLabels[i] = "Empty"; break;
+                        case 3569: eventLabels[i] = "Empty"; break;
+                        case 3570: eventLabels[i] = "Empty"; break;
+                        case 3571: eventLabels[i] = "Empty"; break;
+                        case 3572: eventLabels[i] = "Empty"; break;
+                        case 3573: eventLabels[i] = "Empty"; break;
+                        case 3574: eventLabels[i] = "Empty"; break;
+                        case 3575: eventLabels[i] = "Empty"; break;
+                        case 3576: eventLabels[i] = "Empty"; break;
+                        case 3577: eventLabels[i] = "Empty"; break;
+                        case 3578: eventLabels[i] = "Empty"; break;
+                        case 3579: eventLabels[i] = "Empty"; break;
+                        case 3580: eventLabels[i] = "Empty"; break;
+                        case 3581: eventLabels[i] = "Empty"; break;
+                        case 3582: eventLabels[i] = "Empty"; break;
+                        case 3583: eventLabels[i] = "Empty"; break;
+                        case 3584: eventLabels[i] = "Bank 20 Return Event"; break;
+                        case 3585: eventLabels[i] = "Nimbus Fade In Async"; break;
+                        case 3586: eventLabels[i] = "Nimbus Inn Lobby Loader From Save Point"; break;
+                        case 3587: eventLabels[i] = "Set 70Ae To 70A8"; break;
+                        case 3588: eventLabels[i] = "Signal Ring Activator"; break;
+                        case 3589: eventLabels[i] = "Empty"; break;
+                        case 3590: eventLabels[i] = "Rose Town Chimney"; break;
+                        case 3591: eventLabels[i] = "Empty"; break;
+                        case 3592: eventLabels[i] = "Empty"; break;
+                        case 3593: eventLabels[i] = "Get Item From Chapel Henchman 3"; break;
+                        case 3594: eventLabels[i] = "Get Item From Chapel Henchman 1"; break;
+                        case 3595: eventLabels[i] = "Get Item From Chapel Henchman 2"; break;
+                        case 3596: eventLabels[i] = "Empty"; break;
+                        case 3597: eventLabels[i] = "Yoster Empty Mailbox"; break;
+                        case 3598: eventLabels[i] = "Empty"; break;
+                        case 3599: eventLabels[i] = "Mushroom Derby Prize Calculator"; break;
+                        case 3600: eventLabels[i] = "Mushroom Derby Goal Tile"; break;
+                        case 3601: eventLabels[i] = "Mushroom Derby Yoshi Autoplay"; break;
+                        case 3602: eventLabels[i] = "Mushroom Kingdom Raz Raini Note"; break;
+                        case 3603: eventLabels[i] = "Empty"; break;
+                        case 3604: eventLabels[i] = "Pipe Vault Triple Chest Room Loader"; break;
+                        case 3605: eventLabels[i] = "Pipe Vault Pipe To Triple Chest Room"; break;
+                        case 3606: eventLabels[i] = "Chest Differentiator Npc 1 Or Other Camera A"; break;
+                        case 3607: eventLabels[i] = "Coin Differentiator Npc 8 Through 15"; break;
+                        case 3608: eventLabels[i] = "Lands End Purchasable Chest"; break;
+                        case 3609: eventLabels[i] = "Keep Invisible Floor Chests"; break;
+                        case 3610: eventLabels[i] = "Keep Invisible Floor Coins"; break;
+                        case 3611: eventLabels[i] = "Chest Differentiator Npc 2 Or Other"; break;
+                        case 3612: eventLabels[i] = "Chest Differentiator Npc 1 Or Other Camera B"; break;
+                        case 3613: eventLabels[i] = "Chest Differentiator Npc 11 Or Other"; break;
+                        case 3614: eventLabels[i] = "Belome Fortune Prize Chest"; break;
+                        case 3615: eventLabels[i] = "Climb Up Valley Beanstalk Into Vine Clouds"; break;
+                        case 3616: eventLabels[i] = "Nimbus Inn Loader From Door"; break;
+                        case 3617: eventLabels[i] = "Nimbus Inn Bedroom Loader"; break;
+                        case 3618: eventLabels[i] = "Nimbus Exterior Open Inn Door"; break;
+                        case 3619: eventLabels[i] = "Nimbus Exterior Open Shop Door"; break;
+                        case 3620: eventLabels[i] = "Nimbus Exterior Open Garros Door"; break;
+                        case 3621: eventLabels[i] = "Nimbus Exterior Open South House Door"; break;
+                        case 3622: eventLabels[i] = "Nimbus Exterior Open Northeast House Door"; break;
+                        case 3623: eventLabels[i] = "Empty"; break;
+                        case 3624: eventLabels[i] = "Nimbus Shop Loader"; break;
+                        case 3625: eventLabels[i] = "Empty"; break;
+                        case 3626: eventLabels[i] = "Nimbus Shop Chest Camera Shift"; break;
+                        case 3627: eventLabels[i] = "Empty"; break;
+                        case 3628: eventLabels[i] = "Nimbus Exterior Blue Guy In Front Of Castle Entrance"; break;
+                        case 3629: eventLabels[i] = "Nimbus Exterior Blue Guy Near Shop"; break;
+                        case 3630: eventLabels[i] = "Nimbus Exterior Blue Guy Near Invisible Path"; break;
+                        case 3631: eventLabels[i] = "Nimbus Exterior Blue Guy Near Garros House"; break;
+                        case 3632: eventLabels[i] = "Nimbus Exterior Woman Near Invisible Path"; break;
+                        case 3633: eventLabels[i] = "Nimbus Exterior Woman Near Inn"; break;
+                        case 3634: eventLabels[i] = "Nimbus Exterior Woman Near Entrance"; break;
+                        case 3635: eventLabels[i] = "Nimbus Exterior Woman In Front Of Castle Entrance"; break;
+                        case 3636: eventLabels[i] = "Nimbus Bird Guard"; break;
+                        case 3637: eventLabels[i] = "Temple Backdoor Locked"; break;
+                        case 3638: eventLabels[i] = "Empty"; break;
+                        case 3639: eventLabels[i] = "Empty"; break;
+                        case 3640: eventLabels[i] = "Statue Game"; break;
+                        case 3641: eventLabels[i] = "Empty"; break;
+                        case 3642: eventLabels[i] = "Nimbus Exterior Occupied Loader"; break;
+                        case 3643: eventLabels[i] = "Nimbus Shop"; break;
+                        case 3644: eventLabels[i] = "Nimbus Innkeeper"; break;
+                        case 3645: eventLabels[i] = "Nimbus Exterior Exit To Vines"; break;
+                        case 3646: eventLabels[i] = "Nimbus Exterior Guard Near Entrance"; break;
+                        case 3647: eventLabels[i] = "Nimbus Exterior Guard Near Castle"; break;
+                        case 3648: eventLabels[i] = "Nimbus Occupied Northeast House Right Guy"; break;
+                        case 3649: eventLabels[i] = "Nimbus Occupied Northeast House Left Woman"; break;
+                        case 3650: eventLabels[i] = "Nimbus Occupied Northeast House Right Woman"; break;
+                        case 3651: eventLabels[i] = "Nimbus Northeast House Croco"; break;
+                        case 3652: eventLabels[i] = "Nimbus Occupied Northeast House Left Guard"; break;
+                        case 3653: eventLabels[i] = "Nimbus South House Guy"; break;
+                        case 3654: eventLabels[i] = "Nimbus South House Woman"; break;
+                        case 3655: eventLabels[i] = "Nimbus Exterior Southernmost Blue Guy"; break;
+                        case 3656: eventLabels[i] = "Empty"; break;
+                        case 3657: eventLabels[i] = "Room Service Menu"; break;
+                        case 3658: eventLabels[i] = "Empty"; break;
+                        case 3659: eventLabels[i] = "Nimbus Deep Castle Note"; break;
+                        case 3660: eventLabels[i] = "Nimbus Repopulate Castle Upon Liberation"; break;
+                        case 3661: eventLabels[i] = "Bathrobe"; break;
+                        case 3662: eventLabels[i] = "Nimbus Castle Left Fan Room Exit To Bridge Room"; break;
+                        case 3663: eventLabels[i] = "Nimbus Castle Left Shaman Room Exit To 5 Door Room"; break;
+                        case 3664: eventLabels[i] = "Nimbus Castle Right Shaman Room Exit To 5 Door Room"; break;
+                        case 3665: eventLabels[i] = "Nimbus Castle Right Shaman Room Exit To Two Level Chest Room"; break;
+                        case 3666: eventLabels[i] = "Nimbus Castle Note Hallway Exit To Two Level Chest Room"; break;
+                        case 3667: eventLabels[i] = "Nimbus Castle Antechamber Left Guard"; break;
+                        case 3668: eventLabels[i] = "Nimbus Castle Antechamber Right Guard"; break;
+                        case 3669: eventLabels[i] = "Nimbus Castle Solo Bird Statue Room Exit To 5 Door Room"; break;
+                        case 3670: eventLabels[i] = "Nimbus Castle Main Hall Loader"; break;
+                        case 3671: eventLabels[i] = "Nimbus Castle First Post Throne Hall Exit To Throne Room"; break;
+                        case 3672: eventLabels[i] = "Nimbus Castle Back Exit Fall"; break;
+                        case 3673: eventLabels[i] = "Nimbus Liberated Town Square Loader"; break;
+                        case 3674: eventLabels[i] = "Nimbus Castle Two Level Chest Room Lower Chest"; break;
+                        case 3675: eventLabels[i] = "Nimbus Castle Bridge Room Lower Npc"; break;
+                        case 3676: eventLabels[i] = "Nimbus Castle Two Level Chest Room Female Npc"; break;
+                        case 3677: eventLabels[i] = "Royal Bus Platform Loader"; break;
+                        case 3678: eventLabels[i] = "Royal Bus Attendant"; break;
+                        case 3679: eventLabels[i] = "Nimbus Castle Egg Room Loader"; break;
+                        case 3680: eventLabels[i] = "Nimbus Castle Egg Post Defeat"; break;
+                        case 3681: eventLabels[i] = "Birdy Becomes Platform"; break;
+                        case 3682: eventLabels[i] = "Empty"; break;
+                        case 3683: eventLabels[i] = "Vine Instructions"; break;
+                        case 3684: eventLabels[i] = "Empty"; break;
+                        case 3685: eventLabels[i] = "Nimbus Get Crocos Item"; break;
+                        case 3686: eventLabels[i] = "Marrymore Shower"; break;
+                        case 3687: eventLabels[i] = "Marrymore Shower Door"; break;
+                        case 3688: eventLabels[i] = "Marrymore Service Bell"; break;
+                        case 3689: eventLabels[i] = "Link"; break;
+                        case 3690: eventLabels[i] = "Nimbus Castle Main Hall Exit To Exterior"; break;
+                        case 3691: eventLabels[i] = "Garros House Exit"; break;
+                        case 3692: eventLabels[i] = "Nimbus Lower House Exit To Exterior"; break;
+                        case 3693: eventLabels[i] = "Nimbus Inn Exit To Exterior"; break;
+                        case 3694: eventLabels[i] = "Nimbus Shop Exit"; break;
+                        case 3695: eventLabels[i] = "Nimbus Croco House Exit"; break;
+                        case 3696: eventLabels[i] = "Nimbus Castle West Lower Hall Loader"; break;
+                        case 3697: eventLabels[i] = "Nimbus Castle West Lower Hall Pinwheel Animations"; break;
+                        case 3698: eventLabels[i] = "Nimbus Castle West Lower Hall Pinwheel"; break;
+                        case 3699: eventLabels[i] = "Nimbus Castle West Lower Hall Mario Blown By Fan Bit"; break;
+                        case 3700: eventLabels[i] = "Nimbus Castle West Lower Hall Mario Blown By Fan Bit"; break;
+                        case 3701: eventLabels[i] = "Nimbus Castle Left Shaman Room Loader"; break;
+                        case 3702: eventLabels[i] = "Nimbus Castle Right Shaman Room Loader"; break;
+                        case 3703: eventLabels[i] = "Nimbus Castle Two Level Chest Room Loader"; break;
+                        case 3704: eventLabels[i] = "Nimbus Castle Occupied 5 Door Room Loader"; break;
+                        case 3705: eventLabels[i] = "Jawful Battle"; break;
+                        case 3706: eventLabels[i] = "Activate Jawful Extended Hitboxes"; break;
+                        case 3707: eventLabels[i] = "Nimbus Castle West Staircase Loader"; break;
+                        case 3708: eventLabels[i] = "Open Castlekey1 Door"; break;
+                        case 3709: eventLabels[i] = "Empty"; break;
+                        case 3710: eventLabels[i] = "Empty"; break;
+                        case 3711: eventLabels[i] = "Nimbus Castle Bridge Room Loader"; break;
+                        case 3712: eventLabels[i] = "Nimbus Castle Bridge Room Npc Animations"; break;
+                        case 3713: eventLabels[i] = "Nimbus Castle Angled Plant Room Npc Animations"; break;
+                        case 3714: eventLabels[i] = "Nimbus Castle Angled Plant Room Loader"; break;
+                        case 3715: eventLabels[i] = "Nimbus Castle Angled Plant Room Right Fan Gust Path"; break;
+                        case 3716: eventLabels[i] = "Nimbus Castle Angled Plant Room Right Fan Gust"; break;
+                        case 3717: eventLabels[i] = "Nimbus Castle Two Level Chest Room Fan Gust Path"; break;
+                        case 3718: eventLabels[i] = "Nimbus Castle Angled Plant Room Right Fan Battle"; break;
+                        case 3719: eventLabels[i] = "Nimbus Castle Right Red Cellar Woman"; break;
+                        case 3720: eventLabels[i] = "Nimbus Castle Outer Cellar Blue Gift Guy"; break;
+                        case 3721: eventLabels[i] = "Nimbus Castle Rightmost Outer Cellar Guy"; break;
+                        case 3722: eventLabels[i] = "Nimbus Castle Left Cellar Woman"; break;
+                        case 3723: eventLabels[i] = "Nimbus Castle Outer Cellar Gift Guard"; break;
+                        case 3724: eventLabels[i] = "Nimbus Castle Outer Cellar Loader"; break;
+                        case 3725: eventLabels[i] = "Nimbus Castle Note Hallway Loader"; break;
+                        case 3726: eventLabels[i] = "Nimbus Castle Antechamber Loader"; break;
+                        case 3727: eventLabels[i] = "Nimbus Castle Stairway Guard"; break;
+                        case 3728: eventLabels[i] = "Empty"; break;
+                        case 3729: eventLabels[i] = "Nimbus Castle Occupied Throne Room Loader"; break;
+                        case 3730: eventLabels[i] = "Nimbus Castle Occupied 4 Path Room Loader"; break;
+                        case 3731: eventLabels[i] = "Empty"; break;
+                        case 3732: eventLabels[i] = "Nimbus Castle Final Chest Hallway Loader"; break;
+                        case 3733: eventLabels[i] = "Nimbus Castle Final Chest Hallway Platform"; break;
+                        case 3734: eventLabels[i] = "Nimbus Castle Final Chest Hallway Exit To Final Hallway"; break;
+                        case 3735: eventLabels[i] = "Nimbus Castle Final Hallway Apply Mod"; break;
+                        case 3736: eventLabels[i] = "Nimbus Castle Final Hallway Loader"; break;
+                        case 3737: eventLabels[i] = "Nimbus Castle Back Exit Loader"; break;
+                        case 3738: eventLabels[i] = "Empty"; break;
+                        case 3739: eventLabels[i] = "Nimbus Castle Throne Room Exit To Antechamber"; break;
+                        case 3740: eventLabels[i] = "Nimbus Castle Liberated Throne Room Loader"; break;
+                        case 3741: eventLabels[i] = "Nimbus Castle Antechamber Exit To Note Hallway"; break;
+                        case 3742: eventLabels[i] = "Nimbus Castle Antechamber Exit To Throne Room"; break;
+                        case 3743: eventLabels[i] = "Nimbus Castle Right Shaman Hallway Liberated Npc"; break;
+                        case 3744: eventLabels[i] = "Nimbus Exterior Shy Away"; break;
+                        case 3745: eventLabels[i] = "Nimbus Back Exit Initiate Falling Sequence"; break;
+                        case 3746: eventLabels[i] = "Hot Springs Trampoline To Mezzanine"; break;
+                        case 3747: eventLabels[i] = "Nimbus Hot Spring Guards"; break;
+                        case 3748: eventLabels[i] = "Empty"; break;
+                        case 3749: eventLabels[i] = "Nimbus Mezzanine Trampoline To Town Square"; break;
+                        case 3750: eventLabels[i] = "Nimbus Mezzanine Fall To Hot Springs"; break;
+                        case 3751: eventLabels[i] = "Nimbus Land Hot Springs Lobby Exit"; break;
+                        case 3752: eventLabels[i] = "Hot Springs Exit To Lobby"; break;
+                        case 3753: eventLabels[i] = "Hot Springs Lobby Loader"; break;
+                        case 3754: eventLabels[i] = "Hot Springs Fall To Volcano"; break;
+                        case 3755: eventLabels[i] = "Hot Springs Note"; break;
+                        case 3756: eventLabels[i] = "Hot Springs Loader"; break;
+                        case 3757: eventLabels[i] = "King Nimbus"; break;
+                        case 3758: eventLabels[i] = "Queen Nimbus"; break;
+                        case 3759: eventLabels[i] = "Nimbus Castle Left Shaman Hallway Liberated Npc"; break;
+                        case 3760: eventLabels[i] = "Nimbus Mezzanine Trampoline To World Map"; break;
+                        case 3761: eventLabels[i] = "Nimbus Mezzanine Loader"; break;
+                        case 3762: eventLabels[i] = "Nimbus Castle Liberated 5 Door Room Loader"; break;
+                        case 3763: eventLabels[i] = "Nimbus Back Exit Mario Fall Animation"; break;
+                        case 3764: eventLabels[i] = "Nimbus First Fall Room Load 2Nd Room"; break;
+                        case 3765: eventLabels[i] = "Bean Valley Upper Chest Room Fall To Lower Chest Room"; break;
+                        case 3766: eventLabels[i] = "Bean Valley Lower Chest Room Fall To Hot Springs Mezzanine"; break;
+                        case 3767: eventLabels[i] = "Nimbus Castle Angled Plant Room Exit To 4 Path Room"; break;
+                        case 3768: eventLabels[i] = "Nimbus Castle Main Hall Exit To 4 Way Path"; break;
+                        case 3769: eventLabels[i] = "Nimbus Castle Liberated Bridge Room Loader"; break;
+                        case 3770: eventLabels[i] = "Bean Valley 1St Vine Room Loader"; break;
+                        case 3771: eventLabels[i] = "Samus"; break;
+                        case 3772: eventLabels[i] = "Hot Springs Water"; break;
+                        case 3773: eventLabels[i] = "Hot Springs Eject From Water"; break;
+                        case 3774: eventLabels[i] = "Hot Springs Reset Ejection Timer"; break;
+                        case 3775: eventLabels[i] = "Unused Nimbus Dialog"; break;
+                        case 3776: eventLabels[i] = "Empty"; break;
+                        case 3777: eventLabels[i] = "Royal Bus Platform Exit"; break;
+                        case 3778: eventLabels[i] = "Ball Solitaire Set Puzzle"; break;
+                        case 3779: eventLabels[i] = "Bean Valley 1St Vine Room Exit To 2Nd Vine Room"; break;
+                        case 3780: eventLabels[i] = "Bean Valley 2Nd Vine Room Exit To East Vine Room"; break;
+                        case 3781: eventLabels[i] = "Bean Valley East Vine Room Exit To Nimbus Mezzanine"; break;
+                        case 3782: eventLabels[i] = "Bean Valley Upper Chest Room Fall To West Vine Room"; break;
+                        case 3783: eventLabels[i] = "Bean Valley East Vine Room Exit To 2Nd Vine Room"; break;
+                        case 3784: eventLabels[i] = "Bean Valley 2Nd Vine Room Exit To 1St Vine Room"; break;
+                        case 3785: eventLabels[i] = "Bean Valley 1St Vine Room Exit To Ground Level"; break;
+                        case 3786: eventLabels[i] = "Bean Valley West Vine Room Exit To Upper Chest Room"; break;
+                        case 3787: eventLabels[i] = "Nimbus Mezzanine Fall To East Vine Room"; break;
+                        case 3788: eventLabels[i] = "Bean Valley West Vine Room Summon Platform"; break;
+                        case 3789: eventLabels[i] = "Bean Valley West Vine Room Platform"; break;
+                        case 3790: eventLabels[i] = "Bean Valley 2Nd Vine Room Exit To West Vine Room"; break;
+                        case 3791: eventLabels[i] = "Open Factory Final Boss Room"; break;
+                        case 3792: eventLabels[i] = "Factory Final Boss Room Loader"; break;
+                        case 3793: eventLabels[i] = "Factory Smelter Animation"; break;
+                        case 3794: eventLabels[i] = "Factory Final Boss Fight"; break;
+                        case 3795: eventLabels[i] = "Empty"; break;
+                        case 3796: eventLabels[i] = "Empty"; break;
+                        case 3797: eventLabels[i] = "Ending Credits Room Loader"; break;
+                        case 3798: eventLabels[i] = "Ending Credits Orange Star"; break;
+                        case 3799: eventLabels[i] = "Ending Credits Purple Star"; break;
+                        case 3800: eventLabels[i] = "Ending Credits Indigo Star"; break;
+                        case 3801: eventLabels[i] = "Ending Credits Red Star"; break;
+                        case 3802: eventLabels[i] = "Ending Credits Yellow Star"; break;
+                        case 3803: eventLabels[i] = "Ending Credits Green Star"; break;
+                        case 3804: eventLabels[i] = "Ending Credits Coronation Npcs"; break;
+                        case 3805: eventLabels[i] = "Ending Credits Coronation Loader"; break;
+                        case 3806: eventLabels[i] = "Ending Credits Race Npcs"; break;
+                        case 3807: eventLabels[i] = "Ending Credits Race Loader"; break;
+                        case 3808: eventLabels[i] = "Ending Credits Race Audience"; break;
+                        case 3809: eventLabels[i] = "Marrymore Sanctuary Begin Wedding Gear Sequence"; break;
+                        case 3810: eventLabels[i] = "Empty"; break;
+                        case 3811: eventLabels[i] = "Nimbus Inner Cellar Loader"; break;
+                        case 3812: eventLabels[i] = "Empty"; break;
+                        case 3813: eventLabels[i] = "Nimbus Inn Guest"; break;
+                        case 3814: eventLabels[i] = "Mushroom Kingdom Liberated Loader"; break;
+                        case 3815: eventLabels[i] = "Empty"; break;
+                        case 3816: eventLabels[i] = "Empty"; break;
+                        case 3817: eventLabels[i] = "Empty"; break;
+                        case 3818: eventLabels[i] = "World Map Mushroom Way"; break;
+                        case 3819: eventLabels[i] = "Lands End First Room Loader"; break;
+                        case 3820: eventLabels[i] = "Forced Tower Boss 1 Fight"; break;
+                        case 3821: eventLabels[i] = "Empty"; break;
+                        case 3822: eventLabels[i] = "Rose Town Sign Item Granter"; break;
+                        case 3823: eventLabels[i] = "Yoster Isle Goalpost Item Granter"; break;
+                        case 3824: eventLabels[i] = "Yoster Isle Loader"; break;
+                        case 3825: eventLabels[i] = "Nimbus Final Chest Room Platform Bit"; break;
+                        case 3826: eventLabels[i] = "Empty"; break;
+                        case 3827: eventLabels[i] = "Grant Item Standard Sound"; break;
+                        case 3828: eventLabels[i] = "Empty"; break;
+                        case 3829: eventLabels[i] = "Empty"; break;
+                        case 3830: eventLabels[i] = "Mushroom Kingdom Shop Cellar Npc"; break;
+                        case 3831: eventLabels[i] = "Mushroom Kingdom Shop Cellar Mod"; break;
+                        case 3832: eventLabels[i] = "Empty"; break;
+                        case 3833: eventLabels[i] = "Empty"; break;
+                        case 3834: eventLabels[i] = "Empty"; break;
+                        case 3835: eventLabels[i] = "Empty"; break;
+                        case 3836: eventLabels[i] = "Empty"; break;
+                        case 3837: eventLabels[i] = "Empty"; break;
+                        case 3838: eventLabels[i] = "Keep Anti Softlock Trampoline"; break;
+                        case 3839: eventLabels[i] = "Empty"; break;
+                        case 3840: eventLabels[i] = "Starter Debug Items"; break;
+                        case 3841: eventLabels[i] = "World Map Marios Pad"; break;
+                        case 3842: eventLabels[i] = "Booster Hill Star Piece Signal"; break;
+                        case 3843: eventLabels[i] = "World Map Mushroom Kingdom"; break;
+                        case 3844: eventLabels[i] = "World Map Bandits Way"; break;
+                        case 3845: eventLabels[i] = "World Map Kero Sewers"; break;
+                        case 3846: eventLabels[i] = "World Map Midas River"; break;
+                        case 3847: eventLabels[i] = "World Map Tadpole Pond"; break;
+                        case 3848: eventLabels[i] = "World Map Pipe Vault"; break;
+                        case 3849: eventLabels[i] = "World Map Rose Way"; break;
+                        case 3850: eventLabels[i] = "World Map Rose Town"; break;
+                        case 3851: eventLabels[i] = "World Map Forest Maze"; break;
+                        case 3852: eventLabels[i] = "World Map Yoster Isle"; break;
+                        case 3853: eventLabels[i] = "World Map Moleville"; break;
+                        case 3854: eventLabels[i] = "World Map Booster Pass"; break;
+                        case 3855: eventLabels[i] = "World Map Booster Tower"; break;
+                        case 3856: eventLabels[i] = "World Map Marrymore"; break;
+                        case 3857: eventLabels[i] = "World Map Star Hill"; break;
+                        case 3858: eventLabels[i] = "World Map Seaside Town"; break;
+                        case 3859: eventLabels[i] = "World Map Sea"; break;
+                        case 3860: eventLabels[i] = "World Map Ship"; break;
+                        case 3861: eventLabels[i] = "World Map Lands End"; break;
+                        case 3862: eventLabels[i] = "World Map Montro Town"; break;
+                        case 3863: eventLabels[i] = "World Map Bean Valley"; break;
+                        case 3864: eventLabels[i] = "World Map Nimbus Land"; break;
+                        case 3865: eventLabels[i] = "World Map Barrel Volcano"; break;
+                        case 3866: eventLabels[i] = "World Map Vista Hill"; break;
+                        case 3867: eventLabels[i] = "World Map Booster Hill"; break;
+                        case 3868: eventLabels[i] = "World Map Bowsers Keep"; break;
+                        case 3869: eventLabels[i] = "World Map Abyss"; break;
+                        case 3870: eventLabels[i] = "World Map Grate Guys Casino"; break;
+                        case 3871: eventLabels[i] = "Nimbus Castle Two Chest Room Guard"; break;
+                        case 3872: eventLabels[i] = "Nimbus Castle 5 Door Room Left Guard"; break;
+                        case 3873: eventLabels[i] = "Nimbus Castle 5 Door Room Right Guard"; break;
+                        case 3874: eventLabels[i] = "Nimbus Castle Bridge Room Guard"; break;
+                        case 3875: eventLabels[i] = "Nimbus Unused Dialog"; break;
+                        case 3876: eventLabels[i] = "Nimbus Castlle 4 Way Path Left Guard"; break;
+                        case 3877: eventLabels[i] = "Nimbus Castle Two Chest Room Upper Chest"; break;
+                        case 3878: eventLabels[i] = "Casino Trampoline"; break;
+                        case 3879: eventLabels[i] = "Nimbus Castle Bridge Room Chest"; break;
+                        case 3880: eventLabels[i] = "Sea Chests"; break;
+                        case 3881: eventLabels[i] = "Chest Differentiator Npc 1 Or Other"; break;
+                        case 3882: eventLabels[i] = "Chest Differentiator Npc 3 4 Or Other"; break;
+                        case 3883: eventLabels[i] = "Inner Factory Exit Trampoline"; break;
+                        case 3884: eventLabels[i] = "Ball Solitaire Set Puzzle Configuration Value"; break;
+                        case 3885: eventLabels[i] = "End Game"; break;
+                        case 3886: eventLabels[i] = "End Game Container From Alt Win Conditions"; break;
+                        case 3887: eventLabels[i] = "Marios Pad Star Piece Signal"; break;
+                        case 3888: eventLabels[i] = "Mushroom Way Star Piece Signal"; break;
+                        case 3889: eventLabels[i] = "Mushroom Kingdom Star Piece Signal"; break;
+                        case 3890: eventLabels[i] = "Bandits Way Star Piece Signal"; break;
+                        case 3891: eventLabels[i] = "Sewers Star Piece Signal"; break;
+                        case 3892: eventLabels[i] = "Midas River Star Piece Signal"; break;
+                        case 3893: eventLabels[i] = "Tadpole Pond Star Piece Signal"; break;
+                        case 3894: eventLabels[i] = "Rose Way Star Piece Signal"; break;
+                        case 3895: eventLabels[i] = "Rose Town Star Piece Signal"; break;
+                        case 3896: eventLabels[i] = "Forest Maze Star Piece Signal"; break;
+                        case 3897: eventLabels[i] = "Moleville Star Piece Signal"; break;
+                        case 3898: eventLabels[i] = "Booster Pass Star Piece Signal"; break;
+                        case 3899: eventLabels[i] = "Booster Tower Star Piece Signal"; break;
+                        case 3900: eventLabels[i] = "Pipe Vault Star Piece Signal"; break;
+                        case 3901: eventLabels[i] = "Yoster Isle Star Piece Signal"; break;
+                        case 3902: eventLabels[i] = "Marrymore Star Piece Signal"; break;
+                        case 3903: eventLabels[i] = "Star Hill Star Piece Signal"; break;
+                        case 3904: eventLabels[i] = "Seaside Town Star Piece Signal"; break;
+                        case 3905: eventLabels[i] = "Sea Star Piece Signal"; break;
+                        case 3906: eventLabels[i] = "Ship Star Piece Signal"; break;
+                        case 3907: eventLabels[i] = "Lands End Star Piece Signal"; break;
+                        case 3908: eventLabels[i] = "Temple Star Piece Signal"; break;
+                        case 3909: eventLabels[i] = "Monstro Star Piece Signal"; break;
+                        case 3910: eventLabels[i] = "Casino Star Piece Signal"; break;
+                        case 3911: eventLabels[i] = "Bean Valley Star Piece Signal"; break;
+                        case 3912: eventLabels[i] = "Nimbus Star Piece Signal"; break;
+                        case 3913: eventLabels[i] = "Volcano Star Piece Signal"; break;
+                        case 3914: eventLabels[i] = "Keep Star Piece Signal"; break;
+                        case 3915: eventLabels[i] = "Factory Star Piece Signal"; break;
+                        case 3916: eventLabels[i] = "Inner Factory Star Piece Signal"; break;
+                        case 3917: eventLabels[i] = "Rose Way Back Entrance Loader"; break;
+                        case 3918: eventLabels[i] = "Forest Maze Entrance Loader"; break;
+                        case 3919: eventLabels[i] = "Booster Pass Back Entrance Loader"; break;
+                        case 3920: eventLabels[i] = "Sea Save Room Loader"; break;
+                        case 3921: eventLabels[i] = "Ship First Save Room Loader"; break;
+                        case 3922: eventLabels[i] = "Temple Set Signal Ring Directional Bit"; break;
+                        case 3923: eventLabels[i] = "Volcano Save Room Loader"; break;
+                        case 3924: eventLabels[i] = "Keep 1St Save Room Loader"; break;
+                        case 3925: eventLabels[i] = "Factory Save Room Loaders"; break;
+                        case 3926: eventLabels[i] = "Temple Back Entrance"; break;
+                        case 3927: eventLabels[i] = "Nimbus Castle Exit Hallway Save Room Loader"; break;
+                        case 3928: eventLabels[i] = "Nimbus Castlle 4 Way Path Right Guard"; break;
+                        case 3929: eventLabels[i] = "Lands End Purchasable Chest 2 Subroutine"; break;
+                        case 3930: eventLabels[i] = "Marrymore Gear Preloader"; break;
+                        case 3931: eventLabels[i] = "Get Shoes"; break;
+                        case 3932: eventLabels[i] = "Get Brooch"; break;
+                        case 3933: eventLabels[i] = "Get Ring"; break;
+                        case 3934: eventLabels[i] = "Get Crown"; break;
+                        case 3935: eventLabels[i] = "Freestanding Shoes"; break;
+                        case 3936: eventLabels[i] = "Freestanding Brooch"; break;
+                        case 3937: eventLabels[i] = "Freestanding Ring"; break;
+                        case 3938: eventLabels[i] = "Freestanding Crown"; break;
+                        case 3939: eventLabels[i] = "River Shoes"; break;
+                        case 3940: eventLabels[i] = "River Brooch"; break;
+                        case 3941: eventLabels[i] = "River Ring"; break;
+                        case 3942: eventLabels[i] = "River Crown"; break;
+                        case 3943: eventLabels[i] = "Shoes Chest"; break;
+                        case 3944: eventLabels[i] = "Brooch Chest"; break;
+                        case 3945: eventLabels[i] = "Ring Chest"; break;
+                        case 3946: eventLabels[i] = "Crown Chest"; break;
+                        case 3947: eventLabels[i] = "Empty"; break;
+                        case 3948: eventLabels[i] = "Empty"; break;
+                        case 3949: eventLabels[i] = "Empty"; break;
+                        case 3950: eventLabels[i] = "Post Final Boss Init"; break;
+                        case 3951: eventLabels[i] = "Star Piece Credits Init"; break;
+                        case 3952: eventLabels[i] = "Clone Reserved"; break;
+                        case 3953: eventLabels[i] = "Clone Reserved"; break;
+                        case 3954: eventLabels[i] = "Clone Reserved"; break;
+                        case 3955: eventLabels[i] = "Clone Reserved"; break;
+                        case 3956: eventLabels[i] = "Clone Reserved"; break;
+                        case 3957: eventLabels[i] = "Clone Reserved"; break;
+                        case 3958: eventLabels[i] = "Clone Reserved"; break;
+                        case 3959: eventLabels[i] = "Clone Reserved"; break;
+                        case 3960: eventLabels[i] = "Clone Reserved"; break;
+                        case 3961: eventLabels[i] = "Clone Reserved"; break;
+                        case 3962: eventLabels[i] = "Clone Reserved"; break;
+                        case 3963: eventLabels[i] = "Clone Reserved"; break;
+                        case 3964: eventLabels[i] = "Clone Reserved"; break;
+                        case 3965: eventLabels[i] = "Clone Reserved"; break;
+                        case 3966: eventLabels[i] = "Clone Reserved"; break;
+                        case 3967: eventLabels[i] = "Clone Reserved"; break;
+                        case 3968: eventLabels[i] = "Clone Reserved"; break;
+                        case 3969: eventLabels[i] = "Clone Reserved"; break;
+                        case 3970: eventLabels[i] = "Clone Reserved"; break;
+                        case 3971: eventLabels[i] = "Clone Reserved"; break;
+                        case 3972: eventLabels[i] = "Clone Reserved"; break;
+                        case 3973: eventLabels[i] = "Clone Reserved"; break;
+                        case 3974: eventLabels[i] = "Clone Reserved"; break;
+                        case 3975: eventLabels[i] = "Clone Reserved"; break;
+                        case 3976: eventLabels[i] = "Clone Reserved"; break;
+                        case 3977: eventLabels[i] = "Clone Reserved"; break;
+                        case 3978: eventLabels[i] = "Clone Reserved"; break;
+                        case 3979: eventLabels[i] = "Clone Reserved"; break;
+                        case 3980: eventLabels[i] = "Clone Reserved"; break;
+                        case 3981: eventLabels[i] = "Clone Reserved"; break;
+                        case 3982: eventLabels[i] = "Clone Reserved"; break;
+                        case 3983: eventLabels[i] = "Clone Reserved"; break;
+                        case 3984: eventLabels[i] = "Clone Reserved"; break;
+                        case 3985: eventLabels[i] = "Clone Reserved"; break;
+                        case 3986: eventLabels[i] = "Clone Reserved"; break;
+                        case 3987: eventLabels[i] = "Clone Reservedclone Reserved"; break;
+                        case 3988: eventLabels[i] = "Clone Reserved"; break;
+                        case 3989: eventLabels[i] = "Clone Reserved"; break;
+                        case 3990: eventLabels[i] = "Clone Reserved"; break;
+                        case 3991: eventLabels[i] = "Clone Reserved"; break;
+                        case 3992: eventLabels[i] = "Clone Reserved"; break;
+                        case 3993: eventLabels[i] = "Clone Reserved"; break;
+                        case 3994: eventLabels[i] = "Clone Reserved"; break;
+                        case 3995: eventLabels[i] = "Clone Reserved"; break;
+                        case 3996: eventLabels[i] = "Clone Reserved"; break;
+                        case 3997: eventLabels[i] = "Clone Reserved"; break;
+                        case 3998: eventLabels[i] = "Clone Reserved"; break;
+                        case 3999: eventLabels[i] = "Clone Reserved"; break;
+                        case 4000: eventLabels[i] = "Clone Reserved"; break;
+                        case 4001: eventLabels[i] = "Clone Reserved"; break;
+                        case 4002: eventLabels[i] = "Clone Reserved"; break;
+                        case 4003: eventLabels[i] = "Clone Reserved"; break;
+                        case 4004: eventLabels[i] = "Clone Reserved"; break;
+                        case 4005: eventLabels[i] = "Clone Reserved"; break;
+                        case 4006: eventLabels[i] = "Clone Reserved"; break;
+                        case 4007: eventLabels[i] = "Clone Reserved"; break;
+                        case 4008: eventLabels[i] = "Clone Reserved"; break;
+                        case 4009: eventLabels[i] = "Clone Reserved"; break;
+                        case 4010: eventLabels[i] = "Clone Reserved"; break;
+                        case 4011: eventLabels[i] = "Clone Reserved"; break;
+                        case 4012: eventLabels[i] = "Clone Reserved"; break;
+                        case 4013: eventLabels[i] = "Clone Reserved"; break;
+                        case 4014: eventLabels[i] = "Clone Reserved"; break;
+                        case 4015: eventLabels[i] = "Clone Reserved"; break;
+                        case 4016: eventLabels[i] = "Clone Reserved"; break;
+                        case 4017: eventLabels[i] = "Clone Reserved"; break;
+                        case 4018: eventLabels[i] = "Clone Reserved"; break;
+                        case 4019: eventLabels[i] = "Clone Reserved"; break;
+                        case 4020: eventLabels[i] = "Clone Reserved"; break;
+                        case 4021: eventLabels[i] = "Clone Reserved"; break;
+                        case 4022: eventLabels[i] = "Clone Reserved"; break;
+                        case 4023: eventLabels[i] = "Clone Reserved"; break;
+                        case 4024: eventLabels[i] = "Clone Reserved"; break;
+                        case 4025: eventLabels[i] = "Clone Reserved"; break;
+                        case 4026: eventLabels[i] = "Clone Reserved"; break;
+                        case 4027: eventLabels[i] = "Clone Reserved"; break;
+                        case 4028: eventLabels[i] = "Clone Reserved"; break;
+                        case 4029: eventLabels[i] = "Clone Reserved"; break;
+                        case 4030: eventLabels[i] = "Clone Reserved"; break;
+                        case 4031: eventLabels[i] = "Clone Reserved"; break;
+                        case 4032: eventLabels[i] = "Clone Reserved"; break;
+                        case 4033: eventLabels[i] = "Clone Reserved"; break;
+                        case 4034: eventLabels[i] = "Clone Reserved"; break;
+                        case 4035: eventLabels[i] = "Clone Reserved"; break;
+                        case 4036: eventLabels[i] = "Clone Reserved"; break;
+                        case 4037: eventLabels[i] = "Clone Reserved"; break;
+                        case 4038: eventLabels[i] = "Clone Reserved"; break;
+                        case 4039: eventLabels[i] = "Clone Reserved"; break;
+                        case 4040: eventLabels[i] = "Clone Reserved"; break;
+                        case 4041: eventLabels[i] = "Clone Reserved"; break;
+                        case 4042: eventLabels[i] = "Clone Reserved"; break;
+                        case 4043: eventLabels[i] = "Clone Reserved"; break;
+                        case 4044: eventLabels[i] = "Clone Reserved"; break;
+                        case 4045: eventLabels[i] = "Clone Reserved"; break;
+                        case 4046: eventLabels[i] = "Clone Reserved"; break;
+                        case 4047: eventLabels[i] = "Clone Reserved"; break;
+                        case 4048: eventLabels[i] = "Clone Reserved"; break;
+                        case 4049: eventLabels[i] = "Clone Reserved"; break;
+                        case 4050: eventLabels[i] = "Clone Reserved"; break;
+                        case 4051: eventLabels[i] = "Clone Reserved"; break;
+                        case 4052: eventLabels[i] = "Clone Reserved"; break;
+                        case 4053: eventLabels[i] = "Clone Reserved"; break;
+                        case 4054: eventLabels[i] = "Clone Reserved"; break;
+                        case 4055: eventLabels[i] = "Clone Reserved"; break;
+                        case 4056: eventLabels[i] = "Clone Reserved"; break;
+                        case 4057: eventLabels[i] = "Clone Reserved"; break;
+                        case 4058: eventLabels[i] = "Clone Reserved"; break;
+                        case 4059: eventLabels[i] = "Clone Reserved"; break;
+                        case 4060: eventLabels[i] = "Clone Reserved"; break;
+                        case 4061: eventLabels[i] = "Clone Reserved"; break;
+                        case 4062: eventLabels[i] = "Clone Reserved"; break;
+                        case 4063: eventLabels[i] = "Clone Reserved"; break;
+                        case 4064: eventLabels[i] = "Clone Reserved"; break;
+                        case 4065: eventLabels[i] = "Clone Reserved"; break;
+                        case 4066: eventLabels[i] = "Clone Reserved"; break;
+                        case 4067: eventLabels[i] = "Clone Reserved"; break;
+                        case 4068: eventLabels[i] = "Clone Reserved"; break;
+                        case 4069: eventLabels[i] = "Clone Reserved"; break;
+                        case 4070: eventLabels[i] = "Clone Reserved"; break;
+                        case 4071: eventLabels[i] = "Clone Reserved"; break;
+                        case 4072: eventLabels[i] = "Clone Reserved"; break;
+                        case 4073: eventLabels[i] = "Clone Reserved"; break;
+                        case 4074: eventLabels[i] = "Clone Reserved"; break;
+                        case 4075: eventLabels[i] = "Clone Reserved"; break;
+                        case 4076: eventLabels[i] = "Clone Reserved"; break;
+                        case 4077: eventLabels[i] = "Clone Reserved"; break;
+                        case 4078: eventLabels[i] = "Clone Reserved"; break;
+                        case 4079: eventLabels[i] = "Clone Reserved"; break;
+                        case 4080: eventLabels[i] = "Clone Reserved"; break;
+                        case 4081: eventLabels[i] = "Clone Reserved"; break;
+                        case 4082: eventLabels[i] = "Clone Reserved"; break;
+                        case 4083: eventLabels[i] = "Clone Reserved"; break;
+                        case 4084: eventLabels[i] = "Clone Reserved"; break;
+                        case 4085: eventLabels[i] = "Clone Reserved"; break;
+                        case 4086: eventLabels[i] = "Clone Reserved"; break;
+                        case 4087: eventLabels[i] = "Clone Reserved"; break;
+                        case 4088: eventLabels[i] = "Clone Reserved"; break;
+                        case 4089: eventLabels[i] = "Clone Reserved"; break;
+                        case 4090: eventLabels[i] = "Clone Reserved"; break;
+                        case 4091: eventLabels[i] = "Clone Reserved"; break;
+                        case 4092: eventLabels[i] = "Clone Reserved"; break;
+                        case 4093: eventLabels[i] = "Clone Reserved"; break;
+                        case 4094: eventLabels[i] = "Clone Reserved"; break;
+                        case 4095: eventLabels[i] = "Clone Reserved"; break;
+                        default: eventLabels[i] = ""; break;
                     }
                 }
                 return eventLabels;
@@ -4699,7 +8774,4101 @@ namespace LAZYSHELL
                 {
                     switch (i)
                     {
-                        case 128: actionLabels[i] = "NPC walks around slowly"; break;
+                        case 0: eventLabels[i] = "Empty"; break;
+                        case 1: eventLabels[i] = "Empty"; break;
+                        case 2: eventLabels[i] = "Empty"; break;
+                        case 3: eventLabels[i] = "Empty"; break;
+                        case 4: eventLabels[i] = "Launch Prologue"; break;
+                        case 5: eventLabels[i] = "Set 70A7 To Random Tier 1 Consumable"; break;
+                        case 6: eventLabels[i] = "Set 70A7 To Random Tier 2 Consumable"; break;
+                        case 7: eventLabels[i] = "Set 70A7 To Random Tier 3 Consumable"; break;
+                        case 8: eventLabels[i] = "Set 70A7 To Random Tier 4 Consumable"; break;
+                        case 9: eventLabels[i] = "Set 70A7 To Random Tier 1 Equip"; break;
+                        case 10: eventLabels[i] = "Set 70A7 To Random Tier 2 Equip"; break;
+                        case 11: eventLabels[i] = "Set 70A7 To Random Tier 3 Equip"; break;
+                        case 12: eventLabels[i] = "Set 70A7 To Random Tier 4 Equip"; break;
+                        case 13: eventLabels[i] = "Base Rom Only Fix Map And Party"; break;
+                        case 14: eventLabels[i] = "Standard Room Loader"; break;
+                        case 15: eventLabels[i] = "Standard Room Loader"; break;
+                        case 16: eventLabels[i] = "Fight Remove Permanently"; break;
+                        case 17: eventLabels[i] = "Fight Remove Temporarily"; break;
+                        case 18: eventLabels[i] = "Fight Do Not Remove"; break;
+                        case 19: eventLabels[i] = "Fight Remove Permanently Blink On Run"; break;
+                        case 20: eventLabels[i] = "Fight Remove Temporarily Blink On Run"; break;
+                        case 21: eventLabels[i] = "Forest Maze Mushroom Grant"; break;
+                        case 22: eventLabels[i] = "Better Tip Granter"; break;
+                        case 23: eventLabels[i] = "Mushroom Selection"; break;
+                        case 24: eventLabels[i] = "Battle Result Check"; break;
+                        case 25: eventLabels[i] = "Battle Result Check Blinking"; break;
+                        case 26: eventLabels[i] = "Grant Tier 1 Consumable Or Equip"; break;
+                        case 27: eventLabels[i] = "Grant Tier 2 Consumable Or Equip"; break;
+                        case 28: eventLabels[i] = "Grant Tier 3 Consumable Or Equip"; break;
+                        case 29: eventLabels[i] = "Grant Tier 4 Consumable Or Equip"; break;
+                        case 30: eventLabels[i] = "Empty"; break;
+                        case 31: eventLabels[i] = "Empty"; break;
+                        case 32: eventLabels[i] = "Non Coin Chest Container"; break;
+                        case 33: eventLabels[i] = "Open Chest"; break;
+                        case 34: eventLabels[i] = "Coin Chest Container"; break;
+                        case 35: eventLabels[i] = "Mimic Or Slot Chest Container"; break;
+                        case 36: eventLabels[i] = "Grant Any Consumable"; break;
+                        case 37: eventLabels[i] = "Grant Any Equip"; break;
+                        case 38: eventLabels[i] = "Grant Any Consumable Or Equip"; break;
+                        case 39: eventLabels[i] = "Grant Any Consumable Or Equip Tier 3 Cap"; break;
+                        case 40: eventLabels[i] = "Grant Any Equip Tier 3 Cap"; break;
+                        case 41: eventLabels[i] = "Grant Any Consumable Tier 3 Cap"; break;
+                        case 42: eventLabels[i] = "Grant Any Consumable Tier 2 Cap"; break;
+                        case 43: eventLabels[i] = "Grant Any Equip Tier 2 Cap"; break;
+                        case 44: eventLabels[i] = "Grant Any Consumable Or Equip Tier 2 Cap"; break;
+                        case 45: eventLabels[i] = "Grant Any Consumable Exclude Worst"; break;
+                        case 46: eventLabels[i] = "Grant Any Equip Exclude Worst"; break;
+                        case 47: eventLabels[i] = "Grant Any Consumable Or Equip Exclude Worst"; break;
+                        case 48: eventLabels[i] = "Grant Any Consumable Exclude Worst Tier 3 Cap"; break;
+                        case 49: eventLabels[i] = "Grant Any Equip Exclude Worst Tier 3 Cap"; break;
+                        case 50: eventLabels[i] = "Grant Any Equip Or Consumable Exclude Worst Tier 3 Cap"; break;
+                        case 51: eventLabels[i] = "Empty"; break;
+                        case 52: eventLabels[i] = "Empty"; break;
+                        case 53: eventLabels[i] = "Empty"; break;
+                        case 54: eventLabels[i] = "Empty"; break;
+                        case 55: eventLabels[i] = "Empty"; break;
+                        case 56: eventLabels[i] = "Empty"; break;
+                        case 57: eventLabels[i] = "Empty"; break;
+                        case 58: eventLabels[i] = "Empty"; break;
+                        case 59: eventLabels[i] = "Empty"; break;
+                        case 60: eventLabels[i] = "Empty"; break;
+                        case 61: eventLabels[i] = "Empty"; break;
+                        case 62: eventLabels[i] = "Empty"; break;
+                        case 63: eventLabels[i] = "Empty"; break;
+                        case 64: eventLabels[i] = "Empty"; break;
+                        case 65: eventLabels[i] = "Trampoline Subroutine"; break;
+                        case 66: eventLabels[i] = "Pipe Down Subroutine"; break;
+                        case 67: eventLabels[i] = "Empty"; break;
+                        case 68: eventLabels[i] = "Empty"; break;
+                        case 69: eventLabels[i] = "Empty"; break;
+                        case 70: eventLabels[i] = "Empty"; break;
+                        case 71: eventLabels[i] = "Empty"; break;
+                        case 72: eventLabels[i] = "Empty"; break;
+                        case 73: eventLabels[i] = "Empty"; break;
+                        case 74: eventLabels[i] = "Empty"; break;
+                        case 75: eventLabels[i] = "Empty"; break;
+                        case 76: eventLabels[i] = "Empty"; break;
+                        case 77: eventLabels[i] = "Empty"; break;
+                        case 78: eventLabels[i] = "Unknown"; break;
+                        case 79: eventLabels[i] = "Unknown"; break;
+                        case 80: eventLabels[i] = "Save Block Subroutine"; break;
+                        case 81: eventLabels[i] = "Mario Lands Subroutine"; break;
+                        case 82: eventLabels[i] = "Three Musty Fears Greaper Dialog"; break;
+                        case 83: eventLabels[i] = "Three Musty Fears Boo Dialog"; break;
+                        case 84: eventLabels[i] = "Three Musty Fears Bones Dialog"; break;
+                        case 85: eventLabels[i] = "Invisible Item Check 1"; break;
+                        case 86: eventLabels[i] = "Invisible Item Check 2"; break;
+                        case 87: eventLabels[i] = "Invisible Item Check 3"; break;
+                        case 88: eventLabels[i] = "Invisible Item Check 1 Container"; break;
+                        case 89: eventLabels[i] = "Invisible Item Check 2 Container"; break;
+                        case 90: eventLabels[i] = "Invisible Item Check 3 Container"; break;
+                        case 91: eventLabels[i] = "Invisible Item Summoner"; break;
+                        case 92: eventLabels[i] = "Pipe Vault Closed Note"; break;
+                        case 93: eventLabels[i] = "Background Event For Slot Machine"; break;
+                        case 94: eventLabels[i] = "Out Of Order Note"; break;
+                        case 95: eventLabels[i] = "Revert All Clone Chests Mimic 1"; break;
+                        case 96: eventLabels[i] = "Revert All Clone Chests Mimic 2"; break;
+                        case 97: eventLabels[i] = "Empty"; break;
+                        case 98: eventLabels[i] = "Empty"; break;
+                        case 99: eventLabels[i] = "Empty"; break;
+                        case 100: eventLabels[i] = "Empty"; break;
+                        case 101: eventLabels[i] = "Empty"; break;
+                        case 102: eventLabels[i] = "Empty"; break;
+                        case 103: eventLabels[i] = "Empty"; break;
+                        case 104: eventLabels[i] = "Empty"; break;
+                        case 105: eventLabels[i] = "Empty"; break;
+                        case 106: eventLabels[i] = "Empty"; break;
+                        case 107: eventLabels[i] = "Empty"; break;
+                        case 108: eventLabels[i] = "Empty"; break;
+                        case 109: eventLabels[i] = "Empty"; break;
+                        case 110: eventLabels[i] = "Empty"; break;
+                        case 111: eventLabels[i] = "Empty"; break;
+                        case 112: eventLabels[i] = "Empty"; break;
+                        case 113: eventLabels[i] = "Empty"; break;
+                        case 114: eventLabels[i] = "Empty"; break;
+                        case 115: eventLabels[i] = "Empty"; break;
+                        case 116: eventLabels[i] = "Empty"; break;
+                        case 117: eventLabels[i] = "Empty"; break;
+                        case 118: eventLabels[i] = "Empty"; break;
+                        case 119: eventLabels[i] = "Empty"; break;
+                        case 120: eventLabels[i] = "Empty"; break;
+                        case 121: eventLabels[i] = "Empty"; break;
+                        case 122: eventLabels[i] = "Empty"; break;
+                        case 123: eventLabels[i] = "Empty"; break;
+                        case 124: eventLabels[i] = "Empty"; break;
+                        case 125: eventLabels[i] = "Empty"; break;
+                        case 126: eventLabels[i] = "Empty"; break;
+                        case 127: eventLabels[i] = "Empty"; break;
+                        case 128: eventLabels[i] = "Abort Attract Mode"; break;
+                        case 129: eventLabels[i] = "Empty"; break;
+                        case 130: eventLabels[i] = "Empty"; break;
+                        case 131: eventLabels[i] = "Empty"; break;
+                        case 132: eventLabels[i] = "Empty"; break;
+                        case 133: eventLabels[i] = "Empty"; break;
+                        case 134: eventLabels[i] = "Empty"; break;
+                        case 135: eventLabels[i] = "Empty"; break;
+                        case 136: eventLabels[i] = "Empty"; break;
+                        case 137: eventLabels[i] = "Empty"; break;
+                        case 138: eventLabels[i] = "Empty"; break;
+                        case 139: eventLabels[i] = "Empty"; break;
+                        case 140: eventLabels[i] = "Empty"; break;
+                        case 141: eventLabels[i] = "Empty"; break;
+                        case 142: eventLabels[i] = "Empty"; break;
+                        case 143: eventLabels[i] = "Empty"; break;
+                        case 144: eventLabels[i] = "Empty"; break;
+                        case 145: eventLabels[i] = "Empty"; break;
+                        case 146: eventLabels[i] = "Empty"; break;
+                        case 147: eventLabels[i] = "Empty"; break;
+                        case 148: eventLabels[i] = "Empty"; break;
+                        case 149: eventLabels[i] = "Empty"; break;
+                        case 150: eventLabels[i] = "Empty"; break;
+                        case 151: eventLabels[i] = "Empty"; break;
+                        case 152: eventLabels[i] = "Empty"; break;
+                        case 153: eventLabels[i] = "Empty"; break;
+                        case 154: eventLabels[i] = "Npc Quest 7 Container"; break;
+                        case 155: eventLabels[i] = "Packet Decider Container"; break;
+                        case 156: eventLabels[i] = "Packet Decider"; break;
+                        case 157: eventLabels[i] = "Npc Quest Grant 1 Frog Coin"; break;
+                        case 158: eventLabels[i] = "Npc Quest Grant Multi Frog Coin"; break;
+                        case 159: eventLabels[i] = "Npc Quest Grant Coins"; break;
+                        case 160: eventLabels[i] = "Npc Quest Grant Item"; break;
+                        case 161: eventLabels[i] = "Npc Quest Grant Beetlemania"; break;
+                        case 162: eventLabels[i] = "Chest Grant Beetlemania"; break;
+                        case 163: eventLabels[i] = "Chest Grant Star Piece"; break;
+                        case 164: eventLabels[i] = "Npc Quest Grant Star Piece"; break;
+                        case 165: eventLabels[i] = "Freestanding Grant Item Bag"; break;
+                        case 166: eventLabels[i] = "Freestanding Grant Star Piece"; break;
+                        case 167: eventLabels[i] = "Boss Grant Star Piece"; break;
+                        case 168: eventLabels[i] = "Boss Grant Star Piece Container"; break;
+                        case 169: eventLabels[i] = "Mimic 1 Grant Star Piece Container"; break;
+                        case 170: eventLabels[i] = "Mimic 2 Grant Star Piece Container"; break;
+                        case 171: eventLabels[i] = "Mimic 3 Grant Star Piece Container"; break;
+                        case 172: eventLabels[i] = "Chest 1 Container"; break;
+                        case 173: eventLabels[i] = "Chest 2 Container"; break;
+                        case 174: eventLabels[i] = "Chest 3 Container"; break;
+                        case 175: eventLabels[i] = "Chest 4 Container"; break;
+                        case 176: eventLabels[i] = "Chest 5 Container"; break;
+                        case 177: eventLabels[i] = "Chest 6 Container"; break;
+                        case 178: eventLabels[i] = "Npc Quest 1 Container"; break;
+                        case 179: eventLabels[i] = "Npc Quest 2 Container"; break;
+                        case 180: eventLabels[i] = "Npc Quest 3 Container"; break;
+                        case 181: eventLabels[i] = "Npc Quest 4 Container"; break;
+                        case 182: eventLabels[i] = "Npc Quest 5 Container"; break;
+                        case 183: eventLabels[i] = "Npc Quest 6 Container"; break;
+                        case 184: eventLabels[i] = "Npc Quest Grant Single Fireworks"; break;
+                        case 185: eventLabels[i] = "Npc Quest Grant Progressive Fireworks"; break;
+                        case 186: eventLabels[i] = "Party Join Logic"; break;
+                        case 187: eventLabels[i] = "Mario Joins"; break;
+                        case 188: eventLabels[i] = "Mallow Joins"; break;
+                        case 189: eventLabels[i] = "Geno Joins"; break;
+                        case 190: eventLabels[i] = "Bowser Joins"; break;
+                        case 191: eventLabels[i] = "Toadstool Joins"; break;
+                        case 192: eventLabels[i] = "Gating And Party Join Logic"; break;
+                        case 193: eventLabels[i] = "Mario Joins Container"; break;
+                        case 194: eventLabels[i] = "Mallow Joins Container"; break;
+                        case 195: eventLabels[i] = "Geno Joins Container"; break;
+                        case 196: eventLabels[i] = "Bowser Joins Container"; break;
+                        case 197: eventLabels[i] = "Toadstool Joins Container"; break;
+                        case 198: eventLabels[i] = "Unlock Tower If Gated By Moleville"; break;
+                        case 199: eventLabels[i] = "Unlock Bandits If Gated By Mushroom Way"; break;
+                        case 200: eventLabels[i] = "Unlock Forest If Gated By Marrymore Character"; break;
+                        case 201: eventLabels[i] = "Unlock Forest If Gated By Moleville Character"; break;
+                        case 202: eventLabels[i] = "Unlock Forest If Gated By Mushroom Way Character"; break;
+                        case 203: eventLabels[i] = "Unlock Forest If Gated By Cricket Pie"; break;
+                        case 204: eventLabels[i] = "Unlock Marrymore If Gated By Booster Hill"; break;
+                        case 205: eventLabels[i] = "Unlock Marrymore If Gated By Tower Boss"; break;
+                        case 206: eventLabels[i] = "Unlock Sea If Gated By Star Pieces"; break;
+                        case 207: eventLabels[i] = "Unlock Keep If Gated By Star Pieces"; break;
+                        case 208: eventLabels[i] = "Unlock Keep If Gated By Volcano Boss"; break;
+                        case 209: eventLabels[i] = "Unlock Switch Menu If Enough Members"; break;
+                        case 210: eventLabels[i] = "Unlock Seaside Boss If Gated By Ship Boss"; break;
+                        case 211: eventLabels[i] = "Unlock Pipe Vault If Gated By Forest Maze"; break;
+                        case 212: eventLabels[i] = "Npc Quest 7 Container"; break;
+                        case 213: eventLabels[i] = "Booster Hill Prize Container Event"; break;
+                        case 214: eventLabels[i] = "Hill Get Flower"; break;
+                        case 215: eventLabels[i] = "Hill Item"; break;
+                        case 216: eventLabels[i] = "Get Flower From Npc"; break;
+                        case 217: eventLabels[i] = "Hill Fireworks"; break;
+                        case 218: eventLabels[i] = "Hill Beetlemania"; break;
+                        case 219: eventLabels[i] = "Hill Grant Logic"; break;
+                        case 220: eventLabels[i] = "Empty"; break;
+                        case 221: eventLabels[i] = "Empty"; break;
+                        case 222: eventLabels[i] = "Empty"; break;
+                        case 223: eventLabels[i] = "Empty"; break;
+                        case 224: eventLabels[i] = "Empty"; break;
+                        case 225: eventLabels[i] = "Check Voucher Unlock"; break;
+                        case 226: eventLabels[i] = "Npc Quest 7 Grant"; break;
+                        case 227: eventLabels[i] = "Freestanding 15 Grant"; break;
+                        case 228: eventLabels[i] = "Freestanding 14 Grant"; break;
+                        case 229: eventLabels[i] = "Freestanding 13 Grant"; break;
+                        case 230: eventLabels[i] = "Freestanding 12 Grant"; break;
+                        case 231: eventLabels[i] = "Freestanding 11 Grant"; break;
+                        case 232: eventLabels[i] = "Freestanding 10 Grant"; break;
+                        case 233: eventLabels[i] = "Freestanding 9 Grant"; break;
+                        case 234: eventLabels[i] = "Freestanding 8 Grant"; break;
+                        case 235: eventLabels[i] = "Freestanding 7 Grant"; break;
+                        case 236: eventLabels[i] = "Freestanding 6 Grant"; break;
+                        case 237: eventLabels[i] = "Freestanding 5 Grant"; break;
+                        case 238: eventLabels[i] = "Freestanding 4 Grant"; break;
+                        case 239: eventLabels[i] = "Freestanding 3 Grant"; break;
+                        case 240: eventLabels[i] = "Freestanding 2 Grant"; break;
+                        case 241: eventLabels[i] = "Freestanding 1 Grant"; break;
+                        case 242: eventLabels[i] = "Chest 6 Grant"; break;
+                        case 243: eventLabels[i] = "Chest 5 Grant"; break;
+                        case 244: eventLabels[i] = "Chest 4 Grant"; break;
+                        case 245: eventLabels[i] = "Chest 3 Grant"; break;
+                        case 246: eventLabels[i] = "Chest 2 Grant"; break;
+                        case 247: eventLabels[i] = "Chest 1 Grant"; break;
+                        case 248: eventLabels[i] = "Npc Quest 6 Grant"; break;
+                        case 249: eventLabels[i] = "Npc Quest 5 Grant"; break;
+                        case 250: eventLabels[i] = "Npc Quest 4 Grant"; break;
+                        case 251: eventLabels[i] = "Npc Quest 3 Grant"; break;
+                        case 252: eventLabels[i] = "Npc Quest 2 Grant"; break;
+                        case 253: eventLabels[i] = "Npc Quest 1 Grant"; break;
+                        case 254: eventLabels[i] = "Exp Star Hit Subroutine"; break;
+                        case 255: eventLabels[i] = "Exp Star Hit"; break;
+                        case 256: eventLabels[i] = "Return"; break;
+                        case 257: eventLabels[i] = "Fade In Async"; break;
+                        case 258: eventLabels[i] = "Empty"; break;
+                        case 259: eventLabels[i] = "Unknown"; break;
+                        case 260: eventLabels[i] = "Unknown"; break;
+                        case 261: eventLabels[i] = "Fade Music Room Loader"; break;
+                        case 262: eventLabels[i] = "Fade Music Room Loader"; break;
+                        case 263: eventLabels[i] = "Bounce On Bed"; break;
+                        case 264: eventLabels[i] = "Return"; break;
+                        case 265: eventLabels[i] = "Occupied Mk Inn Loader"; break;
+                        case 266: eventLabels[i] = "Unknown"; break;
+                        case 267: eventLabels[i] = "Unknown"; break;
+                        case 268: eventLabels[i] = "Unknown"; break;
+                        case 269: eventLabels[i] = "Pipe Up Subroutine"; break;
+                        case 270: eventLabels[i] = "Trampoline Or Pipe Subroutine"; break;
+                        case 271: eventLabels[i] = "Unknown"; break;
+                        case 272: eventLabels[i] = "Pause Active Until A Pressed"; break;
+                        case 273: eventLabels[i] = "Sleep In Inns"; break;
+                        case 274: eventLabels[i] = "Check If Have Enough Coins"; break;
+                        case 275: eventLabels[i] = "Unknown"; break;
+                        case 276: eventLabels[i] = "Refocus Camera On Self"; break;
+                        case 277: eventLabels[i] = "Unknown"; break;
+                        case 278: eventLabels[i] = "Unknown"; break;
+                        case 279: eventLabels[i] = "Unknown"; break;
+                        case 280: eventLabels[i] = "Sleep In Nimbus Inn"; break;
+                        case 281: eventLabels[i] = "Clear Exp Star Bits"; break;
+                        case 282: eventLabels[i] = "Unknown Pipe Vault"; break;
+                        case 283: eventLabels[i] = "Get Frog Coin No Dialog Possibly Unused"; break;
+                        case 284: eventLabels[i] = "Open Mushroom Kingdom Shop"; break;
+                        case 285: eventLabels[i] = "Unknown"; break;
+                        case 286: eventLabels[i] = "Await B Press"; break;
+                        case 287: eventLabels[i] = "Reset Game"; break;
+                        case 288: eventLabels[i] = "Unknown Rose Town"; break;
+                        case 289: eventLabels[i] = "Inns Container"; break;
+                        case 290: eventLabels[i] = "Mushroom Kingdom Shop Logic"; break;
+                        case 291: eventLabels[i] = "Mushroom Kingdom Outer Castle Guards"; break;
+                        case 292: eventLabels[i] = "Mushroom Kingdom West Blue Toad"; break;
+                        case 293: eventLabels[i] = "Unused"; break;
+                        case 294: eventLabels[i] = "Mushroom Kingdom Inn Npc"; break;
+                        case 295: eventLabels[i] = "Go To Mushroom Kingdom Outside"; break;
+                        case 296: eventLabels[i] = "Mushroom Kingdom Grandma"; break;
+                        case 297: eventLabels[i] = "Mushroom Kingdom Running Kid"; break;
+                        case 298: eventLabels[i] = "Mushroom Kingdom Pink Toad"; break;
+                        case 299: eventLabels[i] = "Empty"; break;
+                        case 300: eventLabels[i] = "Generic No Help Message"; break;
+                        case 301: eventLabels[i] = "Mushroom Kingdom Mom"; break;
+                        case 302: eventLabels[i] = "Mushroom Kingdom Dad"; break;
+                        case 303: eventLabels[i] = "Mushroom Kingdom Jumping Kid"; break;
+                        case 304: eventLabels[i] = "Unknown"; break;
+                        case 305: eventLabels[i] = "Unknown"; break;
+                        case 306: eventLabels[i] = "Mushroom Kingdom Brother"; break;
+                        case 307: eventLabels[i] = "Unknown"; break;
+                        case 308: eventLabels[i] = "Empty"; break;
+                        case 309: eventLabels[i] = "Empty"; break;
+                        case 310: eventLabels[i] = "Mushroom Kingdom Grandpa"; break;
+                        case 311: eventLabels[i] = "Mushroom Kingdom East Guard"; break;
+                        case 312: eventLabels[i] = "Mushroom Kingdom Occupied Running Kid"; break;
+                        case 313: eventLabels[i] = "Mushroom Kingdom Occupied Grandma"; break;
+                        case 314: eventLabels[i] = "Empty"; break;
+                        case 315: eventLabels[i] = "Empty"; break;
+                        case 316: eventLabels[i] = "Mushroom Kingdom Occupied Dad"; break;
+                        case 317: eventLabels[i] = "Mushroom Kingdom Occupied Mom"; break;
+                        case 318: eventLabels[i] = "Mushroom Kingdom Occupied Castle Toad"; break;
+                        case 319: eventLabels[i] = "Toadstool Antechamber Loader"; break;
+                        case 320: eventLabels[i] = "Mushroom Kingdom Main Hall Loader"; break;
+                        case 321: eventLabels[i] = "Bellhop While Guiding"; break;
+                        case 322: eventLabels[i] = "Mushroom Kingdom Throne Room Loader"; break;
+                        case 323: eventLabels[i] = "Unknown"; break;
+                        case 324: eventLabels[i] = "Kingdom Main Hall Flip Veranda"; break;
+                        case 325: eventLabels[i] = "Detect Main Hall Door Opened"; break;
+                        case 326: eventLabels[i] = "Mushroom Kingdom Castle Generic Toad"; break;
+                        case 327: eventLabels[i] = "Mushroom Kingdom Castle Throne Room Toad"; break;
+                        case 328: eventLabels[i] = "Detect Main Hall Door Opened"; break;
+                        case 329: eventLabels[i] = "Kingdom Main Hall Flip Upper"; break;
+                        case 330: eventLabels[i] = "Chancellor"; break;
+                        case 331: eventLabels[i] = "Empty"; break;
+                        case 332: eventLabels[i] = "Empty"; break;
+                        case 333: eventLabels[i] = "Empty"; break;
+                        case 334: eventLabels[i] = "Empty"; break;
+                        case 335: eventLabels[i] = "Unknown"; break;
+                        case 336: eventLabels[i] = "Unknown"; break;
+                        case 337: eventLabels[i] = "Mushroom Kingdom Shop Bookshelf"; break;
+                        case 338: eventLabels[i] = "Mushroom Kingdom Shopkeeper"; break;
+                        case 339: eventLabels[i] = "Mushroom Kingdom Occupied Raz Raini House Loader"; break;
+                        case 340: eventLabels[i] = "Mushroom Kingdom Occupied Raz Raini House Shake"; break;
+                        case 341: eventLabels[i] = "Empty"; break;
+                        case 342: eventLabels[i] = "Empty"; break;
+                        case 343: eventLabels[i] = "Empty"; break;
+                        case 344: eventLabels[i] = "Mushroom Kingdom Raz Raini House Loader"; break;
+                        case 345: eventLabels[i] = "Mushroom Kingdom Toadstools Room Guard"; break;
+                        case 346: eventLabels[i] = "Toadstools Room Item"; break;
+                        case 347: eventLabels[i] = "Toadstools Room Loader"; break;
+                        case 348: eventLabels[i] = "Mushroom Kingdom Main Hall Toad"; break;
+                        case 349: eventLabels[i] = "Mushroom Kingdom Antechamber Exit"; break;
+                        case 350: eventLabels[i] = "Kingdom Hallway Shyguy"; break;
+                        case 351: eventLabels[i] = "Gameboy Kid"; break;
+                        case 352: eventLabels[i] = "Mushroom Kingdom Occupied Shopkeeper"; break;
+                        case 353: eventLabels[i] = "Boss Battle"; break;
+                        case 354: eventLabels[i] = "Boss Battle Container"; break;
+                        case 355: eventLabels[i] = "Boss Hunt Bit Setter"; break;
+                        case 356: eventLabels[i] = "Boss Hunt Bit Setter Container"; break;
+                        case 357: eventLabels[i] = "Exp Star Music Experiment"; break;
+                        case 358: eventLabels[i] = "Mushroom Kingdom Npc Behind House"; break;
+                        case 359: eventLabels[i] = "Chest Clones"; break;
+                        case 360: eventLabels[i] = "Empty"; break;
+                        case 361: eventLabels[i] = "Empty"; break;
+                        case 362: eventLabels[i] = "Empty"; break;
+                        case 363: eventLabels[i] = "Empty"; break;
+                        case 364: eventLabels[i] = "Empty"; break;
+                        case 365: eventLabels[i] = "Empty"; break;
+                        case 366: eventLabels[i] = "Mushroom Kingdom Occupied Throne Room Forced Off Minion"; break;
+                        case 367: eventLabels[i] = "Mushroom Kingdom Occupied Throne Room Forced Off Minion"; break;
+                        case 368: eventLabels[i] = "Mushroom Kingdom Occupied Throne Room Loader"; break;
+                        case 369: eventLabels[i] = "Mushroom Kingdom Occupied Throne Room Exit"; break;
+                        case 370: eventLabels[i] = "Empty"; break;
+                        case 371: eventLabels[i] = "Mushroom Kingdom Occupied Main Hall Loader"; break;
+                        case 372: eventLabels[i] = "Mushroom Kingdom Boss Fight Cutscene"; break;
+                        case 373: eventLabels[i] = "Mushroom Kingdom Boss Fight"; break;
+                        case 374: eventLabels[i] = "Empty"; break;
+                        case 375: eventLabels[i] = "Talk To Chancellor After Mushroom Kingdom Boss"; break;
+                        case 376: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Loader"; break;
+                        case 377: eventLabels[i] = "Mushroom Kingdom Occupied Main Hall Repeating Shysters Position"; break;
+                        case 378: eventLabels[i] = "Mushroom Kingdom Occupied Main Hall Shyster Chasing Toad"; break;
+                        case 379: eventLabels[i] = "Mushroom Kingdom Occupied Guest Room Grant"; break;
+                        case 380: eventLabels[i] = "Mushroom Kingdom Occupied Vault Guard Toad"; break;
+                        case 381: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Antechamber Fight"; break;
+                        case 382: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Loader"; break;
+                        case 383: eventLabels[i] = "Toad Wishes You Well"; break;
+                        case 384: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Antechamber Loader"; break;
+                        case 385: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Antechamber Toad"; break;
+                        case 386: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Toad 1"; break;
+                        case 387: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Toad 2"; break;
+                        case 388: eventLabels[i] = "Mushroom Kingdom Occupied Toadstools Room Toad 3"; break;
+                        case 389: eventLabels[i] = "Mushroom Kingdom Occupied Left Stairway Shyster"; break;
+                        case 390: eventLabels[i] = "Mushroom Kingdom Occupied Left Stairway Toad"; break;
+                        case 391: eventLabels[i] = "Mushroom Kingdom Occupied Left Stairway Loader"; break;
+                        case 392: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Repeating Shysters Position"; break;
+                        case 393: eventLabels[i] = "Mushroom Kingdom During Mack Jumping Kids House 1F Loader"; break;
+                        case 394: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Pink Toad"; break;
+                        case 395: eventLabels[i] = "Wallet Toad 2"; break;
+                        case 396: eventLabels[i] = "Mushroom Kingdom Occupied Rescued Eastern Guard"; break;
+                        case 397: eventLabels[i] = "Heal In Toadstools Room"; break;
+                        case 398: eventLabels[i] = "Empty"; break;
+                        case 399: eventLabels[i] = "Empty"; break;
+                        case 400: eventLabels[i] = "Guest Room Guard"; break;
+                        case 401: eventLabels[i] = "Guest Room Antechamber Loader"; break;
+                        case 402: eventLabels[i] = "Shyster Harassing Eastern Guard"; break;
+                        case 403: eventLabels[i] = "Shyster Harassing Wallet Guy"; break;
+                        case 404: eventLabels[i] = "Mushroom Kingdom Occupied Shop Loader"; break;
+                        case 405: eventLabels[i] = "Table Shyster"; break;
+                        case 406: eventLabels[i] = "Younger Brother"; break;
+                        case 407: eventLabels[i] = "Countertop Shyster"; break;
+                        case 408: eventLabels[i] = "Mushroom Kingdom Occupied Older Brother"; break;
+                        case 409: eventLabels[i] = "Mushroom Kingdom Occupied Jumping Kids House 2F Loader"; break;
+                        case 410: eventLabels[i] = "Bed Shyster"; break;
+                        case 411: eventLabels[i] = "Mushroom Kingdom Occupied Main Hall Repeating Shysters"; break;
+                        case 412: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Repeating Shysters"; break;
+                        case 413: eventLabels[i] = "Clear Temp 7044 0"; break;
+                        case 414: eventLabels[i] = "Set Temp 7044 0"; break;
+                        case 415: eventLabels[i] = "Pipe Vault Room 1 Exit"; break;
+                        case 416: eventLabels[i] = "Pipe Vault Thwomp Room Entrance"; break;
+                        case 417: eventLabels[i] = "Pipe Vault Thwomp Room Exit Pipe"; break;
+                        case 418: eventLabels[i] = "Pipe Vault Pipes Room Entrance Pipe"; break;
+                        case 419: eventLabels[i] = "Empty"; break;
+                        case 420: eventLabels[i] = "Pipe Vault Crouch Room Exit Trampoline"; break;
+                        case 421: eventLabels[i] = "Pipe Vault Pipes Room Exit Pipe"; break;
+                        case 422: eventLabels[i] = "Pipe Vault Platforming Room Entrance Pipe"; break;
+                        case 423: eventLabels[i] = "Pipe Vault Platforming Room Exit Pipe"; break;
+                        case 424: eventLabels[i] = "Pipe Vault Red Room Entrance Pipe"; break;
+                        case 425: eventLabels[i] = "Pipe Vault Red Room Exit Pipe"; break;
+                        case 426: eventLabels[i] = "Pipe Vault Chompweed Room Entrance Pipe"; break;
+                        case 427: eventLabels[i] = "Pipe Vault Chompweed Room Exit Pipe"; break;
+                        case 428: eventLabels[i] = "Pipe Vault Thwomp Room Loader"; break;
+                        case 429: eventLabels[i] = "Pipe Vault Thwomp Room Loader Background"; break;
+                        case 430: eventLabels[i] = "Pipe Vault Mario Hit By Thwomp"; break;
+                        case 431: eventLabels[i] = "Pipe Vault Goomba Thumpin Entrance Pipe"; break;
+                        case 432: eventLabels[i] = "Pipe Vault Goomba Thumpin Exit Trampoline"; break;
+                        case 433: eventLabels[i] = "Pipe Vault Chompweed"; break;
+                        case 434: eventLabels[i] = "Pipe Vault Red Room Loader"; break;
+                        case 435: eventLabels[i] = "Pipe Vault Room 1 Loader"; break;
+                        case 436: eventLabels[i] = "Pipe Vault Fireball 1"; break;
+                        case 437: eventLabels[i] = "Pipe Vault Fireball 2"; break;
+                        case 438: eventLabels[i] = "Pipe Vault Fireball 3"; break;
+                        case 439: eventLabels[i] = "Pipe Vault Fireball 4"; break;
+                        case 440: eventLabels[i] = "Pipe Vault Fireball Background"; break;
+                        case 441: eventLabels[i] = "Pipe Vault Chompweed Room Chompweeds"; break;
+                        case 442: eventLabels[i] = "Empty"; break;
+                        case 443: eventLabels[i] = "Pipe Vault Chompweed Room Loader"; break;
+                        case 444: eventLabels[i] = "Goomba Thumpin Administrator"; break;
+                        case 445: eventLabels[i] = "Goomba Thumpin Begins"; break;
+                        case 446: eventLabels[i] = "Goomba Thumpin Scorekeeping"; break;
+                        case 447: eventLabels[i] = "Goomba Thumpin Spawns"; break;
+                        case 448: eventLabels[i] = "Goomba Thumpin Goomba 1"; break;
+                        case 449: eventLabels[i] = "Goomba Thumpin Goomba 2"; break;
+                        case 450: eventLabels[i] = "Goomba Thumpin Goomba 3"; break;
+                        case 451: eventLabels[i] = "Goomba Thumpin Goomba 4"; break;
+                        case 452: eventLabels[i] = "Empty"; break;
+                        case 453: eventLabels[i] = "Empty"; break;
+                        case 454: eventLabels[i] = "Goomba Thumpin Room Loader"; break;
+                        case 455: eventLabels[i] = "Resummon Pipe Vault Enemies"; break;
+                        case 456: eventLabels[i] = "Yoshi Talks To Other Yoshi"; break;
+                        case 457: eventLabels[i] = "Mushroom Derby Unknown"; break;
+                        case 458: eventLabels[i] = "Mushroom Derby Begins"; break;
+                        case 459: eventLabels[i] = "Upper Right Yoshi"; break;
+                        case 460: eventLabels[i] = "Cookie Storage Yoshi"; break;
+                        case 461: eventLabels[i] = "Yoshi On Track"; break;
+                        case 462: eventLabels[i] = "Yoshi Mom"; break;
+                        case 463: eventLabels[i] = "Free Cookie Yoshi"; break;
+                        case 464: eventLabels[i] = "Empty"; break;
+                        case 465: eventLabels[i] = "Mushroom Derby Business Logic"; break;
+                        case 466: eventLabels[i] = "Mushroom Derby Business Logic Extension"; break;
+                        case 467: eventLabels[i] = "Pipe Vault Platforming Room Loader"; break;
+                        case 468: eventLabels[i] = "Mushroom Derby Use Yoshi Cookie"; break;
+                        case 469: eventLabels[i] = "Yoster Isle Background"; break;
+                        case 470: eventLabels[i] = "Green Yoshi"; break;
+                        case 471: eventLabels[i] = "Boshi"; break;
+                        case 472: eventLabels[i] = "Empty"; break;
+                        case 473: eventLabels[i] = "Empty"; break;
+                        case 474: eventLabels[i] = "Empty"; break;
+                        case 475: eventLabels[i] = "Mushroom Derby Unknown"; break;
+                        case 476: eventLabels[i] = "Initiate Mushroom Derby From Talking To Boshi"; break;
+                        case 477: eventLabels[i] = "Dismount Yoshi 1"; break;
+                        case 478: eventLabels[i] = "Dismount Yoshi 2"; break;
+                        case 479: eventLabels[i] = "Dismount Yoshi 3"; break;
+                        case 480: eventLabels[i] = "Dismount Yoshi 4"; break;
+                        case 481: eventLabels[i] = "Empty"; break;
+                        case 482: eventLabels[i] = "Yoster Isle Unknown"; break;
+                        case 483: eventLabels[i] = "Empty"; break;
+                        case 484: eventLabels[i] = "Empty"; break;
+                        case 485: eventLabels[i] = "Pipe Vault Crouch Room Entrance Pipe"; break;
+                        case 486: eventLabels[i] = "Empty"; break;
+                        case 487: eventLabels[i] = "Pipe Vault Chompweed Room Exit Pipe Reverse"; break;
+                        case 488: eventLabels[i] = "Red Room Piranha 1"; break;
+                        case 489: eventLabels[i] = "Red Room Piranha 2"; break;
+                        case 490: eventLabels[i] = "Red Room Piranha 3"; break;
+                        case 491: eventLabels[i] = "Red Room Piranha 4"; break;
+                        case 492: eventLabels[i] = "Pipe Vault Piranha Timer 1"; break;
+                        case 493: eventLabels[i] = "Pipe Vault Piranha Bit"; break;
+                        case 494: eventLabels[i] = "Pipe Vault Piranha Timer 2"; break;
+                        case 495: eventLabels[i] = "Pipe Vault Piranha Timer 3"; break;
+                        case 496: eventLabels[i] = "Pipe Vault Piranha Timer 4"; break;
+                        case 497: eventLabels[i] = "Pipe Vault Piranha Timer 5"; break;
+                        case 498: eventLabels[i] = "Pipe Vault First Goomba"; break;
+                        case 499: eventLabels[i] = "Pipe Vault Entrance Trampoline"; break;
+                        case 500: eventLabels[i] = "Pipe Vault Hidden Platform"; break;
+                        case 501: eventLabels[i] = "Empty"; break;
+                        case 502: eventLabels[i] = "Pipe Vault Crouch Item Init"; break;
+                        case 503: eventLabels[i] = "Pipe Vault Crouch Item Confirm"; break;
+                        case 504: eventLabels[i] = "Pipe Vault Small Coin"; break;
+                        case 505: eventLabels[i] = "Pipe Vault Mario Thwomp Tumble"; break;
+                        case 506: eventLabels[i] = "Pipe Vault Summon First Goomba"; break;
+                        case 507: eventLabels[i] = "Pipe Vault Piranha Bit"; break;
+                        case 508: eventLabels[i] = "Unknown"; break;
+                        case 509: eventLabels[i] = "Pipe Vault Crouch Item Reset"; break;
+                        case 510: eventLabels[i] = "Pipe Vault Crouch Room Clear Bits"; break;
+                        case 511: eventLabels[i] = "Empty"; break;
+                        case 512: eventLabels[i] = "Rose Town Occupied Inn Loader"; break;
+                        case 513: eventLabels[i] = "Empty"; break;
+                        case 514: eventLabels[i] = "Gaz Item Grant"; break;
+                        case 515: eventLabels[i] = "Empty"; break;
+                        case 516: eventLabels[i] = "Occupied Rose Town Gaz"; break;
+                        case 517: eventLabels[i] = "Rose Town Occupied Exit"; break;
+                        case 518: eventLabels[i] = "Rose Town Occupied Stairway"; break;
+                        case 519: eventLabels[i] = "Empty"; break;
+                        case 520: eventLabels[i] = "Rose Town Occupied Exterior Pink Toad"; break;
+                        case 521: eventLabels[i] = "Rose Town Occupied Exterior Blue Toad Left"; break;
+                        case 522: eventLabels[i] = "Empty"; break;
+                        case 523: eventLabels[i] = "Empty"; break;
+                        case 524: eventLabels[i] = "Rose Town Occupied Exterior Grandpa"; break;
+                        case 525: eventLabels[i] = "Rose Town Item Shop"; break;
+                        case 526: eventLabels[i] = "Rose Town Equip Shop"; break;
+                        case 527: eventLabels[i] = "Rose Town Shop Red Toad"; break;
+                        case 528: eventLabels[i] = "Rose Town Shop Yellow Toad"; break;
+                        case 529: eventLabels[i] = "Rose Town Occupied Exterior Loader"; break;
+                        case 530: eventLabels[i] = "Rose Town Occupied Background 1"; break;
+                        case 531: eventLabels[i] = "Rose Town Occupied Inn 2F Loader"; break;
+                        case 532: eventLabels[i] = "Empty"; break;
+                        case 533: eventLabels[i] = "Empty"; break;
+                        case 534: eventLabels[i] = "Rose Town Dad"; break;
+                        case 535: eventLabels[i] = "Rose Town Son"; break;
+                        case 536: eventLabels[i] = "Empty"; break;
+                        case 537: eventLabels[i] = "Rose Town Treasure House 2F Loader"; break;
+                        case 538: eventLabels[i] = "Rose Town Pink Toad In House"; break;
+                        case 539: eventLabels[i] = "Rose Town Shop Unknown"; break;
+                        case 540: eventLabels[i] = "Unused Hint Dialog"; break;
+                        case 541: eventLabels[i] = "Debug Dialog"; break;
+                        case 542: eventLabels[i] = "Rose Town Occupied Grandma"; break;
+                        case 543: eventLabels[i] = "Rose Town Occupied Kid 1"; break;
+                        case 544: eventLabels[i] = "Rose Town Occupied Kid 2"; break;
+                        case 545: eventLabels[i] = "Rose Town Occupied Kid 3"; break;
+                        case 546: eventLabels[i] = "Rose Town Occupied Blue Toad Right"; break;
+                        case 547: eventLabels[i] = "Rose Town Occupied Arrow Control 1"; break;
+                        case 548: eventLabels[i] = "Rose Town Occupied Arrow Animate"; break;
+                        case 549: eventLabels[i] = "Rose Town Occupied Arrow Control 2"; break;
+                        case 550: eventLabels[i] = "Rose Town Occupied Arrow Control 3"; break;
+                        case 551: eventLabels[i] = "Rose Town Occupied Mods"; break;
+                        case 552: eventLabels[i] = "Rose Town Occupied Intro Toad Movement"; break;
+                        case 553: eventLabels[i] = "Rose Town Occupied Arrow Control 4"; break;
+                        case 554: eventLabels[i] = "Rose Town Occupied Exterior Yellow Toad"; break;
+                        case 555: eventLabels[i] = "Rose Town Inn Toad Item Grant"; break;
+                        case 556: eventLabels[i] = "Rose Town Liberated Loader"; break;
+                        case 557: eventLabels[i] = "Rose Town Liberated Loader Background"; break;
+                        case 558: eventLabels[i] = "Rose Town Shop Exit"; break;
+                        case 559: eventLabels[i] = "Rose Town Couples House Exit"; break;
+                        case 560: eventLabels[i] = "Old Key Item Manager"; break;
+                        case 561: eventLabels[i] = "Place Link In Rose Town"; break;
+                        case 562: eventLabels[i] = "Rose Town Liberated Kids Indoors"; break;
+                        case 563: eventLabels[i] = "Summons Husband In Rose Town Couples House"; break;
+                        case 564: eventLabels[i] = "Rose Town Liberated Kid Outdoors"; break;
+                        case 565: eventLabels[i] = "Rose Town Liberated 3Rd Kid Outdoors"; break;
+                        case 566: eventLabels[i] = "Rose Town Liberated Grandpa"; break;
+                        case 567: eventLabels[i] = "Rose Town Liberated Grandma"; break;
+                        case 568: eventLabels[i] = "Rose Rown Liberated Water Pump House Loader"; break;
+                        case 569: eventLabels[i] = "Rose Town Liberated Pink Toad"; break;
+                        case 570: eventLabels[i] = "Rose Town Liberated Right Blue Toad"; break;
+                        case 571: eventLabels[i] = "Rose Town Liberated Yellow Toad"; break;
+                        case 572: eventLabels[i] = "Rose Town Liberated Husband"; break;
+                        case 573: eventLabels[i] = "Rose Town Liberated Wife"; break;
+                        case 574: eventLabels[i] = "Empty"; break;
+                        case 575: eventLabels[i] = "Rose Town Liberated Couples House Loader"; break;
+                        case 576: eventLabels[i] = "Rose Town Treasure House Chest 1"; break;
+                        case 577: eventLabels[i] = "Rose Town Treasure House Chest 2"; break;
+                        case 578: eventLabels[i] = "Rose Town Liberated Upper Hidden Npc"; break;
+                        case 579: eventLabels[i] = "Rose Town Liberated Left Blue Toad"; break;
+                        case 580: eventLabels[i] = "Rose Town Occupied Treasure House 1F Loader"; break;
+                        case 581: eventLabels[i] = "Rose Town Liberated Lower Hidden Npc"; break;
+                        case 582: eventLabels[i] = "Rose Town Occupied Treasure House Bedroom Chest"; break;
+                        case 583: eventLabels[i] = "Rose Town Liberated Treasure House Bedroom Chest"; break;
+                        case 584: eventLabels[i] = "Goomba Thumpin Gold Goomba 1"; break;
+                        case 585: eventLabels[i] = "Goomba Thumpin Gold Goomba 2"; break;
+                        case 586: eventLabels[i] = "Goomba Thumpin Gold Goomba 3"; break;
+                        case 587: eventLabels[i] = "Goomba Thumpin Gold Goomba 4"; break;
+                        case 588: eventLabels[i] = "Goomba Thumpin Spiny 1"; break;
+                        case 589: eventLabels[i] = "Goomba Thumpin Spiny 2"; break;
+                        case 590: eventLabels[i] = "Goomba Thumpin Spiny 3"; break;
+                        case 591: eventLabels[i] = "Goomba Thumpin Spiny 4"; break;
+                        case 592: eventLabels[i] = "Mines Boss Room Loader Before Defeat"; break;
+                        case 593: eventLabels[i] = "Mines Boss Room Loader After Defeat"; break;
+                        case 594: eventLabels[i] = "Mines Boss Shoves You"; break;
+                        case 595: eventLabels[i] = "Mines Boss Room Exit"; break;
+                        case 596: eventLabels[i] = "Mines Boss Room Background Explosions"; break;
+                        case 597: eventLabels[i] = "Mines Boss Room Explosion Recoil"; break;
+                        case 598: eventLabels[i] = "Mines Initiate Final Boss Fight"; break;
+                        case 599: eventLabels[i] = "Mines Boss Room Entrance Reverse"; break;
+                        case 600: eventLabels[i] = "Marrymore Occupied Chapel Loader"; break;
+                        case 601: eventLabels[i] = "Marrymore Back Door Enter Chapel"; break;
+                        case 602: eventLabels[i] = "Marrymore Inn Manager"; break;
+                        case 603: eventLabels[i] = "Marrymore Bellhop Lobby While Guest"; break;
+                        case 604: eventLabels[i] = "Marrymore Inn Bright Card Enthusiast"; break;
+                        case 605: eventLabels[i] = "Marrymore Inn Lobby Guest 1"; break;
+                        case 606: eventLabels[i] = "Marrymore Inn Lobby Guest 2"; break;
+                        case 607: eventLabels[i] = "Locked Door"; break;
+                        case 608: eventLabels[i] = "Marrymore Inn 3F Hallway Loader"; break;
+                        case 609: eventLabels[i] = "Marrymore Inn 3F Hallway Bellhop"; break;
+                        case 610: eventLabels[i] = "Marrymore Occupied Exterior Loader"; break;
+                        case 611: eventLabels[i] = "Marrymore Inn Lobby Loader"; break;
+                        case 612: eventLabels[i] = "Marrymore Inn 2F Hallway Loader"; break;
+                        case 613: eventLabels[i] = "Marrymore Suite Loader"; break;
+                        case 614: eventLabels[i] = "Marrymore Suite Tip Bellhop"; break;
+                        case 615: eventLabels[i] = "Marrymore Lamp"; break;
+                        case 616: eventLabels[i] = "Marrymore Inn Lobby Exit"; break;
+                        case 617: eventLabels[i] = "Mario As Bellhop Main Event"; break;
+                        case 618: eventLabels[i] = "Mario As Bellhop Tries To Go Upstairs Without Guest"; break;
+                        case 619: eventLabels[i] = "Real Bellhop Blocks Exit 1"; break;
+                        case 620: eventLabels[i] = "Real Bellhop Blocks Exit 2"; break;
+                        case 621: eventLabels[i] = "Marrymore Inn Elderly Guest"; break;
+                        case 622: eventLabels[i] = "Marrymore Inn Elderly Guest Tip Subroutine 1"; break;
+                        case 623: eventLabels[i] = "Marrymore Inn Employed Guest Leaves"; break;
+                        case 624: eventLabels[i] = "Marrymore Inn Lobby Stairs"; break;
+                        case 625: eventLabels[i] = "Marrymore Inn Something"; break;
+                        case 626: eventLabels[i] = "Marrymore Inn Elderly Guest Tip Subroutine Flowerbox"; break;
+                        case 627: eventLabels[i] = "Marrymore Sanctuary Exit To Antechamber"; break;
+                        case 628: eventLabels[i] = "Marrymore Kitchen Loader"; break;
+                        case 629: eventLabels[i] = "Empty"; break;
+                        case 630: eventLabels[i] = "Marrymore Kitchen Chef 1"; break;
+                        case 631: eventLabels[i] = "Marrymore Kitchen Chef 2"; break;
+                        case 632: eventLabels[i] = "Marrymore Exterior Chapel Locked Front Door"; break;
+                        case 633: eventLabels[i] = "Marrymore Chapel Lobby Exit To Exterior"; break;
+                        case 634: eventLabels[i] = "Empty"; break;
+                        case 635: eventLabels[i] = "Marrymore Inn Elderly Guest Tip Sunroutine 3"; break;
+                        case 636: eventLabels[i] = "Empty"; break;
+                        case 637: eventLabels[i] = "Empty"; break;
+                        case 638: eventLabels[i] = "Empty"; break;
+                        case 639: eventLabels[i] = "Empty"; break;
+                        case 640: eventLabels[i] = "Empty"; break;
+                        case 641: eventLabels[i] = "Marrymore Antechamber Loader Extension"; break;
+                        case 642: eventLabels[i] = "Marrymore Antechamber Entrance Reverse"; break;
+                        case 643: eventLabels[i] = "Empty"; break;
+                        case 644: eventLabels[i] = "Empty"; break;
+                        case 645: eventLabels[i] = "Empty"; break;
+                        case 646: eventLabels[i] = "Marrymore Shop Event Container"; break;
+                        case 647: eventLabels[i] = "Marrymore Sanctuary Candle 1"; break;
+                        case 648: eventLabels[i] = "Marrymore Sanctuary Candle 2"; break;
+                        case 649: eventLabels[i] = "Marrymore Sanctuary Candle 3"; break;
+                        case 650: eventLabels[i] = "Marrymore Sanctuary Candle 4"; break;
+                        case 651: eventLabels[i] = "Marrymore Sanctuary Candle 5"; break;
+                        case 652: eventLabels[i] = "Marrymore Sanctuary Candle 6"; break;
+                        case 653: eventLabels[i] = "Marrymore Sanctuary Candle 7"; break;
+                        case 654: eventLabels[i] = "Marrymore Sanctuary Candle 8"; break;
+                        case 655: eventLabels[i] = "Marrymore Gear Grant Crown"; break;
+                        case 656: eventLabels[i] = "Empty"; break;
+                        case 657: eventLabels[i] = "Empty"; break;
+                        case 658: eventLabels[i] = "Empty"; break;
+                        case 659: eventLabels[i] = "Empty"; break;
+                        case 660: eventLabels[i] = "Empty"; break;
+                        case 661: eventLabels[i] = "Bowsers Keep Button Room Forfeit"; break;
+                        case 662: eventLabels[i] = "Empty"; break;
+                        case 663: eventLabels[i] = "Initiate Marrymore Boss Fight If All Gear Collected"; break;
+                        case 664: eventLabels[i] = "Empty"; break;
+                        case 665: eventLabels[i] = "Empty"; break;
+                        case 666: eventLabels[i] = "Empty"; break;
+                        case 667: eventLabels[i] = "Empty"; break;
+                        case 668: eventLabels[i] = "Summon Marrymore Boss To Room"; break;
+                        case 669: eventLabels[i] = "Enter Unoccupied Marrymore Sanctuary"; break;
+                        case 670: eventLabels[i] = "Marrymore Unoccupied Exterior Loader"; break;
+                        case 671: eventLabels[i] = "Marrymore Back Area Exit To Exterior"; break;
+                        case 672: eventLabels[i] = "Marrymore Occupied Exterior Chapel Front Entrance"; break;
+                        case 673: eventLabels[i] = "Marrymore Chapel Lobby Exit To Antechamber"; break;
+                        case 674: eventLabels[i] = "Marrymore Unoccupied Exterior Open Front Chapel Entrance"; break;
+                        case 675: eventLabels[i] = "Empty"; break;
+                        case 676: eventLabels[i] = "Empty"; break;
+                        case 677: eventLabels[i] = "Marrymore Unoccupied Sanctuary Loader"; break;
+                        case 678: eventLabels[i] = "Marrymore Jump On Organ Pipe"; break;
+                        case 679: eventLabels[i] = "Marrymore Liberated Exterior Pathway Red Toad"; break;
+                        case 680: eventLabels[i] = "Marrymore Liberated Exterior Pathway Yellow Toad"; break;
+                        case 681: eventLabels[i] = "Marrymore Liberated Exterior Kid"; break;
+                        case 682: eventLabels[i] = "Marrymore Liberated Exterior Mom"; break;
+                        case 683: eventLabels[i] = "Marrymore Liberated Exterior Green Toad"; break;
+                        case 684: eventLabels[i] = "Marrymore Liberated Exterior Husband"; break;
+                        case 685: eventLabels[i] = "Marrymore Liberated Exterior Wife"; break;
+                        case 686: eventLabels[i] = "Marrymore Liberated Exterior Red Toad"; break;
+                        case 687: eventLabels[i] = "Empty"; break;
+                        case 688: eventLabels[i] = "Marrymore Raz"; break;
+                        case 689: eventLabels[i] = "Marrymore Raini"; break;
+                        case 690: eventLabels[i] = "Marrymore Red Toad 1"; break;
+                        case 691: eventLabels[i] = "Marrymore Yellow Toad 1"; break;
+                        case 692: eventLabels[i] = "Empty"; break;
+                        case 693: eventLabels[i] = "Marrymore Grey Toad"; break;
+                        case 694: eventLabels[i] = "Marrymore Red Toad 2"; break;
+                        case 695: eventLabels[i] = "Marrymore Green Kid"; break;
+                        case 696: eventLabels[i] = "Marrymore Yellow Toad 2"; break;
+                        case 697: eventLabels[i] = "Marrymore Entrance Toad"; break;
+                        case 698: eventLabels[i] = "Marrymore Photographer"; break;
+                        case 699: eventLabels[i] = "Empty"; break;
+                        case 700: eventLabels[i] = "Empty"; break;
+                        case 701: eventLabels[i] = "Pastor Mario"; break;
+                        case 702: eventLabels[i] = "Marrymore Take Photo"; break;
+                        case 703: eventLabels[i] = "Empty"; break;
+                        case 704: eventLabels[i] = "Empty"; break;
+                        case 705: eventLabels[i] = "Marrymore Liberated Chapel Green Toad"; break;
+                        case 706: eventLabels[i] = "Marrymore Liberated Chapel Pink Kid"; break;
+                        case 707: eventLabels[i] = "Marrymore Raz Raini"; break;
+                        case 708: eventLabels[i] = "Marrymore Tip Decision Subroutine"; break;
+                        case 709: eventLabels[i] = "Empty"; break;
+                        case 710: eventLabels[i] = "Empty"; break;
+                        case 711: eventLabels[i] = "Empty"; break;
+                        case 712: eventLabels[i] = "Empty"; break;
+                        case 713: eventLabels[i] = "Empty"; break;
+                        case 714: eventLabels[i] = "Empty"; break;
+                        case 715: eventLabels[i] = "Empty"; break;
+                        case 716: eventLabels[i] = "Enter Jumping Kids House"; break;
+                        case 717: eventLabels[i] = "Empty"; break;
+                        case 718: eventLabels[i] = "Empty"; break;
+                        case 719: eventLabels[i] = "Empty"; break;
+                        case 720: eventLabels[i] = "Old Star Piece Script"; break;
+                        case 721: eventLabels[i] = "Peachs Grandma"; break;
+                        case 722: eventLabels[i] = "Empty"; break;
+                        case 723: eventLabels[i] = "Mushroom Kingdom Unoccupied Exterior Loader"; break;
+                        case 724: eventLabels[i] = "Nimbus Croco House Loader"; break;
+                        case 725: eventLabels[i] = "Empty"; break;
+                        case 726: eventLabels[i] = "Empty"; break;
+                        case 727: eventLabels[i] = "Empty"; break;
+                        case 728: eventLabels[i] = "Empty"; break;
+                        case 729: eventLabels[i] = "Several Marrymore Room Loaders"; break;
+                        case 730: eventLabels[i] = "Empty"; break;
+                        case 731: eventLabels[i] = "Empty"; break;
+                        case 732: eventLabels[i] = "Empty"; break;
+                        case 733: eventLabels[i] = "Empty"; break;
+                        case 734: eventLabels[i] = "Mway Chest"; break;
+                        case 735: eventLabels[i] = "Forest Underground Chest"; break;
+                        case 736: eventLabels[i] = "Rose Town Inn Sleep Subroutine"; break;
+                        case 737: eventLabels[i] = "Garros House Loader"; break;
+                        case 738: eventLabels[i] = "Nimbus Land Final Boss Fight Town Square Loader"; break;
+                        case 739: eventLabels[i] = "Nimbus Land Inn Hint Guy"; break;
+                        case 740: eventLabels[i] = "Nimbus Land Occupied Castle Front Entrance"; break;
+                        case 741: eventLabels[i] = "Empty"; break;
+                        case 742: eventLabels[i] = "Nimbus Land Liberated Castle Main Hallway Woman"; break;
+                        case 743: eventLabels[i] = "Nimbus Land Liberated Castle Main Hallway Man"; break;
+                        case 744: eventLabels[i] = "Nimbus Land Liberated Castle Inner Cellar Reward"; break;
+                        case 745: eventLabels[i] = "Mushroom Kingdom Inn Sleeping Guy"; break;
+                        case 746: eventLabels[i] = "Mushroom Kingdom Inn 2F Downward Stairs"; break;
+                        case 747: eventLabels[i] = "Mushroom Kingdom Inn 2F Loader"; break;
+                        case 748: eventLabels[i] = "Empty"; break;
+                        case 749: eventLabels[i] = "Vine Field"; break;
+                        case 750: eventLabels[i] = "Vine Field"; break;
+                        case 751: eventLabels[i] = "Vine Field"; break;
+                        case 752: eventLabels[i] = "Vine Field"; break;
+                        case 753: eventLabels[i] = "Rose Town Innkeeper Over Counter"; break;
+                        case 754: eventLabels[i] = "Mushroom Kingdom Shop Basement Stairway"; break;
+                        case 755: eventLabels[i] = "Mushroom Way Area 03 Shuffled Npc Animation Loader"; break;
+                        case 756: eventLabels[i] = "Bandits Way Area 02 Shuffled Npc Animation Loader"; break;
+                        case 757: eventLabels[i] = "Bandits Way Area 01 Shuffled Npc Animation Loader"; break;
+                        case 758: eventLabels[i] = "Bandits Way Area 03 Shuffled Npc Animation Loader"; break;
+                        case 759: eventLabels[i] = "Bandits Way Area 04 Shuffled Npc Animation Loader"; break;
+                        case 760: eventLabels[i] = "Bandits Way Area 05 Shuffled Npc Animation Loader"; break;
+                        case 761: eventLabels[i] = "Mushroom Kingdom Occupied Throne Room Shuffled Npc Animation Loader"; break;
+                        case 762: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Shuffled Npc Animation Loader"; break;
+                        case 763: eventLabels[i] = "Mushroom Kingdom Occupied Throne Antechamber Shuffled Npc Animation Loader"; break;
+                        case 764: eventLabels[i] = "Mushroom Kingdom Occupied Throne Antechamber Loader"; break;
+                        case 765: eventLabels[i] = "Mushroom Kingdom Occupied Main Hall Shuffled Npc Animation Loader"; break;
+                        case 766: eventLabels[i] = "Mushroom Kingdom Occupied Stairway Shuffled Npc Animation Loader"; break;
+                        case 767: eventLabels[i] = "Mushroom Kingdom Occupied East Hall Loader"; break;
+                        case 768: eventLabels[i] = "Mushroom Kingdom Occupied East Hall Shuffled Npc Animation Loader"; break;
+                        case 769: eventLabels[i] = "Mushroom Kingdom Occupied Peachs Antechamber Shuffled Npc Animation Loader"; break;
+                        case 770: eventLabels[i] = "Mushroom Kingdom Occupied Jumping Kids House 1F Shuffled Npc Animation Loader"; break;
+                        case 771: eventLabels[i] = "Mushroom Kingdom Occupied Jumping Kids House 2F Shuffled Npc Animation Loader"; break;
+                        case 772: eventLabels[i] = "Kero Sewers Belome Room Shuffled Npc Animation Loader"; break;
+                        case 773: eventLabels[i] = "Kero Sewers Belome Room Loader Container"; break;
+                        case 774: eventLabels[i] = "Forest Maze Boss Room Loader"; break;
+                        case 775: eventLabels[i] = "Forest Maze Boss Room Shuffled Npc Animation Loader"; break;
+                        case 776: eventLabels[i] = "Mines Trampoline Room Loader"; break;
+                        case 777: eventLabels[i] = "Mines Trampoline Room Shuffled Npc Animation Loader"; break;
+                        case 778: eventLabels[i] = "Mines Left Of Trampoline Room Loader"; break;
+                        case 779: eventLabels[i] = "Mines Left Of Trampoline Room Shuffled Npc Animation Loader"; break;
+                        case 780: eventLabels[i] = "Mines Tiny Room 2 Left Of Trampoline Room Loader"; break;
+                        case 781: eventLabels[i] = "Mines Tiny Room 2 Left Of Trampoline Room Shuffled Npc Animation Loader"; break;
+                        case 782: eventLabels[i] = "Mines Room That Splits To Pa Mole Path Loader"; break;
+                        case 783: eventLabels[i] = "Mines Room That Splits To Pa Mole Path Shuffled Npc Animation Loader"; break;
+                        case 784: eventLabels[i] = "Mines Small North Room In Miniboss Path Loader"; break;
+                        case 785: eventLabels[i] = "Mines Small North Room In Miniboss Path Shuffled Npc Animation Loader"; break;
+                        case 786: eventLabels[i] = "Mines Long Room In Miniboss Path Loader"; break;
+                        case 787: eventLabels[i] = "Mines Long Room In Miniboss Path Shuffled Npc Animation Loader"; break;
+                        case 788: eventLabels[i] = "Mines Boss Room Shuffled Npc Animation Loader"; break;
+                        case 789: eventLabels[i] = "Tower Curtain Game Room Shuffled Npc Animation Loader"; break;
+                        case 790: eventLabels[i] = "Marrymore Occupied Sanctuary Shuffled Npc Animation Loader"; break;
+                        case 791: eventLabels[i] = "Tower Ancestor Game Room Shuffled Npc Animation Loader"; break;
+                        case 792: eventLabels[i] = "Tower First Bobomb Staircase Shuffled Npc Animation Loader"; break;
+                        case 793: eventLabels[i] = "Tower First Bobomb Staircase Loader"; break;
+                        case 794: eventLabels[i] = "Tower Balcony Shuffled Npc Animation Loader"; break;
+                        case 795: eventLabels[i] = "Ending Credits Chapel Shuffled Npc Animation Loader"; break;
+                        case 796: eventLabels[i] = "Marrymore Kitchen Shuffled Npc Animation Loader"; break;
+                        case 797: eventLabels[i] = "Tower Lobby Shuffled Npc Animation Loader"; break;
+                        case 798: eventLabels[i] = "Tower First Rail Room Shuffled Npc Animation Loader"; break;
+                        case 799: eventLabels[i] = "Tower Jumping Spookum Room Shuffled Npc Animation Loader"; break;
+                        case 800: eventLabels[i] = "Ship Password Room Shuffled Npc Animation Loader"; break;
+                        case 801: eventLabels[i] = "Ship Boss Room Shuffled Npc Animation Loader"; break;
+                        case 802: eventLabels[i] = "Seaside Occupied Beach Shuffled Npc Animation Loader"; break;
+                        case 803: eventLabels[i] = "Ship 1St Preboss Battle Room Shuffled Npc Animation Loader"; break;
+                        case 804: eventLabels[i] = "Ship 2Nd Preboss Battle Room Shuffled Npc Animation Loader"; break;
+                        case 805: eventLabels[i] = "Seaside Occupied Elder House 1F Shuffled Npc Animation Loader"; break;
+                        case 806: eventLabels[i] = "Seaside Occupied Exterior Shuffled Npc Animation Loader"; break;
+                        case 807: eventLabels[i] = "Seaside Occupied Inn 1F Shuffled Npc Animation Loader"; break;
+                        case 808: eventLabels[i] = "Seaside Occupied Inn 2F Shuffled Npc Animation Loader"; break;
+                        case 809: eventLabels[i] = "Seaside Occupied Bomb Shop Shuffled Npc Animation Loader"; break;
+                        case 810: eventLabels[i] = "Seaside Occupied Wpn Arm Shop Shuffled Npc Animation Loader"; break;
+                        case 811: eventLabels[i] = "Seaside Occupied Health Store Shuffled Npc Animation Loader"; break;
+                        case 812: eventLabels[i] = "Seaside Occupied Mushroom Boy Shop Shuffled Npc Animation Loader"; break;
+                        case 813: eventLabels[i] = "Seaside Occupied Accessory Shop Shuffled Npc Animation Loader"; break;
+                        case 814: eventLabels[i] = "Temple Boss Room Shuffled Npc Animation Loader"; break;
+                        case 815: eventLabels[i] = "Dojo Shuffled Npc Animation Loader"; break;
+                        case 816: eventLabels[i] = "Monstro Superboss Shuffled Npc Animation Loader"; break;
+                        case 817: eventLabels[i] = "Bean Valley Boss Room Shuffled Npc Animation Loader"; break;
+                        case 818: eventLabels[i] = "Nimbus Castle Statue Polisher Boss Room Shuffled Npc Animation Loader"; break;
+                        case 819: eventLabels[i] = "Nimbus Castle Statue Polishing Room Shuffled Npc Animation Loader"; break;
+                        case 820: eventLabels[i] = "Nimbus Castle Final Hallway Shuffled Npc Animation Loader"; break;
+                        case 821: eventLabels[i] = "Garros House Shuffled Npc Animation Loader"; break;
+                        case 822: eventLabels[i] = "Nimbus Land Occupied Exterior Final Boss Room Shuffled Npc Animation Loader"; break;
+                        case 823: eventLabels[i] = "Nimbus Castle Main Hallway Shuffled Npc Animation Loader"; break;
+                        case 824: eventLabels[i] = "Nimbus Castle Occupied 4Way Path Shuffled Npc Animation Loader"; break;
+                        case 825: eventLabels[i] = "Nimbus Castle Throne Room Antechamber Shuffled Npc Animation Loader"; break;
+                        case 826: eventLabels[i] = "Nimbus Castle Occupied Throne Room Shuffled Npc Animation Loader"; break;
+                        case 827: eventLabels[i] = "Nimbus Castle Single Bird Statue Room Shuffled Npc Animation Loader"; break;
+                        case 828: eventLabels[i] = "Nimbus Castle Single Bird Statue Room Loader"; break;
+                        case 829: eventLabels[i] = "Nimbus Castle Early West Shaman Path Shuffled Npc Animation Loader"; break;
+                        case 830: eventLabels[i] = "Nimbus Castle Early East Shaman Path Shuffled Npc Animation Loader"; break;
+                        case 831: eventLabels[i] = "Nimbus Castle Liberated Throne Room Shuffled Npc Animation Loader"; break;
+                        case 832: eventLabels[i] = "Nimbus Land Hot Springs Shuffled Npc Animation Loader"; break;
+                        case 833: eventLabels[i] = "Nimbus Castle Liberated Inner Cellar Hallway Loader"; break;
+                        case 834: eventLabels[i] = "Nimbus Castle Liberated Inner Cellar Hallway Shuffled Npc Animation Loader"; break;
+                        case 835: eventLabels[i] = "Nimbus Castle Liberated 5 Door Room Shuffled Npc Animation Loader"; break;
+                        case 836: eventLabels[i] = "Nimbus Castle Liberated 4Way Path Shuffled Npc Animation Loader"; break;
+                        case 837: eventLabels[i] = "Nimbus Castle Liberated 4Way Path Loader"; break;
+                        case 838: eventLabels[i] = "Nimbus Castle First Post Throne Hallway Shuffled Npc Animation Loader"; break;
+                        case 839: eventLabels[i] = "Nimbus Castle Second Post Throne Hallway Shuffled Npc Animation Loader"; break;
+                        case 840: eventLabels[i] = "Volcano First Boss Room Shuffled Npc Animation Loader"; break;
+                        case 841: eventLabels[i] = "Volcano Final Pre Exit Room Loader"; break;
+                        case 842: eventLabels[i] = "Volcano Final Pre Exit Room Shuffled Npc Animation Loader"; break;
+                        case 843: eventLabels[i] = "Volcano Post Boss Room With Enemy Warps Shuffled Npc Animation Loader"; break;
+                        case 844: eventLabels[i] = "Volcano Exit Room Shuffled Npc Animation Loader"; break;
+                        case 845: eventLabels[i] = "Volcano Brief Henchman Room Shuffled Npc Animation Loader"; break;
+                        case 846: eventLabels[i] = "Keep Battle Door 1C Shuffled Npc Animation Loader"; break;
+                        case 847: eventLabels[i] = "Keep First Boss Room Shuffled Npc Animation Loader"; break;
+                        case 848: eventLabels[i] = "Keep Battle Door 2B Shuffled Npc Animation Loader"; break;
+                        case 849: eventLabels[i] = "Keep Battle Door 2C Shuffled Npc Animation Loader"; break;
+                        case 850: eventLabels[i] = "Keep Battle Door 1A Shuffled Npc Animation Loader"; break;
+                        case 851: eventLabels[i] = "Keep Battle Door 1B Shuffled Npc Animation Loader"; break;
+                        case 852: eventLabels[i] = "Keep Battle Door 2A Shuffled Npc Animation Loader"; break;
+                        case 853: eventLabels[i] = "Keep Final Boss Room Shuffled Npc Animation Loader"; break;
+                        case 854: eventLabels[i] = "Abyss 1St Boss Room Shuffled Npc Animation Loader"; break;
+                        case 855: eventLabels[i] = "Inner Factory 1St Room Shuffled Npc Animation Loader"; break;
+                        case 856: eventLabels[i] = "Inner Factory 2Nd Room Shuffled Npc Animation Loader"; break;
+                        case 857: eventLabels[i] = "Inner Factory 3Rd Room Shuffled Npc Animation Loader"; break;
+                        case 858: eventLabels[i] = "Inner Factory 4Th Room Shuffled Npc Animation Loader"; break;
+                        case 859: eventLabels[i] = "Inner Factory 1St Room Post Fight Shuffled Npc Animation Loader"; break;
+                        case 860: eventLabels[i] = "Mines Boss Shove Subroutine"; break;
+                        case 861: eventLabels[i] = "Dojo 1St Boss Challenge Subroutine"; break;
+                        case 862: eventLabels[i] = "Dojo 2Nd Boss Challenge Subroutine"; break;
+                        case 863: eventLabels[i] = "Dojo 2Nd Boss Challenge Deescalate"; break;
+                        case 864: eventLabels[i] = "Dojo 3Rd Boss Challenge Subroutine"; break;
+                        case 865: eventLabels[i] = "Dojo 3Rd Boss Challenge Deescalate"; break;
+                        case 866: eventLabels[i] = "Dojo 4Th Boss Challenge Subroutine"; break;
+                        case 867: eventLabels[i] = "Dojo 5Th Boss Challenge Subroutine"; break;
+                        case 868: eventLabels[i] = "Dojo 5Th Boss Challenge Deescalate"; break;
+                        case 869: eventLabels[i] = "Test Script 3"; break;
+                        case 870: eventLabels[i] = "Test Script 4"; break;
+                        case 871: eventLabels[i] = "Test Script 5"; break;
+                        case 872: eventLabels[i] = "Test Script 6"; break;
+                        case 873: eventLabels[i] = "Test Script 7"; break;
+                        case 874: eventLabels[i] = "Test Script 8"; break;
+                        case 875: eventLabels[i] = "Test Script 9"; break;
+                        case 876: eventLabels[i] = "Test Script 10"; break;
+                        case 877: eventLabels[i] = "Test Script 11"; break;
+                        case 878: eventLabels[i] = "Tower Exterior Shuffled Npc Animation Loader"; break;
+                        case 879: eventLabels[i] = "Ship Trampoline Loader Override"; break;
+                        case 880: eventLabels[i] = "Booster Pass Secret Room Shuffled Npc Animation Loader"; break;
+                        case 881: eventLabels[i] = "Booster Pass Seesaw Chest Room Shuffled Npc Animation Loader"; break;
+                        case 882: eventLabels[i] = "Chest Flower Item Collection"; break;
+                        case 883: eventLabels[i] = "Chest Item Bag Packet"; break;
+                        case 884: eventLabels[i] = "Chest Feather Packet"; break;
+                        case 885: eventLabels[i] = "Chest Star Piece Packet"; break;
+                        case 886: eventLabels[i] = "Chest Ring Packet"; break;
+                        case 887: eventLabels[i] = "Chest Brooch Packet"; break;
+                        case 888: eventLabels[i] = "Chest Shoes Packet"; break;
+                        case 889: eventLabels[i] = "Chest Banana Peel Packet"; break;
+                        case 890: eventLabels[i] = "Chest Crown Packet"; break;
+                        case 891: eventLabels[i] = "Chest Bomb Packet"; break;
+                        case 892: eventLabels[i] = "Chest Egg Packet"; break;
+                        case 893: eventLabels[i] = "Chest Cookie Packet"; break;
+                        case 894: eventLabels[i] = "Chest Berry Packet"; break;
+                        case 895: eventLabels[i] = "Chest Card Packet"; break;
+                        case 896: eventLabels[i] = "Chest Green Item Collection"; break;
+                        case 897: eventLabels[i] = "Chest Red Item Collection"; break;
+                        case 898: eventLabels[i] = "Chest Blue Item Collection"; break;
+                        case 899: eventLabels[i] = "Chest Yellow Item Collection"; break;
+                        case 900: eventLabels[i] = "Chest Spell 1"; break;
+                        case 901: eventLabels[i] = "Chest Spell 2"; break;
+                        case 902: eventLabels[i] = "Chest Spell 3"; break;
+                        case 903: eventLabels[i] = "Chest Spell 4"; break;
+                        case 904: eventLabels[i] = "Chest Spell 5"; break;
+                        case 905: eventLabels[i] = "Chest Spell 6"; break;
+                        case 906: eventLabels[i] = "Chest Spell 7"; break;
+                        case 907: eventLabels[i] = "Chest Spell 8"; break;
+                        case 908: eventLabels[i] = "Chest Spell 9"; break;
+                        case 909: eventLabels[i] = "Chest Spell 10"; break;
+                        case 910: eventLabels[i] = "Chest Spell 11"; break;
+                        case 911: eventLabels[i] = "Chest Spell 12"; break;
+                        case 912: eventLabels[i] = "Chest Spell 13"; break;
+                        case 913: eventLabels[i] = "Chest Spell 14"; break;
+                        case 914: eventLabels[i] = "Chest Spell 15"; break;
+                        case 915: eventLabels[i] = "Chest Spell 16"; break;
+                        case 916: eventLabels[i] = "Chest Spell 17"; break;
+                        case 917: eventLabels[i] = "Chest Beetle Packet"; break;
+                        case 918: eventLabels[i] = "Chest Spell 18"; break;
+                        case 919: eventLabels[i] = "Chest Spell 19"; break;
+                        case 920: eventLabels[i] = "Chest Spell 20"; break;
+                        case 921: eventLabels[i] = "Chest Spell 21"; break;
+                        case 922: eventLabels[i] = "Chest Spell 22"; break;
+                        case 923: eventLabels[i] = "Chest Spell 23"; break;
+                        case 924: eventLabels[i] = "Chest Spell 24"; break;
+                        case 925: eventLabels[i] = "Chest Spell 25"; break;
+                        case 926: eventLabels[i] = "Chest Spell 26"; break;
+                        case 927: eventLabels[i] = "Chest Spell 27"; break;
+                        case 928: eventLabels[i] = "Unused"; break;
+                        case 929: eventLabels[i] = "Unused"; break;
+                        case 930: eventLabels[i] = "Yoshi Cookie Storage Business Logic"; break;
+                        case 931: eventLabels[i] = "Initatie Yoshi Race For Gambling"; break;
+                        case 932: eventLabels[i] = "Fat Yoshi"; break;
+                        case 933: eventLabels[i] = "Fat Yoshi Present Generator"; break;
+                        case 934: eventLabels[i] = "Progressive Firework Chest Packet"; break;
+                        case 935: eventLabels[i] = "Marrymore Inn Regular Room Loader"; break;
+                        case 936: eventLabels[i] = "Peck Subroutine Left Statue"; break;
+                        case 937: eventLabels[i] = "Peck Subroutine Middle Statue"; break;
+                        case 938: eventLabels[i] = "Peck Subroutine Right Statue"; break;
+                        case 939: eventLabels[i] = "Statue Subroutine 1"; break;
+                        case 940: eventLabels[i] = "Statue Subroutine 2"; break;
+                        case 941: eventLabels[i] = "Keep First Boss Set Script"; break;
+                        case 942: eventLabels[i] = "Keep First Boss Summon Chest"; break;
+                        case 943: eventLabels[i] = "Keep Second Boss Animation Subroutine"; break;
+                        case 944: eventLabels[i] = "Final Boss Animation Subroutine 1"; break;
+                        case 945: eventLabels[i] = "Final Boss Animation Subroutine 2"; break;
+                        case 946: eventLabels[i] = "Final Boss Animation Subroutine 3"; break;
+                        case 947: eventLabels[i] = "Frogfucius Hint Main Checks"; break;
+                        case 948: eventLabels[i] = "Frogfucius Hint Expansion"; break;
+                        case 949: eventLabels[i] = "Frogfucius Hint Treasure Chests"; break;
+                        case 950: eventLabels[i] = "Chest Glove Packet"; break;
+                        case 951: eventLabels[i] = "Crystal Chest Packet"; break;
+                        case 952: eventLabels[i] = "Npc Spell 1"; break;
+                        case 953: eventLabels[i] = "Npc Spell 2"; break;
+                        case 954: eventLabels[i] = "Npc Spell 3"; break;
+                        case 955: eventLabels[i] = "Npc Spell 4"; break;
+                        case 956: eventLabels[i] = "Npc Spell 5"; break;
+                        case 957: eventLabels[i] = "Npc Spell 6"; break;
+                        case 958: eventLabels[i] = "Npc Spell 7"; break;
+                        case 959: eventLabels[i] = "Npc Spell 8"; break;
+                        case 960: eventLabels[i] = "Npc Spell 9"; break;
+                        case 961: eventLabels[i] = "Npc Spell 10"; break;
+                        case 962: eventLabels[i] = "Npc Spell 11"; break;
+                        case 963: eventLabels[i] = "Npc Spell 12"; break;
+                        case 964: eventLabels[i] = "Npc Spell 13"; break;
+                        case 965: eventLabels[i] = "Npc Spell 14"; break;
+                        case 966: eventLabels[i] = "Npc Spell 16"; break;
+                        case 967: eventLabels[i] = "Npc Spell 17"; break;
+                        case 968: eventLabels[i] = "Npc Spell 18"; break;
+                        case 969: eventLabels[i] = "Npc Spell 19"; break;
+                        case 970: eventLabels[i] = "Npc Spell 20"; break;
+                        case 971: eventLabels[i] = "Npc Spell 21"; break;
+                        case 972: eventLabels[i] = "Npc Spell 22"; break;
+                        case 973: eventLabels[i] = "Npc Spell 23"; break;
+                        case 974: eventLabels[i] = "Npc Spell 24"; break;
+                        case 975: eventLabels[i] = "Npc Spell 25"; break;
+                        case 976: eventLabels[i] = "Npc Spell 26"; break;
+                        case 977: eventLabels[i] = "Npc Spell 27"; break;
+                        case 978: eventLabels[i] = "Freestanding Spell 1"; break;
+                        case 979: eventLabels[i] = "Frogfucius Hint Optional Marrymore"; break;
+                        case 980: eventLabels[i] = "Frogfucius Hint Marrymore Suite"; break;
+                        case 981: eventLabels[i] = "Frogfucius Hint Optional 1"; break;
+                        case 982: eventLabels[i] = "Frogfucius Hint Optional 2"; break;
+                        case 983: eventLabels[i] = "Frogfucius Hint Optional 3"; break;
+                        case 984: eventLabels[i] = "Frogfucius Hint Optional 4"; break;
+                        case 985: eventLabels[i] = "Frogfucius Hint Optional 5"; break;
+                        case 986: eventLabels[i] = "Frogfucius Hint Optional 6"; break;
+                        case 987: eventLabels[i] = "Frogfucius Hint Optional 7"; break;
+                        case 988: eventLabels[i] = "Frogfucius Hint Optional 8"; break;
+                        case 989: eventLabels[i] = "Frogfucius Hint Optional 9"; break;
+                        case 990: eventLabels[i] = "Frogfucius Hint Optional 10"; break;
+                        case 991: eventLabels[i] = "Frogfucius Hint Dialogues"; break;
+                        case 992: eventLabels[i] = "Freestanding Spell 2"; break;
+                        case 993: eventLabels[i] = "Freestanding Spell 3"; break;
+                        case 994: eventLabels[i] = "Freestanding Spell 4"; break;
+                        case 995: eventLabels[i] = "Freestanding Spell 5"; break;
+                        case 996: eventLabels[i] = "Freestanding Spell 6"; break;
+                        case 997: eventLabels[i] = "Freestanding Spell 7"; break;
+                        case 998: eventLabels[i] = "Set Star Hill As Checked"; break;
+                        case 999: eventLabels[i] = "Freestanding Spell 8"; break;
+                        case 1000: eventLabels[i] = "Freestanding Spell 9"; break;
+                        case 1001: eventLabels[i] = "Freestanding Spell 10"; break;
+                        case 1002: eventLabels[i] = "Freestanding Spell 11"; break;
+                        case 1003: eventLabels[i] = "Freestanding Spell 12"; break;
+                        case 1004: eventLabels[i] = "Freestanding Spell 13"; break;
+                        case 1005: eventLabels[i] = "Freestanding Spell 14"; break;
+                        case 1006: eventLabels[i] = "Freestanding Spell 16"; break;
+                        case 1007: eventLabels[i] = "Freestanding Spell 17"; break;
+                        case 1008: eventLabels[i] = "Post Mines Boss Subroutine"; break;
+                        case 1009: eventLabels[i] = "Unknown"; break;
+                        case 1010: eventLabels[i] = "Shyster Subroutine"; break;
+                        case 1011: eventLabels[i] = "Post Mines Boss Check If Won"; break;
+                        case 1012: eventLabels[i] = "Freestanding Spell 18"; break;
+                        case 1013: eventLabels[i] = "Freestanding Spell 19"; break;
+                        case 1014: eventLabels[i] = "Freestanding Spell 20"; break;
+                        case 1015: eventLabels[i] = "Freestanding Spell 21"; break;
+                        case 1016: eventLabels[i] = "Freestanding Spell 22"; break;
+                        case 1017: eventLabels[i] = "Freestanding Spell 23"; break;
+                        case 1018: eventLabels[i] = "Freestanding Spell 24"; break;
+                        case 1019: eventLabels[i] = "Freestanding Spell 25"; break;
+                        case 1020: eventLabels[i] = "Freestanding Spell 26"; break;
+                        case 1021: eventLabels[i] = "Freestanding Spell 27"; break;
+                        case 1022: eventLabels[i] = "Hill River Spell 1"; break;
+                        case 1023: eventLabels[i] = "Hill River Spell 2"; break;
+                        case 1024: eventLabels[i] = "Hill River Spell 3"; break;
+                        case 1025: eventLabels[i] = "Hill River Spell 4"; break;
+                        case 1026: eventLabels[i] = "Hill River Spell 5"; break;
+                        case 1027: eventLabels[i] = "Hill River Spell 6"; break;
+                        case 1028: eventLabels[i] = "Hill River Spell 7"; break;
+                        case 1029: eventLabels[i] = "Hill River Spell 8"; break;
+                        case 1030: eventLabels[i] = "Hill River Spell 9"; break;
+                        case 1031: eventLabels[i] = "Hill River Spell 10"; break;
+                        case 1032: eventLabels[i] = "Hill River Spell 11"; break;
+                        case 1033: eventLabels[i] = "Hill River Spell 12"; break;
+                        case 1034: eventLabels[i] = "Hill River Spell 13"; break;
+                        case 1035: eventLabels[i] = "Hill River Spell 14"; break;
+                        case 1036: eventLabels[i] = "Hill River Spell 16"; break;
+                        case 1037: eventLabels[i] = "Hill River Spell 17"; break;
+                        case 1038: eventLabels[i] = "Hill River Spell 18"; break;
+                        case 1039: eventLabels[i] = "Hill River Spell 19"; break;
+                        case 1040: eventLabels[i] = "Hill River Spell 20"; break;
+                        case 1041: eventLabels[i] = "Hill River Spell 21"; break;
+                        case 1042: eventLabels[i] = "Hill River Spell 22"; break;
+                        case 1043: eventLabels[i] = "Hill River Spell 23"; break;
+                        case 1044: eventLabels[i] = "Hill River Spell 24"; break;
+                        case 1045: eventLabels[i] = "Hill River Spell 25"; break;
+                        case 1046: eventLabels[i] = "Hill River Spell 26"; break;
+                        case 1047: eventLabels[i] = "Hill River Spell 27"; break;
+                        case 1048: eventLabels[i] = "Npc Spell 15"; break;
+                        case 1049: eventLabels[i] = "Freestanding Spell 15"; break;
+                        case 1050: eventLabels[i] = "Hill River Spell 15"; break;
+                        case 1051: eventLabels[i] = "Empty"; break;
+                        case 1052: eventLabels[i] = "Empty"; break;
+                        case 1053: eventLabels[i] = "Empty"; break;
+                        case 1054: eventLabels[i] = "Empty"; break;
+                        case 1055: eventLabels[i] = "Empty"; break;
+                        case 1056: eventLabels[i] = "Empty"; break;
+                        case 1057: eventLabels[i] = "Empty"; break;
+                        case 1058: eventLabels[i] = "Empty"; break;
+                        case 1059: eventLabels[i] = "Empty"; break;
+                        case 1060: eventLabels[i] = "Empty"; break;
+                        case 1061: eventLabels[i] = "Empty"; break;
+                        case 1062: eventLabels[i] = "Empty"; break;
+                        case 1063: eventLabels[i] = "Empty"; break;
+                        case 1064: eventLabels[i] = "Empty"; break;
+                        case 1065: eventLabels[i] = "Empty"; break;
+                        case 1066: eventLabels[i] = "Empty"; break;
+                        case 1067: eventLabels[i] = "Empty"; break;
+                        case 1068: eventLabels[i] = "Empty"; break;
+                        case 1069: eventLabels[i] = "Empty"; break;
+                        case 1070: eventLabels[i] = "Empty"; break;
+                        case 1071: eventLabels[i] = "Begin Melody Bay Tadpoles"; break;
+                        case 1072: eventLabels[i] = "Melody Bay Loader"; break;
+                        case 1073: eventLabels[i] = "Melody Bay Jump On Tadpoles"; break;
+                        case 1074: eventLabels[i] = "Melody Bay Song Judged"; break;
+                        case 1075: eventLabels[i] = "Toadofsky"; break;
+                        case 1076: eventLabels[i] = "Empty"; break;
+                        case 1077: eventLabels[i] = "Empty"; break;
+                        case 1078: eventLabels[i] = "Melody Bay Final Song"; break;
+                        case 1079: eventLabels[i] = "Melody Bay Song 1 Validator"; break;
+                        case 1080: eventLabels[i] = "Melody Bay Song 2 Validator"; break;
+                        case 1081: eventLabels[i] = "Melody Bay Song 3 Validator"; break;
+                        case 1082: eventLabels[i] = "Melody Bay Song 1 Input"; break;
+                        case 1083: eventLabels[i] = "Melody Bay Song 2 Input"; break;
+                        case 1084: eventLabels[i] = "Melody Bay Song 3 Input"; break;
+                        case 1085: eventLabels[i] = "Melody Bay Jump Animation"; break;
+                        case 1086: eventLabels[i] = "Melody Bay Swim Animation"; break;
+                        case 1087: eventLabels[i] = "Melody Bay Exit Water Animation"; break;
+                        case 1088: eventLabels[i] = "Melody Bay Third Song Hint"; break;
+                        case 1089: eventLabels[i] = "Empty"; break;
+                        case 1090: eventLabels[i] = "Empty"; break;
+                        case 1091: eventLabels[i] = "Empty"; break;
+                        case 1092: eventLabels[i] = "Empty"; break;
+                        case 1093: eventLabels[i] = "Empty"; break;
+                        case 1094: eventLabels[i] = "Empty"; break;
+                        case 1095: eventLabels[i] = "Empty"; break;
+                        case 1096: eventLabels[i] = "Empty"; break;
+                        case 1097: eventLabels[i] = "Empty"; break;
+                        case 1098: eventLabels[i] = "Empty"; break;
+                        case 1099: eventLabels[i] = "Empty"; break;
+                        case 1100: eventLabels[i] = "Empty"; break;
+                        case 1101: eventLabels[i] = "Empty"; break;
+                        case 1102: eventLabels[i] = "Empty"; break;
+                        case 1103: eventLabels[i] = "Empty"; break;
+                        case 1104: eventLabels[i] = "Tadpole Pond Loader"; break;
+                        case 1105: eventLabels[i] = "Tadpole Bridge Summon"; break;
+                        case 1106: eventLabels[i] = "Tadpole Bridge Summon"; break;
+                        case 1107: eventLabels[i] = "Tadpole Bridge Jumping"; break;
+                        case 1108: eventLabels[i] = "Frogfucius Scroll"; break;
+                        case 1109: eventLabels[i] = "Empty"; break;
+                        case 1110: eventLabels[i] = "Empty"; break;
+                        case 1111: eventLabels[i] = "Frogfucius"; break;
+                        case 1112: eventLabels[i] = "Frog Coin Emporium"; break;
+                        case 1113: eventLabels[i] = "Song Hint Tadpole"; break;
+                        case 1114: eventLabels[i] = "Summon Tadpole Shops"; break;
+                        case 1115: eventLabels[i] = "Summon Hint Tadpole"; break;
+                        case 1116: eventLabels[i] = "Juice Bar"; break;
+                        case 1117: eventLabels[i] = "Empty"; break;
+                        case 1118: eventLabels[i] = "Empty"; break;
+                        case 1119: eventLabels[i] = "Seaside Occupied Exterior Loader"; break;
+                        case 1120: eventLabels[i] = "Empty"; break;
+                        case 1121: eventLabels[i] = "Seaside Occupied Inn 1F Loader"; break;
+                        case 1122: eventLabels[i] = "Seaside Occupied Inn 2F Loader"; break;
+                        case 1123: eventLabels[i] = "Seaside Occupied Elders House Loader"; break;
+                        case 1124: eventLabels[i] = "Frog Shop Room Loader"; break;
+                        case 1125: eventLabels[i] = "Seaside Occupied Bomb Shop Loader"; break;
+                        case 1126: eventLabels[i] = "Seaside Occupied Armor Shop Loader"; break;
+                        case 1127: eventLabels[i] = "Seaside Occupied Health Store Loader"; break;
+                        case 1128: eventLabels[i] = "Seaside Occupied Mushroom Boy Shop Loader"; break;
+                        case 1129: eventLabels[i] = "Seaside Occupied Accessory Shop Loader"; break;
+                        case 1130: eventLabels[i] = "Empty"; break;
+                        case 1131: eventLabels[i] = "Empty"; break;
+                        case 1132: eventLabels[i] = "Seaside Occupied Innkeeper"; break;
+                        case 1133: eventLabels[i] = "Seaside Occupied Accessory Shop Occupant"; break;
+                        case 1134: eventLabels[i] = "Fake Elder"; break;
+                        case 1135: eventLabels[i] = "Seaside Occupied Mushroom Boy Shop Occupant 1"; break;
+                        case 1136: eventLabels[i] = "Seaside Occupied Mushroom Boy Shop Occupant 2"; break;
+                        case 1137: eventLabels[i] = "Seaside Occupied Health Store Occupant"; break;
+                        case 1138: eventLabels[i] = "Seaside Occupied Wpn Arm Shop Occupant 1"; break;
+                        case 1139: eventLabels[i] = "Seaside Occupied Wpn Arm Shop Occupant 2"; break;
+                        case 1140: eventLabels[i] = "Seaside Occupied Bomb Shop"; break;
+                        case 1141: eventLabels[i] = "Seaside Occupied Bomb Shop Customer"; break;
+                        case 1142: eventLabels[i] = "Seaside Shed Guard 1"; break;
+                        case 1143: eventLabels[i] = "Seaside Shed Guard 2"; break;
+                        case 1144: eventLabels[i] = "Shed Window"; break;
+                        case 1145: eventLabels[i] = "Seaside Occupied Beach Loader"; break;
+                        case 1146: eventLabels[i] = "Seaside Initiate Boss Fight"; break;
+                        case 1147: eventLabels[i] = "Seaside Initiate Boss Fight Animation"; break;
+                        case 1148: eventLabels[i] = "Frog Shop"; break;
+                        case 1149: eventLabels[i] = "Empty"; break;
+                        case 1150: eventLabels[i] = "Empty"; break;
+                        case 1151: eventLabels[i] = "Empty"; break;
+                        case 1152: eventLabels[i] = "Empty"; break;
+                        case 1153: eventLabels[i] = "Seaside Liberated Inn 1F Loader"; break;
+                        case 1154: eventLabels[i] = "Empty"; break;
+                        case 1155: eventLabels[i] = "Seaside Liberated Elders House Loader"; break;
+                        case 1156: eventLabels[i] = "Empty"; break;
+                        case 1157: eventLabels[i] = "Empty"; break;
+                        case 1158: eventLabels[i] = "Seaside Liberated Wpn Arm Shop Loader"; break;
+                        case 1159: eventLabels[i] = "Seaside Liberated Health Store Loader"; break;
+                        case 1160: eventLabels[i] = "Seaside Liberated Mushroom Boy Loader"; break;
+                        case 1161: eventLabels[i] = "Seaside Liberated Accessory Shop Loader"; break;
+                        case 1162: eventLabels[i] = "Seaside Liberated Shed Loader"; break;
+                        case 1163: eventLabels[i] = "Seaside Liberated Beach"; break;
+                        case 1164: eventLabels[i] = "Empty"; break;
+                        case 1165: eventLabels[i] = "Seaside Liberated Beach Letter"; break;
+                        case 1166: eventLabels[i] = "Shed Key Door"; break;
+                        case 1167: eventLabels[i] = "Seaside Elder"; break;
+                        case 1168: eventLabels[i] = "Seaside Liberated Innkeeper"; break;
+                        case 1169: eventLabels[i] = "Open Lands End If Gated By Elder"; break;
+                        case 1170: eventLabels[i] = "Seaside Health Food Shop"; break;
+                        case 1171: eventLabels[i] = "Seaside Accessory Shop"; break;
+                        case 1172: eventLabels[i] = "Mushroom Boy"; break;
+                        case 1173: eventLabels[i] = "Seaside Weapon Shop"; break;
+                        case 1174: eventLabels[i] = "Seaside Armor Shop"; break;
+                        case 1175: eventLabels[i] = "Empty"; break;
+                        case 1176: eventLabels[i] = "Empty"; break;
+                        case 1177: eventLabels[i] = "Empty"; break;
+                        case 1178: eventLabels[i] = "Seaside Grant Shed Item"; break;
+                        case 1179: eventLabels[i] = "Juice Bar No Card"; break;
+                        case 1180: eventLabels[i] = "Juice Bar Alto Card"; break;
+                        case 1181: eventLabels[i] = "Juice Bar Tenor Card"; break;
+                        case 1182: eventLabels[i] = "Juice Bar Soprano Card"; break;
+                        case 1183: eventLabels[i] = "Volcano Item Shop"; break;
+                        case 1184: eventLabels[i] = "Volcano Armor Shop"; break;
+                        case 1185: eventLabels[i] = "Toad Shop"; break;
+                        case 1186: eventLabels[i] = "Henchman Battle Pack Selector"; break;
+                        case 1187: eventLabels[i] = "Henchman Battle Pack Selector"; break;
+                        case 1188: eventLabels[i] = "Henchman Battle Pack Selector"; break;
+                        case 1189: eventLabels[i] = "Henchman Battle Pack Selector"; break;
+                        case 1190: eventLabels[i] = "Henchman Battle Pack Selector"; break;
+                        case 1191: eventLabels[i] = "Ending Credits Cliff Shuffled Npc Animation Loader"; break;
+                        case 1192: eventLabels[i] = "Ending Credits Keep Shuffled Npc Animation Loader"; break;
+                        case 1193: eventLabels[i] = "Ending Credits Yoster Shuffled Npc Animation Loader"; break;
+                        case 1194: eventLabels[i] = "Mushroom Way Boss Unlocks"; break;
+                        case 1195: eventLabels[i] = "Bandits Way Boss Unlocks"; break;
+                        case 1196: eventLabels[i] = "Mushroom Kingdom Boss Unlocks"; break;
+                        case 1197: eventLabels[i] = "Kero Sewer Boss Unlocks"; break;
+                        case 1198: eventLabels[i] = "Forest Maze Boss Unlocks"; break;
+                        case 1199: eventLabels[i] = "Outer Mnes Boss Unlocks"; break;
+                        case 1200: eventLabels[i] = "Inner Mines Boss Unlocks"; break;
+                        case 1201: eventLabels[i] = "Tower Curtain Boss Unlocks"; break;
+                        case 1202: eventLabels[i] = "Postgame Tower Curtain Boss Unlocks"; break;
+                        case 1203: eventLabels[i] = "Tower Balcony Boss Unlocks"; break;
+                        case 1204: eventLabels[i] = "Chapel Boss Unlocks"; break;
+                        case 1205: eventLabels[i] = "Postgame Chapel Boss Unlocks"; break;
+                        case 1206: eventLabels[i] = "Seaside Boss Unlocks"; break;
+                        case 1207: eventLabels[i] = "Ship Mid Boss Unlocks"; break;
+                        case 1208: eventLabels[i] = "Ship End Boss Unlocks"; break;
+                        case 1209: eventLabels[i] = "Postgame Ship End Boss Unlocks"; break;
+                        case 1210: eventLabels[i] = "Cloud Boss Unlocks"; break;
+                        case 1211: eventLabels[i] = "Temple Boss Unlocks"; break;
+                        case 1212: eventLabels[i] = "Postgame Temple Boss Unlocks"; break;
+                        case 1213: eventLabels[i] = "Dojo 1 Boss Unlocks"; break;
+                        case 1214: eventLabels[i] = "Dojo 2 Boss Unlocks"; break;
+                        case 1215: eventLabels[i] = "Dojo 3 Boss Unlocks"; break;
+                        case 1216: eventLabels[i] = "Dojo 4 Boss Unlocks"; break;
+                        case 1217: eventLabels[i] = "Dojo 5 Boss Unlocks"; break;
+                        case 1218: eventLabels[i] = "Monstro Sealed Boss Unlocks"; break;
+                        case 1219: eventLabels[i] = "Postgame Monstro Sealed Boss Unlocks"; break;
+                        case 1220: eventLabels[i] = "Starting Character 1"; break;
+                        case 1221: eventLabels[i] = "Starting Character 2"; break;
+                        case 1222: eventLabels[i] = "Starting Character 3"; break;
+                        case 1223: eventLabels[i] = "Starting Character 4"; break;
+                        case 1224: eventLabels[i] = "Starting Character 5"; break;
+                        case 1225: eventLabels[i] = "Mushroom Way Character"; break;
+                        case 1226: eventLabels[i] = "Forest Maze Character"; break;
+                        case 1227: eventLabels[i] = "Moleville Character"; break;
+                        case 1228: eventLabels[i] = "Marrymore Character"; break;
+                        case 1229: eventLabels[i] = "Bean Valley Boss Unlocks"; break;
+                        case 1230: eventLabels[i] = "Statue Boss Unlocks"; break;
+                        case 1231: eventLabels[i] = "Egg Boss Unlocks"; break;
+                        case 1232: eventLabels[i] = "Nimbus Boss Unlocks"; break;
+                        case 1233: eventLabels[i] = "Volcano Mid Boss Unlocks"; break;
+                        case 1234: eventLabels[i] = "Volcano Boss Unlocks"; break;
+                        case 1235: eventLabels[i] = "Obstacle Course Boss Unlocks"; break;
+                        case 1236: eventLabels[i] = "Keep 1 Boss Unlocks"; break;
+                        case 1237: eventLabels[i] = "Keep Chandelier Boss Unlocks"; break;
+                        case 1238: eventLabels[i] = "Keep Exit Boss Unlocks"; break;
+                        case 1239: eventLabels[i] = "Outer Factory 1 Boss Unlocks"; break;
+                        case 1240: eventLabels[i] = "Outer Factory 2 Boss Unlocks"; break;
+                        case 1241: eventLabels[i] = "Inner Factory 1 Boss Unlocks"; break;
+                        case 1242: eventLabels[i] = "Inner Factory 2 Boss Unlocks"; break;
+                        case 1243: eventLabels[i] = "Inner Factory 3 Boss Unlocks"; break;
+                        case 1244: eventLabels[i] = "Inner Factory 4 Boss Unlocks"; break;
+                        case 1245: eventLabels[i] = "Inner Factory 5 Boss Unlocks"; break;
+                        case 1246: eventLabels[i] = "Invisible Grant 1"; break;
+                        case 1247: eventLabels[i] = "Invisible Grant 2"; break;
+                        case 1248: eventLabels[i] = "Invisible Grant 3"; break;
+                        case 1249: eventLabels[i] = "Mimic 1 Boss Unlocks"; break;
+                        case 1250: eventLabels[i] = "Mimic 2 Boss Unlocks"; break;
+                        case 1251: eventLabels[i] = "Mimic 3 Boss Unlocks"; break;
+                        case 1252: eventLabels[i] = "Flag Specific Housekeeping Game Start"; break;
+                        case 1253: eventLabels[i] = "Postgame Mines Boss Unlocks"; break;
+                        case 1254: eventLabels[i] = "Unlock Sewer By Rfc"; break;
+                        case 1255: eventLabels[i] = "Unlock Forest By Pie"; break;
+                        case 1256: eventLabels[i] = "Unlock Moleville If Gated By Boshi"; break;
+                        case 1257: eventLabels[i] = "Empty"; break;
+                        case 1258: eventLabels[i] = "Empty"; break;
+                        case 1259: eventLabels[i] = "Empty"; break;
+                        case 1260: eventLabels[i] = "Empty"; break;
+                        case 1261: eventLabels[i] = "Empty"; break;
+                        case 1262: eventLabels[i] = "Empty"; break;
+                        case 1263: eventLabels[i] = "Empty"; break;
+                        case 1264: eventLabels[i] = "Empty"; break;
+                        case 1265: eventLabels[i] = "Empty"; break;
+                        case 1266: eventLabels[i] = "Empty"; break;
+                        case 1267: eventLabels[i] = "Empty"; break;
+                        case 1268: eventLabels[i] = "Empty"; break;
+                        case 1269: eventLabels[i] = "Empty"; break;
+                        case 1270: eventLabels[i] = "Empty"; break;
+                        case 1271: eventLabels[i] = "Empty"; break;
+                        case 1272: eventLabels[i] = "Empty"; break;
+                        case 1273: eventLabels[i] = "Empty"; break;
+                        case 1274: eventLabels[i] = "Ship Boss Room Rightmost Henchman"; break;
+                        case 1275: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Henchman"; break;
+                        case 1276: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Henchman"; break;
+                        case 1277: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Henchman"; break;
+                        case 1278: eventLabels[i] = "Mushroom Kingdom Occupied Exterior Henchman"; break;
+                        case 1279: eventLabels[i] = "Empty"; break;
+                        case 1280: eventLabels[i] = "Empty"; break;
+                        case 1281: eventLabels[i] = "Empty"; break;
+                        case 1282: eventLabels[i] = "Tower Balcony Loader After Marrymore"; break;
+                        case 1283: eventLabels[i] = "Tower Balcony Loader Before Marrymore"; break;
+                        case 1284: eventLabels[i] = "Empty"; break;
+                        case 1285: eventLabels[i] = "Empty"; break;
+                        case 1286: eventLabels[i] = "Empty"; break;
+                        case 1287: eventLabels[i] = "Empty"; break;
+                        case 1288: eventLabels[i] = "Empty"; break;
+                        case 1289: eventLabels[i] = "Empty"; break;
+                        case 1290: eventLabels[i] = "Empty"; break;
+                        case 1291: eventLabels[i] = "Empty"; break;
+                        case 1292: eventLabels[i] = "Empty"; break;
+                        case 1293: eventLabels[i] = "Collect Freestanding Small Coin"; break;
+                        case 1294: eventLabels[i] = "Collect Freestanding Small Frog Coin"; break;
+                        case 1295: eventLabels[i] = "Tower Checkerboard Room Loader"; break;
+                        case 1296: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1297: eventLabels[i] = "Empty"; break;
+                        case 1298: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1299: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1300: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1301: eventLabels[i] = "Empty"; break;
+                        case 1302: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1303: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1304: eventLabels[i] = "Empty"; break;
+                        case 1305: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1306: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1307: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1308: eventLabels[i] = "Tower Checkerboard Room Fireball Launcher"; break;
+                        case 1309: eventLabels[i] = "Empty"; break;
+                        case 1310: eventLabels[i] = "Tower Checkerboard Collect Key Item"; break;
+                        case 1311: eventLabels[i] = "Tower Checkerboard Locked Door"; break;
+                        case 1312: eventLabels[i] = "Tower Lobby Loader"; break;
+                        case 1313: eventLabels[i] = "Empty"; break;
+                        case 1314: eventLabels[i] = "Tower Boss 1 Hides Behind Doorway In Lobby 1"; break;
+                        case 1315: eventLabels[i] = "Tower Boss 1 Hides Behind Doorway In Lobby 2"; break;
+                        case 1316: eventLabels[i] = "Lobby Portrait 1"; break;
+                        case 1317: eventLabels[i] = "Lobby Portrait 2"; break;
+                        case 1318: eventLabels[i] = "Lobby Portrait 3"; break;
+                        case 1319: eventLabels[i] = "Lobby Portrait 4"; break;
+                        case 1320: eventLabels[i] = "Lobby Portrait 5"; break;
+                        case 1321: eventLabels[i] = "Lobby Portrait 6"; break;
+                        case 1322: eventLabels[i] = "Nimbus 5 Door Chest Liberated"; break;
+                        case 1323: eventLabels[i] = "Tower Lobby Henchman"; break;
+                        case 1324: eventLabels[i] = "Empty"; break;
+                        case 1325: eventLabels[i] = "Empty"; break;
+                        case 1326: eventLabels[i] = "Empty"; break;
+                        case 1327: eventLabels[i] = "Empty"; break;
+                        case 1328: eventLabels[i] = "Tower Exterior Loader"; break;
+                        case 1329: eventLabels[i] = "Hill Unlocks"; break;
+                        case 1330: eventLabels[i] = "Tower Exterior Door"; break;
+                        case 1331: eventLabels[i] = "Tower Break Down Door"; break;
+                        case 1332: eventLabels[i] = "Portrait Game 1"; break;
+                        case 1333: eventLabels[i] = "Portrait Game 2"; break;
+                        case 1334: eventLabels[i] = "Portrait Game 3"; break;
+                        case 1335: eventLabels[i] = "Portrait Game 4"; break;
+                        case 1336: eventLabels[i] = "Portrait Game 5"; break;
+                        case 1337: eventLabels[i] = "Portrait Game 6"; break;
+                        case 1338: eventLabels[i] = "Portrait Game Incorrect"; break;
+                        case 1339: eventLabels[i] = "Portrait Game Room Loader"; break;
+                        case 1340: eventLabels[i] = "Portrait Game Room Locked Door"; break;
+                        case 1341: eventLabels[i] = "Elder Key Prize Room Loader"; break;
+                        case 1342: eventLabels[i] = "Elder Key Prize Granter"; break;
+                        case 1343: eventLabels[i] = "Portrait Game Instructions"; break;
+                        case 1344: eventLabels[i] = "Tower Henchman 2 Room Loader"; break;
+                        case 1345: eventLabels[i] = "Empty"; break;
+                        case 1346: eventLabels[i] = "Tower Henchman 2"; break;
+                        case 1347: eventLabels[i] = "Tower Henchman 2 Room Hidden Item"; break;
+                        case 1348: eventLabels[i] = "Empty"; break;
+                        case 1349: eventLabels[i] = "Empty"; break;
+                        case 1350: eventLabels[i] = "Empty"; break;
+                        case 1351: eventLabels[i] = "Empty"; break;
+                        case 1352: eventLabels[i] = "Empty"; break;
+                        case 1353: eventLabels[i] = "Tower Checkerboard Room Locked Door"; break;
+                        case 1354: eventLabels[i] = "Empty"; break;
+                        case 1355: eventLabels[i] = "Empty"; break;
+                        case 1356: eventLabels[i] = "Empty"; break;
+                        case 1357: eventLabels[i] = "Empty"; break;
+                        case 1358: eventLabels[i] = "Curtain Game Begins Npcs Walk Into Room"; break;
+                        case 1359: eventLabels[i] = "Curtain Game Room Loader"; break;
+                        case 1360: eventLabels[i] = "Curtain 1"; break;
+                        case 1361: eventLabels[i] = "Curtain 2"; break;
+                        case 1362: eventLabels[i] = "Curtain 3"; break;
+                        case 1363: eventLabels[i] = "Curtain 4"; break;
+                        case 1364: eventLabels[i] = "Curtain Room Exit To Balcony"; break;
+                        case 1365: eventLabels[i] = "Curtain Game Business Logic 1"; break;
+                        case 1366: eventLabels[i] = "Curtain Game Business Logic 2"; break;
+                        case 1367: eventLabels[i] = "Curtain Game Success 1"; break;
+                        case 1368: eventLabels[i] = "Curtain Game Success 2"; break;
+                        case 1369: eventLabels[i] = "Curtain Game Success Failure Fight Boss"; break;
+                        case 1370: eventLabels[i] = "Curtain Game Success Failure General"; break;
+                        case 1371: eventLabels[i] = "Unlock Marrymore If Gated By Tower Balcony Fight"; break;
+                        case 1372: eventLabels[i] = "Toad Voucher Grant"; break;
+                        case 1373: eventLabels[i] = "Empty"; break;
+                        case 1374: eventLabels[i] = "Empty"; break;
+                        case 1375: eventLabels[i] = "Empty"; break;
+                        case 1376: eventLabels[i] = "Empty"; break;
+                        case 1377: eventLabels[i] = "Empty"; break;
+                        case 1378: eventLabels[i] = "Empty"; break;
+                        case 1379: eventLabels[i] = "Empty"; break;
+                        case 1380: eventLabels[i] = "Empty"; break;
+                        case 1381: eventLabels[i] = "Empty"; break;
+                        case 1382: eventLabels[i] = "Empty"; break;
+                        case 1383: eventLabels[i] = "Empty"; break;
+                        case 1384: eventLabels[i] = "Empty"; break;
+                        case 1385: eventLabels[i] = "Vista Hill Loader"; break;
+                        case 1386: eventLabels[i] = "Vista Hill Loader Continued"; break;
+                        case 1387: eventLabels[i] = "Empty"; break;
+                        case 1388: eventLabels[i] = "Empty"; break;
+                        case 1389: eventLabels[i] = "Empty"; break;
+                        case 1390: eventLabels[i] = "Empty"; break;
+                        case 1391: eventLabels[i] = "Empty"; break;
+                        case 1392: eventLabels[i] = "Marios House Interior Loader"; break;
+                        case 1393: eventLabels[i] = "Empty"; break;
+                        case 1394: eventLabels[i] = "Four Digit Coin Value Handler"; break;
+                        case 1395: eventLabels[i] = "Marios House Lamp"; break;
+                        case 1396: eventLabels[i] = "Empty"; break;
+                        case 1397: eventLabels[i] = "Empty"; break;
+                        case 1398: eventLabels[i] = "Empty"; break;
+                        case 1399: eventLabels[i] = "Empty"; break;
+                        case 1400: eventLabels[i] = "Empty"; break;
+                        case 1401: eventLabels[i] = "Empty"; break;
+                        case 1402: eventLabels[i] = "Empty"; break;
+                        case 1403: eventLabels[i] = "Empty"; break;
+                        case 1404: eventLabels[i] = "Empty"; break;
+                        case 1405: eventLabels[i] = "Empty"; break;
+                        case 1406: eventLabels[i] = "Marios Pad Open Door"; break;
+                        case 1407: eventLabels[i] = "Marios Pad Close Door"; break;
+                        case 1408: eventLabels[i] = "Marios Pad Exterior Loader"; break;
+                        case 1409: eventLabels[i] = "Empty"; break;
+                        case 1410: eventLabels[i] = "Empty"; break;
+                        case 1411: eventLabels[i] = "Empty"; break;
+                        case 1412: eventLabels[i] = "Empty"; break;
+                        case 1413: eventLabels[i] = "Empty"; break;
+                        case 1414: eventLabels[i] = "Empty"; break;
+                        case 1415: eventLabels[i] = "Empty"; break;
+                        case 1416: eventLabels[i] = "Empty"; break;
+                        case 1417: eventLabels[i] = "Empty"; break;
+                        case 1418: eventLabels[i] = "Empty"; break;
+                        case 1419: eventLabels[i] = "Mushroom Way 1 Exit To World Map"; break;
+                        case 1420: eventLabels[i] = "Empty"; break;
+                        case 1421: eventLabels[i] = "Empty"; break;
+                        case 1422: eventLabels[i] = "Rescue Toad Mushroom Way 2"; break;
+                        case 1423: eventLabels[i] = "Mushroom Way 2 Loader"; break;
+                        case 1424: eventLabels[i] = "Mushroom Way 2 Lone Troopa"; break;
+                        case 1425: eventLabels[i] = "Summon Left Goomba In Mushroom Way 2"; break;
+                        case 1426: eventLabels[i] = "Summon Right Goomba In Mushroom Way 2"; break;
+                        case 1427: eventLabels[i] = "Mushroom Way 1 Loader"; break;
+                        case 1428: eventLabels[i] = "Rescue Toad Mushroom Way 1"; break;
+                        case 1429: eventLabels[i] = "Summon Jumping Goomba Mushroom Way 2"; break;
+                        case 1430: eventLabels[i] = "Mushroom Way 2 Spinning Flower"; break;
+                        case 1431: eventLabels[i] = "Summon Middle Goomba In Mushroom Way 2"; break;
+                        case 1432: eventLabels[i] = "Rescue Toad Extended"; break;
+                        case 1433: eventLabels[i] = "Clone Reserved"; break;
+                        case 1434: eventLabels[i] = "Clone Reserved"; break;
+                        case 1435: eventLabels[i] = "Clone Reserved"; break;
+                        case 1436: eventLabels[i] = "Clone Reserved"; break;
+                        case 1437: eventLabels[i] = "Clone Reserved"; break;
+                        case 1438: eventLabels[i] = "Clone Reserved"; break;
+                        case 1439: eventLabels[i] = "Clone Reserved"; break;
+                        case 1440: eventLabels[i] = "Clone Reserved"; break;
+                        case 1441: eventLabels[i] = "Clone Reserved"; break;
+                        case 1442: eventLabels[i] = "Clone Reserved"; break;
+                        case 1443: eventLabels[i] = "Clone Reserved"; break;
+                        case 1444: eventLabels[i] = "Clone Reserved"; break;
+                        case 1445: eventLabels[i] = "Clone Reserved"; break;
+                        case 1446: eventLabels[i] = "Clone Reserved"; break;
+                        case 1447: eventLabels[i] = "Clone Reserved"; break;
+                        case 1448: eventLabels[i] = "Clone Reserved"; break;
+                        case 1449: eventLabels[i] = "Clone Reserved"; break;
+                        case 1450: eventLabels[i] = "Clone Reserved"; break;
+                        case 1451: eventLabels[i] = "Clone Reserved"; break;
+                        case 1452: eventLabels[i] = "Clone Reserved"; break;
+                        case 1453: eventLabels[i] = "Clone Reserved"; break;
+                        case 1454: eventLabels[i] = "Clone Reserved"; break;
+                        case 1455: eventLabels[i] = "Clone Reserved"; break;
+                        case 1456: eventLabels[i] = "Clone Reserved"; break;
+                        case 1457: eventLabels[i] = "Clone Reserved"; break;
+                        case 1458: eventLabels[i] = "Clone Reserved"; break;
+                        case 1459: eventLabels[i] = "Clone Reserved"; break;
+                        case 1460: eventLabels[i] = "Clone Reserved"; break;
+                        case 1461: eventLabels[i] = "Clone Reserved"; break;
+                        case 1462: eventLabels[i] = "Clone Reserved"; break;
+                        case 1463: eventLabels[i] = "Clone Reserved"; break;
+                        case 1464: eventLabels[i] = "Clone Reserved"; break;
+                        case 1465: eventLabels[i] = "Clone Reserved"; break;
+                        case 1466: eventLabels[i] = "Clone Reserved"; break;
+                        case 1467: eventLabels[i] = "Clone Reserved"; break;
+                        case 1468: eventLabels[i] = "Clone Reserved"; break;
+                        case 1469: eventLabels[i] = "Clone Reserved"; break;
+                        case 1470: eventLabels[i] = "Clone Reserved"; break;
+                        case 1471: eventLabels[i] = "Clone Reserved"; break;
+                        case 1472: eventLabels[i] = "Clone Reserved"; break;
+                        case 1473: eventLabels[i] = "Clone Reserved"; break;
+                        case 1474: eventLabels[i] = "Clone Reserved"; break;
+                        case 1475: eventLabels[i] = "Clone Reserved"; break;
+                        case 1476: eventLabels[i] = "Clone Reserved"; break;
+                        case 1477: eventLabels[i] = "Clone Reserved"; break;
+                        case 1478: eventLabels[i] = "Clone Reserved"; break;
+                        case 1479: eventLabels[i] = "Clone Reserved"; break;
+                        case 1480: eventLabels[i] = "Clone Reserved"; break;
+                        case 1481: eventLabels[i] = "Clone Reserved"; break;
+                        case 1482: eventLabels[i] = "Clone Reserved"; break;
+                        case 1483: eventLabels[i] = "Clone Reserved"; break;
+                        case 1484: eventLabels[i] = "Clone Reserved"; break;
+                        case 1485: eventLabels[i] = "Clone Reserved"; break;
+                        case 1486: eventLabels[i] = "Clone Reserved"; break;
+                        case 1487: eventLabels[i] = "Clone Reserved"; break;
+                        case 1488: eventLabels[i] = "Clone Reserved"; break;
+                        case 1489: eventLabels[i] = "Clone Reserved"; break;
+                        case 1490: eventLabels[i] = "Clone Reserved"; break;
+                        case 1491: eventLabels[i] = "Clone Reserved"; break;
+                        case 1492: eventLabels[i] = "Clone Reserved"; break;
+                        case 1493: eventLabels[i] = "Clone Reserved"; break;
+                        case 1494: eventLabels[i] = "Clone Reserved"; break;
+                        case 1495: eventLabels[i] = "Clone Reserved"; break;
+                        case 1496: eventLabels[i] = "Clone Reserved"; break;
+                        case 1497: eventLabels[i] = "Clone Reserved"; break;
+                        case 1498: eventLabels[i] = "Clone Reserved"; break;
+                        case 1499: eventLabels[i] = "Clone Reserved"; break;
+                        case 1500: eventLabels[i] = "Clone Reserved"; break;
+                        case 1501: eventLabels[i] = "Clone Reserved"; break;
+                        case 1502: eventLabels[i] = "Clone Reserved"; break;
+                        case 1503: eventLabels[i] = "Clone Reserved"; break;
+                        case 1504: eventLabels[i] = "Clone Reserved"; break;
+                        case 1505: eventLabels[i] = "Clone Reserved"; break;
+                        case 1506: eventLabels[i] = "Clone Reserved"; break;
+                        case 1507: eventLabels[i] = "Clone Reserved"; break;
+                        case 1508: eventLabels[i] = "Clone Reserved"; break;
+                        case 1509: eventLabels[i] = "Clone Reserved"; break;
+                        case 1510: eventLabels[i] = "Clone Reserved"; break;
+                        case 1511: eventLabels[i] = "Clone Reserved"; break;
+                        case 1512: eventLabels[i] = "Clone Reserved"; break;
+                        case 1513: eventLabels[i] = "Clone Reserved"; break;
+                        case 1514: eventLabels[i] = "Clone Reserved"; break;
+                        case 1515: eventLabels[i] = "Clone Reserved"; break;
+                        case 1516: eventLabels[i] = "Clone Reserved"; break;
+                        case 1517: eventLabels[i] = "Clone Reserved"; break;
+                        case 1518: eventLabels[i] = "Clone Reserved"; break;
+                        case 1519: eventLabels[i] = "Clone Reserved"; break;
+                        case 1520: eventLabels[i] = "Clone Reserved"; break;
+                        case 1521: eventLabels[i] = "Clone Reserved"; break;
+                        case 1522: eventLabels[i] = "Clone Reserved"; break;
+                        case 1523: eventLabels[i] = "Clone Reserved"; break;
+                        case 1524: eventLabels[i] = "Clone Reserved"; break;
+                        case 1525: eventLabels[i] = "Clone Reserved"; break;
+                        case 1526: eventLabels[i] = "Clone Reserved"; break;
+                        case 1527: eventLabels[i] = "Clone Reserved"; break;
+                        case 1528: eventLabels[i] = "Clone Reserved"; break;
+                        case 1529: eventLabels[i] = "Clone Reserved"; break;
+                        case 1530: eventLabels[i] = "Clone Reserved"; break;
+                        case 1531: eventLabels[i] = "Clone Reserved"; break;
+                        case 1532: eventLabels[i] = "Clone Reserved"; break;
+                        case 1533: eventLabels[i] = "Clone Reserved"; break;
+                        case 1534: eventLabels[i] = "Clone Reserved"; break;
+                        case 1535: eventLabels[i] = "Clone Reserved"; break;
+                        case 1536: eventLabels[i] = "Empty"; break;
+                        case 1537: eventLabels[i] = "Spinning Flower Core Logic"; break;
+                        case 1538: eventLabels[i] = "Bandits Way Star Chest Camera And Dogs"; break;
+                        case 1539: eventLabels[i] = "Empty"; break;
+                        case 1540: eventLabels[i] = "Unknown"; break;
+                        case 1541: eventLabels[i] = "Unknown"; break;
+                        case 1542: eventLabels[i] = "Forest Maze Pipe"; break;
+                        case 1543: eventLabels[i] = "Chest Camera Shift"; break;
+                        case 1544: eventLabels[i] = "Sand Whirlpool"; break;
+                        case 1545: eventLabels[i] = "Sand Whirlpool"; break;
+                        case 1546: eventLabels[i] = "Lands End First Two Chests"; break;
+                        case 1547: eventLabels[i] = "Lands End Third Chest"; break;
+                        case 1548: eventLabels[i] = "Empty"; break;
+                        case 1549: eventLabels[i] = "Sky Bridge Donut Lift"; break;
+                        case 1550: eventLabels[i] = "Clear Bucket Warp Bit"; break;
+                        case 1551: eventLabels[i] = "Bank 1F Return Event"; break;
+                        case 1552: eventLabels[i] = "Forest Tree Trunk Area Loader"; break;
+                        case 1553: eventLabels[i] = "Forest Tree Trunk Area Loader Contd"; break;
+                        case 1554: eventLabels[i] = "Forest First Wiggler Room Loader"; break;
+                        case 1555: eventLabels[i] = "Forest First Wiggler Room Loader Contd"; break;
+                        case 1556: eventLabels[i] = "Wiggler Jump"; break;
+                        case 1557: eventLabels[i] = "Forest Maze Past Trunk Area Room Loader"; break;
+                        case 1558: eventLabels[i] = "Lands End Spinny Flower 1"; break;
+                        case 1559: eventLabels[i] = "Lands End Spinny Flower 2"; break;
+                        case 1560: eventLabels[i] = "Lands End Spinny Flower 3"; break;
+                        case 1561: eventLabels[i] = "Lands End Geckit Cannon Room Loader"; break;
+                        case 1562: eventLabels[i] = "Lands End Cannon"; break;
+                        case 1563: eventLabels[i] = "Lands End Mario Oob"; break;
+                        case 1564: eventLabels[i] = "Lands End Cannon Contd"; break;
+                        case 1565: eventLabels[i] = "Empty"; break;
+                        case 1566: eventLabels[i] = "Lands End Dog Pit"; break;
+                        case 1567: eventLabels[i] = "Lands End 2 Loader"; break;
+                        case 1568: eventLabels[i] = "Midas River Begin Barrel Section"; break;
+                        case 1569: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1570: eventLabels[i] = "Midas River Fish"; break;
+                        case 1571: eventLabels[i] = "Midas River Barrel Section Business Logic"; break;
+                        case 1572: eventLabels[i] = "Midas River Coin"; break;
+                        case 1573: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1574: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1575: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1576: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1577: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1578: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1579: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1580: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1581: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1582: eventLabels[i] = "Lands End Trampoline To Sewer"; break;
+                        case 1583: eventLabels[i] = "Lands End Underground Trampoline To Desert"; break;
+                        case 1584: eventLabels[i] = "Temple Final Room Loader"; break;
+                        case 1585: eventLabels[i] = "Midas River Barrel Subroutine"; break;
+                        case 1586: eventLabels[i] = "Midas River Barrel Fish Movement"; break;
+                        case 1587: eventLabels[i] = "Bandits Way 4 Right Chest"; break;
+                        case 1588: eventLabels[i] = "Lands End Grotto Chest"; break;
+                        case 1589: eventLabels[i] = "Lands End Grotto Trampoline To Surface"; break;
+                        case 1590: eventLabels[i] = "Sewer Pipe To Lands End Subroutine"; break;
+                        case 1591: eventLabels[i] = "Lands End Grotto Barrel Kick"; break;
+                        case 1592: eventLabels[i] = "Belome Statue"; break;
+                        case 1593: eventLabels[i] = "Empty"; break;
+                        case 1594: eventLabels[i] = "Empty"; break;
+                        case 1595: eventLabels[i] = "Empty"; break;
+                        case 1596: eventLabels[i] = "Empty"; break;
+                        case 1597: eventLabels[i] = "Empty"; break;
+                        case 1598: eventLabels[i] = "Empty"; break;
+                        case 1599: eventLabels[i] = "Empty"; break;
+                        case 1600: eventLabels[i] = "Empty"; break;
+                        case 1601: eventLabels[i] = "Lands End 1St Room Exit To World Map"; break;
+                        case 1602: eventLabels[i] = "Exp Star Subroutine Cancel Npc Event Do Not Remove From Level"; break;
+                        case 1603: eventLabels[i] = "Exp Star Subroutine Cancel Tile Event"; break;
+                        case 1604: eventLabels[i] = "Exp Star Subroutine Cancel Npc Event Remove From Level"; break;
+                        case 1605: eventLabels[i] = "Tower Exterior Cancel Exp Star"; break;
+                        case 1606: eventLabels[i] = "Empty"; break;
+                        case 1607: eventLabels[i] = "Empty"; break;
+                        case 1608: eventLabels[i] = "Empty"; break;
+                        case 1609: eventLabels[i] = "Empty"; break;
+                        case 1610: eventLabels[i] = "Empty"; break;
+                        case 1611: eventLabels[i] = "Empty"; break;
+                        case 1612: eventLabels[i] = "Summon Geckits In Cannon Room"; break;
+                        case 1613: eventLabels[i] = "Empty"; break;
+                        case 1614: eventLabels[i] = "Moleville Swap Shop Loader"; break;
+                        case 1615: eventLabels[i] = "Moleville Swap Shop Tutorial"; break;
+                        case 1616: eventLabels[i] = "Moleville Inn Loader"; break;
+                        case 1617: eventLabels[i] = "Moleville Occupied Pa Mole In House"; break;
+                        case 1618: eventLabels[i] = "Empty"; break;
+                        case 1619: eventLabels[i] = "Occupied Moleville Exterior Npc Trigger Cutscene"; break;
+                        case 1620: eventLabels[i] = "Occupied Moleville Exterior Npc At Mtn Base"; break;
+                        case 1621: eventLabels[i] = "Occupied Moleville Exterior Npc At Mtn Top"; break;
+                        case 1622: eventLabels[i] = "Bucket Warp"; break;
+                        case 1623: eventLabels[i] = "Belome Fortune Brick"; break;
+                        case 1624: eventLabels[i] = "Moleville Shop"; break;
+                        case 1625: eventLabels[i] = "Moleville Tower Unlock Condition Hint"; break;
+                        case 1626: eventLabels[i] = "Moleville Carbo Cookie Trader"; break;
+                        case 1627: eventLabels[i] = "Dyna House Loader"; break;
+                        case 1628: eventLabels[i] = "Moleville Inn Girl"; break;
+                        case 1629: eventLabels[i] = "Ma Mole"; break;
+                        case 1630: eventLabels[i] = "Moleville Liberated Pa Mole In House"; break;
+                        case 1631: eventLabels[i] = "Dyna In House"; break;
+                        case 1632: eventLabels[i] = "Moleville Minecart Freeplay Ending Landing"; break;
+                        case 1633: eventLabels[i] = "Moleville Inn"; break;
+                        case 1634: eventLabels[i] = "Fireworks House Left Girl"; break;
+                        case 1635: eventLabels[i] = "Fireworks House Right Girl"; break;
+                        case 1636: eventLabels[i] = "Moleville Swap Shop Logic"; break;
+                        case 1637: eventLabels[i] = "Moleville Swap Shop Girl"; break;
+                        case 1638: eventLabels[i] = "Moleville Liberated Npc At Mtn Base 1"; break;
+                        case 1639: eventLabels[i] = "Moleville Liberated Npc At Mtn Base 2"; break;
+                        case 1640: eventLabels[i] = "Initiate Minecart Freeplay"; break;
+                        case 1641: eventLabels[i] = "Tells You Minecart Pb"; break;
+                        case 1642: eventLabels[i] = "Booster Pass Secret Hint Guy"; break;
+                        case 1643: eventLabels[i] = "Purtend Store"; break;
+                        case 1644: eventLabels[i] = "Moleville Occupied Exterior Loader"; break;
+                        case 1645: eventLabels[i] = "Bucket Girl"; break;
+                        case 1646: eventLabels[i] = "Moleville Song Hint Girl"; break;
+                        case 1647: eventLabels[i] = "Moleville Minecart Freeplay Entrance"; break;
+                        case 1648: eventLabels[i] = "Minecart Ending"; break;
+                        case 1649: eventLabels[i] = "Moleville Liberated Exterior Loader"; break;
+                        case 1650: eventLabels[i] = "Moleville Liberated Exterior Loader Contd"; break;
+                        case 1651: eventLabels[i] = "Mario Crash Thru Moleville Roof"; break;
+                        case 1652: eventLabels[i] = "Empty"; break;
+                        case 1653: eventLabels[i] = "Exit Barrel Count Timer"; break;
+                        case 1654: eventLabels[i] = "Empty"; break;
+                        case 1655: eventLabels[i] = "Empty"; break;
+                        case 1656: eventLabels[i] = "Empty"; break;
+                        case 1657: eventLabels[i] = "Empty"; break;
+                        case 1658: eventLabels[i] = "Empty"; break;
+                        case 1659: eventLabels[i] = "Empty"; break;
+                        case 1660: eventLabels[i] = "Empty"; break;
+                        case 1661: eventLabels[i] = "Empty"; break;
+                        case 1662: eventLabels[i] = "Empty"; break;
+                        case 1663: eventLabels[i] = "Empty"; break;
+                        case 1664: eventLabels[i] = "Empty"; break;
+                        case 1665: eventLabels[i] = "Empty"; break;
+                        case 1666: eventLabels[i] = "Empty"; break;
+                        case 1667: eventLabels[i] = "Empty"; break;
+                        case 1668: eventLabels[i] = "Empty"; break;
+                        case 1669: eventLabels[i] = "Nimbus Final Hallway Miniboss Collision"; break;
+                        case 1670: eventLabels[i] = "Lands End 2 Summon Invisible Platform"; break;
+                        case 1671: eventLabels[i] = "Lands End 1 Invisible Platform"; break;
+                        case 1672: eventLabels[i] = "Lands End 2 Summon Invisible Platform"; break;
+                        case 1673: eventLabels[i] = "Lands End 2 Invisible Platform Upper"; break;
+                        case 1674: eventLabels[i] = "Lands End Enter Grotto"; break;
+                        case 1675: eventLabels[i] = "Mario Bumped Off Cannon"; break;
+                        case 1676: eventLabels[i] = "Lands End Grotto Room 1 Loader"; break;
+                        case 1677: eventLabels[i] = "Temple Pipe To Monstro"; break;
+                        case 1678: eventLabels[i] = "Open Lands End Grotto"; break;
+                        case 1679: eventLabels[i] = "Lands End Trampoline In Lower Underground Gecko Room"; break;
+                        case 1680: eventLabels[i] = "Temple Pipe To Fortune Result Room"; break;
+                        case 1681: eventLabels[i] = "Temple Trampoline In Fortune Result Room"; break;
+                        case 1682: eventLabels[i] = "Trampoline Shaman"; break;
+                        case 1683: eventLabels[i] = "Temple Exit Warp Trampoline"; break;
+                        case 1684: eventLabels[i] = "Temple Elevator Lower Exit"; break;
+                        case 1685: eventLabels[i] = "Temple Fortune Head 1"; break;
+                        case 1686: eventLabels[i] = "Temple Fortune Head 2"; break;
+                        case 1687: eventLabels[i] = "Temple Fortune Head 3"; break;
+                        case 1688: eventLabels[i] = "Temple Fortune Heads Room Loader"; break;
+                        case 1689: eventLabels[i] = "Temple Pipe To Boss Fight"; break;
+                        case 1690: eventLabels[i] = "Temple Boss Room Trampoline"; break;
+                        case 1691: eventLabels[i] = "Empty"; break;
+                        case 1692: eventLabels[i] = "Temple Fortune Scroll"; break;
+                        case 1693: eventLabels[i] = "Temple Final Fortune Head"; break;
+                        case 1694: eventLabels[i] = "Temple Elevator"; break;
+                        case 1695: eventLabels[i] = "Bandits Way Goomba"; break;
+                        case 1696: eventLabels[i] = "Bandits Way Chest Platforms 1"; break;
+                        case 1697: eventLabels[i] = "Bandits Way Chest Platforms 2"; break;
+                        case 1698: eventLabels[i] = "Bandits Way 4 Loader"; break;
+                        case 1699: eventLabels[i] = "Bandits Way 4 Loader Background"; break;
+                        case 1700: eventLabels[i] = "Bandits Way 2 Left Platform"; break;
+                        case 1701: eventLabels[i] = "Bandits Way 2 Right Platform"; break;
+                        case 1702: eventLabels[i] = "Bandits Way 2 Loader"; break;
+                        case 1703: eventLabels[i] = "Bandits Way 2 Spinny Flower 1"; break;
+                        case 1704: eventLabels[i] = "Bandits Way 2 Spinny Flower 2"; break;
+                        case 1705: eventLabels[i] = "Bandits Way 2 Dogs Background"; break;
+                        case 1706: eventLabels[i] = "Bandits Way Left Chest Star Check"; break;
+                        case 1707: eventLabels[i] = "Bandits Way 5 Loader Background"; break;
+                        case 1708: eventLabels[i] = "Bandits Way 5 Loader"; break;
+                        case 1709: eventLabels[i] = "Bandits Way 5 Loader Background 2"; break;
+                        case 1710: eventLabels[i] = "Bandits Way 5 Loader Background Boss Fight"; break;
+                        case 1711: eventLabels[i] = "Bandits Way Trampoline"; break;
+                        case 1712: eventLabels[i] = "Bandits Way 2 Dog"; break;
+                        case 1713: eventLabels[i] = "Bandits Way 3 Loader"; break;
+                        case 1714: eventLabels[i] = "Bandits Way 1 Loader"; break;
+                        case 1715: eventLabels[i] = "Bandits Way 4 Platform Subroutine"; break;
+                        case 1716: eventLabels[i] = "Bandits Way 5 Chase Catch Boss"; break;
+                        case 1717: eventLabels[i] = "Bandits Way 4 Manage Dog Collision"; break;
+                        case 1718: eventLabels[i] = "Empty"; break;
+                        case 1719: eventLabels[i] = "Empty"; break;
+                        case 1720: eventLabels[i] = "Empty"; break;
+                        case 1721: eventLabels[i] = "Empty"; break;
+                        case 1722: eventLabels[i] = "Sky Bridge Room Loader"; break;
+                        case 1723: eventLabels[i] = "Empty"; break;
+                        case 1724: eventLabels[i] = "Empty"; break;
+                        case 1725: eventLabels[i] = "Empty"; break;
+                        case 1726: eventLabels[i] = "Empty"; break;
+                        case 1727: eventLabels[i] = "Empty"; break;
+                        case 1728: eventLabels[i] = "Empty"; break;
+                        case 1729: eventLabels[i] = "Empty"; break;
+                        case 1730: eventLabels[i] = "Empty"; break;
+                        case 1731: eventLabels[i] = "Empty"; break;
+                        case 1732: eventLabels[i] = "Sky Bridge Background"; break;
+                        case 1733: eventLabels[i] = "Empty"; break;
+                        case 1734: eventLabels[i] = "Empty"; break;
+                        case 1735: eventLabels[i] = "Empty"; break;
+                        case 1736: eventLabels[i] = "Empty"; break;
+                        case 1737: eventLabels[i] = "Sky Bridge Donut Lift"; break;
+                        case 1738: eventLabels[i] = "Empty"; break;
+                        case 1739: eventLabels[i] = "Refocus Camera"; break;
+                        case 1740: eventLabels[i] = "Empty"; break;
+                        case 1741: eventLabels[i] = "Empty"; break;
+                        case 1742: eventLabels[i] = "Empty"; break;
+                        case 1743: eventLabels[i] = "Empty"; break;
+                        case 1744: eventLabels[i] = "Empty"; break;
+                        case 1745: eventLabels[i] = "Whirlpool Shogun"; break;
+                        case 1746: eventLabels[i] = "Empty"; break;
+                        case 1747: eventLabels[i] = "Empty"; break;
+                        case 1748: eventLabels[i] = "Mines Postgame Fight"; break;
+                        case 1749: eventLabels[i] = "Ship Postgame Boss"; break;
+                        case 1750: eventLabels[i] = "Temple Boss Postgame"; break;
+                        case 1751: eventLabels[i] = "Lands End Desert 1 Left Whirlpool"; break;
+                        case 1752: eventLabels[i] = "Lands End Desert 1 Right Whirlpool"; break;
+                        case 1753: eventLabels[i] = "Lands End Final Whirlpool 1"; break;
+                        case 1754: eventLabels[i] = "Lands End Final Whirlpool 2"; break;
+                        case 1755: eventLabels[i] = "Lands End Shy Away Whirlpool 1"; break;
+                        case 1756: eventLabels[i] = "Lands End Shy Away Whirlpool 2"; break;
+                        case 1757: eventLabels[i] = "Lands End Shy Away Whirlpool 3"; break;
+                        case 1758: eventLabels[i] = "Lands End Penultimate Whirlpool 1"; break;
+                        case 1759: eventLabels[i] = "Lands End Penultimate Whirlpool 2"; break;
+                        case 1760: eventLabels[i] = "Lands End Stage 2 Whirlpool 1"; break;
+                        case 1761: eventLabels[i] = "Lands End Stage 2 Whirlpool 2"; break;
+                        case 1762: eventLabels[i] = "Lands End Stage 2 Whirlpool 3"; break;
+                        case 1763: eventLabels[i] = "Lands End Bee Whirlpool 1"; break;
+                        case 1764: eventLabels[i] = "Lands End Bee Whirlpool 2"; break;
+                        case 1765: eventLabels[i] = "Lands End Bee Whirlpool 3"; break;
+                        case 1766: eventLabels[i] = "Temple Elevator Room Loader"; break;
+                        case 1767: eventLabels[i] = "Temple Fortune Results Room Gate Opens"; break;
+                        case 1768: eventLabels[i] = "Temple Boss"; break;
+                        case 1769: eventLabels[i] = "Temple Summon Green Button"; break;
+                        case 1770: eventLabels[i] = "Temple Fortune Results Room Loader"; break;
+                        case 1771: eventLabels[i] = "Temple Boss Room Loader"; break;
+                        case 1772: eventLabels[i] = "Lands End Bullet Bill"; break;
+                        case 1773: eventLabels[i] = "Lands End Bullet Bill Background"; break;
+                        case 1774: eventLabels[i] = "Empty"; break;
+                        case 1775: eventLabels[i] = "Sky Troopa Platform"; break;
+                        case 1777: eventLabels[i] = "Lands End Cliff Loader"; break;
+                        case 1778: eventLabels[i] = "Temple Generic Pipe Room Loader"; break;
+                        case 1779: eventLabels[i] = "Lands End Underground 1 Loader"; break;
+                        case 1780: eventLabels[i] = "Lands End Flower Loader"; break;
+                        case 1781: eventLabels[i] = "Empty"; break;
+                        case 1782: eventLabels[i] = "Lands End Desert 1 Loader"; break;
+                        case 1783: eventLabels[i] = "Lands End Final Whirlpool Room Loader"; break;
+                        case 1784: eventLabels[i] = "Lands End Desert 1 Left Whirlpool Subroutine"; break;
+                        case 1785: eventLabels[i] = "Lands End Final Whirlpool 1 Subroutine"; break;
+                        case 1786: eventLabels[i] = "Lands End Shy Away Whirlpool 1 Subroutine"; break;
+                        case 1787: eventLabels[i] = "Lands End Desert 1 Right Whirlpool Subroutine"; break;
+                        case 1788: eventLabels[i] = "Lands End Underground Dog Wall Room Loader Background"; break;
+                        case 1789: eventLabels[i] = "Whirlpool Shogun Subroutine"; break;
+                        case 1790: eventLabels[i] = "Lands End Underground Upper Pit Room Loader Background"; break;
+                        case 1791: eventLabels[i] = "Lands End Underground Dog Wall Room Loader"; break;
+                        case 1792: eventLabels[i] = "Lands End Underground Upper Pit Room Loader"; break;
+                        case 1793: eventLabels[i] = "Lands End Purchasable Chest 1 Subroutine"; break;
+                        case 1794: eventLabels[i] = "Lands End Buy Chest"; break;
+                        case 1795: eventLabels[i] = "Lands End Underground Lower Level Loader"; break;
+                        case 1796: eventLabels[i] = "Lands End Desert 1 Trampoline"; break;
+                        case 1797: eventLabels[i] = "Lands End Sky Bridge Room Exit To Desert"; break;
+                        case 1798: eventLabels[i] = "Lands End Cliff Mouse Hint"; break;
+                        case 1799: eventLabels[i] = "Temple Final Fortune Scroll"; break;
+                        case 1800: eventLabels[i] = "Temple Mouse Monstro Town Access Hint"; break;
+                        case 1801: eventLabels[i] = "Freestanding Flower"; break;
+                        case 1802: eventLabels[i] = "Empty"; break;
+                        case 1803: eventLabels[i] = "Empty"; break;
+                        case 1804: eventLabels[i] = "Empty"; break;
+                        case 1805: eventLabels[i] = "Temple 3 Fortune Shaman"; break;
+                        case 1806: eventLabels[i] = "Temple Fortune Results Dog Fight"; break;
+                        case 1807: eventLabels[i] = "Temple Fortune Results Shy Away Fight"; break;
+                        case 1808: eventLabels[i] = "Belome Fortune Prize Chest 1 Subroutine"; break;
+                        case 1809: eventLabels[i] = "Lands End Cliff Exit To World Map"; break;
+                        case 1810: eventLabels[i] = "Temple Vault Loader"; break;
+                        case 1811: eventLabels[i] = "Temple Four Chest Room Loader"; break;
+                        case 1812: eventLabels[i] = "Empty"; break;
+                        case 1813: eventLabels[i] = "Save Box In Rooms With Exp Stars"; break;
+                        case 1814: eventLabels[i] = "Start Troopa Cliff Timer"; break;
+                        case 1815: eventLabels[i] = "Troopa Cliff Timer"; break;
+                        case 1816: eventLabels[i] = "Troopa Cliff Finish"; break;
+                        case 1817: eventLabels[i] = "Troopa Cliff Fall"; break;
+                        case 1818: eventLabels[i] = "Lands End Desert Mouse"; break;
+                        case 1819: eventLabels[i] = "Shy Away Early Lands End"; break;
+                        case 1820: eventLabels[i] = "Empty"; break;
+                        case 1821: eventLabels[i] = "Empty"; break;
+                        case 1822: eventLabels[i] = "Empty"; break;
+                        case 1823: eventLabels[i] = "Lands End Grotto First Room Upper Chest"; break;
+                        case 1824: eventLabels[i] = "Keep Set Platform Properties"; break;
+                        case 1825: eventLabels[i] = "Keep Rotating Room Loader"; break;
+                        case 1826: eventLabels[i] = "Keep Invisible Floor Room Loader"; break;
+                        case 1827: eventLabels[i] = "Keep Linear Platform Room Loader"; break;
+                        case 1828: eventLabels[i] = "Keep Mario Falls In Lava"; break;
+                        case 1829: eventLabels[i] = "Keep Display Remaining Tries"; break;
+                        case 1830: eventLabels[i] = "Keep Handle Room Reload After Lava Fall"; break;
+                        case 1831: eventLabels[i] = "Keep Invisible Floor Room Background 1"; break;
+                        case 1832: eventLabels[i] = "Keep Invisible Floor Room Background 2"; break;
+                        case 1833: eventLabels[i] = "Keep Linear Platform Room Background"; break;
+                        case 1834: eventLabels[i] = "Keep Cannonball"; break;
+                        case 1835: eventLabels[i] = "Keep Cannonball Room Loader"; break;
+                        case 1836: eventLabels[i] = "Keep Donkey Room Loader"; break;
+                        case 1837: eventLabels[i] = "Unknown"; break;
+                        case 1838: eventLabels[i] = "Empty"; break;
+                        case 1839: eventLabels[i] = "Unknown"; break;
+                        case 1840: eventLabels[i] = "Platform Subroutine"; break;
+                        case 1841: eventLabels[i] = "Keep Invisible Floor Chest 1"; break;
+                        case 1842: eventLabels[i] = "Keep Invisible Floor Coin 1"; break;
+                        case 1843: eventLabels[i] = "Keep Invisible Floor Show Floor"; break;
+                        case 1844: eventLabels[i] = "Summon Cloud Boss"; break;
+                        case 1845: eventLabels[i] = "Cloud Boss"; break;
+                        case 1846: eventLabels[i] = "Safe Donut Lift Jump"; break;
+                        case 1847: eventLabels[i] = "Cannonball Room Bomb 1"; break;
+                        case 1848: eventLabels[i] = "Cannonball Room Bomb 2"; break;
+                        case 1849: eventLabels[i] = "Cannonball Room Bomb 1 Contd"; break;
+                        case 1850: eventLabels[i] = "Cannonball Room Bomb 2 Contd"; break;
+                        case 1851: eventLabels[i] = "Lands End Grotto Directional Bit"; break;
+                        case 1852: eventLabels[i] = "Sky Bridge Admin Shaman"; break;
+                        case 1853: eventLabels[i] = "Sky Bridge Ride Shaman"; break;
+                        case 1854: eventLabels[i] = "Keep Donkey Room Background"; break;
+                        case 1855: eventLabels[i] = "Keep Donkey Room Barrel"; break;
+                        case 1856: eventLabels[i] = "Moleville Shop Loader"; break;
+                        case 1857: eventLabels[i] = "Moleville Shop Exit To Exterior"; break;
+                        case 1858: eventLabels[i] = "Moleville Inn Exit To Exterior"; break;
+                        case 1859: eventLabels[i] = "Fireworks House Exit To Exterior"; break;
+                        case 1860: eventLabels[i] = "Moleville Swap Shop Exit To Exterior"; break;
+                        case 1861: eventLabels[i] = "Keep Donkey Room Donkey"; break;
+                        case 1862: eventLabels[i] = "Croco Shop 1"; break;
+                        case 1863: eventLabels[i] = "Croco Shop 2"; break;
+                        case 1864: eventLabels[i] = "Bowser Door Ultimate Failure Animation"; break;
+                        case 1865: eventLabels[i] = "Empty"; break;
+                        case 1866: eventLabels[i] = "Keep Invisible Floor Chest 2"; break;
+                        case 1867: eventLabels[i] = "Empty"; break;
+                        case 1868: eventLabels[i] = "Lands End Flower Room Exit To Sky Bridge"; break;
+                        case 1869: eventLabels[i] = "Sky Bridge Loader"; break;
+                        case 1870: eventLabels[i] = "Keep Invisible Floor Chest 3"; break;
+                        case 1871: eventLabels[i] = "Fireworks House Loader"; break;
+                        case 1872: eventLabels[i] = "Fireworks House Buy Item"; break;
+                        case 1873: eventLabels[i] = "Midas River Sign After Bucket Warp"; break;
+                        case 1874: eventLabels[i] = "Temple Elevator Room Shaman"; break;
+                        case 1875: eventLabels[i] = "Keep Rotating Room Platform 1"; break;
+                        case 1876: eventLabels[i] = "Keep Rotating Room Platform 2"; break;
+                        case 1877: eventLabels[i] = "Keep Rotating Room Loader Contd"; break;
+                        case 1878: eventLabels[i] = "Keep Cannonball Room Exit To Previous"; break;
+                        case 1879: eventLabels[i] = "Keep Linear Platform Room Exit To Previous"; break;
+                        case 1880: eventLabels[i] = "Keep Invisible Floor Chest 4"; break;
+                        case 1881: eventLabels[i] = "Keep Invisible Floor Coin 2"; break;
+                        case 1882: eventLabels[i] = "Keep Invisible Floor Coin 3"; break;
+                        case 1883: eventLabels[i] = "Whirlpool Shogun 1"; break;
+                        case 1884: eventLabels[i] = "Whirlpool Shogun 2"; break;
+                        case 1885: eventLabels[i] = "Whirlpool Shogun 3"; break;
+                        case 1886: eventLabels[i] = "Whirlpool Shogun 4"; break;
+                        case 1887: eventLabels[i] = "Whirlpool Shogun 5"; break;
+                        case 1888: eventLabels[i] = "Abyss Axem Pit Room Loader"; break;
+                        case 1889: eventLabels[i] = "Abyss Side Treasure Rooms Loader"; break;
+                        case 1890: eventLabels[i] = "Determine Side Treasure Room To Load"; break;
+                        case 1891: eventLabels[i] = "Abyss Big Conveyor Room Loader"; break;
+                        case 1892: eventLabels[i] = "Abyss Boss 1 Defeated Temp Room Loader"; break;
+                        case 1893: eventLabels[i] = "Abyss Boss 2 Room Loader"; break;
+                        case 1894: eventLabels[i] = "Abyss Boss 2"; break;
+                        case 1895: eventLabels[i] = "Abyss After Boss 1 Trampoline Backward"; break;
+                        case 1896: eventLabels[i] = "Abyss Axem Pit Trampoline"; break;
+                        case 1897: eventLabels[i] = "Abyss Upper Machine Yarid Room Loader"; break;
+                        case 1898: eventLabels[i] = "Abyss Boss 2 Room Trampoline"; break;
+                        case 1899: eventLabels[i] = "Abyss Axem Pit Room Fall"; break;
+                        case 1900: eventLabels[i] = "Abyss Big Conveyor Room Fall"; break;
+                        case 1901: eventLabels[i] = "Abyss Axem Pit Platforms"; break;
+                        case 1902: eventLabels[i] = "Abyss Exit To Side Treasure Rooms"; break;
+                        case 1903: eventLabels[i] = "Abyss Side Treasure Rooms Exit"; break;
+                        case 1904: eventLabels[i] = "Abyss Machine Yarid Upper"; break;
+                        case 1905: eventLabels[i] = "Abyss Exit To Boss 2 Room"; break;
+                        case 1906: eventLabels[i] = "Turn Off Mario Shadow"; break;
+                        case 1907: eventLabels[i] = "Abyss Machine Yarid Lower"; break;
+                        case 1908: eventLabels[i] = "Abyss Machine Axem Red"; break;
+                        case 1909: eventLabels[i] = "Abyss Conveyor Belt Jabit Or Bowyer"; break;
+                        case 1910: eventLabels[i] = "Abyss Conveyor Belt Shyper"; break;
+                        case 1911: eventLabels[i] = "Abyss Machine Mack"; break;
+                        case 1912: eventLabels[i] = "Abyss Machine Arrow Hit"; break;
+                        case 1913: eventLabels[i] = "Abyss Machine Arrow Animate"; break;
+                        case 1914: eventLabels[i] = "Abyss Machine Arrow Reset"; break;
+                        case 1915: eventLabels[i] = "Abyss Big Conveyor Checkpoint"; break;
+                        case 1916: eventLabels[i] = "Abyss Big Conveyor Checkpoint"; break;
+                        case 1917: eventLabels[i] = "Abyss Big Conveyor Checkpoint"; break;
+                        case 1918: eventLabels[i] = "Abyss Big Conveyor Checkpoint"; break;
+                        case 1919: eventLabels[i] = "Abyss Big Conveyor Platform"; break;
+                        case 1920: eventLabels[i] = "Abyss Big Conveyor Checkpoint"; break;
+                        case 1921: eventLabels[i] = "Abyss Machine Bowyer"; break;
+                        case 1922: eventLabels[i] = "Abyss Set Machine Bowyer Spawn Point"; break;
+                        case 1923: eventLabels[i] = "Abyss Set Machine Bowyer Spawn Point"; break;
+                        case 1924: eventLabels[i] = "World Map Inner Factory"; break;
+                        case 1925: eventLabels[i] = "Postgame Tower Fight"; break;
+                        case 1926: eventLabels[i] = "Tower Balcony Loader"; break;
+                        case 1927: eventLabels[i] = "Tower Balcony Jump Off"; break;
+                        case 1928: eventLabels[i] = "Balcony Is Locked"; break;
+                        case 1929: eventLabels[i] = "Keep Invisible Floor Coin 4"; break;
+                        case 1930: eventLabels[i] = "Mackskip Maybe"; break;
+                        case 1931: eventLabels[i] = "Treasure Chest Failure Mimic Fight"; break;
+                        case 1932: eventLabels[i] = "Belome Fortune Prize Chest 2"; break;
+                        case 1933: eventLabels[i] = "Belome Fortune Prize Chest 3"; break;
+                        case 1934: eventLabels[i] = "Belome Fortune Prize Chest 4"; break;
+                        case 1935: eventLabels[i] = "Keep Rotating Room Exit To Previous"; break;
+                        case 1936: eventLabels[i] = "Keep Rotating Room Chest 1"; break;
+                        case 1937: eventLabels[i] = "Keep Rotating Room Chest 2"; break;
+                        case 1938: eventLabels[i] = "Keep Rotating Room Chest 3"; break;
+                        case 1939: eventLabels[i] = "Keep Rotating Room Chest 4"; break;
+                        case 1940: eventLabels[i] = "Keep Rotating Room Chest 5"; break;
+                        case 1941: eventLabels[i] = "Keep Rotating Room Chest 6"; break;
+                        case 1942: eventLabels[i] = "Keep Vertical Platform Room Exit To Previous"; break;
+                        case 1943: eventLabels[i] = "Keep Invisible Floor Room Exit"; break;
+                        case 1944: eventLabels[i] = "Keep Chewy Battle Room Exit"; break;
+                        case 1945: eventLabels[i] = "Keep Cannonball Room Exit"; break;
+                        case 1946: eventLabels[i] = "Keep Donkey Room Exit To Previous"; break;
+                        case 1947: eventLabels[i] = "Keep Linear Platform Room Exit"; break;
+                        case 1948: eventLabels[i] = "Keep Terra Corra Battle Room Exit"; break;
+                        case 1949: eventLabels[i] = "Keep Alley Rat Battle Room Exit"; break;
+                        case 1950: eventLabels[i] = "Keep Goomba Battle Room Exit"; break;
+                        case 1951: eventLabels[i] = "Keep Barrel Count Room Exit Container"; break;
+                        case 1952: eventLabels[i] = "Keep Enter Marathon Puzzle Room"; break;
+                        case 1953: eventLabels[i] = "Keep Quiz Room Exit Container"; break;
+                        case 1954: eventLabels[i] = "Keep Enter Barrel Count Room"; break;
+                        case 1955: eventLabels[i] = "Keep Coin Game Room Exit Container"; break;
+                        case 1956: eventLabels[i] = "Keep Enter Button Game Room"; break;
+                        case 1957: eventLabels[i] = "Keep Door 5 Container"; break;
+                        case 1958: eventLabels[i] = "Keep Enter Vertical Platform Room"; break;
+                        case 1959: eventLabels[i] = "Keep Door 4 Container"; break;
+                        case 1960: eventLabels[i] = "Keep Enter Invisible Floor Room"; break;
+                        case 1961: eventLabels[i] = "Keep Door 6 Container"; break;
+                        case 1962: eventLabels[i] = "Keep Enter Terra Cotta Battle Room"; break;
+                        case 1963: eventLabels[i] = "Keep Door 3 Container"; break;
+                        case 1964: eventLabels[i] = "Keep Enter Goomba Battle Room"; break;
+                        case 1965: eventLabels[i] = "Keep Door 1 Container"; break;
+                        case 1966: eventLabels[i] = "Keep Enter Quiz Room"; break;
+                        case 1967: eventLabels[i] = "Keep Door 2 Container"; break;
+                        case 1968: eventLabels[i] = "Keep Enter Coin Game Room"; break;
+                        case 1969: eventLabels[i] = "Check If Star Pieces For Factory Boss Collected"; break;
+                        case 1970: eventLabels[i] = "Boshi Odds Calculator"; break;
+                        case 1971: eventLabels[i] = "Mushroom Boy Grants Rock Candy"; break;
+                        case 1972: eventLabels[i] = "Mushroom Boy Odds"; break;
+                        case 1973: eventLabels[i] = "Clone Reserved"; break;
+                        case 1974: eventLabels[i] = "Clone Reserved"; break;
+                        case 1975: eventLabels[i] = "Clone Reserved"; break;
+                        case 1976: eventLabels[i] = "Clone Reserved"; break;
+                        case 1977: eventLabels[i] = "Clone Reserved"; break;
+                        case 1978: eventLabels[i] = "Clone Reserved"; break;
+                        case 1979: eventLabels[i] = "Clone Reserved"; break;
+                        case 1980: eventLabels[i] = "Clone Reserved"; break;
+                        case 1981: eventLabels[i] = "Clone Reserved"; break;
+                        case 1982: eventLabels[i] = "Clone Reserved"; break;
+                        case 1983: eventLabels[i] = "Clone Reserved"; break;
+                        case 1984: eventLabels[i] = "Clone Reserved"; break;
+                        case 1985: eventLabels[i] = "Clone Reserved"; break;
+                        case 1986: eventLabels[i] = "Clone Reserved"; break;
+                        case 1987: eventLabels[i] = "Clone Reserved"; break;
+                        case 1988: eventLabels[i] = "Clone Reserved"; break;
+                        case 1989: eventLabels[i] = "Clone Reserved"; break;
+                        case 1990: eventLabels[i] = "Clone Reserved"; break;
+                        case 1991: eventLabels[i] = "Clone Reserved"; break;
+                        case 1992: eventLabels[i] = "Clone Reserved"; break;
+                        case 1993: eventLabels[i] = "Clone Reserved"; break;
+                        case 1994: eventLabels[i] = "Clone Reserved"; break;
+                        case 1995: eventLabels[i] = "Clone Reserved"; break;
+                        case 1996: eventLabels[i] = "Clone Reserved"; break;
+                        case 1997: eventLabels[i] = "Clone Reserved"; break;
+                        case 1998: eventLabels[i] = "Clone Reserved"; break;
+                        case 1999: eventLabels[i] = "Clone Reserved"; break;
+                        case 2000: eventLabels[i] = "Clone Reserved"; break;
+                        case 2001: eventLabels[i] = "Clone Reserved"; break;
+                        case 2002: eventLabels[i] = "Clone Reserved"; break;
+                        case 2003: eventLabels[i] = "Clone Reserved"; break;
+                        case 2004: eventLabels[i] = "Clone Reserved"; break;
+                        case 2005: eventLabels[i] = "Clone Reserved"; break;
+                        case 2006: eventLabels[i] = "Clone Reserved"; break;
+                        case 2007: eventLabels[i] = "Clone Reserved"; break;
+                        case 2008: eventLabels[i] = "Clone Reserved"; break;
+                        case 2009: eventLabels[i] = "Clone Reserved"; break;
+                        case 2010: eventLabels[i] = "Clone Reserved"; break;
+                        case 2011: eventLabels[i] = "Clone Reserved"; break;
+                        case 2012: eventLabels[i] = "Clone Reserved"; break;
+                        case 2013: eventLabels[i] = "Clone Reserved"; break;
+                        case 2014: eventLabels[i] = "Clone Reserved"; break;
+                        case 2015: eventLabels[i] = "Clone Reserved"; break;
+                        case 2016: eventLabels[i] = "Clone Reserved"; break;
+                        case 2017: eventLabels[i] = "Clone Reserved"; break;
+                        case 2018: eventLabels[i] = "Clone Reserved"; break;
+                        case 2019: eventLabels[i] = "Clone Reserved"; break;
+                        case 2020: eventLabels[i] = "Clone Reserved"; break;
+                        case 2021: eventLabels[i] = "Clone Reserved"; break;
+                        case 2022: eventLabels[i] = "Clone Reserved"; break;
+                        case 2023: eventLabels[i] = "Clone Reserved"; break;
+                        case 2024: eventLabels[i] = "Clone Reserved"; break;
+                        case 2025: eventLabels[i] = "Clone Reserved"; break;
+                        case 2026: eventLabels[i] = "Clone Reserved"; break;
+                        case 2027: eventLabels[i] = "Clone Reserved"; break;
+                        case 2028: eventLabels[i] = "Clone Reserved"; break;
+                        case 2029: eventLabels[i] = "Clone Reserved"; break;
+                        case 2030: eventLabels[i] = "Clone Reserved"; break;
+                        case 2031: eventLabels[i] = "Clone Reserved"; break;
+                        case 2032: eventLabels[i] = "Clone Reserved"; break;
+                        case 2033: eventLabels[i] = "Clone Reserved"; break;
+                        case 2034: eventLabels[i] = "Clone Reserved"; break;
+                        case 2035: eventLabels[i] = "Clone Reserved"; break;
+                        case 2036: eventLabels[i] = "Clone Reserved"; break;
+                        case 2037: eventLabels[i] = "Clone Reserved"; break;
+                        case 2038: eventLabels[i] = "Clone Reserved"; break;
+                        case 2039: eventLabels[i] = "Clone Reserved"; break;
+                        case 2040: eventLabels[i] = "Clone Reserved"; break;
+                        case 2041: eventLabels[i] = "Clone Reserved"; break;
+                        case 2042: eventLabels[i] = "Clone Reserved"; break;
+                        case 2043: eventLabels[i] = "Clone Reserved"; break;
+                        case 2044: eventLabels[i] = "Clone Reserved"; break;
+                        case 2045: eventLabels[i] = "Clone Reserved"; break;
+                        case 2046: eventLabels[i] = "Clone Reserved"; break;
+                        case 2047: eventLabels[i] = "Clone Reserved"; break;
+                        case 2048: eventLabels[i] = "Monstro Town Exterior Loader"; break;
+                        case 2049: eventLabels[i] = "Monstro Super Jump House Loader"; break;
+                        case 2050: eventLabels[i] = "Monstro Thwomp"; break;
+                        case 2051: eventLabels[i] = "Monstro Shop Loader"; break;
+                        case 2052: eventLabels[i] = "Chapel Postgame Boss"; break;
+                        case 2053: eventLabels[i] = "Monstro Goombette Shop"; break;
+                        case 2054: eventLabels[i] = "Monstro Main Shop"; break;
+                        case 2055: eventLabels[i] = "Monstro Trampoline"; break;
+                        case 2056: eventLabels[i] = "Monstro Ledge Item"; break;
+                        case 2057: eventLabels[i] = "Monstromama House 1F Loader"; break;
+                        case 2058: eventLabels[i] = "Monstro Fan Setting"; break;
+                        case 2059: eventLabels[i] = "Monstromama"; break;
+                        case 2060: eventLabels[i] = "Monstromama House 2F Loader"; break;
+                        case 2061: eventLabels[i] = "Monstro Town Star"; break;
+                        case 2062: eventLabels[i] = "Monstro Mimic"; break;
+                        case 2063: eventLabels[i] = "Super Jump Prize Grant"; break;
+                        case 2064: eventLabels[i] = "Dojo Loader"; break;
+                        case 2065: eventLabels[i] = "Dojo Loader First Time Animation"; break;
+                        case 2066: eventLabels[i] = "Dojo Boss 1"; break;
+                        case 2067: eventLabels[i] = "Dojo Fight 1 Finished"; break;
+                        case 2068: eventLabels[i] = "Dojo Boss 2"; break;
+                        case 2069: eventLabels[i] = "Monstro Mouse"; break;
+                        case 2070: eventLabels[i] = "Monstromama House Exit To Exterior"; break;
+                        case 2071: eventLabels[i] = "Empty"; break;
+                        case 2072: eventLabels[i] = "Empty"; break;
+                        case 2073: eventLabels[i] = "Empty"; break;
+                        case 2074: eventLabels[i] = "Enter Monstro Sealed Room"; break;
+                        case 2075: eventLabels[i] = "Monstro Sealed Door"; break;
+                        case 2076: eventLabels[i] = "Dojo Boss 3"; break;
+                        case 2077: eventLabels[i] = "Dojo Boss 4"; break;
+                        case 2078: eventLabels[i] = "Monstro Save Box"; break;
+                        case 2079: eventLabels[i] = "Monstro Town Exterior Loader From Save Box"; break;
+                        case 2080: eventLabels[i] = "Musty Fears Room Loader"; break;
+                        case 2081: eventLabels[i] = "Musty Fears Lamp"; break;
+                        case 2082: eventLabels[i] = "Nimbus Missable Chest 1"; break;
+                        case 2083: eventLabels[i] = "Musty Fears Away Note"; break;
+                        case 2084: eventLabels[i] = "Marios Room Invisible Item"; break;
+                        case 2085: eventLabels[i] = "Empty"; break;
+                        case 2086: eventLabels[i] = "Monstro Piranha"; break;
+                        case 2087: eventLabels[i] = "Empty"; break;
+                        case 2088: eventLabels[i] = "Empty"; break;
+                        case 2089: eventLabels[i] = "Sky Troopas Ad"; break;
+                        case 2090: eventLabels[i] = "Monstro Entrance Loader"; break;
+                        case 2091: eventLabels[i] = "Empty"; break;
+                        case 2092: eventLabels[i] = "Monstro Town Back Exit"; break;
+                        case 2093: eventLabels[i] = "Empty"; break;
+                        case 2094: eventLabels[i] = "Empty"; break;
+                        case 2095: eventLabels[i] = "Empty"; break;
+                        case 2096: eventLabels[i] = "Hino Mart Loader"; break;
+                        case 2097: eventLabels[i] = "Move Hinopio To Item Shop"; break;
+                        case 2098: eventLabels[i] = "Move Hinopio To Inn"; break;
+                        case 2099: eventLabels[i] = "Move Hinopio To Armor Shop"; break;
+                        case 2100: eventLabels[i] = "Hinopio"; break;
+                        case 2101: eventLabels[i] = "Empty"; break;
+                        case 2102: eventLabels[i] = "Empty"; break;
+                        case 2103: eventLabels[i] = "Empty"; break;
+                        case 2104: eventLabels[i] = "Empty"; break;
+                        case 2105: eventLabels[i] = "Empty"; break;
+                        case 2106: eventLabels[i] = "Empty"; break;
+                        case 2107: eventLabels[i] = "Empty"; break;
+                        case 2108: eventLabels[i] = "Nimbus Castle Statue Polisher Boss Fight Room Loader"; break;
+                        case 2109: eventLabels[i] = "Empty"; break;
+                        case 2110: eventLabels[i] = "Empty"; break;
+                        case 2111: eventLabels[i] = "Empty"; break;
+                        case 2112: eventLabels[i] = "Nimbus Castle Statue Game Room Loader"; break;
+                        case 2113: eventLabels[i] = "Empty"; break;
+                        case 2114: eventLabels[i] = "Empty"; break;
+                        case 2115: eventLabels[i] = "Statue 1 Shake"; break;
+                        case 2116: eventLabels[i] = "Statue 2 Shake"; break;
+                        case 2117: eventLabels[i] = "Statue 4 Shake"; break;
+                        case 2118: eventLabels[i] = "Initiate Statue Polisher Manual Boss Fight"; break;
+                        case 2119: eventLabels[i] = "Empty"; break;
+                        case 2120: eventLabels[i] = "Empty"; break;
+                        case 2121: eventLabels[i] = "Empty"; break;
+                        case 2122: eventLabels[i] = "Star Hill Star Piece"; break;
+                        case 2123: eventLabels[i] = "Empty"; break;
+                        case 2124: eventLabels[i] = "Choose Marrymore Sanctuary State"; break;
+                        case 2125: eventLabels[i] = "Empty"; break;
+                        case 2126: eventLabels[i] = "Empty"; break;
+                        case 2127: eventLabels[i] = "Empty"; break;
+                        case 2128: eventLabels[i] = "Empty"; break;
+                        case 2129: eventLabels[i] = "Empty"; break;
+                        case 2130: eventLabels[i] = "Empty"; break;
+                        case 2131: eventLabels[i] = "Empty"; break;
+                        case 2132: eventLabels[i] = "Empty"; break;
+                        case 2133: eventLabels[i] = "Nimbus Castle Statue Polisher Boss Fight Room Exit To 4Way Path"; break;
+                        case 2134: eventLabels[i] = "Empty"; break;
+                        case 2135: eventLabels[i] = "Empty"; break;
+                        case 2136: eventLabels[i] = "Empty"; break;
+                        case 2137: eventLabels[i] = "Empty"; break;
+                        case 2138: eventLabels[i] = "Empty"; break;
+                        case 2139: eventLabels[i] = "Empty"; break;
+                        case 2140: eventLabels[i] = "Empty"; break;
+                        case 2141: eventLabels[i] = "Empty"; break;
+                        case 2142: eventLabels[i] = "Empty"; break;
+                        case 2143: eventLabels[i] = "Empty"; break;
+                        case 2144: eventLabels[i] = "Keep 2Nd Room Loader"; break;
+                        case 2145: eventLabels[i] = "Keep Donut Bridge Room Loader"; break;
+                        case 2146: eventLabels[i] = "Keep Donut Lift"; break;
+                        case 2147: eventLabels[i] = "Keep Original Throne Room Loader"; break;
+                        case 2148: eventLabels[i] = "Keep Move Goombas In Original Throne Room"; break;
+                        case 2149: eventLabels[i] = "Keep Resummon Enemies On Exit"; break;
+                        case 2150: eventLabels[i] = "Empty"; break;
+                        case 2151: eventLabels[i] = "Empty"; break;
+                        case 2152: eventLabels[i] = "Empty"; break;
+                        case 2153: eventLabels[i] = "Empty"; break;
+                        case 2154: eventLabels[i] = "Empty"; break;
+                        case 2155: eventLabels[i] = "Empty"; break;
+                        case 2156: eventLabels[i] = "Empty"; break;
+                        case 2157: eventLabels[i] = "Empty"; break;
+                        case 2158: eventLabels[i] = "Empty"; break;
+                        case 2159: eventLabels[i] = "Empty"; break;
+                        case 2160: eventLabels[i] = "Keep Terra Cotta Battle Room Loader"; break;
+                        case 2161: eventLabels[i] = "Keep Terra Cotta Battle Room Summon 1St Battle"; break;
+                        case 2162: eventLabels[i] = "Keep Terra Cotta Battle Room Summon 2Nd Battle"; break;
+                        case 2163: eventLabels[i] = "Keep Terra Cotta Battle Room Summon 3Rd Battle"; break;
+                        case 2164: eventLabels[i] = "Keep Terra Cotta Battle Room Summon 4Th Battle"; break;
+                        case 2165: eventLabels[i] = "Keep Alley Rat Battle Room Loader"; break;
+                        case 2166: eventLabels[i] = "Keep Alley Rat Battle Room Summon 1St Battle"; break;
+                        case 2167: eventLabels[i] = "Keep Alley Rat Battle Room Summon 2Nd Battle"; break;
+                        case 2168: eventLabels[i] = "Keep Alley Rat Battle Room Summon 3Rd Battle"; break;
+                        case 2169: eventLabels[i] = "Keep Alley Rat Battle Room Summon 4Th Battle"; break;
+                        case 2170: eventLabels[i] = "Keep Bobomb Battle Room Loader"; break;
+                        case 2171: eventLabels[i] = "Keep Bobomb Battle Room Summon 1St Battle"; break;
+                        case 2172: eventLabels[i] = "Keep Bobomb Battle Room Summon 2Nd Battle"; break;
+                        case 2173: eventLabels[i] = "Keep Bobomb Battle Room Summon 3Rd Battle"; break;
+                        case 2174: eventLabels[i] = "Keep Bobomb Battle Room Summon 4Th Battle"; break;
+                        case 2175: eventLabels[i] = "Keep Goomba Battle Room Loader"; break;
+                        case 2176: eventLabels[i] = "Keep Goomba Battle Room Summon 1St Battle"; break;
+                        case 2177: eventLabels[i] = "Keep Goomba Battle Room Summon 2Nd Battle"; break;
+                        case 2178: eventLabels[i] = "Keep Goomba Battle Room Summon 3Rd Battle"; break;
+                        case 2179: eventLabels[i] = "Keep Goomba Battle Room Summon 4Th Battle"; break;
+                        case 2180: eventLabels[i] = "Keep Chewy Battle Room Loader"; break;
+                        case 2181: eventLabels[i] = "Keep Chewy Battle Room Summon 1St Battle"; break;
+                        case 2182: eventLabels[i] = "Keep Chewy Battle Room Summon 2Nd Battle"; break;
+                        case 2183: eventLabels[i] = "Keep Chewy Battle Room Summon 3Rd Battle"; break;
+                        case 2184: eventLabels[i] = "Keep Chewy Battle Room Summon 4Th Battle"; break;
+                        case 2185: eventLabels[i] = "Keep Sparky Battle Room Loader"; break;
+                        case 2186: eventLabels[i] = "Keep Sparky Battle Room Summon 1St Battle"; break;
+                        case 2187: eventLabels[i] = "Keep Sparky Battle Room Summon 2Nd Battle"; break;
+                        case 2188: eventLabels[i] = "Keep Sparky Battle Room Summon 3Rd Battle"; break;
+                        case 2189: eventLabels[i] = "Keep Sparky Battle Room Summon 4Th Battle"; break;
+                        case 2190: eventLabels[i] = "Battle Door Mimic Boss Animation"; break;
+                        case 2191: eventLabels[i] = "Empty"; break;
+                        case 2192: eventLabels[i] = "Empty"; break;
+                        case 2193: eventLabels[i] = "Empty"; break;
+                        case 2194: eventLabels[i] = "Empty"; break;
+                        case 2195: eventLabels[i] = "Empty"; break;
+                        case 2196: eventLabels[i] = "Empty"; break;
+                        case 2197: eventLabels[i] = "Empty"; break;
+                        case 2198: eventLabels[i] = "Empty"; break;
+                        case 2199: eventLabels[i] = "Empty"; break;
+                        case 2200: eventLabels[i] = "Empty"; break;
+                        case 2201: eventLabels[i] = "Empty"; break;
+                        case 2202: eventLabels[i] = "Empty"; break;
+                        case 2203: eventLabels[i] = "Empty"; break;
+                        case 2204: eventLabels[i] = "Empty"; break;
+                        case 2205: eventLabels[i] = "Empty"; break;
+                        case 2206: eventLabels[i] = "Empty"; break;
+                        case 2207: eventLabels[i] = "Empty"; break;
+                        case 2208: eventLabels[i] = "Keep 1St Boss Room Loader"; break;
+                        case 2209: eventLabels[i] = "Keep 1St Boss Fight"; break;
+                        case 2210: eventLabels[i] = "Keep 1St Boss Heals You"; break;
+                        case 2211: eventLabels[i] = "Empty"; break;
+                        case 2212: eventLabels[i] = "Empty"; break;
+                        case 2213: eventLabels[i] = "Empty"; break;
+                        case 2214: eventLabels[i] = "Empty"; break;
+                        case 2215: eventLabels[i] = "Empty"; break;
+                        case 2216: eventLabels[i] = "Empty"; break;
+                        case 2217: eventLabels[i] = "Empty"; break;
+                        case 2218: eventLabels[i] = "Empty"; break;
+                        case 2219: eventLabels[i] = "Empty"; break;
+                        case 2220: eventLabels[i] = "Empty"; break;
+                        case 2221: eventLabels[i] = "Empty"; break;
+                        case 2222: eventLabels[i] = "Empty"; break;
+                        case 2223: eventLabels[i] = "Empty"; break;
+                        case 2224: eventLabels[i] = "Keep Final Boss Room Loader"; break;
+                        case 2225: eventLabels[i] = "Keep 2Nd Boss"; break;
+                        case 2226: eventLabels[i] = "Keep 3Rd Boss"; break;
+                        case 2227: eventLabels[i] = "Empty"; break;
+                        case 2228: eventLabels[i] = "Keep Dark Room Loader"; break;
+                        case 2229: eventLabels[i] = "Keep Dark Room Summon Goomba 1"; break;
+                        case 2230: eventLabels[i] = "Keep Dark Room Summon Goomba 2"; break;
+                        case 2231: eventLabels[i] = "Keep Dark Room Summon Goomba 3"; break;
+                        case 2232: eventLabels[i] = "Empty"; break;
+                        case 2233: eventLabels[i] = "Keep 1St Room Loader"; break;
+                        case 2234: eventLabels[i] = "Empty"; break;
+                        case 2235: eventLabels[i] = "Empty"; break;
+                        case 2236: eventLabels[i] = "Empty"; break;
+                        case 2237: eventLabels[i] = "Empty"; break;
+                        case 2238: eventLabels[i] = "Empty"; break;
+                        case 2239: eventLabels[i] = "Empty"; break;
+                        case 2240: eventLabels[i] = "Sets Seaside Inn State"; break;
+                        case 2241: eventLabels[i] = "Sets Seaside Elders House State"; break;
+                        case 2242: eventLabels[i] = "Sets Seaside Wpn Arm Shop State 1"; break;
+                        case 2243: eventLabels[i] = "Sets Seaside Wpn Arm Shop State 2"; break;
+                        case 2244: eventLabels[i] = "Sets Seaside Health Store State"; break;
+                        case 2245: eventLabels[i] = "Sets Mushroom Boy Shop State"; break;
+                        case 2246: eventLabels[i] = "Sets Seaside Accessory Shop State"; break;
+                        case 2247: eventLabels[i] = "Dojo Boss 5"; break;
+                        case 2248: eventLabels[i] = "Empty"; break;
+                        case 2249: eventLabels[i] = "Empty"; break;
+                        case 2250: eventLabels[i] = "Empty"; break;
+                        case 2251: eventLabels[i] = "Empty"; break;
+                        case 2252: eventLabels[i] = "Empty"; break;
+                        case 2253: eventLabels[i] = "Empty"; break;
+                        case 2254: eventLabels[i] = "Empty"; break;
+                        case 2255: eventLabels[i] = "Empty"; break;
+                        case 2256: eventLabels[i] = "Empty"; break;
+                        case 2257: eventLabels[i] = "Empty"; break;
+                        case 2258: eventLabels[i] = "Empty"; break;
+                        case 2259: eventLabels[i] = "Empty"; break;
+                        case 2260: eventLabels[i] = "Empty"; break;
+                        case 2261: eventLabels[i] = "Empty"; break;
+                        case 2262: eventLabels[i] = "Empty"; break;
+                        case 2263: eventLabels[i] = "Empty"; break;
+                        case 2264: eventLabels[i] = "Empty"; break;
+                        case 2265: eventLabels[i] = "Empty"; break;
+                        case 2266: eventLabels[i] = "Empty"; break;
+                        case 2267: eventLabels[i] = "Empty"; break;
+                        case 2268: eventLabels[i] = "Empty"; break;
+                        case 2269: eventLabels[i] = "Empty"; break;
+                        case 2270: eventLabels[i] = "Empty"; break;
+                        case 2271: eventLabels[i] = "Empty"; break;
+                        case 2272: eventLabels[i] = "Moleville Treasure Shop"; break;
+                        case 2273: eventLabels[i] = "Empty"; break;
+                        case 2274: eventLabels[i] = "Empty"; break;
+                        case 2275: eventLabels[i] = "Empty"; break;
+                        case 2276: eventLabels[i] = "Empty"; break;
+                        case 2277: eventLabels[i] = "Empty"; break;
+                        case 2278: eventLabels[i] = "Balcony Loader After Nimbus Castle"; break;
+                        case 2279: eventLabels[i] = "Empty"; break;
+                        case 2280: eventLabels[i] = "Empty"; break;
+                        case 2281: eventLabels[i] = "Empty"; break;
+                        case 2282: eventLabels[i] = "Empty"; break;
+                        case 2283: eventLabels[i] = "Empty"; break;
+                        case 2284: eventLabels[i] = "Empty"; break;
+                        case 2285: eventLabels[i] = "Empty"; break;
+                        case 2286: eventLabels[i] = "Empty"; break;
+                        case 2287: eventLabels[i] = "Empty"; break;
+                        case 2288: eventLabels[i] = "Empty"; break;
+                        case 2289: eventLabels[i] = "Empty"; break;
+                        case 2290: eventLabels[i] = "Empty"; break;
+                        case 2291: eventLabels[i] = "Empty"; break;
+                        case 2292: eventLabels[i] = "Ending Credits Toadofsky"; break;
+                        case 2293: eventLabels[i] = "Empty"; break;
+                        case 2294: eventLabels[i] = "Ending Credits Wedding Loader"; break;
+                        case 2295: eventLabels[i] = "Ending Credits Wedding Logic"; break;
+                        case 2296: eventLabels[i] = "Empty"; break;
+                        case 2297: eventLabels[i] = "Empty"; break;
+                        case 2298: eventLabels[i] = "Empty"; break;
+                        case 2299: eventLabels[i] = "Empty"; break;
+                        case 2300: eventLabels[i] = "Empty"; break;
+                        case 2301: eventLabels[i] = "Empty"; break;
+                        case 2302: eventLabels[i] = "Empty"; break;
+                        case 2303: eventLabels[i] = "Empty"; break;
+                        case 2304: eventLabels[i] = "Bank 1F Return Event 2"; break;
+                        case 2305: eventLabels[i] = "Slot Chest Template"; break;
+                        case 2306: eventLabels[i] = "Empty"; break;
+                        case 2307: eventLabels[i] = "Tower Button"; break;
+                        case 2308: eventLabels[i] = "Booster Pass 1St Room Loader"; break;
+                        case 2309: eventLabels[i] = "Booster Pass Lakitu Tosses Spiny"; break;
+                        case 2310: eventLabels[i] = "Empty"; break;
+                        case 2311: eventLabels[i] = "Booster Pass Artichoker Encounter 1"; break;
+                        case 2312: eventLabels[i] = "Booster Pass Spiny Coin Button"; break;
+                        case 2313: eventLabels[i] = "Booster Pass Artichoker Encounter 2"; break;
+                        case 2314: eventLabels[i] = "Empty"; break;
+                        case 2315: eventLabels[i] = "Tower Parachute Room Loader"; break;
+                        case 2316: eventLabels[i] = "Gardener Exterior Loader"; break;
+                        case 2317: eventLabels[i] = "Gardener Cloud Loader"; break;
+                        case 2318: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2319: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2320: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2321: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2322: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2323: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2324: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2325: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2326: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2327: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2328: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2329: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2330: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2331: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2332: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2333: eventLabels[i] = "Booster Pass 2Nd Room Spiny Summoner"; break;
+                        case 2334: eventLabels[i] = "Empty"; break;
+                        case 2335: eventLabels[i] = "Tower First Staircase Loader"; break;
+                        case 2336: eventLabels[i] = "Tower First Staircase Spookum Direction 1"; break;
+                        case 2337: eventLabels[i] = "Tower First Staircase Spookum Direction 2"; break;
+                        case 2338: eventLabels[i] = "Tower Button Room Loader"; break;
+                        case 2339: eventLabels[i] = "Tower First Staircase Controls Npc Behind Curtain"; break;
+                        case 2340: eventLabels[i] = "Tower Seesaw Chest Room Loader"; break;
+                        case 2341: eventLabels[i] = "Tower Seesaw Chest"; break;
+                        case 2342: eventLabels[i] = "Tower Seesaw Chest Contd"; break;
+                        case 2343: eventLabels[i] = "Tower Seesaw Room Set Origin"; break;
+                        case 2344: eventLabels[i] = "Tower Thwomp Seesaw Room Loader"; break;
+                        case 2345: eventLabels[i] = "Tower Thwomp Seesaw"; break;
+                        case 2346: eventLabels[i] = "Tower Thwomp Seesaw Contd"; break;
+                        case 2347: eventLabels[i] = "Tower Top Floor Dummy Chest"; break;
+                        case 2348: eventLabels[i] = "Tower Bullet Bill Room Loader"; break;
+                        case 2349: eventLabels[i] = "Tower Spookum Jumps Out"; break;
+                        case 2350: eventLabels[i] = "Climb Gardener Beanstalk"; break;
+                        case 2351: eventLabels[i] = "Tower Start Bullet Bills Animation"; break;
+                        case 2352: eventLabels[i] = "Tower Start Bullet Bills"; break;
+                        case 2353: eventLabels[i] = "Tower Henchman 3"; break;
+                        case 2354: eventLabels[i] = "Empty"; break;
+                        case 2355: eventLabels[i] = "Empty"; break;
+                        case 2356: eventLabels[i] = "Empty"; break;
+                        case 2357: eventLabels[i] = "Empty"; break;
+                        case 2358: eventLabels[i] = "Tower Thwomp Seesaw Room Loader Contd"; break;
+                        case 2359: eventLabels[i] = "Abyss 1St Save Room Loader"; break;
+                        case 2360: eventLabels[i] = "Abyss 1St Trampoline Catcher Loader"; break;
+                        case 2361: eventLabels[i] = "Abyss Ameboid Button Room Loader"; break;
+                        case 2362: eventLabels[i] = "Abyss Four Bolt Room Loader"; break;
+                        case 2363: eventLabels[i] = "Abyss 1St Boss Room Loader"; break;
+                        case 2364: eventLabels[i] = "Tower Top Floor Chest Room Loader"; break;
+                        case 2365: eventLabels[i] = "Empty"; break;
+                        case 2366: eventLabels[i] = "Empty"; break;
+                        case 2367: eventLabels[i] = "Empty"; break;
+                        case 2368: eventLabels[i] = "Empty"; break;
+                        case 2369: eventLabels[i] = "Abyss Bolt"; break;
+                        case 2370: eventLabels[i] = "Abyss Bolt"; break;
+                        case 2371: eventLabels[i] = "Abyss Bolt"; break;
+                        case 2372: eventLabels[i] = "Abyss Bolt"; break;
+                        case 2373: eventLabels[i] = "Empty"; break;
+                        case 2374: eventLabels[i] = "Empty"; break;
+                        case 2375: eventLabels[i] = "Empty"; break;
+                        case 2376: eventLabels[i] = "Empty"; break;
+                        case 2377: eventLabels[i] = "Empty"; break;
+                        case 2378: eventLabels[i] = "Tower Parachute Room Hidden Item"; break;
+                        case 2379: eventLabels[i] = "Abyss 1St Save Room Background"; break;
+                        case 2380: eventLabels[i] = "Abyss Bolt Near Side"; break;
+                        case 2381: eventLabels[i] = "Abyss Bolt Far Side"; break;
+                        case 2382: eventLabels[i] = "Abyss Bolt Near Side"; break;
+                        case 2383: eventLabels[i] = "Abyss Bolt Far Side"; break;
+                        case 2384: eventLabels[i] = "Gardeners House Loader"; break;
+                        case 2385: eventLabels[i] = "Abyss Four Bolt Room Background"; break;
+                        case 2386: eventLabels[i] = "Abyss Four Bolt Room Bolt"; break;
+                        case 2387: eventLabels[i] = "Bean Valley Boss Prize Pickup"; break;
+                        case 2388: eventLabels[i] = "Abyss Ameboid Button"; break;
+                        case 2389: eventLabels[i] = "Empty"; break;
+                        case 2390: eventLabels[i] = "Abyss 1St Save Point"; break;
+                        case 2391: eventLabels[i] = "Beanstalk From Inside Gardeners House"; break;
+                        case 2392: eventLabels[i] = "Gardener"; break;
+                        case 2393: eventLabels[i] = "Abyss Exit Trampoline"; break;
+                        case 2394: eventLabels[i] = "Empty"; break;
+                        case 2395: eventLabels[i] = "Empty"; break;
+                        case 2396: eventLabels[i] = "Empty"; break;
+                        case 2397: eventLabels[i] = "Empty"; break;
+                        case 2398: eventLabels[i] = "Empty"; break;
+                        case 2399: eventLabels[i] = "Abyss Room 1 Loader"; break;
+                        case 2400: eventLabels[i] = "Empty"; break;
+                        case 2401: eventLabels[i] = "Begin 8Bit"; break;
+                        case 2402: eventLabels[i] = "8Bit Background"; break;
+                        case 2403: eventLabels[i] = "8Bit End East"; break;
+                        case 2404: eventLabels[i] = "8Bit End West"; break;
+                        case 2405: eventLabels[i] = "Star Hill Final Area Loader"; break;
+                        case 2406: eventLabels[i] = "Empty"; break;
+                        case 2407: eventLabels[i] = "Star Hill Final Exit"; break;
+                        case 2408: eventLabels[i] = "Abyss Bolt Near Side"; break;
+                        case 2409: eventLabels[i] = "Abyss Room Before 1St Boss Loader"; break;
+                        case 2410: eventLabels[i] = "Forest Tree Generic Underground Trampoline"; break;
+                        case 2411: eventLabels[i] = "Forest Underground 2 Exit Trampoline"; break;
+                        case 2412: eventLabels[i] = "Forest Secret Trampoline"; break;
+                        case 2413: eventLabels[i] = "Forest Underground 2 Entrance Trampoline"; break;
+                        case 2414: eventLabels[i] = "Forest Underground 1 Exit Trampoline"; break;
+                        case 2415: eventLabels[i] = "Forest Underground 1 Entrance Trampoline"; break;
+                        case 2416: eventLabels[i] = "Forest Trampoline Business Logic"; break;
+                        case 2417: eventLabels[i] = "Tower Chomp Stairway Loader"; break;
+                        case 2418: eventLabels[i] = "Forest Underground 1 Loader"; break;
+                        case 2419: eventLabels[i] = "Empty"; break;
+                        case 2420: eventLabels[i] = "Empty"; break;
+                        case 2421: eventLabels[i] = "Empty"; break;
+                        case 2422: eventLabels[i] = "Abyss Room Before 1St Boss Lower Trampoline"; break;
+                        case 2423: eventLabels[i] = "Abyss Trampoline To 1St Boss"; break;
+                        case 2424: eventLabels[i] = "Forest Arrow Hits You"; break;
+                        case 2425: eventLabels[i] = "Forest Maze Secret Loader"; break;
+                        case 2426: eventLabels[i] = "Forest Mushroom Pickup"; break;
+                        case 2427: eventLabels[i] = "Forest Underground 2 Loader"; break;
+                        case 2428: eventLabels[i] = "Empty"; break;
+                        case 2429: eventLabels[i] = "Forest Unknown Summoner"; break;
+                        case 2430: eventLabels[i] = "Forest Premaze Save Room Loader"; break;
+                        case 2431: eventLabels[i] = "Forest Maze Area Loader"; break;
+                        case 2432: eventLabels[i] = "Forest Maze Transition"; break;
+                        case 2433: eventLabels[i] = "Forest Maze Transition"; break;
+                        case 2434: eventLabels[i] = "Forest Maze Transition"; break;
+                        case 2435: eventLabels[i] = "Forest Maze Transition"; break;
+                        case 2436: eventLabels[i] = "Forest Boss Room Exit To Maze"; break;
+                        case 2437: eventLabels[i] = "Forest Boss Room Exit To World Map"; break;
+                        case 2438: eventLabels[i] = "Forest Secret Trunk"; break;
+                        case 2439: eventLabels[i] = "Forest Secret Area Exit"; break;
+                        case 2440: eventLabels[i] = "Forest Final Wiggler Pipe"; break;
+                        case 2441: eventLabels[i] = "Forest 1St Trunk"; break;
+                        case 2442: eventLabels[i] = "Forest Initiate Maze"; break;
+                        case 2443: eventLabels[i] = "Forest Room Before Trunks Area Trunk"; break;
+                        case 2444: eventLabels[i] = "Forest Premaze Save Room Trunk"; break;
+                        case 2445: eventLabels[i] = "Tower Small Save Room Loader"; break;
+                        case 2446: eventLabels[i] = "Forest Boss Henchmen Bounce"; break;
+                        case 2447: eventLabels[i] = "Forest Summon Fast Amanita"; break;
+                        case 2448: eventLabels[i] = "Forest Boss Fight"; break;
+                        case 2449: eventLabels[i] = "Forest Trunk Room Rightmost Trunk"; break;
+                        case 2450: eventLabels[i] = "Forest Trunk Room Lowest Trunk"; break;
+                        case 2451: eventLabels[i] = "Forest Trunk Room Middle Right Trunk"; break;
+                        case 2452: eventLabels[i] = "Forest Trunk Room Middle Left Trunk"; break;
+                        case 2453: eventLabels[i] = "Forest Trunk Room Upper Left Trunk"; break;
+                        case 2454: eventLabels[i] = "Forest Trunk Room Upper Right Trunk"; break;
+                        case 2455: eventLabels[i] = "Forest Trunk Room Wiggler Trunk"; break;
+                        case 2456: eventLabels[i] = "Awaken Sleeping Wiggler"; break;
+                        case 2457: eventLabels[i] = "Star Hill 1St Room Summon South Sackit"; break;
+                        case 2458: eventLabels[i] = "Star Hill 1St Room Summon North Sackit"; break;
+                        case 2459: eventLabels[i] = "Star Hill 1St Room Summon Northwest Sackit"; break;
+                        case 2460: eventLabels[i] = "Star Hill 1St Room Summon Southeast Sackit"; break;
+                        case 2461: eventLabels[i] = "Star Hill 2Nd Room Summon North Sackit"; break;
+                        case 2462: eventLabels[i] = "Star Hill 2Nd Room Summon East Sackit"; break;
+                        case 2463: eventLabels[i] = "Star Hill 2Nd Room Summon West Sackit"; break;
+                        case 2464: eventLabels[i] = "Star Hill 2Nd Room Summon Central Sackit"; break;
+                        case 2465: eventLabels[i] = "Empty"; break;
+                        case 2466: eventLabels[i] = "Bean Valley 1St Room Loader"; break;
+                        case 2467: eventLabels[i] = "Bean Valley Pipe To Dead End"; break;
+                        case 2468: eventLabels[i] = "Bean Valley Dead End Pipe"; break;
+                        case 2469: eventLabels[i] = "Bean Valley 1St Progression Pipe"; break;
+                        case 2470: eventLabels[i] = "Bean Valley 1St Progression Pipe Reverse"; break;
+                        case 2471: eventLabels[i] = "Bean Valley 2Nd Progression Pipe"; break;
+                        case 2472: eventLabels[i] = "Bean Valley 2Nd Progression Pipe Reverse"; break;
+                        case 2473: eventLabels[i] = "Bean Valley Pipe To 1St Chest"; break;
+                        case 2474: eventLabels[i] = "Bean Valley 1St Chest Pipe"; break;
+                        case 2475: eventLabels[i] = "Star Hill 3Rd Room Summon Sackit"; break;
+                        case 2476: eventLabels[i] = "Bean Valley 5 Pipe Area Loader"; break;
+                        case 2477: eventLabels[i] = "Bean Valley Piranha Plant Animations"; break;
+                        case 2478: eventLabels[i] = "Bean Valley Beanstalk Room Loader"; break;
+                        case 2479: eventLabels[i] = "Bean Valley Bottom Left Piranha"; break;
+                        case 2480: eventLabels[i] = "Bean Valley Bottom Right Piranha"; break;
+                        case 2481: eventLabels[i] = "Bean Valley Rightmost Piranha"; break;
+                        case 2482: eventLabels[i] = "Bean Valley Top Piranha"; break;
+                        case 2483: eventLabels[i] = "Bean Valley Leftmost Piranha"; break;
+                        case 2484: eventLabels[i] = "Bean Valley Top Pipe"; break;
+                        case 2485: eventLabels[i] = "Bean Valley Leftmost Pipe"; break;
+                        case 2486: eventLabels[i] = "Bean Valley Bottom Left Pipe"; break;
+                        case 2487: eventLabels[i] = "Bean Valley Rightmost Pipe"; break;
+                        case 2488: eventLabels[i] = "Bean Valley Bottom Right Pipe"; break;
+                        case 2489: eventLabels[i] = "Bean Valley Leftmost Pipe Basement Loader"; break;
+                        case 2490: eventLabels[i] = "Bean Valley Leftmost Pipe Basement Original Slot Machine"; break;
+                        case 2491: eventLabels[i] = "Bean Valley Bottom Left Pipe Basement Original Slot Machine"; break;
+                        case 2492: eventLabels[i] = "Bean Valley Bottom Right Pipe Basement Original Slot Machine"; break;
+                        case 2493: eventLabels[i] = "Mimic 3"; break;
+                        case 2494: eventLabels[i] = "Empty"; break;
+                        case 2495: eventLabels[i] = "Empty"; break;
+                        case 2496: eventLabels[i] = "Start Game"; break;
+                        case 2497: eventLabels[i] = "Additional Gating Logic Start Playing"; break;
+                        case 2498: eventLabels[i] = "Empty"; break;
+                        case 2499: eventLabels[i] = "Empty"; break;
+                        case 2500: eventLabels[i] = "Empty"; break;
+                        case 2501: eventLabels[i] = "Empty"; break;
+                        case 2502: eventLabels[i] = "Empty"; break;
+                        case 2503: eventLabels[i] = "Star Hill 3Rd Room Top Left Flower"; break;
+                        case 2504: eventLabels[i] = "Star Hill 3Rd Room Bottom Left Flower"; break;
+                        case 2505: eventLabels[i] = "Star Hill 3Rd Room Door Front Flower"; break;
+                        case 2506: eventLabels[i] = "Star Hill 3Rd Room Door Back Flower"; break;
+                        case 2507: eventLabels[i] = "Star Hill 3Rd Room Top Right Flower"; break;
+                        case 2508: eventLabels[i] = "Star Hill 3Rd Room Bottom Right Flower"; break;
+                        case 2509: eventLabels[i] = "Star Hill 3Rd Room Open Door"; break;
+                        case 2510: eventLabels[i] = "Star Hill 1St Room Top Left Flower"; break;
+                        case 2511: eventLabels[i] = "Star Hill 1St Room Bottom Left Flower"; break;
+                        case 2512: eventLabels[i] = "Star Hill 1St Room Bottom Middle Flower"; break;
+                        case 2513: eventLabels[i] = "Star Hill 1St Room Top Right Flower"; break;
+                        case 2514: eventLabels[i] = "Star Hill 1St Room Bottom Right Flower"; break;
+                        case 2515: eventLabels[i] = "Star Hill 1St Room Open Door"; break;
+                        case 2516: eventLabels[i] = "Star Hill 2Nd Room Top Left Flower"; break;
+                        case 2517: eventLabels[i] = "Star Hill 2Nd Room Bottom Left Flower"; break;
+                        case 2518: eventLabels[i] = "Star Hill 2Nd Room Central Left Flower"; break;
+                        case 2519: eventLabels[i] = "Star Hill 2Nd Room Central Right Flower"; break;
+                        case 2520: eventLabels[i] = "Star Hill 2Nd Room Top Right Flower"; break;
+                        case 2521: eventLabels[i] = "Star Hill 2Nd Room Bottom Right Flower"; break;
+                        case 2522: eventLabels[i] = "Star Hill 2Nd Room Open Door"; break;
+                        case 2523: eventLabels[i] = "Star Hill 1St Room Use Door"; break;
+                        case 2524: eventLabels[i] = "Star Hill 2Nd Room Loader"; break;
+                        case 2525: eventLabels[i] = "Star Hill 2Nd Room Use Door"; break;
+                        case 2526: eventLabels[i] = "Star Hill 1St Room Loader"; break;
+                        case 2527: eventLabels[i] = "Star Hill 1St Room Wish In Front Of Door"; break;
+                        case 2528: eventLabels[i] = "Star Hill 1St Room Wish Southeast Of Door"; break;
+                        case 2529: eventLabels[i] = "Star Hill 1St Room Wish Top Left"; break;
+                        case 2530: eventLabels[i] = "Star Hill 1St Room Wish Bottom Right"; break;
+                        case 2531: eventLabels[i] = "Star Hill 2Nd Room Wish Bottom Right"; break;
+                        case 2532: eventLabels[i] = "Star Hill 2Nd Room Wish Bottom Left"; break;
+                        case 2533: eventLabels[i] = "Star Hill 2Nd Room Wish In Front Of Door"; break;
+                        case 2534: eventLabels[i] = "Star Hill 2Nd Room Wish Top Right"; break;
+                        case 2535: eventLabels[i] = "Star Hill 2Nd Room Wish Top Left"; break;
+                        case 2536: eventLabels[i] = "Star Hill 3Rd Room Wish Top Left"; break;
+                        case 2537: eventLabels[i] = "Star Hill 3Rd Room Wish Behind Door Left"; break;
+                        case 2538: eventLabels[i] = "Star Hill 3Rd Room Wish Behind Door Right"; break;
+                        case 2539: eventLabels[i] = "Bean Valley Leftmost Pipe Basement Trampoline"; break;
+                        case 2540: eventLabels[i] = "Bean Valley Top Pipe Basement Trampoline"; break;
+                        case 2541: eventLabels[i] = "Bean Valley Top Pipe Basement Loader"; break;
+                        case 2542: eventLabels[i] = "Bean Valley Bottom Left Pipe Basement Trampoline"; break;
+                        case 2543: eventLabels[i] = "Bean Valley Bottom Left Pipe Basement Loader"; break;
+                        case 2544: eventLabels[i] = "Bean Valley Rightmost Pipe Basement Loader"; break;
+                        case 2545: eventLabels[i] = "Bean Valley Rightmost Pipe Basement Trampoline To Five Pipe Room"; break;
+                        case 2546: eventLabels[i] = "Bean Valley Rightmost Pipe Basement Trampoline To Lone Chest"; break;
+                        case 2547: eventLabels[i] = "Bean Valley Rightmost Pipe"; break;
+                        case 2548: eventLabels[i] = "Bean Valley Bottom Right Pipe"; break;
+                        case 2549: eventLabels[i] = "Bean Valley Bottom Right Pipe Basement Loader"; break;
+                        case 2550: eventLabels[i] = "Bean Valley Rightmost Pipe Basement Geckit Runs At You"; break;
+                        case 2551: eventLabels[i] = "Empty"; break;
+                        case 2552: eventLabels[i] = "Empty"; break;
+                        case 2553: eventLabels[i] = "Empty"; break;
+                        case 2554: eventLabels[i] = "Bean Valley Rightmost Pipe Basement Staircase Item"; break;
+                        case 2555: eventLabels[i] = "Bean Valley Boss Room Loader"; break;
+                        case 2556: eventLabels[i] = "Bean Valley Boss Fight"; break;
+                        case 2557: eventLabels[i] = "Bean Valley Waters Boss"; break;
+                        case 2558: eventLabels[i] = "Bean Valley Boss Room Pipe"; break;
+                        case 2559: eventLabels[i] = "Bean Valley Beanstalk Room Pipe"; break;
+                        case 2560: eventLabels[i] = "Empty"; break;
+                        case 2561: eventLabels[i] = "Empty"; break;
+                        case 2562: eventLabels[i] = "Empty"; break;
+                        case 2563: eventLabels[i] = "Reveal Bean Valley Beanstalk"; break;
+                        case 2564: eventLabels[i] = "Booster Pass Bush Item"; break;
+                        case 2565: eventLabels[i] = "Empty"; break;
+                        case 2566: eventLabels[i] = "Empty"; break;
+                        case 2567: eventLabels[i] = "Empty"; break;
+                        case 2568: eventLabels[i] = "Booster Pass Exit To Secret"; break;
+                        case 2569: eventLabels[i] = "Booster Pass Secret Exit"; break;
+                        case 2570: eventLabels[i] = "Booster Pass Secret Loader"; break;
+                        case 2571: eventLabels[i] = "Booster Pass Secret Background"; break;
+                        case 2572: eventLabels[i] = "Booster Pass Exit From Room 1 To Room 2"; break;
+                        case 2573: eventLabels[i] = "Empty"; break;
+                        case 2574: eventLabels[i] = "Tower First Staircase Chest"; break;
+                        case 2575: eventLabels[i] = "Tower 8Bit Music"; break;
+                        case 2576: eventLabels[i] = "Tower 8Bit Room Loader"; break;
+                        case 2577: eventLabels[i] = "Empty"; break;
+                        case 2578: eventLabels[i] = "Booster Tower Small Save Room Back Exit"; break;
+                        case 2579: eventLabels[i] = "Empty"; break;
+                        case 2580: eventLabels[i] = "Empty"; break;
+                        case 2581: eventLabels[i] = "Empty"; break;
+                        case 2582: eventLabels[i] = "Empty"; break;
+                        case 2583: eventLabels[i] = "Empty"; break;
+                        case 2584: eventLabels[i] = "Empty"; break;
+                        case 2585: eventLabels[i] = "Empty"; break;
+                        case 2586: eventLabels[i] = "Booster Pass Apprentice Fight"; break;
+                        case 2587: eventLabels[i] = "Snifit 4"; break;
+                        case 2588: eventLabels[i] = "Snifit 5"; break;
+                        case 2589: eventLabels[i] = "Snifit 6"; break;
+                        case 2590: eventLabels[i] = "Snifit 7"; break;
+                        case 2591: eventLabels[i] = "Snifit 8"; break;
+                        case 2592: eventLabels[i] = "Abyss Fall Off Before First Boss"; break;
+                        case 2593: eventLabels[i] = "Abyss Pre First Boss Bolt"; break;
+                        case 2594: eventLabels[i] = "Abyss Pre First Boss Bolt"; break;
+                        case 2595: eventLabels[i] = "Abyss Save Room With Chest Loader"; break;
+                        case 2596: eventLabels[i] = "Abyss 1St Boss Fight"; break;
+                        case 2597: eventLabels[i] = "Abyss Pre First Boss Bolt"; break;
+                        case 2598: eventLabels[i] = "Forest Secret Entrance Loader"; break;
+                        case 2599: eventLabels[i] = "Empty"; break;
+                        case 2600: eventLabels[i] = "Empty"; break;
+                        case 2601: eventLabels[i] = "Factory 4Th Room Loader"; break;
+                        case 2602: eventLabels[i] = "Bean Valley Exit To World Map"; break;
+                        case 2603: eventLabels[i] = "Factory 4Th Boss Fight"; break;
+                        case 2604: eventLabels[i] = "Abyss Chest Before 1St Boss"; break;
+                        case 2605: eventLabels[i] = "Factory 1St Room Before Fight Loader"; break;
+                        case 2606: eventLabels[i] = "Factory 1St Boss"; break;
+                        case 2607: eventLabels[i] = "Empty"; break;
+                        case 2608: eventLabels[i] = "Factory 1St Room Exit To 2Nd Room"; break;
+                        case 2609: eventLabels[i] = "Empty"; break;
+                        case 2610: eventLabels[i] = "Empty"; break;
+                        case 2611: eventLabels[i] = "Empty"; break;
+                        case 2612: eventLabels[i] = "Empty"; break;
+                        case 2613: eventLabels[i] = "Empty"; break;
+                        case 2614: eventLabels[i] = "Empty"; break;
+                        case 2615: eventLabels[i] = "Empty"; break;
+                        case 2616: eventLabels[i] = "Factory 4Th Room Green Button"; break;
+                        case 2617: eventLabels[i] = "Factory 2Nd Room Loader"; break;
+                        case 2618: eventLabels[i] = "Factory 2Nd Boss"; break;
+                        case 2619: eventLabels[i] = "Ending Credits Sunset"; break;
+                        case 2620: eventLabels[i] = "Factory 3Rd Room Background Npcs Bonk Conveyor"; break;
+                        case 2621: eventLabels[i] = "Factory 3Rd Room Loader"; break;
+                        case 2622: eventLabels[i] = "Ending Credits Keep"; break;
+                        case 2623: eventLabels[i] = "Empty"; break;
+                        case 2624: eventLabels[i] = "Empty"; break;
+                        case 2625: eventLabels[i] = "Empty"; break;
+                        case 2626: eventLabels[i] = "Empty"; break;
+                        case 2627: eventLabels[i] = "Factory 3Rd Boss Fight"; break;
+                        case 2628: eventLabels[i] = "Ending Credits Sunset Opener"; break;
+                        case 2629: eventLabels[i] = "Ending Credits Keep Opener"; break;
+                        case 2630: eventLabels[i] = "Blackjack Table"; break;
+                        case 2631: eventLabels[i] = "Casino Slot Machine"; break;
+                        case 2632: eventLabels[i] = "Blackjack Guy"; break;
+                        case 2633: eventLabels[i] = "Casino Interior Loader"; break;
+                        case 2634: eventLabels[i] = "Casino Slot Machine"; break;
+                        case 2635: eventLabels[i] = "Casino Doorway Loader"; break;
+                        case 2636: eventLabels[i] = "Casino Guard"; break;
+                        case 2637: eventLabels[i] = "Casino Grate Guy"; break;
+                        case 2638: eventLabels[i] = "Empty"; break;
+                        case 2639: eventLabels[i] = "Empty"; break;
+                        case 2640: eventLabels[i] = "Booster Pass Right Chest"; break;
+                        case 2641: eventLabels[i] = "Factory 1St Room Loader After Fight"; break;
+                        case 2642: eventLabels[i] = "Empty"; break;
+                        case 2643: eventLabels[i] = "Toad Shop"; break;
+                        case 2644: eventLabels[i] = "Empty"; break;
+                        case 2645: eventLabels[i] = "Casino Subroutine"; break;
+                        case 2646: eventLabels[i] = "Casino Grate Guy Await Button"; break;
+                        case 2647: eventLabels[i] = "Empty"; break;
+                        case 2648: eventLabels[i] = "Casino Exterior Loader"; break;
+                        case 2649: eventLabels[i] = "Casino Grate Guy Random Prize Granter"; break;
+                        case 2650: eventLabels[i] = "Casino Grate Guy Check If Sidequest Completed"; break;
+                        case 2651: eventLabels[i] = "Bucket Warp Check Granter"; break;
+                        case 2652: eventLabels[i] = "Seaside Exit To Beach"; break;
+                        case 2653: eventLabels[i] = "Empty"; break;
+                        case 2654: eventLabels[i] = "Empty"; break;
+                        case 2655: eventLabels[i] = "Empty"; break;
+                        case 2656: eventLabels[i] = "Empty"; break;
+                        case 2657: eventLabels[i] = "Empty"; break;
+                        case 2658: eventLabels[i] = "Empty"; break;
+                        case 2659: eventLabels[i] = "Empty"; break;
+                        case 2660: eventLabels[i] = "Empty"; break;
+                        case 2661: eventLabels[i] = "Empty"; break;
+                        case 2662: eventLabels[i] = "Empty"; break;
+                        case 2663: eventLabels[i] = "Empty"; break;
+                        case 2664: eventLabels[i] = "Empty"; break;
+                        case 2665: eventLabels[i] = "Empty"; break;
+                        case 2666: eventLabels[i] = "Empty"; break;
+                        case 2667: eventLabels[i] = "Empty"; break;
+                        case 2668: eventLabels[i] = "Knife Guy Second Grant"; break;
+                        case 2669: eventLabels[i] = "Empty"; break;
+                        case 2670: eventLabels[i] = "Tower Knife Guy Consolation Prize"; break;
+                        case 2671: eventLabels[i] = "Tower Knife Guy Check If Sidequest Completed"; break;
+                        case 2672: eventLabels[i] = "Tower Knife Guy Minigame Business Logic"; break;
+                        case 2673: eventLabels[i] = "Tower Knife Guy Minigame Business Logic Subroutine"; break;
+                        case 2674: eventLabels[i] = "Tower Knife Guy Minigame Business Logic Subroutine"; break;
+                        case 2675: eventLabels[i] = "Clone Reserved"; break;
+                        case 2676: eventLabels[i] = "Clone Reserved"; break;
+                        case 2677: eventLabels[i] = "Clone Reserved"; break;
+                        case 2678: eventLabels[i] = "Clone Reserved"; break;
+                        case 2679: eventLabels[i] = "Clone Reserved"; break;
+                        case 2680: eventLabels[i] = "Clone Reserved"; break;
+                        case 2681: eventLabels[i] = "Clone Reserved"; break;
+                        case 2682: eventLabels[i] = "Clone Reserved"; break;
+                        case 2683: eventLabels[i] = "Clone Reserved"; break;
+                        case 2684: eventLabels[i] = "Clone Reserved"; break;
+                        case 2685: eventLabels[i] = "Clone Reserved"; break;
+                        case 2686: eventLabels[i] = "Clone Reserved"; break;
+                        case 2687: eventLabels[i] = "Clone Reserved"; break;
+                        case 2688: eventLabels[i] = "Clone Reserved"; break;
+                        case 2689: eventLabels[i] = "Clone Reserved"; break;
+                        case 2690: eventLabels[i] = "Clone Reserved"; break;
+                        case 2691: eventLabels[i] = "Clone Reserved"; break;
+                        case 2692: eventLabels[i] = "Clone Reserved"; break;
+                        case 2693: eventLabels[i] = "Clone Reserved"; break;
+                        case 2694: eventLabels[i] = "Clone Reserved"; break;
+                        case 2695: eventLabels[i] = "Clone Reserved"; break;
+                        case 2696: eventLabels[i] = "Clone Reserved"; break;
+                        case 2697: eventLabels[i] = "Clone Reserved"; break;
+                        case 2698: eventLabels[i] = "Clone Reserved"; break;
+                        case 2699: eventLabels[i] = "Clone Reserved"; break;
+                        case 2700: eventLabels[i] = "Clone Reserved"; break;
+                        case 2701: eventLabels[i] = "Clone Reserved"; break;
+                        case 2702: eventLabels[i] = "Clone Reserved"; break;
+                        case 2703: eventLabels[i] = "Clone Reserved"; break;
+                        case 2704: eventLabels[i] = "Clone Reserved"; break;
+                        case 2705: eventLabels[i] = "Clone Reserved"; break;
+                        case 2706: eventLabels[i] = "Clone Reserved"; break;
+                        case 2707: eventLabels[i] = "Clone Reserved"; break;
+                        case 2708: eventLabels[i] = "Clone Reserved"; break;
+                        case 2709: eventLabels[i] = "Clone Reserved"; break;
+                        case 2710: eventLabels[i] = "Clone Reserved"; break;
+                        case 2711: eventLabels[i] = "Clone Reserved"; break;
+                        case 2712: eventLabels[i] = "Clone Reserved"; break;
+                        case 2713: eventLabels[i] = "Clone Reserved"; break;
+                        case 2714: eventLabels[i] = "Clone Reserved"; break;
+                        case 2715: eventLabels[i] = "Clone Reserved"; break;
+                        case 2716: eventLabels[i] = "Clone Reserved"; break;
+                        case 2717: eventLabels[i] = "Clone Reserved"; break;
+                        case 2718: eventLabels[i] = "Clone Reserved"; break;
+                        case 2719: eventLabels[i] = "Clone Reserved"; break;
+                        case 2720: eventLabels[i] = "Clone Reserved"; break;
+                        case 2721: eventLabels[i] = "Clone Reserved"; break;
+                        case 2722: eventLabels[i] = "Clone Reserved"; break;
+                        case 2723: eventLabels[i] = "Clone Reserved"; break;
+                        case 2724: eventLabels[i] = "Clone Reserved"; break;
+                        case 2725: eventLabels[i] = "Clone Reserved"; break;
+                        case 2726: eventLabels[i] = "Clone Reserved"; break;
+                        case 2727: eventLabels[i] = "Clone Reserved"; break;
+                        case 2728: eventLabels[i] = "Clone Reserved"; break;
+                        case 2729: eventLabels[i] = "Clone Reserved"; break;
+                        case 2730: eventLabels[i] = "Clone Reserved"; break;
+                        case 2731: eventLabels[i] = "Clone Reserved"; break;
+                        case 2732: eventLabels[i] = "Clone Reserved"; break;
+                        case 2733: eventLabels[i] = "Clone Reserved"; break;
+                        case 2734: eventLabels[i] = "Clone Reserved"; break;
+                        case 2735: eventLabels[i] = "Clone Reserved"; break;
+                        case 2736: eventLabels[i] = "Clone Reserved"; break;
+                        case 2737: eventLabels[i] = "Clone Reserved"; break;
+                        case 2738: eventLabels[i] = "Clone Reserved"; break;
+                        case 2739: eventLabels[i] = "Clone Reserved"; break;
+                        case 2740: eventLabels[i] = "Clone Reserved"; break;
+                        case 2741: eventLabels[i] = "Clone Reserved"; break;
+                        case 2742: eventLabels[i] = "Clone Reserved"; break;
+                        case 2743: eventLabels[i] = "Clone Reserved"; break;
+                        case 2744: eventLabels[i] = "Clone Reserved"; break;
+                        case 2745: eventLabels[i] = "Clone Reserved"; break;
+                        case 2746: eventLabels[i] = "Clone Reserved"; break;
+                        case 2747: eventLabels[i] = "Clone Reserved"; break;
+                        case 2748: eventLabels[i] = "Clone Reserved"; break;
+                        case 2749: eventLabels[i] = "Clone Reserved"; break;
+                        case 2750: eventLabels[i] = "Clone Reserved"; break;
+                        case 2751: eventLabels[i] = "Clone Reserved"; break;
+                        case 2752: eventLabels[i] = "Clone Reserved"; break;
+                        case 2753: eventLabels[i] = "Clone Reserved"; break;
+                        case 2754: eventLabels[i] = "Clone Reserved"; break;
+                        case 2755: eventLabels[i] = "Clone Reserved"; break;
+                        case 2756: eventLabels[i] = "Clone Reserved"; break;
+                        case 2757: eventLabels[i] = "Clone Reserved"; break;
+                        case 2758: eventLabels[i] = "Clone Reserved"; break;
+                        case 2759: eventLabels[i] = "Clone Reserved"; break;
+                        case 2760: eventLabels[i] = "Clone Reserved"; break;
+                        case 2761: eventLabels[i] = "Clone Reserved"; break;
+                        case 2762: eventLabels[i] = "Clone Reserved"; break;
+                        case 2763: eventLabels[i] = "Clone Reserved"; break;
+                        case 2764: eventLabels[i] = "Clone Reserved"; break;
+                        case 2765: eventLabels[i] = "Clone Reserved"; break;
+                        case 2766: eventLabels[i] = "Clone Reserved"; break;
+                        case 2767: eventLabels[i] = "Clone Reserved"; break;
+                        case 2768: eventLabels[i] = "Clone Reserved"; break;
+                        case 2769: eventLabels[i] = "Clone Reserved"; break;
+                        case 2770: eventLabels[i] = "Clone Reserved"; break;
+                        case 2771: eventLabels[i] = "Clone Reserved"; break;
+                        case 2772: eventLabels[i] = "Clone Reserved"; break;
+                        case 2773: eventLabels[i] = "Clone Reserved"; break;
+                        case 2774: eventLabels[i] = "Clone Reserved"; break;
+                        case 2775: eventLabels[i] = "Clone Reserved"; break;
+                        case 2776: eventLabels[i] = "Clone Reserved"; break;
+                        case 2777: eventLabels[i] = "Clone Reserved"; break;
+                        case 2778: eventLabels[i] = "Clone Reserved"; break;
+                        case 2779: eventLabels[i] = "Clone Reserved"; break;
+                        case 2780: eventLabels[i] = "Clone Reserved"; break;
+                        case 2781: eventLabels[i] = "Clone Reserved"; break;
+                        case 2782: eventLabels[i] = "Clone Reserved"; break;
+                        case 2783: eventLabels[i] = "Clone Reserved"; break;
+                        case 2784: eventLabels[i] = "Clone Reserved"; break;
+                        case 2785: eventLabels[i] = "Clone Reserved"; break;
+                        case 2786: eventLabels[i] = "Clone Reserved"; break;
+                        case 2787: eventLabels[i] = "Clone Reserved"; break;
+                        case 2788: eventLabels[i] = "Clone Reserved"; break;
+                        case 2789: eventLabels[i] = "Clone Reserved"; break;
+                        case 2790: eventLabels[i] = "Clone Reserved"; break;
+                        case 2791: eventLabels[i] = "Clone Reserved"; break;
+                        case 2792: eventLabels[i] = "Clone Reserved"; break;
+                        case 2793: eventLabels[i] = "Star Hill Entrance Loader"; break;
+                        case 2794: eventLabels[i] = "Star Hill Marrymore Exit Sign"; break;
+                        case 2795: eventLabels[i] = "Star Hill Progress Sign"; break;
+                        case 2796: eventLabels[i] = "Star Hill Marrymore Exit Flower"; break;
+                        case 2797: eventLabels[i] = "Star Hill Progress Flower"; break;
+                        case 2798: eventLabels[i] = "Star Hill Exit To World Map"; break;
+                        case 2799: eventLabels[i] = "Star Hill Entrance To 1St Room"; break;
+                        case 2800: eventLabels[i] = "Casino Exit To World Map"; break;
+                        case 2801: eventLabels[i] = "Bean Valley Exit To Casino"; break;
+                        case 2802: eventLabels[i] = "Bean Valley Top Pipe Basement Loader"; break;
+                        case 2803: eventLabels[i] = "Bean Valley North Pipe Directional Bit"; break;
+                        case 2804: eventLabels[i] = "Bean Valley North Pipe Directional Bit"; break;
+                        case 2805: eventLabels[i] = "Tower Apprentice Room Loader"; break;
+                        case 2806: eventLabels[i] = "Forest Maze Room Before Trunk Room Loader"; break;
+                        case 2807: eventLabels[i] = "Mushroom Way 3 Exit To World Map"; break;
+                        case 2808: eventLabels[i] = "Mushroom Way Boss Fight"; break;
+                        case 2809: eventLabels[i] = "Mushroom Way Boss Threatens You"; break;
+                        case 2810: eventLabels[i] = "Empty"; break;
+                        case 2811: eventLabels[i] = "Mushroom Way 3 Lower Quick Spiny"; break;
+                        case 2812: eventLabels[i] = "Mushroom Way 3 Upper Quick Spiny"; break;
+                        case 2813: eventLabels[i] = "Mushroom Way 3 Summon Spinys"; break;
+                        case 2814: eventLabels[i] = "Mushroom Way 3 Loader"; break;
+                        case 2815: eventLabels[i] = "Empty"; break;
+                        case 2816: eventLabels[i] = "Async No Animation Frog Coin"; break;
+                        case 2817: eventLabels[i] = "Async No Animation Flower"; break;
+                        case 2818: eventLabels[i] = "Async No Animation 10 Coin"; break;
+                        case 2819: eventLabels[i] = "Async No Animation 1 Coin"; break;
+                        case 2820: eventLabels[i] = "Async No Animation Item"; break;
+                        case 2821: eventLabels[i] = "Async No Animation Star Piece"; break;
+                        case 2822: eventLabels[i] = "Async No Animation Mushroom"; break;
+                        case 2823: eventLabels[i] = "Clone Reserved"; break;
+                        case 2824: eventLabels[i] = "Clone Reserved"; break;
+                        case 2825: eventLabels[i] = "Clone Reserved"; break;
+                        case 2826: eventLabels[i] = "Clone Reserved"; break;
+                        case 2827: eventLabels[i] = "Clone Reserved"; break;
+                        case 2828: eventLabels[i] = "Clone Reserved"; break;
+                        case 2829: eventLabels[i] = "Clone Reserved"; break;
+                        case 2830: eventLabels[i] = "Clone Reserved"; break;
+                        case 2831: eventLabels[i] = "Clone Reserved"; break;
+                        case 2832: eventLabels[i] = "Clone Reserved"; break;
+                        case 2833: eventLabels[i] = "Clone Reserved"; break;
+                        case 2834: eventLabels[i] = "Clone Reserved"; break;
+                        case 2835: eventLabels[i] = "Clone Reserved"; break;
+                        case 2836: eventLabels[i] = "Clone Reserved"; break;
+                        case 2837: eventLabels[i] = "Clone Reserved"; break;
+                        case 2838: eventLabels[i] = "Clone Reserved"; break;
+                        case 2839: eventLabels[i] = "Clone Reserved"; break;
+                        case 2840: eventLabels[i] = "Clone Reserved"; break;
+                        case 2841: eventLabels[i] = "Clone Reserved"; break;
+                        case 2842: eventLabels[i] = "Clone Reserved"; break;
+                        case 2843: eventLabels[i] = "Clone Reserved"; break;
+                        case 2844: eventLabels[i] = "Clone Reserved"; break;
+                        case 2845: eventLabels[i] = "Clone Reserved"; break;
+                        case 2846: eventLabels[i] = "Clone Reserved"; break;
+                        case 2847: eventLabels[i] = "Clone Reserved"; break;
+                        case 2848: eventLabels[i] = "Clone Reserved"; break;
+                        case 2849: eventLabels[i] = "Clone Reserved"; break;
+                        case 2850: eventLabels[i] = "Clone Reserved"; break;
+                        case 2851: eventLabels[i] = "Clone Reserved"; break;
+                        case 2852: eventLabels[i] = "Clone Reserved"; break;
+                        case 2853: eventLabels[i] = "Clone Reserved"; break;
+                        case 2854: eventLabels[i] = "Clone Reserved"; break;
+                        case 2855: eventLabels[i] = "Clone Reserved"; break;
+                        case 2856: eventLabels[i] = "Clone Reserved"; break;
+                        case 2857: eventLabels[i] = "Clone Reserved"; break;
+                        case 2858: eventLabels[i] = "Clone Reserved"; break;
+                        case 2859: eventLabels[i] = "Clone Reserved"; break;
+                        case 2860: eventLabels[i] = "Clone Reserved"; break;
+                        case 2861: eventLabels[i] = "Clone Reserved"; break;
+                        case 2862: eventLabels[i] = "Clone Reserved"; break;
+                        case 2863: eventLabels[i] = "Clone Reserved"; break;
+                        case 2864: eventLabels[i] = "Clone Reserved"; break;
+                        case 2865: eventLabels[i] = "Clone Reserved"; break;
+                        case 2866: eventLabels[i] = "Clone Reserved"; break;
+                        case 2867: eventLabels[i] = "Clone Reserved"; break;
+                        case 2868: eventLabels[i] = "Clone Reserved"; break;
+                        case 2869: eventLabels[i] = "Clone Reserved"; break;
+                        case 2870: eventLabels[i] = "Clone Reserved"; break;
+                        case 2871: eventLabels[i] = "Clone Reserved"; break;
+                        case 2872: eventLabels[i] = "Clone Reserved"; break;
+                        case 2873: eventLabels[i] = "Clone Reserved"; break;
+                        case 2874: eventLabels[i] = "Clone Reserved"; break;
+                        case 2875: eventLabels[i] = "Clone Reserved"; break;
+                        case 2876: eventLabels[i] = "Clone Reserved"; break;
+                        case 2877: eventLabels[i] = "Clone Reserved"; break;
+                        case 2878: eventLabels[i] = "Clone Reserved"; break;
+                        case 2879: eventLabels[i] = "Clone Reserved"; break;
+                        case 2880: eventLabels[i] = "Clone Reserved"; break;
+                        case 2881: eventLabels[i] = "Clone Reserved"; break;
+                        case 2882: eventLabels[i] = "Clone Reserved"; break;
+                        case 2883: eventLabels[i] = "Clone Reserved"; break;
+                        case 2884: eventLabels[i] = "Clone Reserved"; break;
+                        case 2885: eventLabels[i] = "Clone Reserved"; break;
+                        case 2886: eventLabels[i] = "Clone Reserved"; break;
+                        case 2887: eventLabels[i] = "Clone Reserved"; break;
+                        case 2888: eventLabels[i] = "Clone Reserved"; break;
+                        case 2889: eventLabels[i] = "Clone Reserved"; break;
+                        case 2890: eventLabels[i] = "Clone Reserved"; break;
+                        case 2891: eventLabels[i] = "Clone Reserved"; break;
+                        case 2892: eventLabels[i] = "Clone Reserved"; break;
+                        case 2893: eventLabels[i] = "Clone Reserved"; break;
+                        case 2894: eventLabels[i] = "Clone Reserved"; break;
+                        case 2895: eventLabels[i] = "Clone Reserved"; break;
+                        case 2896: eventLabels[i] = "Clone Reserved"; break;
+                        case 2897: eventLabels[i] = "Clone Reserved"; break;
+                        case 2898: eventLabels[i] = "Clone Reserved"; break;
+                        case 2899: eventLabels[i] = "Clone Reserved"; break;
+                        case 2900: eventLabels[i] = "Clone Reserved"; break;
+                        case 2901: eventLabels[i] = "Clone Reserved"; break;
+                        case 2902: eventLabels[i] = "Clone Reserved"; break;
+                        case 2903: eventLabels[i] = "Clone Reserved"; break;
+                        case 2904: eventLabels[i] = "Clone Reserved"; break;
+                        case 2905: eventLabels[i] = "Clone Reserved"; break;
+                        case 2906: eventLabels[i] = "Clone Reserved"; break;
+                        case 2907: eventLabels[i] = "Clone Reserved"; break;
+                        case 2908: eventLabels[i] = "Clone Reserved"; break;
+                        case 2909: eventLabels[i] = "Clone Reserved"; break;
+                        case 2910: eventLabels[i] = "Clone Reserved"; break;
+                        case 2911: eventLabels[i] = "Clone Reserved"; break;
+                        case 2912: eventLabels[i] = "Clone Reserved"; break;
+                        case 2913: eventLabels[i] = "Clone Reserved"; break;
+                        case 2914: eventLabels[i] = "Clone Reserved"; break;
+                        case 2915: eventLabels[i] = "Clone Reserved"; break;
+                        case 2916: eventLabels[i] = "Clone Reserved"; break;
+                        case 2917: eventLabels[i] = "Clone Reserved"; break;
+                        case 2918: eventLabels[i] = "Clone Reserved"; break;
+                        case 2919: eventLabels[i] = "Clone Reserved"; break;
+                        case 2920: eventLabels[i] = "Clone Reserved"; break;
+                        case 2921: eventLabels[i] = "Clone Reserved"; break;
+                        case 2922: eventLabels[i] = "Clone Reserved"; break;
+                        case 2923: eventLabels[i] = "Clone Reserved"; break;
+                        case 2924: eventLabels[i] = "Clone Reserved"; break;
+                        case 2925: eventLabels[i] = "Clone Reserved"; break;
+                        case 2926: eventLabels[i] = "Clone Reserved"; break;
+                        case 2927: eventLabels[i] = "Clone Reserved"; break;
+                        case 2928: eventLabels[i] = "Clone Reserved"; break;
+                        case 2929: eventLabels[i] = "Clone Reserved"; break;
+                        case 2930: eventLabels[i] = "Clone Reserved"; break;
+                        case 2931: eventLabels[i] = "Clone Reserved"; break;
+                        case 2932: eventLabels[i] = "Clone Reserved"; break;
+                        case 2933: eventLabels[i] = "Clone Reserved"; break;
+                        case 2934: eventLabels[i] = "Clone Reserved"; break;
+                        case 2935: eventLabels[i] = "Clone Reserved"; break;
+                        case 2936: eventLabels[i] = "Clone Reserved"; break;
+                        case 2937: eventLabels[i] = "Clone Reserved"; break;
+                        case 2938: eventLabels[i] = "Clone Reserved"; break;
+                        case 2939: eventLabels[i] = "Clone Reserved"; break;
+                        case 2940: eventLabels[i] = "Clone Reserved"; break;
+                        case 2941: eventLabels[i] = "Clone Reserved"; break;
+                        case 2942: eventLabels[i] = "Clone Reserved"; break;
+                        case 2943: eventLabels[i] = "Clone Reserved"; break;
+                        case 2944: eventLabels[i] = "Clone Reserved"; break;
+                        case 2945: eventLabels[i] = "Clone Reserved"; break;
+                        case 2946: eventLabels[i] = "Clone Reserved"; break;
+                        case 2947: eventLabels[i] = "Clone Reserved"; break;
+                        case 2948: eventLabels[i] = "Clone Reserved"; break;
+                        case 2949: eventLabels[i] = "Clone Reserved"; break;
+                        case 2950: eventLabels[i] = "Clone Reserved"; break;
+                        case 2951: eventLabels[i] = "Clone Reserved"; break;
+                        case 2952: eventLabels[i] = "Clone Reserved"; break;
+                        case 2953: eventLabels[i] = "Clone Reserved"; break;
+                        case 2954: eventLabels[i] = "Clone Reserved"; break;
+                        case 2955: eventLabels[i] = "Clone Reserved"; break;
+                        case 2956: eventLabels[i] = "Clone Reserved"; break;
+                        case 2957: eventLabels[i] = "Clone Reserved"; break;
+                        case 2958: eventLabels[i] = "Clone Reserved"; break;
+                        case 2959: eventLabels[i] = "Clone Reserved"; break;
+                        case 2960: eventLabels[i] = "Clone Reserved"; break;
+                        case 2961: eventLabels[i] = "Clone Reserved"; break;
+                        case 2962: eventLabels[i] = "Clone Reserved"; break;
+                        case 2963: eventLabels[i] = "Clone Reserved"; break;
+                        case 2964: eventLabels[i] = "Clone Reserved"; break;
+                        case 2965: eventLabels[i] = "Clone Reserved"; break;
+                        case 2966: eventLabels[i] = "Clone Reserved"; break;
+                        case 2967: eventLabels[i] = "Clone Reserved"; break;
+                        case 2968: eventLabels[i] = "Clone Reserved"; break;
+                        case 2969: eventLabels[i] = "Clone Reserved"; break;
+                        case 2970: eventLabels[i] = "Clone Reserved"; break;
+                        case 2971: eventLabels[i] = "Clone Reserved"; break;
+                        case 2972: eventLabels[i] = "Clone Reserved"; break;
+                        case 2973: eventLabels[i] = "Clone Reserved"; break;
+                        case 2974: eventLabels[i] = "Clone Reserved"; break;
+                        case 2975: eventLabels[i] = "Clone Reserved"; break;
+                        case 2976: eventLabels[i] = "Clone Reserved"; break;
+                        case 2977: eventLabels[i] = "Clone Reserved"; break;
+                        case 2978: eventLabels[i] = "Clone Reserved"; break;
+                        case 2979: eventLabels[i] = "Clone Reserved"; break;
+                        case 2980: eventLabels[i] = "Clone Reserved"; break;
+                        case 2981: eventLabels[i] = "Clone Reserved"; break;
+                        case 2982: eventLabels[i] = "Clone Reserved"; break;
+                        case 2983: eventLabels[i] = "Clone Reserved"; break;
+                        case 2984: eventLabels[i] = "Clone Reserved"; break;
+                        case 2985: eventLabels[i] = "Clone Reserved"; break;
+                        case 2986: eventLabels[i] = "Clone Reserved"; break;
+                        case 2987: eventLabels[i] = "Clone Reserved"; break;
+                        case 2988: eventLabels[i] = "Clone Reserved"; break;
+                        case 2989: eventLabels[i] = "Clone Reserved"; break;
+                        case 2990: eventLabels[i] = "Clone Reserved"; break;
+                        case 2991: eventLabels[i] = "Clone Reserved"; break;
+                        case 2992: eventLabels[i] = "Clone Reserved"; break;
+                        case 2993: eventLabels[i] = "Clone Reserved"; break;
+                        case 2994: eventLabels[i] = "Clone Reserved"; break;
+                        case 2995: eventLabels[i] = "Clone Reserved"; break;
+                        case 2996: eventLabels[i] = "Clone Reserved"; break;
+                        case 2997: eventLabels[i] = "Clone Reserved"; break;
+                        case 2998: eventLabels[i] = "Clone Reserved"; break;
+                        case 2999: eventLabels[i] = "Clone Reserved"; break;
+                        case 3000: eventLabels[i] = "Clone Reserved"; break;
+                        case 3001: eventLabels[i] = "Clone Reserved"; break;
+                        case 3002: eventLabels[i] = "Clone Reserved"; break;
+                        case 3003: eventLabels[i] = "Clone Reserved"; break;
+                        case 3004: eventLabels[i] = "Clone Reserved"; break;
+                        case 3005: eventLabels[i] = "Clone Reserved"; break;
+                        case 3006: eventLabels[i] = "Clone Reserved"; break;
+                        case 3007: eventLabels[i] = "Clone Reserved"; break;
+                        case 3008: eventLabels[i] = "Clone Reserved"; break;
+                        case 3009: eventLabels[i] = "Clone Reserved"; break;
+                        case 3010: eventLabels[i] = "Clone Reserved"; break;
+                        case 3011: eventLabels[i] = "Clone Reserved"; break;
+                        case 3012: eventLabels[i] = "Clone Reserved"; break;
+                        case 3013: eventLabels[i] = "Clone Reserved"; break;
+                        case 3014: eventLabels[i] = "Clone Reserved"; break;
+                        case 3015: eventLabels[i] = "Clone Reserved"; break;
+                        case 3016: eventLabels[i] = "Clone Reserved"; break;
+                        case 3017: eventLabels[i] = "Clone Reserved"; break;
+                        case 3018: eventLabels[i] = "Clone Reserved"; break;
+                        case 3019: eventLabels[i] = "Clone Reserved"; break;
+                        case 3020: eventLabels[i] = "Clone Reserved"; break;
+                        case 3021: eventLabels[i] = "Clone Reserved"; break;
+                        case 3022: eventLabels[i] = "Clone Reserved"; break;
+                        case 3023: eventLabels[i] = "Clone Reserved"; break;
+                        case 3024: eventLabels[i] = "Clone Reserved"; break;
+                        case 3025: eventLabels[i] = "Clone Reserved"; break;
+                        case 3026: eventLabels[i] = "Clone Reserved"; break;
+                        case 3027: eventLabels[i] = "Clone Reserved"; break;
+                        case 3028: eventLabels[i] = "Clone Reserved"; break;
+                        case 3029: eventLabels[i] = "Clone Reserved"; break;
+                        case 3030: eventLabels[i] = "Clone Reserved"; break;
+                        case 3031: eventLabels[i] = "Clone Reserved"; break;
+                        case 3032: eventLabels[i] = "Clone Reserved"; break;
+                        case 3033: eventLabels[i] = "Clone Reserved"; break;
+                        case 3034: eventLabels[i] = "Clone Reserved"; break;
+                        case 3035: eventLabels[i] = "Clone Reserved"; break;
+                        case 3036: eventLabels[i] = "Clone Reserved"; break;
+                        case 3037: eventLabels[i] = "Clone Reserved"; break;
+                        case 3038: eventLabels[i] = "Clone Reserved"; break;
+                        case 3039: eventLabels[i] = "Clone Reserved"; break;
+                        case 3040: eventLabels[i] = "Clone Reserved"; break;
+                        case 3041: eventLabels[i] = "Clone Reserved"; break;
+                        case 3042: eventLabels[i] = "Clone Reserved"; break;
+                        case 3043: eventLabels[i] = "Clone Reserved"; break;
+                        case 3044: eventLabels[i] = "Clone Reserved"; break;
+                        case 3045: eventLabels[i] = "Clone Reserved"; break;
+                        case 3046: eventLabels[i] = "Clone Reserved"; break;
+                        case 3047: eventLabels[i] = "Clone Reserved"; break;
+                        case 3048: eventLabels[i] = "Clone Reserved"; break;
+                        case 3049: eventLabels[i] = "Clone Reserved"; break;
+                        case 3050: eventLabels[i] = "Clone Reserved"; break;
+                        case 3051: eventLabels[i] = "Clone Reserved"; break;
+                        case 3052: eventLabels[i] = "Clone Reserved"; break;
+                        case 3053: eventLabels[i] = "Clone Reserved"; break;
+                        case 3054: eventLabels[i] = "Clone Reserved"; break;
+                        case 3055: eventLabels[i] = "Clone Reserved"; break;
+                        case 3056: eventLabels[i] = "Clone Reserved"; break;
+                        case 3057: eventLabels[i] = "Clone Reserved"; break;
+                        case 3058: eventLabels[i] = "Clone Reserved"; break;
+                        case 3059: eventLabels[i] = "Clone Reserved"; break;
+                        case 3060: eventLabels[i] = "Clone Reserved"; break;
+                        case 3061: eventLabels[i] = "Clone Reserved"; break;
+                        case 3062: eventLabels[i] = "Clone Reserved"; break;
+                        case 3063: eventLabels[i] = "Clone Reserved"; break;
+                        case 3064: eventLabels[i] = "Clone Reserved"; break;
+                        case 3065: eventLabels[i] = "Clone Reserved"; break;
+                        case 3066: eventLabels[i] = "Clone Reserved"; break;
+                        case 3067: eventLabels[i] = "Clone Reserved"; break;
+                        case 3068: eventLabels[i] = "Clone Reserved"; break;
+                        case 3069: eventLabels[i] = "Clone Reserved"; break;
+                        case 3070: eventLabels[i] = "Clone Reserved"; break;
+                        case 3071: eventLabels[i] = "Clone Reserved"; break;
+                        case 3072: eventLabels[i] = "Flower Star Fc Or Mushroom Chest"; break;
+                        case 3073: eventLabels[i] = "Item Chest"; break;
+                        case 3074: eventLabels[i] = "Coin Chest Multi Hit 1"; break;
+                        case 3075: eventLabels[i] = "Heal Flash"; break;
+                        case 3076: eventLabels[i] = "Exp Star Chest Background"; break;
+                        case 3077: eventLabels[i] = "Ship Puzzle Mushroom"; break;
+                        case 3078: eventLabels[i] = "Mimic Or Slot Chest"; break;
+                        case 3079: eventLabels[i] = "Exp Star Levelup Screen"; break;
+                        case 3080: eventLabels[i] = "Coin Chest Quick Hit"; break;
+                        case 3081: eventLabels[i] = "You Missed"; break;
+                        case 3082: eventLabels[i] = "Frog Coin Chest Multi Hit 1"; break;
+                        case 3083: eventLabels[i] = "Freestanding Shuffled Frog Coin"; break;
+                        case 3084: eventLabels[i] = "Frog Coin Chest Quick Hit"; break;
+                        case 3085: eventLabels[i] = "Freestanding Shuffled Coin"; break;
+                        case 3086: eventLabels[i] = "Juice Bar Card Upgrade"; break;
+                        case 3087: eventLabels[i] = "Progressive Egg Upgrade"; break;
+                        case 3088: eventLabels[i] = "Empty"; break;
+                        case 3089: eventLabels[i] = "Grant Item From Chest"; break;
+                        case 3090: eventLabels[i] = "Open Lands End If Gated By Star Pieces"; break;
+                        case 3091: eventLabels[i] = "Multi Frog Coin Chest Single Hit"; break;
+                        case 3092: eventLabels[i] = "Star Piece Grant"; break;
+                        case 3093: eventLabels[i] = "Open Abyss If Star Piece Threshold Met"; break;
+                        case 3094: eventLabels[i] = "Star Piece Chest Animation"; break;
+                        case 3095: eventLabels[i] = "Empty"; break;
+                        case 3096: eventLabels[i] = "Empty"; break;
+                        case 3097: eventLabels[i] = "Juice Bar Card Npc Grant"; break;
+                        case 3098: eventLabels[i] = "Progressive Egg Npc Grant"; break;
+                        case 3099: eventLabels[i] = "Shuffle Fireworks Chest Grant"; break;
+                        case 3100: eventLabels[i] = "Progressive Fireworks Chest Grant"; break;
+                        case 3101: eventLabels[i] = "Star Piece Hunt End Game"; break;
+                        case 3102: eventLabels[i] = "Exit Jumping Kids House"; break;
+                        case 3103: eventLabels[i] = "Enter Mk Guest Room"; break;
+                        case 3104: eventLabels[i] = "Exit Mk Guest Room"; break;
+                        case 3105: eventLabels[i] = "Enter Mk Staircase"; break;
+                        case 3106: eventLabels[i] = "Exit Mk Staircase"; break;
+                        case 3107: eventLabels[i] = "Empty"; break;
+                        case 3108: eventLabels[i] = "Empty"; break;
+                        case 3109: eventLabels[i] = "Freestanding Beetlemania Grant"; break;
+                        case 3110: eventLabels[i] = "Freestanding Juice Bar Card Grant"; break;
+                        case 3111: eventLabels[i] = "Freestanding Progressive Egg Grant"; break;
+                        case 3112: eventLabels[i] = "Freestanding Shuffle Fireworks Grant"; break;
+                        case 3113: eventLabels[i] = "Freestanding Progressive Fireworks Grant"; break;
+                        case 3114: eventLabels[i] = "Hill Progressive Egg"; break;
+                        case 3115: eventLabels[i] = "Hill Progressive Card"; break;
+                        case 3116: eventLabels[i] = "Change Music In Moleville Mines When Backtracking"; break;
+                        case 3117: eventLabels[i] = "Empty"; break;
+                        case 3118: eventLabels[i] = "Water State"; break;
+                        case 3119: eventLabels[i] = "Goby Battle"; break;
+                        case 3120: eventLabels[i] = "Empty"; break;
+                        case 3121: eventLabels[i] = "Sewer Boss Fight"; break;
+                        case 3122: eventLabels[i] = "Sewer Boss Room Trampoline"; break;
+                        case 3123: eventLabels[i] = "Sewer Drain Water"; break;
+                        case 3124: eventLabels[i] = "Mimic 1 Chest"; break;
+                        case 3125: eventLabels[i] = "Sewer Pipe To Lands End"; break;
+                        case 3126: eventLabels[i] = "Mimic 2 Chest"; break;
+                        case 3127: eventLabels[i] = "Sewer Exit Trampoline"; break;
+                        case 3128: eventLabels[i] = "Empty"; break;
+                        case 3129: eventLabels[i] = "Empty"; break;
+                        case 3130: eventLabels[i] = "Sewer Tutorial Note"; break;
+                        case 3131: eventLabels[i] = "Moleville Toad In Mines"; break;
+                        case 3132: eventLabels[i] = "Moleville Miners Song"; break;
+                        case 3133: eventLabels[i] = "Pa Mole In Mines"; break;
+                        case 3134: eventLabels[i] = "Resummon Enemies In Sewer"; break;
+                        case 3135: eventLabels[i] = "Sewers Generic Loader"; break;
+                        case 3136: eventLabels[i] = "Sewers Overworld Pipe"; break;
+                        case 3137: eventLabels[i] = "Sewers 1St Water Room Pipe To Tutorial Room"; break;
+                        case 3138: eventLabels[i] = "Sewers 1St Water Room Pipe To 3Rd Water Room"; break;
+                        case 3139: eventLabels[i] = "Sewers 4 Rat Room Pipe To 1St Water Room"; break;
+                        case 3140: eventLabels[i] = "1St Water Toom Pipe To Sewers 4 Rat Room"; break;
+                        case 3141: eventLabels[i] = "3Rd Water Room Pipe To 1St Water Room"; break;
+                        case 3142: eventLabels[i] = "Pipe To Boss"; break;
+                        case 3143: eventLabels[i] = "Rose Way Main Room Platforms"; break;
+                        case 3144: eventLabels[i] = "Rose Way Main Room Platforms Background"; break;
+                        case 3145: eventLabels[i] = "Sewers Flippable Chest"; break;
+                        case 3146: eventLabels[i] = "Freestanding Big Coin"; break;
+                        case 3147: eventLabels[i] = "Rose Way Tutorial"; break;
+                        case 3148: eventLabels[i] = "Rose Way Main Room Loader"; break;
+                        case 3149: eventLabels[i] = "Empty"; break;
+                        case 3150: eventLabels[i] = "Rose Way Swing Chest"; break;
+                        case 3151: eventLabels[i] = "Rose Way Tossed Shyguys"; break;
+                        case 3152: eventLabels[i] = "Rose Way Five Chests"; break;
+                        case 3153: eventLabels[i] = "Old Chest Granter"; break;
+                        case 3154: eventLabels[i] = "Resummon Rose Way Npcs"; break;
+                        case 3155: eventLabels[i] = "Empty"; break;
+                        case 3156: eventLabels[i] = "Minecart Room Loader"; break;
+                        case 3157: eventLabels[i] = "Minecart Room Loader Background"; break;
+                        case 3158: eventLabels[i] = "Item Behind Ship Upper Stairs Tile"; break;
+                        case 3159: eventLabels[i] = "Pa Mole After Bambino Bomb"; break;
+                        case 3160: eventLabels[i] = "Mines Long Track Room Lower Backward Exit"; break;
+                        case 3161: eventLabels[i] = "Mines Check If Shyguy Moved"; break;
+                        case 3162: eventLabels[i] = "Mines Area 2 Lower Backward Exit If Mines Cleared"; break;
+                        case 3163: eventLabels[i] = "Sewers Tutorial Room Exit To Exterior"; break;
+                        case 3164: eventLabels[i] = "Sewers Tutorial Room Pipe To First Water Room"; break;
+                        case 3165: eventLabels[i] = "Active Minecart Mario Collision Check"; break;
+                        case 3166: eventLabels[i] = "Active Minecart Mario Collision Check Properties"; break;
+                        case 3167: eventLabels[i] = "Mines Final Save Room Loader"; break;
+                        case 3168: eventLabels[i] = "Sewers 3Rd Water Room Pipe To Water Switch Room"; break;
+                        case 3169: eventLabels[i] = "Sewers Stair Room Pipe To Third Water Room"; break;
+                        case 3170: eventLabels[i] = "Sewers Four Rat Room Pipe To Stair Room"; break;
+                        case 3171: eventLabels[i] = "Sewers Stair Room Pipe To Four Rat Room"; break;
+                        case 3172: eventLabels[i] = "Sewers 3Rd Water Room Pipe To Stair Room"; break;
+                        case 3173: eventLabels[i] = "Sewers Four Rat Room Pipe To Rat Line Room"; break;
+                        case 3174: eventLabels[i] = "Sewers 3Rd Water Room Pipe To Water Switch Room"; break;
+                        case 3175: eventLabels[i] = "Sewers Water Switch Room Pipe To 3Rd Water Room"; break;
+                        case 3176: eventLabels[i] = "Sewers Rat Line Room Pipe To 3Rd Water Room"; break;
+                        case 3177: eventLabels[i] = "Sewers Stair Room Pipe To Four Rat Room"; break;
+                        case 3178: eventLabels[i] = "Sewers 3Rd Water Toom Pipe To Rat Line Room"; break;
+                        case 3179: eventLabels[i] = "Sewers Four Rat Room Pipe To Stair Room"; break;
+                        case 3180: eventLabels[i] = "Sewers Rat Line Room Pipe To Four Rat Room"; break;
+                        case 3181: eventLabels[i] = "Sewers Water Switch Room Pipe To 3Rd Water Room"; break;
+                        case 3182: eventLabels[i] = "Minecart Paid Lobby Room Loader"; break;
+                        case 3183: eventLabels[i] = "Minecart Paid Lobby Trampoline To Exterior"; break;
+                        case 3184: eventLabels[i] = "Mines First Room Loader"; break;
+                        case 3185: eventLabels[i] = "Pa Mole In Deep Mines"; break;
+                        case 3186: eventLabels[i] = "Moles In First Mines Room"; break;
+                        case 3187: eventLabels[i] = "Minecart Tutorial"; break;
+                        case 3188: eventLabels[i] = "Mount Minecart"; break;
+                        case 3189: eventLabels[i] = "Fall To Minecart Room From Lobby"; break;
+                        case 3190: eventLabels[i] = "Activate Post Mines Boss First Minecart Session Continued"; break;
+                        case 3191: eventLabels[i] = "Activate Post Mines Boss First Minecart Session"; break;
+                        case 3192: eventLabels[i] = "Mines Left Henchman"; break;
+                        case 3193: eventLabels[i] = "Mines Right Henchman"; break;
+                        case 3194: eventLabels[i] = "Mines Center Henchman"; break;
+                        case 3195: eventLabels[i] = "Parked Minecart Mario Collision Check"; break;
+                        case 3196: eventLabels[i] = "Parked Minecart Mario Collision Check Properties"; break;
+                        case 3197: eventLabels[i] = "Mines Final Save Room Exit To Boss Room"; break;
+                        case 3198: eventLabels[i] = "Shyguy Cart Pushes Mario Into Smaller Room"; break;
+                        case 3199: eventLabels[i] = "Shyguy Cart Prize Grant"; break;
+                        case 3200: eventLabels[i] = "Mines Trampoline"; break;
+                        case 3201: eventLabels[i] = "Mines 1St Boss Fight"; break;
+                        case 3202: eventLabels[i] = "Minecart Room Exit To Boss Room"; break;
+                        case 3203: eventLabels[i] = "Empty"; break;
+                        case 3204: eventLabels[i] = "Empty"; break;
+                        case 3205: eventLabels[i] = "Empty"; break;
+                        case 3206: eventLabels[i] = "Sea Pipe To Ship"; break;
+                        case 3207: eventLabels[i] = "Ship Exit Trampoline"; break;
+                        case 3208: eventLabels[i] = "Water Whirlpool"; break;
+                        case 3209: eventLabels[i] = "Sleeping Dry Bones"; break;
+                        case 3210: eventLabels[i] = "Ship Trampoline Puzzle Block"; break;
+                        case 3211: eventLabels[i] = "Ship 3D Maze Room Loader"; break;
+                        case 3212: eventLabels[i] = "Ship 3D Maze Forfeit Listener"; break;
+                        case 3213: eventLabels[i] = "Ship Post 1St Boss Trampoline Back Up"; break;
+                        case 3214: eventLabels[i] = "Ship 1St Boss"; break;
+                        case 3215: eventLabels[i] = "Ship Coin Snake Puzzle Header Coin"; break;
+                        case 3216: eventLabels[i] = "Ship Coin Snake Puzzle Tail Coin"; break;
+                        case 3217: eventLabels[i] = "Ship Cannonball Puzzle Cannonball"; break;
+                        case 3218: eventLabels[i] = "Ship Submit Password"; break;
+                        case 3219: eventLabels[i] = "Ship Barrel Puzzle Button"; break;
+                        case 3220: eventLabels[i] = "Ship Barrel Puzzle Barrel Movement"; break;
+                        case 3221: eventLabels[i] = "Ship 3D Maze Hit Button"; break;
+                        case 3222: eventLabels[i] = "Ship Troopa Puzzle Loader"; break;
+                        case 3223: eventLabels[i] = "Ship Troopa Puzzle"; break;
+                        case 3224: eventLabels[i] = "Ship Password Room Loader"; break;
+                        case 3225: eventLabels[i] = "Ship Password Box Dialog"; break;
+                        case 3226: eventLabels[i] = "Ship Generic Loader"; break;
+                        case 3227: eventLabels[i] = "Ship Clone Room Loader"; break;
+                        case 3228: eventLabels[i] = "Ship Clone Control"; break;
+                        case 3229: eventLabels[i] = "Ship Clone Transform"; break;
+                        case 3230: eventLabels[i] = "Cancel Star In Sea"; break;
+                        case 3231: eventLabels[i] = "Ship Cannonball Puzzle Initiator Block"; break;
+                        case 3232: eventLabels[i] = "Ship Password Box 1"; break;
+                        case 3233: eventLabels[i] = "Ship Password Box 2"; break;
+                        case 3234: eventLabels[i] = "Ship Password Box 3"; break;
+                        case 3235: eventLabels[i] = "Ship Password Box 4"; break;
+                        case 3236: eventLabels[i] = "Ship Password Box 5"; break;
+                        case 3237: eventLabels[i] = "Ship Password Box 6"; break;
+                        case 3238: eventLabels[i] = "Freestanding Frog Coin"; break;
+                        case 3239: eventLabels[i] = "Ship Open Door To Room Behind Box Wall"; break;
+                        case 3240: eventLabels[i] = "Ship Troopa Puzzle Hint"; break;
+                        case 3241: eventLabels[i] = "Ship Trampoline Puzzle Hint"; break;
+                        case 3242: eventLabels[i] = "Ship 3D Maze Hint"; break;
+                        case 3243: eventLabels[i] = "Ship Coin Snake Hint"; break;
+                        case 3244: eventLabels[i] = "Ship Cannonball Puzzle Hint"; break;
+                        case 3245: eventLabels[i] = "Ship Barrel Puzzle Hint"; break;
+                        case 3246: eventLabels[i] = "Dry Bones Fight"; break;
+                        case 3247: eventLabels[i] = "Item Behind Ship Upper Stairs Granter"; break;
+                        case 3248: eventLabels[i] = "Ship Entrance Open Right Door"; break;
+                        case 3249: eventLabels[i] = "Ship Entrance Open Left Door"; break;
+                        case 3250: eventLabels[i] = "Ship 1St Greaper Room Open Upper Door"; break;
+                        case 3251: eventLabels[i] = "Ship 2Nd Greaper Room Open Upper Door"; break;
+                        case 3252: eventLabels[i] = "Ship Puzzle Hub Room Open Upper Exit Door"; break;
+                        case 3253: eventLabels[i] = "Ship Puzzle Hub Room Open Troopa Puzzle Door"; break;
+                        case 3254: eventLabels[i] = "Ship Puzzle Hub Room Open Trampoline Puzzle Door"; break;
+                        case 3255: eventLabels[i] = "Ship Puzzle Hub Room Open 3D Maze Door"; break;
+                        case 3256: eventLabels[i] = "Ship Puzzle Hub Room Open Lower Exit Door"; break;
+                        case 3257: eventLabels[i] = "Ship Puzzle Hub Room Open Cannonball Puzzle Door"; break;
+                        case 3258: eventLabels[i] = "Ship Puzzle Hub Room Open Coin Snake Puzzle Door"; break;
+                        case 3259: eventLabels[i] = "Ship Shop Room Open Upper Door"; break;
+                        case 3260: eventLabels[i] = "Ship Shop Room Open Lower Door"; break;
+                        case 3261: eventLabels[i] = "Ship Barrel Puzzle Room Open Exit Door"; break;
+                        case 3262: eventLabels[i] = "Ship Password Room Open Door To Boss"; break;
+                        case 3263: eventLabels[i] = "Ship Lower First Trampoline Room Open Exit Door"; break;
+                        case 3264: eventLabels[i] = "Ship Lower First Drybones Room Open Upper Door"; break;
+                        case 3265: eventLabels[i] = "Ship Lower First Drybones Room Open Lower Door"; break;
+                        case 3266: eventLabels[i] = "Ship Lower Rat Stairway Open Upper Door"; break;
+                        case 3267: eventLabels[i] = "Ship Lower Rat Stairway Open Lower Door"; break;
+                        case 3268: eventLabels[i] = "Ship Outer Clone Room Open Left Door"; break;
+                        case 3269: eventLabels[i] = "Ship Outer Clone Room Open Right Door"; break;
+                        case 3270: eventLabels[i] = "Ship Room With Box Wall Open Right Door"; break;
+                        case 3271: eventLabels[i] = "Ship Final Save Room Open Exit Door"; break;
+                        case 3272: eventLabels[i] = "Ship 1St Water Room Open Upper Door"; break;
+                        case 3273: eventLabels[i] = "Ship 1St Water Room Open Underwater Door"; break;
+                        case 3274: eventLabels[i] = "Ship Upper Whirlpool Room Open Underwater Door"; break;
+                        case 3275: eventLabels[i] = "Ship Zeostar Stairway Open Underwater Door"; break;
+                        case 3276: eventLabels[i] = "Ship Big Water Room Open Upper Door"; break;
+                        case 3277: eventLabels[i] = "Ship Big Water Room Open Hidden Door"; break;
+                        case 3278: eventLabels[i] = "Ship Open Door To Final Boss Room"; break;
+                        case 3279: eventLabels[i] = "Ship Open Door In Final Boss Room"; break;
+                        case 3280: eventLabels[i] = "Ship Lower Henchman Room Loader"; break;
+                        case 3281: eventLabels[i] = "Ship Upper Henchman Room Loader"; break;
+                        case 3282: eventLabels[i] = "Ship Boss Room Loader"; break;
+                        case 3283: eventLabels[i] = "Empty"; break;
+                        case 3284: eventLabels[i] = "Ship Save Rooms Loader"; break;
+                        case 3285: eventLabels[i] = "Sea Single Chest Room Loader"; break;
+                        case 3286: eventLabels[i] = "Ship Interact With Boss After Winning"; break;
+                        case 3287: eventLabels[i] = "Ship Upper Henchman Room Talk To Guard After Winning"; break;
+                        case 3288: eventLabels[i] = "Ship Spawn Prize In Troopa Puzzle Room"; break;
+                        case 3289: eventLabels[i] = "Ship Collect Trampoline Prize"; break;
+                        case 3290: eventLabels[i] = "Ship Collect 3D Maze Prize"; break;
+                        case 3291: eventLabels[i] = "Ship Collect Cannonball Prize"; break;
+                        case 3292: eventLabels[i] = "Lower Ship Generic Loader"; break;
+                        case 3293: eventLabels[i] = "Ship Bullet Collision"; break;
+                        case 3294: eventLabels[i] = "Ship Bullet Collision Background"; break;
+                        case 3295: eventLabels[i] = "Ship Collect Barrel Prize"; break;
+                        case 3296: eventLabels[i] = "Sea Entrance Trampoline"; break;
+                        case 3297: eventLabels[i] = "Sea Shop"; break;
+                        case 3298: eventLabels[i] = "Sea Reverse Whirlpool To Lone Chest"; break;
+                        case 3299: eventLabels[i] = "Outer Sea Whirlpool"; break;
+                        case 3300: eventLabels[i] = "Ship Entrance Note"; break;
+                        case 3301: eventLabels[i] = "Ship Boss Room Inner Left Henchman"; break;
+                        case 3302: eventLabels[i] = "Ship Boss Room Inner Right Henchman"; break;
+                        case 3303: eventLabels[i] = "Ship 1St Save Room Hint Note"; break;
+                        case 3304: eventLabels[i] = "Ship 1St Greaper Room Hint Note"; break;
+                        case 3305: eventLabels[i] = "Ship 2Nd Greaper Room Hint Note"; break;
+                        case 3306: eventLabels[i] = "Ship Lower Henchman Room Loader Continued"; break;
+                        case 3307: eventLabels[i] = "Ship Password Tutorial"; break;
+                        case 3308: eventLabels[i] = "Ship Boss Room Drink"; break;
+                        case 3309: eventLabels[i] = "Ship Spawn Hidden Chest"; break;
+                        case 3310: eventLabels[i] = "Ship Hidden Chest"; break;
+                        case 3311: eventLabels[i] = "Ship Shop"; break;
+                        case 3312: eventLabels[i] = "Sewers 1St Water Room Exit To Rat Line Room"; break;
+                        case 3313: eventLabels[i] = "Sewers Rat Line Room Exit To 1St Water Room"; break;
+                        case 3314: eventLabels[i] = "Sewers Rat Line Room Exit To 3Rd Water Room"; break;
+                        case 3315: eventLabels[i] = "Sewers 3Rd Water Room Exit To Rat Line Room"; break;
+                        case 3316: eventLabels[i] = "Ship Boss Room Leftmost Henchman"; break;
+                        case 3317: eventLabels[i] = "Mines Final Chest"; break;
+                        case 3318: eventLabels[i] = "Set Oerlikon Pack"; break;
+                        case 3319: eventLabels[i] = "Set Vomer Pack"; break;
+                        case 3320: eventLabels[i] = "Empty"; break;
+                        case 3321: eventLabels[i] = "Volcano Enter 1St Room"; break;
+                        case 3322: eventLabels[i] = "Volcano 1St Room Trampoline"; break;
+                        case 3323: eventLabels[i] = "Volcano 1St Room Loader"; break;
+                        case 3324: eventLabels[i] = "Volcano 3 Lift Room Donut Lift"; break;
+                        case 3325: eventLabels[i] = "Stumpet Room Loader"; break;
+                        case 3326: eventLabels[i] = "Stumpet Eruption"; break;
+                        case 3327: eventLabels[i] = "Stumpet Fight"; break;
+                        case 3328: eventLabels[i] = "Volcano Generic Loader 1"; break;
+                        case 3329: eventLabels[i] = "Jumping Fireballs"; break;
+                        case 3330: eventLabels[i] = "Volcano 1St Boss Room Loader"; break;
+                        case 3331: eventLabels[i] = "Volcano 1St Boss Fight"; break;
+                        case 3332: eventLabels[i] = "Volcano 1St Boss Path Room Loader"; break;
+                        case 3333: eventLabels[i] = "Volcano Generic Loader 2"; break;
+                        case 3334: eventLabels[i] = "Volcano Enter Shop Area"; break;
+                        case 3335: eventLabels[i] = "Corkpedite Collision"; break;
+                        case 3336: eventLabels[i] = "Corkpedite Room Loader"; break;
+                        case 3337: eventLabels[i] = "Corkpedite Animation"; break;
+                        case 3338: eventLabels[i] = "Volcano Trampoline To 2Nd Boss"; break;
+                        case 3339: eventLabels[i] = "Volcano 2Nd Boss Path Room Loader"; break;
+                        case 3340: eventLabels[i] = "Volcano 3Rd Boss Path Room Loader"; break;
+                        case 3341: eventLabels[i] = "Volcano Small Boss Path Room Loader"; break;
+                        case 3342: eventLabels[i] = "Volcano 5Th Boss Path Room Loader"; break;
+                        case 3343: eventLabels[i] = "Volcano Final Boss Path Room Loader"; break;
+                        case 3344: eventLabels[i] = "Volcano Final Trampoline Room Loader"; break;
+                        case 3345: eventLabels[i] = "Volcano Chase Seqeunce"; break;
+                        case 3346: eventLabels[i] = "Volcano 1St Boss Screen Tint"; break;
+                        case 3347: eventLabels[i] = "Empty"; break;
+                        case 3348: eventLabels[i] = "Keep Door Reward Chest"; break;
+                        case 3349: eventLabels[i] = "Keep 6 Door Lobby Exit To Prev Room"; break;
+                        case 3350: eventLabels[i] = "Keep All Door Paths Exit To Reward Room"; break;
+                        case 3351: eventLabels[i] = "Empty"; break;
+                        case 3352: eventLabels[i] = "Dr Topper Quiz"; break;
+                        case 3353: eventLabels[i] = "Keep Enter Ball Solitaire Room"; break;
+                        case 3354: eventLabels[i] = "Keep Barrel Count Loader"; break;
+                        case 3355: eventLabels[i] = "Keep Barrel Count Loader Contd"; break;
+                        case 3356: eventLabels[i] = "Keep Respawn In Lobby Upon Failure"; break;
+                        case 3357: eventLabels[i] = "Keep Button Game Loader"; break;
+                        case 3358: eventLabels[i] = "Keep Ball Solitaire Loader"; break;
+                        case 3359: eventLabels[i] = "Keep Initiate Coin Game"; break;
+                        case 3360: eventLabels[i] = "Keep Coin Game Chest"; break;
+                        case 3361: eventLabels[i] = "Keep Exit Completed Doors To Boss Antechamber"; break;
+                        case 3362: eventLabels[i] = "Keep Button Game Press Button"; break;
+                        case 3363: eventLabels[i] = "Keep Ball Solitaire Kick Ball"; break;
+                        case 3364: eventLabels[i] = "Keep Logic Game Loader"; break;
+                        case 3365: eventLabels[i] = "Keep Logic Game Finalize Answer"; break;
+                        case 3366: eventLabels[i] = "Keep Logic Game Boo"; break;
+                        case 3367: eventLabels[i] = "Keep Logic Game Goo"; break;
+                        case 3368: eventLabels[i] = "Keep Logic Game Bones"; break;
+                        case 3369: eventLabels[i] = "Keep Logic Game Kipp"; break;
+                        case 3370: eventLabels[i] = "Volcano Bridge Donut Lift"; break;
+                        case 3371: eventLabels[i] = "Volcano Bridge Donut Lift No Falling"; break;
+                        case 3372: eventLabels[i] = "Keep Get Crushed By Huge Thwomp"; break;
+                        case 3373: eventLabels[i] = "Keep Thwomp Room Loader"; break;
+                        case 3374: eventLabels[i] = "Keep Thwomp Room Background"; break;
+                        case 3375: eventLabels[i] = "Keep Set Door Order"; break;
+                        case 3376: eventLabels[i] = "Keep 6 Door Lobby Loader"; break;
+                        case 3377: eventLabels[i] = "Keep Open Door 1"; break;
+                        case 3378: eventLabels[i] = "Keep Open Door 2"; break;
+                        case 3379: eventLabels[i] = "Keep Open Door 3"; break;
+                        case 3380: eventLabels[i] = "Keep Open Door 4"; break;
+                        case 3381: eventLabels[i] = "Keep Open Door 5"; break;
+                        case 3382: eventLabels[i] = "Keep Open Door 6"; break;
+                        case 3383: eventLabels[i] = "Ship Trampoline Prize Packet Grant"; break;
+                        case 3384: eventLabels[i] = "Ship Troopa Prize Packet Grant"; break;
+                        case 3385: eventLabels[i] = "Ship Upper Stairway Item Packet Grant"; break;
+                        case 3386: eventLabels[i] = "Ship 3D Maze Spawn Prize"; break;
+                        case 3387: eventLabels[i] = "Ship Cannonball Puzzle Spawn Prize"; break;
+                        case 3388: eventLabels[i] = "Ship Boss Room Periscope"; break;
+                        case 3389: eventLabels[i] = "Ship Barrel Puzzle Spawn Prize"; break;
+                        case 3390: eventLabels[i] = "Keep Lava Patform Room Chest Camera"; break;
+                        case 3391: eventLabels[i] = "Volcano 1St Save Room Lower Chest"; break;
+                        case 3392: eventLabels[i] = "Volcano 1St Save Room Upper Chest"; break;
+                        case 3393: eventLabels[i] = "Super Jump Compare For 1St Prize"; break;
+                        case 3394: eventLabels[i] = "Super Jump Compare For 2Nd Prize"; break;
+                        case 3395: eventLabels[i] = "Midas Cave Beetlemania Granter"; break;
+                        case 3396: eventLabels[i] = "Midas Cave Progressive Card Granter"; break;
+                        case 3397: eventLabels[i] = "Midas Cave Progressive Egg Granter"; break;
+                        case 3398: eventLabels[i] = "Midas Cave Single Firework Granter"; break;
+                        case 3399: eventLabels[i] = "Midas Cave Progressive Firework Granter"; break;
+                        case 3400: eventLabels[i] = "Restart Music After Star Piece Sequence"; break;
+                        case 3401: eventLabels[i] = "Coin Chest Multi Hit 2"; break;
+                        case 3402: eventLabels[i] = "Coin Chest Multi Hit 3"; break;
+                        case 3403: eventLabels[i] = "Coin Chest Multi Hit 4"; break;
+                        case 3404: eventLabels[i] = "Coin Chest Multi Hit 5"; break;
+                        case 3405: eventLabels[i] = "Coin Chest Multi Hit 6"; break;
+                        case 3406: eventLabels[i] = "Frog Coin Chest Multi Hit 2"; break;
+                        case 3407: eventLabels[i] = "Frog Coin Chest Multi Hit 3"; break;
+                        case 3408: eventLabels[i] = "Frog Coin Chest Multi Hit 4"; break;
+                        case 3409: eventLabels[i] = "Frog Coin Chest Multi Hit 5"; break;
+                        case 3410: eventLabels[i] = "Frog Coin Chest Multi Hit 6"; break;
+                        case 3411: eventLabels[i] = "Ship Password Correctness Check"; break;
+                        case 3412: eventLabels[i] = "Empty"; break;
+                        case 3413: eventLabels[i] = "Mines Shyguy Collide With Boxes"; break;
+                        case 3414: eventLabels[i] = "Rose Way Main Room 2Nd Freestanding Item"; break;
+                        case 3415: eventLabels[i] = "Tower Stacked Chests On Top Floor"; break;
+                        case 3416: eventLabels[i] = "Empty"; break;
+                        case 3417: eventLabels[i] = "Empty"; break;
+                        case 3418: eventLabels[i] = "Empty"; break;
+                        case 3419: eventLabels[i] = "Empty"; break;
+                        case 3420: eventLabels[i] = "Empty"; break;
+                        case 3421: eventLabels[i] = "Empty"; break;
+                        case 3422: eventLabels[i] = "Empty"; break;
+                        case 3423: eventLabels[i] = "Empty"; break;
+                        case 3424: eventLabels[i] = "Empty"; break;
+                        case 3425: eventLabels[i] = "Empty"; break;
+                        case 3426: eventLabels[i] = "Empty"; break;
+                        case 3427: eventLabels[i] = "Empty"; break;
+                        case 3428: eventLabels[i] = "Empty"; break;
+                        case 3429: eventLabels[i] = "Empty"; break;
+                        case 3430: eventLabels[i] = "Empty"; break;
+                        case 3431: eventLabels[i] = "Empty"; break;
+                        case 3432: eventLabels[i] = "Empty"; break;
+                        case 3433: eventLabels[i] = "Empty"; break;
+                        case 3434: eventLabels[i] = "Empty"; break;
+                        case 3435: eventLabels[i] = "Empty"; break;
+                        case 3436: eventLabels[i] = "Empty"; break;
+                        case 3437: eventLabels[i] = "Empty"; break;
+                        case 3438: eventLabels[i] = "Empty"; break;
+                        case 3439: eventLabels[i] = "Empty"; break;
+                        case 3440: eventLabels[i] = "Empty"; break;
+                        case 3441: eventLabels[i] = "Empty"; break;
+                        case 3442: eventLabels[i] = "Empty"; break;
+                        case 3443: eventLabels[i] = "Empty"; break;
+                        case 3444: eventLabels[i] = "Empty"; break;
+                        case 3445: eventLabels[i] = "Empty"; break;
+                        case 3446: eventLabels[i] = "Empty"; break;
+                        case 3447: eventLabels[i] = "Empty"; break;
+                        case 3448: eventLabels[i] = "Empty"; break;
+                        case 3449: eventLabels[i] = "Empty"; break;
+                        case 3450: eventLabels[i] = "Empty"; break;
+                        case 3451: eventLabels[i] = "Empty"; break;
+                        case 3452: eventLabels[i] = "Empty"; break;
+                        case 3453: eventLabels[i] = "Empty"; break;
+                        case 3454: eventLabels[i] = "Empty"; break;
+                        case 3455: eventLabels[i] = "Empty"; break;
+                        case 3456: eventLabels[i] = "Empty"; break;
+                        case 3457: eventLabels[i] = "Empty"; break;
+                        case 3458: eventLabels[i] = "Empty"; break;
+                        case 3459: eventLabels[i] = "Empty"; break;
+                        case 3460: eventLabels[i] = "Empty"; break;
+                        case 3461: eventLabels[i] = "Empty"; break;
+                        case 3462: eventLabels[i] = "Empty"; break;
+                        case 3463: eventLabels[i] = "Empty"; break;
+                        case 3464: eventLabels[i] = "Empty"; break;
+                        case 3465: eventLabels[i] = "Empty"; break;
+                        case 3466: eventLabels[i] = "Empty"; break;
+                        case 3467: eventLabels[i] = "Empty"; break;
+                        case 3468: eventLabels[i] = "Empty"; break;
+                        case 3469: eventLabels[i] = "Empty"; break;
+                        case 3470: eventLabels[i] = "Empty"; break;
+                        case 3471: eventLabels[i] = "Empty"; break;
+                        case 3472: eventLabels[i] = "Empty"; break;
+                        case 3473: eventLabels[i] = "Empty"; break;
+                        case 3474: eventLabels[i] = "Empty"; break;
+                        case 3475: eventLabels[i] = "Empty"; break;
+                        case 3476: eventLabels[i] = "Empty"; break;
+                        case 3477: eventLabels[i] = "Kingdom Hallway Chest"; break;
+                        case 3478: eventLabels[i] = "Midas River Trampoline"; break;
+                        case 3479: eventLabels[i] = "Midas River Score Submission"; break;
+                        case 3480: eventLabels[i] = "Midas River Waterfall Loader"; break;
+                        case 3481: eventLabels[i] = "Midas River Tunnel Warp Check"; break;
+                        case 3482: eventLabels[i] = "Midas River Top Tunnel Loader"; break;
+                        case 3483: eventLabels[i] = "Midas River Mid Left Or Mid Right Loader"; break;
+                        case 3484: eventLabels[i] = "Midas River Bottom Left Loader"; break;
+                        case 3485: eventLabels[i] = "Midas River Bottom Right Loader"; break;
+                        case 3486: eventLabels[i] = "Midas River Base Area Loader"; break;
+                        case 3487: eventLabels[i] = "Midas River Frog Coin"; break;
+                        case 3488: eventLabels[i] = "Midas River Coin"; break;
+                        case 3489: eventLabels[i] = "Midas River Waterfall Listen For Button Inputs"; break;
+                        case 3490: eventLabels[i] = "Midas Small Mario Coord Calc"; break;
+                        case 3491: eventLabels[i] = "Midas River Top Tunnel Animation And Exit"; break;
+                        case 3492: eventLabels[i] = "Midas River Mid Left Tunnel Animation And Exit"; break;
+                        case 3493: eventLabels[i] = "Midas River Mid Right Tunnel Animation And Exit"; break;
+                        case 3494: eventLabels[i] = "Midas River Bottom Left Tunnel Animation And Exit"; break;
+                        case 3495: eventLabels[i] = "Midas River Bottom Right Tunnel Animation And Exit"; break;
+                        case 3496: eventLabels[i] = "Midas River Mid Right Tunnel Animation And Exit Background"; break;
+                        case 3497: eventLabels[i] = "Midas River Bottom Left Tunnel Item Granter"; break;
+                        case 3498: eventLabels[i] = "Midas River Bottom Right Tunnel Background"; break;
+                        case 3499: eventLabels[i] = "Booster Hill 1St Pass Loader"; break;
+                        case 3500: eventLabels[i] = "Booster Hill 1St Pass Snifit Jumps"; break;
+                        case 3501: eventLabels[i] = "Booster Hill Barrel Interaction"; break;
+                        case 3502: eventLabels[i] = "Booster Hill End"; break;
+                        case 3503: eventLabels[i] = "Booster Hill Barrel Summoner"; break;
+                        case 3504: eventLabels[i] = "Booster Hill Henchman Interaction"; break;
+                        case 3505: eventLabels[i] = "Booster Hill Unknown"; break;
+                        case 3506: eventLabels[i] = "Booster Hill Get Flower"; break;
+                        case 3507: eventLabels[i] = "Booster Hill 2Nd Pass Loader"; break;
+                        case 3508: eventLabels[i] = "Booster Hill Return"; break;
+                        case 3509: eventLabels[i] = "Empty"; break;
+                        case 3510: eventLabels[i] = "Booster Hill Exit To World Map"; break;
+                        case 3511: eventLabels[i] = "Booster Hill 2Nd Pass Background"; break;
+                        case 3512: eventLabels[i] = "Booster Hill Flower Pickup"; break;
+                        case 3513: eventLabels[i] = "Midas River Bottom Right Tunnel Item Granter"; break;
+                        case 3514: eventLabels[i] = "Nimbus Castle Egg Room Exit To Previous Room"; break;
+                        case 3515: eventLabels[i] = "Nimbus Castle Egg Room Exit To Next Room"; break;
+                        case 3516: eventLabels[i] = "Chest Differentiator Npc 3 Or Other"; break;
+                        case 3517: eventLabels[i] = "Chest Differentiator Npc 1 2 3 Or Other"; break;
+                        case 3518: eventLabels[i] = "Chest Differentiator Npc 2 3 4 5 6 Or Other"; break;
+                        case 3519: eventLabels[i] = "Chest Differentiator Npc 4 Or Other"; break;
+                        case 3520: eventLabels[i] = "Chest Differentiator Npc 12 13 Or Other Camera A"; break;
+                        case 3521: eventLabels[i] = "Chest Differentiator Npc 12 13 Or Other Camera B"; break;
+                        case 3522: eventLabels[i] = "Chest Differentiator Npc 9 Or Other Camera A"; break;
+                        case 3523: eventLabels[i] = "Empty"; break;
+                        case 3524: eventLabels[i] = "Empty"; break;
+                        case 3525: eventLabels[i] = "Empty"; break;
+                        case 3526: eventLabels[i] = "Empty"; break;
+                        case 3527: eventLabels[i] = "Empty"; break;
+                        case 3528: eventLabels[i] = "Empty"; break;
+                        case 3529: eventLabels[i] = "Empty"; break;
+                        case 3530: eventLabels[i] = "Empty"; break;
+                        case 3531: eventLabels[i] = "Empty"; break;
+                        case 3532: eventLabels[i] = "Empty"; break;
+                        case 3533: eventLabels[i] = "Empty"; break;
+                        case 3534: eventLabels[i] = "Empty"; break;
+                        case 3535: eventLabels[i] = "Empty"; break;
+                        case 3536: eventLabels[i] = "Empty"; break;
+                        case 3537: eventLabels[i] = "Empty"; break;
+                        case 3538: eventLabels[i] = "Empty"; break;
+                        case 3539: eventLabels[i] = "Empty"; break;
+                        case 3540: eventLabels[i] = "Empty"; break;
+                        case 3541: eventLabels[i] = "Empty"; break;
+                        case 3542: eventLabels[i] = "Empty"; break;
+                        case 3543: eventLabels[i] = "Empty"; break;
+                        case 3544: eventLabels[i] = "Empty"; break;
+                        case 3545: eventLabels[i] = "Empty"; break;
+                        case 3546: eventLabels[i] = "Empty"; break;
+                        case 3547: eventLabels[i] = "Empty"; break;
+                        case 3548: eventLabels[i] = "Empty"; break;
+                        case 3549: eventLabels[i] = "Empty"; break;
+                        case 3550: eventLabels[i] = "Empty"; break;
+                        case 3551: eventLabels[i] = "Empty"; break;
+                        case 3552: eventLabels[i] = "Empty"; break;
+                        case 3553: eventLabels[i] = "Empty"; break;
+                        case 3554: eventLabels[i] = "Empty"; break;
+                        case 3555: eventLabels[i] = "Empty"; break;
+                        case 3556: eventLabels[i] = "Empty"; break;
+                        case 3557: eventLabels[i] = "Empty"; break;
+                        case 3558: eventLabels[i] = "Empty"; break;
+                        case 3559: eventLabels[i] = "Empty"; break;
+                        case 3560: eventLabels[i] = "Empty"; break;
+                        case 3561: eventLabels[i] = "Empty"; break;
+                        case 3562: eventLabels[i] = "Empty"; break;
+                        case 3563: eventLabels[i] = "Empty"; break;
+                        case 3564: eventLabels[i] = "Empty"; break;
+                        case 3565: eventLabels[i] = "Empty"; break;
+                        case 3566: eventLabels[i] = "Empty"; break;
+                        case 3567: eventLabels[i] = "Empty"; break;
+                        case 3568: eventLabels[i] = "Empty"; break;
+                        case 3569: eventLabels[i] = "Empty"; break;
+                        case 3570: eventLabels[i] = "Empty"; break;
+                        case 3571: eventLabels[i] = "Empty"; break;
+                        case 3572: eventLabels[i] = "Empty"; break;
+                        case 3573: eventLabels[i] = "Empty"; break;
+                        case 3574: eventLabels[i] = "Empty"; break;
+                        case 3575: eventLabels[i] = "Empty"; break;
+                        case 3576: eventLabels[i] = "Empty"; break;
+                        case 3577: eventLabels[i] = "Empty"; break;
+                        case 3578: eventLabels[i] = "Empty"; break;
+                        case 3579: eventLabels[i] = "Empty"; break;
+                        case 3580: eventLabels[i] = "Empty"; break;
+                        case 3581: eventLabels[i] = "Empty"; break;
+                        case 3582: eventLabels[i] = "Empty"; break;
+                        case 3583: eventLabels[i] = "Empty"; break;
+                        case 3584: eventLabels[i] = "Bank 20 Return Event"; break;
+                        case 3585: eventLabels[i] = "Nimbus Fade In Async"; break;
+                        case 3586: eventLabels[i] = "Nimbus Inn Lobby Loader From Save Point"; break;
+                        case 3587: eventLabels[i] = "Set 70Ae To 70A8"; break;
+                        case 3588: eventLabels[i] = "Signal Ring Activator"; break;
+                        case 3589: eventLabels[i] = "Empty"; break;
+                        case 3590: eventLabels[i] = "Rose Town Chimney"; break;
+                        case 3591: eventLabels[i] = "Empty"; break;
+                        case 3592: eventLabels[i] = "Empty"; break;
+                        case 3593: eventLabels[i] = "Get Item From Chapel Henchman 3"; break;
+                        case 3594: eventLabels[i] = "Get Item From Chapel Henchman 1"; break;
+                        case 3595: eventLabels[i] = "Get Item From Chapel Henchman 2"; break;
+                        case 3596: eventLabels[i] = "Empty"; break;
+                        case 3597: eventLabels[i] = "Yoster Empty Mailbox"; break;
+                        case 3598: eventLabels[i] = "Empty"; break;
+                        case 3599: eventLabels[i] = "Mushroom Derby Prize Calculator"; break;
+                        case 3600: eventLabels[i] = "Mushroom Derby Goal Tile"; break;
+                        case 3601: eventLabels[i] = "Mushroom Derby Yoshi Autoplay"; break;
+                        case 3602: eventLabels[i] = "Mushroom Kingdom Raz Raini Note"; break;
+                        case 3603: eventLabels[i] = "Empty"; break;
+                        case 3604: eventLabels[i] = "Pipe Vault Triple Chest Room Loader"; break;
+                        case 3605: eventLabels[i] = "Pipe Vault Pipe To Triple Chest Room"; break;
+                        case 3606: eventLabels[i] = "Chest Differentiator Npc 1 Or Other Camera A"; break;
+                        case 3607: eventLabels[i] = "Coin Differentiator Npc 8 Through 15"; break;
+                        case 3608: eventLabels[i] = "Lands End Purchasable Chest"; break;
+                        case 3609: eventLabels[i] = "Keep Invisible Floor Chests"; break;
+                        case 3610: eventLabels[i] = "Keep Invisible Floor Coins"; break;
+                        case 3611: eventLabels[i] = "Chest Differentiator Npc 2 Or Other"; break;
+                        case 3612: eventLabels[i] = "Chest Differentiator Npc 1 Or Other Camera B"; break;
+                        case 3613: eventLabels[i] = "Chest Differentiator Npc 11 Or Other"; break;
+                        case 3614: eventLabels[i] = "Belome Fortune Prize Chest"; break;
+                        case 3615: eventLabels[i] = "Climb Up Valley Beanstalk Into Vine Clouds"; break;
+                        case 3616: eventLabels[i] = "Nimbus Inn Loader From Door"; break;
+                        case 3617: eventLabels[i] = "Nimbus Inn Bedroom Loader"; break;
+                        case 3618: eventLabels[i] = "Nimbus Exterior Open Inn Door"; break;
+                        case 3619: eventLabels[i] = "Nimbus Exterior Open Shop Door"; break;
+                        case 3620: eventLabels[i] = "Nimbus Exterior Open Garros Door"; break;
+                        case 3621: eventLabels[i] = "Nimbus Exterior Open South House Door"; break;
+                        case 3622: eventLabels[i] = "Nimbus Exterior Open Northeast House Door"; break;
+                        case 3623: eventLabels[i] = "Empty"; break;
+                        case 3624: eventLabels[i] = "Nimbus Shop Loader"; break;
+                        case 3625: eventLabels[i] = "Empty"; break;
+                        case 3626: eventLabels[i] = "Nimbus Shop Chest Camera Shift"; break;
+                        case 3627: eventLabels[i] = "Empty"; break;
+                        case 3628: eventLabels[i] = "Nimbus Exterior Blue Guy In Front Of Castle Entrance"; break;
+                        case 3629: eventLabels[i] = "Nimbus Exterior Blue Guy Near Shop"; break;
+                        case 3630: eventLabels[i] = "Nimbus Exterior Blue Guy Near Invisible Path"; break;
+                        case 3631: eventLabels[i] = "Nimbus Exterior Blue Guy Near Garros House"; break;
+                        case 3632: eventLabels[i] = "Nimbus Exterior Woman Near Invisible Path"; break;
+                        case 3633: eventLabels[i] = "Nimbus Exterior Woman Near Inn"; break;
+                        case 3634: eventLabels[i] = "Nimbus Exterior Woman Near Entrance"; break;
+                        case 3635: eventLabels[i] = "Nimbus Exterior Woman In Front Of Castle Entrance"; break;
+                        case 3636: eventLabels[i] = "Nimbus Bird Guard"; break;
+                        case 3637: eventLabels[i] = "Temple Backdoor Locked"; break;
+                        case 3638: eventLabels[i] = "Empty"; break;
+                        case 3639: eventLabels[i] = "Empty"; break;
+                        case 3640: eventLabels[i] = "Statue Game"; break;
+                        case 3641: eventLabels[i] = "Empty"; break;
+                        case 3642: eventLabels[i] = "Nimbus Exterior Occupied Loader"; break;
+                        case 3643: eventLabels[i] = "Nimbus Shop"; break;
+                        case 3644: eventLabels[i] = "Nimbus Innkeeper"; break;
+                        case 3645: eventLabels[i] = "Nimbus Exterior Exit To Vines"; break;
+                        case 3646: eventLabels[i] = "Nimbus Exterior Guard Near Entrance"; break;
+                        case 3647: eventLabels[i] = "Nimbus Exterior Guard Near Castle"; break;
+                        case 3648: eventLabels[i] = "Nimbus Occupied Northeast House Right Guy"; break;
+                        case 3649: eventLabels[i] = "Nimbus Occupied Northeast House Left Woman"; break;
+                        case 3650: eventLabels[i] = "Nimbus Occupied Northeast House Right Woman"; break;
+                        case 3651: eventLabels[i] = "Nimbus Northeast House Croco"; break;
+                        case 3652: eventLabels[i] = "Nimbus Occupied Northeast House Left Guard"; break;
+                        case 3653: eventLabels[i] = "Nimbus South House Guy"; break;
+                        case 3654: eventLabels[i] = "Nimbus South House Woman"; break;
+                        case 3655: eventLabels[i] = "Nimbus Exterior Southernmost Blue Guy"; break;
+                        case 3656: eventLabels[i] = "Empty"; break;
+                        case 3657: eventLabels[i] = "Room Service Menu"; break;
+                        case 3658: eventLabels[i] = "Empty"; break;
+                        case 3659: eventLabels[i] = "Nimbus Deep Castle Note"; break;
+                        case 3660: eventLabels[i] = "Nimbus Repopulate Castle Upon Liberation"; break;
+                        case 3661: eventLabels[i] = "Bathrobe"; break;
+                        case 3662: eventLabels[i] = "Nimbus Castle Left Fan Room Exit To Bridge Room"; break;
+                        case 3663: eventLabels[i] = "Nimbus Castle Left Shaman Room Exit To 5 Door Room"; break;
+                        case 3664: eventLabels[i] = "Nimbus Castle Right Shaman Room Exit To 5 Door Room"; break;
+                        case 3665: eventLabels[i] = "Nimbus Castle Right Shaman Room Exit To Two Level Chest Room"; break;
+                        case 3666: eventLabels[i] = "Nimbus Castle Note Hallway Exit To Two Level Chest Room"; break;
+                        case 3667: eventLabels[i] = "Nimbus Castle Antechamber Left Guard"; break;
+                        case 3668: eventLabels[i] = "Nimbus Castle Antechamber Right Guard"; break;
+                        case 3669: eventLabels[i] = "Nimbus Castle Solo Bird Statue Room Exit To 5 Door Room"; break;
+                        case 3670: eventLabels[i] = "Nimbus Castle Main Hall Loader"; break;
+                        case 3671: eventLabels[i] = "Nimbus Castle First Post Throne Hall Exit To Throne Room"; break;
+                        case 3672: eventLabels[i] = "Nimbus Castle Back Exit Fall"; break;
+                        case 3673: eventLabels[i] = "Nimbus Liberated Town Square Loader"; break;
+                        case 3674: eventLabels[i] = "Nimbus Castle Two Level Chest Room Lower Chest"; break;
+                        case 3675: eventLabels[i] = "Nimbus Castle Bridge Room Lower Npc"; break;
+                        case 3676: eventLabels[i] = "Nimbus Castle Two Level Chest Room Female Npc"; break;
+                        case 3677: eventLabels[i] = "Royal Bus Platform Loader"; break;
+                        case 3678: eventLabels[i] = "Royal Bus Attendant"; break;
+                        case 3679: eventLabels[i] = "Nimbus Castle Egg Room Loader"; break;
+                        case 3680: eventLabels[i] = "Nimbus Castle Egg Post Defeat"; break;
+                        case 3681: eventLabels[i] = "Birdy Becomes Platform"; break;
+                        case 3682: eventLabels[i] = "Empty"; break;
+                        case 3683: eventLabels[i] = "Vine Instructions"; break;
+                        case 3684: eventLabels[i] = "Empty"; break;
+                        case 3685: eventLabels[i] = "Nimbus Get Crocos Item"; break;
+                        case 3686: eventLabels[i] = "Marrymore Shower"; break;
+                        case 3687: eventLabels[i] = "Marrymore Shower Door"; break;
+                        case 3688: eventLabels[i] = "Marrymore Service Bell"; break;
+                        case 3689: eventLabels[i] = "Link"; break;
+                        case 3690: eventLabels[i] = "Nimbus Castle Main Hall Exit To Exterior"; break;
+                        case 3691: eventLabels[i] = "Garros House Exit"; break;
+                        case 3692: eventLabels[i] = "Nimbus Lower House Exit To Exterior"; break;
+                        case 3693: eventLabels[i] = "Nimbus Inn Exit To Exterior"; break;
+                        case 3694: eventLabels[i] = "Nimbus Shop Exit"; break;
+                        case 3695: eventLabels[i] = "Nimbus Croco House Exit"; break;
+                        case 3696: eventLabels[i] = "Nimbus Castle West Lower Hall Loader"; break;
+                        case 3697: eventLabels[i] = "Nimbus Castle West Lower Hall Pinwheel Animations"; break;
+                        case 3698: eventLabels[i] = "Nimbus Castle West Lower Hall Pinwheel"; break;
+                        case 3699: eventLabels[i] = "Nimbus Castle West Lower Hall Mario Blown By Fan Bit"; break;
+                        case 3700: eventLabels[i] = "Nimbus Castle West Lower Hall Mario Blown By Fan Bit"; break;
+                        case 3701: eventLabels[i] = "Nimbus Castle Left Shaman Room Loader"; break;
+                        case 3702: eventLabels[i] = "Nimbus Castle Right Shaman Room Loader"; break;
+                        case 3703: eventLabels[i] = "Nimbus Castle Two Level Chest Room Loader"; break;
+                        case 3704: eventLabels[i] = "Nimbus Castle Occupied 5 Door Room Loader"; break;
+                        case 3705: eventLabels[i] = "Jawful Battle"; break;
+                        case 3706: eventLabels[i] = "Activate Jawful Extended Hitboxes"; break;
+                        case 3707: eventLabels[i] = "Nimbus Castle West Staircase Loader"; break;
+                        case 3708: eventLabels[i] = "Open Castlekey1 Door"; break;
+                        case 3709: eventLabels[i] = "Empty"; break;
+                        case 3710: eventLabels[i] = "Empty"; break;
+                        case 3711: eventLabels[i] = "Nimbus Castle Bridge Room Loader"; break;
+                        case 3712: eventLabels[i] = "Nimbus Castle Bridge Room Npc Animations"; break;
+                        case 3713: eventLabels[i] = "Nimbus Castle Angled Plant Room Npc Animations"; break;
+                        case 3714: eventLabels[i] = "Nimbus Castle Angled Plant Room Loader"; break;
+                        case 3715: eventLabels[i] = "Nimbus Castle Angled Plant Room Right Fan Gust Path"; break;
+                        case 3716: eventLabels[i] = "Nimbus Castle Angled Plant Room Right Fan Gust"; break;
+                        case 3717: eventLabels[i] = "Nimbus Castle Two Level Chest Room Fan Gust Path"; break;
+                        case 3718: eventLabels[i] = "Nimbus Castle Angled Plant Room Right Fan Battle"; break;
+                        case 3719: eventLabels[i] = "Nimbus Castle Right Red Cellar Woman"; break;
+                        case 3720: eventLabels[i] = "Nimbus Castle Outer Cellar Blue Gift Guy"; break;
+                        case 3721: eventLabels[i] = "Nimbus Castle Rightmost Outer Cellar Guy"; break;
+                        case 3722: eventLabels[i] = "Nimbus Castle Left Cellar Woman"; break;
+                        case 3723: eventLabels[i] = "Nimbus Castle Outer Cellar Gift Guard"; break;
+                        case 3724: eventLabels[i] = "Nimbus Castle Outer Cellar Loader"; break;
+                        case 3725: eventLabels[i] = "Nimbus Castle Note Hallway Loader"; break;
+                        case 3726: eventLabels[i] = "Nimbus Castle Antechamber Loader"; break;
+                        case 3727: eventLabels[i] = "Nimbus Castle Stairway Guard"; break;
+                        case 3728: eventLabels[i] = "Empty"; break;
+                        case 3729: eventLabels[i] = "Nimbus Castle Occupied Throne Room Loader"; break;
+                        case 3730: eventLabels[i] = "Nimbus Castle Occupied 4 Path Room Loader"; break;
+                        case 3731: eventLabels[i] = "Empty"; break;
+                        case 3732: eventLabels[i] = "Nimbus Castle Final Chest Hallway Loader"; break;
+                        case 3733: eventLabels[i] = "Nimbus Castle Final Chest Hallway Platform"; break;
+                        case 3734: eventLabels[i] = "Nimbus Castle Final Chest Hallway Exit To Final Hallway"; break;
+                        case 3735: eventLabels[i] = "Nimbus Castle Final Hallway Apply Mod"; break;
+                        case 3736: eventLabels[i] = "Nimbus Castle Final Hallway Loader"; break;
+                        case 3737: eventLabels[i] = "Nimbus Castle Back Exit Loader"; break;
+                        case 3738: eventLabels[i] = "Empty"; break;
+                        case 3739: eventLabels[i] = "Nimbus Castle Throne Room Exit To Antechamber"; break;
+                        case 3740: eventLabels[i] = "Nimbus Castle Liberated Throne Room Loader"; break;
+                        case 3741: eventLabels[i] = "Nimbus Castle Antechamber Exit To Note Hallway"; break;
+                        case 3742: eventLabels[i] = "Nimbus Castle Antechamber Exit To Throne Room"; break;
+                        case 3743: eventLabels[i] = "Nimbus Castle Right Shaman Hallway Liberated Npc"; break;
+                        case 3744: eventLabels[i] = "Nimbus Exterior Shy Away"; break;
+                        case 3745: eventLabels[i] = "Nimbus Back Exit Initiate Falling Sequence"; break;
+                        case 3746: eventLabels[i] = "Hot Springs Trampoline To Mezzanine"; break;
+                        case 3747: eventLabels[i] = "Nimbus Hot Spring Guards"; break;
+                        case 3748: eventLabels[i] = "Empty"; break;
+                        case 3749: eventLabels[i] = "Nimbus Mezzanine Trampoline To Town Square"; break;
+                        case 3750: eventLabels[i] = "Nimbus Mezzanine Fall To Hot Springs"; break;
+                        case 3751: eventLabels[i] = "Nimbus Land Hot Springs Lobby Exit"; break;
+                        case 3752: eventLabels[i] = "Hot Springs Exit To Lobby"; break;
+                        case 3753: eventLabels[i] = "Hot Springs Lobby Loader"; break;
+                        case 3754: eventLabels[i] = "Hot Springs Fall To Volcano"; break;
+                        case 3755: eventLabels[i] = "Hot Springs Note"; break;
+                        case 3756: eventLabels[i] = "Hot Springs Loader"; break;
+                        case 3757: eventLabels[i] = "King Nimbus"; break;
+                        case 3758: eventLabels[i] = "Queen Nimbus"; break;
+                        case 3759: eventLabels[i] = "Nimbus Castle Left Shaman Hallway Liberated Npc"; break;
+                        case 3760: eventLabels[i] = "Nimbus Mezzanine Trampoline To World Map"; break;
+                        case 3761: eventLabels[i] = "Nimbus Mezzanine Loader"; break;
+                        case 3762: eventLabels[i] = "Nimbus Castle Liberated 5 Door Room Loader"; break;
+                        case 3763: eventLabels[i] = "Nimbus Back Exit Mario Fall Animation"; break;
+                        case 3764: eventLabels[i] = "Nimbus First Fall Room Load 2Nd Room"; break;
+                        case 3765: eventLabels[i] = "Bean Valley Upper Chest Room Fall To Lower Chest Room"; break;
+                        case 3766: eventLabels[i] = "Bean Valley Lower Chest Room Fall To Hot Springs Mezzanine"; break;
+                        case 3767: eventLabels[i] = "Nimbus Castle Angled Plant Room Exit To 4 Path Room"; break;
+                        case 3768: eventLabels[i] = "Nimbus Castle Main Hall Exit To 4 Way Path"; break;
+                        case 3769: eventLabels[i] = "Nimbus Castle Liberated Bridge Room Loader"; break;
+                        case 3770: eventLabels[i] = "Bean Valley 1St Vine Room Loader"; break;
+                        case 3771: eventLabels[i] = "Samus"; break;
+                        case 3772: eventLabels[i] = "Hot Springs Water"; break;
+                        case 3773: eventLabels[i] = "Hot Springs Eject From Water"; break;
+                        case 3774: eventLabels[i] = "Hot Springs Reset Ejection Timer"; break;
+                        case 3775: eventLabels[i] = "Unused Nimbus Dialog"; break;
+                        case 3776: eventLabels[i] = "Empty"; break;
+                        case 3777: eventLabels[i] = "Royal Bus Platform Exit"; break;
+                        case 3778: eventLabels[i] = "Ball Solitaire Set Puzzle"; break;
+                        case 3779: eventLabels[i] = "Bean Valley 1St Vine Room Exit To 2Nd Vine Room"; break;
+                        case 3780: eventLabels[i] = "Bean Valley 2Nd Vine Room Exit To East Vine Room"; break;
+                        case 3781: eventLabels[i] = "Bean Valley East Vine Room Exit To Nimbus Mezzanine"; break;
+                        case 3782: eventLabels[i] = "Bean Valley Upper Chest Room Fall To West Vine Room"; break;
+                        case 3783: eventLabels[i] = "Bean Valley East Vine Room Exit To 2Nd Vine Room"; break;
+                        case 3784: eventLabels[i] = "Bean Valley 2Nd Vine Room Exit To 1St Vine Room"; break;
+                        case 3785: eventLabels[i] = "Bean Valley 1St Vine Room Exit To Ground Level"; break;
+                        case 3786: eventLabels[i] = "Bean Valley West Vine Room Exit To Upper Chest Room"; break;
+                        case 3787: eventLabels[i] = "Nimbus Mezzanine Fall To East Vine Room"; break;
+                        case 3788: eventLabels[i] = "Bean Valley West Vine Room Summon Platform"; break;
+                        case 3789: eventLabels[i] = "Bean Valley West Vine Room Platform"; break;
+                        case 3790: eventLabels[i] = "Bean Valley 2Nd Vine Room Exit To West Vine Room"; break;
+                        case 3791: eventLabels[i] = "Open Factory Final Boss Room"; break;
+                        case 3792: eventLabels[i] = "Factory Final Boss Room Loader"; break;
+                        case 3793: eventLabels[i] = "Factory Smelter Animation"; break;
+                        case 3794: eventLabels[i] = "Factory Final Boss Fight"; break;
+                        case 3795: eventLabels[i] = "Empty"; break;
+                        case 3796: eventLabels[i] = "Empty"; break;
+                        case 3797: eventLabels[i] = "Ending Credits Room Loader"; break;
+                        case 3798: eventLabels[i] = "Ending Credits Orange Star"; break;
+                        case 3799: eventLabels[i] = "Ending Credits Purple Star"; break;
+                        case 3800: eventLabels[i] = "Ending Credits Indigo Star"; break;
+                        case 3801: eventLabels[i] = "Ending Credits Red Star"; break;
+                        case 3802: eventLabels[i] = "Ending Credits Yellow Star"; break;
+                        case 3803: eventLabels[i] = "Ending Credits Green Star"; break;
+                        case 3804: eventLabels[i] = "Ending Credits Coronation Npcs"; break;
+                        case 3805: eventLabels[i] = "Ending Credits Coronation Loader"; break;
+                        case 3806: eventLabels[i] = "Ending Credits Race Npcs"; break;
+                        case 3807: eventLabels[i] = "Ending Credits Race Loader"; break;
+                        case 3808: eventLabels[i] = "Ending Credits Race Audience"; break;
+                        case 3809: eventLabels[i] = "Marrymore Sanctuary Begin Wedding Gear Sequence"; break;
+                        case 3810: eventLabels[i] = "Empty"; break;
+                        case 3811: eventLabels[i] = "Nimbus Inner Cellar Loader"; break;
+                        case 3812: eventLabels[i] = "Empty"; break;
+                        case 3813: eventLabels[i] = "Nimbus Inn Guest"; break;
+                        case 3814: eventLabels[i] = "Mushroom Kingdom Liberated Loader"; break;
+                        case 3815: eventLabels[i] = "Empty"; break;
+                        case 3816: eventLabels[i] = "Empty"; break;
+                        case 3817: eventLabels[i] = "Empty"; break;
+                        case 3818: eventLabels[i] = "World Map Mushroom Way"; break;
+                        case 3819: eventLabels[i] = "Lands End First Room Loader"; break;
+                        case 3820: eventLabels[i] = "Forced Tower Boss 1 Fight"; break;
+                        case 3821: eventLabels[i] = "Empty"; break;
+                        case 3822: eventLabels[i] = "Rose Town Sign Item Granter"; break;
+                        case 3823: eventLabels[i] = "Yoster Isle Goalpost Item Granter"; break;
+                        case 3824: eventLabels[i] = "Yoster Isle Loader"; break;
+                        case 3825: eventLabels[i] = "Nimbus Final Chest Room Platform Bit"; break;
+                        case 3826: eventLabels[i] = "Empty"; break;
+                        case 3827: eventLabels[i] = "Grant Item Standard Sound"; break;
+                        case 3828: eventLabels[i] = "Empty"; break;
+                        case 3829: eventLabels[i] = "Empty"; break;
+                        case 3830: eventLabels[i] = "Mushroom Kingdom Shop Cellar Npc"; break;
+                        case 3831: eventLabels[i] = "Mushroom Kingdom Shop Cellar Mod"; break;
+                        case 3832: eventLabels[i] = "Empty"; break;
+                        case 3833: eventLabels[i] = "Empty"; break;
+                        case 3834: eventLabels[i] = "Empty"; break;
+                        case 3835: eventLabels[i] = "Empty"; break;
+                        case 3836: eventLabels[i] = "Empty"; break;
+                        case 3837: eventLabels[i] = "Empty"; break;
+                        case 3838: eventLabels[i] = "Keep Anti Softlock Trampoline"; break;
+                        case 3839: eventLabels[i] = "Empty"; break;
+                        case 3840: eventLabels[i] = "Starter Debug Items"; break;
+                        case 3841: eventLabels[i] = "World Map Marios Pad"; break;
+                        case 3842: eventLabels[i] = "Booster Hill Star Piece Signal"; break;
+                        case 3843: eventLabels[i] = "World Map Mushroom Kingdom"; break;
+                        case 3844: eventLabels[i] = "World Map Bandits Way"; break;
+                        case 3845: eventLabels[i] = "World Map Kero Sewers"; break;
+                        case 3846: eventLabels[i] = "World Map Midas River"; break;
+                        case 3847: eventLabels[i] = "World Map Tadpole Pond"; break;
+                        case 3848: eventLabels[i] = "World Map Pipe Vault"; break;
+                        case 3849: eventLabels[i] = "World Map Rose Way"; break;
+                        case 3850: eventLabels[i] = "World Map Rose Town"; break;
+                        case 3851: eventLabels[i] = "World Map Forest Maze"; break;
+                        case 3852: eventLabels[i] = "World Map Yoster Isle"; break;
+                        case 3853: eventLabels[i] = "World Map Moleville"; break;
+                        case 3854: eventLabels[i] = "World Map Booster Pass"; break;
+                        case 3855: eventLabels[i] = "World Map Booster Tower"; break;
+                        case 3856: eventLabels[i] = "World Map Marrymore"; break;
+                        case 3857: eventLabels[i] = "World Map Star Hill"; break;
+                        case 3858: eventLabels[i] = "World Map Seaside Town"; break;
+                        case 3859: eventLabels[i] = "World Map Sea"; break;
+                        case 3860: eventLabels[i] = "World Map Ship"; break;
+                        case 3861: eventLabels[i] = "World Map Lands End"; break;
+                        case 3862: eventLabels[i] = "World Map Montro Town"; break;
+                        case 3863: eventLabels[i] = "World Map Bean Valley"; break;
+                        case 3864: eventLabels[i] = "World Map Nimbus Land"; break;
+                        case 3865: eventLabels[i] = "World Map Barrel Volcano"; break;
+                        case 3866: eventLabels[i] = "World Map Vista Hill"; break;
+                        case 3867: eventLabels[i] = "World Map Booster Hill"; break;
+                        case 3868: eventLabels[i] = "World Map Bowsers Keep"; break;
+                        case 3869: eventLabels[i] = "World Map Abyss"; break;
+                        case 3870: eventLabels[i] = "World Map Grate Guys Casino"; break;
+                        case 3871: eventLabels[i] = "Nimbus Castle Two Chest Room Guard"; break;
+                        case 3872: eventLabels[i] = "Nimbus Castle 5 Door Room Left Guard"; break;
+                        case 3873: eventLabels[i] = "Nimbus Castle 5 Door Room Right Guard"; break;
+                        case 3874: eventLabels[i] = "Nimbus Castle Bridge Room Guard"; break;
+                        case 3875: eventLabels[i] = "Nimbus Unused Dialog"; break;
+                        case 3876: eventLabels[i] = "Nimbus Castlle 4 Way Path Left Guard"; break;
+                        case 3877: eventLabels[i] = "Nimbus Castle Two Chest Room Upper Chest"; break;
+                        case 3878: eventLabels[i] = "Casino Trampoline"; break;
+                        case 3879: eventLabels[i] = "Nimbus Castle Bridge Room Chest"; break;
+                        case 3880: eventLabels[i] = "Sea Chests"; break;
+                        case 3881: eventLabels[i] = "Chest Differentiator Npc 1 Or Other"; break;
+                        case 3882: eventLabels[i] = "Chest Differentiator Npc 3 4 Or Other"; break;
+                        case 3883: eventLabels[i] = "Inner Factory Exit Trampoline"; break;
+                        case 3884: eventLabels[i] = "Ball Solitaire Set Puzzle Configuration Value"; break;
+                        case 3885: eventLabels[i] = "End Game"; break;
+                        case 3886: eventLabels[i] = "End Game Container From Alt Win Conditions"; break;
+                        case 3887: eventLabels[i] = "Marios Pad Star Piece Signal"; break;
+                        case 3888: eventLabels[i] = "Mushroom Way Star Piece Signal"; break;
+                        case 3889: eventLabels[i] = "Mushroom Kingdom Star Piece Signal"; break;
+                        case 3890: eventLabels[i] = "Bandits Way Star Piece Signal"; break;
+                        case 3891: eventLabels[i] = "Sewers Star Piece Signal"; break;
+                        case 3892: eventLabels[i] = "Midas River Star Piece Signal"; break;
+                        case 3893: eventLabels[i] = "Tadpole Pond Star Piece Signal"; break;
+                        case 3894: eventLabels[i] = "Rose Way Star Piece Signal"; break;
+                        case 3895: eventLabels[i] = "Rose Town Star Piece Signal"; break;
+                        case 3896: eventLabels[i] = "Forest Maze Star Piece Signal"; break;
+                        case 3897: eventLabels[i] = "Moleville Star Piece Signal"; break;
+                        case 3898: eventLabels[i] = "Booster Pass Star Piece Signal"; break;
+                        case 3899: eventLabels[i] = "Booster Tower Star Piece Signal"; break;
+                        case 3900: eventLabels[i] = "Pipe Vault Star Piece Signal"; break;
+                        case 3901: eventLabels[i] = "Yoster Isle Star Piece Signal"; break;
+                        case 3902: eventLabels[i] = "Marrymore Star Piece Signal"; break;
+                        case 3903: eventLabels[i] = "Star Hill Star Piece Signal"; break;
+                        case 3904: eventLabels[i] = "Seaside Town Star Piece Signal"; break;
+                        case 3905: eventLabels[i] = "Sea Star Piece Signal"; break;
+                        case 3906: eventLabels[i] = "Ship Star Piece Signal"; break;
+                        case 3907: eventLabels[i] = "Lands End Star Piece Signal"; break;
+                        case 3908: eventLabels[i] = "Temple Star Piece Signal"; break;
+                        case 3909: eventLabels[i] = "Monstro Star Piece Signal"; break;
+                        case 3910: eventLabels[i] = "Casino Star Piece Signal"; break;
+                        case 3911: eventLabels[i] = "Bean Valley Star Piece Signal"; break;
+                        case 3912: eventLabels[i] = "Nimbus Star Piece Signal"; break;
+                        case 3913: eventLabels[i] = "Volcano Star Piece Signal"; break;
+                        case 3914: eventLabels[i] = "Keep Star Piece Signal"; break;
+                        case 3915: eventLabels[i] = "Factory Star Piece Signal"; break;
+                        case 3916: eventLabels[i] = "Inner Factory Star Piece Signal"; break;
+                        case 3917: eventLabels[i] = "Rose Way Back Entrance Loader"; break;
+                        case 3918: eventLabels[i] = "Forest Maze Entrance Loader"; break;
+                        case 3919: eventLabels[i] = "Booster Pass Back Entrance Loader"; break;
+                        case 3920: eventLabels[i] = "Sea Save Room Loader"; break;
+                        case 3921: eventLabels[i] = "Ship First Save Room Loader"; break;
+                        case 3922: eventLabels[i] = "Temple Set Signal Ring Directional Bit"; break;
+                        case 3923: eventLabels[i] = "Volcano Save Room Loader"; break;
+                        case 3924: eventLabels[i] = "Keep 1St Save Room Loader"; break;
+                        case 3925: eventLabels[i] = "Factory Save Room Loaders"; break;
+                        case 3926: eventLabels[i] = "Temple Back Entrance"; break;
+                        case 3927: eventLabels[i] = "Nimbus Castle Exit Hallway Save Room Loader"; break;
+                        case 3928: eventLabels[i] = "Nimbus Castlle 4 Way Path Right Guard"; break;
+                        case 3929: eventLabels[i] = "Lands End Purchasable Chest 2 Subroutine"; break;
+                        case 3930: eventLabels[i] = "Marrymore Gear Preloader"; break;
+                        case 3931: eventLabels[i] = "Get Shoes"; break;
+                        case 3932: eventLabels[i] = "Get Brooch"; break;
+                        case 3933: eventLabels[i] = "Get Ring"; break;
+                        case 3934: eventLabels[i] = "Get Crown"; break;
+                        case 3935: eventLabels[i] = "Freestanding Shoes"; break;
+                        case 3936: eventLabels[i] = "Freestanding Brooch"; break;
+                        case 3937: eventLabels[i] = "Freestanding Ring"; break;
+                        case 3938: eventLabels[i] = "Freestanding Crown"; break;
+                        case 3939: eventLabels[i] = "River Shoes"; break;
+                        case 3940: eventLabels[i] = "River Brooch"; break;
+                        case 3941: eventLabels[i] = "River Ring"; break;
+                        case 3942: eventLabels[i] = "River Crown"; break;
+                        case 3943: eventLabels[i] = "Shoes Chest"; break;
+                        case 3944: eventLabels[i] = "Brooch Chest"; break;
+                        case 3945: eventLabels[i] = "Ring Chest"; break;
+                        case 3946: eventLabels[i] = "Crown Chest"; break;
+                        case 3947: eventLabels[i] = "Empty"; break;
+                        case 3948: eventLabels[i] = "Empty"; break;
+                        case 3949: eventLabels[i] = "Empty"; break;
+                        case 3950: eventLabels[i] = "Post Final Boss Init"; break;
+                        case 3951: eventLabels[i] = "Star Piece Credits Init"; break;
+                        case 3952: eventLabels[i] = "Clone Reserved"; break;
+                        case 3953: eventLabels[i] = "Clone Reserved"; break;
+                        case 3954: eventLabels[i] = "Clone Reserved"; break;
+                        case 3955: eventLabels[i] = "Clone Reserved"; break;
+                        case 3956: eventLabels[i] = "Clone Reserved"; break;
+                        case 3957: eventLabels[i] = "Clone Reserved"; break;
+                        case 3958: eventLabels[i] = "Clone Reserved"; break;
+                        case 3959: eventLabels[i] = "Clone Reserved"; break;
+                        case 3960: eventLabels[i] = "Clone Reserved"; break;
+                        case 3961: eventLabels[i] = "Clone Reserved"; break;
+                        case 3962: eventLabels[i] = "Clone Reserved"; break;
+                        case 3963: eventLabels[i] = "Clone Reserved"; break;
+                        case 3964: eventLabels[i] = "Clone Reserved"; break;
+                        case 3965: eventLabels[i] = "Clone Reserved"; break;
+                        case 3966: eventLabels[i] = "Clone Reserved"; break;
+                        case 3967: eventLabels[i] = "Clone Reserved"; break;
+                        case 3968: eventLabels[i] = "Clone Reserved"; break;
+                        case 3969: eventLabels[i] = "Clone Reserved"; break;
+                        case 3970: eventLabels[i] = "Clone Reserved"; break;
+                        case 3971: eventLabels[i] = "Clone Reserved"; break;
+                        case 3972: eventLabels[i] = "Clone Reserved"; break;
+                        case 3973: eventLabels[i] = "Clone Reserved"; break;
+                        case 3974: eventLabels[i] = "Clone Reserved"; break;
+                        case 3975: eventLabels[i] = "Clone Reserved"; break;
+                        case 3976: eventLabels[i] = "Clone Reserved"; break;
+                        case 3977: eventLabels[i] = "Clone Reserved"; break;
+                        case 3978: eventLabels[i] = "Clone Reserved"; break;
+                        case 3979: eventLabels[i] = "Clone Reserved"; break;
+                        case 3980: eventLabels[i] = "Clone Reserved"; break;
+                        case 3981: eventLabels[i] = "Clone Reserved"; break;
+                        case 3982: eventLabels[i] = "Clone Reserved"; break;
+                        case 3983: eventLabels[i] = "Clone Reserved"; break;
+                        case 3984: eventLabels[i] = "Clone Reserved"; break;
+                        case 3985: eventLabels[i] = "Clone Reserved"; break;
+                        case 3986: eventLabels[i] = "Clone Reserved"; break;
+                        case 3987: eventLabels[i] = "Clone Reservedclone Reserved"; break;
+                        case 3988: eventLabels[i] = "Clone Reserved"; break;
+                        case 3989: eventLabels[i] = "Clone Reserved"; break;
+                        case 3990: eventLabels[i] = "Clone Reserved"; break;
+                        case 3991: eventLabels[i] = "Clone Reserved"; break;
+                        case 3992: eventLabels[i] = "Clone Reserved"; break;
+                        case 3993: eventLabels[i] = "Clone Reserved"; break;
+                        case 3994: eventLabels[i] = "Clone Reserved"; break;
+                        case 3995: eventLabels[i] = "Clone Reserved"; break;
+                        case 3996: eventLabels[i] = "Clone Reserved"; break;
+                        case 3997: eventLabels[i] = "Clone Reserved"; break;
+                        case 3998: eventLabels[i] = "Clone Reserved"; break;
+                        case 3999: eventLabels[i] = "Clone Reserved"; break;
+                        case 4000: eventLabels[i] = "Clone Reserved"; break;
+                        case 4001: eventLabels[i] = "Clone Reserved"; break;
+                        case 4002: eventLabels[i] = "Clone Reserved"; break;
+                        case 4003: eventLabels[i] = "Clone Reserved"; break;
+                        case 4004: eventLabels[i] = "Clone Reserved"; break;
+                        case 4005: eventLabels[i] = "Clone Reserved"; break;
+                        case 4006: eventLabels[i] = "Clone Reserved"; break;
+                        case 4007: eventLabels[i] = "Clone Reserved"; break;
+                        case 4008: eventLabels[i] = "Clone Reserved"; break;
+                        case 4009: eventLabels[i] = "Clone Reserved"; break;
+                        case 4010: eventLabels[i] = "Clone Reserved"; break;
+                        case 4011: eventLabels[i] = "Clone Reserved"; break;
+                        case 4012: eventLabels[i] = "Clone Reserved"; break;
+                        case 4013: eventLabels[i] = "Clone Reserved"; break;
+                        case 4014: eventLabels[i] = "Clone Reserved"; break;
+                        case 4015: eventLabels[i] = "Clone Reserved"; break;
+                        case 4016: eventLabels[i] = "Clone Reserved"; break;
+                        case 4017: eventLabels[i] = "Clone Reserved"; break;
+                        case 4018: eventLabels[i] = "Clone Reserved"; break;
+                        case 4019: eventLabels[i] = "Clone Reserved"; break;
+                        case 4020: eventLabels[i] = "Clone Reserved"; break;
+                        case 4021: eventLabels[i] = "Clone Reserved"; break;
+                        case 4022: eventLabels[i] = "Clone Reserved"; break;
+                        case 4023: eventLabels[i] = "Clone Reserved"; break;
+                        case 4024: eventLabels[i] = "Clone Reserved"; break;
+                        case 4025: eventLabels[i] = "Clone Reserved"; break;
+                        case 4026: eventLabels[i] = "Clone Reserved"; break;
+                        case 4027: eventLabels[i] = "Clone Reserved"; break;
+                        case 4028: eventLabels[i] = "Clone Reserved"; break;
+                        case 4029: eventLabels[i] = "Clone Reserved"; break;
+                        case 4030: eventLabels[i] = "Clone Reserved"; break;
+                        case 4031: eventLabels[i] = "Clone Reserved"; break;
+                        case 4032: eventLabels[i] = "Clone Reserved"; break;
+                        case 4033: eventLabels[i] = "Clone Reserved"; break;
+                        case 4034: eventLabels[i] = "Clone Reserved"; break;
+                        case 4035: eventLabels[i] = "Clone Reserved"; break;
+                        case 4036: eventLabels[i] = "Clone Reserved"; break;
+                        case 4037: eventLabels[i] = "Clone Reserved"; break;
+                        case 4038: eventLabels[i] = "Clone Reserved"; break;
+                        case 4039: eventLabels[i] = "Clone Reserved"; break;
+                        case 4040: eventLabels[i] = "Clone Reserved"; break;
+                        case 4041: eventLabels[i] = "Clone Reserved"; break;
+                        case 4042: eventLabels[i] = "Clone Reserved"; break;
+                        case 4043: eventLabels[i] = "Clone Reserved"; break;
+                        case 4044: eventLabels[i] = "Clone Reserved"; break;
+                        case 4045: eventLabels[i] = "Clone Reserved"; break;
+                        case 4046: eventLabels[i] = "Clone Reserved"; break;
+                        case 4047: eventLabels[i] = "Clone Reserved"; break;
+                        case 4048: eventLabels[i] = "Clone Reserved"; break;
+                        case 4049: eventLabels[i] = "Clone Reserved"; break;
+                        case 4050: eventLabels[i] = "Clone Reserved"; break;
+                        case 4051: eventLabels[i] = "Clone Reserved"; break;
+                        case 4052: eventLabels[i] = "Clone Reserved"; break;
+                        case 4053: eventLabels[i] = "Clone Reserved"; break;
+                        case 4054: eventLabels[i] = "Clone Reserved"; break;
+                        case 4055: eventLabels[i] = "Clone Reserved"; break;
+                        case 4056: eventLabels[i] = "Clone Reserved"; break;
+                        case 4057: eventLabels[i] = "Clone Reserved"; break;
+                        case 4058: eventLabels[i] = "Clone Reserved"; break;
+                        case 4059: eventLabels[i] = "Clone Reserved"; break;
+                        case 4060: eventLabels[i] = "Clone Reserved"; break;
+                        case 4061: eventLabels[i] = "Clone Reserved"; break;
+                        case 4062: eventLabels[i] = "Clone Reserved"; break;
+                        case 4063: eventLabels[i] = "Clone Reserved"; break;
+                        case 4064: eventLabels[i] = "Clone Reserved"; break;
+                        case 4065: eventLabels[i] = "Clone Reserved"; break;
+                        case 4066: eventLabels[i] = "Clone Reserved"; break;
+                        case 4067: eventLabels[i] = "Clone Reserved"; break;
+                        case 4068: eventLabels[i] = "Clone Reserved"; break;
+                        case 4069: eventLabels[i] = "Clone Reserved"; break;
+                        case 4070: eventLabels[i] = "Clone Reserved"; break;
+                        case 4071: eventLabels[i] = "Clone Reserved"; break;
+                        case 4072: eventLabels[i] = "Clone Reserved"; break;
+                        case 4073: eventLabels[i] = "Clone Reserved"; break;
+                        case 4074: eventLabels[i] = "Clone Reserved"; break;
+                        case 4075: eventLabels[i] = "Clone Reserved"; break;
+                        case 4076: eventLabels[i] = "Clone Reserved"; break;
+                        case 4077: eventLabels[i] = "Clone Reserved"; break;
+                        case 4078: eventLabels[i] = "Clone Reserved"; break;
+                        case 4079: eventLabels[i] = "Clone Reserved"; break;
+                        case 4080: eventLabels[i] = "Clone Reserved"; break;
+                        case 4081: eventLabels[i] = "Clone Reserved"; break;
+                        case 4082: eventLabels[i] = "Clone Reserved"; break;
+                        case 4083: eventLabels[i] = "Clone Reserved"; break;
+                        case 4084: eventLabels[i] = "Clone Reserved"; break;
+                        case 4085: eventLabels[i] = "Clone Reserved"; break;
+                        case 4086: eventLabels[i] = "Clone Reserved"; break;
+                        case 4087: eventLabels[i] = "Clone Reserved"; break;
+                        case 4088: eventLabels[i] = "Clone Reserved"; break;
+                        case 4089: eventLabels[i] = "Clone Reserved"; break;
+                        case 4090: eventLabels[i] = "Clone Reserved"; break;
+                        case 4091: eventLabels[i] = "Clone Reserved"; break;
+                        case 4092: eventLabels[i] = "Clone Reserved"; break;
+                        case 4093: eventLabels[i] = "Clone Reserved"; break;
+                        case 4094: eventLabels[i] = "Clone Reserved"; break;
+                        case 4095: eventLabels[i] = "Clone Reserved"; break;
                         default: actionLabels[i] = ""; break;
                     }
                 }
@@ -4727,7 +12896,7 @@ namespace LAZYSHELL
             },
             new int[]   // 2
             {
-                0x36,0x54,0x56,0xFD,0xFD,0xFD
+                0x36,0x54,0x56,0xCE,0xFD,0xFD,0xFD
             },
             new int[]   // 3
             {
@@ -4814,7 +12983,7 @@ namespace LAZYSHELL
             },
             new int[]   // 2
             {
-                0x00,0x00,0x00,0x4B,0x5B,0x64
+                0x00,0x00,0x00,0x00,0x4B,0x5B,0x64
             },
             new int[]   // 3
             {
@@ -5094,11 +13263,12 @@ namespace LAZYSHELL
                     "Enable buttons {xx} only...",			// 0x35
                                         };
                 case 2:
-                    return new string[] 
-                    { 
+                    return new string[]
+                    {
                     "Add or remove character {xx} in party...",			// 0x36
                     "Equip item {xx} to character {xx}...",			// 0x54
                     "Character {xx}'s HP -= memory $7000",			// 0x56
+                    "Character {xx} learns {xx}",			// 0xCE
                     /********FD OPTIONS********/
                     "Experience += experience packet",			// 0x4B
                     "Restore all HP",			// 0x5B

@@ -46,7 +46,21 @@ namespace LAZYSHELL
         // accessor functions
         public byte[] Graphics(byte[] spriteGraphics)
         {
-            return Bits.GetBytes(spriteGraphics, graphicOffset - 0x280000, 0x4000);
+            // Bounds check: ensure we don't read beyond SpriteGraphics buffer (0xF87C0 bytes)
+            int srcOffset = graphicOffset - 0x280000;
+            if (srcOffset < 0 || srcOffset >= spriteGraphics.Length)
+            {
+                // Return empty array if offset is invalid
+                return new byte[0x4000];
+            }
+            int availableBytes = spriteGraphics.Length - srcOffset;
+            int bytesToRead = Math.Min(0x4000, availableBytes);
+            if (bytesToRead <= 0)
+                return new byte[0x4000];
+
+            byte[] result = new byte[0x4000];
+            Array.Copy(spriteGraphics, srcOffset, result, 0, bytesToRead);
+            return result;
         }
     }
 }

@@ -56,7 +56,10 @@ namespace LAZYSHELL
             for (i = 0; i < Model.Items.Length && length + (Model.Items[i].RawDescription != null ? Model.Items[i].RawDescription.Length : 0) < 0x40f1; i++)
                 Model.Items[i].Assemble(ref length);
             length = 0xED44;
-            for (; i < Model.Items.Length && length + (Model.Items[i].RawDescription != null ? Model.Items[i].RawDescription.Length : 0) < 0xffff; i++)
+            for (; i < Model.Items.Length && length + (Model.Items[i].RawDescription != null ? Model.Items[i].RawDescription.Length : 0) < 0xFA00; i++)
+                Model.Items[i].Assemble(ref length);
+            length = 0xFA00;
+            for (; i < Model.Items.Length && length + (Model.Items[i].RawDescription != null ? Model.Items[i].RawDescription.Length : 0) < 0x10000; i++)
                 Model.Items[i].Assemble(ref length);
             if (i != Model.Items.Length)
                 MessageBox.Show("Not enough space to save all item descriptions.");

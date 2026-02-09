@@ -68,19 +68,29 @@ namespace LAZYSHELL
         }
         private void Disassemble()
         {
+            Console.WriteLine("");
+            Console.WriteLine(index);
             int pointerOffset = (index * 2) + 0x20E000;
             ushort offsetStart = Bits.GetShort(rom, pointerOffset); pointerOffset += 2;
             ushort offsetEnd = Bits.GetShort(rom, pointerOffset);
+            Console.WriteLine(offsetStart.ToString("X"));
+            Console.WriteLine(offsetEnd.ToString("X"));
             if (index == 0x1FF) offsetEnd = 0;
             // no event fields for level
             if (offsetStart >= offsetEnd)
                 return;
             //
             int offset = offsetStart + 0x200000;
+            Console.WriteLine(offset.ToString("X"));
             music = rom[offset++];
+            Console.WriteLine("music");
+            Console.WriteLine(music);
             entranceEvent = Bits.GetShort(rom, offset); offset += 2;
+            Console.WriteLine("entrance");
+            Console.WriteLine(entranceEvent);
             while (offset < offsetEnd + 0x200000)
             {
+                Console.WriteLine(offset.ToString("X"));
                 Event tEvent = new Event();
                 tEvent.Disassemble(offset);
                 events.Add(tEvent);

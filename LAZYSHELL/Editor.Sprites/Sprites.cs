@@ -39,7 +39,12 @@ namespace LAZYSHELL
             set
             {
                 graphics = value;
-                graphics.CopyTo(Model.SpriteGraphics, image.GraphicOffset - 0x280000);
+                // Bounds check: ensure we don't copy beyond SpriteGraphics buffer (0xF87C0 bytes)
+                int destOffset = image.GraphicOffset - 0x280000;
+                int availableSpace = 0xF87C0 - destOffset;
+                int bytesToCopy = Math.Min(graphics.Length, availableSpace);
+                if (bytesToCopy > 0)
+                    Array.Copy(graphics, 0, Model.SpriteGraphics, destOffset, bytesToCopy);
             }
         }
         private byte[] spriteGraphics { get { return Model.SpriteGraphics; } }
@@ -245,7 +250,7 @@ namespace LAZYSHELL
                 gp.Assemble();
             foreach (PaletteSet p in palettes)
                 p.Assemble(0);
-            Buffer.BlockCopy(Model.SpriteGraphics, 0, rom, 0x280000, 0xB4000);
+            Buffer.BlockCopy(Model.SpriteGraphics, 0, rom, 0x280000, 0xF87C0);
             Model.HexEditor.SetOffset(animation.AnimationOffset);
             Model.HexEditor.Compare();
             molds.Modified = false;
@@ -333,7 +338,12 @@ namespace LAZYSHELL
             molds.SetTilemapImage();
             sequences.SetSequenceFrameImages();
             sequences.InvalidateImages();
-            graphics.CopyTo(Model.SpriteGraphics, image.GraphicOffset - 0x280000);
+            // Bounds check: ensure we don't copy beyond SpriteGraphics buffer (0xF87C0 bytes)
+            int destOffset = image.GraphicOffset - 0x280000;
+            int availableSpace = 0xF87C0 - destOffset;
+            int bytesToCopy = Math.Min(graphics.Length, availableSpace);
+            if (bytesToCopy > 0)
+                Array.Copy(graphics, 0, Model.SpriteGraphics, destOffset, bytesToCopy);
         }
         private void CloseEditors()
         {
@@ -551,7 +561,12 @@ namespace LAZYSHELL
             sprite = new Sprite(Index);
             for (int i = image.PaletteNum; i < image.PaletteNum + 8; i++)
                 palettes[i] = new PaletteSet(Model.ROM, i, 0x252FFE + (i * 30), 1, 16, 30);
-            Buffer.BlockCopy(Model.ROM, image.GraphicOffset, Model.SpriteGraphics, image.GraphicOffset - 0x280000, 0x4000);
+            // Bounds check: ensure we don't copy beyond SpriteGraphics buffer (0xF87C0 bytes)
+            int destOffset = image.GraphicOffset - 0x280000;
+            int availableSpace = 0xF87C0 - destOffset;
+            int bytesToCopy = Math.Min(0x4000, availableSpace);
+            if (bytesToCopy > 0)
+                Buffer.BlockCopy(Model.ROM, image.GraphicOffset, Model.SpriteGraphics, destOffset, bytesToCopy);
             number_ValueChanged(null, null);
         }
         private void hexViewer_Click(object sender, EventArgs e)

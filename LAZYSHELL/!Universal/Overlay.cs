@@ -731,7 +731,7 @@ namespace LAZYSHELL
         }
         private void DrawLevelNPC(NPC npc, NPCProperties[] npcProperties, int npcid, int engagetype)
         {
-            int NPCID = engagetype == 0 ? Math.Min(511, npcid + npc.PropertyA) : Math.Min(511, (int)npcid);
+            int NPCID = engagetype == 0 ? Math.Min(1462, npcid + npc.PropertyA) : Math.Min(1462, (int)npcid);
             Size size = new Size(0, 0);
             Sprite sprite = Model.Sprites[npcProperties[NPCID].Sprite];
             int[] pixels = sprite.GetPixels(false, true, 0, npc.F, false, false, ref size);
@@ -745,12 +745,22 @@ namespace LAZYSHELL
             List<NPC> sorted = new List<NPC>();
             foreach (NPC npc in npcs.Npcs)
             {
+                if (npc == null)
+                {
+                    index++;
+                    continue;
+                }
                 npc.Hilite = !npcs.IsCloneSelected && npcs.SelectedNPC == index;
                 npc.Index = total++;
                 sorted.Add(npc);
                 int index_ = 0;
                 foreach (NPC clone in npc.Clones)
                 {
+                    if (clone == null)
+                    {
+                        index_++;
+                        continue;
+                    }
                     clone.Hilite = npcs.SelectedNPC == index && npcs.IsCloneSelected && npcs.SelectedClone == index_;
                     clone.Index = total++;
                     sorted.Add(clone);
@@ -760,7 +770,10 @@ namespace LAZYSHELL
             }
             sorted.Sort(delegate(NPC npc1, NPC npc2) { return npc1.Y.CompareTo(npc2.Y); });
             foreach (NPC npc in sorted)
-                DrawLevelNPC(npc, g, z);
+            {
+                if (npc != null)
+                    DrawLevelNPC(npc, g, z);
+            }
         }
         private void DrawLevelNPC(NPC npc, Graphics g, int z)
         {

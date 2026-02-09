@@ -254,7 +254,7 @@ namespace LAZYSHELL
             0});
             this.graphicOffset.Location = new System.Drawing.Point(111, 41);
             this.graphicOffset.Maximum = new decimal(new int[] {
-            3342320,
+            3670016,
             0,
             0,
             0});
@@ -375,7 +375,7 @@ namespace LAZYSHELL
             // 
             this.animationPacket.Location = new System.Drawing.Point(72, 112);
             this.animationPacket.Maximum = new decimal(new int[] {
-            443,
+            1023,
             0,
             0,
             0});

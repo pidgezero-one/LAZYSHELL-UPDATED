@@ -39,7 +39,7 @@ namespace LAZYSHELL
         // functions
         public void Reload(decimal npcID)
         {
-            npcNum.Value = Math.Min(511, npcID);
+            npcNum.Value = Math.Min(1462, npcID);
             InitializeNPCs();
         }
         private void InitializeNPCs()

@@ -27,28 +27,200 @@ namespace LAZYSHELL.ScriptsEditor
         }
         public byte amem = 0; public byte AMEM { get { return this.amem; } set { this.amem = value; } }
         private int baseOffset; public int BaseOffset { get { return this.baseOffset; } set { this.baseOffset = value; } }
+
+        // Property to expose behavior offset count for dynamic sizing
+        public int BehaviorOffsetCount { get { return behaviorOffsets.Length; } }
+
         // constant variables
-        //pointers start at 0x35058A, about 6 behaviors (6 pointers) per monster
-        // 0x35058A is monster 1,
-        // 0x350596 is monster 2, etc
-        private readonly int[] behaviorOffsets = new int[]
+        // Monster behaviors are dynamically read from ROM
+        // At 0x350202: table of 256 pointers
+        // Each pointer points to a 12-byte list of 6 2-byte pointers
+        private static int[] cachedBehaviorOffsets = null;
+        private int[] behaviorOffsets
         {
-            0x3505C6,0x3505DA,0x350635,0x350669,0x3506A7,0x350737,0x350790,0x350796,
-            0x3507A2,0x3507E9,0x350830,0x35086A,0x3508A4,0x3508BA,0x350916,0x35091C,
-            0x350928,0x35096F,0x35099D,0x35099F,0x3509D5,0x350A38,0x350A3E,0x350A55,
-            0x350A9C,0x350ABD,0x350AF7,0x350B2D,0x350BB7,0x350BF3,0x350BF9,0x350BFD,
-            0x350C14,0x350C5B,0x350C9E,0x350CDC,0x350D22,0x350D36,0x350D72,0x350D9D,
-            0x350DA3,0x350DAF,0x350DED,0x350E38,0x350E4A,0x350E84,0x350E98,0x350EEE,
-            0x350F1A,0x350F44,0x350F4A,0x350F56,0x350F6B,0x350F7A
-        };
+            get
+            {
+                if (cachedBehaviorOffsets == null)
+                {
+                    cachedBehaviorOffsets = BuildBehaviorOffsets();
+                }
+                return cachedBehaviorOffsets;
+            }
+        }
+
+        private static int[] BuildBehaviorOffsets()
+        {
+            byte[] rom = Model.ROM;
+            if (rom == null || rom.Length < 0x360000)
+            {
+                // Fallback to vanilla offsets if ROM is too small
+                return new int[]
+                {
+                    0x3505C6,0x3505DA,0x350635,0x350669,0x3506A7,0x350737,0x350790,0x350796,
+                    0x3507A2,0x3507E9,0x350830,0x35086A,0x3508A4,0x3508BA,0x350916,0x35091C,
+                    0x350928,0x35096F,0x35099D,0x35099F,0x3509D5,0x350A38,0x350A3E,0x350A55,
+                    0x350A9C,0x350ABD,0x350AF7,0x350B2D,0x350BB7,0x350BF3,0x350BF9,0x350BFD,
+                    0x350C14,0x350C5B,0x350C9E,0x350CDC,0x350D22,0x350D36,0x350D72,0x350D9D,
+                    0x350DA3,0x350DAF,0x350DED,0x350E38,0x350E4A,0x350E84,0x350E98,0x350EEE,
+                    0x350F1A,0x350F44,0x350F4A,0x350F56,0x350F6B,0x350F7A
+                };
+            }
+
+            HashSet<int> uniqueOffsets = new HashSet<int>();
+
+            try
+            {
+                // Read 256 pointers from 0x350202
+                int tableStart = 0x350202;
+                for (int i = 0; i < 256; i++)
+                {
+                    if (tableStart + i * 2 + 1 >= rom.Length)
+                        break;
+
+                    // Read pointer to 12-byte list
+                    int listPointer = 0x350000 + Bits.GetShort(rom, tableStart + i * 2);
+
+                    // Validate pointer is within ROM bounds
+                    if (listPointer < 0x350000 || listPointer + 12 > rom.Length)
+                        continue;
+
+                    // Read 6 2-byte pointers from this list
+                    for (int j = 0; j < 6; j++)
+                    {
+                        if (listPointer + j * 2 + 1 >= rom.Length)
+                            break;
+
+                        int offset = 0x350000 + Bits.GetShort(rom, listPointer + j * 2);
+
+                        // Validate offset is within valid range
+                        if (offset >= 0x350000 && offset < rom.Length)
+                        {
+                            uniqueOffsets.Add(offset);
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                // If anything goes wrong, return fallback
+                return new int[]
+                {
+                    0x3505C6,0x3505DA,0x350635,0x350669,0x3506A7,0x350737,0x350790,0x350796,
+                    0x3507A2,0x3507E9,0x350830,0x35086A,0x3508A4,0x3508BA,0x350916,0x35091C,
+                    0x350928,0x35096F,0x35099D,0x35099F,0x3509D5,0x350A38,0x350A3E,0x350A55,
+                    0x350A9C,0x350ABD,0x350AF7,0x350B2D,0x350BB7,0x350BF3,0x350BF9,0x350BFD,
+                    0x350C14,0x350C5B,0x350C9E,0x350CDC,0x350D22,0x350D36,0x350D72,0x350D9D,
+                    0x350DA3,0x350DAF,0x350DED,0x350E38,0x350E4A,0x350E84,0x350E98,0x350EEE,
+                    0x350F1A,0x350F44,0x350F4A,0x350F56,0x350F6B,0x350F7A
+                };
+            }
+
+            // Convert to sorted array
+            int[] result = new int[uniqueOffsets.Count];
+            uniqueOffsets.CopyTo(result);
+            Array.Sort(result);
+            return result;
+        }
         private readonly int[] characterOffsets = new int[] // character weapon scripts that play when character draws near monsters to attack
         {
             0x358916,0x3589D5,0x358A6C,0x358B57,0x358BEC
         };
-        private readonly int[] characterBehaviors = new int[] // character behaviors
+
+        // Character behaviors are dynamically read from ROM
+        // At 0x350000: pointer to character behavior table
+        // That table has 6 pointers (one per character)
+        // Each character pointer points to 16 bytes (8 2-byte pointers to behaviors)
+        private static int[] cachedCharacterBehaviors = null;
+        private int[] characterBehaviors
         {
-            0x350468,0x350502
-        };
+            get
+            {
+                if (cachedCharacterBehaviors == null)
+                {
+                    cachedCharacterBehaviors = BuildCharacterBehaviors();
+                }
+                return cachedCharacterBehaviors;
+            }
+        }
+
+        // Property to expose character behavior count for dynamic sizing
+        public int CharacterBehaviorCount { get { return characterBehaviors.Length; } }
+
+        private static int[] BuildCharacterBehaviors()
+        {
+            byte[] rom = Model.ROM;
+            if (rom == null || rom.Length < 0x360000)
+            {
+                // Fallback to vanilla offsets if ROM is too small
+                return new int[]
+                {
+                    0x350462, 0x350468, 0x350484, 0x350488, 0x35048F, 0x350496,
+                    0x35049D, 0x3504A4, 0x3504AB, 0x3504B2, 0x3504B9, 0x3504C0,
+                    0x3504C7, 0x3504CE, 0x3504D5, 0x3504DC, 0x3504E3, 0x3504EA,
+                    0x3504F1, 0x350502
+                };
+            }
+
+            HashSet<int> uniqueOffsets = new HashSet<int>();
+
+            try
+            {
+                // Read main pointer at 0x350000
+                if (0x350000 + 1 >= rom.Length)
+                    throw new Exception("ROM too small");
+
+                int mainPointer = 0x350000 + Bits.GetShort(rom, 0x350000);
+
+                // Validate main pointer is within bounds
+                if (mainPointer < 0x350000 || mainPointer + 12 > rom.Length)
+                    throw new Exception("Invalid main pointer");
+
+                // Read 6 character pointers (one per character)
+                for (int i = 0; i < 6; i++)
+                {
+                    if (mainPointer + i * 2 + 1 >= rom.Length)
+                        break;
+
+                    int charPointer = 0x350000 + Bits.GetShort(rom, mainPointer + i * 2);
+
+                    // Validate character pointer is within bounds
+                    if (charPointer < 0x350000 || charPointer + 16 > rom.Length)
+                        continue;
+
+                    // Read 8 2-byte pointers from this character's list
+                    for (int j = 0; j < 8; j++)
+                    {
+                        if (charPointer + j * 2 + 1 >= rom.Length)
+                            break;
+
+                        int offset = 0x350000 + Bits.GetShort(rom, charPointer + j * 2);
+
+                        // Validate offset is within valid range
+                        if (offset >= 0x350000 && offset < rom.Length)
+                        {
+                            uniqueOffsets.Add(offset);
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                // If anything goes wrong, return fallback
+                return new int[]
+                {
+                    0x350462, 0x350468, 0x350484, 0x350488, 0x35048F, 0x350496,
+                    0x35049D, 0x3504A4, 0x3504AB, 0x3504B2, 0x3504B9, 0x3504C0,
+                    0x3504C7, 0x3504CE, 0x3504D5, 0x3504DC, 0x3504E3, 0x3504EA,
+                    0x3504F1, 0x350502
+                };
+            }
+
+            // Convert to sorted array
+            int[] result = new int[uniqueOffsets.Count];
+            uniqueOffsets.CopyTo(result);
+            Array.Sort(result);
+            return result;
+        }
         //private readonly int[] behaviorOffsets_12 = new string(
         //"Enter Battle",
         //"On Hit" );

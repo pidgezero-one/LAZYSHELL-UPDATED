@@ -19,6 +19,9 @@ namespace LAZYSHELL
         private void InitializeEventProperties()
         {
             this.Updating = true;
+            Console.WriteLine(index);
+            Console.WriteLine(events.Music);
+            Console.WriteLine("");
             this.eventMusic.SelectedIndex = events.Music;
             this.eventExit.Value = events.EntranceEvent;
             this.eventsList.Nodes.Clear();
