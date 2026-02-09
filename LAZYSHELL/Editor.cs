@@ -216,6 +216,9 @@ namespace LAZYSHELL
             if (settings.LoadAllData)
                 AppControl.LoadAll();
 
+            // Apply custom label overlays from settings
+            Lists.ApplyCustomLabelOverlays();
+
             // create backup list collections BEFORE loading notes
             Model.CreateListCollections();
             if (settings.LoadNotes)

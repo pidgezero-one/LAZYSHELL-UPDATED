@@ -20,7 +20,7 @@ namespace LAZYSHELL
         {
             InitializeComponent();
             packetName.Items.AddRange(Lists.Numerize(Lists.NPCPackets));
-            spriteName.Items.AddRange(Lists.Numerize(0, 256, Lists.SpriteNames));
+            spriteName.Items.AddRange(Lists.Numerize(192, 256, Lists.SpriteNames));
             this.packetName.SelectedIndex = 0;
             InitializePackets();
         }
@@ -86,7 +86,7 @@ namespace LAZYSHELL
         }
         private void spriteName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            spriteNum.Value = spriteName.SelectedIndex;
+            spriteNum.Value = spriteName.SelectedIndex + 192;
             if (this.Updating)
                 return;
             npcPacket.Sprite = (byte)spriteName.SelectedIndex;
@@ -94,7 +94,7 @@ namespace LAZYSHELL
         }
         private void spriteNum_ValueChanged(object sender, EventArgs e)
         {
-            spriteName.SelectedIndex = (int)spriteNum.Value;
+            spriteName.SelectedIndex = (int)spriteNum.Value - 192;
         }
         private void editSprite_Click(object sender, EventArgs e)
         {

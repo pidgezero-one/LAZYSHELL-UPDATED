@@ -252,7 +252,7 @@
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
     <Setting Name="AnimationPointerTable" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">2432000</Value>
+      <Value Profile="(Default)">2433024</Value>
     </Setting>
     <Setting Name="PartitionTableStart" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1957376</Value>
@@ -282,7 +282,7 @@
       <Value Profile="(Default)">512</Value>
     </Setting>
     <Setting Name="NPCPacketCount" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">255</Value>
+      <Value Profile="(Default)">99</Value>
     </Setting>
     <Setting Name="Enable0xCE" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

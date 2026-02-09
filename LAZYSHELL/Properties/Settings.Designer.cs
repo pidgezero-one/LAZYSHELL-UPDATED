@@ -847,7 +847,7 @@ namespace LAZYSHELL.Properties {
 
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2432000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2433024")]
         public int AnimationPointerTable {
             get {
                 return ((int)(this["AnimationPointerTable"]));
@@ -940,7 +940,7 @@ namespace LAZYSHELL.Properties {
 
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("255")]
+        [global::System.Configuration.DefaultSettingValueAttribute("99")]
         public int NPCPacketCount {
             get {
                 return ((int)(this["NPCPacketCount"]));

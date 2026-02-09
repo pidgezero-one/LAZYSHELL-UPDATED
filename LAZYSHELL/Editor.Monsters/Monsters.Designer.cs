@@ -1076,7 +1076,7 @@ namespace LAZYSHELL
             // 
             this.MonsterBehavior.DropDownHeight = 236;
             this.MonsterBehavior.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MonsterBehavior.DropDownWidth = 210;
+            this.MonsterBehavior.DropDownWidth = 220;
             this.MonsterBehavior.IntegralHeight = false;
             this.MonsterBehavior.Items.AddRange(new object[] {
             "0. no movement for \"Escape\"",

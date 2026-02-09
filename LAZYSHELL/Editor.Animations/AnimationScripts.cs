@@ -1639,7 +1639,8 @@ namespace LAZYSHELL
                 }
                 //
                 Rectangle background = new Rectangle(0, e.Index * 15 % bgimage.Height, bgimage.Width, 15);
-                e.Graphics.DrawImage(bgimage, e.Bounds.X, e.Bounds.Y, background, GraphicsUnit.Pixel);
+                for (int dx = e.Bounds.X; dx < e.Bounds.Right; dx += bgimage.Width)
+                    e.Graphics.DrawImage(bgimage, dx, e.Bounds.Y, background, GraphicsUnit.Pixel);
                 // set the pixels
                 if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
                     e.DrawBackground();

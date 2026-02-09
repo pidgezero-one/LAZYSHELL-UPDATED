@@ -14099,12 +14099,29 @@ namespace LAZYSHELL
         #endregion
 
         /// <summary>
+        /// Resizes a label array if the configured count exceeds its current length.
+        /// New entries are filled with numbered placeholders.
+        /// </summary>
+        private static string[] ResizeIfNeeded(string[] array, int requiredCount, string prefix)
+        {
+            if (array.Length >= requiredCount)
+                return array;
+            string[] resized = new string[requiredCount];
+            Array.Copy(array, resized, array.Length);
+            for (int i = array.Length; i < requiredCount; i++)
+                resized[i] = prefix + i;
+            return resized;
+        }
+
+        /// <summary>
         /// Applies all custom label overlays from Settings to the simple field arrays.
         /// Call this after loading settings or when settings change.
         /// </summary>
         public static void ApplyCustomLabelOverlays()
         {
             var settings = Properties.Settings.Default;
+            // Resize arrays if RomConfig counts exceed hardcoded sizes
+            NPCPackets = ResizeIfNeeded(NPCPackets, RomConfig.NPCPacketCount, "Packet ");
             RomConfig.ApplyCustomLabels(SpriteNames, settings.CustomSpriteNames);
             RomConfig.ApplyCustomLabels(NPCPackets, settings.CustomPacketNames);
             RomConfig.ApplyCustomLabels(BattleEventNames, settings.CustomBattleEventNames);

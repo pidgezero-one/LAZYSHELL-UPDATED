@@ -204,15 +204,15 @@ namespace LAZYSHELL
             0,
             0});
             this.spriteNum.Minimum = new decimal(new int[] {
-            0,
+            192,
             0,
             0,
             0});
             this.spriteNum.Name = "spriteNum";
             this.spriteNum.Size = new System.Drawing.Size(50, 21);
-            this.spriteNum.Text = "0";
+            this.spriteNum.Text = "192";
             this.spriteNum.Value = new decimal(new int[] {
-            0,
+            192,
             0,
             0,
             0});

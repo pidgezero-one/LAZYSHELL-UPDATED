@@ -109,7 +109,7 @@ namespace LAZYSHELL
         }
 
         // Number of NPC packets
-        // Vanilla: 255
+        // Vanilla: 99
         public static int NPCPacketCount
         {
             get { return settings.NPCPacketCount; }
@@ -356,7 +356,7 @@ namespace LAZYSHELL
             settings.SpellDescriptionRanges = GetDefaultStringCollection("3A2BB6-3A2F20");
             settings.PsychopathMessageRanges = GetDefaultStringCollection("39A1D1-39B641");
             settings.NPCPropertiesCount = 512;
-            settings.NPCPacketCount = 255;
+            settings.NPCPacketCount = 99;
             settings.Enable0xCE = false;
             settings.CustomSpriteNames = "";
             settings.CustomEventLabels = "";
