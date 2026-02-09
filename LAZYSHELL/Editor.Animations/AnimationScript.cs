@@ -25,7 +25,8 @@ namespace LAZYSHELL.ScriptsEditor
             }
             set { this.commands = value; }
         }
-        public byte amem = 0; public byte AMEM { get { return this.amem; } set { this.amem = value; } }
+        public byte[] amemAll = new byte[16]; // tracks all AMEM registers $60-$6F
+        public byte AMEM { get { return amemAll[0]; } set { amemAll[0] = value; } }
         private int baseOffset; public int BaseOffset { get { return this.baseOffset; } set { this.baseOffset = value; } }
 
         // Property to expose behavior offset count for dynamic sizing
@@ -300,23 +301,24 @@ namespace LAZYSHELL.ScriptsEditor
                 switch (temp.Opcode)
                 {
                     case 0x20:
-                    case 0x21: if ((temp.Param1 & 0x0F) == 0) amem = temp.CommandData[2]; break;
+                    case 0x21: amemAll[temp.Param1 & 0x0F] = temp.CommandData[2]; break;
                     case 0x2C:
-                    case 0x2D: if ((temp.Param1 & 0x0F) == 0) amem += temp.CommandData[2]; break;
+                    case 0x2D: amemAll[temp.Param1 & 0x0F] += temp.CommandData[2]; break;
                     case 0x2E:
-                    case 0x2F: if ((temp.Param1 & 0x0F) == 0) amem -= temp.CommandData[2]; break;
+                    case 0x2F: amemAll[temp.Param1 & 0x0F] -= temp.CommandData[2]; break;
                     case 0x30:
-                    case 0x31: if ((temp.Param1 & 0x0F) == 0) amem++; break;
+                    case 0x31: amemAll[temp.Param1 & 0x0F]++; break;
                     case 0x32:
-                    case 0x33: if ((temp.Param1 & 0x0F) == 0) amem--; break;
+                    case 0x33: amemAll[temp.Param1 & 0x0F]--; break;
                     case 0x34:
-                    case 0x35: if ((temp.Param1 & 0x0F) == 0) amem = 0; break;
+                    case 0x35: amemAll[temp.Param1 & 0x0F] = 0; break;
                     case 0x6A:
-                    case 0x6B: if ((temp.Param1 & 0x0F) == 0) amem = (byte)(temp.CommandData[2] - 1); break;
+                    case 0x6B: amemAll[temp.Param1 & 0x0F] = (byte)(temp.CommandData[2] - 1); break;
                 }
                 commands.Add(temp);
                 // termination commands
-                if (rom[offset] == 0x07 || // end animation packet
+                if (rom[offset] == 0x02 || // exit battle
+                    rom[offset] == 0x07 || // end animation packet
                     rom[offset] == 0x09 || // jump directly to address (thus ending this)
                     rom[offset] == 0x11 || // end subroutine
                     rom[offset] == 0x5E)   // end sprite subroutine
@@ -343,6 +345,14 @@ namespace LAZYSHELL.ScriptsEditor
         public void Add(AnimationCommand command)
         {
             commands.Add(command);
+        }
+        /// <summary>
+        /// Resets static caches so they are rebuilt from current settings on next access.
+        /// </summary>
+        public static void ResetCaches()
+        {
+            cachedBehaviorOffsets = null;
+            cachedCharacterBehaviors = null;
         }
     }
 }

@@ -536,7 +536,9 @@ namespace LAZYSHELL
             "Jump to",
             "Object memory",
             "Pause",
-            "Return"});
+            "Return",
+            "Objects",
+            "Unknown ASM"});
             this.categories_aq.Location = new System.Drawing.Point(94, 0);
             this.categories_aq.Name = "categories_aq";
             this.categories_aq.Size = new System.Drawing.Size(119, 21);

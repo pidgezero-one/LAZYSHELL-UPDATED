@@ -40,8 +40,8 @@ namespace LAZYSHELL
             {
                 graphics = value;
                 // Bounds check: ensure we don't copy beyond SpriteGraphics buffer (0xF87C0 bytes)
-                int destOffset = image.GraphicOffset - 0x280000;
-                int availableSpace = 0xF87C0 - destOffset;
+                int destOffset = image.GraphicOffset - RomConfig.SpriteGraphicsBaseAddress;
+                int availableSpace = RomConfig.SpriteGraphicsTotalSize - destOffset;
                 int bytesToCopy = Math.Min(graphics.Length, availableSpace);
                 if (bytesToCopy > 0)
                     Array.Copy(graphics, 0, Model.SpriteGraphics, destOffset, bytesToCopy);
@@ -158,29 +158,24 @@ namespace LAZYSHELL
         }
         public void CalculateFreeSpace()
         {
-            int totalSize, min, max;
+            var animBanks = RomConfig.AnimationBanks;
+            int[] bankEndIndices = RomConfig.AnimationBankEndIndices;
+            // Find which bank this sprite's animation is in
+            int bankIdx = animBanks.Count - 1;
+            for (int b = 0; b < bankEndIndices.Length; b++)
+            {
+                if (sprite.AnimationPacket < bankEndIndices[b])
+                { bankIdx = b; break; }
+            }
+            int totalSize = animBanks[bankIdx].Size;
+            int min = bankIdx > 0 ? bankEndIndices[bankIdx - 1] : 0;
+            int max = bankEndIndices[bankIdx];
             int length = 0;
-            if (sprite.AnimationPacket < 42)
-            {
-                totalSize = 0x7000; min = 0; max = 42;
-            }
-            else if (sprite.AnimationPacket < 107)
-            {
-                totalSize = 0xFFFF; min = 42; max = 107;
-            }
-            else if (sprite.AnimationPacket < 249)
-            {
-                totalSize = 0xFFFF; min = 107; max = 249;
-            }
-            else
-            {
-                totalSize = 0xFFFF; min = 249; max = 444;
-            }
             for (int i = min; i < max; i++)
                 length += animations[i].BUFFER.Length;
             availableBytes = totalSize - length;
             animationAvailableBytes.BackColor = availableBytes > 0 ? Color.Lime : Color.Red;
-            animationAvailableBytes.Text = availableBytes.ToString() + " bytes free (animations)";
+            animationAvailableBytes.Text = availableBytes.ToString() + " bytes free (animation properties)";
         }
         public void Assemble()
         {
@@ -194,63 +189,35 @@ namespace LAZYSHELL
                 i++;
             }
             progressBar.Close();
+            // Dynamic animation bank assembly using configurable banks
             i = 0;
-            int pointer = 0x252000;
-            int offset = 0x259000;
-            for (; i < 42 && offset < 0x25FFFF; i++, pointer += 3)
+            int pointer = RomConfig.AnimationPointerTable;
+            var animBanks = RomConfig.AnimationBanks;
+            int[] bankEndIndices = RomConfig.AnimationBankEndIndices;
+            for (int b = 0; b < animBanks.Count; b++)
             {
-                if (animations[i].BUFFER.Length + offset > 0x25FFFF)
-                    break;
-                Bits.SetShort(rom, pointer, (ushort)offset);
-                rom[pointer + 2] = (byte)((offset >> 16) + 0xC0);
-                Bits.SetBytes(rom, offset, animations[i].BUFFER);
-                offset += animations[i].BUFFER.Length;
+                int offset = animBanks[b].Start;
+                int bankEnd = animBanks[b].End;
+                int maxIdx = b < bankEndIndices.Length ? bankEndIndices[b] : animations.Length;
+                for (; i < maxIdx && offset < bankEnd; i++, pointer += 3)
+                {
+                    if (animations[i].BUFFER.Length + offset > bankEnd)
+                        break;
+                    Bits.SetShort(rom, pointer, (ushort)offset);
+                    rom[pointer + 2] = (byte)((offset >> 16) + 0xC0);
+                    Bits.SetBytes(rom, offset, animations[i].BUFFER);
+                    offset += animations[i].BUFFER.Length;
+                }
+                if (i < maxIdx)
+                    MessageBox.Show("The available space for animation data in bank 0x" + animBanks[b].Start.ToString("X6") + " has exceeded the allotted space.\nAnimation #'s " + i.ToString() + " through " + (maxIdx - 1).ToString() + " were not saved. Please make sure the available animation bytes is not negative.", "LAZYSHELL++");
             }
-            if (i < 42)
-                MessageBox.Show("The available space for animation data in bank 0x250000 has exceeded the alotted space.\nAnimation #'s " + i.ToString() + " through 41 were not saved. Please make sure the available animation bytes is not negative.", "LAZYSHELL++");
-            offset = 0x260000;
-            for (; i < 107 && offset < 0x26FFFF; i++, pointer += 3)
-            {
-                if (animations[i].BUFFER.Length + offset > 0x26FFFF)
-                    break;
-                Bits.SetShort(rom, pointer, (ushort)offset);
-                rom[pointer + 2] = (byte)((offset >> 16) + 0xC0);
-                Bits.SetBytes(rom, offset, animations[i].BUFFER);
-                offset += animations[i].BUFFER.Length;
-            }
-            if (i < 107)
-                MessageBox.Show("The available space for animation data in bank 0x260000 has exceeded the alotted space.\nAnimation #'s " + i.ToString() + " through 107 were not saved. Please make sure the available animation bytes is not negative.", "LAZYSHELL++");
-            offset = 0x270000;
-            for (; i < 249 && offset < 0x27FFFF; i++, pointer += 3)
-            {
-                if (animations[i].BUFFER.Length + offset > 0x27FFFF)
-                    break;
-                Bits.SetShort(rom, pointer, (ushort)offset);
-                rom[pointer + 2] = (byte)((offset >> 16) + 0xC0);
-                Bits.SetBytes(rom, offset, animations[i].BUFFER);
-                offset += animations[i].BUFFER.Length;
-            }
-            if (i < 249)
-                MessageBox.Show("The available space for animation data in bank 0x270000 has exceeded the alotted space.\nAnimation #'s " + i.ToString() + " through 249 will not saved. Please make sure the available animation bytes is not negative.", "LAZYSHELL++");
-            offset = 0x360000;
-            for (; i < 444 && offset < 0x36FFFF; i++, pointer += 3)
-            {
-                if (animations[i].BUFFER.Length + offset > 0x36FFFF)
-                    break;
-                Bits.SetShort(rom, pointer, (ushort)offset);
-                rom[pointer + 2] = (byte)((offset >> 16) + 0xC0);
-                Bits.SetBytes(rom, offset, animations[i].BUFFER);
-                offset += animations[i].BUFFER.Length;
-            }
-            if (i < 444)
-                MessageBox.Show("The available space for animation data in bank 0x360000 has exceeded the alotted space.\nAnimation #'s " + i.ToString() + " through 444 will not saved. Please make sure the available animation bytes is not negative.", "LAZYSHELL++");
             foreach (Sprite s in sprites)
                 s.Assemble();
             foreach (ImagePacket gp in images)
                 gp.Assemble();
             foreach (PaletteSet p in palettes)
                 p.Assemble(0);
-            Buffer.BlockCopy(Model.SpriteGraphics, 0, rom, 0x280000, 0xF87C0);
+            Buffer.BlockCopy(Model.SpriteGraphics, 0, rom, RomConfig.SpriteGraphicsBaseAddress, RomConfig.SpriteGraphicsTotalSize);
             Model.HexEditor.SetOffset(animation.AnimationOffset);
             Model.HexEditor.Compare();
             molds.Modified = false;
@@ -339,8 +306,8 @@ namespace LAZYSHELL
             sequences.SetSequenceFrameImages();
             sequences.InvalidateImages();
             // Bounds check: ensure we don't copy beyond SpriteGraphics buffer (0xF87C0 bytes)
-            int destOffset = image.GraphicOffset - 0x280000;
-            int availableSpace = 0xF87C0 - destOffset;
+            int destOffset = image.GraphicOffset - RomConfig.SpriteGraphicsBaseAddress;
+            int availableSpace = RomConfig.SpriteGraphicsTotalSize - destOffset;
             int bytesToCopy = Math.Min(graphics.Length, availableSpace);
             if (bytesToCopy > 0)
                 Array.Copy(graphics, 0, Model.SpriteGraphics, destOffset, bytesToCopy);
@@ -562,8 +529,8 @@ namespace LAZYSHELL
             for (int i = image.PaletteNum; i < image.PaletteNum + 8; i++)
                 palettes[i] = new PaletteSet(Model.ROM, i, 0x252FFE + (i * 30), 1, 16, 30);
             // Bounds check: ensure we don't copy beyond SpriteGraphics buffer (0xF87C0 bytes)
-            int destOffset = image.GraphicOffset - 0x280000;
-            int availableSpace = 0xF87C0 - destOffset;
+            int destOffset = image.GraphicOffset - RomConfig.SpriteGraphicsBaseAddress;
+            int availableSpace = RomConfig.SpriteGraphicsTotalSize - destOffset;
             int bytesToCopy = Math.Min(0x4000, availableSpace);
             if (bytesToCopy > 0)
                 Buffer.BlockCopy(Model.ROM, image.GraphicOffset, Model.SpriteGraphics, destOffset, bytesToCopy);

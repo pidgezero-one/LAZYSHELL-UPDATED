@@ -13,7 +13,7 @@ namespace LAZYSHELL.ScriptsEditor.Commands
         {
             "New object: sprite = \"{0}\" (sequence = {1}), coords (AMEM $32)",			// 0x00
             "AMEM $32 = coords ({0},{1},{2}), origin = {3}",			// 0x01
-            "",			// 0x02
+            "Exit battle",			// 0x02
             "Sprite = \"{0}\" (sequence = {1}), coords (AMEM $32)",			// 0x03
             "Pause script until {0}",			// 0x04
             "Remove object",			// 0x05
@@ -86,7 +86,7 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "",			// 0x44
             "AMEM $60 = current target",			// 0x45
             "Check ally mortal status, if all allies down set game over",			// 0x46
-            "",			// 0x47
+            "Object queue [${0}] index = AMEM ${1}",			// 0x47
             "",			// 0x48
             "",			// 0x49
             "",			// 0x4A
@@ -485,6 +485,11 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                         case 0x01: vars[0] = "spell name"; break;
                         case 0x02: vars[0] = "item name"; break;
                     }
+                    break;
+                case 0x47:
+                    vars[0] = ((asc.InternalOffset & 0xFF0000) >> 16).ToString("X2") +
+                        Bits.GetShort(asc.CommandData, 2).ToString("X4");
+                    vars[1] = ((asc.Param1 & 0x0F) + 0x60).ToString("X2");
                     break;
                 case 0x64:
                 case 0x68:

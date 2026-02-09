@@ -311,7 +311,7 @@ namespace LAZYSHELL
                 else
                 {
                     length = (ushort)description.Length;
-                    Bits.SetChars(rom, 0x3A0000 + descriptionOffset, description); // Write the actual description
+                    Bits.SetChars(rom, descriptionOffset, description);
                 }
             }
             descriptionOffset += length;

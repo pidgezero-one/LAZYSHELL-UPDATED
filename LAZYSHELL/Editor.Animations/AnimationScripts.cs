@@ -78,6 +78,8 @@ namespace LAZYSHELL
         public AnimationScripts()
         {
             InitializeComponent();
+            // Force the dropdown width after layout - Designer Size may be overridden by ToolStrip layout
+            animationName.Width = 235;
             this.animationCategory.Items.AddRange(new object[] {
             "Monster Behaviors",
             "Monster Spells",
@@ -317,7 +319,7 @@ namespace LAZYSHELL
                     if (animationCategory.SelectedIndex == (int)AnimScriptType.BattleEvents)
                         animationName.Width = 400;
                     else
-                        animationName.Width = 160;
+                        animationName.Width = 285;
                     animationName.DropDownWidth = animationName.Width;
                     animationNum.Maximum = animationScripts.Length - 1;
                     break;
@@ -476,6 +478,15 @@ namespace LAZYSHELL
                     aniLabelB1.Text = "Address";
                     aniNumB1.Maximum = 0xFFFF; aniNumB1.Hexadecimal = true; aniNumB1.Enabled = true;
                     aniNumB1.Value = Bits.GetShort(asc.CommandData, 1);
+                    break;
+                case 0x47:
+                    aniLabelB1.Text = "AMEM";
+                    aniLabelB2.Text = "Address";
+                    aniNumB1.Minimum = 0x60; aniNumB1.Maximum = 0x6F;
+                    aniNumB1.Hexadecimal = true; aniNumB1.Enabled = true;
+                    aniNumB1.Value = (asc.Param1 & 0x0F) + 0x60;
+                    aniNumB2.Maximum = 0xFFFF; aniNumB2.Hexadecimal = true; aniNumB2.Enabled = true;
+                    aniNumB2.Value = Bits.GetShort(asc.CommandData, 2);
                     break;
                 case 0x0C:
                     aniLabelA1.Text = "Type";
@@ -1066,7 +1077,7 @@ namespace LAZYSHELL
                     break;
             }
             OrganizeControls();
-            commands.SelectedIndex = -1;
+            commands.SelectedIndex = (asc.Opcode < commands.Items.Count) ? asc.Opcode : -1;
             //
             panelAniControls.ResumeDrawing();
             this.Updating = false;
@@ -1129,6 +1140,10 @@ namespace LAZYSHELL
                 case 0x1A:
                 case 0x1B:
                     asc.Param1 = 0x01;
+                    break;
+                case 0x47:
+                    asc.Param1 = (byte)(aniNumB1.Value - 0x60);
+                    Bits.SetShort(asc.CommandData, 2, (ushort)aniNumB2.Value);
                     break;
                 case 0x50:
                 case 0x51:
@@ -1564,9 +1579,9 @@ namespace LAZYSHELL
                 case 3: if (e.Index < 0 || e.Index > 15) return; break;
                 case 4: if (e.Index < 0 || e.Index > 80) return; break;
                 case 5: if (e.Index < 0 || e.Index > 31) return; break;
-                case 6: if (e.Index < 0 || e.Index > 35) return; break;
-                case 7: if (e.Index < 0 || e.Index > 35) return; break;
-                case 8: if (e.Index < 0 || e.Index > 35) return; break;
+                case 6: if (e.Index < 0 || e.Index >= Model.WeaponCount) return; break;
+                case 7: if (e.Index < 0 || e.Index >= Model.WeaponCount) return; break;
+                case 8: if (e.Index < 0 || e.Index >= Model.WeaponCount) return; break;
                 case 9: if (e.Index < 0 || e.Index > 101) return; break;
                 case 10: if (e.Index < 0 || e.Index > 5) return; break;
                 case 11: if (e.Index < 0 || e.Index > 0) return; break;

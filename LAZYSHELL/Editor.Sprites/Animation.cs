@@ -37,7 +37,7 @@ namespace LAZYSHELL
             try
             {
                 // Check if animation pointer table entry is within ROM bounds
-                int pointerTableOffset = 0x252000 + (index * 3);
+                int pointerTableOffset = RomConfig.AnimationPointerTable + (index * 3);
                 if (pointerTableOffset + 2 >= rom.Length)
                 {
                     // Beyond ROM bounds, create empty animation

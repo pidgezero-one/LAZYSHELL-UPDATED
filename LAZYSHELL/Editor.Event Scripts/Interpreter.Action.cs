@@ -42,10 +42,10 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "",			// 0x1D
             "",			// 0x1E
             "",			// 0x1F
-            			
+
             "",			// 0x20
-            "",			// 0x21
-            "",			// 0x22
+            "BPL: 26,x 27,x 28,x",			// 0x21
+            "BMI: 26,x 27,x 28,x",			// 0x22
             "",			// 0x23
             "",			// 0x24
             "",			// 0x25
@@ -53,7 +53,7 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "Embedded animation routine ($27) {1}",			// 0x27
             "Embedded animation routine ($28) {2}",			// 0x28
             "",			// 0x29
-            "",			// 0x2A
+            "BPL: 26,x 27,x",			// 0x2A
             "",			// 0x2B
             "",			// 0x2C
             "",			// 0x2D
@@ -72,7 +72,7 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "",			// 0x39
             "If distance of {0} is < ({1} tiles) and infinite Z coords apart jump to ${2}",			// 0x3A
             "If distance of {0} is < ({1} tiles), jump to ${2}",			// 0x3B
-            "",			// 0x3C
+            "If unknown condition ({0}, {1}), jump to ${2}",			// 0x3C
             "If in air, jump to ${0}",			// 0x3D
             "Create new NPC ({0}) @ coords of {1} (if null, jump to ${2})",			// 0x3E
             "Create new NPC ({0}) @ coords of $7010-15 (if null, jump to ${1})",			// 0x3F
@@ -137,9 +137,9 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "Face north",			// 0x76
             "Face northeast",			// 0x77
             "Face Mario",			// 0x78
-            "Turn clockwise 45°",			// 0x79
+            "Turn clockwise 45ï¿½",			// 0x79
             "Turn in random direction",			// 0x7A
-            "Turn clockwise 45° {0} times",			// 0x7B
+            "Turn clockwise 45ï¿½ {0} times",			// 0x7B
             "Face east",			// 0x7C
             "Face southwest",			// 0x7D
             "Jump at {0} velocity",			// 0x7E
@@ -150,12 +150,12 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "Transfer to ({0},{1})",			// 0x82
             "Transfer ({0},{1}) steps",			// 0x83
             "Transfer ({0},{1}) pixels",			// 0x84
-            "",			// 0x85
-            "",			// 0x86
+            "Maximize sequence speed",			// 0x85
+            "Maximize sequence speed",			// 0x86
             "Transfer to (x,y) of {0}",			// 0x87
             "Walk to (x,y) of Mem $7016-1B",			// 0x88
             "Transfer to (x,y) of Mem $7016-1B",			// 0x89
-            "",			// 0x8A
+            "Shift to (x,y) of Mem $7016-1B",			// 0x8A
             "",			// 0x8B
             "",			// 0x8C
             "",			// 0x8D
@@ -209,9 +209,9 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "Memory ${0} = memory $700C",			// 0xBB
             "Memory ${0} = memory ${1}",			// 0xBC
             "Memory ${0} <=> memory ${1}",			// 0xBD
-            "",			// 0xBE
-            "",			// 0xBF
-            			
+            "Memory $7016-1B = memory $7010-15",			// 0xBE
+            "Memory $7010-15 = memory $7016-1B",			// 0xBF
+
             "Memory compare $700C to {0}",			// 0xC0
             "Memory compare $7000 to memory ${0}",			// 0xC1
             "Memory ${0} compare {1}",			// 0xC2
@@ -272,8 +272,8 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "Enable event trigger for object @ $70A8",			// 0xF6
             "Disable event trigger for object @ $70A8",			// 0xF7
             "If {0} is present in level {1}; jump to ${2}",			// 0xF8
-            "",			// 0xF9
-            "",			// 0xFA
+            "Jump to start of script",			// 0xF9
+            "Jump to start of script",			// 0xFA
             "",			// 0xFB
             "",			// 0xFC
             "",			// 0xFD
@@ -346,8 +346,8 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "",			// 0x3A
             "",			// 0x3B
             "",			// 0x3C
-            "",			// 0x3D
-            "",			// 0x3E
+            "If {0} is in the air, jump to ${1}",			// 0x3D
+            "Create NPC ({0}) + event #{1} @ (x,y,z) of $7010-15 (if null, jump to ${2})",			// 0x3E
             "",			// 0x3F
 			
             "",			// 0x40
@@ -610,6 +610,11 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                     vars[0] = ObjectNames[asc.Param1];
                     vars[1] = asc.Param3.ToString();
                     vars[2] = Bits.GetShort(asc.CommandData, 4).ToString("X4");
+                    break;
+                case 0x3C:
+                    vars[0] = asc.Param1.ToString();
+                    vars[1] = asc.Param2.ToString();
+                    vars[2] = Bits.GetShort(asc.CommandData, 3).ToString("X4");
                     break;
                 case 0x3E:
                     vars[0] = Lists.NPCPackets[asc.Param1];
@@ -905,6 +910,15 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                 case 0xB6:
                     vars[0] = ((asc.Param2 * 2) + 0x7000).ToString("X4");
                     vars[1] = ((asc.Param3 ^ 0xFF) + 1).ToString();
+                    break;
+                case 0x3D:
+                    vars[0] = ObjectNames[asc.Param2];
+                    vars[1] = Bits.GetShort(asc.CommandData, 3).ToString("X4");
+                    break;
+                case 0x3E:
+                    vars[0] = Lists.NPCPackets[asc.Param2];
+                    vars[1] = Bits.GetShort(asc.CommandData, 3).ToString();
+                    vars[2] = Bits.GetShort(asc.CommandData, 5).ToString("X4");
                     break;
                 default:
                     break;

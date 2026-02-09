@@ -1076,27 +1076,27 @@ namespace LAZYSHELL
             // 
             this.MonsterBehavior.DropDownHeight = 236;
             this.MonsterBehavior.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MonsterBehavior.DropDownWidth = 200;
+            this.MonsterBehavior.DropDownWidth = 210;
             this.MonsterBehavior.IntegralHeight = false;
             this.MonsterBehavior.Items.AddRange(new object[] {
-            "no movement for \"Escape\"",
-            "slide backward when hit",
-            "Bowser Clone sprite",
-            "Mario Clone sprite",
-            "no reaction when hit",
-            "sprite shadow",
-            "floating, sprite shadow",
-            "floating",
-            "floating, slide backward when hit",
-            "floating, slide backward when hit",
-            "fade out death, floating",
-            "fade out death",
-            "fade out death",
-            "fade out death, Smithy spell cast",
-            "fade out death, no \"Escape\" movement",
-            "fade out death, no \"Escape\" transition",
-            "(normal)",
-            "no reaction when hit"});
+            "0. no movement for \"Escape\"",
+            "1. slide backward when hit",
+            "2. Bowser Clone sprite",
+            "3. Mario Clone sprite",
+            "4. no reaction when hit",
+            "5. sprite shadow",
+            "6. floating, sprite shadow",
+            "7. floating",
+            "8. floating, slide backward when hit",
+            "9. floating, slide backward when hit",
+            "10. fade out death, floating",
+            "11. fade out death",
+            "12. fade out death",
+            "13. fade out death, Smithy spell cast",
+            "14. fade out death, no \"Escape\" movement",
+            "15. fade out death, no \"Escape\" transition",
+            "16. (normal)",
+            "17. no reaction when hit"});
             this.MonsterBehavior.Location = new System.Drawing.Point(90, 82);
             this.MonsterBehavior.Name = "MonsterBehavior";
             this.MonsterBehavior.Size = new System.Drawing.Size(104, 21);

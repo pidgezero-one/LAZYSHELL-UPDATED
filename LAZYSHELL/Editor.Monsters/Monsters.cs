@@ -156,21 +156,15 @@ namespace LAZYSHELL
         }
         private void CalculateFreeSpace()
         {
-            int used = 0; int size = 0xb641 + 0x2229;
+            int used = 0;
+            int size = 0;
+            foreach (var range in RomConfig.PsychopathMessageRanges)
+                size += range.Size;
             for (int i = 0; i < monsters.Length - 1; i++)
-            {
                 used += monsters[i].RawPsychopath.Length;
-                if (used + monsters[i].RawPsychopath.Length > size)
-                {
-                    bool test = size >= used + monsters[i].RawPsychopath.Length;
-                    if (!test)
-                    {
-                        freeBytes.Text = "Entry " + i++.ToString() + " Too Long - Cannot Save";
-                        return;
-                    }
-                }
-            }
-            freeBytes.Text = ((double)(size - used)).ToString() + " characters left";
+            int remaining = size - used;
+            freeBytes.Text = remaining.ToString() + " characters left";
+            freeBytes.BackColor = remaining >= 0 ? System.Drawing.SystemColors.Control : System.Drawing.Color.Red;
         }
         private void SetDialogueImages()
         {
@@ -181,12 +175,13 @@ namespace LAZYSHELL
         public void Assemble()
         {
             int i = 0;
-            int length = 0xA1D1;
-            for (; i < monsters.Length && length + monsters[i].RawPsychopath.Length < 0xb641; i++)
-                monsters[i].Assemble(ref length);
-            length = 0x1C2A;
-            for (; i < monsters.Length && length + monsters[i].RawPsychopath.Length < 0x2229; i++)
-                monsters[i].Assemble(ref length);
+            var psychoRanges = RomConfig.PsychopathMessageRanges;
+            foreach (var range in psychoRanges)
+            {
+                int length = range.Start;
+                for (; i < monsters.Length && length + monsters[i].RawPsychopath.Length < range.End; i++)
+                    monsters[i].Assemble(ref length);
+            }
             if (i != monsters.Length)
                 MessageBox.Show(
                     "The allotted space for psychopath dialogues has been exceeded. Not all psychopath dialogues have been saved.",

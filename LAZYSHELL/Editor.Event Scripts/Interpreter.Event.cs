@@ -221,8 +221,8 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "Memory ${0} = memory $7000",			// 0xBB
             "Memory ${0} = memory ${1}",			// 0xBC
             "Memory ${0} <=> memory ${1}",			// 0xBD
-            "",			// 0xBE
-            "",			// 0xBF
+            "Memory $7016-1B = memory $7010-15",			// 0xBE
+            "Memory $7010-15 = memory $7016-1B",			// 0xBF
 			
             "Compare memory $7000 to {0}",			// 0xC0
             "Compare memory $7000 to memory ${0}",			// 0xC1
@@ -914,8 +914,11 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                     vars[0] = ObjectNames[esc.Param1 & 0x3F];
                     break;
                 case 0xCE:
-                    vars[0] = CharacterNames[(esc.Param1 >> 5) & 0x1F];
-                    vars[1] = Lists.SpellNames[esc.Param1 & 0x1F];
+                    if (RomConfig.Enable0xCE)
+                    {
+                        vars[0] = CharacterNames[(esc.Param1 >> 5) & 0x1F];
+                        vars[1] = Lists.SpellNames[esc.Param1 & 0x1F];
+                    }
                     break;
                 case 0xD8:
                 case 0xD9:
@@ -1026,8 +1029,8 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             string command = EventCommands[esc.Opcode];
             if (command == "")
                 command = "{{" + BitConverter.ToString(esc.CommandData) + "}}";
-            // Special formatting for Learn Spell command - remove "Character" prefix in preview
-            if (esc.Opcode == 0xCE)
+            // Special formatting for Learn Spell command - only when 0xCE is enabled
+            if (esc.Opcode == 0xCE && RomConfig.Enable0xCE)
                 command = "{0} learns {1}";
             return string.Format(command, vars);
         }

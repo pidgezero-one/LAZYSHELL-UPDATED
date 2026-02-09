@@ -323,7 +323,7 @@ namespace LAZYSHELL
             this.animationAvailableBytes.Location = new System.Drawing.Point(6, 17);
             this.animationAvailableBytes.Name = "animationAvailableBytes";
             this.animationAvailableBytes.Padding = new System.Windows.Forms.Padding(2, 1, 0, 2);
-            this.animationAvailableBytes.Size = new System.Drawing.Size(203, 20);
+            this.animationAvailableBytes.AutoSize = true;
             this.animationAvailableBytes.TabIndex = 0;
             this.animationAvailableBytes.Text = "0 bytes free";
             this.animationAvailableBytes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

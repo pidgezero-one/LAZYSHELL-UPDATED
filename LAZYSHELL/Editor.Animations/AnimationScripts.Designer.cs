@@ -890,7 +890,7 @@ namespace LAZYSHELL
             this.animationName.Name = "animationName";
             this.animationName.SelectedIndex = -1;
             this.animationName.SelectedItem = null;
-            this.animationName.Size = new System.Drawing.Size(160, 23);
+            this.animationName.Size = new System.Drawing.Size(235, 23);
             this.animationName.SelectedIndexChanged += new System.EventHandler(this.animationName_SelectedIndexChanged);
             this.animationName.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.animationName_DrawItem);
             // 

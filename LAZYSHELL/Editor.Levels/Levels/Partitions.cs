@@ -38,7 +38,7 @@ namespace LAZYSHELL
         // assemblers
         private void Disassemble()
         {
-            int offset = index * 4 + 0x1DEBE0;
+            int offset = index * 4 + RomConfig.PartitionTableStart;
             byte temp = 0;
             temp = rom[offset++];
             extraSprites = (temp & 0x10) == 0x10;
@@ -60,7 +60,7 @@ namespace LAZYSHELL
         }
         public void Assemble()
         {
-            int offset = index * 4 + 0x1DEBE0;
+            int offset = index * 4 + RomConfig.PartitionTableStart;
             //
             rom[offset] = 0;
             rom[offset] = (byte)(allySpriteBuffer << 5);

@@ -51,17 +51,15 @@ namespace LAZYSHELL
         {
             foreach (Attack a in Model.Attacks)
                 a.Assemble();
-            // Assemble the Model.Spells
-            int i;
-            int length = 0x2BB6; // offset to the start of spell descriptions
-            for (i = 0; i < Model.Spells.Length && length + (Model.Spells[i].RawDescription != null ? Model.Spells[i].RawDescription.Length : 0) < (0x2bb6 + 0x36A); i++)
-                 Model.Spells[i].Assemble(ref length);
-            length = 0x55f0; // offset for extra space
-            for (; i < Model.Spells.Length && length + (Model.Spells[i].RawDescription != null ? Model.Spells[i].RawDescription.Length : 0) < (0x55f0 + 0xa10); i++)
-                 Model.Spells[i].Assemble(ref length);
-            length = 0x1EA0; // offset for additional spell description space (0x3A1EA0-0x3A20F0)
-            for (; i < Model.Spells.Length && length + (Model.Spells[i].RawDescription != null ? Model.Spells[i].RawDescription.Length : 0) < 0x20F1; i++)
-                 Model.Spells[i].Assemble(ref length);
+            // Assemble the Model.Spells using configurable description ranges
+            int i = 0;
+            var spellRanges = RomConfig.SpellDescriptionRanges;
+            foreach (var range in spellRanges)
+            {
+                int length = range.Start;
+                for (; i < Model.Spells.Length && length + (Model.Spells[i].RawDescription != null ? Model.Spells[i].RawDescription.Length : 0) < range.End; i++)
+                     Model.Spells[i].Assemble(ref length);
+            }
             if (i != Model.Spells.Length)
                 System.Windows.Forms.MessageBox.Show("Spell Descriptions total length exceeds max size, decrease total size to save correctly.\nNote: not all text has been saved.");
             attacksEditor.Modified = false;

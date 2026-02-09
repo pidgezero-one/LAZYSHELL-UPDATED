@@ -860,7 +860,7 @@ namespace LAZYSHELL
             {
                 if (npcProperties == null)
                 {
-                    npcProperties = new NPCProperties[1462];
+                    npcProperties = new NPCProperties[RomConfig.NPCPropertiesCount];
                     for (int i = 0; i < npcProperties.Length; i++)
                         npcProperties[i] = new NPCProperties(i);
                 }
@@ -874,7 +874,7 @@ namespace LAZYSHELL
             {
                 if (npcSpritePartitions == null)
                 {
-                    npcSpritePartitions = new Partitions[256];
+                    npcSpritePartitions = new Partitions[RomConfig.PartitionCount];
                     for (int i = 0; i < npcSpritePartitions.Length; i++)
                         npcSpritePartitions[i] = new Partitions(i);
                 }
@@ -1420,6 +1420,25 @@ namespace LAZYSHELL
         private static AnimationScript[] bonusMessageAnimations;
         private static AnimationScript[] toadTutorialScript;
         private static AnimationScript[] weaponWrapperAnimations;
+        /// <summary>
+        /// Returns the number of weapons in the ROM, determined by finding the highest
+        /// contiguous item index starting from 0 that has ItemType == 0 (weapon).
+        /// </summary>
+        public static int WeaponCount
+        {
+            get
+            {
+                int count = 0;
+                for (int i = 0; i < Items.Length; i++)
+                {
+                    if (Items[i].ItemType == 0)
+                        count++;
+                    else
+                        break;
+                }
+                return Math.Max(count, 1);
+            }
+        }
         public static BattleScript[] BattleScripts
         {
             get
@@ -1604,7 +1623,7 @@ namespace LAZYSHELL
             {
                 if (weaponAnimations == null)
                 {
-                    weaponAnimations = new AnimationScript[39];
+                    weaponAnimations = new AnimationScript[WeaponCount];
                     for (int i = 0; i < weaponAnimations.Length; i++)
                         weaponAnimations[i] = new AnimationScript(i, 6);
                 }
@@ -1618,7 +1637,7 @@ namespace LAZYSHELL
             {
                 if (weaponSoundScripts == null)
                 {
-                    weaponSoundScripts = new AnimationScript[39];
+                    weaponSoundScripts = new AnimationScript[WeaponCount];
                     for (int i = 0; i < weaponSoundScripts.Length; i++)
                         weaponSoundScripts[i] = new AnimationScript(i, 7);
                 }
@@ -1632,7 +1651,7 @@ namespace LAZYSHELL
             {
                 if (weaponTimedHitScripts == null)
                 {
-                    weaponTimedHitScripts = new AnimationScript[39];
+                    weaponTimedHitScripts = new AnimationScript[WeaponCount];
                     for (int i = 0; i < weaponTimedHitScripts.Length; i++)
                         weaponTimedHitScripts[i] = new AnimationScript(i, 8);
                 }
@@ -1751,7 +1770,7 @@ namespace LAZYSHELL
             {
                 if (spriteGraphics == null)
                     // Expanded to 0xF87C0 to cover sprite tiles from 0x374660-0x3787C0
-                    spriteGraphics = Bits.GetBytes(rom, 0x280000, 0xF87C0);
+                    spriteGraphics = Bits.GetBytes(rom, RomConfig.SpriteGraphicsBaseAddress, RomConfig.SpriteGraphicsTotalSize);
                 return spriteGraphics;
             }
             set { spriteGraphics = value; }
@@ -1764,7 +1783,7 @@ namespace LAZYSHELL
             {
                 if (npcPackets == null)
                 {
-                    npcPackets = new NPCPacket[256];
+                    npcPackets = new NPCPacket[RomConfig.NPCPacketCount];
                     for (int i = 0; i < npcPackets.Length; i++)
                         npcPackets[i] = new NPCPacket(i);
                 }

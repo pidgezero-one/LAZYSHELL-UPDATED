@@ -797,7 +797,7 @@ namespace LAZYSHELL
             for (; i < battleScripts.Length; i++)
                 length += battleScripts[i].Length;
             //
-            return totalSize - length - 1;
+            return totalSize - length;
         }
         //
         private void SetInitialBits(byte bits)

@@ -19,7 +19,7 @@ namespace LAZYSHELL
             get
             {
                 int offset = image * 4 + 0x251800;
-                int bank = (int)(((rom[offset] & 0x0F) << 16) + 0x280000);
+                int bank = (int)(((rom[offset] & 0x0F) << 16) + RomConfig.SpriteGraphicsBaseAddress);
                 return (int)((Bits.GetShort(rom, offset) & 0xFFF0) + bank);
             }
         }

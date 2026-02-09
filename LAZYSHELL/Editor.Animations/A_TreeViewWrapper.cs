@@ -53,6 +53,7 @@ namespace LAZYSHELL.ScriptsEditor
             //
             switch (command.Opcode)
             {
+                case 0x02:
                 case 0x07:
                 case 0x11:
                 case 0x5E:
@@ -108,6 +109,7 @@ namespace LAZYSHELL.ScriptsEditor
                 //
                 switch (childCommand.Opcode)
                 {
+                    case 0x02:
                     case 0x07:
                     case 0x11:
                     case 0x5E:

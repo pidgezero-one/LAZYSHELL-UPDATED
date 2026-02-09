@@ -308,7 +308,7 @@ namespace LAZYSHELL
             else
             {
                 length = psychopath.Length;
-                Bits.SetChars(rom, 0x390000 + psychopathOffset, psychopath);
+                Bits.SetChars(rom, psychopathOffset, psychopath);
             }
             psychopathOffset += length;
             // stats

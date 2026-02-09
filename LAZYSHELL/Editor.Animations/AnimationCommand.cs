@@ -260,23 +260,26 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                         script.AMEM = 12; // it's the only one that has enough pointers
                     Disassemble((offset & 0xFF0000) + Bits.GetShort(commandData, 1));
                     break;
+                case 0x47:
+                    Disassemble((offset & 0xFF0000) + Bits.GetShort(commandData, 2));
+                    break;
                 case 0x5D:
                     Disassemble((offset & 0xFF0000) + Bits.GetShort(commandData, 3));
                     break;
                 case 0x20:
-                case 0x21: if ((Param1 & 0x0F) == 0) script.AMEM = Param2; break;
+                case 0x21: script.amemAll[Param1 & 0x0F] = Param2; break;
                 case 0x2C:
-                case 0x2D: if ((Param1 & 0x0F) == 0) script.AMEM += Param2; break;
+                case 0x2D: script.amemAll[Param1 & 0x0F] += Param2; break;
                 case 0x2E:
-                case 0x2F: if ((Param1 & 0x0F) == 0) script.AMEM -= Param2; break;
+                case 0x2F: script.amemAll[Param1 & 0x0F] -= Param2; break;
                 case 0x30:
-                case 0x31: if ((Param1 & 0x0F) == 0) script.AMEM++; break;
+                case 0x31: script.amemAll[Param1 & 0x0F]++; break;
                 case 0x32:
-                case 0x33: if ((Param1 & 0x0F) == 0) script.AMEM--; break;
+                case 0x33: script.amemAll[Param1 & 0x0F]--; break;
                 case 0x34:
-                case 0x35: if ((Param1 & 0x0F) == 0) script.AMEM = 0; break;
+                case 0x35: script.amemAll[Param1 & 0x0F] = 0; break;
                 case 0x6A:
-                case 0x6B: if ((Param1 & 0x0F) == 0) script.AMEM = (byte)(Param2 - 1); break;
+                case 0x6B: script.amemAll[Param1 & 0x0F] = (byte)(Param2 - 1); break;
                 default:
                     if (Opcode >= 0x24 && Opcode <= 0x2B)
                     {
@@ -320,7 +323,8 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                         length = GetOpcodeLength(rom, offset);
                         temp = new AnimationCommand(Bits.GetBytes(rom, offset, length), offset, script, this);
                         commands.Add(temp);
-                        if (rom[offset] == 0x07 || // end animation packet
+                        if (rom[offset] == 0x02 || // exit battle
+                            rom[offset] == 0x07 || // end animation packet
                             rom[offset] == 0x09 || // jump directly to address (thus ending this)
                             rom[offset] == 0x11 || // end subroutine
                             rom[offset] == 0x5E)   // end sprite subroutine
@@ -362,6 +366,19 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                     else
                         offset = (offset & 0xFF0000) + Bits.GetShort(rom, offset + commandData[3]);
                     goto case 0x09;
+                case 0x47:
+                {
+                    int reg = Param1 & 0x0F;
+                    byte val = script.amemAll[reg];
+                    if (val > 0x10)
+                    {
+                        script.amemAll[reg] = 0;
+                        offset = (offset & 0xFF0000) + Bits.GetShort(rom, offset);
+                    }
+                    else
+                        offset = (offset & 0xFF0000) + Bits.GetShort(rom, offset + (val * 2));
+                    goto case 0x09;
+                }
                 default:
                     if (Opcode >= 0x24 && Opcode <= 0x2B)
                     {

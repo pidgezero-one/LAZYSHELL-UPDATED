@@ -25,7 +25,7 @@ namespace LAZYSHELL
         private void Disassemble()
         {
             int offset = (index * 4) + 0x251800;
-            int bank = (int)(((rom[offset] & 0x0F) << 16) + 0x280000);
+            int bank = (int)(((rom[offset] & 0x0F) << 16) + RomConfig.SpriteGraphicsBaseAddress);
             graphicOffset = (int)((Bits.GetShort(rom, offset) & 0xFFF0) + bank); offset += 2;
             paletteOffset = (int)(Bits.GetShort(rom, offset) + 0x250000);
             //
@@ -36,7 +36,7 @@ namespace LAZYSHELL
         public void Assemble()
         {
             int offset = (index * 4) + 0x251800;
-            byte bank = (byte)((graphicOffset - 0x280000) >> 16);
+            byte bank = (byte)((graphicOffset - RomConfig.SpriteGraphicsBaseAddress) >> 16);
             ushort pointer = (ushort)(graphicOffset & 0xFFF0);
             Bits.SetShort(rom, offset, pointer);
             rom[offset] |= bank; offset += 2;
@@ -47,7 +47,7 @@ namespace LAZYSHELL
         public byte[] Graphics(byte[] spriteGraphics)
         {
             // Bounds check: ensure we don't read beyond SpriteGraphics buffer (0xF87C0 bytes)
-            int srcOffset = graphicOffset - 0x280000;
+            int srcOffset = graphicOffset - RomConfig.SpriteGraphicsBaseAddress;
             if (srcOffset < 0 || srcOffset >= spriteGraphics.Length)
             {
                 // Return empty array if offset is invalid

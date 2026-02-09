@@ -101,7 +101,7 @@ namespace LAZYSHELL
             for (; i < samples.Length && offset1C + samples[i].Length < 0x1CEA00; i++)
                 samples[i].Assemble(ref offset1C);
             // check if room for next in bank 1D
-            for (; i < samples.Length && offset1D + samples[i].Length < 0x1DEBE0; i++)
+            for (; i < samples.Length && offset1D + samples[i].Length < RomConfig.PartitionTableStart; i++)
                 samples[i].Assemble(ref offset1D);
             if (i < samples.Length)
                 MessageBox.Show("Not enough space to save all samples. Stopped saving at index " + i.ToString("d3") + ".");

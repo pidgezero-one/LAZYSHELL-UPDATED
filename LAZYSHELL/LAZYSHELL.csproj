@@ -73,11 +73,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="!Static\RomConfig.cs" />
     <Compile Include="!Static\BRR.cs" />
     <Compile Include="!Static\Enums.cs" />
     <Compile Include="!Static\Help.cs" />
     <Compile Include="!Static\NewCursors.cs" />
     <Compile Include="!Universal\Element.cs" />
+    <Compile Include="!Universal\RangeListEditor.cs" />
     <Compile Include="!Universal\History.cs" />
     <Compile Include="!Universal\Tilemap.cs" />
     <Compile Include="!Universal\ToolTipLabel.cs">
@@ -567,6 +569,7 @@
     <Compile Include="!Universal\Tileset.cs" />
     <Compile Include="Editor.Levels\Levels\LevelTemplate.cs" />
     <Compile Include="!Static\Lists.cs" />
+    <Compile Include="!Static\ListsDefaults.cs" />
     <Compile Include="Editor.Intro\MainTitle.cs">
       <SubType>Form</SubType>
     </Compile>

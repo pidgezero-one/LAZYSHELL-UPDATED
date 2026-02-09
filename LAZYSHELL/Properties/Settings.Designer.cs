@@ -811,5 +811,311 @@ namespace LAZYSHELL.Properties {
                 this["NotePathCustomList"] = value;
             }
         }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+  <string>280000-330000</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection SpriteGraphicsRanges {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["SpriteGraphicsRanges"]));
+            }
+            set {
+                this["SpriteGraphicsRanges"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+  <string>259000-25FFFF</string>
+  <string>260000-26FFFF</string>
+  <string>270000-27FFFF</string>
+  <string>360000-36FFFF</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection AnimationBanks {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["AnimationBanks"]));
+            }
+            set {
+                this["AnimationBanks"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2432000")]
+        public int AnimationPointerTable {
+            get {
+                return ((int)(this["AnimationPointerTable"]));
+            }
+            set {
+                this["AnimationPointerTable"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1957376")]
+        public int PartitionTableStart {
+            get {
+                return ((int)(this["PartitionTableStart"]));
+            }
+            set {
+                this["PartitionTableStart"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("120")]
+        public int PartitionCount {
+            get {
+                return ((int)(this["PartitionCount"]));
+            }
+            set {
+                this["PartitionCount"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+  <string>3A3120-3A40F1</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection ItemDescriptionRanges {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["ItemDescriptionRanges"]));
+            }
+            set {
+                this["ItemDescriptionRanges"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+  <string>3A2BB6-3A2F20</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection SpellDescriptionRanges {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["SpellDescriptionRanges"]));
+            }
+            set {
+                this["SpellDescriptionRanges"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+  <string>39A1D1-39B641</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection PsychopathMessageRanges {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["PsychopathMessageRanges"]));
+            }
+            set {
+                this["PsychopathMessageRanges"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("512")]
+        public int NPCPropertiesCount {
+            get {
+                return ((int)(this["NPCPropertiesCount"]));
+            }
+            set {
+                this["NPCPropertiesCount"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("255")]
+        public int NPCPacketCount {
+            get {
+                return ((int)(this["NPCPacketCount"]));
+            }
+            set {
+                this["NPCPacketCount"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Enable0xCE {
+            get {
+                return ((bool)(this["Enable0xCE"]));
+            }
+            set {
+                this["Enable0xCE"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomSpriteNames {
+            get {
+                return ((string)(this["CustomSpriteNames"]));
+            }
+            set {
+                this["CustomSpriteNames"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomEventLabels {
+            get {
+                return ((string)(this["CustomEventLabels"]));
+            }
+            set {
+                this["CustomEventLabels"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomEventDescriptions {
+            get {
+                return ((string)(this["CustomEventDescriptions"]));
+            }
+            set {
+                this["CustomEventDescriptions"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomActionLabels {
+            get {
+                return ((string)(this["CustomActionLabels"]));
+            }
+            set {
+                this["CustomActionLabels"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomActionDescriptions {
+            get {
+                return ((string)(this["CustomActionDescriptions"]));
+            }
+            set {
+                this["CustomActionDescriptions"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomPacketNames {
+            get {
+                return ((string)(this["CustomPacketNames"]));
+            }
+            set {
+                this["CustomPacketNames"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomEffectNames {
+            get {
+                return ((string)(this["CustomEffectNames"]));
+            }
+            set {
+                this["CustomEffectNames"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomBattleEventNames {
+            get {
+                return ((string)(this["CustomBattleEventNames"]));
+            }
+            set {
+                this["CustomBattleEventNames"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomLevelNames {
+            get {
+                return ((string)(this["CustomLevelNames"]));
+            }
+            set {
+                this["CustomLevelNames"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomMusicNames {
+            get {
+                return ((string)(this["CustomMusicNames"]));
+            }
+            set {
+                this["CustomMusicNames"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomSoundNames {
+            get {
+                return ((string)(this["CustomSoundNames"]));
+            }
+            set {
+                this["CustomSoundNames"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomBattleSoundNames {
+            get {
+                return ((string)(this["CustomBattleSoundNames"]));
+            }
+            set {
+                this["CustomBattleSoundNames"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CustomBattlefieldNames {
+            get {
+                return ((string)(this["CustomBattlefieldNames"]));
+            }
+            set {
+                this["CustomBattlefieldNames"] = value;
+            }
+        }
     }
 }
