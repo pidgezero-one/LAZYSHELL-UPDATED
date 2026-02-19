@@ -854,6 +854,8 @@ namespace LAZYSHELL
             goToToolStripMenuItem.Click -= goToAction_Click;
             goToToolStripMenuItem.Click -= addMemoryToNotesDatabase_Click;
             goToToolStripMenuItem.Click -= addMemoryToNotesDatabase_Click;
+            contextMenuStripGoto.Items.Clear();
+            contextMenuStripGoto.Items.Add(goToToolStripMenuItem);
             if (commandTree.SelectedNode.Tag.GetType() == typeof(EventCommand))
             {
                 EventCommand temp = (EventCommand)commandTree.SelectedNode.Tag;
@@ -869,6 +871,17 @@ namespace LAZYSHELL
                     e.Node.ContextMenuStrip = contextMenuStripGoto;
                     goToToolStripMenuItem.Text = "Goto event...";
                     goToToolStripMenuItem.Click += new EventHandler(goToEvent_Click);
+                }
+                else if (temp.Opcode == 0xE9 || temp.Opcode == 0x42 || temp.Opcode == 0x67)
+                {
+                    contextMenuStripGoto.Items.Clear();
+                    var goto1 = new ToolStripMenuItem("Goto first jump...", goToToolStripMenuItem.Image);
+                    var goto2 = new ToolStripMenuItem("Goto second jump...", goToToolStripMenuItem.Image);
+                    goto1.Click += (s, args) => goToOffsetSpecial(0);
+                    goto2.Click += (s, args) => goToOffsetSpecial(1);
+                    contextMenuStripGoto.Items.Add(goto1);
+                    contextMenuStripGoto.Items.Add(goto2);
+                    e.Node.ContextMenuStrip = contextMenuStripGoto;
                 }
                 else if (temp.ReadPointer() != 0)
                 {
@@ -906,7 +919,18 @@ namespace LAZYSHELL
             else
             {
                 ActionCommand temp = (ActionCommand)commandTree.SelectedNode.Tag;
-                if (temp.ReadPointer() != 0)
+                if (temp.Opcode == 0xE9)
+                {
+                    contextMenuStripGoto.Items.Clear();
+                    var goto1 = new ToolStripMenuItem("Goto first jump...", goToToolStripMenuItem.Image);
+                    var goto2 = new ToolStripMenuItem("Goto second jump...", goToToolStripMenuItem.Image);
+                    goto1.Click += (s, args) => goToOffsetSpecial(0);
+                    goto2.Click += (s, args) => goToOffsetSpecial(1);
+                    contextMenuStripGoto.Items.Add(goto1);
+                    contextMenuStripGoto.Items.Add(goto2);
+                    e.Node.ContextMenuStrip = contextMenuStripGoto;
+                }
+                else if (temp.ReadPointer() != 0)
                 {
                     e.Node.ContextMenuStrip = contextMenuStripGoto;
                     goToToolStripMenuItem.Text = "Goto offset...";
@@ -1969,6 +1993,61 @@ namespace LAZYSHELL
                 return;
             }
             pointer = temp.ReadPointer() + (eventScript.BaseOffset & 0xFF0000);
+            foreach (EventScript script in eventScripts)
+            {
+                foreach (EventCommand command in script.Commands)
+                {
+                    if (command.Queue != null)
+                    {
+                        foreach (ActionCommand action in command.Queue.Commands)
+                        {
+                            if (action.Offset + action.CommandData.Length > pointer || action.Offset >= pointer)
+                            {
+                                if (command.Offset + command.Length > pointer || command.Offset >= pointer)
+                                {
+                                    index = script.Index;
+                                    treeViewWrapper.SelectNode(command);
+                                    return;
+                                }
+                                index = script.Index;
+                                treeViewWrapper.SelectNode(action);
+                                return;
+                            }
+                        }
+                    }
+                    if (command.Offset + command.Length > pointer || command.Offset >= pointer)
+                    {
+                        index = script.Index;
+                        treeViewWrapper.SelectNode(command);
+                        return;
+                    }
+                }
+            }
+        }
+        private void goToOffsetSpecial(int pointerIndex)
+        {
+            if (commandTree.SelectedNode == null)
+                return;
+            EventActionCommand temp = (EventActionCommand)commandTree.SelectedNode.Tag;
+            int pointer;
+            if (isActionScript)
+            {
+                pointer = temp.ReadPointerSpecial(pointerIndex) + (actionScript.BaseOffset & 0xFF0000);
+                foreach (ActionScript script in actionScripts)
+                {
+                    foreach (ActionCommand action in script.Commands)
+                    {
+                        if (action.Offset + action.CommandData.Length > pointer || action.Offset >= pointer)
+                        {
+                            index = script.Index;
+                            treeViewWrapper.SelectNode(action);
+                            return;
+                        }
+                    }
+                }
+                return;
+            }
+            pointer = temp.ReadPointerSpecial(pointerIndex) + (eventScript.BaseOffset & 0xFF0000);
             foreach (EventScript script in eventScripts)
             {
                 foreach (EventCommand command in script.Commands)

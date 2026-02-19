@@ -722,11 +722,19 @@ namespace LAZYSHELL
         public void DrawLevelNPCs(LevelNPCs npcs, NPCProperties[] npcProperties)
         {
             NPCImages = new List<Bitmap>();
+            if (npcs == null)
+                return;
             foreach (NPC npc in npcs.Npcs)
             {
+                if (npc == null)
+                    continue;
                 DrawLevelNPC(npc, npcProperties, npc.NPCID, npc.EngageType);
                 foreach (NPC instance in npc.Clones)
+                {
+                    if (instance == null)
+                        continue;
                     DrawLevelNPC(instance, npcProperties, npc.NPCID, npc.EngageType);
+                }
             }
         }
         private void DrawLevelNPC(NPC npc, NPCProperties[] npcProperties, int npcid, int engagetype)
@@ -740,6 +748,8 @@ namespace LAZYSHELL
         }
         public void DrawLevelNPCs(LevelNPCs npcs, Graphics g, int z)
         {
+            if (npcs == null || NPCImages == null)
+                return;
             int index = 0;
             int total = 0;
             List<NPC> sorted = new List<NPC>();
@@ -798,6 +808,8 @@ namespace LAZYSHELL
                 g.DrawImage(npcFieldBaseImageH, rdst, 0, 0, rsrc.Width, rsrc.Height, GraphicsUnit.Pixel);
             x = x - 112;//x += 32 - NPCImages[npc.Index].Width / 2 - 16;
             y = y - 120 - 1;//y -= NPCImages[npc.Index].Height - 4 - 8;
+            if (npc.Index < 0 || npc.Index >= NPCImages.Count || NPCImages[npc.Index] == null)
+                return;
             rsrc = new Rectangle(x, y, NPCImages[npc.Index].Width, NPCImages[npc.Index].Height);
             rdst = new Rectangle(x * z, y * z, rsrc.Width * z, rsrc.Height * z);
             if (npc.Xb7)

@@ -29,9 +29,9 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "Run battle dialogue: {0}",			// 0xE3
             "",			// 0xE4
             "Run battle event: {0}",			// 0xE5
-            "{0} memory $7EE00{1}",			// 0xE6
-            "{0} memory $7EE00{1}, bit(s) {2}",			// 0xE7
-            "Clear memory $7EE00{0}",			// 0xE8
+            "{0} memory ${1}",			// 0xE6
+            "{0} memory ${1}, bit(s) {2}",			// 0xE7
+            "Clear memory ${0}",			// 0xE8
             "",			// 0xE9
             "{0} target: {1}",			// 0xEA
             "{0} invincibility for target: {1}",			// 0xEB
@@ -71,14 +71,14 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "If target: {0}, is NOT affected by status: {1}",			// 0x09
             "If attack phase counter (7EE006) = {0}",			// 0x0A
             "",			// 0x0B
-            "If memory $7EE00{0} < {1}",			// 0x0C
-            "If memory $7EE00{0} >= {1}",			// 0x0D
+            "If memory ${0} < {1}",			// 0x0C
+            "If memory ${0} >= {1}",			// 0x0D
             "",			// 0x0E
             "",			// 0x0F
 			
             "If target {0}: {1}",			// 0x10
-            "If memory $7EE00{0}, bit(s) set: {1}",			// 0x11
-            "If memory $7EE00{0}, bit(s) clear: {1}",			// 0x12
+            "If memory ${0}, bit(s) set: {1}",			// 0x11
+            "If memory ${0}, bit(s) clear: {1}",			// 0x12
             "If in formation: {0}",			// 0x13
             "If only one alive",			// 0x14
             "",			// 0x15
@@ -129,15 +129,15 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                     break;
                 case 0xE6:
                     vars[0] = bsc.Param1 == 0 ? "Increment" : "Decrement";
-                    vars[1] = bsc.Param2.ToString("X1");
+                    vars[1] = (0x7EE000 + bsc.Param2).ToString("X");
                     break;
                 case 0xE7:
                     vars[0] = bsc.Param1 == 0 ? "Set" : "Clear";
-                    vars[1] = bsc.Param2.ToString();
+                    vars[1] = (0x7EE000 + bsc.Param2).ToString("X");
                     vars[2] = GetBits(bsc.Param3, BitNames, 8);
                     break;
                 case 0xE8:
-                    vars[0] = bsc.Param1.ToString("X1");
+                    vars[0] = (0x7EE000 + bsc.Param1).ToString("X");
                     break;
                 case 0xEA:
                     vars[0] = bsc.Param1 == 0 ? "Remove" : "Call";
@@ -203,7 +203,7 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                         case 0x0A: vars[0] = bsc.Param2.ToString(); break;
                         case 0x0C:
                         case 0x0D:
-                            vars[0] = bsc.Param2.ToString("X1");
+                            vars[0] = (0x7EE000 + bsc.Param2).ToString("X");
                             vars[1] = bsc.Param3.ToString();
                             break;
                         case 0x10:
@@ -212,7 +212,7 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                             break;
                         case 0x11:
                         case 0x12:
-                            vars[0] = bsc.Param2.ToString("X1");
+                            vars[0] = (0x7EE000 + bsc.Param2).ToString("X");
                             vars[1] = GetBits(bsc.Param3, BitNames, 8);
                             break;
                         case 0x13:

@@ -1239,9 +1239,9 @@ namespace LAZYSHELL
                 if (tags.Checked)
                     overlay.DrawLevelEventTags(events, e.Graphics, zoom);
             }
-            if (state.NPCs)
+            if (state.NPCs && npcs != null)
             {
-                if (overlay.NPCImages == null)
+                if (overlay.NPCImages == null || overlay.NPCImages.Count != npcs.CountAll)
                     overlay.DrawLevelNPCs(npcs, Model.NPCProperties);
                 overlay.DrawLevelNPCs(npcs, e.Graphics, zoom);
                 if (tags.Checked)

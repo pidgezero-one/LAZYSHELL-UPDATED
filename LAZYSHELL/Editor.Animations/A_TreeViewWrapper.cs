@@ -44,10 +44,15 @@ namespace LAZYSHELL.ScriptsEditor
                 this.treeView.EndUpdate();
         }
         // treeview managers
+        private string SafeToString(AnimationCommand command)
+        {
+            try { return command.ToString(); }
+            catch { return "{" + command.Opcode.ToString("X2") + "} (data too short)"; }
+        }
         private void AddCommand(AnimationCommand command)
         {
             // Add node
-            this.treeView.Nodes.Add("[" + (command.Offset).ToString("X6") + "]   " + command.ToString());
+            this.treeView.Nodes.Add("[" + (command.Offset).ToString("X6") + "]   " + SafeToString(command));
             TreeNode node = treeView.Nodes[treeView.Nodes.Count - 1];
             node.Tag = command;
             //
@@ -103,7 +108,7 @@ namespace LAZYSHELL.ScriptsEditor
             TreeNode childNode;
             foreach (AnimationCommand childCommand in command.Commands)
             {
-                node.Nodes.Add("[" + (childCommand.Offset).ToString("X6") + "]   " + childCommand.ToString());
+                node.Nodes.Add("[" + (childCommand.Offset).ToString("X6") + "]   " + SafeToString(childCommand));
                 childNode = node.Nodes[node.Nodes.Count - 1];
                 childNode.Tag = childCommand;
                 //

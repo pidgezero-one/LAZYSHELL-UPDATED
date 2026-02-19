@@ -1692,74 +1692,9 @@ namespace LAZYSHELL
                 return targetNames;
             }
         }
-        private static string[] monsterBehaviors = new string[0];
         public static string[] MonsterBehaviors
         {
-            get
-            {
-                if (monsterBehaviors.Length == 54)
-                    return monsterBehaviors;
-                monsterBehaviors = new string[]
-                {
-                    "Initialize in Battle (behavior set 0, 1, 2, 3, 4)",
-                    "Idle/On Hit (behavior set 0)",
-                    "Idle/On Hit (behavior set 1)",
-                    "Idle/On Hit (behavior set 2)",
-                    "Idle/On Hit (behavior set 3)",
-                    "Idle/On Hit (behavior set 4)",
-                    "Cast Spell (behavior set 0, 1, 2, 3, 4)",
-                    "Move Toward Target (behavior set 0, 1, 2, 3, 4)",
-                    "Escape (behavior set 0, 4)",
-                    "Escape (behavior set 1, 2, 3)",
-                    "KOed (behavior set 0, 1, 2, 3)",
-                    "KOed (behavior set 4)",
-                    "Initialize in Battle (behavior set 5)",
-                    "Idle/On Hit (behavior set 5)",
-                    "Cast Spell (behavior set 5)",
-                    "Move Toward Target (behavior set 5)",
-                    "Escape (behavior set 5)",
-                    "KOed (behavior set 5)",
-                    "Initialize in Battle (behavior set 6)",
-                    "Initialize in Battle (behavior set 7)",
-                    "Idle/On Hit (behavior set 6, 7)",
-                    "Cast Spell (behavior set 6, 7)",
-                    "Move Toward Target (behavior set 6, 7)",
-                    "Escape (behavior set 6)",
-                    "Escape (behavior set 7)",
-                    "KOed (behavior set 6, 7)",
-                    "Initialize in Battle (behavior set 8, 9, 10)",
-                    "Idle/On Hit (behavior set 8, 9)",
-                    "Idle/On Hit (behavior set 10)",
-                    "Cast Spell (behavior set 8, 9)",
-                    "Cast Spell (behavior set 10)",
-                    "Move Toward Target (behavior set 8, 9, 10)",
-                    "Escape (behavior set 8)",
-                    "Escape (behavior set 9)",
-                    "Escape (behavior set 10)",
-                    "KOed (behavior set 8, 9, 10)",
-                    "Initialize in Battle (behavior set 11, 12, 13, 14)",
-                    "Idle/On Hit (behavior set 11, 12, 13, 14)",
-                    "Cast Spell (behavior set 11, 13, 14)",
-                    "Cast Spell (behavior set 12)",
-                    "Move Toward Target (behavior set 11, 12, 13, 14)",
-                    "Escape (behavior set 11, 12)",
-                    "Escape (behavior set 13)",
-                    "Escape (behavior set 14)",
-                    "KOed (behavior set 11, 12, 13, 14)",
-                    "Initialize in Battle (behavior set 15, 16, 17)",
-                    "Idle/On Hit (behavior set 15)",
-                    "Idle/On Hit (behavior set 16)",
-                    "Idle/On Hit (behavior set 17)",
-                    "Cast Spell (behavior set 15, 16, 17)",
-                    "Move Toward Target (behavior set 15, 16, 17)",
-                    "Escape (behavior set 15)",
-                    "Escape (behavior set 16, 17)",
-                    "KOed (behavior set 15, 16, 17)",
-                };
-                // MonsterBehaviors always use defaults (no custom overrides)
-                return monsterBehaviors;
-            }
-
+            get { return Model.MonsterBehaviorLabels; }
         }
         #endregion
 
@@ -14132,7 +14067,6 @@ namespace LAZYSHELL
             RomConfig.ApplyCustomLabels(BattlefieldNames, settings.CustomBattlefieldNames);
             RomConfig.ApplyCustomLabels(EffectNames, settings.CustomEffectNames);
             // Force re-evaluation of lazy-init properties by resetting them
-            monsterBehaviors = new string[0];
             eventLabels = new string[0];
             actionLabels = new string[0];
         }

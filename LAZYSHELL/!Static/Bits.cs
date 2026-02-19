@@ -83,6 +83,17 @@ namespace LAZYSHELL
             }
             return ret;
         }
+        /// <summary>
+        /// Reads a 16-bit value without showing an error dialog on failure.
+        /// </summary>
+        public static bool TryGetShort(byte[] data, int offset, out ushort result)
+        {
+            result = 0;
+            if (data == null || offset < 0 || offset + 1 >= data.Length)
+                return false;
+            result = (ushort)((data[offset + 1] << 8) | data[offset]);
+            return true;
+        }
         public static ushort GetShortReversed(byte[] data, int offset)
         {
             ushort ret = 0;

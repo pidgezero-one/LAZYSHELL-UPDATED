@@ -57,9 +57,9 @@ namespace LAZYSHELL
             }
         }
         public int SelectedNPC { get { return this.selectedNPC; } set { selectedNPC = value; } }
-        public int CurrentClone { get { return npc.CurrentClone; } set { npc.CurrentClone = value; } }
-        public int SelectedClone { get { return npc.SelectedClone; } set { npc.SelectedClone = value; } }
-        public bool IsCloneSelected { get { return npc.IsCloneSelected; } set { npc.IsCloneSelected = value; } }
+        public int CurrentClone { get { return npc != null ? npc.CurrentClone : 0; } set { if (npc != null) npc.CurrentClone = value; } }
+        public int SelectedClone { get { return npc != null ? npc.SelectedClone : 0; } set { if (npc != null) npc.SelectedClone = value; } }
+        public bool IsCloneSelected { get { return npc != null && npc.IsCloneSelected; } set { if (npc != null) npc.IsCloneSelected = value; } }
         // NPC properties
         public byte Partition { get { return partition; } set { partition = value; } }
         public byte CloneAmount { get { return npc.CloneAmount; } set { npc.CloneAmount = value; } }

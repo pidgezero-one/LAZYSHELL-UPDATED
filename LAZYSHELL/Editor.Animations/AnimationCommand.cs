@@ -33,7 +33,7 @@ namespace LAZYSHELL.ScriptsEditor.Commands
         {
             get
             {
-                if (this.commandData.Length > 0)
+                if (this.commandData.Length > 1)
                     return this.commandData[1];
                 else
                     return 0;
@@ -219,6 +219,8 @@ namespace LAZYSHELL.ScriptsEditor.Commands
         protected int originalOffset; public int OriginalOffset { get { return this.originalOffset; } set { this.originalOffset = value; } }
         // used for updating internal offsets and pointers
         protected int internalOffset; public int InternalOffset { get { return this.internalOffset; } set { this.internalOffset = value; } }
+        // tracks the queue/jump table base address for 0x64/0x68/0x47 to detect combinatorial explosion
+        private int queueTableAddress = -1;
         // constructor
         public AnimationCommand(byte[] commandData, int offset, AnimationScript script, AnimationCommand parent)
         {
@@ -361,40 +363,50 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                 case 0xD8:
                     goto case 0x09;
                 case 0x64:
-                    if (script.AMEM > 0x10)
-                    {
-                        script.AMEM = 0;
-                        offset = (offset & 0xFF0000) + Bits.GetShort(rom, offset);
-                    }
-                    else
-                        offset = (offset & 0xFF0000) + Bits.GetShort(rom, offset + (script.AMEM * 2));
+                {
+                    ushort ptr;
+                    int readOff = script.AMEM > 0x10 ? offset : offset + (script.AMEM * 2);
+                    if (script.AMEM > 0x10) script.AMEM = 0;
+                    if (!Bits.TryGetShort(rom, readOff, out ptr)) break;
+                    offset = (offset & 0xFF0000) + ptr;
+                    // Prevent combinatorial explosion: stop if any ancestor already dereferenced this table
+                    if (AncestorUsedQueueTable(offset)) break;
                     goto case 0x09;
+                }
                 case 0x68:
-                    if (script.AMEM >= 0x40)
-                    {
-                        script.AMEM = 0;
-                        offset = (offset & 0xFF0000) + Bits.GetShort(rom, offset);
-                    }
-                    else
-                        offset = (offset & 0xFF0000) + Bits.GetShort(rom, offset + (script.AMEM * 2));
+                {
+                    ushort ptr;
+                    int readOff = script.AMEM >= 0x40 ? offset : offset + (script.AMEM * 2);
+                    if (script.AMEM >= 0x40) script.AMEM = 0;
+                    if (!Bits.TryGetShort(rom, readOff, out ptr)) break;
+                    offset = (offset & 0xFF0000) + ptr;
+                    int tableBase = offset; // save the table address before second dereference
                     //
                     if (offset == 0x356919 ||
                         offset == 0x356969)
                         offset += 2;
                     else
-                        offset = (offset & 0xFF0000) + Bits.GetShort(rom, offset + commandData[3]);
+                    {
+                        if (commandData.Length < 4) break;
+                        if (!Bits.TryGetShort(rom, offset + commandData[3], out ptr)) break;
+                        offset = (offset & 0xFF0000) + ptr;
+                    }
+                    // Prevent combinatorial explosion: stop if any ancestor already dereferenced this table
+                    if (AncestorUsedQueueTable(tableBase)) break;
+                    queueTableAddress = tableBase;
                     goto case 0x09;
+                }
                 case 0x47:
                 {
+                    ushort ptr;
                     int reg = Param1 & 0x0F;
                     byte val = script.amemAll[reg];
-                    if (val > 0x10)
-                    {
-                        script.amemAll[reg] = 0;
-                        offset = (offset & 0xFF0000) + Bits.GetShort(rom, offset);
-                    }
-                    else
-                        offset = (offset & 0xFF0000) + Bits.GetShort(rom, offset + (val * 2));
+                    int readOff = val > 0x10 ? offset : offset + (val * 2);
+                    if (val > 0x10) script.amemAll[reg] = 0;
+                    if (!Bits.TryGetShort(rom, readOff, out ptr)) break;
+                    offset = (offset & 0xFF0000) + ptr;
+                    // Prevent combinatorial explosion: stop if any ancestor already dereferenced this table
+                    if (AncestorUsedQueueTable(offset)) break;
                     goto case 0x09;
                 }
                 default:
@@ -431,6 +443,21 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             }
             if (parent.Parent != null)
                 return ContainsOffset(parent.Parent, offset);
+            return false;
+        }
+        /// <summary>
+        /// Walks the parent chain to check if any ancestor command already dereferenced the same queue table.
+        /// Prevents combinatorial explosion when queue entries recursively target the same table with different indices.
+        /// </summary>
+        private bool AncestorUsedQueueTable(int tableAddress)
+        {
+            AnimationCommand p = this.parent;
+            while (p != null)
+            {
+                if (p.queueTableAddress == tableAddress)
+                    return true;
+                p = p.parent;
+            }
             return false;
         }
         public bool ContainsOffset(AnimationScript script, int offset)

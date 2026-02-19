@@ -1420,23 +1420,19 @@ namespace LAZYSHELL
         private static AnimationScript[] bonusMessageAnimations;
         private static AnimationScript[] toadTutorialScript;
         private static AnimationScript[] weaponWrapperAnimations;
-        /// <summary>
-        /// Returns the number of weapons in the ROM, determined by finding the highest
-        /// contiguous item index starting from 0 that has ItemType == 0 (weapon).
-        /// </summary>
-        public static int WeaponCount
+        private static List<int> weaponItemIds;
+        public static List<int> WeaponItemIds
         {
             get
             {
-                int count = 0;
-                for (int i = 0; i < Items.Length; i++)
+                if (weaponItemIds == null)
                 {
-                    if (Items[i].ItemType == 0)
-                        count++;
-                    else
-                        break;
+                    weaponItemIds = new List<int>();
+                    for (int i = 0; i < Items.Length; i++)
+                        if (Items[i].ItemType == 0)
+                            weaponItemIds.Add(i);
                 }
-                return Math.Max(count, 1);
+                return weaponItemIds;
             }
         }
         public static BattleScript[] BattleScripts
@@ -1584,6 +1580,89 @@ namespace LAZYSHELL
             }
             set { behaviorAnimMonsters = value; }
         }
+        private static string[] monsterBehaviorLabels;
+        public static string[] MonsterBehaviorLabels
+        {
+            get
+            {
+                if (monsterBehaviorLabels == null)
+                    BuildMonsterBehaviorLabels();
+                return monsterBehaviorLabels;
+            }
+        }
+        private static void BuildMonsterBehaviorLabels()
+        {
+            byte[] rom = ROM;
+            string[] functionNames = new string[] {
+                "Initialize in battle", "Idle/On hit", "Cast spell",
+                "Approach target", "Escape", "Object queues"
+            };
+            // Read 256 two-byte pointers from 0x350202
+            var monsterPointers = new ushort[256];
+            for (int i = 0; i < 256; i++)
+                monsterPointers[i] = Bits.GetShort(rom, 0x350202 + i * 2);
+            // Find unique behaviour set pointers, sorted ascending
+            var uniqueSetValues = new List<ushort>();
+            foreach (ushort ptr in monsterPointers)
+                if (!uniqueSetValues.Contains(ptr)) uniqueSetValues.Add(ptr);
+            uniqueSetValues.Sort();
+            // Map pointer value to set index
+            var ptrToSetIndex = new Dictionary<ushort, int>();
+            for (int i = 0; i < uniqueSetValues.Count; i++)
+                ptrToSetIndex[uniqueSetValues[i]] = i;
+            // Read 6 downstream pointers per behaviour set, track which sets/functions use each
+            // Apply same validation as AnimationScript.BuildBehaviorOffsets
+            var downstreamData = new Dictionary<int, List<KeyValuePair<int, string>>>();
+            foreach (ushort setPtr in uniqueSetValues)
+            {
+                int setIndex = ptrToSetIndex[setPtr];
+                int setAddr = 0x350000 + setPtr;
+                // Validate set pointer bounds (same filter as BuildBehaviorOffsets)
+                if (setAddr < 0x350000 || setAddr + 12 > rom.Length)
+                    continue;
+                for (int j = 0; j < 6; j++)
+                {
+                    ushort downstream = Bits.GetShort(rom, setAddr + j * 2);
+                    int downstreamAddr = 0x350000 + downstream;
+                    // Validate downstream address bounds
+                    if (downstreamAddr < 0x350000 || downstreamAddr >= rom.Length)
+                        continue;
+                    if (!downstreamData.ContainsKey(downstreamAddr))
+                        downstreamData[downstreamAddr] = new List<KeyValuePair<int, string>>();
+                    downstreamData[downstreamAddr].Add(new KeyValuePair<int, string>(setIndex, functionNames[j]));
+                }
+            }
+            // Sort unique downstream addresses (matches AnimationScript.BuildBehaviorOffsets order)
+            var sortedDownstream = new List<int>(downstreamData.Keys);
+            sortedDownstream.Sort();
+            // Build labels
+            monsterBehaviorLabels = new string[sortedDownstream.Count];
+            for (int i = 0; i < sortedDownstream.Count; i++)
+            {
+                int addr = sortedDownstream[i];
+                var usages = downstreamData[addr];
+                // Group by function name
+                var grouped = new Dictionary<string, List<int>>();
+                foreach (var usage in usages)
+                {
+                    if (!grouped.ContainsKey(usage.Value))
+                        grouped[usage.Value] = new List<int>();
+                    if (!grouped[usage.Value].Contains(usage.Key))
+                        grouped[usage.Value].Add(usage.Key);
+                }
+                // Build label parts
+                var parts = new List<string>();
+                foreach (var kvp in grouped)
+                {
+                    kvp.Value.Sort();
+                    var nums = new List<string>();
+                    foreach (int v in kvp.Value)
+                        nums.Add(v.ToString());
+                    parts.Add(kvp.Key + " (sprite behaviour " + string.Join(", ", nums.ToArray()) + ")");
+                }
+                monsterBehaviorLabels[i] = string.Join("; ", parts.ToArray());
+            }
+        }
         public static AnimationScript[] BehaviorAnimAllies
         {
             get
@@ -1623,9 +1702,10 @@ namespace LAZYSHELL
             {
                 if (weaponAnimations == null)
                 {
-                    weaponAnimations = new AnimationScript[WeaponCount];
-                    for (int i = 0; i < weaponAnimations.Length; i++)
-                        weaponAnimations[i] = new AnimationScript(i, 6);
+                    int maxId = WeaponItemIds.Count > 0 ? WeaponItemIds[WeaponItemIds.Count - 1] : 0;
+                    weaponAnimations = new AnimationScript[maxId + 1];
+                    for (int seq = 0; seq < WeaponItemIds.Count; seq++)
+                        weaponAnimations[WeaponItemIds[seq]] = new AnimationScript(seq, 6);
                 }
                 return weaponAnimations;
             }
@@ -1637,9 +1717,10 @@ namespace LAZYSHELL
             {
                 if (weaponSoundScripts == null)
                 {
-                    weaponSoundScripts = new AnimationScript[WeaponCount];
-                    for (int i = 0; i < weaponSoundScripts.Length; i++)
-                        weaponSoundScripts[i] = new AnimationScript(i, 7);
+                    int maxId = WeaponItemIds.Count > 0 ? WeaponItemIds[WeaponItemIds.Count - 1] : 0;
+                    weaponSoundScripts = new AnimationScript[maxId + 1];
+                    for (int seq = 0; seq < WeaponItemIds.Count; seq++)
+                        weaponSoundScripts[WeaponItemIds[seq]] = new AnimationScript(seq, 7);
                 }
                 return weaponSoundScripts;
             }
@@ -1651,9 +1732,10 @@ namespace LAZYSHELL
             {
                 if (weaponTimedHitScripts == null)
                 {
-                    weaponTimedHitScripts = new AnimationScript[WeaponCount];
-                    for (int i = 0; i < weaponTimedHitScripts.Length; i++)
-                        weaponTimedHitScripts[i] = new AnimationScript(i, 8);
+                    int maxId = WeaponItemIds.Count > 0 ? WeaponItemIds[WeaponItemIds.Count - 1] : 0;
+                    weaponTimedHitScripts = new AnimationScript[maxId + 1];
+                    for (int seq = 0; seq < WeaponItemIds.Count; seq++)
+                        weaponTimedHitScripts[WeaponItemIds[seq]] = new AnimationScript(seq, 8);
                 }
                 return weaponTimedHitScripts;
             }
@@ -3084,6 +3166,8 @@ namespace LAZYSHELL
             titleSpritePalettes = null;
             titleTileSet = null;
             toadTutorialScript = null;
+            weaponItemIds = null;
+            monsterBehaviorLabels = null;
             weaponAnimations = null;
             weaponSoundScripts = null;
             weaponTimedHitScripts = null;

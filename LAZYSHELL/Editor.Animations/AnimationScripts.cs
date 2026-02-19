@@ -63,6 +63,23 @@ namespace LAZYSHELL
         }
         private AnimationCommand asc; public AnimationCommand ASC { get { return asc; } set { asc = value; } }
         private AnimationCommand ascCopy;
+        private List<int> weaponItemIds = new List<int>();
+        private bool IsWeaponCategory
+        {
+            get
+            {
+                int cat = animationCategory.SelectedIndex;
+                return cat == 6 || cat == 7 || cat == 8;
+            }
+        }
+        private int SnapToNearestWeapon(int value)
+        {
+            if (weaponItemIds.Count == 0) return 0;
+            if (weaponItemIds.Contains(value)) return value;
+            foreach (int id in weaponItemIds)
+                if (id >= value) return id;
+            return weaponItemIds[weaponItemIds.Count - 1];
+        }
         public int Index { get { return (int)animationNum.Value; } set { animationNum.Value = value; } }
         public int Category { get { return animationCategory.SelectedIndex; } set { animationCategory.SelectedIndex = value; UpdateAnimationCategory(value); } }
         private CommandStack commandStack;
@@ -149,18 +166,26 @@ namespace LAZYSHELL
                 animationCategory.SelectedIndex == (int)AnimScriptType.BattleEvents ||
                 animationCategory.SelectedIndex == (int)AnimScriptType.MonsterBehaviors;
             //
-            animationScripts[(int)animationNum.Value].RefreshScript();
+            if (IsWeaponCategory)
+            {
+                int snapped = SnapToNearestWeapon((int)animationNum.Value);
+                if (snapped != (int)animationNum.Value)
+                    animationNum.Value = snapped;
+            }
+            if (animationScripts[(int)animationNum.Value] != null)
+                animationScripts[(int)animationNum.Value].RefreshScript();
             switch (animationCategory.SelectedIndex)
             {
                 case 0:
                     wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
                     animationName.Items.Clear();
+                    string[] behaviorLabels = Lists.MonsterBehaviors;
                     for (int i = 0; i < animationScripts.Length; i++)
                     {
-                        if (Lists.MonsterBehaviors[i] == "")
+                        if (i >= behaviorLabels.Length || behaviorLabels[i] == "")
                             this.animationName.Items.Add("SCRIPT #" + i);
-                        else 
-                            this.animationName.Items.Add(Lists.MonsterBehaviors[i]);
+                        else
+                            this.animationName.Items.Add(behaviorLabels[i]);
                     }
                     animationName.DrawMode = DrawMode.Normal;
                     animationName.BackColor = SystemColors.Window;
@@ -222,32 +247,15 @@ namespace LAZYSHELL
                     animationName.BackColor = SystemColors.ControlDarkDark;
                     goto default;
                 case 6:
-                    wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
-                    animationName.Items.Clear();
-                    // Force refresh item names from ROM by clearing cache
-                    Model.ClearItemNames();
-                    for (int i = 0; i < animationScripts.Length; i++)
-                        this.animationName.Items.Add(Model.ItemNames.GetUnsortedName(i));
-                    animationName.DrawMode = DrawMode.OwnerDrawFixed;
-                    animationName.BackColor = SystemColors.ControlDarkDark;
-                    goto default;
                 case 7:
-                    wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
-                    animationName.Items.Clear();
-                    // Force refresh item names from ROM by clearing cache
-                    Model.ClearItemNames();
-                    for (int i = 0; i < animationScripts.Length; i++)
-                        this.animationName.Items.Add(Model.ItemNames.GetUnsortedName(i));
-                    animationName.DrawMode = DrawMode.OwnerDrawFixed;
-                    animationName.BackColor = SystemColors.ControlDarkDark;
-                    goto default;
                 case 8:
-                    wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
+                    weaponItemIds = Model.WeaponItemIds;
+                    if (animationScripts[(int)animationNum.Value] != null)
+                        wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
                     animationName.Items.Clear();
-                    // Force refresh item names from ROM by clearing cache
                     Model.ClearItemNames();
-                    for (int i = 0; i < animationScripts.Length; i++)
-                        this.animationName.Items.Add(Model.ItemNames.GetUnsortedName(i));
+                    foreach (int id in weaponItemIds)
+                        this.animationName.Items.Add(Model.ItemNames.GetUnsortedName(id));
                     animationName.DrawMode = DrawMode.OwnerDrawFixed;
                     animationName.BackColor = SystemColors.ControlDarkDark;
                     goto default;
@@ -316,7 +324,8 @@ namespace LAZYSHELL
                     animationName.BackColor = SystemColors.Window;
                     goto default;
                 default:
-                    if (animationCategory.SelectedIndex == (int)AnimScriptType.BattleEvents)
+                    if (animationCategory.SelectedIndex == (int)AnimScriptType.BattleEvents ||
+                        animationCategory.SelectedIndex == (int)AnimScriptType.MonsterBehaviors)
                         animationName.Width = 400;
                     else
                         animationName.Width = 285;
@@ -331,6 +340,8 @@ namespace LAZYSHELL
 
         private void RedrawTree()
         {
+            if (animationScripts[(int)animationNum.Value] == null)
+                return;
             commandTree.BeginUpdate();
             // redraw the treeview
             int fullParentIndex = commandTree.GetFullParentIndex();
@@ -1542,11 +1553,29 @@ namespace LAZYSHELL
         private void animationNum_ValueChanged(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
+            if (IsWeaponCategory)
+            {
+                int snapped = SnapToNearestWeapon((int)animationNum.Value);
+                if (snapped != (int)animationNum.Value)
+                {
+                    animationNum.Value = snapped;
+                    return;
+                }
+            }
+            if (animationScripts[(int)animationNum.Value] == null)
+                return;
             animationScripts[(int)animationNum.Value].RefreshScript();
             //
             if (animationCategory.SelectedIndex == (int)AnimScriptType.MonsterAttacks)
             {
                 animationName.SelectedIndex = Model.AttackNames.GetSortedIndex(Index);
+                wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
+            }
+            else if (IsWeaponCategory)
+            {
+                int dropdownIndex = weaponItemIds.IndexOf((int)animationNum.Value);
+                if (dropdownIndex >= 0)
+                    animationName.SelectedIndex = dropdownIndex;
                 wrapper.ChangeScript(animationScripts[(int)animationNum.Value]);
             }
             else
@@ -1565,6 +1594,8 @@ namespace LAZYSHELL
         {
             if (animationCategory.SelectedIndex == (int)AnimScriptType.MonsterAttacks)
                 animationNum.Value = Model.AttackNames.GetUnsortedIndex(animationName.SelectedIndex);
+            else if (IsWeaponCategory && animationName.SelectedIndex >= 0 && animationName.SelectedIndex < weaponItemIds.Count)
+                animationNum.Value = weaponItemIds[animationName.SelectedIndex];
             else
                 animationNum.Value = animationName.SelectedIndex;
         }
@@ -1573,15 +1604,15 @@ namespace LAZYSHELL
             Bitmap bgimage = Model.MenuBG_;
             switch (animationCategory.SelectedIndex)
             {
-                case 0: if (e.Index < 0 || e.Index > 54) return; break;
+                case 0: if (e.Index < 0 || e.Index >= Model.BehaviorAnimMonsters.Length) return; break;
                 case 1: if (e.Index < 0 || e.Index > 44) return; break;
                 case 2: if (e.Index < 0 || e.Index > 128) return; break;
                 case 3: if (e.Index < 0 || e.Index > 15) return; break;
                 case 4: if (e.Index < 0 || e.Index > 80) return; break;
                 case 5: if (e.Index < 0 || e.Index > 31) return; break;
-                case 6: if (e.Index < 0 || e.Index >= Model.WeaponCount) return; break;
-                case 7: if (e.Index < 0 || e.Index >= Model.WeaponCount) return; break;
-                case 8: if (e.Index < 0 || e.Index >= Model.WeaponCount) return; break;
+                case 6: if (e.Index < 0 || e.Index >= weaponItemIds.Count) return; break;
+                case 7: if (e.Index < 0 || e.Index >= weaponItemIds.Count) return; break;
+                case 8: if (e.Index < 0 || e.Index >= weaponItemIds.Count) return; break;
                 case 9: if (e.Index < 0 || e.Index > 101) return; break;
                 case 10: if (e.Index < 0 || e.Index > 5) return; break;
                 case 11: if (e.Index < 0 || e.Index > 0) return; break;
@@ -1618,15 +1649,15 @@ namespace LAZYSHELL
                         temp = menuTextPreview.GetPreview(Model.FontMenu, Model.FontPaletteBattle.Palette, name, true);
                         break;
                     case 6: // weapons
-                        name = Model.ItemNames.GetUnsortedName(e.Index).ToCharArray();
+                        name = Model.ItemNames.GetUnsortedName(weaponItemIds[e.Index]).ToCharArray();
                         temp = menuTextPreview.GetPreview(Model.FontMenu, Model.FontPaletteBattle.Palette, name, true);
                         break;
                     case 7: // weapons miss sounds
-                        name = Model.ItemNames.GetUnsortedName(e.Index).ToCharArray();
+                        name = Model.ItemNames.GetUnsortedName(weaponItemIds[e.Index]).ToCharArray();
                         temp = menuTextPreview.GetPreview(Model.FontMenu, Model.FontPaletteBattle.Palette, name, true);
                         break;
                     case 8: // weapons timed-hit sounds
-                        name = Model.ItemNames.GetUnsortedName(e.Index).ToCharArray();
+                        name = Model.ItemNames.GetUnsortedName(weaponItemIds[e.Index]).ToCharArray();
                         temp = menuTextPreview.GetPreview(Model.FontMenu, Model.FontPaletteBattle.Palette, name, true);
                         break;
                     case 12: // weapons attack wrapper
@@ -2339,29 +2370,35 @@ namespace LAZYSHELL
             evtscr.WriteLine("*******\n");
             foreach (AnimationScript ans in Model.WeaponAnimations)
             {
-                evtscr.WriteLine("\nWEAPON {" + i.ToString("d3") + "} " + Model.ItemNames.GetUnsortedName(i).Substring(1).Trim() +
-                    "------------------------------------------------------------>\n");
-                foreach (AnimationCommand asc in ans.Commands)
+                if (ans != null)
                 {
-                    evtscr.Write((asc.Offset).ToString("X6") + ": ");
-                    evtscr.Write("{" + BitConverter.ToString(asc.CommandData) + "}\n");
-                    dumpAnimationLoop(asc, evtscr, 1);
+                    evtscr.WriteLine("\nWEAPON {" + i.ToString("d3") + "} " + Model.ItemNames.GetUnsortedName(i).Substring(1).Trim() +
+                        "------------------------------------------------------------>\n");
+                    foreach (AnimationCommand asc in ans.Commands)
+                    {
+                        evtscr.Write((asc.Offset).ToString("X6") + ": ");
+                        evtscr.Write("{" + BitConverter.ToString(asc.CommandData) + "}\n");
+                        dumpAnimationLoop(asc, evtscr, 1);
+                    }
                 }
                 i++;
             }
             i = 0;
-            evtscr.WriteLine("\n*******");
-            evtscr.WriteLine("WEAPONS");
-            evtscr.WriteLine("*******\n");
+            evtscr.WriteLine("\n*************");
+            evtscr.WriteLine("WEAPON SOUNDS");
+            evtscr.WriteLine("*************\n");
             foreach (AnimationScript ans in Model.WeaponSoundScripts)
             {
-                evtscr.WriteLine("\nSOUND {" + i.ToString("d3") + "} " + Model.ItemNames.GetUnsortedName(i).Substring(1).Trim() +
-                    "------------------------------------------------------------>\n");
-                foreach (AnimationCommand asc in ans.Commands)
+                if (ans != null)
                 {
-                    evtscr.Write((asc.Offset).ToString("X6") + ": ");
-                    evtscr.Write("{" + BitConverter.ToString(asc.CommandData) + "}\n");
-                    dumpAnimationLoop(asc, evtscr, 1);
+                    evtscr.WriteLine("\nSOUND {" + i.ToString("d3") + "} " + Model.ItemNames.GetUnsortedName(i).Substring(1).Trim() +
+                        "------------------------------------------------------------>\n");
+                    foreach (AnimationCommand asc in ans.Commands)
+                    {
+                        evtscr.Write((asc.Offset).ToString("X6") + ": ");
+                        evtscr.Write("{" + BitConverter.ToString(asc.CommandData) + "}\n");
+                        dumpAnimationLoop(asc, evtscr, 1);
+                    }
                 }
                 i++;
             }
