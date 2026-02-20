@@ -514,16 +514,16 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                     {
                         case 0x00:
                             vars[0] = "battle dialogue";
-                            vars[1] = "{" + asc.Param2.ToString("X2") + "}  \"" +
+                            vars[1] = "{" + asc.Param2.ToString() + "}  \"" +
                                 Model.BattleDialogues[asc.Param2].GetStub() + "\"";
                             break;
                         case 0x01:
                             vars[0] = "psychopath message";
-                            vars[1] = "{" + asc.Param2.ToString("X2") + "}  \"" + "..." + "\"";
+                            vars[1] = "{" + asc.Param2.ToString() + "}  \"" + "..." + "\"";
                             break;
                         case 0x02:
                             vars[0] = "battle message";
-                            vars[1] = "{" + asc.Param2.ToString("X2") + "}  \"" + "..." + "\"";
+                            vars[1] = "{" + asc.Param2.ToString() + "}  \"" + "..." + "\"";
                             break;
                     }
                     break;
