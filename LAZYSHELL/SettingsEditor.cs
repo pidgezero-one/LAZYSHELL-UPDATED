@@ -255,6 +255,7 @@ namespace LAZYSHELL
 
             // Clear caches that depend on settings
             ScriptsEditor.AnimationScript.ResetCaches();
+            Model.NPCPackets = null; // Force re-creation with new NPCPacketCount on next access
 
             settings.Save();
 

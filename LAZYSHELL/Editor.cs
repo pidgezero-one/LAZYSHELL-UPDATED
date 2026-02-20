@@ -69,6 +69,9 @@ namespace LAZYSHELL
         {
             this.AppControl = controls;
             //
+            // Migrate user settings from previous version if config directory changed
+            settings.Upgrade();
+            //
             InitializeComponent();
             //LoadWebpage();
             Do.AddShortcut(toolStrip4, Keys.Control | Keys.S, new EventHandler(saveToolStripMenuItem_Click));

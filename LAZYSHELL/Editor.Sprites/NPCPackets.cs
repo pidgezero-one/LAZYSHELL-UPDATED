@@ -20,6 +20,7 @@ namespace LAZYSHELL
         {
             InitializeComponent();
             packetName.Items.AddRange(Lists.Numerize(Lists.NPCPackets));
+            packetNum.Maximum = Lists.NPCPackets.Length - 1;
             spriteName.Items.AddRange(Lists.Numerize(192, 256, Lists.SpriteNames));
             this.packetName.SelectedIndex = 0;
             InitializePackets();
