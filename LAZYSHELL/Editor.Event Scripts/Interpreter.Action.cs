@@ -570,7 +570,7 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                 case 0x08:
                     vars[0] = (asc.Param1 & 0x08) == 0x08 ? "Mold" : "Sequence";
                     vars[1] = (asc.Param2 & 0x7F).ToString();
-                    vars[2] = (asc.Param1 & 0x03).ToString();
+                    vars[2] = (asc.Param1 & 0x07).ToString();
                     vars[3] = (asc.Param1 & 0x10) == 0x10 ? "looping off" : "looping on";
                     vars[4] = (asc.Param2 & 0x80) == 0x80 ? "mirrored" : "...";
                     break;
