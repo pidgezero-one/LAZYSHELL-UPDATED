@@ -330,6 +330,7 @@ namespace LAZYSHELL.ScriptsEditor
         public void RefreshScript()
         {
             this.commands = null;
+            this.amemAll = new byte[16];
             Disassemble();
         }
         public int GetOpcodeLength(byte[] rom, int offset)

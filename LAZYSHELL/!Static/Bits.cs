@@ -13,9 +13,8 @@ namespace LAZYSHELL
         #region get functions
         private static void ShowError(int offset, int length)
         {
-            MessageBox.Show(
-                "Error accessing data at $" + offset + " in " + length + " byte array.\n\n" + "Please report this.",
-                "LAZYSHELL++", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            System.Diagnostics.Trace.WriteLine(
+                "LAZYSHELL++: Error accessing data at $" + offset + " in " + length + " byte array.");
         }
         public static bool GetBit(byte[] data, int offset, int bit)
         {

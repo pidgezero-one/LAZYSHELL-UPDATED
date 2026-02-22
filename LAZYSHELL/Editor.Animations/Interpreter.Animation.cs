@@ -712,10 +712,11 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                         Bits.GetShort(asc.CommandData, 4).ToString("X4");
                     break;
                 case 0xD0:
-                case 0xD1:
                     vars[0] = asc.Param1.ToString();
                     vars[1] = ((asc.InternalOffset & 0xFF0000) >> 16).ToString("X2") +
                         Bits.GetShort(asc.CommandData, 2).ToString("X4");
+                    break;
+                case 0xD1:
                     break;
                 case 0xD2:
                     vars[0] = asc.Param1.ToString();
