@@ -524,11 +524,16 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                             break;
                         case 0x01:
                             vars[0] = "psychopath message";
-                            vars[1] = "{" + asc.Param2.ToString() + "}  \"" + "..." + "\"";
+                            string psychText = asc.Param2 < Model.Monsters.Length
+                                ? Model.Monsters[asc.Param2].GetPsychopath(true) : "...";
+                            if (psychText.Length > 40) psychText = psychText.Substring(0, 37) + "...";
+                            vars[1] = "{" + asc.Param2.ToString() + "}  \"" + psychText + "\"";
                             break;
                         case 0x02:
                             vars[0] = "battle message";
-                            vars[1] = "{" + asc.Param2.ToString() + "}  \"" + "..." + "\"";
+                            vars[1] = "{" + asc.Param2.ToString() + "}  \"" +
+                                (asc.Param2 < Model.BattleMessages.Length
+                                    ? Model.BattleMessages[asc.Param2].GetStub() : "...") + "\"";
                             break;
                     }
                     break;
