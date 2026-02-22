@@ -143,7 +143,7 @@ namespace LAZYSHELL
 			
             "If target disabled, jump to address $xxxx",			// 0x50
             "If target alive, jump to address $xxxx",			// 0x51
-            "{52}",			// 0x52
+            "Unknown conditional jump: param=xxxx, jump to $xxxx",			// 0x52
             "{53}",			// 0x53
             "{54}",			// 0x54
             "{55}",			// 0x55

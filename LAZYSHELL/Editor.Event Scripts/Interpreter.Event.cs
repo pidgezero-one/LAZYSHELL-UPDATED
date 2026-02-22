@@ -829,12 +829,12 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                     break;
                 case 0x97:
                     vars[0] = (esc.Param2 & 0x80) == 0x80 ? "Speed up" : "Slow down";
-                    vars[1] = Math.Abs((sbyte)esc.Param2).ToString();
+                    vars[1] = ((esc.Param2 & 0x80) == 0x80 ? 256 - esc.Param2 : (int)esc.Param2).ToString();
                     vars[2] = esc.Param1.ToString();
                     break;
                 case 0x98:
                     vars[0] = (esc.Param2 & 0x80) == 0x80 ? "Lower" : "Raise";
-                    vars[1] = Math.Abs((sbyte)esc.Param2).ToString();
+                    vars[1] = ((esc.Param2 & 0x80) == 0x80 ? 256 - esc.Param2 : (int)esc.Param2).ToString();
                     vars[2] = esc.Param1.ToString();
                     break;
                 case 0x9C:

@@ -616,11 +616,11 @@ namespace LAZYSHELL
                     labelEvtA3.Text = "Tempo change";
                     labelEvtA4.Text = "Time stretch";
                     evtNameA1.Items.AddRange(new string[] { "slow down", "speed up" }); evtNameA1.Enabled = true;
-                    evtNumA3.Enabled = true; evtNumA3.Maximum = 127;
+                    evtNumA3.Enabled = true; evtNumA3.Maximum = 128;
                     evtNumA4.Enabled = true;
                     //
                     evtNameA1.SelectedIndex = (esc.Param2 & 0x80) == 0x80 ? 1 : 0;
-                    evtNumA3.Value = Math.Abs((sbyte)esc.Param2);
+                    evtNumA3.Value = (esc.Param2 & 0x80) == 0x80 ? 256 - esc.Param2 : esc.Param2;
                     evtNumA4.Value = esc.Param1;
                     break;
                 case 0x98:
@@ -629,11 +629,11 @@ namespace LAZYSHELL
                     labelEvtA3.Text = "Pitch change";
                     labelEvtA4.Text = "Time stretch";
                     evtNameA1.Items.AddRange(new string[] { "raise", "lower" }); evtNameA1.Enabled = true;
-                    evtNumA3.Enabled = true; evtNumA3.Maximum = 127;
+                    evtNumA3.Enabled = true; evtNumA3.Maximum = 128;
                     evtNumA4.Enabled = true;
                     //
                     evtNameA1.SelectedIndex = (esc.Param2 & 0x80) == 0x80 ? 1 : 0;
-                    evtNumA3.Value = Math.Abs((sbyte)esc.Param2);
+                    evtNumA3.Value = (esc.Param2 & 0x80) == 0x80 ? 256 - esc.Param2 : esc.Param2;
                     evtNumA4.Value = esc.Param1;
                     break;
                 case 0x9C:

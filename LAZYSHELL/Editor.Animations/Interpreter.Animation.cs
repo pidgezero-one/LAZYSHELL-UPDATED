@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using LAZYSHELL.Properties;
@@ -98,7 +98,7 @@ namespace LAZYSHELL.ScriptsEditor.Commands
 			
             "If target disabled, jump to address ${0}",			// 0x50
             "If target alive, jump to address ${0}",			// 0x51
-            "",			// 0x52
+            "Unknown conditional jump: param={0}, jump to ${1}",			// 0x52
             "",			// 0x53
             "",			// 0x54
             "",			// 0x55
@@ -463,6 +463,11 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                     vars[0] = ((asc.Param1 & 0x0F) + 0x60).ToString("X2");
                     vars[1] = GetBits(asc.Param2, new string[] { "0", "1", "2", "3", "4", "5", "6", "7" }, 8);
                     vars[2] = ((asc.InternalOffset & 0xFF0000) >> 16).ToString("X2") +
+                        Bits.GetShort(asc.CommandData, 3).ToString("X4");
+                    break;
+                case 0x52:
+                    vars[0] = Bits.GetShort(asc.CommandData, 1).ToString("X4");
+                    vars[1] = ((asc.InternalOffset & 0xFF0000) >> 16).ToString("X2") +
                         Bits.GetShort(asc.CommandData, 3).ToString("X4");
                     break;
                 case 0x5D:

@@ -134,13 +134,13 @@ namespace LAZYSHELL
             Bits.SetShort(rom, 0x37E000 + (Index * 2), (ushort)pointer);
 
             // Actually replace the invalid pointer with a duplicate
+            bool invalidPointer = false;
             if (Index >= 0xC00)
             {
                 if (pointer >= 0xFFFF - 4 || (pointer >= 0x9000 - 4 && pointer < 0xEDE0 - 4))
                 {
                     Bits.SetShort(rom, 0x37E000 + (Index * 2), (ushort)(Bits.GetShort(rom, 0x37E000 + ((Index - 1) * 2))));
-                    MessageBox.Show("Warning: Invalid pointer for dialogue #" + Index.ToString() + ".  Replaced with duplicate.",
-                            "LAZYSHELL++", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    invalidPointer = true;
                 }
             }
             else if (Index >= 0x800)
@@ -148,8 +148,7 @@ namespace LAZYSHELL
                 if (pointer >= 0xF2D5 - 4)
                 {
                     Bits.SetShort(rom, 0x37E000 + (Index * 2), (ushort)(Bits.GetShort(rom, 0x37E000 + ((Index - 1) * 2))));
-                    MessageBox.Show("Warning: Invalid pointer for dialogue #" + Index.ToString() + ".  Replaced with duplicate.",
-                            "LAZYSHELL++", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    invalidPointer = true;
                 }
             }
             else
@@ -157,9 +156,23 @@ namespace LAZYSHELL
                 if (pointer >= 0xFD18 - 8)
                 {
                     Bits.SetShort(rom, 0x37E000 + (Index * 2), (ushort)(Bits.GetShort(rom, 0x37E000 + ((Index - 1) * 2))));
-                    MessageBox.Show("Warning: Invalid pointer for dialogue #" + Index.ToString() + ".  Replaced with duplicate.",
-                            "LAZYSHELL++", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    invalidPointer = true;
                 }
+            }
+            if (invalidPointer)
+            {
+                error = true;
+                this.Text = new char[] { (char)0x00 };
+                // Still need to simplify section pointers for last dialogue
+                if (Index == 0xFFF)
+                {
+                    Bits.SetShort(rom, 0x220002, 0x0008);
+                    Bits.SetShort(rom, 0x220004, 0x0008);
+                    Bits.SetShort(rom, 0x220006, 0x0008);
+                    Bits.SetShort(rom, 0x230002, 0x0004);
+                    Bits.SetShort(rom, 0x240002, 0x0004);
+                }
+                return;
             }
 
             // Simplify all of the section pointers
@@ -186,6 +199,11 @@ namespace LAZYSHELL
             byte symbol = 0x01;
             while (symbol != 0x00 && symbol != 0x06)
             {
+                if (offset >= rom.Length || length > 0xFFFF)
+                {
+                    error = true;
+                    break;
+                }
                 symbol = rom[offset];
 
                 // Values with a parameter
@@ -199,9 +217,16 @@ namespace LAZYSHELL
             }
 
             // Finally, initialize the text
-            this.Text = new char[length];
-            for (int i = 0; i < length; i++)
-                this.Text[i] = (char)rom[this.Offset + i];
+            if (error)
+            {
+                this.Text = new char[] { (char)0x00 };
+            }
+            else
+            {
+                this.Text = new char[length];
+                for (int i = 0; i < length; i++)
+                    this.Text[i] = (char)rom[this.Offset + i];
+            }
             
             /*
             int dlgPtr = Bits.GetShort(rom, 0x37E000 + (index * 2));

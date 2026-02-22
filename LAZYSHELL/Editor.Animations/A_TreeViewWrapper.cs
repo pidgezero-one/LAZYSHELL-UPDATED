@@ -70,6 +70,7 @@ namespace LAZYSHELL.ScriptsEditor
                 case 0x47:
                 case 0x50:
                 case 0x51:
+                case 0x52:
                 case 0x5D:
                 case 0x64:
                 case 0x68:
@@ -126,6 +127,7 @@ namespace LAZYSHELL.ScriptsEditor
                     case 0x47:
                     case 0x50:
                     case 0x51:
+                    case 0x52:
                     case 0x5D:
                     case 0x64:
                     case 0x68:

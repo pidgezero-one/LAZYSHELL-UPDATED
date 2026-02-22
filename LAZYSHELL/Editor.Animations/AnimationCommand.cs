@@ -273,6 +273,11 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                     else if (parent != null && !parent.ContainsOffset(parent, search))
                         Disassemble(search);
                     break;
+                case 0x52:
+                    search = (offset & 0xFF0000) + Bits.GetShort(commandData, 3);
+                    if (search > offset)
+                        Disassemble(search);
+                    break;
                 case 0x5D:
                     search = (offset & 0xFF0000) + Bits.GetShort(commandData, 3);
                     if (parent == null && !ContainsOffset(script, search))
@@ -355,6 +360,7 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                 case 0x10:
                 case 0x50:
                 case 0x51: 
+                case 0x52:
                 case 0x5D:
                 case 0xA7:
                 case 0xCE:

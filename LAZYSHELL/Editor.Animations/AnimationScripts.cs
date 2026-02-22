@@ -668,6 +668,14 @@ namespace LAZYSHELL
                     for (int i = 0x10, j = 0; j < 4; i *= 2, j++)
                         aniBits.SetItemChecked(j, (asc.Param1 & i) == i);
                     break;
+                case 0x52:
+                    aniLabelB1.Text = "Param";
+                    aniLabelB2.Text = "Address";
+                    aniNumB1.Maximum = 0xFFFF; aniNumB1.Hexadecimal = true; aniNumB1.Enabled = true;
+                    aniNumB2.Maximum = 0xFFFF; aniNumB2.Hexadecimal = true; aniNumB2.Enabled = true;
+                    aniNumB1.Value = Bits.GetShort(asc.CommandData, 1);
+                    aniNumB2.Value = Bits.GetShort(asc.CommandData, 3);
+                    break;
                 case 0x5D:
                     aniLabelB1.Text = "Object #";
                     aniLabelB2.Text = "Address";
@@ -1260,7 +1268,11 @@ namespace LAZYSHELL
                     for (int i = 0, j = 0; j < 4; i++, j++)
                         Bits.SetBit(asc.CommandData, 1, j + 4, aniBits.GetItemChecked(j));
                     break;
-                case 0x5D:
+                                case 0x52:
+                    Bits.SetShort(asc.CommandData, 1, (ushort)aniNumB1.Value);
+                    Bits.SetShort(asc.CommandData, 3, (ushort)aniNumB2.Value);
+                    break;
+case 0x5D:
                     for (int i = 1, j = 0; j < 8; i *= 2, j++)
                         Bits.SetBit(asc.CommandData, 1, j, aniBits.GetItemChecked(j));
                     asc.Param2 = (byte)aniNumB1.Value;
