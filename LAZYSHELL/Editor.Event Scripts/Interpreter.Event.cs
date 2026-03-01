@@ -165,8 +165,8 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             "",			// 0x86
             "Circle mask (non-static) shrinks to {0} (padding: {1}px, speed: {2})",			// 0x87
             "",			// 0x88
-            "Palette set {0} set #{1}, row {2}",			// 0x89
-            "Palette set = set #{0}, rows 0 to {1}",			// 0x8A
+            "Event palette set {0} set #{1}, {2} (duration={3})",			// 0x89
+            "Use event palette set {0} on {2}",			// 0x8A
             "",			// 0x8B
             "",			// 0x8C
             "",			// 0x8D
@@ -801,12 +801,13 @@ namespace LAZYSHELL.ScriptsEditor.Commands
                         default: vars[0] = "INVALID"; break;
                     }
                     vars[1] = esc.Param3.ToString();
-                    vars[2] = esc.Param2.ToString();
+                    vars[2] = Lists.PaletteRowNames[esc.Param2 & 0x0F];
                     vars[3] = (esc.Param1 & 0x0F).ToString();
                     break;
                 case 0x8A:
                     vars[0] = esc.Param2.ToString();
                     vars[1] = (((esc.Param1 & 0xF0) / 16) + 1).ToString();
+                    vars[2] = Lists.PaletteRowNames[esc.Param1 & 0x0F];
                     break;
                 case 0x87:
                 case 0x8F:
@@ -1032,6 +1033,9 @@ namespace LAZYSHELL.ScriptsEditor.Commands
             // Special formatting for Learn Spell command - only when 0xCE is enabled
             if (esc.Opcode == 0xCE && RomConfig.Enable0xCE)
                 command = "{0} learns {1}";
+            // Show multi-row form for 0x8A only when row count > 1
+            if (esc.Opcode == 0x8A && ((esc.Param1 & 0xF0) / 16) + 1 > 1)
+                command = "Use event palette set {0} on {1} consecutive rows starting at {2}";
             return string.Format(command, vars);
         }
         private string FD_Opcodes(EventCommand esc)

@@ -1459,6 +1459,57 @@ namespace LAZYSHELL
                 }
             }
         }
+        private void evtNumA3_ValueChanged(object sender, EventArgs e)
+        {
+            if (this.Updating)
+                return;
+            if (esc != null && (esc.Opcode == 0x89 || esc.Opcode == 0x8A))
+                UpdateEventPalettePreview((int)evtNumA3.Value,
+                    esc.Opcode == 0x8A ? (int)evtNumA4.Value : 1);
+        }
+        private void evtNumA4_ValueChanged(object sender, EventArgs e)
+        {
+            if (this.Updating)
+                return;
+            if (esc != null && esc.Opcode == 0x8A)
+                UpdateEventPalettePreview((int)evtNumA3.Value, (int)evtNumA4.Value);
+        }
+        private void evtNumA5_ValueChanged(object sender, EventArgs e)
+        {
+            if (this.Updating)
+                return;
+        }
+        private void UpdateEventPalettePreview(int paletteSetId, int count)
+        {
+            if (paletteSetId < 0 || paletteSetId + count > 256)
+            {
+                panelEvtPalettePreview.Visible = false;
+                return;
+            }
+            var ps = new PaletteSet(Model.ROM, paletteSetId, 0x379FFE + paletteSetId * 30, count, 16, 30);
+            int[] pixels = Do.PaletteToPixels(ps.Palettes, 8, 8, 16, count, 0, 0);
+            int width = 128;
+            // Draw transparency checkerboard for the first swatch (column 0) of each row
+            int lightGray = unchecked((int)0xFFC0C0C0);
+            int white = unchecked((int)0xFFFFFFFF);
+            for (int row = 0; row < count; row++)
+            {
+                for (int y = 0; y < 8; y++)
+                {
+                    for (int x = 0; x < 8; x++)
+                    {
+                        bool isLight = ((x / 4) + (y / 4)) % 2 == 0;
+                        pixels[(row * 8 + y) * width + x] = isLight ? lightGray : white;
+                    }
+                }
+            }
+            int gapHeight = 8;
+            int totalHeight = gapHeight + count * 8;
+            int[] finalPixels = new int[width * totalHeight];
+            Array.Copy(pixels, 0, finalPixels, width * gapHeight, pixels.Length);
+            evtPalettePreview.Image = Do.PixelsToImage(finalPixels, width, totalHeight);
+            panelEvtPalettePreview.Visible = true;
+        }
         private void buttonInsertEvent_Click(object sender, EventArgs e)
         {
             ScriptBuffer buffer = new ScriptBuffer(Bits.Copy(scriptData), treeViewWrapper.SelectedIndex);

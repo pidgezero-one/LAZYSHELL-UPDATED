@@ -192,7 +192,7 @@ namespace LAZYSHELL
             foreach (Mold mold in animation.Molds)
             {
                 foreach (Mold.Tile tile in mold.Tiles)
-                    tile.DrawSubtiles(this.graphics, paletteSet.Palette, tile.Gridplane);
+                    tile.DrawSubtiles(this.graphics, spritesEditor.RenderingPalette, tile.Gridplane);
             }
             if (type == "molds")
                 this.index = 0;
@@ -201,7 +201,7 @@ namespace LAZYSHELL
             spritesEditor.LoadGraphicEditor();
             //
             foreach (Mold.Tile tile in animation.UniqueTiles)
-                tile.DrawSubtiles(this.graphics, paletteSet.Palette, tile.Gridplane);
+                tile.DrawSubtiles(this.graphics, spritesEditor.RenderingPalette, tile.Gridplane);
             SetTilesetImage();
             sequences.SetSequenceFrameImages();
             // update free space
@@ -1390,7 +1390,7 @@ namespace LAZYSHELL
         {
             animation.UniqueTiles.Add(this.unique_tile.Copy());
             foreach (Mold.Tile tile in animation.UniqueTiles)
-                tile.DrawSubtiles(graphics, paletteSet.Palette, tile.Gridplane);
+                tile.DrawSubtiles(graphics, spritesEditor.RenderingPalette, tile.Gridplane);
             SetTilesetImage();
             SetTilemapImage();
             sequences.SetSequenceFrameImages();
@@ -1418,7 +1418,7 @@ namespace LAZYSHELL
             foreach (Mold mold in animation.Molds)
             {
                 foreach (Mold.Tile tile in mold.Tiles)
-                    tile.DrawSubtiles(graphics, paletteSet.Palette, tile.Gridplane);
+                    tile.DrawSubtiles(graphics, spritesEditor.RenderingPalette, tile.Gridplane);
             }
             //
             SetTilesetImage();
@@ -1432,7 +1432,7 @@ namespace LAZYSHELL
         {
             animation.UniqueTiles.Add(new Mold.Tile().New(false));
             foreach (Mold.Tile tile in animation.UniqueTiles)
-                tile.DrawSubtiles(graphics, paletteSet.Palette, tile.Gridplane);
+                tile.DrawSubtiles(graphics, spritesEditor.RenderingPalette, tile.Gridplane);
             SetTilesetImage();
             SetTilemapImage();
             sequences.SetSequenceFrameImages();
@@ -1481,7 +1481,7 @@ namespace LAZYSHELL
                 animation.UniqueTiles.Add(uniqueTile);
             }
             foreach (Mold.Tile tile in animation.UniqueTiles)
-                tile.DrawSubtiles(this.graphics, paletteSet.Palette, tile.Gridplane);
+                tile.DrawSubtiles(this.graphics, spritesEditor.RenderingPalette, tile.Gridplane);
             //
             SetTilesetImage();
             SetTilemapImage();

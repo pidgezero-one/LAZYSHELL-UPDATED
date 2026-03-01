@@ -28,6 +28,11 @@ namespace LAZYSHELL
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("");
+            this.panelEvtPalettePreview = new System.Windows.Forms.Panel();
+            this.evtPalettePreview = new System.Windows.Forms.PictureBox();
+            this.panelEvtA5 = new System.Windows.Forms.Panel();
+            this.labelEvtA5 = new System.Windows.Forms.Label();
+            this.evtNumA5 = new System.Windows.Forms.NumericUpDown();
             this.evtNameA2 = new System.Windows.Forms.ComboBox();
             this.evtNumA4 = new System.Windows.Forms.NumericUpDown();
             this.evtNameA1 = new System.Windows.Forms.ComboBox();
@@ -127,6 +132,10 @@ namespace LAZYSHELL
             ((System.ComponentModel.ISupportInitialize)(this.evtNumA1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evtNumC2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evtNumC1)).BeginInit();
+            this.panelEvtPalettePreview.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.evtPalettePreview)).BeginInit();
+            this.panelEvtA5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.evtNumA5)).BeginInit();
             this.panel8.SuspendLayout();
             this.panelCommands.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -143,9 +152,67 @@ namespace LAZYSHELL
             this.contextMenuStripGoto.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
+            // panelEvtPalettePreview
+            //
+            this.panelEvtPalettePreview.AutoSize = true;
+            this.panelEvtPalettePreview.Controls.Add(this.evtPalettePreview);
+            this.panelEvtPalettePreview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEvtPalettePreview.Location = new System.Drawing.Point(3, 80);
+            this.panelEvtPalettePreview.Name = "panelEvtPalettePreview";
+            this.panelEvtPalettePreview.Size = new System.Drawing.Size(276, 8);
+            this.panelEvtPalettePreview.TabIndex = 10;
+            this.panelEvtPalettePreview.Visible = false;
+            //
+            // evtPalettePreview
+            //
+            this.evtPalettePreview.Location = new System.Drawing.Point(3, 0);
+            this.evtPalettePreview.Name = "evtPalettePreview";
+            this.evtPalettePreview.Size = new System.Drawing.Size(128, 8);
+            this.evtPalettePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.evtPalettePreview.TabIndex = 0;
+            this.evtPalettePreview.TabStop = false;
+            //
+            // panelEvtA5
+            //
+            this.panelEvtA5.Controls.Add(this.evtNumA5);
+            this.panelEvtA5.Controls.Add(this.labelEvtA5);
+            this.panelEvtA5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEvtA5.Location = new System.Drawing.Point(3, 80);
+            this.panelEvtA5.Name = "panelEvtA5";
+            this.panelEvtA5.Size = new System.Drawing.Size(276, 21);
+            this.panelEvtA5.TabIndex = 11;
+            this.panelEvtA5.Visible = false;
+            //
+            // labelEvtA5
+            //
+            this.labelEvtA5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelEvtA5.Location = new System.Drawing.Point(0, 0);
+            this.labelEvtA5.Name = "labelEvtA5";
+            this.labelEvtA5.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.labelEvtA5.Size = new System.Drawing.Size(82, 21);
+            this.labelEvtA5.TabIndex = 0;
+            this.labelEvtA5.Text = "...";
+            this.labelEvtA5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //
+            // evtNumA5
+            //
+            this.evtNumA5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.evtNumA5.Enabled = false;
+            this.evtNumA5.Location = new System.Drawing.Point(82, 0);
+            this.evtNumA5.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.evtNumA5.Name = "evtNumA5";
+            this.evtNumA5.Size = new System.Drawing.Size(49, 21);
+            this.evtNumA5.TabIndex = 1;
+            this.evtNumA5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.evtNumA5.ValueChanged += new System.EventHandler(this.evtNumA5_ValueChanged);
+            //
             // evtNameA2
-            // 
+            //
             this.evtNameA2.Dock = System.Windows.Forms.DockStyle.Left;
             this.evtNameA2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.evtNameA2.Enabled = false;
@@ -171,6 +238,7 @@ namespace LAZYSHELL
             this.evtNumA4.Size = new System.Drawing.Size(49, 21);
             this.evtNumA4.TabIndex = 9;
             this.evtNumA4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.evtNumA4.ValueChanged += new System.EventHandler(this.evtNumA4_ValueChanged);
             // 
             // evtNameA1
             // 
@@ -199,6 +267,7 @@ namespace LAZYSHELL
             this.evtNumA3.Size = new System.Drawing.Size(49, 21);
             this.evtNumA3.TabIndex = 7;
             this.evtNumA3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.evtNumA3.ValueChanged += new System.EventHandler(this.evtNumA3_ValueChanged);
             // 
             // evtNumA2
             // 
@@ -433,6 +502,8 @@ namespace LAZYSHELL
             // 
             this.groupBoxA.AutoSize = true;
             this.groupBoxA.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBoxA.Controls.Add(this.panelEvtPalettePreview);
+            this.groupBoxA.Controls.Add(this.panelEvtA5);
             this.groupBoxA.Controls.Add(this.panelEvtA3_4);
             this.groupBoxA.Controls.Add(this.panelEvtA2);
             this.groupBoxA.Controls.Add(this.panelEvtA1);
@@ -1251,6 +1322,11 @@ namespace LAZYSHELL
             ((System.ComponentModel.ISupportInitialize)(this.evtNumA1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evtNumC2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evtNumC1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.evtPalettePreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.evtNumA5)).EndInit();
+            this.panelEvtPalettePreview.ResumeLayout(false);
+            this.panelEvtPalettePreview.PerformLayout();
+            this.panelEvtA5.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panelCommands.ResumeLayout(false);
             this.panelCommands.PerformLayout();
@@ -1369,5 +1445,10 @@ namespace LAZYSHELL
         private System.Windows.Forms.ToolStripTextBox gotoAddress;
         private NewTreeView commandTree;
         private System.Windows.Forms.ToolStripButton manualPointerUpdate;
+        private System.Windows.Forms.Panel panelEvtPalettePreview;
+        private System.Windows.Forms.PictureBox evtPalettePreview;
+        private System.Windows.Forms.Panel panelEvtA5;
+        private System.Windows.Forms.Label labelEvtA5;
+        private System.Windows.Forms.NumericUpDown evtNumA5;
     }
 }

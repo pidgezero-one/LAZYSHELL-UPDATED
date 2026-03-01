@@ -1696,6 +1696,25 @@ namespace LAZYSHELL
         {
             get { return Model.MonsterBehaviorLabels; }
         }
+        public static string[] PaletteRowNames = new string[]
+        {
+            "row 1",
+            "level palette row 1",
+            "level palette row 2",
+            "level palette row 3",
+            "level palette row 4",
+            "level palette row 5",
+            "level palette row 6",
+            "level palette row 7",
+            "Mario's palette",
+            "npc palette row 1",
+            "npc palette row 2",
+            "npc palette row 3",
+            "npc palette row 4",
+            "npc palette row 5",
+            "npc palette row 6",
+            "npc palette row 7"
+        };
         #endregion
 
         #region Monsters

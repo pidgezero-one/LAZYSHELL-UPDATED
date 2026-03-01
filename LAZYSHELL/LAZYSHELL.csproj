@@ -484,6 +484,9 @@
     <Compile Include="Editors\PaletteEditor.Designer.cs">
       <DependentUpon>PaletteEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editors\EventPalettePreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="!Universal\Solidity.cs" />
     <Compile Include="Editors\TileEditor.cs">
       <SubType>Form</SubType>

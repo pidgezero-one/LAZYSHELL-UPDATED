@@ -49,6 +49,7 @@ namespace LAZYSHELL
             this.label71 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.previewEventPalette = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.paletteOffset = new System.Windows.Forms.NumericUpDown();
             this.graphicOffset = new System.Windows.Forms.NumericUpDown();
@@ -210,19 +211,30 @@ namespace LAZYSHELL
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.previewEventPalette);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.paletteOffset);
             this.groupBox2.Controls.Add(this.graphicOffset);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Location = new System.Drawing.Point(3, 33);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(215, 69);
+            this.groupBox2.Size = new System.Drawing.Size(215, 95);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Image Properties";
-            // 
+            //
+            // previewEventPalette
+            //
+            this.previewEventPalette.Location = new System.Drawing.Point(6, 64);
+            this.previewEventPalette.Name = "previewEventPalette";
+            this.previewEventPalette.Size = new System.Drawing.Size(200, 23);
+            this.previewEventPalette.TabIndex = 4;
+            this.previewEventPalette.Text = "Preview event palette set...";
+            this.previewEventPalette.UseVisualStyleBackColor = true;
+            this.previewEventPalette.Click += new System.EventHandler(this.previewEventPalette_Click);
+            //
             // label23
-            // 
+            //
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(6, 22);
             this.label23.Name = "label23";
@@ -286,7 +298,7 @@ namespace LAZYSHELL
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(10, 114);
+            this.label72.Location = new System.Drawing.Point(10, 140);
             this.label72.Name = "label72";
             this.label72.Padding = new System.Windows.Forms.Padding(2, 1, 0, 2);
             this.label72.Size = new System.Drawing.Size(56, 16);
@@ -298,7 +310,7 @@ namespace LAZYSHELL
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.animationAvailableBytes);
             this.groupBox1.Controls.Add(this.animationVRAM);
-            this.groupBox1.Location = new System.Drawing.Point(3, 139);
+            this.groupBox1.Location = new System.Drawing.Point(3, 165);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(215, 67);
             this.groupBox1.TabIndex = 7;
@@ -373,7 +385,7 @@ namespace LAZYSHELL
             // 
             // animationPacket
             // 
-            this.animationPacket.Location = new System.Drawing.Point(72, 112);
+            this.animationPacket.Location = new System.Drawing.Point(72, 138);
             this.animationPacket.Maximum = new decimal(new int[] {
             1023,
             0,
@@ -814,6 +826,7 @@ namespace LAZYSHELL
         private ToolStripButton npcPacketButton;
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripButton previewerButton;
+        private Button previewEventPalette;
     }
 }
 

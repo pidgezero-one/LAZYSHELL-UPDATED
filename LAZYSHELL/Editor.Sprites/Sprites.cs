@@ -58,9 +58,13 @@ namespace LAZYSHELL
         public Sprite Sprite { get { return sprite; } set { sprite = value; } }
         public ImagePacket Image { get { return image; } set { image = value; } }
         public Animation Animation { get { return animation; } set { animation = value; } }
-        public int[] Palette { get { return paletteSet.Palette; } }
+        public int[] Palette { get { return RenderingPalette; } }
         public PaletteSet PaletteSet { get { return paletteSet; } set { paletteSet = value; } }
         public int AvailableBytes { get { return availableBytes; } set { availableBytes = value; } }
+        // event palette override
+        private PaletteSet eventPaletteOverride;
+        private EventPalettePreviewForm eventPalettePreviewForm;
+        public int[] RenderingPalette { get { return eventPaletteOverride != null ? eventPaletteOverride.Palette : paletteSet.Palette; } }
         // editors
         private SpriteMolds molds;
         public SpriteMolds Molds { get { return molds; } set { molds = value; } }
@@ -217,6 +221,9 @@ namespace LAZYSHELL
                 gp.Assemble();
             foreach (PaletteSet p in palettes)
                 p.Assemble(0);
+            // Save any pending event palette edits to ROM buffer
+            if (eventPalettePreviewForm != null)
+                eventPalettePreviewForm.CurrentPaletteSet.Assemble();
             Buffer.BlockCopy(Model.SpriteGraphics, 0, rom, RomConfig.SpriteGraphicsBaseAddress, RomConfig.SpriteGraphicsTotalSize);
             Model.HexEditor.SetOffset(animation.AnimationOffset);
             Model.HexEditor.Compare();
@@ -285,13 +292,14 @@ namespace LAZYSHELL
             foreach (Mold mold in animation.Molds)
             {
                 foreach (Mold.Tile tile in mold.Tiles)
-                    tile.DrawSubtiles(graphics, paletteSet.Palette, tile.Gridplane);
+                    tile.DrawSubtiles(graphics, RenderingPalette, tile.Gridplane);
             }
             molds.SetTilesetImage();
             molds.SetTilemapImage();
             sequences.SetSequenceFrameImages();
             sequences.InvalidateImages();
-            LoadGraphicEditor();
+            if (eventPaletteOverride == null)
+                LoadGraphicEditor();
             this.Modified = true;   // b/c switching colors won't modify checksum
         }
         public void GraphicUpdate()
@@ -299,7 +307,7 @@ namespace LAZYSHELL
             foreach (Mold mold in animation.Molds)
             {
                 foreach (Mold.Tile tile in mold.Tiles)
-                    tile.DrawSubtiles(graphics, paletteSet.Palette, tile.Gridplane);
+                    tile.DrawSubtiles(graphics, RenderingPalette, tile.Gridplane);
             }
             molds.SetTilesetImage();
             molds.SetTilemapImage();
@@ -324,6 +332,14 @@ namespace LAZYSHELL
             {
                 npcPackets.Close();
                 npcPackets.Dispose();
+            }
+            if (eventPalettePreviewForm != null && !eventPalettePreviewForm.IsDisposed)
+            {
+                eventPalettePreviewForm.FormClosing -= eventPalettePreviewForm_FormClosing;
+                eventPalettePreviewForm.Close();
+                eventPalettePreviewForm.Dispose();
+                eventPalettePreviewForm = null;
+                eventPaletteOverride = null;
             }
         }
         #endregion
@@ -386,7 +402,7 @@ namespace LAZYSHELL
             foreach (Mold mold in animation.Molds)
             {
                 foreach (Mold.Tile tile in mold.Tiles)
-                    tile.DrawSubtiles(graphics, paletteSet.Palette, tile.Gridplane);
+                    tile.DrawSubtiles(graphics, RenderingPalette, tile.Gridplane);
             }
             molds.SetTilesetImage();
             molds.SetTilemapImage();
@@ -404,7 +420,7 @@ namespace LAZYSHELL
             foreach (Mold mold in animation.Molds)
             {
                 foreach (Mold.Tile tile in mold.Tiles)
-                    tile.DrawSubtiles(graphics, paletteSet.Palette, tile.Gridplane);
+                    tile.DrawSubtiles(graphics, RenderingPalette, tile.Gridplane);
             }
             molds.SetTilesetImage();
             molds.SetTilemapImage();
@@ -420,7 +436,7 @@ namespace LAZYSHELL
             foreach (Mold mold in animation.Molds)
             {
                 foreach (Mold.Tile tile in mold.Tiles)
-                    tile.DrawSubtiles(graphics, paletteSet.Palette, tile.Gridplane);
+                    tile.DrawSubtiles(graphics, RenderingPalette, tile.Gridplane);
             }
             molds.SetTilesetImage();
             molds.SetTilemapImage();
@@ -438,7 +454,7 @@ namespace LAZYSHELL
             foreach (Mold mold in animation.Molds)
             {
                 foreach (Mold.Tile tile in mold.Tiles)
-                    tile.DrawSubtiles(graphics, paletteSet.Palette, tile.Gridplane);
+                    tile.DrawSubtiles(graphics, RenderingPalette, tile.Gridplane);
             }
             molds.SetTilesetImage();
             molds.SetTilemapImage();
@@ -546,6 +562,32 @@ namespace LAZYSHELL
         {
             ExportImages exportImages = new ExportImages(Index, "sprites");
             exportImages.ShowDialog();
+        }
+        private void previewEventPalette_Click(object sender, EventArgs e)
+        {
+            if (eventPalettePreviewForm == null || eventPalettePreviewForm.IsDisposed)
+            {
+                eventPalettePreviewForm = new EventPalettePreviewForm(
+                    new Function(PaletteUpdate),
+                    OnEventPaletteChanged);
+                eventPalettePreviewForm.FormClosing += eventPalettePreviewForm_FormClosing;
+            }
+            eventPaletteOverride = eventPalettePreviewForm.CurrentPaletteSet;
+            eventPalettePreviewForm.Show();
+            eventPalettePreviewForm.BringToFront();
+            PaletteUpdate();
+        }
+        private void OnEventPaletteChanged(PaletteSet newPaletteSet)
+        {
+            eventPaletteOverride = newPaletteSet;
+            PaletteUpdate();
+        }
+        private void eventPalettePreviewForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            ((Form)sender).Hide();
+            eventPaletteOverride = null;
+            PaletteUpdate();
         }
         private void allSequenceImagesToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -543,37 +543,43 @@ namespace LAZYSHELL
                     break;
                 case 0x89:
                     groupBoxA.Text = commandText;
-                    labelEvtA1.Text = "Type";
-                    labelEvtA2.Text = "Duration";
+                    labelEvtA1.Text = "Palette row";
+                    labelEvtA2.Text = "Type";
                     labelEvtA3.Text = "Palette set";
-                    labelEvtA4.Text = "Palette row";
-                    evtNameA1.Items.AddRange(new string[] { "nothing", "glow", "set to", "fade to" });
+                    labelEvtA4.Text = "Duration";
+                    evtNameA1.Items.AddRange(Lists.PaletteRowNames);
                     evtNameA1.Enabled = true;
-                    evtNumA2.Maximum = 15; evtNumA2.Enabled = true;
+                    evtNameA2.Items.AddRange(new string[] { "nothing", "glow", "set to", "fade to" });
+                    evtNameA2.Enabled = true;
                     evtNumA3.Enabled = true;
-                    evtNumA4.Maximum = 16; evtNumA4.Enabled = true;
-                    evtEffects.Enabled = true;
+                    evtNumA4.Maximum = 15; evtNumA4.Enabled = true;
                     //
+                    evtNameA1.SelectedIndex = Math.Min((int)esc.Param2, 15);
                     switch (esc.Param1 & 0xE0)
                     {
-                        case 0x60: evtNameA1.SelectedIndex = 1; break;
-                        case 0xC0: evtNameA1.SelectedIndex = 2; break;
-                        case 0xE0: evtNameA1.SelectedIndex = 3; break;
-                        default: evtNameA1.SelectedIndex = 0; break;
+                        case 0x60: evtNameA2.SelectedIndex = 1; break;
+                        case 0xC0: evtNameA2.SelectedIndex = 2; break;
+                        case 0xE0: evtNameA2.SelectedIndex = 3; break;
+                        default: evtNameA2.SelectedIndex = 0; break;
                     }
-                    evtNumA2.Value = esc.Param1 & 0x0F;
                     evtNumA3.Value = esc.Param3;
-                    evtNumA4.Value = esc.Param2;
+                    evtNumA4.Value = esc.Param1 & 0x0F;
+                    UpdateEventPalettePreview((int)evtNumA3.Value, 1);
                     break;
                 case 0x8A:
                     groupBoxA.Text = commandText;
+                    labelEvtA1.Text = "Starting at row:";
+                    evtNameA1.Items.AddRange(Lists.PaletteRowNames);
+                    evtNameA1.Enabled = true;
                     labelEvtA3.Text = "Palette set";
-                    labelEvtA4.Text = "Row 0 to";
+                    labelEvtA4.Text = "Total rows";
                     evtNumA3.Enabled = true;
                     evtNumA4.Maximum = 16; evtNumA4.Minimum = 1; evtNumA4.Enabled = true;
                     //
+                    evtNameA1.SelectedIndex = esc.Param1 & 0x0F;
                     evtNumA3.Value = esc.Param2;
                     evtNumA4.Value = (esc.Param1 >> 4) + 1;
+                    UpdateEventPalettePreview((int)evtNumA3.Value, (int)evtNumA4.Value);
                     break;
                 case 0x87:
                 case 0x8F:
@@ -1441,20 +1447,20 @@ namespace LAZYSHELL
                         Bits.SetBit(esc.CommandData, 1, i, evtEffects.GetItemChecked(i));
                     break;
                 case 0x89:
-                    switch (evtNameA1.SelectedIndex)
+                    switch (evtNameA2.SelectedIndex)
                     {
                         case 1: esc.Param1 = 0x60; break;
                         case 2: esc.Param1 = 0xC0; break;
                         case 3: esc.Param1 = 0xE0; break;
                         default: esc.Param1 = 0x00; break;
                     }
-                    esc.Param1 &= 0xF0; esc.Param1 |= (byte)evtNumA2.Value;
+                    esc.Param1 &= 0xF0; esc.Param1 |= (byte)evtNumA4.Value;
                     esc.Param3 = (byte)evtNumA3.Value;
-                    esc.Param2 = (byte)evtNumA4.Value;
+                    esc.Param2 = (byte)evtNameA1.SelectedIndex;
                     break;
                 case 0x8A:
                     esc.Param2 = (byte)evtNumA3.Value;
-                    esc.Param1 = (byte)(((byte)evtNumA4.Value << 4) - 1);
+                    esc.Param1 = (byte)((((int)evtNumA4.Value - 1) << 4) | evtNameA1.SelectedIndex);
                     break;
                 case 0x87:
                 case 0x8F:
@@ -2858,6 +2864,9 @@ namespace LAZYSHELL
             evtNumC1.Maximum = 255; evtNumC1.Hexadecimal = false; evtNumC1.Value = 0; evtNumC1.Enabled = false;
             evtNumC2.Maximum = 255; evtNumC2.Value = 0; evtNumC2.Enabled = false;
             evtEffects.Height = 68; evtEffects.ColumnWidth = 132; evtEffects.Items.Clear(); evtEffects.Enabled = false;
+            evtNumA5.Maximum = 255; evtNumA5.Hexadecimal = false; evtNumA5.Minimum = 0; evtNumA5.Value = 0; evtNumA5.Enabled = false;
+            panelEvtPalettePreview.Visible = false;
+            evtPalettePreview.Image = null;
             groupBoxA.Text = "";
             groupBoxB.Text = "";
             groupBoxC.Text = "";
@@ -2865,6 +2874,7 @@ namespace LAZYSHELL
             labelEvtA2.Text = "";
             labelEvtA3.Text = "";
             labelEvtA4.Text = "";
+            labelEvtA5.Text = "";
             labelEvtC1.Text = "";
             labelEvtC2.Text = "";
             this.Updating = false;
@@ -2876,7 +2886,8 @@ namespace LAZYSHELL
             labelEvtA1.Text != "" ||
             labelEvtA2.Text != "" ||
             labelEvtA3.Text != "" ||
-            labelEvtA4.Text != "";
+            labelEvtA4.Text != "" ||
+            labelEvtA5.Text != "";
             groupBoxB.Visible =
                 groupBoxB.Text != "" ||
                 evtEffects.Items.Count > 0;
@@ -2887,6 +2898,7 @@ namespace LAZYSHELL
             panelEvtA1.Visible = evtNumA1.Enabled || evtNameA1.Enabled;
             panelEvtA2.Visible = evtNumA2.Enabled || evtNameA2.Enabled;
             panelEvtA3_4.Visible = evtNumA3.Enabled || evtNumA4.Enabled;
+            panelEvtA5.Visible = evtNumA5.Enabled;
             if (evtEffects.Items.Count < 4)
                 evtEffects.Height = evtEffects.Items.Count * 16 + 4;
             else
@@ -2895,12 +2907,14 @@ namespace LAZYSHELL
             labelEvtA2.Visible = labelEvtA2.Text != "";
             labelEvtA3.Visible = labelEvtA3.Text != "";
             labelEvtA4.Visible = labelEvtA4.Text != "";
+            labelEvtA5.Visible = labelEvtA5.Text != "";
             evtNumA1.Visible = evtNumA1.Enabled;
             evtNumA2.Visible = evtNumA2.Enabled;
             evtNumA3.Visible = evtNumA3.Enabled;
             evtNumA4.Visible = evtNumA4.Enabled;
             evtNameA1.Visible = evtNameA1.Enabled;
             evtNameA2.Visible = evtNameA2.Enabled;
+            evtNumA5.Visible = evtNumA5.Enabled;
             evtNumC2.Visible = evtNumC2.Enabled;
             // organize
             groupBoxA.BringToFront();
@@ -2917,6 +2931,8 @@ namespace LAZYSHELL
             evtNumA3.BringToFront();
             labelEvtA4.BringToFront();
             evtNumA4.BringToFront();
+            labelEvtA5.BringToFront();
+            evtNumA5.BringToFront();
             labelEvtC1.BringToFront();
             evtNumC1.BringToFront();
             labelEvtC2.BringToFront();
