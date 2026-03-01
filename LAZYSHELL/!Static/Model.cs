@@ -1595,7 +1595,7 @@ namespace LAZYSHELL
             byte[] rom = ROM;
             string[] functionNames = new string[] {
                 "Initialize in battle", "Idle/On hit", "Cast spell",
-                "Approach target", "Escape", "Object queues"
+                "Approach target", "Escape", "Object sequences"
             };
             // Read 256 two-byte pointers from 0x350202
             var monsterPointers = new ushort[256];
@@ -3207,6 +3207,7 @@ namespace LAZYSHELL
             ELists.Add(new EList("Effects", Lists.Copy(Lists.EffectNames)));
             ELists.Add(new EList("Shops", Lists.Copy(Lists.ShopNames)));
             ELists.Add(new EList("World Maps", Lists.Copy(Lists.WorldMapNames)));
+            ELists.Add(new EList("Packets", Lists.Copy(Lists.NPCPackets)));
             //
                 Keystrokes = Lists.Copy(Lists.Keystrokes);
             KeystrokesMenu = Lists.Copy(Lists.KeystrokesMenu);
@@ -3230,27 +3231,43 @@ namespace LAZYSHELL
         }
         private static void TransferListCollection(EList elist, string name)
         {
+            string[] src = elist.Labels;
             switch (name)
             {
-                case "Levels": elist.Labels.CopyTo(Lists.LevelNames, 0); break;
-                case "Action Scripts": elist.Labels.CopyTo(Lists.ActionLabels, 0); break;
-                case "Battle Events": elist.Labels.CopyTo(Lists.BattleEventNames, 0); break;
-                case "Monster Behavior Animations": elist.Labels.CopyTo(Lists.MonsterBehaviors, 0); break;
-                case "Battlefields": elist.Labels.CopyTo(Lists.BattlefieldNames, 0); break;
-                case "Effects": elist.Labels.CopyTo(Lists.EffectNames, 0); break;
-                case "Event Scripts": elist.Labels.CopyTo(Lists.EventLabels, 0); break;
-                case "Graphic Sets": elist.Labels.CopyTo(Lists.GraphicSetNames, 0); break;
-                case "Samples": elist.Labels.CopyTo(Lists.SampleNames, 0); break;
-                case "Shops": elist.Labels.CopyTo(Lists.ShopNames, 0); break;
-                case "Solidity Maps": elist.Labels.CopyTo(Lists.SolidityMapNames, 0); break;
-                case "Songs": elist.Labels.CopyTo(Lists.MusicNames, 0); break;
-                case "Sound FX (Event)": elist.Labels.CopyTo(Lists.SoundNames, 0); break;
-                case "Sound FX (Battle)": elist.Labels.CopyTo(Lists.BattleSoundNames, 0); break;
-                case "Sprites": elist.Labels.CopyTo(Lists.SpriteNames, 0); break;
-                case "Tilesets": elist.Labels.CopyTo(Lists.TileSetNames, 0); break;
-                case "Tilemaps": elist.Labels.CopyTo(Lists.TileMapNames, 0); break;
-                case "World Maps": elist.Labels.CopyTo(Lists.WorldMapNames, 0); break;
+                case "Levels": SafeCopyLabels(src, Lists.LevelNames); break;
+                case "Action Scripts": SafeCopyLabels(src, Lists.ActionLabels); break;
+                case "Battle Events": SafeCopyLabels(src, Lists.BattleEventNames); break;
+                case "Monster Behavior Animations": SafeCopyLabels(src, Lists.MonsterBehaviors); break;
+                case "Battlefields": SafeCopyLabels(src, Lists.BattlefieldNames); break;
+                case "Effects": SafeCopyLabels(src, Lists.EffectNames); break;
+                case "Event Scripts": SafeCopyLabels(src, Lists.EventLabels); break;
+                case "Graphic Sets": SafeCopyLabels(src, Lists.GraphicSetNames); break;
+                case "Samples": SafeCopyLabels(src, Lists.SampleNames); break;
+                case "Shops": SafeCopyLabels(src, Lists.ShopNames); break;
+                case "Solidity Maps": SafeCopyLabels(src, Lists.SolidityMapNames); break;
+                case "Songs": SafeCopyLabels(src, Lists.MusicNames); break;
+                case "Sound FX (Event)": SafeCopyLabels(src, Lists.SoundNames); break;
+                case "Sound FX (Battle)": SafeCopyLabels(src, Lists.BattleSoundNames); break;
+                case "Sprites": SafeCopyLabels(src, Lists.SpriteNames); break;
+                case "Tilesets": SafeCopyLabels(src, Lists.TileSetNames); break;
+                case "Tilemaps": SafeCopyLabels(src, Lists.TileMapNames); break;
+                case "World Maps": SafeCopyLabels(src, Lists.WorldMapNames); break;
+                case "Packets":
+                    // Packets array is variable-size; resize to match source if needed
+                    if (src.Length > Lists.NPCPackets.Length)
+                    {
+                        string[] resized = new string[src.Length];
+                        Array.Copy(Lists.NPCPackets, resized, Lists.NPCPackets.Length);
+                        Lists.NPCPackets = resized;
+                    }
+                    SafeCopyLabels(src, Lists.NPCPackets);
+                    break;
             }
+        }
+        private static void SafeCopyLabels(string[] source, string[] dest)
+        {
+            int count = Math.Min(source.Length, dest.Length);
+            Array.Copy(source, dest, count);
         }
         public static bool CheckLoadedProject()
         {

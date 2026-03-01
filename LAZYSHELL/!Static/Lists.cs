@@ -8754,7 +8754,6 @@ namespace LAZYSHELL
                         default: eventLabels[i] = ""; break;
                     }
                 }
-                RomConfig.ApplyCustomLabels(eventLabels, Properties.Settings.Default.CustomEventLabels);
                 return eventLabels;
             }
             set
@@ -12871,7 +12870,6 @@ namespace LAZYSHELL
                         default: actionLabels[i] = ""; break;
                     }
                 }
-                RomConfig.ApplyCustomLabels(actionLabels, Properties.Settings.Default.CustomActionLabels);
                 return actionLabels;
             }
             set
@@ -14068,26 +14066,12 @@ namespace LAZYSHELL
         }
 
         /// <summary>
-        /// Applies all custom label overlays from Settings to the simple field arrays.
-        /// Call this after loading settings or when settings change.
+        /// Resizes arrays based on RomConfig counts (e.g. NPCPacketCount).
+        /// Custom labels are now managed via Project Database Element Lists.
         /// </summary>
         public static void ApplyCustomLabelOverlays()
         {
-            var settings = Properties.Settings.Default;
-            // Resize arrays if RomConfig counts exceed hardcoded sizes
             NPCPackets = ResizeIfNeeded(NPCPackets, RomConfig.NPCPacketCount, "Packet ");
-            RomConfig.ApplyCustomLabels(SpriteNames, settings.CustomSpriteNames);
-            RomConfig.ApplyCustomLabels(NPCPackets, settings.CustomPacketNames);
-            RomConfig.ApplyCustomLabels(BattleEventNames, settings.CustomBattleEventNames);
-            RomConfig.ApplyCustomLabels(LevelNames, settings.CustomLevelNames);
-            RomConfig.ApplyCustomLabels(MusicNames, settings.CustomMusicNames);
-            RomConfig.ApplyCustomLabels(SoundNames, settings.CustomSoundNames);
-            RomConfig.ApplyCustomLabels(BattleSoundNames, settings.CustomBattleSoundNames);
-            RomConfig.ApplyCustomLabels(BattlefieldNames, settings.CustomBattlefieldNames);
-            RomConfig.ApplyCustomLabels(EffectNames, settings.CustomEffectNames);
-            // Force re-evaluation of lazy-init properties by resetting them
-            eventLabels = new string[0];
-            actionLabels = new string[0];
         }
     }
 }

@@ -263,6 +263,7 @@ namespace LAZYSHELL
             Stream s = File.OpenRead(filename);
             BinaryFormatter b = new BinaryFormatter();
             Model.Project = (ProjectDB)b.Deserialize(s);
+            Model.Project.EnsureRomLayoutDefaults();
             Model.RefreshListCollections();
             s.Close();
 

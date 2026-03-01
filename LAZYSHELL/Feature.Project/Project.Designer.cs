@@ -90,6 +90,28 @@ namespace LAZYSHELL
             this.toolStrip4 = new System.Windows.Forms.ToolStrip();
             this.elementType = new System.Windows.Forms.ToolStripComboBox();
             this.transferToLists = new System.Windows.Forms.ToolStripButton();
+            this.tabRomLayout = new System.Windows.Forms.TabPage();
+            this.tabAdvanced = new System.Windows.Forms.TabPage();
+            this.spriteGraphicsRanges = new RangeListEditor();
+            this.animationBanksRanges = new RangeListEditor();
+            this.itemDescRanges = new RangeListEditor();
+            this.spellDescRanges = new RangeListEditor();
+            this.psychopathRanges = new RangeListEditor();
+            this.labelAnimPtrTable = new System.Windows.Forms.Label();
+            this.textAnimPtrTable = new System.Windows.Forms.TextBox();
+            this.labelPartitionStart = new System.Windows.Forms.Label();
+            this.textPartitionStart = new System.Windows.Forms.TextBox();
+            this.labelPartitionCount = new System.Windows.Forms.Label();
+            this.numPartitionCount = new System.Windows.Forms.NumericUpDown();
+            this.labelNPCCount = new System.Windows.Forms.Label();
+            this.numNPCCount = new System.Windows.Forms.NumericUpDown();
+            this.labelPacketCount = new System.Windows.Forms.Label();
+            this.numPacketCount = new System.Windows.Forms.NumericUpDown();
+            this.checkEnable0xCE = new System.Windows.Forms.CheckBox();
+            this.buttonResetDefaults = new System.Windows.Forms.Button();
+            this.buttonSaveConfig = new System.Windows.Forms.Button();
+            this.buttonLoadConfig = new System.Windows.Forms.Button();
+            this.labelConfigInfo = new System.Windows.Forms.Label();
             this.keystrokesTab = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -119,6 +141,9 @@ namespace LAZYSHELL
             ((System.ComponentModel.ISupportInitialize)(this.address)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressBit)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPartitionCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNPCCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPacketCount)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.projectInformation.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -437,6 +462,8 @@ namespace LAZYSHELL
             this.tabControl1.Controls.Add(this.projectInformation);
             this.tabControl1.Controls.Add(this.elementLists);
             this.tabControl1.Controls.Add(this.elementNotes);
+            this.tabControl1.Controls.Add(this.tabRomLayout);
+            this.tabControl1.Controls.Add(this.tabAdvanced);
             this.tabControl1.Controls.Add(this.keystrokesTab);
             this.tabControl1.Enabled = false;
             this.tabControl1.Location = new System.Drawing.Point(12, 57);
@@ -842,7 +869,8 @@ namespace LAZYSHELL
             "Items",
             "Effects",
             "Sprites",
-            "Shops"});
+            "Shops",
+            "Packets"});
             this.elementType.Name = "elementType";
             this.elementType.Size = new System.Drawing.Size(330, 25);
             this.elementType.SelectedIndexChanged += new System.EventHandler(this.elementType_SelectedIndexChanged);
@@ -857,9 +885,174 @@ namespace LAZYSHELL
             this.transferToLists.Size = new System.Drawing.Size(23, 22);
             this.transferToLists.ToolTipText = "Transfer Labels to Element Lists";
             this.transferToLists.Click += new System.EventHandler(this.transferToLists_Click);
-            // 
+            //
+            // tabRomLayout
+            //
+            this.tabRomLayout.AutoScroll = true;
+            this.tabRomLayout.Location = new System.Drawing.Point(4, 22);
+            this.tabRomLayout.Name = "tabRomLayout";
+            this.tabRomLayout.Padding = new System.Windows.Forms.Padding(3);
+            this.tabRomLayout.Size = new System.Drawing.Size(580, 491);
+            this.tabRomLayout.TabIndex = 4;
+            this.tabRomLayout.Text = "ROM Layout";
+            this.tabRomLayout.UseVisualStyleBackColor = true;
+            this.tabRomLayout.Controls.Add(this.spriteGraphicsRanges);
+            this.tabRomLayout.Controls.Add(this.animationBanksRanges);
+            this.tabRomLayout.Controls.Add(this.itemDescRanges);
+            this.tabRomLayout.Controls.Add(this.spellDescRanges);
+            this.tabRomLayout.Controls.Add(this.psychopathRanges);
+            this.tabRomLayout.Controls.Add(this.labelAnimPtrTable);
+            this.tabRomLayout.Controls.Add(this.textAnimPtrTable);
+            this.tabRomLayout.Controls.Add(this.labelPartitionStart);
+            this.tabRomLayout.Controls.Add(this.textPartitionStart);
+            this.tabRomLayout.Controls.Add(this.labelPartitionCount);
+            this.tabRomLayout.Controls.Add(this.numPartitionCount);
+            this.tabRomLayout.Controls.Add(this.labelNPCCount);
+            this.tabRomLayout.Controls.Add(this.numNPCCount);
+            this.tabRomLayout.Controls.Add(this.labelPacketCount);
+            this.tabRomLayout.Controls.Add(this.numPacketCount);
+            //
+            // spriteGraphicsRanges
+            //
+            this.spriteGraphicsRanges.Title = "Sprite Graphics Ranges";
+            this.spriteGraphicsRanges.Location = new System.Drawing.Point(6, 6);
+            this.spriteGraphicsRanges.Size = new System.Drawing.Size(270, 150);
+            //
+            // animationBanksRanges
+            //
+            this.animationBanksRanges.Title = "Animation Banks";
+            this.animationBanksRanges.Location = new System.Drawing.Point(282, 6);
+            this.animationBanksRanges.Size = new System.Drawing.Size(270, 150);
+            //
+            // itemDescRanges
+            //
+            this.itemDescRanges.Title = "Item Description Ranges";
+            this.itemDescRanges.Location = new System.Drawing.Point(6, 162);
+            this.itemDescRanges.Size = new System.Drawing.Size(270, 150);
+            //
+            // spellDescRanges
+            //
+            this.spellDescRanges.Title = "Spell Description Ranges";
+            this.spellDescRanges.Location = new System.Drawing.Point(282, 162);
+            this.spellDescRanges.Size = new System.Drawing.Size(270, 150);
+            //
+            // psychopathRanges
+            //
+            this.psychopathRanges.Title = "Psychopath Message Ranges";
+            this.psychopathRanges.Location = new System.Drawing.Point(6, 318);
+            this.psychopathRanges.Size = new System.Drawing.Size(270, 150);
+            //
+            // labelAnimPtrTable
+            //
+            this.labelAnimPtrTable.Text = "Anim. Pointer Table:";
+            this.labelAnimPtrTable.Location = new System.Drawing.Point(282, 321);
+            this.labelAnimPtrTable.AutoSize = true;
+            //
+            // textAnimPtrTable
+            //
+            this.textAnimPtrTable.Location = new System.Drawing.Point(412, 318);
+            this.textAnimPtrTable.Size = new System.Drawing.Size(70, 21);
+            //
+            // labelPartitionStart
+            //
+            this.labelPartitionStart.Text = "Partition Table Start:";
+            this.labelPartitionStart.Location = new System.Drawing.Point(282, 347);
+            this.labelPartitionStart.AutoSize = true;
+            //
+            // textPartitionStart
+            //
+            this.textPartitionStart.Location = new System.Drawing.Point(412, 344);
+            this.textPartitionStart.Size = new System.Drawing.Size(70, 21);
+            //
+            // labelPartitionCount
+            //
+            this.labelPartitionCount.Text = "Partition Count:";
+            this.labelPartitionCount.Location = new System.Drawing.Point(282, 373);
+            this.labelPartitionCount.AutoSize = true;
+            //
+            // numPartitionCount
+            //
+            this.numPartitionCount.Location = new System.Drawing.Point(412, 370);
+            this.numPartitionCount.Size = new System.Drawing.Size(70, 21);
+            this.numPartitionCount.Minimum = 1;
+            this.numPartitionCount.Maximum = 65535;
+            //
+            // labelNPCCount
+            //
+            this.labelNPCCount.Text = "NPC Properties Count:";
+            this.labelNPCCount.Location = new System.Drawing.Point(282, 399);
+            this.labelNPCCount.AutoSize = true;
+            //
+            // numNPCCount
+            //
+            this.numNPCCount.Location = new System.Drawing.Point(412, 396);
+            this.numNPCCount.Size = new System.Drawing.Size(70, 21);
+            this.numNPCCount.Minimum = 1;
+            this.numNPCCount.Maximum = 65535;
+            //
+            // labelPacketCount
+            //
+            this.labelPacketCount.Text = "NPC Packet Count:";
+            this.labelPacketCount.Location = new System.Drawing.Point(282, 425);
+            this.labelPacketCount.AutoSize = true;
+            //
+            // numPacketCount
+            //
+            this.numPacketCount.Location = new System.Drawing.Point(412, 422);
+            this.numPacketCount.Size = new System.Drawing.Size(70, 21);
+            this.numPacketCount.Minimum = 1;
+            this.numPacketCount.Maximum = 65535;
+            //
+            // tabAdvanced
+            //
+            this.tabAdvanced.Location = new System.Drawing.Point(4, 22);
+            this.tabAdvanced.Name = "tabAdvanced";
+            this.tabAdvanced.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAdvanced.Size = new System.Drawing.Size(580, 491);
+            this.tabAdvanced.TabIndex = 5;
+            this.tabAdvanced.Text = "Advanced";
+            this.tabAdvanced.UseVisualStyleBackColor = true;
+            this.tabAdvanced.Controls.Add(this.checkEnable0xCE);
+            this.tabAdvanced.Controls.Add(this.buttonResetDefaults);
+            this.tabAdvanced.Controls.Add(this.labelConfigInfo);
+            this.tabAdvanced.Controls.Add(this.buttonSaveConfig);
+            this.tabAdvanced.Controls.Add(this.buttonLoadConfig);
+            //
+            // checkEnable0xCE
+            //
+            this.checkEnable0xCE.Text = "Enable 0xCE event script opcode (Abyssonym's Learn Special Ability patch)";
+            this.checkEnable0xCE.Location = new System.Drawing.Point(12, 12);
+            this.checkEnable0xCE.AutoSize = true;
+            //
+            // buttonResetDefaults
+            //
+            this.buttonResetDefaults.Text = "Reset ROM Layout to Vanilla Defaults";
+            this.buttonResetDefaults.Location = new System.Drawing.Point(12, 45);
+            this.buttonResetDefaults.Size = new System.Drawing.Size(230, 28);
+            this.buttonResetDefaults.Click += new System.EventHandler(this.buttonResetDefaults_Click);
+            //
+            // labelConfigInfo
+            //
+            this.labelConfigInfo.Text = "Save/Load ROM layout configuration:";
+            this.labelConfigInfo.Location = new System.Drawing.Point(12, 85);
+            this.labelConfigInfo.AutoSize = true;
+            //
+            // buttonSaveConfig
+            //
+            this.buttonSaveConfig.Text = "Save Config File...";
+            this.buttonSaveConfig.Location = new System.Drawing.Point(12, 108);
+            this.buttonSaveConfig.Size = new System.Drawing.Size(140, 28);
+            this.buttonSaveConfig.Click += new System.EventHandler(this.buttonSaveConfig_Click);
+            //
+            // buttonLoadConfig
+            //
+            this.buttonLoadConfig.Text = "Load Config File...";
+            this.buttonLoadConfig.Location = new System.Drawing.Point(160, 108);
+            this.buttonLoadConfig.Size = new System.Drawing.Size(140, 28);
+            this.buttonLoadConfig.Click += new System.EventHandler(this.buttonLoadConfig_Click);
+            //
             // keystrokesTab
-            // 
+            //
             this.keystrokesTab.Controls.Add(this.groupBox5);
             this.keystrokesTab.Location = new System.Drawing.Point(4, 22);
             this.keystrokesTab.Name = "keystrokesTab";
@@ -1145,6 +1338,9 @@ namespace LAZYSHELL
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip3.ResumeLayout(false);
             this.toolStrip3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPartitionCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNPCCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPacketCount)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -1237,5 +1433,29 @@ namespace LAZYSHELL
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton autoUpdate;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        // ROM Layout tab
+        private System.Windows.Forms.TabPage tabRomLayout;
+        private RangeListEditor spriteGraphicsRanges;
+        private RangeListEditor animationBanksRanges;
+        private RangeListEditor itemDescRanges;
+        private RangeListEditor spellDescRanges;
+        private RangeListEditor psychopathRanges;
+        private System.Windows.Forms.Label labelAnimPtrTable;
+        private System.Windows.Forms.TextBox textAnimPtrTable;
+        private System.Windows.Forms.Label labelPartitionStart;
+        private System.Windows.Forms.TextBox textPartitionStart;
+        private System.Windows.Forms.Label labelPartitionCount;
+        private System.Windows.Forms.NumericUpDown numPartitionCount;
+        private System.Windows.Forms.Label labelNPCCount;
+        private System.Windows.Forms.NumericUpDown numNPCCount;
+        private System.Windows.Forms.Label labelPacketCount;
+        private System.Windows.Forms.NumericUpDown numPacketCount;
+        // Advanced tab
+        private System.Windows.Forms.TabPage tabAdvanced;
+        private System.Windows.Forms.CheckBox checkEnable0xCE;
+        private System.Windows.Forms.Button buttonResetDefaults;
+        private System.Windows.Forms.Button buttonSaveConfig;
+        private System.Windows.Forms.Button buttonLoadConfig;
+        private System.Windows.Forms.Label labelConfigInfo;
     }
 }

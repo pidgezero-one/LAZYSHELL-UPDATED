@@ -4,7 +4,6 @@ using System.Collections.Specialized;
 using System.IO;
 using System.Text;
 using System.Xml;
-using LAZYSHELL.Properties;
 
 namespace LAZYSHELL
 {
@@ -29,99 +28,150 @@ namespace LAZYSHELL
 
     /// <summary>
     /// Central configuration hub for all ROM layout settings.
-    /// Reads from Settings.Default and provides typed properties for use by all editors.
-    /// All defaults match the original vanilla SMRPG ROM.
+    /// Reads from Model.Project (ProjectDB) and provides typed properties for use by all editors.
+    /// Falls back to vanilla defaults when no project is loaded.
     /// </summary>
     public static class RomConfig
     {
-        private static Settings settings { get { return Settings.Default; } }
+        private static ProjectDB project { get { return Model.Project; } }
 
         // Sprite BPP graphics ranges (absolute ROM addresses)
         // Vanilla: single range 0x280000-0x330000
         public static List<RomRange> SpriteGraphicsRanges
         {
-            get { return ParseRanges(settings.SpriteGraphicsRanges); }
-            set { settings.SpriteGraphicsRanges = ToStringCollection(value); }
+            get
+            {
+                if (project != null && project.SpriteGraphicsRanges != null)
+                    return ParseRangesFromStrings(project.SpriteGraphicsRanges);
+                return new List<RomRange> { new RomRange(0x280000, 0x330000) };
+            }
+            set
+            {
+                if (project != null)
+                    project.SpriteGraphicsRanges = ToStringList(value);
+            }
         }
 
         // Animation bank ranges (absolute ROM addresses)
         // Vanilla: 4 banks for animation data
         public static List<RomRange> AnimationBanks
         {
-            get { return ParseRanges(settings.AnimationBanks); }
-            set { settings.AnimationBanks = ToStringCollection(value); }
+            get
+            {
+                if (project != null && project.AnimationBanks != null)
+                    return ParseRangesFromStrings(project.AnimationBanks);
+                return new List<RomRange>
+                {
+                    new RomRange(0x259000, 0x25FFFF),
+                    new RomRange(0x260000, 0x26FFFF),
+                    new RomRange(0x270000, 0x27FFFF),
+                    new RomRange(0x360000, 0x36FFFF)
+                };
+            }
+            set
+            {
+                if (project != null)
+                    project.AnimationBanks = ToStringList(value);
+            }
         }
 
         // Animation pointer table start (absolute ROM address)
         // Vanilla: 0x252000
         public static int AnimationPointerTable
         {
-            get { return settings.AnimationPointerTable; }
-            set { settings.AnimationPointerTable = value; }
+            get { return project != null ? project.AnimationPointerTable : 0x252000; }
+            set { if (project != null) project.AnimationPointerTable = value; }
         }
 
         // Partition table start (absolute ROM address)
         // Vanilla: 0x1DDE00
         public static int PartitionTableStart
         {
-            get { return settings.PartitionTableStart; }
-            set { settings.PartitionTableStart = value; }
+            get { return project != null ? project.PartitionTableStart : 0x1DDE00; }
+            set { if (project != null) project.PartitionTableStart = value; }
         }
 
         // Number of partition entries
         // Vanilla: 120
         public static int PartitionCount
         {
-            get { return settings.PartitionCount; }
-            set { settings.PartitionCount = value; }
+            get { return project != null ? project.PartitionCount : 120; }
+            set { if (project != null) project.PartitionCount = value; }
         }
 
         // Item description write ranges (absolute ROM addresses, bank 0x3A)
         // Vanilla: single range 0x3A3120-0x3A40F1
         public static List<RomRange> ItemDescriptionRanges
         {
-            get { return ParseRanges(settings.ItemDescriptionRanges); }
-            set { settings.ItemDescriptionRanges = ToStringCollection(value); }
+            get
+            {
+                if (project != null && project.ItemDescriptionRanges != null)
+                    return ParseRangesFromStrings(project.ItemDescriptionRanges);
+                return new List<RomRange> { new RomRange(0x3A3120, 0x3A40F1) };
+            }
+            set
+            {
+                if (project != null)
+                    project.ItemDescriptionRanges = ToStringList(value);
+            }
         }
 
         // Spell description write ranges (absolute ROM addresses, bank 0x3A)
         // Vanilla: single range 0x3A2BB6-0x3A2F20
         public static List<RomRange> SpellDescriptionRanges
         {
-            get { return ParseRanges(settings.SpellDescriptionRanges); }
-            set { settings.SpellDescriptionRanges = ToStringCollection(value); }
+            get
+            {
+                if (project != null && project.SpellDescriptionRanges != null)
+                    return ParseRangesFromStrings(project.SpellDescriptionRanges);
+                return new List<RomRange> { new RomRange(0x3A2BB6, 0x3A2F20) };
+            }
+            set
+            {
+                if (project != null)
+                    project.SpellDescriptionRanges = ToStringList(value);
+            }
         }
 
         // Psychopath message write ranges (absolute ROM addresses, bank 0x39)
         // Vanilla: single range 0x39A1D1-0x39B641
         public static List<RomRange> PsychopathMessageRanges
         {
-            get { return ParseRanges(settings.PsychopathMessageRanges); }
-            set { settings.PsychopathMessageRanges = ToStringCollection(value); }
+            get
+            {
+                if (project != null && project.PsychopathMessageRanges != null)
+                    return ParseRangesFromStrings(project.PsychopathMessageRanges);
+                return new List<RomRange> { new RomRange(0x39A1D1, 0x39B641) };
+            }
+            set
+            {
+                if (project != null)
+                    project.PsychopathMessageRanges = ToStringList(value);
+            }
         }
 
         // Number of NPC property entries
         // Vanilla: 512
         public static int NPCPropertiesCount
         {
-            get { return settings.NPCPropertiesCount; }
-            set { settings.NPCPropertiesCount = value; }
+            get { return project != null ? project.NPCPropertiesCount : 512; }
+            set { if (project != null) project.NPCPropertiesCount = value; }
         }
 
         // Number of NPC packets
         // Vanilla: 99
         public static int NPCPacketCount
         {
-            get { return settings.NPCPacketCount; }
-            set { settings.NPCPacketCount = value; }
+            get { return project != null ? project.NPCPacketCount : 99; }
+            set { if (project != null) project.NPCPacketCount = value; }
         }
 
         // Whether the custom 0xCE opcode (spell learn) is enabled
         // Vanilla: false (0xCE is unused in vanilla)
         public static bool Enable0xCE
         {
-            get { return settings.Enable0xCE; }
-            set { settings.Enable0xCE = value; }
+            get { return project != null ? project.Enable0xCE : false; }
+            set { if (project != null) project.Enable0xCE = value; }
         }
 
         // Computed: total sprite graphics buffer size across all ranges
@@ -170,6 +220,29 @@ namespace LAZYSHELL
 
         #region Helper Methods
 
+        public static List<RomRange> ParseRangesFromStrings(List<string> strings)
+        {
+            var list = new List<RomRange>();
+            if (strings == null || strings.Count == 0)
+                return list;
+            foreach (string s in strings)
+            {
+                if (string.IsNullOrEmpty(s)) continue;
+                try { list.Add(RomRange.Parse(s)); }
+                catch { }
+            }
+            return list;
+        }
+
+        public static List<string> ToStringList(List<RomRange> ranges)
+        {
+            var list = new List<string>();
+            foreach (var r in ranges)
+                list.Add(r.ToString());
+            return list;
+        }
+
+        // Keep for backwards compatibility with old code paths
         public static List<RomRange> ParseRanges(StringCollection sc)
         {
             var list = new List<RomRange>();
@@ -190,23 +263,6 @@ namespace LAZYSHELL
             foreach (var r in ranges)
                 sc.Add(r.ToString());
             return sc;
-        }
-
-        /// <summary>
-        /// Applies custom label overrides from a newline-separated string.
-        /// Format: one label per line, line number = index (0-based).
-        /// Empty lines keep the default.
-        /// </summary>
-        public static void ApplyCustomLabels(string[] baseArray, string customText)
-        {
-            if (string.IsNullOrEmpty(customText))
-                return;
-            string[] lines = customText.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None);
-            for (int i = 0; i < lines.Length && i < baseArray.Length; i++)
-            {
-                if (!string.IsNullOrEmpty(lines[i]))
-                    baseArray[i] = lines[i];
-            }
         }
 
         #endregion
@@ -247,23 +303,6 @@ namespace LAZYSHELL
                 writer.WriteElementString("Enable0xCE", Enable0xCE.ToString());
                 writer.WriteEndElement(); // Advanced
 
-                // Custom Labels
-                writer.WriteStartElement("CustomLabels");
-                WriteOptionalElement(writer, "SpriteNames", settings.CustomSpriteNames);
-                WriteOptionalElement(writer, "EventLabels", settings.CustomEventLabels);
-                WriteOptionalElement(writer, "EventDescriptions", settings.CustomEventDescriptions);
-                WriteOptionalElement(writer, "ActionLabels", settings.CustomActionLabels);
-                WriteOptionalElement(writer, "ActionDescriptions", settings.CustomActionDescriptions);
-                WriteOptionalElement(writer, "PacketNames", settings.CustomPacketNames);
-                WriteOptionalElement(writer, "EffectNames", settings.CustomEffectNames);
-                WriteOptionalElement(writer, "BattleEventNames", settings.CustomBattleEventNames);
-                WriteOptionalElement(writer, "LevelNames", settings.CustomLevelNames);
-                WriteOptionalElement(writer, "MusicNames", settings.CustomMusicNames);
-                WriteOptionalElement(writer, "SoundNames", settings.CustomSoundNames);
-                WriteOptionalElement(writer, "BattleSoundNames", settings.CustomBattleSoundNames);
-                WriteOptionalElement(writer, "BattlefieldNames", settings.CustomBattlefieldNames);
-                writer.WriteEndElement(); // CustomLabels
-
                 writer.WriteEndElement(); // LazyShellConfig
                 writer.WriteEndDocument();
             }
@@ -274,6 +313,8 @@ namespace LAZYSHELL
         /// </summary>
         public static void LoadConfigFile(string filePath)
         {
+            if (project == null) return;
+
             XmlDocument doc = new XmlDocument();
             doc.Load(filePath);
 
@@ -290,9 +331,9 @@ namespace LAZYSHELL
                 ranges = ReadRangeList(layout, "AnimationBanks");
                 if (ranges != null) AnimationBanks = ranges;
 
-                ReadHexElement(layout, "AnimationPointerTable", v => settings.AnimationPointerTable = v);
-                ReadHexElement(layout, "PartitionTableStart", v => settings.PartitionTableStart = v);
-                ReadIntElement(layout, "PartitionCount", v => settings.PartitionCount = v);
+                ReadHexElement(layout, "AnimationPointerTable", v => project.AnimationPointerTable = v);
+                ReadHexElement(layout, "PartitionTableStart", v => project.PartitionTableStart = v);
+                ReadIntElement(layout, "PartitionCount", v => project.PartitionCount = v);
 
                 ranges = ReadRangeList(layout, "ItemDescriptionRanges");
                 if (ranges != null) ItemDescriptionRanges = ranges;
@@ -303,8 +344,8 @@ namespace LAZYSHELL
                 ranges = ReadRangeList(layout, "PsychopathMessageRanges");
                 if (ranges != null) PsychopathMessageRanges = ranges;
 
-                ReadIntElement(layout, "NPCPropertiesCount", v => settings.NPCPropertiesCount = v);
-                ReadIntElement(layout, "NPCPacketCount", v => settings.NPCPacketCount = v);
+                ReadIntElement(layout, "NPCPropertiesCount", v => project.NPCPropertiesCount = v);
+                ReadIntElement(layout, "NPCPacketCount", v => project.NPCPacketCount = v);
             }
 
             // Advanced
@@ -316,30 +357,9 @@ namespace LAZYSHELL
                 {
                     bool val;
                     if (bool.TryParse(node.InnerText, out val))
-                        settings.Enable0xCE = val;
+                        project.Enable0xCE = val;
                 }
             }
-
-            // Custom Labels
-            XmlNode labels = root.SelectSingleNode("CustomLabels");
-            if (labels != null)
-            {
-                ReadStringElement(labels, "SpriteNames", v => settings.CustomSpriteNames = v);
-                ReadStringElement(labels, "EventLabels", v => settings.CustomEventLabels = v);
-                ReadStringElement(labels, "EventDescriptions", v => settings.CustomEventDescriptions = v);
-                ReadStringElement(labels, "ActionLabels", v => settings.CustomActionLabels = v);
-                ReadStringElement(labels, "ActionDescriptions", v => settings.CustomActionDescriptions = v);
-                ReadStringElement(labels, "PacketNames", v => settings.CustomPacketNames = v);
-                ReadStringElement(labels, "EffectNames", v => settings.CustomEffectNames = v);
-                ReadStringElement(labels, "BattleEventNames", v => settings.CustomBattleEventNames = v);
-                ReadStringElement(labels, "LevelNames", v => settings.CustomLevelNames = v);
-                ReadStringElement(labels, "MusicNames", v => settings.CustomMusicNames = v);
-                ReadStringElement(labels, "SoundNames", v => settings.CustomSoundNames = v);
-                ReadStringElement(labels, "BattleSoundNames", v => settings.CustomBattleSoundNames = v);
-                ReadStringElement(labels, "BattlefieldNames", v => settings.CustomBattlefieldNames = v);
-            }
-
-            settings.Save();
         }
 
         /// <summary>
@@ -347,31 +367,18 @@ namespace LAZYSHELL
         /// </summary>
         public static void ResetToDefaults()
         {
-            settings.SpriteGraphicsRanges = GetDefaultStringCollection("280000-330000");
-            settings.AnimationBanks = GetDefaultAnimationBanks();
-            settings.AnimationPointerTable = 0x252000;
-            settings.PartitionTableStart = 0x1DDE00;
-            settings.PartitionCount = 120;
-            settings.ItemDescriptionRanges = GetDefaultStringCollection("3A3120-3A40F1");
-            settings.SpellDescriptionRanges = GetDefaultStringCollection("3A2BB6-3A2F20");
-            settings.PsychopathMessageRanges = GetDefaultStringCollection("39A1D1-39B641");
-            settings.NPCPropertiesCount = 512;
-            settings.NPCPacketCount = 99;
-            settings.Enable0xCE = false;
-            settings.CustomSpriteNames = "";
-            settings.CustomEventLabels = "";
-            settings.CustomEventDescriptions = "";
-            settings.CustomActionLabels = "";
-            settings.CustomActionDescriptions = "";
-            settings.CustomPacketNames = "";
-            settings.CustomEffectNames = "";
-            settings.CustomBattleEventNames = "";
-            settings.CustomLevelNames = "";
-            settings.CustomMusicNames = "";
-            settings.CustomSoundNames = "";
-            settings.CustomBattleSoundNames = "";
-            settings.CustomBattlefieldNames = "";
-            settings.Save();
+            if (project == null) return;
+            project.SpriteGraphicsRanges = new List<string> { "280000-330000" };
+            project.AnimationBanks = new List<string> { "259000-25FFFF", "260000-26FFFF", "270000-27FFFF", "360000-36FFFF" };
+            project.AnimationPointerTable = 0x252000;
+            project.PartitionTableStart = 0x1DDE00;
+            project.PartitionCount = 120;
+            project.ItemDescriptionRanges = new List<string> { "3A3120-3A40F1" };
+            project.SpellDescriptionRanges = new List<string> { "3A2BB6-3A2F20" };
+            project.PsychopathMessageRanges = new List<string> { "39A1D1-39B641" };
+            project.NPCPropertiesCount = 512;
+            project.NPCPacketCount = 99;
+            project.Enable0xCE = false;
         }
 
         #region XML Helpers
@@ -430,24 +437,6 @@ namespace LAZYSHELL
             XmlNode node = parent.SelectSingleNode(name);
             if (node != null)
                 setter(node.InnerText);
-        }
-
-        private static StringCollection GetDefaultStringCollection(params string[] values)
-        {
-            var sc = new StringCollection();
-            foreach (string v in values)
-                sc.Add(v);
-            return sc;
-        }
-
-        private static StringCollection GetDefaultAnimationBanks()
-        {
-            var sc = new StringCollection();
-            sc.Add("259000-25FFFF");
-            sc.Add("260000-26FFFF");
-            sc.Add("270000-27FFFF");
-            sc.Add("360000-36FFFF");
-            return sc;
         }
 
         #endregion

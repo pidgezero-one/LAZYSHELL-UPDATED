@@ -1592,6 +1592,10 @@ A single level is often a smaller part of a larger map, and is defined by a set 
         <title>Music</title>
         <description>The music, or SPC track, that plays when the level is opened. This can be overridden by an event command.</description>
       </tooltip>
+      <tooltip control="openEventPalettes">
+        <title>Event Palettes</title>
+        <description>Opens the Event Palettes pane. These are the same event palettes referenced by "Palette Set" commands in the event script editor. Check boxes preview what a given palette set looks like applied to that palette row. Click the edit button to open the palette for modification.</description>
+      </tooltip>
       <Maps title="Maps" type="section">
         <description>The "MAPS" tab contains all the properties of a level's map. The map is the collection of properties that set the tilemaps, palette, and tilesets for the level. Each level is assigned a "Map #" with all of the properties in the "MAPS" tab.
 A graphic set is a loosely organized collection of 4bpp or 2bpp 8x8 tiles that are read from and organized into 16x16 tiles by a tileset. They are essentially the raw graphics used by a level.

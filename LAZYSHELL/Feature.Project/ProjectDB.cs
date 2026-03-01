@@ -34,6 +34,20 @@ namespace LAZYSHELL
         private List<EIndex> sprites; public List<EIndex> Sprites { get { return sprites; } set { sprites = value; } }
         private List<EIndex> monsterBehaviorAnims; public List<EIndex> MonsterBehaviorAnims { get { return monsterBehaviorAnims; } set { monsterBehaviorAnims = value; } }
         private List<EIndex> battleEvents; public List<EIndex> BattleEvents { get { return battleEvents; } set { battleEvents = value; } }
+        private List<EIndex> packets; public List<EIndex> Packets { get { return packets; } set { packets = value; } }
+        // ROM layout
+        private List<string> spriteGraphicsRanges; public List<string> SpriteGraphicsRanges { get { return spriteGraphicsRanges; } set { spriteGraphicsRanges = value; } }
+        private List<string> animationBanks; public List<string> AnimationBanks { get { return animationBanks; } set { animationBanks = value; } }
+        private int animationPointerTable; public int AnimationPointerTable { get { return animationPointerTable; } set { animationPointerTable = value; } }
+        private int partitionTableStart; public int PartitionTableStart { get { return partitionTableStart; } set { partitionTableStart = value; } }
+        private int partitionCount; public int PartitionCount { get { return partitionCount; } set { partitionCount = value; } }
+        private List<string> itemDescriptionRanges; public List<string> ItemDescriptionRanges { get { return itemDescriptionRanges; } set { itemDescriptionRanges = value; } }
+        private List<string> spellDescriptionRanges; public List<string> SpellDescriptionRanges { get { return spellDescriptionRanges; } set { spellDescriptionRanges = value; } }
+        private List<string> psychopathMessageRanges; public List<string> PsychopathMessageRanges { get { return psychopathMessageRanges; } set { psychopathMessageRanges = value; } }
+        private int npcPropertiesCount; public int NPCPropertiesCount { get { return npcPropertiesCount; } set { npcPropertiesCount = value; } }
+        private int npcPacketCount; public int NPCPacketCount { get { return npcPacketCount; } set { npcPacketCount = value; } }
+        // advanced
+        private bool enable0xCE; public bool Enable0xCE { get { return enable0xCE; } set { enable0xCE = value; } }
         // element lists
         private List<EList> elists; public List<EList> ELists { get { return elists; } set { elists = value; } }
         // keystrokes
@@ -69,6 +83,19 @@ namespace LAZYSHELL
             sprites = new List<EIndex>();
             battleEvents = new List<EIndex>();
             monsterBehaviorAnims = new List<EIndex>();
+            packets = new List<EIndex>();
+            // ROM layout
+            spriteGraphicsRanges = new List<string> { "280000-330000" };
+            animationBanks = new List<string> { "259000-25FFFF", "260000-26FFFF", "270000-27FFFF", "360000-36FFFF" };
+            animationPointerTable = 0x252000;
+            partitionTableStart = 0x1DDE00;
+            partitionCount = 120;
+            itemDescriptionRanges = new List<string> { "3A3120-3A40F1" };
+            spellDescriptionRanges = new List<string> { "3A2BB6-3A2F20" };
+            psychopathMessageRanges = new List<string> { "39A1D1-39B641" };
+            npcPropertiesCount = 512;
+            npcPacketCount = 99;
+            enable0xCE = false;
             // element lists
             elists = new List<EList>();
             foreach (EList elist in Model.ELists)
@@ -77,6 +104,59 @@ namespace LAZYSHELL
             keystrokes = Model.Keystrokes;
             keystrokesMenu = Model.KeystrokesMenu;
             keystrokesDesc = Model.KeystrokesDesc;
+        }
+        /// <summary>
+        /// Fills in vanilla defaults for ROM layout fields that are null/0
+        /// (from old .lsproj files deserialized before these fields existed).
+        /// </summary>
+        public void EnsureRomLayoutDefaults()
+        {
+            if (spriteGraphicsRanges == null || spriteGraphicsRanges.Count == 0)
+                spriteGraphicsRanges = new List<string> { "280000-330000" };
+            if (animationBanks == null || animationBanks.Count == 0)
+                animationBanks = new List<string> { "259000-25FFFF", "260000-26FFFF", "270000-27FFFF", "360000-36FFFF" };
+            if (animationPointerTable == 0)
+                animationPointerTable = 0x252000;
+            if (partitionTableStart == 0)
+                partitionTableStart = 0x1DDE00;
+            if (partitionCount == 0)
+                partitionCount = 120;
+            if (itemDescriptionRanges == null || itemDescriptionRanges.Count == 0)
+                itemDescriptionRanges = new List<string> { "3A3120-3A40F1" };
+            if (spellDescriptionRanges == null || spellDescriptionRanges.Count == 0)
+                spellDescriptionRanges = new List<string> { "3A2BB6-3A2F20" };
+            if (psychopathMessageRanges == null || psychopathMessageRanges.Count == 0)
+                psychopathMessageRanges = new List<string> { "39A1D1-39B641" };
+            if (npcPropertiesCount == 0)
+                npcPropertiesCount = 512;
+            if (npcPacketCount == 0)
+                npcPacketCount = 99;
+            if (packets == null)
+                packets = new List<EIndex>();
+            // Keystrokes: fill from ROM data if empty (e.g. converted from .lscfg)
+            if (keystrokes == null || keystrokes.Length == 0)
+                keystrokes = Lists.Copy(Lists.Keystrokes);
+            if (keystrokesMenu == null || keystrokesMenu.Length == 0)
+                keystrokesMenu = Lists.Copy(Lists.KeystrokesMenu);
+            if (keystrokesDesc == null || keystrokesDesc.Length == 0)
+                keystrokesDesc = Lists.Copy(Lists.KeystrokesDesc);
+            // Ensure project has all EList categories that Model.ELists expects
+            if (elists == null)
+                elists = new List<EList>();
+            foreach (EList modelEList in Model.ELists)
+            {
+                bool found = false;
+                foreach (EList projectEList in elists)
+                {
+                    if (projectEList.Name == modelEList.Name)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found)
+                    elists.Add(modelEList.Copy());
+            }
         }
         // public functions
         public void AddIndex(int index, List<EIndex> arrayList)

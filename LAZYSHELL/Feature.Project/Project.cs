@@ -157,6 +157,7 @@ namespace LAZYSHELL
                 Stream s = File.OpenRead(NotesFilePath);
                 BinaryFormatter b = new BinaryFormatter();
                 project = (ProjectDB)b.Deserialize(s);
+                project.EnsureRomLayoutDefaults();
                 Model.RefreshListCollections();
                 projectFile.Text = Model.GetNotePathCustomWithoutPathOrExtension(NotesFilePath) + ".lsproj";
                 s.Close();
@@ -193,6 +194,10 @@ namespace LAZYSHELL
             listBoxLists.EndUpdate();
             listBoxLists.SelectedIndex = 0;
             projectOtherInfo.Text = project.OtherInfo;
+            // ROM Layout tab
+            InitializeRomLayoutControls();
+            // Advanced tab
+            checkEnable0xCE.Checked = project.Enable0xCE;
             //
             fontType.SelectedIndex = 0;
             InitializeKeystrokes();
@@ -297,6 +302,10 @@ namespace LAZYSHELL
                     currentIndexes = project.Shops;
                     indexNumber.Maximum = 32;
                     break;
+                case "Packets":
+                    currentIndexes = project.Packets;
+                    indexNumber.Maximum = 254;
+                    break;
                 default:
                     panel1.Enabled = false;
                     groupBox1.Enabled = false;
@@ -396,6 +405,7 @@ namespace LAZYSHELL
                 if (extension == ".lsproj")
                 {
                     project = (ProjectDB)b.Deserialize(s);
+                    project.EnsureRomLayoutDefaults();
                 }
                 else if (extension == ".lsnotes")
                 {
@@ -466,6 +476,7 @@ namespace LAZYSHELL
             s = File.OpenRead(saveFileDialog.FileName);
             b = new BinaryFormatter();
             project = (ProjectDB)b.Deserialize(s);
+            project.EnsureRomLayoutDefaults();
             s.Close();
             NotesFilePath = saveFileDialog.FileName;
             projectFile.Text = Model.GetNotePathCustomWithoutPathOrExtension(NotesFilePath) + ".lsproj";
@@ -487,6 +498,7 @@ namespace LAZYSHELL
                 SaveAsNewProject();
                 return;
             }
+            ApplyRomLayoutToProject();
             Model.RefreshListCollections();
             Stream s = File.Create(NotesFilePath);
             BinaryFormatter b = new BinaryFormatter();
@@ -519,6 +531,7 @@ namespace LAZYSHELL
             NotesFilePath = saveFileDialog.FileName;
             projectFile.Text = Model.GetNotePathCustomWithoutPathOrExtension(NotesFilePath) + ".lsproj";
             //
+            ApplyRomLayoutToProject();
             Model.RefreshListCollections();
             Stream s = File.Create(saveFileDialog.FileName);
             BinaryFormatter b = new BinaryFormatter();
@@ -806,6 +819,56 @@ namespace LAZYSHELL
             panelFontTable.ResumeDrawing();
             this.Updating = false;
         }
+        // ROM Layout
+        private void InitializeRomLayoutControls()
+        {
+            project.EnsureRomLayoutDefaults();
+            var sc = new StringCollection();
+            foreach (string s in project.SpriteGraphicsRanges) sc.Add(s);
+            spriteGraphicsRanges.FromStringCollection(sc);
+            sc = new StringCollection();
+            foreach (string s in project.AnimationBanks) sc.Add(s);
+            animationBanksRanges.FromStringCollection(sc);
+            sc = new StringCollection();
+            foreach (string s in project.ItemDescriptionRanges) sc.Add(s);
+            itemDescRanges.FromStringCollection(sc);
+            sc = new StringCollection();
+            foreach (string s in project.SpellDescriptionRanges) sc.Add(s);
+            spellDescRanges.FromStringCollection(sc);
+            sc = new StringCollection();
+            foreach (string s in project.PsychopathMessageRanges) sc.Add(s);
+            psychopathRanges.FromStringCollection(sc);
+            textAnimPtrTable.Text = project.AnimationPointerTable.ToString("X6");
+            textPartitionStart.Text = project.PartitionTableStart.ToString("X6");
+            numPartitionCount.Value = project.PartitionCount;
+            numNPCCount.Value = project.NPCPropertiesCount;
+            numPacketCount.Value = project.NPCPacketCount;
+        }
+        private void ApplyRomLayoutToProject()
+        {
+            project.SpriteGraphicsRanges = StringCollectionToList(spriteGraphicsRanges.ToStringCollection());
+            project.AnimationBanks = StringCollectionToList(animationBanksRanges.ToStringCollection());
+            project.ItemDescriptionRanges = StringCollectionToList(itemDescRanges.ToStringCollection());
+            project.SpellDescriptionRanges = StringCollectionToList(spellDescRanges.ToStringCollection());
+            project.PsychopathMessageRanges = StringCollectionToList(psychopathRanges.ToStringCollection());
+            int hexVal;
+            if (int.TryParse(textAnimPtrTable.Text, System.Globalization.NumberStyles.HexNumber, null, out hexVal))
+                project.AnimationPointerTable = hexVal;
+            if (int.TryParse(textPartitionStart.Text, System.Globalization.NumberStyles.HexNumber, null, out hexVal))
+                project.PartitionTableStart = hexVal;
+            project.PartitionCount = (int)numPartitionCount.Value;
+            project.NPCPropertiesCount = (int)numNPCCount.Value;
+            project.NPCPacketCount = (int)numPacketCount.Value;
+            project.Enable0xCE = checkEnable0xCE.Checked;
+        }
+        private static List<string> StringCollectionToList(StringCollection sc)
+        {
+            var list = new List<string>();
+            if (sc != null)
+                foreach (string s in sc)
+                    list.Add(s);
+            return list;
+        }
         #endregion
         #region Event Handlers
         private void Project_FormClosing(object sender, FormClosingEventArgs e)
@@ -827,6 +890,7 @@ namespace LAZYSHELL
                     Stream s = File.OpenRead(NotesFilePath);
                     BinaryFormatter b = new BinaryFormatter();
                     project = (ProjectDB)b.Deserialize(s);
+                    project.EnsureRomLayoutDefaults();
                     s.Close();
                 }
                 catch
@@ -902,6 +966,7 @@ namespace LAZYSHELL
                     Stream s = File.OpenRead(NotesFilePath);
                     BinaryFormatter b = new BinaryFormatter();
                     project = (ProjectDB)b.Deserialize(s);
+                    project.EnsureRomLayoutDefaults();
                     s.Close();
                     InitializeFields();
                 }
@@ -1078,6 +1143,7 @@ namespace LAZYSHELL
                 case "Sprites": eindexes = project.Sprites; break;
                 case "Battle Events": eindexes = project.BattleEvents; break;
                 case "Monster Behavior Animations": eindexes = project.MonsterBehaviorAnims; break;
+                case "Packets": eindexes = project.Packets; break;
                 default: break;
             }
             if (eindexes == null)
@@ -1402,6 +1468,60 @@ namespace LAZYSHELL
                 case FontType.Description: Model.KeystrokesDesc.CopyTo(project.KeystrokesDesc, 0); break;
             }
             RefreshKeystrokes();
+        }
+        // ROM Layout / Advanced tab
+        private void buttonResetDefaults_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "This will reset all ROM layout settings to vanilla SMRPG defaults.\n\n" +
+                "Are you sure?", "LAZYSHELL++", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                RomConfig.ResetToDefaults();
+                InitializeRomLayoutControls();
+                checkEnable0xCE.Checked = false;
+            }
+        }
+        private void buttonSaveConfig_Click(object sender, EventArgs e)
+        {
+            ApplyRomLayoutToProject();
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "LazyShell Config (*.lscfg)|*.lscfg|XML Files (*.xml)|*.xml|All Files (*.*)|*.*";
+            sfd.DefaultExt = "lscfg";
+            sfd.Title = "Save ROM Layout Config";
+            if (sfd.ShowDialog() != DialogResult.OK)
+                return;
+            try
+            {
+                RomConfig.SaveConfigFile(sfd.FileName);
+                MessageBox.Show("Config saved successfully.", "LAZYSHELL++", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saving config: " + ex.Message, "LAZYSHELL++", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void buttonLoadConfig_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "LazyShell Config (*.lscfg)|*.lscfg|XML Files (*.xml)|*.xml|All Files (*.*)|*.*";
+            ofd.Title = "Load ROM Layout Config";
+            if (ofd.ShowDialog() != DialogResult.OK)
+                return;
+            try
+            {
+                RomConfig.LoadConfigFile(ofd.FileName);
+                InitializeRomLayoutControls();
+                checkEnable0xCE.Checked = project.Enable0xCE;
+                Lists.ApplyCustomLabelOverlays();
+                ScriptsEditor.AnimationScript.ResetCaches();
+                MessageBox.Show("Config loaded successfully. ROM layout changes take effect on next ROM load.",
+                    "LAZYSHELL++", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading config: " + ex.Message, "LAZYSHELL++", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void projectFile_Click(object sender, EventArgs e)
         {
