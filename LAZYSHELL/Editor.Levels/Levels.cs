@@ -136,6 +136,10 @@ namespace LAZYSHELL
             panelLevels.Controls.Add(tilemapEditor);
             panelLevels.Controls.Add(levelsSolidTiles);
             panelLevels.Controls.Add(levelsTemplate);
+            levelEventPalettes = new LevelEventPalettes(this);
+            levelEventPalettes.TopLevel = false;
+            levelEventPalettes.Dock = DockStyle.Right;
+            panelLevels.Controls.Add(levelEventPalettes);
             openTilemap.PerformClick();
             openTileset.PerformClick();
             tilesetEditor.BringToFront();
@@ -149,9 +153,11 @@ namespace LAZYSHELL
             {
                 if (levelCheck.Index == index && !fullUpdate)
                 {
+                    if (levelEventPalettes != null) levelEventPalettes.ApplyOverridesForRendering();
                     tileset.RedrawTilesets(); // Redraw all tilesets
                     tilemap.RedrawTilemaps();
                     tileMods.RedrawTilemaps();
+                    if (levelEventPalettes != null) levelEventPalettes.RemoveOverridesAfterRendering();
                     LoadTemplateEditor();
                     LoadTilesetEditor();
                     LoadTilemapEditor();
@@ -171,6 +177,7 @@ namespace LAZYSHELL
             }
             catch
             {
+                if (levelEventPalettes != null) levelEventPalettes.RemoveOverridesAfterRendering();
                 CreateNewLevelData();
             }
             this.Refreshing = false; // Done
@@ -181,6 +188,7 @@ namespace LAZYSHELL
             levelCheck = level;
             if (tilemap != null)
                 tilemap.Assemble();
+            if (levelEventPalettes != null) levelEventPalettes.ApplyOverridesForRendering();
             tileset = new Tileset(levelMap, paletteSet);
             tilemap = new LevelTilemap(level, tileset);
             foreach (Level l in levels)
@@ -192,6 +200,7 @@ namespace LAZYSHELL
                 mod.Pixels = solidity.GetTilemapPixels(mod);
             solidityMap = new LevelSolidMap(levelMap);
             fullUpdate = false;
+            if (levelEventPalettes != null) levelEventPalettes.RemoveOverridesAfterRendering();
             // load the individual editors
             LoadPaletteEditor();
             LoadGraphicEditor();

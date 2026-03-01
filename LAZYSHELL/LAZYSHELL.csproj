@@ -454,6 +454,9 @@
     <Compile Include="Editors\GraphicEditor.Designer.cs">
       <DependentUpon>GraphicEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editor.Levels\LevelEventPalettes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Editor.Levels\LevelsSolidTiles.cs">
       <SubType>Form</SubType>
     </Compile>

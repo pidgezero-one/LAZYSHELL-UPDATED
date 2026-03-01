@@ -16,6 +16,7 @@ namespace LAZYSHELL
         private TilemapEditor tilemapEditor;
         private LevelsSolidTiles levelsSolidTiles;
         private LevelsTemplate levelsTemplate;
+        private LevelEventPalettes levelEventPalettes;
         public ToolStripButton OpenTileset { get { return openTileset; } set { openTileset = value; } }
         public ToolStripButton OpenSolidTileset { get { return openSolidTileset; } set { openSolidTileset = value; } }
         private Previewer previewer;
@@ -170,6 +171,10 @@ namespace LAZYSHELL
             levelsSolidTiles.Visible = openSolidTileset.Checked;
             levelsSolidTiles.Location = new Point(
                 Screen.PrimaryScreen.WorkingArea.Width - levelsSolidTiles.Size.Width, this.Location.Y);
+        }
+        private void openEventPalettes_Click(object sender, EventArgs e)
+        {
+            levelEventPalettes.Visible = openEventPalettes.Checked;
         }
         private void openTemplates_Click(object sender, EventArgs e)
         {

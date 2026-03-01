@@ -355,6 +355,7 @@ namespace LAZYSHELL
             this.openTileset = new System.Windows.Forms.ToolStripButton();
             this.openTilemap = new System.Windows.Forms.ToolStripButton();
             this.openSolidTileset = new System.Windows.Forms.ToolStripButton();
+            this.openEventPalettes = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.openPaletteEditor = new System.Windows.Forms.ToolStripButton();
             this.openGraphicEditor = new System.Windows.Forms.ToolStripButton();
@@ -4874,7 +4875,18 @@ namespace LAZYSHELL
             this.openSolidTileset.Size = new System.Drawing.Size(23, 22);
             this.openSolidTileset.ToolTipText = "Solid Tileset";
             this.openSolidTileset.Click += new System.EventHandler(this.openSolidTileset_Click);
-            // 
+            //
+            // openEventPalettes
+            //
+            this.openEventPalettes.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.openEventPalettes.CheckOnClick = true;
+            this.openEventPalettes.Image = global::LAZYSHELL.Properties.Resources.openPalettes;
+            this.openEventPalettes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openEventPalettes.Name = "openEventPalettes";
+            this.openEventPalettes.Size = new System.Drawing.Size(23, 22);
+            this.openEventPalettes.ToolTipText = "Event Palettes";
+            this.openEventPalettes.Click += new System.EventHandler(this.openEventPalettes_Click);
+            //
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -4977,6 +4989,7 @@ namespace LAZYSHELL
             this.baseConvertor,
             this.toolStripSeparator15,
             this.openSolidTileset,
+            this.openEventPalettes,
             this.openTileset,
             this.openTilemap,
             this.toolStripSeparator1,
@@ -5886,6 +5899,7 @@ namespace LAZYSHELL
         private TreeView npcObjectTree;
         private TreeView overlapFieldTree;
         private ToolStripButton openSolidTileset;
+        private ToolStripButton openEventPalettes;
         private Panel panelOverlapTileset;
         private PictureBox pictureBoxOverlaps;
         private ToolStripButton openTemplates;
